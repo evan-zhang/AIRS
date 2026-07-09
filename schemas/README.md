@@ -15,6 +15,7 @@ schemas/
 ├── evidence/          # 证据相关 Schema
 ├── skills/            # Skill Engine 相关 Schema
 ├── score/             # 评分相关 Schema
+├── benchmark/         # Benchmark 与生产示例 Schema
 ├── report/            # 报告相关 Schema
 └── evaluation/        # 评估相关 Schema
 ```
@@ -63,6 +64,14 @@ schemas/
 - **score/scorecard.schema.json**：综合评分卡 Schema，用于汇总多个 Score，要求包含 methodology_refs、evidence_chain_refs、scores、overall_score、overall_grade、confidence_score、quality_gate 和权重审计。
 - **score/evaluation.schema.json**：Evaluation Engine 输出 Schema，用于记录评估对象、Scorecard、检查项、总分、Gate 结果、强制失败状态和修复要求。
 - Score Schema 只用于研究质量控制和结构化分析，必须引用 M2 Methodology 与 M3 Evidence，不得把评分解释为投资评级或交易建议。
+
+### Benchmark 相关 Schema
+
+- **schemas/benchmark/**：Benchmark 与生产示例相关 Schema，用于 M7 回归测试和质量评估。
+- **schemas/benchmark/benchmark.schema.json**：Benchmark 结构 Schema，要求包含 benchmark_id、category、methodology_refs、prompt_refs、evidence_requirements、gold_standard、evaluation_criteria、expected_output、failure_cases 和免责声明。
+- **schemas/benchmark/benchmark-result.schema.json**：Benchmark 执行结果 Schema，用于记录 run_id、benchmark_id、agent_id、scorecard_id、overall_score、quality_gate、passed_checks、failed_checks、evidence_gaps 和修复要求。
+- **schemas/benchmark/example.schema.json**：Production Example 结构 Schema，用于描述示例 ID、方法论引用、Prompt 引用、Evidence ID、Scorecard、Quality Gate 和报告章节。
+- Benchmark Schema 只用于 AIRS 回归测试与研究质量控制，必须复用 M3 Evidence Card、M4 Prompt 和 M6 Scorecard，不构成投资建议。
 
 ### 报告相关 Schema
 

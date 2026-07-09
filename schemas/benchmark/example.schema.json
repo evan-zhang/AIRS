@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://airs.local/schemas/benchmark/example.schema.json",
+  "title": "AIRS Production Example Schema",
+  "description": "AIRS 生产示例结构 Schema，用于描述 Prompt、Evidence Card、Scorecard 和报告示例。仅用于流程演示，不构成投资建议。",
+  "type": "object",
+  "required": [
+    "example_id",
+    "title",
+    "version",
+    "example_type",
+    "methodology_refs",
+    "prompt_refs",
+    "evidence_ids",
+    "scorecard_id",
+    "quality_gate",
+    "report_sections",
+    "disclaimer"
+  ],
+  "properties": {
+    "example_id": {"type": "string", "pattern": "^EXAMPLE-[A-Z0-9_-]+$"},
+    "title": {"type": "string", "minLength": 4},
+    "version": {"type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$"},
+    "example_type": {"type": "string", "enum": ["report", "evidence", "score", "workflow"]},
+    "methodology_refs": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "prompt_refs": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "evidence_ids": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "scorecard_id": {"type": "string"},
+    "quality_gate": {"type": "string", "enum": ["PASS", "CONDITIONAL_PASS", "FAIL"]},
+    "report_sections": {
+      "type": "array",
+      "items": {"type": "string"},
+      "minItems": 5
+    },
+    "known_gaps": {"type": "array", "items": {"type": "string"}},
+    "disclaimer": {"type": "string", "const": "仅供研究参考，不构成投资建议"}
+  },
+  "additionalProperties": false
+}

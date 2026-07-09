@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://airs.local/schemas/benchmark/benchmark-result.schema.json",
+  "title": "AIRS Benchmark Result Schema",
+  "description": "AIRS Benchmark 执行结果 Schema，用于记录回归测试输出和质量门禁。仅用于研究质量控制，不构成投资建议。",
+  "type": "object",
+  "required": [
+    "run_id",
+    "benchmark_id",
+    "agent_id",
+    "run_time",
+    "scorecard_id",
+    "overall_score",
+    "quality_gate",
+    "passed_checks",
+    "failed_checks",
+    "evidence_gaps",
+    "disclaimer"
+  ],
+  "properties": {
+    "run_id": {"type": "string", "minLength": 4},
+    "benchmark_id": {"type": "string"},
+    "agent_id": {"type": "string"},
+    "run_time": {"type": "string", "format": "date-time"},
+    "scorecard_id": {"type": "string"},
+    "overall_score": {"type": "number", "minimum": 0, "maximum": 100},
+    "quality_gate": {"type": "string", "enum": ["PASS", "CONDITIONAL_PASS", "FAIL"]},
+    "passed_checks": {"type": "array", "items": {"type": "string"}},
+    "failed_checks": {"type": "array", "items": {"type": "string"}},
+    "evidence_gaps": {"type": "array", "items": {"type": "string"}},
+    "regression_delta": {"type": "string"},
+    "fix_required": {"type": "array", "items": {"type": "string"}},
+    "disclaimer": {"type": "string", "const": "仅供研究参考，不构成投资建议"}
+  },
+  "additionalProperties": false
+}

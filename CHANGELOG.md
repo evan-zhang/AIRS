@@ -9,13 +9,22 @@
 
 ## [Unreleased]
 
+### Added - M7: Benchmark & Production Examples
+- 新增 `docs/benchmark/` 4 个 Benchmark 架构、生命周期、分类和治理文档。
+- 新增 `docs/examples/` 2 个示例规范和回归数据集说明文档。
+- 新增 6 类 x 5 项 Benchmark 分类种子，共 30 个 Markdown 文件。
+- 新增 6 个生产示例，覆盖供应链、主题扩散、证据报告、估值、风险和完整研究报告。
+- 新增 `schemas/benchmark/` 下 3 个 JSON Schema。
+- 新增 `templates/benchmark-template.md` 与 `templates/example-template.md`。
+- 新增 `scripts/validate_benchmark.py` 与 `scripts/validate_examples.py`。
+- 新增 `docs/production/M7_COMPLETION_REPORT.md` 与 `docs/review/M7_SELF_REVIEW.md`。
+- 新增 `docs/adr/0001-m7-benchmark-template-disclaimer.md` 记录 M7 对 M1 Benchmark Case 模板的受控增强。
+
+### Changed - M7
+- 更新 `schemas/README.md`，补充 Benchmark Schema 说明。
+- 增强 `templates/benchmark-case-template.md`，补充免责声明以满足 M7 合规回归要求；不改变 M1 模板结构和语义。
+
 ### 计划中
-- M2: Methodology Core
-- M3: Evidence Engine
-- M4: Score Engine
-- M5: Report Engine
-- M6: Evaluation Engine
-- M7: Benchmark
 - M8: Production
 
 ---
