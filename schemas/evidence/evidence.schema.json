@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://airs.local/schemas/evidence/evidence.schema.json",
+  "title": "AIRS Evidence Top-Level Schema",
+  "description": "Evidence Engine 顶层 Schema，用于封装 Evidence Card 集合与 Evidence Chain 集合。所有输出仅用于投资研究，不构成投资建议。",
+  "type": "object",
+  "required": ["evidence_engine", "disclaimer_required"],
+  "additionalProperties": false,
+  "properties": {
+    "evidence_engine": {
+      "type": "object",
+      "required": ["version", "cards", "chains", "governance"],
+      "additionalProperties": false,
+      "properties": {
+        "version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "cards": {
+          "type": "array",
+          "items": {
+            "$ref": "evidence-card.schema.json"
+          }
+        },
+        "chains": {
+          "type": "array",
+          "items": {
+            "$ref": "evidence-chain.schema.json"
+          }
+        },
+        "governance": {
+          "type": "object",
+          "required": ["no_investment_advice", "traceability_required", "counter_evidence_required"],
+          "additionalProperties": false,
+          "properties": {
+            "no_investment_advice": {
+              "type": "boolean",
+              "const": true
+            },
+            "traceability_required": {
+              "type": "boolean",
+              "const": true
+            },
+            "counter_evidence_required": {
+              "type": "boolean",
+              "const": true
+            }
+          }
+        }
+      }
+    },
+    "disclaimer_required": {
+      "type": "boolean",
+      "const": true
+    }
+  }
+}

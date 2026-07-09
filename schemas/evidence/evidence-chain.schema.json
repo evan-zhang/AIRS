@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://airs.local/schemas/evidence/evidence-chain.schema.json",
+  "title": "AIRS Evidence Chain Schema",
+  "description": "定义由多张 Evidence Card 组成的证据链，用于追踪研究命题、证据关系、反方证据和缺口。本 Schema 仅用于研究质量控制，不构成投资建议。",
+  "type": "object",
+  "required": [
+    "chain_id",
+    "title",
+    "research_question",
+    "claims",
+    "evidence_cards",
+    "relations",
+    "counter_evidence",
+    "missing_evidence",
+    "overall_confidence",
+    "disclaimer_required",
+    "version"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "chain_id": {
+      "type": "string",
+      "pattern": "^EC-[0-9]{8}-[A-Z0-9]{4,}$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 4
+    },
+    "research_question": {
+      "type": "string",
+      "minLength": 8
+    },
+    "claims": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["claim_id", "statement", "claim_type"],
+        "additionalProperties": false,
+        "properties": {
+          "claim_id": {
+            "type": "string"
+          },
+          "statement": {
+            "type": "string",
+            "minLength": 8
+          },
+          "claim_type": {
+            "type": "string",
+            "enum": ["core_conclusion", "intermediate_judgement", "assumption", "counter_claim", "risk"]
+          }
+        }
+      }
+    },
+    "evidence_cards": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "pattern": "^EV-[0-9]{8}-[A-Z0-9]{4,}$"
+      }
+    },
+    "relations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["from_id", "to_id", "relation_type"],
+        "additionalProperties": false,
+        "properties": {
+          "from_id": {
+            "type": "string"
+          },
+          "to_id": {
+            "type": "string"
+          },
+          "relation_type": {
+            "type": "string",
+            "enum": [
+              "supports",
+              "refutes",
+              "contextualizes",
+              "qualifies",
+              "conflicts_with",
+              "depends_on",
+              "updates"
+            ]
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "counter_evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "missing_evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 4
+      }
+    },
+    "overall_confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "review_status": {
+      "type": "string",
+      "enum": ["DRAFT", "PASS", "PASS_WITH_LIMITATION", "NEEDS_REVISION", "FAIL"]
+    },
+    "disclaimer_required": {
+      "type": "boolean",
+      "const": true
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    }
+  }
+}
