@@ -13,6 +13,7 @@ schemas/
 ├── methodology/       # 方法论 Schema
 ├── research/          # 研究相关 Schema
 ├── evidence/          # 证据相关 Schema
+├── skills/            # Skill Engine 相关 Schema
 ├── score/             # 评分相关 Schema
 ├── report/            # 报告相关 Schema
 └── evaluation/        # 评估相关 Schema
@@ -47,6 +48,13 @@ schemas/
 - **schemas/prompt/**：Prompt Engine 相关 Schema，用于描述生产版 Prompt 文档结构与 Prompt 输出结构。
 - **schemas/prompt/prompt.schema.json**：Prompt 文档 Schema，要求包含 Prompt ID、版本、分类、M2 方法论引用、M3 证据规范引用、System Prompt、User Template、Input Schema、Output Schema、Evidence Requirements、Failure Cases、Review Checklist 和免责声明。
 - **schemas/prompt/prompt-output.schema.json**：Prompt 输出 Schema，要求输出保留方法论引用、研究问题、核心命题、Evidence Chain、反方观点、不确定性、失败状态和免责声明。
+
+### Skill 相关 Schema
+
+- **schemas/skills/**：Skill Engine 相关 Schema，用于描述生产版 Skill 与 Skill Registry。
+- **schemas/skills/skill.schema.json**：单个 Skill 结构 Schema，要求包含 Purpose、Inputs、Outputs、Dependencies、Invoked Prompt、Invoked Methodology、Invoked Evidence、Workflow、Failure Handling、Review Checklist 和免责声明。
+- **schemas/skills/skill-registry.schema.json**：Skill Registry Schema，用于记录 Skill ID、版本、状态、入口文件、M4 Prompt 引用、M2 Methodology 引用、M3 Evidence Engine 引用、负责人和审查状态。
+- Skill Schema 只用于投资研究流程编排和质量控制，不构成投资建议；生产版 Skill 必须引用 M4/M2/M3，不能内置 Prompt 或重复定义方法论与证据规则。
 
 ### 评分相关 Schema
 

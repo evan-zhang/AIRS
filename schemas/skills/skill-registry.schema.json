@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://airs.local/schemas/skills/skill-registry.schema.json",
+  "title": "AIRS Skill Registry Schema",
+  "description": "AIRS M5 Skill Registry Schema，用于记录生产版 Skill 的入口、版本、状态、Prompt 引用、Methodology 引用、Evidence Engine 引用和治理状态。注册表仅用于研究流程调度与质量控制，不构成投资建议。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["registry_version", "updated_at", "skills", "governance"],
+  "properties": {
+    "registry_version": {
+      "type": "string",
+      "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "skills": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "skill_id",
+          "name",
+          "version",
+          "status",
+          "entrypoint",
+          "invoked_prompts",
+          "invoked_methodologies",
+          "invoked_evidence",
+          "owner_agent",
+          "review_status",
+          "disclaimer_required"
+        ],
+        "properties": {
+          "skill_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["Draft", "Review", "Active", "Deprecated", "Archived", "Rejected"]
+          },
+          "entrypoint": {
+            "type": "string",
+            "pattern": "^skills/.+\\.md$"
+          },
+          "invoked_prompts": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^prompts/.+\\.md$"
+            }
+          },
+          "invoked_methodologies": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^docs/methodology/.+\\.md$"
+            }
+          },
+          "invoked_evidence": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "owner_agent": {
+            "type": "string",
+            "enum": ["Code Agent", "Research Agent", "Review Agent", "Verification Agent"]
+          },
+          "review_status": {
+            "type": "string",
+            "enum": ["PASS", "PARTIAL", "FAIL", "NOT_REVIEWED"]
+          },
+          "disclaimer_required": {
+            "type": "boolean",
+            "const": true
+          }
+        }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "required": ["prompt_engine_required", "methodology_required", "evidence_engine_required", "forbidden_outputs"],
+      "additionalProperties": false,
+      "properties": {
+        "prompt_engine_required": {
+          "type": "boolean",
+          "const": true
+        },
+        "methodology_required": {
+          "type": "boolean",
+          "const": true
+        },
+        "evidence_engine_required": {
+          "type": "boolean",
+          "const": true
+        },
+        "forbidden_outputs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
+
