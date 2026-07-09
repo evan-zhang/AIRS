@@ -1,0 +1,263 @@
+# AIRS Schemas 目录
+
+本目录包含 AIRS 项目的所有 Schema 定义。
+
+---
+
+## 目录结构
+
+```
+schemas/
+├── README.md          # 本文件
+├── common/            # 通用 Schema
+├── research/          # 研究相关 Schema
+├── evidence/          # 证据相关 Schema
+├── score/             # 评分相关 Schema
+├── report/            # 报告相关 Schema
+└── evaluation/        # 评估相关 Schema
+```
+
+---
+
+## Schema 分类
+
+### 通用 Schema
+
+- **common/**：通用数据类型、通用字段定义
+
+### 研究相关 Schema
+
+- **research/**：研究意图、研究计划、研究发现
+
+### 证据相关 Schema
+
+- **evidence/**：证据卡、证据链、证据质量
+
+### 评分相关 Schema
+
+- **score/**：评分维度、评分结果、评分解释
+
+### 报告相关 Schema
+
+- **report/**：报告结构、报告元数据、报告质量
+
+### 评估相关 Schema
+
+- **evaluation/**：评估标准、评估结果、评估报告
+
+---
+
+## Schema 结构
+
+每个 Schema 文件应包含：
+
+```markdown
+# Schema 名称
+
+## 用途
+[说明这个 Schema 的用途]
+
+## 字段定义
+
+| 字段名 | 类型 | 必需 | 说明 | 示例 |
+|--------|------|------|------|------|
+| name | string | 是 | 对象名称 | "AI服务器" |
+| value | number | 是 | 数值 | 100 |
+
+## 数据类型
+
+- string：字符串
+- number：数字（整数/浮点数）
+- boolean：布尔值（true/false）
+- array：数组
+- object：对象
+- enum：枚举
+
+## 验证规则
+[字段验证规则]
+
+## 示例
+\`\`\`json
+{
+  "name": "AI服务器",
+  "value": 100
+}
+\`\`\`
+
+## 扩展字段
+[可选扩展字段]
+
+---
+
+**归属 Milestone**：M[X]
+**最后更新**：YYYY-MM-DD
+**版本**：vX.X.X
+```
+
+---
+
+## 数据类型
+
+### 基本类型
+
+| 类型 | 说明 | 示例 |
+|------|------|------|
+| string | 字符串 | "AI服务器" |
+| number | 数字 | 100, 99.5 |
+| boolean | 布尔值 | true, false |
+| array | 数组 | [1, 2, 3] |
+| object | 对象 | {"key": "value"} |
+
+### 复杂类型
+
+| 类型 | 说明 | 示例 |
+|------|------|------|
+| enum | 枚举 | "HIGH", "MEDIUM", "LOW" |
+| timestamp | 时间戳 | "2026-07-10T00:00:00Z" |
+| url | URL | "https://example.com" |
+| markdown | Markdown 文本 | "# 标题\n\n内容" |
+
+---
+
+## 命名规范
+
+### 字段命名
+
+- 使用蛇形命名法（snake_case）
+- ✅ `industry_name`
+- ❌ `industryName`
+
+### 枚举命名
+
+- 使用大写字母和下划线
+- ✅ `HIGH_PRIORITY`
+- ❌ `highPriority`
+
+---
+
+## Schema 编写规范
+
+### 内容规范
+
+1. **清晰明确**：字段说明清晰
+2. **类型明确**：字段类型明确
+3. **示例完整**：提供完整示例
+4. **验证规则**：说明验证规则
+
+### 格式规范
+
+1. **表格格式**：使用表格展示字段定义
+2. **代码块**：使用 JSON 格式展示示例
+3. **类型说明**：明确说明字段类型
+
+### 质量规范
+
+1. **完整性**：字段定义完整
+2. **准确性**：类型定义准确
+3. **可验证**：可验证字段有效性
+
+---
+
+## Schema 开发流程
+
+### 1. 创建 Schema 文件
+
+```bash
+touch schemas/{category}/{schema-name}.md
+```
+
+### 2. 定义字段
+
+按照 Schema 结构定义字段。
+
+### 3. 编写示例
+
+提供完整的示例数据。
+
+### 4. 验证 Schema
+
+- 检查字段完整性
+- 检查类型正确性
+- 检查示例有效性
+
+### 5. 文档化
+
+- 添加用途说明
+- 添加字段说明
+- 添加验证规则
+
+---
+
+## Schema 质量标准
+
+### 内容质量
+
+- 字段定义完整
+- 类型定义准确
+- 示例正确有效
+
+### 技术质量
+
+- 符合数据类型规范
+- 验证规则明确
+- 可被系统验证
+
+### 文档质量
+
+- 用途说明清晰
+- 字段说明详细
+- 示例完整
+
+---
+
+## Schema 与 Prompt 的关系
+
+### Prompt 使用 Schema
+
+Prompt 通过 Schema 定义输入输出格式：
+
+```
+Prompt (prompts/supply-chain/analysis.md)
+  → 输入 Schema (schemas/research/intent.md)
+  → 输出 Schema (schemas/evidence/evidence-card.md)
+```
+
+### Schema 验证
+
+- 验证 Prompt 输入格式
+- 验证 Agent 输出格式
+- 验证数据完整性
+
+---
+
+## 后续扩展
+
+### M2 扩展计划
+
+- 完善研究相关 Schema
+- 定义各方法论 Schema
+
+### M3 扩展计划
+
+- 完善证据相关 Schema
+- 定义证据链 Schema
+
+### M4 扩展计划
+
+- 完善评分相关 Schema
+- 定义评分模型 Schema
+
+### M5 扩展计划
+
+- 完善报告相关 Schema
+- 定义报告模板 Schema
+
+### M6-M8 扩展计划
+
+- 完善评估相关 Schema
+- 完善 Schema 验证机制
+
+---
+
+**最后更新**：2026-07-10
+**归属 Milestone**：M1: Architecture Foundation
