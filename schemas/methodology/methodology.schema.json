@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://airs.local/schemas/methodology/methodology.schema.json",
+  "title": "AIRS Methodology Schema",
+  "description": "定义 AIRS Methodology Layer 的结构化方法论描述，与 16 个标准 section 对应。",
+  "type": "object",
+  "required": ["methodology"],
+  "additionalProperties": false,
+  "properties": {
+    "methodology": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "zh_name",
+        "version",
+        "milestone",
+        "disclaimer_required",
+        "sections"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+          "description": "方法论唯一标识，使用小写短横线命名。"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 3,
+          "description": "英文方法论名称。"
+        },
+        "zh_name": {
+          "type": "string",
+          "minLength": 2,
+          "description": "中文方法论名称。"
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "description": "语义化版本号。"
+        },
+        "milestone": {
+          "type": "string",
+          "enum": ["M2", "M3", "M4", "M5", "M6", "M7", "M8"],
+          "description": "所属里程碑。"
+        },
+        "disclaimer_required": {
+          "type": "boolean",
+          "const": true,
+          "description": "投资研究方法论必须要求免责声明。"
+        },
+        "sections": {
+          "type": "object",
+          "required": [
+            "purpose",
+            "theory",
+            "background",
+            "applicable_scenarios",
+            "non_applicable_scenarios",
+            "inputs",
+            "outputs",
+            "workflow",
+            "required_evidence",
+            "counter_evidence",
+            "failure_cases",
+            "confidence",
+            "benchmark_mapping",
+            "future_prompt_mapping",
+            "future_skill_mapping",
+            "future_score_mapping"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "purpose": { "$ref": "#/$defs/sectionContent" },
+            "theory": { "$ref": "#/$defs/sectionContent" },
+            "background": { "$ref": "#/$defs/sectionContent" },
+            "applicable_scenarios": { "$ref": "#/$defs/sectionContent" },
+            "non_applicable_scenarios": { "$ref": "#/$defs/sectionContent" },
+            "inputs": { "$ref": "#/$defs/sectionContent" },
+            "outputs": { "$ref": "#/$defs/sectionContent" },
+            "workflow": { "$ref": "#/$defs/sectionContent" },
+            "required_evidence": { "$ref": "#/$defs/sectionContent" },
+            "counter_evidence": { "$ref": "#/$defs/sectionContent" },
+            "failure_cases": { "$ref": "#/$defs/sectionContent" },
+            "confidence": { "$ref": "#/$defs/sectionContent" },
+            "benchmark_mapping": { "$ref": "#/$defs/sectionContent" },
+            "future_prompt_mapping": { "$ref": "#/$defs/sectionContent" },
+            "future_skill_mapping": { "$ref": "#/$defs/sectionContent" },
+            "future_score_mapping": { "$ref": "#/$defs/sectionContent" }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "sectionContent": {
+      "description": "章节内容，可使用字符串、字符串数组或结构化对象，但不得为空。",
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 20
+        },
+        {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 8
+          }
+        },
+        {
+          "type": "object",
+          "minProperties": 1
+        }
+      ]
+    }
+  }
+}
+

@@ -10,6 +10,7 @@
 schemas/
 ├── README.md          # 本文件
 ├── common/            # 通用 Schema
+├── methodology/       # 方法论 Schema
 ├── research/          # 研究相关 Schema
 ├── evidence/          # 证据相关 Schema
 ├── score/             # 评分相关 Schema
@@ -24,6 +25,11 @@ schemas/
 ### 通用 Schema
 
 - **common/**：通用数据类型、通用字段定义
+
+### 方法论 Schema
+
+- **methodology/**：方法论结构化定义，与 `docs/methodology/` 的 16 个标准 section 对应
+- **methodology/methodology.schema.json**：用于验证方法论 DSL 或结构化方法论对象，要求包含 Purpose、Theory、Background、Inputs、Outputs、Workflow、Required Evidence、Counter Evidence、Confidence 及后续映射字段
 
 ### 研究相关 Schema
 
