@@ -59,6 +59,10 @@ schemas/
 ### 评分相关 Schema
 
 - **score/**：评分维度、评分结果、评分解释
+- **score/score.schema.json**：单个评分维度 Schema，要求包含 score_id、score_type、methodology_refs、evidence_refs、raw_score、weight、weighted_score、formula、explanation、confidence 和免责声明。
+- **score/scorecard.schema.json**：综合评分卡 Schema，用于汇总多个 Score，要求包含 methodology_refs、evidence_chain_refs、scores、overall_score、overall_grade、confidence_score、quality_gate 和权重审计。
+- **score/evaluation.schema.json**：Evaluation Engine 输出 Schema，用于记录评估对象、Scorecard、检查项、总分、Gate 结果、强制失败状态和修复要求。
+- Score Schema 只用于研究质量控制和结构化分析，必须引用 M2 Methodology 与 M3 Evidence，不得把评分解释为投资评级或交易建议。
 
 ### 报告相关 Schema
 

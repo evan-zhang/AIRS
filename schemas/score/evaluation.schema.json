@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://airs.local/schemas/score/evaluation.schema.json",
+  "title": "AIRS Evaluation",
+  "description": "Evaluation Engine 结构化评估结果。免责声明：仅用于研究质量验证，不构成投资建议。",
+  "type": "object",
+  "required": [
+    "evaluation_id",
+    "version",
+    "evaluated_artifact",
+    "scorecard_id",
+    "checks",
+    "total_score",
+    "gate_result",
+    "force_fail_triggered",
+    "required_fixes",
+    "disclaimer"
+  ],
+  "properties": {
+    "evaluation_id": {
+      "type": "string",
+      "pattern": "^EVAL-[A-Za-z0-9_-]+$"
+    },
+    "version": {
+      "type": "string"
+    },
+    "evaluated_artifact": {
+      "type": "object",
+      "required": ["artifact_id", "artifact_type"],
+      "properties": {
+        "artifact_id": { "type": "string" },
+        "artifact_type": {
+          "type": "string",
+          "enum": ["scorecard", "prompt_output", "skill_output", "report", "benchmark_case"]
+        }
+      }
+    },
+    "scorecard_id": {
+      "type": "string"
+    },
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["check_name", "status", "score", "finding"],
+        "properties": {
+          "check_name": { "type": "string" },
+          "status": { "type": "string", "enum": ["PASS", "WARN", "FAIL"] },
+          "score": { "type": "number", "minimum": 0, "maximum": 100 },
+          "finding": { "type": "string" }
+        }
+      },
+      "minItems": 1
+    },
+    "total_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "gate_result": {
+      "type": "string",
+      "enum": ["PASS", "CONDITIONAL_PASS", "FAIL"]
+    },
+    "force_fail_triggered": {
+      "type": "boolean"
+    },
+    "required_fixes": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "disclaimer": {
+      "type": "string",
+      "const": "仅供研究参考，不构成投资建议"
+    }
+  },
+  "additionalProperties": false
+}

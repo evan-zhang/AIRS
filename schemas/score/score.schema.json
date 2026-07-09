@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://airs.local/schemas/score/score.schema.json",
+  "title": "AIRS Score",
+  "description": "单个评分维度的结构化结果。仅用于研究质量控制，不构成投资建议。",
+  "type": "object",
+  "required": [
+    "score_id",
+    "score_type",
+    "version",
+    "methodology_refs",
+    "evidence_refs",
+    "raw_score",
+    "weight",
+    "weighted_score",
+    "formula",
+    "explanation",
+    "confidence",
+    "disclaimer"
+  ],
+  "properties": {
+    "score_id": {
+      "type": "string",
+      "pattern": "^SCORE-[A-Za-z0-9_-]+$"
+    },
+    "score_type": {
+      "type": "string",
+      "enum": [
+        "theme",
+        "evidence",
+        "methodology",
+        "prompt",
+        "skill",
+        "report",
+        "risk",
+        "confidence",
+        "overall"
+      ]
+    },
+    "version": {
+      "type": "string"
+    },
+    "methodology_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "raw_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "weight": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "maximum": 1
+    },
+    "weighted_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "formula": {
+      "type": "string",
+      "minLength": 5
+    },
+    "explanation": {
+      "type": "string",
+      "minLength": 20
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "penalties": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "points", "reason"],
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "points": {
+            "type": "number",
+            "minimum": 0
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "disclaimer": {
+      "type": "string",
+      "const": "仅供研究参考，不构成投资建议"
+    }
+  },
+  "additionalProperties": false
+}
