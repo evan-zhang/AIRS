@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://airs.local/schemas/prompt/prompt.schema.json",
+  "title": "AIRS Prompt Document Schema",
+  "type": "object",
+  "required": [
+    "prompt_id",
+    "title",
+    "version",
+    "category",
+    "methodology_refs",
+    "evidence_refs",
+    "system_prompt",
+    "user_template",
+    "input_schema",
+    "output_schema",
+    "evidence_requirements",
+    "failure_cases",
+    "review_checklist",
+    "disclaimer"
+  ],
+  "properties": {
+    "prompt_id": {"type": "string", "minLength": 3},
+    "title": {"type": "string", "minLength": 3},
+    "version": {"type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$"},
+    "category": {"type": "string"},
+    "methodology_refs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string"}
+    },
+    "evidence_refs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string"}
+    },
+    "system_prompt": {"type": "string", "minLength": 100},
+    "user_template": {"type": "string", "minLength": 20},
+    "input_schema": {"type": "object"},
+    "output_schema": {"type": "object"},
+    "evidence_requirements": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "failure_cases": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "review_checklist": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "disclaimer": {"type": "string", "minLength": 20}
+  }
+}
+

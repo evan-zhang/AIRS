@@ -42,6 +42,12 @@ schemas/
 - **evidence/evidence-card.schema.json**：证据卡 Schema，定义 Evidence ID、Title、Category、Source、Source Type、URL、Publication Time、Collection Time、Confidence、Evidence Level、Supports、Refutes、Missing Evidence、Weight、Traceability、Version 等 16 个必需字段。
 - **evidence/evidence-chain.schema.json**：证据链 Schema，用于描述研究命题、证据卡集合、证据关系、反方证据、缺失证据、整体置信度和免责声明要求。
 
+### Prompt 相关 Schema
+
+- **schemas/prompt/**：Prompt Engine 相关 Schema，用于描述生产版 Prompt 文档结构与 Prompt 输出结构。
+- **schemas/prompt/prompt.schema.json**：Prompt 文档 Schema，要求包含 Prompt ID、版本、分类、M2 方法论引用、M3 证据规范引用、System Prompt、User Template、Input Schema、Output Schema、Evidence Requirements、Failure Cases、Review Checklist 和免责声明。
+- **schemas/prompt/prompt-output.schema.json**：Prompt 输出 Schema，要求输出保留方法论引用、研究问题、核心命题、Evidence Chain、反方观点、不确定性、失败状态和免责声明。
+
 ### 评分相关 Schema
 
 - **score/**：评分维度、评分结果、评分解释

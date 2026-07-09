@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://airs.local/schemas/prompt/prompt-output.schema.json",
+  "title": "AIRS Prompt Output Schema",
+  "type": "object",
+  "required": [
+    "prompt_id",
+    "methodology_ref",
+    "research_question",
+    "summary",
+    "claims",
+    "evidence_chain",
+    "counter_arguments",
+    "uncertainties",
+    "failure_status",
+    "disclaimer"
+  ],
+  "properties": {
+    "prompt_id": {"type": "string"},
+    "methodology_ref": {"type": "string"},
+    "research_question": {"type": "string"},
+    "summary": {"type": "string"},
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["claim_id", "statement", "confidence", "evidence_ids"],
+        "properties": {
+          "claim_id": {"type": "string"},
+          "statement": {"type": "string"},
+          "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+          "evidence_ids": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "evidence_chain": {
+      "type": "object",
+      "required": ["chain_id", "evidence_card_ids", "supports", "refutes", "missing_evidence"],
+      "properties": {
+        "chain_id": {"type": "string"},
+        "evidence_card_ids": {"type": "array", "items": {"type": "string"}},
+        "supports": {"type": "array", "items": {"type": "string"}},
+        "refutes": {"type": "array", "items": {"type": "string"}},
+        "missing_evidence": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "counter_arguments": {"type": "array", "items": {"type": "string"}},
+    "uncertainties": {"type": "array", "items": {"type": "string"}},
+    "failure_status": {"type": "string", "enum": ["PASS", "PASS_WITH_LIMITATION", "NEEDS_MORE_EVIDENCE", "FAIL"]},
+    "disclaimer": {"type": "string"}
+  }
+}
+
