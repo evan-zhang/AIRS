@@ -1,0 +1,25 @@
+connector_id: example_connector
+name: Example Connector
+source: Example Source
+source_type: trusted_third_party
+base_url: https://example.com
+version: 0.1.0
+priority: trusted_third_party
+auth:
+  auth_type: none
+retry_policy:
+  max_attempts: 3
+  initial_delay_seconds: 0.1
+  backoff_multiplier: 2.0
+cache_strategy:
+  ttl_seconds: 300
+  allow_stale: false
+required_output_fields:
+  - source
+  - url
+  - timestamp
+  - version
+  - trace_id
+  - traceability
+免责声明: "本模板仅用于 AIRS 工程开发与研究质量控制，不构成投资建议"
+disclaimer: "仅供 AIRS 工程开发与研究质量控制，不构成投资建议"

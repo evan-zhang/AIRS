@@ -1,0 +1,29 @@
+feature_id: "FEATURE-004"
+feature_name: "Data Connector Framework"
+feature_summary: "建立统一 Data Connector Framework，所有外部数据源必须通过 Connector 接入并输出可追溯结果。"
+business_goal: "为 AIRS Research、Evidence、Knowledge Graph 和 Report 提供统一、可治理、可审计的数据接入边界。"
+user_scenarios:
+  - "Code Agent 读取 Feature Package 后可以直接开发。"
+  - "Review Agent 可以按 ADR、Spec、Tests 和 Benchmark 审查。"
+dependencies:
+  - "templates/skill-template.md"
+  - "templates/prompt-template.md"
+  - "templates/benchmark-template.md"
+  - "docs/evidence/evidence-card-specification.md"
+constraints:
+  - "不得重复定义 M2-M7 规则，只能引用。"
+  - "所有投资相关内容必须包含免责声明。"
+expected_outputs:
+  - "ISSUE.md"
+  - "ADR.md"
+  - "FEATURE_SPEC.md"
+  - "Skill 草案"
+  - "Prompt 草案"
+  - "Schema 草案"
+  - "Tests"
+  - "Benchmark"
+  - "PR Checklist"
+  - "Release Notes"
+risk_level: "HIGH"
+
+# 免责声明：本 Feature Request 仅用于 AIRS 工程开发与研究质量控制，不构成投资建议。
