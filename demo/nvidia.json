@@ -1,0 +1,10 @@
+{
+  "symbol": "NVDA",
+  "market": "US",
+  "company_name": "NVIDIA",
+  "research_question": "分析 NVIDIA 的财务、估值、AI 服务器供应链、竞争格局和主要风险",
+  "time_range": "latest",
+  "output_format": "full_report",
+  "disclaimer": "本 Demo 仅用于 AIRS 产品演示，不构成投资建议。"
+}
+

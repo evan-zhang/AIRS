@@ -1,0 +1,32 @@
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    command: ["python3", "api/server.py", "--host", "0.0.0.0", "--port", "8765"]
+    ports:
+      - "8765:8765"
+    volumes:
+      - airs-workspace:/app/workspace-data
+      - airs-cache:/app/.cache/airs
+    environment:
+      AIRS_CONNECTOR_MODE: mock
+      AIRS_DEMO_MODE: "true"
+
+  web:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    command: ["python3", "-m", "http.server", "8080", "--directory", "web"]
+    ports:
+      - "8080:8080"
+    depends_on:
+      - api
+    volumes:
+      - airs-workspace:/app/workspace-data
+      - airs-cache:/app/.cache/airs
+
+volumes:
+  airs-workspace:
+  airs-cache:
+
