@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "0.1.0",
+  "trace_id_note": "Connector Result 必须包含 trace_id、timestamp 和 traceability。",
+  "disclaimer": "本 Schema 仅用于 AIRS 工程开发与研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+  "title": "AIRS Data Source Schema",
+  "type": "object",
+  "required": [
+    "source_id",
+    "source_name",
+    "source_type",
+    "priority",
+    "owner",
+    "url",
+    "version",
+    "governance_status",
+    "disclaimer"
+  ],
+  "properties": {
+    "source_id": {
+      "type": "string"
+    },
+    "source_name": {
+      "type": "string"
+    },
+    "source_type": {
+      "enum": [
+        "official",
+        "regulatory",
+        "company",
+        "exchange",
+        "trusted_third_party",
+        "public_news",
+        "community"
+      ]
+    },
+    "priority": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 7
+    },
+    "owner": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "governance_status": {
+      "enum": [
+        "active",
+        "disabled",
+        "review_required"
+      ]
+    },
+    "disclaimer": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

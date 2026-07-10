@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Data Connector Framework Feature Schema",
+  "description": "建立统一 Data Connector Framework，所有外部数据源必须通过 Connector 接入并输出可追溯结果。。本 Schema 仅用于 AIRS 工程开发与研究质量控制，不构成投资建议。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "feature_id",
+    "feature_name",
+    "inputs",
+    "outputs",
+    "disclaimer"
+  ],
+  "properties": {
+    "feature_id": {
+      "type": "string",
+      "const": "FEATURE-004"
+    },
+    "feature_name": {
+      "type": "string",
+      "const": "Data Connector Framework"
+    },
+    "inputs": {
+      "type": "object",
+      "description": "Feature 输入。"
+    },
+    "outputs": {
+      "type": "object",
+      "description": "Feature 输出。"
+    },
+    "risk_level": {
+      "type": "string",
+      "enum": ["LOW", "MEDIUM", "HIGH", "CRITICAL"],
+      "default": "HIGH"
+    },
+    "disclaimer": {
+      "type": "string",
+      "description": "本生成物仅用于 AIRS 工程开发与研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。"
+    }
+  }
+}

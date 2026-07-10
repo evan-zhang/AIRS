@@ -17,6 +17,7 @@ schemas/
 ├── skills/            # Skill Engine 相关 Schema
 ├── score/             # 评分相关 Schema
 ├── benchmark/         # Benchmark 与生产示例 Schema
+├── connectors/        # Data Connector Framework 相关 Schema
 ├── report/            # 报告相关 Schema
 └── evaluation/        # 评估相关 Schema
 ```
@@ -79,6 +80,14 @@ schemas/
 - **schemas/benchmark/benchmark-result.schema.json**：Benchmark 执行结果 Schema，用于记录 run_id、benchmark_id、agent_id、scorecard_id、overall_score、quality_gate、passed_checks、failed_checks、evidence_gaps 和修复要求。
 - **schemas/benchmark/example.schema.json**：Production Example 结构 Schema，用于描述示例 ID、方法论引用、Prompt 引用、Evidence ID、Scorecard、Quality Gate 和报告章节。
 - Benchmark Schema 只用于 AIRS 回归测试与研究质量控制，必须复用 M3 Evidence Card、M4 Prompt 和 M6 Scorecard，不构成投资建议。
+
+### Connector 相关 Schema
+
+- **schemas/connectors/**：FEATURE-004 Data Connector Framework 相关 Schema，用于统一描述 Connector、Data Source 和 Connector Result。
+- **schemas/connectors/connector.schema.json**：Connector 注册和治理 Schema，要求包含 Config、Input Schema、Output Schema、Error Handling、Retry Policy、Cache Strategy、Health Check 和 Test Case。
+- **schemas/connectors/datasource.schema.json**：Data Source Schema，用于记录来源类型、优先级、治理状态、URL 和版本。
+- **schemas/connectors/connector-result.schema.json**：Connector Result Schema，要求所有输出包含 source、url、timestamp、version、trace_id 和 traceability，以便对齐 M3 Evidence Card 的 Source / URL / Timestamp / Version / Traceability 要求。
+- Connector Schema 只定义外部数据接入边界，不重复定义 M2 Methodology、M3 Evidence、FEATURE-002 Knowledge Graph 或 FEATURE-003 Report 规则，不构成投资建议。
 
 ### Builder 相关 Schema
 

@@ -1,5 +1,22 @@
 # AIRS 变更日志
 
+## [FEATURE-004] Data Connector Framework - 2026-07-10
+
+### Added
+
+- 新增 `docs/data-connectors/`，定义 Connector 架构、生命周期、接口、数据源优先级和治理规则。
+- 新增 `data_connectors/` 最小可运行 Python 框架，包含 Registry、Base Interface、Auth、Rate Limit、Cache、Retry、Normalizer、Priority 和 Health Check。
+- 新增 6 个官方 Mock Connector：SEC EDGAR、Yahoo Finance、Alpha Vantage、News、GitHub、RSS。
+- 新增 `schemas/connectors/`、`templates/connectors/` 和 `scripts/validate_connectors.py`。
+- 新增 FEATURE-004 ADR、Completion Report 和 Self Review。
+
+### Compliance
+
+- Connector 输出统一保留 Source、URL、Timestamp、Version、Trace ID 和 Traceability。
+- Methodology、Skill、Report、Knowledge Graph 不直接访问外部数据源，只通过 Connector 接入。
+- 本 Feature 仅用于 AIRS 工程开发与研究质量控制，不构成投资建议。
+
+
 本文档记录 AIRS 项目的所有重要变更。
 
 格式基于 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.0.0/)，
