@@ -1,0 +1,251 @@
+{
+  "case_id": "failure-runtime-interruption",
+  "errors": [],
+  "event_log": [
+    {
+      "agent_id": null,
+      "event_id": "evt-9543ca637e1e",
+      "event_type": "RUNTIME_STARTED",
+      "payload": {
+        "runtime_id": "runtime-from-planner-failure-runtime-interruption",
+        "workflow_id": "workflow-failure-runtime-interruption"
+      },
+      "session_id": null,
+      "severity": "INFO",
+      "task_id": null,
+      "timestamp": "2026-07-10T08:53:01.433899+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "methodology_selector",
+      "event_id": "evt-22bedae6389b",
+      "event_type": "TASK_DISPATCHED",
+      "payload": {
+        "agent_type": "sync"
+      },
+      "session_id": "ses-ee62b4097dcc",
+      "severity": "INFO",
+      "task_id": "goal_analysis",
+      "timestamp": "2026-07-10T08:53:01.434031+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "methodology_selector",
+      "event_id": "evt-bd48c51b671d",
+      "event_type": "AGENT_INITIALIZED",
+      "payload": {},
+      "session_id": "ses-ee62b4097dcc",
+      "severity": "INFO",
+      "task_id": "goal_analysis",
+      "timestamp": "2026-07-10T08:53:01.434083+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "methodology_selector",
+      "event_id": "evt-d85d5d6fe552",
+      "event_type": "AGENT_RUNNING",
+      "payload": {},
+      "session_id": "ses-ee62b4097dcc",
+      "severity": "INFO",
+      "task_id": "goal_analysis",
+      "timestamp": "2026-07-10T08:53:01.434128+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "methodology_selector",
+      "event_id": "evt-6ae0413e9971",
+      "event_type": "AGENT_COMPLETED",
+      "payload": {
+        "agent_id": "methodology_selector",
+        "agent_type": "sync",
+        "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+        "refs": [
+          "docs/runtime/runtime-architecture.md"
+        ],
+        "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
+        "task_id": "goal_analysis"
+      },
+      "session_id": "ses-ee62b4097dcc",
+      "severity": "INFO",
+      "task_id": "goal_analysis",
+      "timestamp": "2026-07-10T08:53:01.434181+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": null,
+      "event_id": "evt-e462549698f3",
+      "event_type": "TASK_CANCELLED",
+      "payload": {},
+      "session_id": null,
+      "severity": "INFO",
+      "task_id": "scope",
+      "timestamp": "2026-07-10T08:53:01.434491+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": null,
+      "event_id": "evt-d9db2f2497b6",
+      "event_type": "TASK_BLOCKED",
+      "payload": {
+        "dependencies": [
+          "scope"
+        ]
+      },
+      "session_id": null,
+      "severity": "INFO",
+      "task_id": "methodology_selection",
+      "timestamp": "2026-07-10T08:53:01.434559+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": null,
+      "event_id": "evt-b5f9378fc0ff",
+      "event_type": "TASK_BLOCKED",
+      "payload": {
+        "dependencies": [
+          "methodology_selection"
+        ]
+      },
+      "session_id": null,
+      "severity": "INFO",
+      "task_id": "connector_plan",
+      "timestamp": "2026-07-10T08:53:01.434618+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": null,
+      "event_id": "evt-8b41f3f959b9",
+      "event_type": "TASK_BLOCKED",
+      "payload": {
+        "dependencies": [
+          "connector_plan"
+        ]
+      },
+      "session_id": null,
+      "severity": "INFO",
+      "task_id": "skill_plan",
+      "timestamp": "2026-07-10T08:53:01.434648+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": null,
+      "event_id": "evt-8d3b8c65e573",
+      "event_type": "TASK_BLOCKED",
+      "payload": {
+        "dependencies": [
+          "skill_plan"
+        ]
+      },
+      "session_id": null,
+      "severity": "INFO",
+      "task_id": "evidence_plan",
+      "timestamp": "2026-07-10T08:53:01.434692+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": null,
+      "event_id": "evt-cf412bbaa41f",
+      "event_type": "TASK_BLOCKED",
+      "payload": {
+        "dependencies": [
+          "evidence_plan"
+        ]
+      },
+      "session_id": null,
+      "severity": "INFO",
+      "task_id": "knowledge_graph_plan",
+      "timestamp": "2026-07-10T08:53:01.434737+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": null,
+      "event_id": "evt-bd96601a46be",
+      "event_type": "TASK_BLOCKED",
+      "payload": {
+        "dependencies": [
+          "knowledge_graph_plan"
+        ]
+      },
+      "session_id": null,
+      "severity": "INFO",
+      "task_id": "score_plan",
+      "timestamp": "2026-07-10T08:53:01.434781+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": null,
+      "event_id": "evt-93d64c87a193",
+      "event_type": "TASK_BLOCKED",
+      "payload": {
+        "dependencies": [
+          "score_plan"
+        ]
+      },
+      "session_id": null,
+      "severity": "INFO",
+      "task_id": "report_plan",
+      "timestamp": "2026-07-10T08:53:01.434817+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": null,
+      "event_id": "evt-61d88daf9520",
+      "event_type": "TASK_BLOCKED",
+      "payload": {
+        "dependencies": [
+          "report_plan"
+        ]
+      },
+      "session_id": null,
+      "severity": "INFO",
+      "task_id": "review_plan",
+      "timestamp": "2026-07-10T08:53:01.434861+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": null,
+      "event_id": "evt-8ffa9b1dfaf7",
+      "event_type": "TASK_BLOCKED",
+      "payload": {
+        "dependencies": [
+          "review_plan"
+        ]
+      },
+      "session_id": null,
+      "severity": "INFO",
+      "task_id": "runtime_plan",
+      "timestamp": "2026-07-10T08:53:01.434915+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": null,
+      "event_id": "evt-df28ed2f46a8",
+      "event_type": "RUNTIME_COMPLETED",
+      "payload": {
+        "runtime_id": "runtime-from-planner-failure-runtime-interruption",
+        "workflow_id": "workflow-failure-runtime-interruption"
+      },
+      "session_id": null,
+      "severity": "INFO",
+      "task_id": null,
+      "timestamp": "2026-07-10T08:53:01.434978+00:00",
+      "trace_id": null
+    }
+  ],
+  "expected": "Runtime should mark cancelled task, block dependents, and preserve resumable partial state.",
+  "started_at": "2026-07-10T08:53:01.435448+00:00",
+  "status": "PASS",
+  "task_states": {
+    "connector_plan": "BLOCKED",
+    "evidence_plan": "BLOCKED",
+    "goal_analysis": "COMPLETED",
+    "knowledge_graph_plan": "BLOCKED",
+    "methodology_selection": "BLOCKED",
+    "report_plan": "BLOCKED",
+    "review_plan": "BLOCKED",
+    "runtime_plan": "BLOCKED",
+    "scope": "CANCELLED",
+    "score_plan": "BLOCKED",
+    "skill_plan": "BLOCKED"
+  }
+}

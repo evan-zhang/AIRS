@@ -1,0 +1,127 @@
+AIRS M7 Production Examples Validation
+======================================
+PASS: docs/examples/example-specification.md exists
+PASS: docs/examples/example-specification.md has substantive content
+PASS: docs/examples/example-specification.md has disclaimer
+PASS: docs/examples/example-specification.md avoids forbidden expression: 建议买入
+PASS: docs/examples/example-specification.md avoids forbidden expression: 建议卖出
+PASS: docs/examples/example-specification.md avoids forbidden expression: 保证收益
+PASS: docs/examples/example-specification.md avoids forbidden expression: 保证盈利
+PASS: docs/examples/regression-dataset.md exists
+PASS: docs/examples/regression-dataset.md has substantive content
+PASS: docs/examples/regression-dataset.md has disclaimer
+PASS: docs/examples/regression-dataset.md avoids forbidden expression: 建议买入
+PASS: docs/examples/regression-dataset.md avoids forbidden expression: 建议卖出
+PASS: docs/examples/regression-dataset.md avoids forbidden expression: 保证收益
+PASS: docs/examples/regression-dataset.md avoids forbidden expression: 保证盈利
+PASS: examples/reports/supply-chain-report.md exists
+PASS: examples/reports/supply-chain-report.md has substantive content
+PASS: examples/reports/supply-chain-report.md has disclaimer
+PASS: examples/reports/supply-chain-report.md avoids forbidden expression: 建议买入
+PASS: examples/reports/supply-chain-report.md avoids forbidden expression: 建议卖出
+PASS: examples/reports/supply-chain-report.md avoids forbidden expression: 保证收益
+PASS: examples/reports/supply-chain-report.md avoids forbidden expression: 保证盈利
+PASS: examples/reports/supply-chain-report.md includes Prompt ID
+PASS: examples/reports/supply-chain-report.md includes M4 Prompt
+PASS: examples/reports/supply-chain-report.md includes Evidence ID
+PASS: examples/reports/supply-chain-report.md includes Evidence Level
+PASS: examples/reports/supply-chain-report.md includes Confidence
+PASS: examples/reports/supply-chain-report.md includes Weight
+PASS: examples/reports/supply-chain-report.md includes Scorecard
+PASS: examples/reports/supply-chain-report.md includes Quality Gate
+PASS: examples/reports/supply-chain-report.md includes 反方观点
+PASS: examples/reports/supply-chain-report.md includes 不确定性
+PASS: examples/reports/theme-expansion-report.md exists
+PASS: examples/reports/theme-expansion-report.md has substantive content
+PASS: examples/reports/theme-expansion-report.md has disclaimer
+PASS: examples/reports/theme-expansion-report.md avoids forbidden expression: 建议买入
+PASS: examples/reports/theme-expansion-report.md avoids forbidden expression: 建议卖出
+PASS: examples/reports/theme-expansion-report.md avoids forbidden expression: 保证收益
+PASS: examples/reports/theme-expansion-report.md avoids forbidden expression: 保证盈利
+PASS: examples/reports/theme-expansion-report.md includes Prompt ID
+PASS: examples/reports/theme-expansion-report.md includes M4 Prompt
+PASS: examples/reports/theme-expansion-report.md includes Evidence ID
+PASS: examples/reports/theme-expansion-report.md includes Evidence Level
+PASS: examples/reports/theme-expansion-report.md includes Confidence
+PASS: examples/reports/theme-expansion-report.md includes Weight
+PASS: examples/reports/theme-expansion-report.md includes Scorecard
+PASS: examples/reports/theme-expansion-report.md includes Quality Gate
+PASS: examples/reports/theme-expansion-report.md includes 反方观点
+PASS: examples/reports/theme-expansion-report.md includes 不确定性
+PASS: examples/evidence/evidence-report.md exists
+PASS: examples/evidence/evidence-report.md has substantive content
+PASS: examples/evidence/evidence-report.md has disclaimer
+PASS: examples/evidence/evidence-report.md avoids forbidden expression: 建议买入
+PASS: examples/evidence/evidence-report.md avoids forbidden expression: 建议卖出
+PASS: examples/evidence/evidence-report.md avoids forbidden expression: 保证收益
+PASS: examples/evidence/evidence-report.md avoids forbidden expression: 保证盈利
+PASS: examples/evidence/evidence-report.md includes Prompt ID
+PASS: examples/evidence/evidence-report.md includes M4 Prompt
+PASS: examples/evidence/evidence-report.md includes Evidence ID
+PASS: examples/evidence/evidence-report.md includes Evidence Level
+PASS: examples/evidence/evidence-report.md includes Confidence
+PASS: examples/evidence/evidence-report.md includes Weight
+PASS: examples/evidence/evidence-report.md includes Scorecard
+PASS: examples/evidence/evidence-report.md includes Quality Gate
+PASS: examples/evidence/evidence-report.md includes 反方观点
+PASS: examples/evidence/evidence-report.md includes 不确定性
+PASS: examples/reports/valuation-report.md exists
+PASS: examples/reports/valuation-report.md has substantive content
+PASS: examples/reports/valuation-report.md has disclaimer
+PASS: examples/reports/valuation-report.md avoids forbidden expression: 建议买入
+PASS: examples/reports/valuation-report.md avoids forbidden expression: 建议卖出
+PASS: examples/reports/valuation-report.md avoids forbidden expression: 保证收益
+PASS: examples/reports/valuation-report.md avoids forbidden expression: 保证盈利
+PASS: examples/reports/valuation-report.md includes Prompt ID
+PASS: examples/reports/valuation-report.md includes M4 Prompt
+PASS: examples/reports/valuation-report.md includes Evidence ID
+PASS: examples/reports/valuation-report.md includes Evidence Level
+PASS: examples/reports/valuation-report.md includes Confidence
+PASS: examples/reports/valuation-report.md includes Weight
+PASS: examples/reports/valuation-report.md includes Scorecard
+PASS: examples/reports/valuation-report.md includes Quality Gate
+PASS: examples/reports/valuation-report.md includes 反方观点
+PASS: examples/reports/valuation-report.md includes 不确定性
+PASS: examples/reports/risk-report.md exists
+PASS: examples/reports/risk-report.md has substantive content
+PASS: examples/reports/risk-report.md has disclaimer
+PASS: examples/reports/risk-report.md avoids forbidden expression: 建议买入
+PASS: examples/reports/risk-report.md avoids forbidden expression: 建议卖出
+PASS: examples/reports/risk-report.md avoids forbidden expression: 保证收益
+PASS: examples/reports/risk-report.md avoids forbidden expression: 保证盈利
+PASS: examples/reports/risk-report.md includes Prompt ID
+PASS: examples/reports/risk-report.md includes M4 Prompt
+PASS: examples/reports/risk-report.md includes Evidence ID
+PASS: examples/reports/risk-report.md includes Evidence Level
+PASS: examples/reports/risk-report.md includes Confidence
+PASS: examples/reports/risk-report.md includes Weight
+PASS: examples/reports/risk-report.md includes Scorecard
+PASS: examples/reports/risk-report.md includes Quality Gate
+PASS: examples/reports/risk-report.md includes 反方观点
+PASS: examples/reports/risk-report.md includes 不确定性
+PASS: examples/reports/complete-investment-research-report.md exists
+PASS: examples/reports/complete-investment-research-report.md has substantive content
+PASS: examples/reports/complete-investment-research-report.md has disclaimer
+PASS: examples/reports/complete-investment-research-report.md avoids forbidden expression: 建议买入
+PASS: examples/reports/complete-investment-research-report.md avoids forbidden expression: 建议卖出
+PASS: examples/reports/complete-investment-research-report.md avoids forbidden expression: 保证收益
+PASS: examples/reports/complete-investment-research-report.md avoids forbidden expression: 保证盈利
+PASS: examples/reports/complete-investment-research-report.md includes Prompt ID
+PASS: examples/reports/complete-investment-research-report.md includes M4 Prompt
+PASS: examples/reports/complete-investment-research-report.md includes Evidence ID
+PASS: examples/reports/complete-investment-research-report.md includes Evidence Level
+PASS: examples/reports/complete-investment-research-report.md includes Confidence
+PASS: examples/reports/complete-investment-research-report.md includes Weight
+PASS: examples/reports/complete-investment-research-report.md includes Scorecard
+PASS: examples/reports/complete-investment-research-report.md includes Quality Gate
+PASS: examples/reports/complete-investment-research-report.md includes 反方观点
+PASS: examples/reports/complete-investment-research-report.md includes 不确定性
+PASS: templates/example-template.md exists
+PASS: templates/example-template.md has substantive content
+PASS: templates/example-template.md has disclaimer
+PASS: templates/example-template.md avoids forbidden expression: 建议买入
+PASS: templates/example-template.md avoids forbidden expression: 建议卖出
+PASS: templates/example-template.md avoids forbidden expression: 保证收益
+PASS: templates/example-template.md avoids forbidden expression: 保证盈利
+======================================
+RESULT: PASS

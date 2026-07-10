@@ -181,7 +181,9 @@ def validate_consistency(failures: list[str]) -> None:
 def validate_regressions(failures: list[str]) -> None:
     scripts = sorted(p for p in (ROOT / "scripts").glob("validate_*.py") if p.name != "validate_learning.py")
     all_scripts = sorted((ROOT / "scripts").glob("validate_*.py"))
-    check(len(all_scripts) == 22, f"found all 22 validate_* scripts including validate_learning.py", f"expected 22 validate_* scripts, found {len(all_scripts)}", failures)
+    expected_script_count = 23
+    check(len(all_scripts) == expected_script_count, f"found all {expected_script_count} validate_* scripts including validate_learning.py", f"expected {expected_script_count} validate_* scripts, found {len(all_scripts)}", failures)
+    check((ROOT / "scripts" / "validate_e2e.py").exists(), "validate_e2e.py is included in regression validation", "validate_e2e.py missing from regression validation", failures)
     for script in scripts:
         result = subprocess.run([sys.executable, str(script)], cwd=ROOT, text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, check=False)
         ok = result.returncode == 0 and ("RESULT: PASS" in result.stdout or "最终结果: PASS" in result.stdout or "FINAL RESULT: PASS" in result.stdout)

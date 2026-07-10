@@ -1,0 +1,601 @@
+AIRS FEATURE-007 AI Research Workspace Validation
+=================================================
+PASS: docs/workspace/workspace-architecture.md exists
+PASS: docs/workspace/workspace-architecture.md has substantive content
+PASS: docs/workspace/workspace-architecture.md has disclaimer
+PASS: docs/workspace/workspace-architecture.md avoids forbidden expression: 建议买入
+PASS: docs/workspace/workspace-architecture.md avoids forbidden expression: 建议卖出
+PASS: docs/workspace/workspace-architecture.md avoids forbidden expression: 保证收益
+PASS: docs/workspace/workspace-architecture.md avoids forbidden expression: 保证盈利
+PASS: docs/workspace/workspace-architecture.md avoids forbidden expression: 目标价为
+PASS: docs/workspace/workspace-architecture.md avoids forbidden expression: 应买入
+PASS: docs/workspace/workspace-architecture.md avoids forbidden expression: 应卖出
+PASS: docs/workspace/workspace-architecture.md avoids forbidden expression: 自动交易指令
+PASS: docs/workspace/workspace-architecture.md references Workspace
+PASS: docs/workspace/workspace-architecture.md references Runtime
+PASS: docs/workspace/workspace-architecture.md references Artifact
+PASS: docs/workspace/workspace-lifecycle.md exists
+PASS: docs/workspace/workspace-lifecycle.md has substantive content
+PASS: docs/workspace/workspace-lifecycle.md has disclaimer
+PASS: docs/workspace/workspace-lifecycle.md avoids forbidden expression: 建议买入
+PASS: docs/workspace/workspace-lifecycle.md avoids forbidden expression: 建议卖出
+PASS: docs/workspace/workspace-lifecycle.md avoids forbidden expression: 保证收益
+PASS: docs/workspace/workspace-lifecycle.md avoids forbidden expression: 保证盈利
+PASS: docs/workspace/workspace-lifecycle.md avoids forbidden expression: 目标价为
+PASS: docs/workspace/workspace-lifecycle.md avoids forbidden expression: 应买入
+PASS: docs/workspace/workspace-lifecycle.md avoids forbidden expression: 应卖出
+PASS: docs/workspace/workspace-lifecycle.md avoids forbidden expression: 自动交易指令
+PASS: docs/workspace/workspace-lifecycle.md references Workspace
+PASS: docs/workspace/workspace-lifecycle.md references Runtime
+PASS: docs/workspace/workspace-lifecycle.md references Artifact
+PASS: docs/workspace/project-management.md exists
+PASS: docs/workspace/project-management.md has substantive content
+PASS: docs/workspace/project-management.md has disclaimer
+PASS: docs/workspace/project-management.md avoids forbidden expression: 建议买入
+PASS: docs/workspace/project-management.md avoids forbidden expression: 建议卖出
+PASS: docs/workspace/project-management.md avoids forbidden expression: 保证收益
+PASS: docs/workspace/project-management.md avoids forbidden expression: 保证盈利
+PASS: docs/workspace/project-management.md avoids forbidden expression: 目标价为
+PASS: docs/workspace/project-management.md avoids forbidden expression: 应买入
+PASS: docs/workspace/project-management.md avoids forbidden expression: 应卖出
+PASS: docs/workspace/project-management.md avoids forbidden expression: 自动交易指令
+PASS: docs/workspace/project-management.md references Workspace
+PASS: docs/workspace/project-management.md references Runtime
+PASS: docs/workspace/project-management.md references Artifact
+PASS: docs/workspace/session-management.md exists
+PASS: docs/workspace/session-management.md has substantive content
+PASS: docs/workspace/session-management.md has disclaimer
+PASS: docs/workspace/session-management.md avoids forbidden expression: 建议买入
+PASS: docs/workspace/session-management.md avoids forbidden expression: 建议卖出
+PASS: docs/workspace/session-management.md avoids forbidden expression: 保证收益
+PASS: docs/workspace/session-management.md avoids forbidden expression: 保证盈利
+PASS: docs/workspace/session-management.md avoids forbidden expression: 目标价为
+PASS: docs/workspace/session-management.md avoids forbidden expression: 应买入
+PASS: docs/workspace/session-management.md avoids forbidden expression: 应卖出
+PASS: docs/workspace/session-management.md avoids forbidden expression: 自动交易指令
+PASS: docs/workspace/session-management.md references Workspace
+PASS: docs/workspace/session-management.md references Runtime
+PASS: docs/workspace/session-management.md references Artifact
+PASS: docs/workspace/artifact-governance.md exists
+PASS: docs/workspace/artifact-governance.md has substantive content
+PASS: docs/workspace/artifact-governance.md has disclaimer
+PASS: docs/workspace/artifact-governance.md avoids forbidden expression: 建议买入
+PASS: docs/workspace/artifact-governance.md avoids forbidden expression: 建议卖出
+PASS: docs/workspace/artifact-governance.md avoids forbidden expression: 保证收益
+PASS: docs/workspace/artifact-governance.md avoids forbidden expression: 保证盈利
+PASS: docs/workspace/artifact-governance.md avoids forbidden expression: 目标价为
+PASS: docs/workspace/artifact-governance.md avoids forbidden expression: 应买入
+PASS: docs/workspace/artifact-governance.md avoids forbidden expression: 应卖出
+PASS: docs/workspace/artifact-governance.md avoids forbidden expression: 自动交易指令
+PASS: docs/workspace/artifact-governance.md references Workspace
+PASS: docs/workspace/artifact-governance.md references Runtime
+PASS: docs/workspace/artifact-governance.md references Artifact
+PASS: workspace/__init__.py exists
+PASS: workspace/__init__.py has substantive content
+PASS: workspace/__init__.py avoids forbidden expression: 建议买入
+PASS: workspace/__init__.py avoids forbidden expression: 建议卖出
+PASS: workspace/__init__.py avoids forbidden expression: 保证收益
+PASS: workspace/__init__.py avoids forbidden expression: 保证盈利
+PASS: workspace/__init__.py avoids forbidden expression: 目标价为
+PASS: workspace/__init__.py avoids forbidden expression: 应买入
+PASS: workspace/__init__.py avoids forbidden expression: 应卖出
+PASS: workspace/__init__.py avoids forbidden expression: 自动交易指令
+PASS: workspace/__init__.py contains workspace logic
+PASS: workspace/manager.py exists
+PASS: workspace/manager.py has substantive content
+PASS: workspace/manager.py avoids forbidden expression: 建议买入
+PASS: workspace/manager.py avoids forbidden expression: 建议卖出
+PASS: workspace/manager.py avoids forbidden expression: 保证收益
+PASS: workspace/manager.py avoids forbidden expression: 保证盈利
+PASS: workspace/manager.py avoids forbidden expression: 目标价为
+PASS: workspace/manager.py avoids forbidden expression: 应买入
+PASS: workspace/manager.py avoids forbidden expression: 应卖出
+PASS: workspace/manager.py avoids forbidden expression: 自动交易指令
+PASS: workspace/manager.py contains workspace logic
+PASS: workspace/project.py exists
+PASS: workspace/project.py has substantive content
+PASS: workspace/project.py avoids forbidden expression: 建议买入
+PASS: workspace/project.py avoids forbidden expression: 建议卖出
+PASS: workspace/project.py avoids forbidden expression: 保证收益
+PASS: workspace/project.py avoids forbidden expression: 保证盈利
+PASS: workspace/project.py avoids forbidden expression: 目标价为
+PASS: workspace/project.py avoids forbidden expression: 应买入
+PASS: workspace/project.py avoids forbidden expression: 应卖出
+PASS: workspace/project.py avoids forbidden expression: 自动交易指令
+PASS: workspace/project.py contains workspace logic
+PASS: workspace/session.py exists
+PASS: workspace/session.py has substantive content
+PASS: workspace/session.py avoids forbidden expression: 建议买入
+PASS: workspace/session.py avoids forbidden expression: 建议卖出
+PASS: workspace/session.py avoids forbidden expression: 保证收益
+PASS: workspace/session.py avoids forbidden expression: 保证盈利
+PASS: workspace/session.py avoids forbidden expression: 目标价为
+PASS: workspace/session.py avoids forbidden expression: 应买入
+PASS: workspace/session.py avoids forbidden expression: 应卖出
+PASS: workspace/session.py avoids forbidden expression: 自动交易指令
+PASS: workspace/session.py contains workspace logic
+PASS: workspace/timeline.py exists
+PASS: workspace/timeline.py has substantive content
+PASS: workspace/timeline.py avoids forbidden expression: 建议买入
+PASS: workspace/timeline.py avoids forbidden expression: 建议卖出
+PASS: workspace/timeline.py avoids forbidden expression: 保证收益
+PASS: workspace/timeline.py avoids forbidden expression: 保证盈利
+PASS: workspace/timeline.py avoids forbidden expression: 目标价为
+PASS: workspace/timeline.py avoids forbidden expression: 应买入
+PASS: workspace/timeline.py avoids forbidden expression: 应卖出
+PASS: workspace/timeline.py avoids forbidden expression: 自动交易指令
+PASS: workspace/timeline.py contains workspace logic
+PASS: workspace/artifact.py exists
+PASS: workspace/artifact.py has substantive content
+PASS: workspace/artifact.py avoids forbidden expression: 建议买入
+PASS: workspace/artifact.py avoids forbidden expression: 建议卖出
+PASS: workspace/artifact.py avoids forbidden expression: 保证收益
+PASS: workspace/artifact.py avoids forbidden expression: 保证盈利
+PASS: workspace/artifact.py avoids forbidden expression: 目标价为
+PASS: workspace/artifact.py avoids forbidden expression: 应买入
+PASS: workspace/artifact.py avoids forbidden expression: 应卖出
+PASS: workspace/artifact.py avoids forbidden expression: 自动交易指令
+PASS: workspace/artifact.py contains workspace logic
+PASS: workspace/task_board.py exists
+PASS: workspace/task_board.py has substantive content
+PASS: workspace/task_board.py avoids forbidden expression: 建议买入
+PASS: workspace/task_board.py avoids forbidden expression: 建议卖出
+PASS: workspace/task_board.py avoids forbidden expression: 保证收益
+PASS: workspace/task_board.py avoids forbidden expression: 保证盈利
+PASS: workspace/task_board.py avoids forbidden expression: 目标价为
+PASS: workspace/task_board.py avoids forbidden expression: 应买入
+PASS: workspace/task_board.py avoids forbidden expression: 应卖出
+PASS: workspace/task_board.py avoids forbidden expression: 自动交易指令
+PASS: workspace/task_board.py contains workspace logic
+PASS: workspace/memory.py exists
+PASS: workspace/memory.py has substantive content
+PASS: workspace/memory.py avoids forbidden expression: 建议买入
+PASS: workspace/memory.py avoids forbidden expression: 建议卖出
+PASS: workspace/memory.py avoids forbidden expression: 保证收益
+PASS: workspace/memory.py avoids forbidden expression: 保证盈利
+PASS: workspace/memory.py avoids forbidden expression: 目标价为
+PASS: workspace/memory.py avoids forbidden expression: 应买入
+PASS: workspace/memory.py avoids forbidden expression: 应卖出
+PASS: workspace/memory.py avoids forbidden expression: 自动交易指令
+PASS: workspace/memory.py contains workspace logic
+PASS: workspace/snapshot.py exists
+PASS: workspace/snapshot.py has substantive content
+PASS: workspace/snapshot.py avoids forbidden expression: 建议买入
+PASS: workspace/snapshot.py avoids forbidden expression: 建议卖出
+PASS: workspace/snapshot.py avoids forbidden expression: 保证收益
+PASS: workspace/snapshot.py avoids forbidden expression: 保证盈利
+PASS: workspace/snapshot.py avoids forbidden expression: 目标价为
+PASS: workspace/snapshot.py avoids forbidden expression: 应买入
+PASS: workspace/snapshot.py avoids forbidden expression: 应卖出
+PASS: workspace/snapshot.py avoids forbidden expression: 自动交易指令
+PASS: workspace/snapshot.py contains workspace logic
+PASS: workspace/version.py exists
+PASS: workspace/version.py has substantive content
+PASS: workspace/version.py avoids forbidden expression: 建议买入
+PASS: workspace/version.py avoids forbidden expression: 建议卖出
+PASS: workspace/version.py avoids forbidden expression: 保证收益
+PASS: workspace/version.py avoids forbidden expression: 保证盈利
+PASS: workspace/version.py avoids forbidden expression: 目标价为
+PASS: workspace/version.py avoids forbidden expression: 应买入
+PASS: workspace/version.py avoids forbidden expression: 应卖出
+PASS: workspace/version.py avoids forbidden expression: 自动交易指令
+PASS: workspace/version.py contains workspace logic
+PASS: workspace/replay.py exists
+PASS: workspace/replay.py has substantive content
+PASS: workspace/replay.py avoids forbidden expression: 建议买入
+PASS: workspace/replay.py avoids forbidden expression: 建议卖出
+PASS: workspace/replay.py avoids forbidden expression: 保证收益
+PASS: workspace/replay.py avoids forbidden expression: 保证盈利
+PASS: workspace/replay.py avoids forbidden expression: 目标价为
+PASS: workspace/replay.py avoids forbidden expression: 应买入
+PASS: workspace/replay.py avoids forbidden expression: 应卖出
+PASS: workspace/replay.py avoids forbidden expression: 自动交易指令
+PASS: workspace/replay.py contains workspace logic
+PASS: workspace/export.py exists
+PASS: workspace/export.py has substantive content
+PASS: workspace/export.py avoids forbidden expression: 建议买入
+PASS: workspace/export.py avoids forbidden expression: 建议卖出
+PASS: workspace/export.py avoids forbidden expression: 保证收益
+PASS: workspace/export.py avoids forbidden expression: 保证盈利
+PASS: workspace/export.py avoids forbidden expression: 目标价为
+PASS: workspace/export.py avoids forbidden expression: 应买入
+PASS: workspace/export.py avoids forbidden expression: 应卖出
+PASS: workspace/export.py avoids forbidden expression: 自动交易指令
+PASS: workspace/export.py contains workspace logic
+PASS: workspace/collaboration.py exists
+PASS: workspace/collaboration.py has substantive content
+PASS: workspace/collaboration.py avoids forbidden expression: 建议买入
+PASS: workspace/collaboration.py avoids forbidden expression: 建议卖出
+PASS: workspace/collaboration.py avoids forbidden expression: 保证收益
+PASS: workspace/collaboration.py avoids forbidden expression: 保证盈利
+PASS: workspace/collaboration.py avoids forbidden expression: 目标价为
+PASS: workspace/collaboration.py avoids forbidden expression: 应买入
+PASS: workspace/collaboration.py avoids forbidden expression: 应卖出
+PASS: workspace/collaboration.py avoids forbidden expression: 自动交易指令
+PASS: workspace/collaboration.py contains workspace logic
+PASS: workspace/audit.py exists
+PASS: workspace/audit.py has substantive content
+PASS: workspace/audit.py avoids forbidden expression: 建议买入
+PASS: workspace/audit.py avoids forbidden expression: 建议卖出
+PASS: workspace/audit.py avoids forbidden expression: 保证收益
+PASS: workspace/audit.py avoids forbidden expression: 保证盈利
+PASS: workspace/audit.py avoids forbidden expression: 目标价为
+PASS: workspace/audit.py avoids forbidden expression: 应买入
+PASS: workspace/audit.py avoids forbidden expression: 应卖出
+PASS: workspace/audit.py avoids forbidden expression: 自动交易指令
+PASS: workspace/audit.py contains workspace logic
+PASS: workspace/README.md exists
+PASS: workspace/README.md has substantive content
+PASS: workspace/README.md has disclaimer
+PASS: workspace/README.md avoids forbidden expression: 建议买入
+PASS: workspace/README.md avoids forbidden expression: 建议卖出
+PASS: workspace/README.md avoids forbidden expression: 保证收益
+PASS: workspace/README.md avoids forbidden expression: 保证盈利
+PASS: workspace/README.md avoids forbidden expression: 目标价为
+PASS: workspace/README.md avoids forbidden expression: 应买入
+PASS: workspace/README.md avoids forbidden expression: 应卖出
+PASS: workspace/README.md avoids forbidden expression: 自动交易指令
+PASS: workspace/README.md contains workspace logic
+PASS: schemas/workspace/workspace.schema.json exists
+PASS: schemas/workspace/workspace.schema.json is valid JSON
+PASS: schemas/workspace/workspace.schema.json contains $schema
+PASS: schemas/workspace/workspace.schema.json contains disclaimer
+PASS: schemas/workspace/workspace.schema.json contains 不构成投资建议
+PASS: schemas/workspace/project.schema.json exists
+PASS: schemas/workspace/project.schema.json is valid JSON
+PASS: schemas/workspace/project.schema.json contains $schema
+PASS: schemas/workspace/project.schema.json contains disclaimer
+PASS: schemas/workspace/project.schema.json contains 不构成投资建议
+PASS: schemas/workspace/session.schema.json exists
+PASS: schemas/workspace/session.schema.json is valid JSON
+PASS: schemas/workspace/session.schema.json contains $schema
+PASS: schemas/workspace/session.schema.json contains disclaimer
+PASS: schemas/workspace/session.schema.json contains 不构成投资建议
+PASS: schemas/workspace/artifact.schema.json exists
+PASS: schemas/workspace/artifact.schema.json is valid JSON
+PASS: schemas/workspace/artifact.schema.json contains $schema
+PASS: schemas/workspace/artifact.schema.json contains disclaimer
+PASS: schemas/workspace/artifact.schema.json contains 不构成投资建议
+PASS: schemas/workspace/snapshot.schema.json exists
+PASS: schemas/workspace/snapshot.schema.json is valid JSON
+PASS: schemas/workspace/snapshot.schema.json contains $schema
+PASS: schemas/workspace/snapshot.schema.json contains disclaimer
+PASS: schemas/workspace/snapshot.schema.json contains 不构成投资建议
+PASS: templates/workspace-dashboard-template.md exists
+PASS: templates/workspace-dashboard-template.md has substantive content
+PASS: templates/workspace-dashboard-template.md has disclaimer
+PASS: templates/workspace-dashboard-template.md avoids forbidden expression: 建议买入
+PASS: templates/workspace-dashboard-template.md avoids forbidden expression: 建议卖出
+PASS: templates/workspace-dashboard-template.md avoids forbidden expression: 保证收益
+PASS: templates/workspace-dashboard-template.md avoids forbidden expression: 保证盈利
+PASS: templates/workspace-dashboard-template.md avoids forbidden expression: 目标价为
+PASS: templates/workspace-dashboard-template.md avoids forbidden expression: 应买入
+PASS: templates/workspace-dashboard-template.md avoids forbidden expression: 应卖出
+PASS: templates/workspace-dashboard-template.md avoids forbidden expression: 自动交易指令
+PASS: builder-output/ai-research-workspace/ISSUE.md exists
+PASS: builder-output/ai-research-workspace/ISSUE.md has substantive content
+PASS: builder-output/ai-research-workspace/ISSUE.md has disclaimer
+PASS: builder-output/ai-research-workspace/ISSUE.md avoids forbidden expression: 建议买入
+PASS: builder-output/ai-research-workspace/ISSUE.md avoids forbidden expression: 建议卖出
+PASS: builder-output/ai-research-workspace/ISSUE.md avoids forbidden expression: 保证收益
+PASS: builder-output/ai-research-workspace/ISSUE.md avoids forbidden expression: 保证盈利
+PASS: builder-output/ai-research-workspace/ISSUE.md avoids forbidden expression: 目标价为
+PASS: builder-output/ai-research-workspace/ISSUE.md avoids forbidden expression: 应买入
+PASS: builder-output/ai-research-workspace/ISSUE.md avoids forbidden expression: 应卖出
+PASS: builder-output/ai-research-workspace/ISSUE.md avoids forbidden expression: 自动交易指令
+PASS: builder-output/ai-research-workspace/ADR.md exists
+PASS: builder-output/ai-research-workspace/ADR.md has substantive content
+PASS: builder-output/ai-research-workspace/ADR.md has disclaimer
+PASS: builder-output/ai-research-workspace/ADR.md avoids forbidden expression: 建议买入
+PASS: builder-output/ai-research-workspace/ADR.md avoids forbidden expression: 建议卖出
+PASS: builder-output/ai-research-workspace/ADR.md avoids forbidden expression: 保证收益
+PASS: builder-output/ai-research-workspace/ADR.md avoids forbidden expression: 保证盈利
+PASS: builder-output/ai-research-workspace/ADR.md avoids forbidden expression: 目标价为
+PASS: builder-output/ai-research-workspace/ADR.md avoids forbidden expression: 应买入
+PASS: builder-output/ai-research-workspace/ADR.md avoids forbidden expression: 应卖出
+PASS: builder-output/ai-research-workspace/ADR.md avoids forbidden expression: 自动交易指令
+PASS: builder-output/ai-research-workspace/FEATURE_SPEC.md exists
+PASS: builder-output/ai-research-workspace/FEATURE_SPEC.md has substantive content
+PASS: builder-output/ai-research-workspace/FEATURE_SPEC.md has disclaimer
+PASS: builder-output/ai-research-workspace/FEATURE_SPEC.md avoids forbidden expression: 建议买入
+PASS: builder-output/ai-research-workspace/FEATURE_SPEC.md avoids forbidden expression: 建议卖出
+PASS: builder-output/ai-research-workspace/FEATURE_SPEC.md avoids forbidden expression: 保证收益
+PASS: builder-output/ai-research-workspace/FEATURE_SPEC.md avoids forbidden expression: 保证盈利
+PASS: builder-output/ai-research-workspace/FEATURE_SPEC.md avoids forbidden expression: 目标价为
+PASS: builder-output/ai-research-workspace/FEATURE_SPEC.md avoids forbidden expression: 应买入
+PASS: builder-output/ai-research-workspace/FEATURE_SPEC.md avoids forbidden expression: 应卖出
+PASS: builder-output/ai-research-workspace/FEATURE_SPEC.md avoids forbidden expression: 自动交易指令
+PASS: builder-output/ai-research-workspace/skill/ai-research-workspace-skill.md exists
+PASS: builder-output/ai-research-workspace/skill/ai-research-workspace-skill.md has substantive content
+PASS: builder-output/ai-research-workspace/skill/ai-research-workspace-skill.md has disclaimer
+PASS: builder-output/ai-research-workspace/skill/ai-research-workspace-skill.md avoids forbidden expression: 建议买入
+PASS: builder-output/ai-research-workspace/skill/ai-research-workspace-skill.md avoids forbidden expression: 建议卖出
+PASS: builder-output/ai-research-workspace/skill/ai-research-workspace-skill.md avoids forbidden expression: 保证收益
+PASS: builder-output/ai-research-workspace/skill/ai-research-workspace-skill.md avoids forbidden expression: 保证盈利
+PASS: builder-output/ai-research-workspace/skill/ai-research-workspace-skill.md avoids forbidden expression: 目标价为
+PASS: builder-output/ai-research-workspace/skill/ai-research-workspace-skill.md avoids forbidden expression: 应买入
+PASS: builder-output/ai-research-workspace/skill/ai-research-workspace-skill.md avoids forbidden expression: 应卖出
+PASS: builder-output/ai-research-workspace/skill/ai-research-workspace-skill.md avoids forbidden expression: 自动交易指令
+PASS: builder-output/ai-research-workspace/prompt/ai-research-workspace-prompt.md exists
+PASS: builder-output/ai-research-workspace/prompt/ai-research-workspace-prompt.md has substantive content
+PASS: builder-output/ai-research-workspace/prompt/ai-research-workspace-prompt.md has disclaimer
+PASS: builder-output/ai-research-workspace/prompt/ai-research-workspace-prompt.md avoids forbidden expression: 建议买入
+PASS: builder-output/ai-research-workspace/prompt/ai-research-workspace-prompt.md avoids forbidden expression: 建议卖出
+PASS: builder-output/ai-research-workspace/prompt/ai-research-workspace-prompt.md avoids forbidden expression: 保证收益
+PASS: builder-output/ai-research-workspace/prompt/ai-research-workspace-prompt.md avoids forbidden expression: 保证盈利
+PASS: builder-output/ai-research-workspace/prompt/ai-research-workspace-prompt.md avoids forbidden expression: 目标价为
+PASS: builder-output/ai-research-workspace/prompt/ai-research-workspace-prompt.md avoids forbidden expression: 应买入
+PASS: builder-output/ai-research-workspace/prompt/ai-research-workspace-prompt.md avoids forbidden expression: 应卖出
+PASS: builder-output/ai-research-workspace/prompt/ai-research-workspace-prompt.md avoids forbidden expression: 自动交易指令
+PASS: builder-output/ai-research-workspace/schema/ai-research-workspace.schema.json exists
+PASS: builder-output/ai-research-workspace/schema/ai-research-workspace.schema.json is valid JSON
+PASS: builder-output/ai-research-workspace/tests/test-ai-research-workspace.md exists
+PASS: builder-output/ai-research-workspace/tests/test-ai-research-workspace.md has substantive content
+PASS: builder-output/ai-research-workspace/tests/test-ai-research-workspace.md has disclaimer
+PASS: builder-output/ai-research-workspace/tests/test-ai-research-workspace.md avoids forbidden expression: 建议买入
+PASS: builder-output/ai-research-workspace/tests/test-ai-research-workspace.md avoids forbidden expression: 建议卖出
+PASS: builder-output/ai-research-workspace/tests/test-ai-research-workspace.md avoids forbidden expression: 保证收益
+PASS: builder-output/ai-research-workspace/tests/test-ai-research-workspace.md avoids forbidden expression: 保证盈利
+PASS: builder-output/ai-research-workspace/tests/test-ai-research-workspace.md avoids forbidden expression: 目标价为
+PASS: builder-output/ai-research-workspace/tests/test-ai-research-workspace.md avoids forbidden expression: 应买入
+PASS: builder-output/ai-research-workspace/tests/test-ai-research-workspace.md avoids forbidden expression: 应卖出
+PASS: builder-output/ai-research-workspace/tests/test-ai-research-workspace.md avoids forbidden expression: 自动交易指令
+PASS: builder-output/ai-research-workspace/benchmark/ai-research-workspace-benchmark.md exists
+PASS: builder-output/ai-research-workspace/benchmark/ai-research-workspace-benchmark.md has substantive content
+PASS: builder-output/ai-research-workspace/benchmark/ai-research-workspace-benchmark.md has disclaimer
+PASS: builder-output/ai-research-workspace/benchmark/ai-research-workspace-benchmark.md avoids forbidden expression: 建议买入
+PASS: builder-output/ai-research-workspace/benchmark/ai-research-workspace-benchmark.md avoids forbidden expression: 建议卖出
+PASS: builder-output/ai-research-workspace/benchmark/ai-research-workspace-benchmark.md avoids forbidden expression: 保证收益
+PASS: builder-output/ai-research-workspace/benchmark/ai-research-workspace-benchmark.md avoids forbidden expression: 保证盈利
+PASS: builder-output/ai-research-workspace/benchmark/ai-research-workspace-benchmark.md avoids forbidden expression: 目标价为
+PASS: builder-output/ai-research-workspace/benchmark/ai-research-workspace-benchmark.md avoids forbidden expression: 应买入
+PASS: builder-output/ai-research-workspace/benchmark/ai-research-workspace-benchmark.md avoids forbidden expression: 应卖出
+PASS: builder-output/ai-research-workspace/benchmark/ai-research-workspace-benchmark.md avoids forbidden expression: 自动交易指令
+PASS: builder-output/ai-research-workspace/PR_CHECKLIST.md exists
+PASS: builder-output/ai-research-workspace/PR_CHECKLIST.md has substantive content
+PASS: builder-output/ai-research-workspace/PR_CHECKLIST.md has disclaimer
+PASS: builder-output/ai-research-workspace/PR_CHECKLIST.md avoids forbidden expression: 建议买入
+PASS: builder-output/ai-research-workspace/PR_CHECKLIST.md avoids forbidden expression: 建议卖出
+PASS: builder-output/ai-research-workspace/PR_CHECKLIST.md avoids forbidden expression: 保证收益
+PASS: builder-output/ai-research-workspace/PR_CHECKLIST.md avoids forbidden expression: 保证盈利
+PASS: builder-output/ai-research-workspace/PR_CHECKLIST.md avoids forbidden expression: 目标价为
+PASS: builder-output/ai-research-workspace/PR_CHECKLIST.md avoids forbidden expression: 应买入
+PASS: builder-output/ai-research-workspace/PR_CHECKLIST.md avoids forbidden expression: 应卖出
+PASS: builder-output/ai-research-workspace/PR_CHECKLIST.md avoids forbidden expression: 自动交易指令
+PASS: builder-output/ai-research-workspace/RELEASE_NOTES.md exists
+PASS: builder-output/ai-research-workspace/RELEASE_NOTES.md has substantive content
+PASS: builder-output/ai-research-workspace/RELEASE_NOTES.md has disclaimer
+PASS: builder-output/ai-research-workspace/RELEASE_NOTES.md avoids forbidden expression: 建议买入
+PASS: builder-output/ai-research-workspace/RELEASE_NOTES.md avoids forbidden expression: 建议卖出
+PASS: builder-output/ai-research-workspace/RELEASE_NOTES.md avoids forbidden expression: 保证收益
+PASS: builder-output/ai-research-workspace/RELEASE_NOTES.md avoids forbidden expression: 保证盈利
+PASS: builder-output/ai-research-workspace/RELEASE_NOTES.md avoids forbidden expression: 目标价为
+PASS: builder-output/ai-research-workspace/RELEASE_NOTES.md avoids forbidden expression: 应买入
+PASS: builder-output/ai-research-workspace/RELEASE_NOTES.md avoids forbidden expression: 应卖出
+PASS: builder-output/ai-research-workspace/RELEASE_NOTES.md avoids forbidden expression: 自动交易指令
+PASS: docs/adr/ADR-0007-ai-research-workspace.md exists
+PASS: docs/adr/ADR-0007-ai-research-workspace.md has substantive content
+PASS: docs/adr/ADR-0007-ai-research-workspace.md has disclaimer
+PASS: docs/adr/ADR-0007-ai-research-workspace.md avoids forbidden expression: 建议买入
+PASS: docs/adr/ADR-0007-ai-research-workspace.md avoids forbidden expression: 建议卖出
+PASS: docs/adr/ADR-0007-ai-research-workspace.md avoids forbidden expression: 保证收益
+PASS: docs/adr/ADR-0007-ai-research-workspace.md avoids forbidden expression: 保证盈利
+PASS: docs/adr/ADR-0007-ai-research-workspace.md avoids forbidden expression: 目标价为
+PASS: docs/adr/ADR-0007-ai-research-workspace.md avoids forbidden expression: 应买入
+PASS: docs/adr/ADR-0007-ai-research-workspace.md avoids forbidden expression: 应卖出
+PASS: docs/adr/ADR-0007-ai-research-workspace.md avoids forbidden expression: 自动交易指令
+PASS: docs/production/M7_COMPLETION_REPORT.md exists
+PASS: docs/production/M7_COMPLETION_REPORT.md has substantive content
+PASS: docs/production/M7_COMPLETION_REPORT.md has disclaimer
+PASS: docs/production/M7_COMPLETION_REPORT.md avoids forbidden expression: 建议买入
+PASS: docs/production/M7_COMPLETION_REPORT.md avoids forbidden expression: 建议卖出
+PASS: docs/production/M7_COMPLETION_REPORT.md avoids forbidden expression: 保证收益
+PASS: docs/production/M7_COMPLETION_REPORT.md avoids forbidden expression: 保证盈利
+PASS: docs/production/M7_COMPLETION_REPORT.md avoids forbidden expression: 目标价为
+PASS: docs/production/M7_COMPLETION_REPORT.md avoids forbidden expression: 应买入
+PASS: docs/production/M7_COMPLETION_REPORT.md avoids forbidden expression: 应卖出
+PASS: docs/production/M7_COMPLETION_REPORT.md avoids forbidden expression: 自动交易指令
+PASS: docs/review/M7_SELF_REVIEW.md exists
+PASS: docs/review/M7_SELF_REVIEW.md has substantive content
+PASS: docs/review/M7_SELF_REVIEW.md has disclaimer
+PASS: docs/review/M7_SELF_REVIEW.md avoids forbidden expression: 建议买入
+PASS: docs/review/M7_SELF_REVIEW.md avoids forbidden expression: 建议卖出
+PASS: docs/review/M7_SELF_REVIEW.md avoids forbidden expression: 保证收益
+PASS: docs/review/M7_SELF_REVIEW.md avoids forbidden expression: 保证盈利
+PASS: docs/review/M7_SELF_REVIEW.md avoids forbidden expression: 目标价为
+PASS: docs/review/M7_SELF_REVIEW.md avoids forbidden expression: 应买入
+PASS: docs/review/M7_SELF_REVIEW.md avoids forbidden expression: 应卖出
+PASS: docs/review/M7_SELF_REVIEW.md avoids forbidden expression: 自动交易指令
+PASS: workspace/examples/__init__.py exists
+PASS: workspace/examples/company_research_workspace.py exists
+PASS: workspace/examples/company_research_workspace.py has substantive content
+PASS: workspace/examples/company_research_workspace.py avoids forbidden expression: 建议买入
+PASS: workspace/examples/company_research_workspace.py avoids forbidden expression: 建议卖出
+PASS: workspace/examples/company_research_workspace.py avoids forbidden expression: 保证收益
+PASS: workspace/examples/company_research_workspace.py avoids forbidden expression: 保证盈利
+PASS: workspace/examples/company_research_workspace.py avoids forbidden expression: 目标价为
+PASS: workspace/examples/company_research_workspace.py avoids forbidden expression: 应买入
+PASS: workspace/examples/company_research_workspace.py avoids forbidden expression: 应卖出
+PASS: workspace/examples/company_research_workspace.py avoids forbidden expression: 自动交易指令
+PASS: workspace/examples/company-research-workspace-dashboard.md exists
+PASS: workspace/examples/company-research-workspace-dashboard.md has substantive content
+PASS: workspace/examples/company-research-workspace-dashboard.md has disclaimer
+PASS: workspace/examples/company-research-workspace-dashboard.md avoids forbidden expression: 建议买入
+PASS: workspace/examples/company-research-workspace-dashboard.md avoids forbidden expression: 建议卖出
+PASS: workspace/examples/company-research-workspace-dashboard.md avoids forbidden expression: 保证收益
+PASS: workspace/examples/company-research-workspace-dashboard.md avoids forbidden expression: 保证盈利
+PASS: workspace/examples/company-research-workspace-dashboard.md avoids forbidden expression: 目标价为
+PASS: workspace/examples/company-research-workspace-dashboard.md avoids forbidden expression: 应买入
+PASS: workspace/examples/company-research-workspace-dashboard.md avoids forbidden expression: 应卖出
+PASS: workspace/examples/company-research-workspace-dashboard.md avoids forbidden expression: 自动交易指令
+PASS: workspace/examples/company-research-workspace-dashboard.md contains Project
+PASS: workspace/examples/company-research-workspace-dashboard.md contains Sessions
+PASS: workspace/examples/company-research-workspace-dashboard.md contains Task Board
+PASS: workspace/examples/company-research-workspace-dashboard.md contains Artifacts
+PASS: workspace/examples/company-research-workspace-dashboard.md contains Timeline
+PASS: workspace/examples/company_research_workspace.py outputs workspace
+PASS: workspace/examples/company_research_workspace.py outputs dashboard
+PASS: workspace/examples/company_research_workspace.py outputs 不构成投资建议
+PASS: workspace/examples/company_research_workspace.py creates project
+PASS: workspace/examples/company_research_workspace.py creates session
+PASS: workspace/examples/company_research_workspace.py creates artifact
+PASS: workspace/examples/company_research_workspace.py creates audit log
+PASS: workspace/examples/industry_research_workspace.py exists
+PASS: workspace/examples/industry_research_workspace.py has substantive content
+PASS: workspace/examples/industry_research_workspace.py avoids forbidden expression: 建议买入
+PASS: workspace/examples/industry_research_workspace.py avoids forbidden expression: 建议卖出
+PASS: workspace/examples/industry_research_workspace.py avoids forbidden expression: 保证收益
+PASS: workspace/examples/industry_research_workspace.py avoids forbidden expression: 保证盈利
+PASS: workspace/examples/industry_research_workspace.py avoids forbidden expression: 目标价为
+PASS: workspace/examples/industry_research_workspace.py avoids forbidden expression: 应买入
+PASS: workspace/examples/industry_research_workspace.py avoids forbidden expression: 应卖出
+PASS: workspace/examples/industry_research_workspace.py avoids forbidden expression: 自动交易指令
+PASS: workspace/examples/industry-research-workspace-dashboard.md exists
+PASS: workspace/examples/industry-research-workspace-dashboard.md has substantive content
+PASS: workspace/examples/industry-research-workspace-dashboard.md has disclaimer
+PASS: workspace/examples/industry-research-workspace-dashboard.md avoids forbidden expression: 建议买入
+PASS: workspace/examples/industry-research-workspace-dashboard.md avoids forbidden expression: 建议卖出
+PASS: workspace/examples/industry-research-workspace-dashboard.md avoids forbidden expression: 保证收益
+PASS: workspace/examples/industry-research-workspace-dashboard.md avoids forbidden expression: 保证盈利
+PASS: workspace/examples/industry-research-workspace-dashboard.md avoids forbidden expression: 目标价为
+PASS: workspace/examples/industry-research-workspace-dashboard.md avoids forbidden expression: 应买入
+PASS: workspace/examples/industry-research-workspace-dashboard.md avoids forbidden expression: 应卖出
+PASS: workspace/examples/industry-research-workspace-dashboard.md avoids forbidden expression: 自动交易指令
+PASS: workspace/examples/industry-research-workspace-dashboard.md contains Project
+PASS: workspace/examples/industry-research-workspace-dashboard.md contains Sessions
+PASS: workspace/examples/industry-research-workspace-dashboard.md contains Task Board
+PASS: workspace/examples/industry-research-workspace-dashboard.md contains Artifacts
+PASS: workspace/examples/industry-research-workspace-dashboard.md contains Timeline
+PASS: workspace/examples/industry_research_workspace.py outputs workspace
+PASS: workspace/examples/industry_research_workspace.py outputs dashboard
+PASS: workspace/examples/industry_research_workspace.py outputs 不构成投资建议
+PASS: workspace/examples/industry_research_workspace.py creates project
+PASS: workspace/examples/industry_research_workspace.py creates session
+PASS: workspace/examples/industry_research_workspace.py creates artifact
+PASS: workspace/examples/industry_research_workspace.py creates audit log
+PASS: workspace/examples/hot_topic_workspace.py exists
+PASS: workspace/examples/hot_topic_workspace.py has substantive content
+PASS: workspace/examples/hot_topic_workspace.py avoids forbidden expression: 建议买入
+PASS: workspace/examples/hot_topic_workspace.py avoids forbidden expression: 建议卖出
+PASS: workspace/examples/hot_topic_workspace.py avoids forbidden expression: 保证收益
+PASS: workspace/examples/hot_topic_workspace.py avoids forbidden expression: 保证盈利
+PASS: workspace/examples/hot_topic_workspace.py avoids forbidden expression: 目标价为
+PASS: workspace/examples/hot_topic_workspace.py avoids forbidden expression: 应买入
+PASS: workspace/examples/hot_topic_workspace.py avoids forbidden expression: 应卖出
+PASS: workspace/examples/hot_topic_workspace.py avoids forbidden expression: 自动交易指令
+PASS: workspace/examples/hot-topic-workspace-dashboard.md exists
+PASS: workspace/examples/hot-topic-workspace-dashboard.md has substantive content
+PASS: workspace/examples/hot-topic-workspace-dashboard.md has disclaimer
+PASS: workspace/examples/hot-topic-workspace-dashboard.md avoids forbidden expression: 建议买入
+PASS: workspace/examples/hot-topic-workspace-dashboard.md avoids forbidden expression: 建议卖出
+PASS: workspace/examples/hot-topic-workspace-dashboard.md avoids forbidden expression: 保证收益
+PASS: workspace/examples/hot-topic-workspace-dashboard.md avoids forbidden expression: 保证盈利
+PASS: workspace/examples/hot-topic-workspace-dashboard.md avoids forbidden expression: 目标价为
+PASS: workspace/examples/hot-topic-workspace-dashboard.md avoids forbidden expression: 应买入
+PASS: workspace/examples/hot-topic-workspace-dashboard.md avoids forbidden expression: 应卖出
+PASS: workspace/examples/hot-topic-workspace-dashboard.md avoids forbidden expression: 自动交易指令
+PASS: workspace/examples/hot-topic-workspace-dashboard.md contains Project
+PASS: workspace/examples/hot-topic-workspace-dashboard.md contains Sessions
+PASS: workspace/examples/hot-topic-workspace-dashboard.md contains Task Board
+PASS: workspace/examples/hot-topic-workspace-dashboard.md contains Artifacts
+PASS: workspace/examples/hot-topic-workspace-dashboard.md contains Timeline
+PASS: workspace/examples/hot_topic_workspace.py outputs workspace
+PASS: workspace/examples/hot_topic_workspace.py outputs dashboard
+PASS: workspace/examples/hot_topic_workspace.py outputs 不构成投资建议
+PASS: workspace/examples/hot_topic_workspace.py creates project
+PASS: workspace/examples/hot_topic_workspace.py creates session
+PASS: workspace/examples/hot_topic_workspace.py creates artifact
+PASS: workspace/examples/hot_topic_workspace.py creates audit log
+PASS: workspace/examples/supply_chain_workspace.py exists
+PASS: workspace/examples/supply_chain_workspace.py has substantive content
+PASS: workspace/examples/supply_chain_workspace.py avoids forbidden expression: 建议买入
+PASS: workspace/examples/supply_chain_workspace.py avoids forbidden expression: 建议卖出
+PASS: workspace/examples/supply_chain_workspace.py avoids forbidden expression: 保证收益
+PASS: workspace/examples/supply_chain_workspace.py avoids forbidden expression: 保证盈利
+PASS: workspace/examples/supply_chain_workspace.py avoids forbidden expression: 目标价为
+PASS: workspace/examples/supply_chain_workspace.py avoids forbidden expression: 应买入
+PASS: workspace/examples/supply_chain_workspace.py avoids forbidden expression: 应卖出
+PASS: workspace/examples/supply_chain_workspace.py avoids forbidden expression: 自动交易指令
+PASS: workspace/examples/supply-chain-workspace-dashboard.md exists
+PASS: workspace/examples/supply-chain-workspace-dashboard.md has substantive content
+PASS: workspace/examples/supply-chain-workspace-dashboard.md has disclaimer
+PASS: workspace/examples/supply-chain-workspace-dashboard.md avoids forbidden expression: 建议买入
+PASS: workspace/examples/supply-chain-workspace-dashboard.md avoids forbidden expression: 建议卖出
+PASS: workspace/examples/supply-chain-workspace-dashboard.md avoids forbidden expression: 保证收益
+PASS: workspace/examples/supply-chain-workspace-dashboard.md avoids forbidden expression: 保证盈利
+PASS: workspace/examples/supply-chain-workspace-dashboard.md avoids forbidden expression: 目标价为
+PASS: workspace/examples/supply-chain-workspace-dashboard.md avoids forbidden expression: 应买入
+PASS: workspace/examples/supply-chain-workspace-dashboard.md avoids forbidden expression: 应卖出
+PASS: workspace/examples/supply-chain-workspace-dashboard.md avoids forbidden expression: 自动交易指令
+PASS: workspace/examples/supply-chain-workspace-dashboard.md contains Project
+PASS: workspace/examples/supply-chain-workspace-dashboard.md contains Sessions
+PASS: workspace/examples/supply-chain-workspace-dashboard.md contains Task Board
+PASS: workspace/examples/supply-chain-workspace-dashboard.md contains Artifacts
+PASS: workspace/examples/supply-chain-workspace-dashboard.md contains Timeline
+PASS: workspace/examples/supply_chain_workspace.py outputs workspace
+PASS: workspace/examples/supply_chain_workspace.py outputs dashboard
+PASS: workspace/examples/supply_chain_workspace.py outputs 不构成投资建议
+PASS: workspace/examples/supply_chain_workspace.py creates project
+PASS: workspace/examples/supply_chain_workspace.py creates session
+PASS: workspace/examples/supply_chain_workspace.py creates artifact
+PASS: workspace/examples/supply_chain_workspace.py creates audit log
+PASS: workspace/examples/report_workspace.py exists
+PASS: workspace/examples/report_workspace.py has substantive content
+PASS: workspace/examples/report_workspace.py avoids forbidden expression: 建议买入
+PASS: workspace/examples/report_workspace.py avoids forbidden expression: 建议卖出
+PASS: workspace/examples/report_workspace.py avoids forbidden expression: 保证收益
+PASS: workspace/examples/report_workspace.py avoids forbidden expression: 保证盈利
+PASS: workspace/examples/report_workspace.py avoids forbidden expression: 目标价为
+PASS: workspace/examples/report_workspace.py avoids forbidden expression: 应买入
+PASS: workspace/examples/report_workspace.py avoids forbidden expression: 应卖出
+PASS: workspace/examples/report_workspace.py avoids forbidden expression: 自动交易指令
+PASS: workspace/examples/report-workspace-dashboard.md exists
+PASS: workspace/examples/report-workspace-dashboard.md has substantive content
+PASS: workspace/examples/report-workspace-dashboard.md has disclaimer
+PASS: workspace/examples/report-workspace-dashboard.md avoids forbidden expression: 建议买入
+PASS: workspace/examples/report-workspace-dashboard.md avoids forbidden expression: 建议卖出
+PASS: workspace/examples/report-workspace-dashboard.md avoids forbidden expression: 保证收益
+PASS: workspace/examples/report-workspace-dashboard.md avoids forbidden expression: 保证盈利
+PASS: workspace/examples/report-workspace-dashboard.md avoids forbidden expression: 目标价为
+PASS: workspace/examples/report-workspace-dashboard.md avoids forbidden expression: 应买入
+PASS: workspace/examples/report-workspace-dashboard.md avoids forbidden expression: 应卖出
+PASS: workspace/examples/report-workspace-dashboard.md avoids forbidden expression: 自动交易指令
+PASS: workspace/examples/report-workspace-dashboard.md contains Project
+PASS: workspace/examples/report-workspace-dashboard.md contains Sessions
+PASS: workspace/examples/report-workspace-dashboard.md contains Task Board
+PASS: workspace/examples/report-workspace-dashboard.md contains Artifacts
+PASS: workspace/examples/report-workspace-dashboard.md contains Timeline
+PASS: workspace/examples/report_workspace.py outputs workspace
+PASS: workspace/examples/report_workspace.py outputs dashboard
+PASS: workspace/examples/report_workspace.py outputs 不构成投资建议
+PASS: workspace/examples/report_workspace.py creates project
+PASS: workspace/examples/report_workspace.py creates session
+PASS: workspace/examples/report_workspace.py creates artifact
+PASS: workspace/examples/report_workspace.py creates audit log
+PASS: schemas/README documents workspace schemas
+PASS: CHANGELOG documents FEATURE-007
+PASS: workspace states runtime boundary
+PASS: workspace avoids direct business import from skills
+PASS: workspace avoids direct business import import skills
+PASS: workspace avoids direct business import from evidence
+PASS: workspace avoids direct business import import evidence
+PASS: workspace avoids direct business import from methodology
+PASS: workspace avoids direct business import import methodology
+PASS: current run plus 15 regression scripts covers 16 validate_* scripts
+PASS: validate_m1.py PASS
+PASS: validate_m2.py PASS
+PASS: validate_evidence.py PASS
+PASS: validate_prompt.py PASS
+PASS: validate_skill.py PASS
+PASS: validate_score.py PASS
+PASS: validate_evaluation.py PASS
+PASS: validate_benchmark.py PASS
+PASS: validate_examples.py PASS
+PASS: validate_release.py PASS
+PASS: validate_builder.py PASS
+PASS: validate_knowledge_graph.py PASS
+PASS: validate_connectors.py PASS
+PASS: validate_report_generator.py PASS
+PASS: validate_runtime.py PASS
+=================================================
+RESULT: PASS

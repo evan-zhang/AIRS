@@ -1,6 +1,7 @@
-"""Connector helper module."""
 """Retry and backoff helpers."""
 from __future__ import annotations
+
+# Connector retry helper used by production and failure-injection validation.
 from time import sleep
 from typing import Callable, TypeVar
 from .base import RetryPolicy

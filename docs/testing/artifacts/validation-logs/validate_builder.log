@@ -1,0 +1,263 @@
+AIRS FEATURE-001 Builder Validation
+===================================
+PASS: docs/builder/builder-architecture.md exists
+PASS: docs/builder/builder-architecture.md has substantive content
+PASS: docs/builder/builder-architecture.md has disclaimer
+PASS: docs/builder/builder-architecture.md avoids forbidden expression: 建议买入
+PASS: docs/builder/builder-architecture.md avoids forbidden expression: 建议卖出
+PASS: docs/builder/builder-architecture.md avoids forbidden expression: 保证收益
+PASS: docs/builder/builder-architecture.md avoids forbidden expression: 保证盈利
+PASS: docs/builder/builder-architecture.md avoids forbidden expression: 目标价为
+PASS: docs/builder/builder-lifecycle.md exists
+PASS: docs/builder/builder-lifecycle.md has substantive content
+PASS: docs/builder/builder-lifecycle.md has disclaimer
+PASS: docs/builder/builder-lifecycle.md avoids forbidden expression: 建议买入
+PASS: docs/builder/builder-lifecycle.md avoids forbidden expression: 建议卖出
+PASS: docs/builder/builder-lifecycle.md avoids forbidden expression: 保证收益
+PASS: docs/builder/builder-lifecycle.md avoids forbidden expression: 保证盈利
+PASS: docs/builder/builder-lifecycle.md avoids forbidden expression: 目标价为
+PASS: docs/builder/builder-governance.md exists
+PASS: docs/builder/builder-governance.md has substantive content
+PASS: docs/builder/builder-governance.md has disclaimer
+PASS: docs/builder/builder-governance.md avoids forbidden expression: 建议买入
+PASS: docs/builder/builder-governance.md avoids forbidden expression: 建议卖出
+PASS: docs/builder/builder-governance.md avoids forbidden expression: 保证收益
+PASS: docs/builder/builder-governance.md avoids forbidden expression: 保证盈利
+PASS: docs/builder/builder-governance.md avoids forbidden expression: 目标价为
+PASS: docs/builder/builder-generation-flow.md exists
+PASS: docs/builder/builder-generation-flow.md has substantive content
+PASS: docs/builder/builder-generation-flow.md has disclaimer
+PASS: docs/builder/builder-generation-flow.md avoids forbidden expression: 建议买入
+PASS: docs/builder/builder-generation-flow.md avoids forbidden expression: 建议卖出
+PASS: docs/builder/builder-generation-flow.md avoids forbidden expression: 保证收益
+PASS: docs/builder/builder-generation-flow.md avoids forbidden expression: 保证盈利
+PASS: docs/builder/builder-generation-flow.md avoids forbidden expression: 目标价为
+PASS: builder/README.md exists
+PASS: builder/main.py exists
+PASS: builder/main.py contains builder logic
+PASS: builder/registry.py exists
+PASS: builder/registry.py contains builder logic
+PASS: builder/generators/README.md exists
+PASS: builder/main.py reads and generates
+PASS: builder/registry.py registers templates
+PASS: schemas/builder/feature-request.schema.json exists
+PASS: schemas/builder/feature-request.schema.json is valid JSON
+PASS: schemas/builder/feature-request.schema.json has compliance description
+PASS: schemas/builder/feature-package.schema.json exists
+PASS: schemas/builder/feature-package.schema.json is valid JSON
+PASS: schemas/builder/feature-package.schema.json has compliance description
+PASS: schemas/builder/generated-artifact.schema.json exists
+PASS: schemas/builder/generated-artifact.schema.json is valid JSON
+PASS: schemas/builder/generated-artifact.schema.json has compliance description
+PASS: schemas/README documents builder schemas
+PASS: templates/builder/issue-template.md exists
+PASS: templates/builder/issue-template.md has content
+PASS: templates/builder/adr-template.md exists
+PASS: templates/builder/adr-template.md has content
+PASS: templates/builder/feature-spec-template.md exists
+PASS: templates/builder/feature-spec-template.md has content
+PASS: templates/builder/skill-template.md exists
+PASS: templates/builder/skill-template.md has content
+PASS: templates/builder/prompt-template.md exists
+PASS: templates/builder/prompt-template.md has content
+PASS: templates/builder/schema-template.json exists
+PASS: templates/builder/schema-template.json exists
+PASS: templates/builder/schema-template.json is valid JSON
+PASS: templates/builder/test-template.md exists
+PASS: templates/builder/test-template.md has content
+PASS: templates/builder/benchmark-template.md exists
+PASS: templates/builder/benchmark-template.md has content
+PASS: templates/builder/pr-checklist-template.md exists
+PASS: templates/builder/pr-checklist-template.md has content
+PASS: templates/builder/release-notes-template.md exists
+PASS: templates/builder/release-notes-template.md has content
+PASS: templates/builder/feature-request-template.yaml exists
+PASS: templates/builder/feature-request-template.yaml has content
+PASS: builder skill template references M5
+PASS: builder prompt template references M4
+PASS: builder benchmark template references M7
+PASS: builder-output/knowledge-graph-engine exists
+PASS: builder-output/knowledge-graph-engine/ISSUE.md exists
+PASS: builder-output/knowledge-graph-engine/ISSUE.md has substantive content
+PASS: builder-output/knowledge-graph-engine/ISSUE.md has disclaimer
+PASS: builder-output/knowledge-graph-engine/ISSUE.md avoids forbidden expression: 建议买入
+PASS: builder-output/knowledge-graph-engine/ISSUE.md avoids forbidden expression: 建议卖出
+PASS: builder-output/knowledge-graph-engine/ISSUE.md avoids forbidden expression: 保证收益
+PASS: builder-output/knowledge-graph-engine/ISSUE.md avoids forbidden expression: 保证盈利
+PASS: builder-output/knowledge-graph-engine/ISSUE.md avoids forbidden expression: 目标价为
+PASS: builder-output/knowledge-graph-engine/ADR.md exists
+PASS: builder-output/knowledge-graph-engine/ADR.md has substantive content
+PASS: builder-output/knowledge-graph-engine/ADR.md has disclaimer
+PASS: builder-output/knowledge-graph-engine/ADR.md avoids forbidden expression: 建议买入
+PASS: builder-output/knowledge-graph-engine/ADR.md avoids forbidden expression: 建议卖出
+PASS: builder-output/knowledge-graph-engine/ADR.md avoids forbidden expression: 保证收益
+PASS: builder-output/knowledge-graph-engine/ADR.md avoids forbidden expression: 保证盈利
+PASS: builder-output/knowledge-graph-engine/ADR.md avoids forbidden expression: 目标价为
+PASS: builder-output/knowledge-graph-engine/FEATURE_SPEC.md exists
+PASS: builder-output/knowledge-graph-engine/FEATURE_SPEC.md has substantive content
+PASS: builder-output/knowledge-graph-engine/FEATURE_SPEC.md has disclaimer
+PASS: builder-output/knowledge-graph-engine/FEATURE_SPEC.md avoids forbidden expression: 建议买入
+PASS: builder-output/knowledge-graph-engine/FEATURE_SPEC.md avoids forbidden expression: 建议卖出
+PASS: builder-output/knowledge-graph-engine/FEATURE_SPEC.md avoids forbidden expression: 保证收益
+PASS: builder-output/knowledge-graph-engine/FEATURE_SPEC.md avoids forbidden expression: 保证盈利
+PASS: builder-output/knowledge-graph-engine/FEATURE_SPEC.md avoids forbidden expression: 目标价为
+PASS: builder-output/knowledge-graph-engine/skill/knowledge-graph-skill.md exists
+PASS: builder-output/knowledge-graph-engine/skill/knowledge-graph-skill.md has substantive content
+PASS: builder-output/knowledge-graph-engine/skill/knowledge-graph-skill.md has disclaimer
+PASS: builder-output/knowledge-graph-engine/skill/knowledge-graph-skill.md avoids forbidden expression: 建议买入
+PASS: builder-output/knowledge-graph-engine/skill/knowledge-graph-skill.md avoids forbidden expression: 建议卖出
+PASS: builder-output/knowledge-graph-engine/skill/knowledge-graph-skill.md avoids forbidden expression: 保证收益
+PASS: builder-output/knowledge-graph-engine/skill/knowledge-graph-skill.md avoids forbidden expression: 保证盈利
+PASS: builder-output/knowledge-graph-engine/skill/knowledge-graph-skill.md avoids forbidden expression: 目标价为
+PASS: builder-output/knowledge-graph-engine/prompt/knowledge-graph-prompt.md exists
+PASS: builder-output/knowledge-graph-engine/prompt/knowledge-graph-prompt.md has substantive content
+PASS: builder-output/knowledge-graph-engine/prompt/knowledge-graph-prompt.md has disclaimer
+PASS: builder-output/knowledge-graph-engine/prompt/knowledge-graph-prompt.md avoids forbidden expression: 建议买入
+PASS: builder-output/knowledge-graph-engine/prompt/knowledge-graph-prompt.md avoids forbidden expression: 建议卖出
+PASS: builder-output/knowledge-graph-engine/prompt/knowledge-graph-prompt.md avoids forbidden expression: 保证收益
+PASS: builder-output/knowledge-graph-engine/prompt/knowledge-graph-prompt.md avoids forbidden expression: 保证盈利
+PASS: builder-output/knowledge-graph-engine/prompt/knowledge-graph-prompt.md avoids forbidden expression: 目标价为
+PASS: builder-output/knowledge-graph-engine/schema/knowledge-graph.schema.json exists
+PASS: builder-output/knowledge-graph-engine/schema/knowledge-graph.schema.json is valid JSON
+PASS: builder-output/knowledge-graph-engine/tests/test-knowledge-graph.md exists
+PASS: builder-output/knowledge-graph-engine/tests/test-knowledge-graph.md has substantive content
+PASS: builder-output/knowledge-graph-engine/tests/test-knowledge-graph.md has disclaimer
+PASS: builder-output/knowledge-graph-engine/tests/test-knowledge-graph.md avoids forbidden expression: 建议买入
+PASS: builder-output/knowledge-graph-engine/tests/test-knowledge-graph.md avoids forbidden expression: 建议卖出
+PASS: builder-output/knowledge-graph-engine/tests/test-knowledge-graph.md avoids forbidden expression: 保证收益
+PASS: builder-output/knowledge-graph-engine/tests/test-knowledge-graph.md avoids forbidden expression: 保证盈利
+PASS: builder-output/knowledge-graph-engine/tests/test-knowledge-graph.md avoids forbidden expression: 目标价为
+PASS: builder-output/knowledge-graph-engine/benchmark/knowledge-graph-benchmark.md exists
+PASS: builder-output/knowledge-graph-engine/benchmark/knowledge-graph-benchmark.md has substantive content
+PASS: builder-output/knowledge-graph-engine/benchmark/knowledge-graph-benchmark.md has disclaimer
+PASS: builder-output/knowledge-graph-engine/benchmark/knowledge-graph-benchmark.md avoids forbidden expression: 建议买入
+PASS: builder-output/knowledge-graph-engine/benchmark/knowledge-graph-benchmark.md avoids forbidden expression: 建议卖出
+PASS: builder-output/knowledge-graph-engine/benchmark/knowledge-graph-benchmark.md avoids forbidden expression: 保证收益
+PASS: builder-output/knowledge-graph-engine/benchmark/knowledge-graph-benchmark.md avoids forbidden expression: 保证盈利
+PASS: builder-output/knowledge-graph-engine/benchmark/knowledge-graph-benchmark.md avoids forbidden expression: 目标价为
+PASS: builder-output/knowledge-graph-engine/PR_CHECKLIST.md exists
+PASS: builder-output/knowledge-graph-engine/PR_CHECKLIST.md has substantive content
+PASS: builder-output/knowledge-graph-engine/PR_CHECKLIST.md has disclaimer
+PASS: builder-output/knowledge-graph-engine/PR_CHECKLIST.md avoids forbidden expression: 建议买入
+PASS: builder-output/knowledge-graph-engine/PR_CHECKLIST.md avoids forbidden expression: 建议卖出
+PASS: builder-output/knowledge-graph-engine/PR_CHECKLIST.md avoids forbidden expression: 保证收益
+PASS: builder-output/knowledge-graph-engine/PR_CHECKLIST.md avoids forbidden expression: 保证盈利
+PASS: builder-output/knowledge-graph-engine/PR_CHECKLIST.md avoids forbidden expression: 目标价为
+PASS: builder-output/knowledge-graph-engine/RELEASE_NOTES.md exists
+PASS: builder-output/knowledge-graph-engine/RELEASE_NOTES.md has substantive content
+PASS: builder-output/knowledge-graph-engine/RELEASE_NOTES.md has disclaimer
+PASS: builder-output/knowledge-graph-engine/RELEASE_NOTES.md avoids forbidden expression: 建议买入
+PASS: builder-output/knowledge-graph-engine/RELEASE_NOTES.md avoids forbidden expression: 建议卖出
+PASS: builder-output/knowledge-graph-engine/RELEASE_NOTES.md avoids forbidden expression: 保证收益
+PASS: builder-output/knowledge-graph-engine/RELEASE_NOTES.md avoids forbidden expression: 保证盈利
+PASS: builder-output/knowledge-graph-engine/RELEASE_NOTES.md avoids forbidden expression: 目标价为
+PASS: builder-output/knowledge-graph-engine references skill template
+PASS: builder-output/knowledge-graph-engine references prompt template
+PASS: builder-output/knowledge-graph-engine references benchmark template
+PASS: builder-output/knowledge-graph-engine includes counter view and uncertainty
+PASS: builder-output/news-connector exists
+PASS: builder-output/news-connector/ISSUE.md exists
+PASS: builder-output/news-connector/ISSUE.md has substantive content
+PASS: builder-output/news-connector/ISSUE.md has disclaimer
+PASS: builder-output/news-connector/ISSUE.md avoids forbidden expression: 建议买入
+PASS: builder-output/news-connector/ISSUE.md avoids forbidden expression: 建议卖出
+PASS: builder-output/news-connector/ISSUE.md avoids forbidden expression: 保证收益
+PASS: builder-output/news-connector/ISSUE.md avoids forbidden expression: 保证盈利
+PASS: builder-output/news-connector/ISSUE.md avoids forbidden expression: 目标价为
+PASS: builder-output/news-connector/ADR.md exists
+PASS: builder-output/news-connector/ADR.md has substantive content
+PASS: builder-output/news-connector/ADR.md has disclaimer
+PASS: builder-output/news-connector/ADR.md avoids forbidden expression: 建议买入
+PASS: builder-output/news-connector/ADR.md avoids forbidden expression: 建议卖出
+PASS: builder-output/news-connector/ADR.md avoids forbidden expression: 保证收益
+PASS: builder-output/news-connector/ADR.md avoids forbidden expression: 保证盈利
+PASS: builder-output/news-connector/ADR.md avoids forbidden expression: 目标价为
+PASS: builder-output/news-connector/FEATURE_SPEC.md exists
+PASS: builder-output/news-connector/FEATURE_SPEC.md has substantive content
+PASS: builder-output/news-connector/FEATURE_SPEC.md has disclaimer
+PASS: builder-output/news-connector/FEATURE_SPEC.md avoids forbidden expression: 建议买入
+PASS: builder-output/news-connector/FEATURE_SPEC.md avoids forbidden expression: 建议卖出
+PASS: builder-output/news-connector/FEATURE_SPEC.md avoids forbidden expression: 保证收益
+PASS: builder-output/news-connector/FEATURE_SPEC.md avoids forbidden expression: 保证盈利
+PASS: builder-output/news-connector/FEATURE_SPEC.md avoids forbidden expression: 目标价为
+PASS: builder-output/news-connector/skill/news-connector-skill.md exists
+PASS: builder-output/news-connector/skill/news-connector-skill.md has substantive content
+PASS: builder-output/news-connector/skill/news-connector-skill.md has disclaimer
+PASS: builder-output/news-connector/skill/news-connector-skill.md avoids forbidden expression: 建议买入
+PASS: builder-output/news-connector/skill/news-connector-skill.md avoids forbidden expression: 建议卖出
+PASS: builder-output/news-connector/skill/news-connector-skill.md avoids forbidden expression: 保证收益
+PASS: builder-output/news-connector/skill/news-connector-skill.md avoids forbidden expression: 保证盈利
+PASS: builder-output/news-connector/skill/news-connector-skill.md avoids forbidden expression: 目标价为
+PASS: builder-output/news-connector/prompt/news-connector-prompt.md exists
+PASS: builder-output/news-connector/prompt/news-connector-prompt.md has substantive content
+PASS: builder-output/news-connector/prompt/news-connector-prompt.md has disclaimer
+PASS: builder-output/news-connector/prompt/news-connector-prompt.md avoids forbidden expression: 建议买入
+PASS: builder-output/news-connector/prompt/news-connector-prompt.md avoids forbidden expression: 建议卖出
+PASS: builder-output/news-connector/prompt/news-connector-prompt.md avoids forbidden expression: 保证收益
+PASS: builder-output/news-connector/prompt/news-connector-prompt.md avoids forbidden expression: 保证盈利
+PASS: builder-output/news-connector/prompt/news-connector-prompt.md avoids forbidden expression: 目标价为
+PASS: builder-output/news-connector/schema/news-connector.schema.json exists
+PASS: builder-output/news-connector/schema/news-connector.schema.json is valid JSON
+PASS: builder-output/news-connector/tests/test-news-connector.md exists
+PASS: builder-output/news-connector/tests/test-news-connector.md has substantive content
+PASS: builder-output/news-connector/tests/test-news-connector.md has disclaimer
+PASS: builder-output/news-connector/tests/test-news-connector.md avoids forbidden expression: 建议买入
+PASS: builder-output/news-connector/tests/test-news-connector.md avoids forbidden expression: 建议卖出
+PASS: builder-output/news-connector/tests/test-news-connector.md avoids forbidden expression: 保证收益
+PASS: builder-output/news-connector/tests/test-news-connector.md avoids forbidden expression: 保证盈利
+PASS: builder-output/news-connector/tests/test-news-connector.md avoids forbidden expression: 目标价为
+PASS: builder-output/news-connector/benchmark/news-connector-benchmark.md exists
+PASS: builder-output/news-connector/benchmark/news-connector-benchmark.md has substantive content
+PASS: builder-output/news-connector/benchmark/news-connector-benchmark.md has disclaimer
+PASS: builder-output/news-connector/benchmark/news-connector-benchmark.md avoids forbidden expression: 建议买入
+PASS: builder-output/news-connector/benchmark/news-connector-benchmark.md avoids forbidden expression: 建议卖出
+PASS: builder-output/news-connector/benchmark/news-connector-benchmark.md avoids forbidden expression: 保证收益
+PASS: builder-output/news-connector/benchmark/news-connector-benchmark.md avoids forbidden expression: 保证盈利
+PASS: builder-output/news-connector/benchmark/news-connector-benchmark.md avoids forbidden expression: 目标价为
+PASS: builder-output/news-connector/PR_CHECKLIST.md exists
+PASS: builder-output/news-connector/PR_CHECKLIST.md has substantive content
+PASS: builder-output/news-connector/PR_CHECKLIST.md has disclaimer
+PASS: builder-output/news-connector/PR_CHECKLIST.md avoids forbidden expression: 建议买入
+PASS: builder-output/news-connector/PR_CHECKLIST.md avoids forbidden expression: 建议卖出
+PASS: builder-output/news-connector/PR_CHECKLIST.md avoids forbidden expression: 保证收益
+PASS: builder-output/news-connector/PR_CHECKLIST.md avoids forbidden expression: 保证盈利
+PASS: builder-output/news-connector/PR_CHECKLIST.md avoids forbidden expression: 目标价为
+PASS: builder-output/news-connector/RELEASE_NOTES.md exists
+PASS: builder-output/news-connector/RELEASE_NOTES.md has substantive content
+PASS: builder-output/news-connector/RELEASE_NOTES.md has disclaimer
+PASS: builder-output/news-connector/RELEASE_NOTES.md avoids forbidden expression: 建议买入
+PASS: builder-output/news-connector/RELEASE_NOTES.md avoids forbidden expression: 建议卖出
+PASS: builder-output/news-connector/RELEASE_NOTES.md avoids forbidden expression: 保证收益
+PASS: builder-output/news-connector/RELEASE_NOTES.md avoids forbidden expression: 保证盈利
+PASS: builder-output/news-connector/RELEASE_NOTES.md avoids forbidden expression: 目标价为
+PASS: builder-output/news-connector references skill template
+PASS: builder-output/news-connector references prompt template
+PASS: builder-output/news-connector references benchmark template
+PASS: builder-output/news-connector includes counter view and uncertainty
+PASS: docs/adr/ADR-0003-feature-builder.md exists
+PASS: docs/adr/ADR-0003-feature-builder.md has substantive content
+PASS: docs/adr/ADR-0003-feature-builder.md has disclaimer
+PASS: docs/adr/ADR-0003-feature-builder.md avoids forbidden expression: 建议买入
+PASS: docs/adr/ADR-0003-feature-builder.md avoids forbidden expression: 建议卖出
+PASS: docs/adr/ADR-0003-feature-builder.md avoids forbidden expression: 保证收益
+PASS: docs/adr/ADR-0003-feature-builder.md avoids forbidden expression: 保证盈利
+PASS: docs/adr/ADR-0003-feature-builder.md avoids forbidden expression: 目标价为
+PASS: docs/production/FEATURE_001_COMPLETION_REPORT.md exists
+PASS: docs/production/FEATURE_001_COMPLETION_REPORT.md has substantive content
+PASS: docs/production/FEATURE_001_COMPLETION_REPORT.md has disclaimer
+PASS: docs/production/FEATURE_001_COMPLETION_REPORT.md avoids forbidden expression: 建议买入
+PASS: docs/production/FEATURE_001_COMPLETION_REPORT.md avoids forbidden expression: 建议卖出
+PASS: docs/production/FEATURE_001_COMPLETION_REPORT.md avoids forbidden expression: 保证收益
+PASS: docs/production/FEATURE_001_COMPLETION_REPORT.md avoids forbidden expression: 保证盈利
+PASS: docs/production/FEATURE_001_COMPLETION_REPORT.md avoids forbidden expression: 目标价为
+PASS: docs/review/FEATURE_001_SELF_REVIEW.md exists
+PASS: docs/review/FEATURE_001_SELF_REVIEW.md has substantive content
+PASS: docs/review/FEATURE_001_SELF_REVIEW.md has disclaimer
+PASS: docs/review/FEATURE_001_SELF_REVIEW.md avoids forbidden expression: 建议买入
+PASS: docs/review/FEATURE_001_SELF_REVIEW.md avoids forbidden expression: 建议卖出
+PASS: docs/review/FEATURE_001_SELF_REVIEW.md avoids forbidden expression: 保证收益
+PASS: docs/review/FEATURE_001_SELF_REVIEW.md avoids forbidden expression: 保证盈利
+PASS: docs/review/FEATURE_001_SELF_REVIEW.md avoids forbidden expression: 目标价为
+PASS: CHANGELOG documents FEATURE-001
+===================================
+RESULT: PASS

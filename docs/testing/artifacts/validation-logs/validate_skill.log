@@ -1,0 +1,446 @@
+AIRS M5 Skill Engine Validation
+================================
+PASS: docs/skill-engine directory exists
+PASS: skill-architecture.md exists
+PASS: skill-architecture.md has substantive content
+PASS: skill-architecture.md has disclaimer
+PASS: skill-lifecycle.md exists
+PASS: skill-lifecycle.md has substantive content
+PASS: skill-lifecycle.md has disclaimer
+PASS: skill-registry.md exists
+PASS: skill-registry.md has substantive content
+PASS: skill-registry.md has disclaimer
+PASS: skill-invocation.md exists
+PASS: skill-invocation.md has substantive content
+PASS: skill-invocation.md has disclaimer
+PASS: skill-composition.md exists
+PASS: skill-composition.md has substantive content
+PASS: skill-composition.md has disclaimer
+PASS: skill-versioning.md exists
+PASS: skill-versioning.md has substantive content
+PASS: skill-versioning.md has disclaimer
+PASS: skill-governance.md exists
+PASS: skill-governance.md has substantive content
+PASS: skill-governance.md has disclaimer
+PASS: schemas/skills/skill.schema.json exists
+PASS: schemas/skills/skill.schema.json is valid JSON
+PASS: schemas/skills/skill.schema.json declares $schema
+PASS: schemas/skills/skill.schema.json top-level type is object
+PASS: schemas/skills/skill-registry.schema.json exists
+PASS: schemas/skills/skill-registry.schema.json is valid JSON
+PASS: schemas/skills/skill-registry.schema.json declares $schema
+PASS: schemas/skills/skill-registry.schema.json top-level type is object
+PASS: schemas/README.md documents skill schemas
+PASS: templates/skill-template.md exists
+PASS: templates/skill-template.md has substantive content
+PASS: docs/production/M5_COMPLETION_REPORT.md exists
+PASS: docs/production/M5_COMPLETION_REPORT.md has substantive content
+PASS: docs/review/M5_SELF_REVIEW.md exists
+PASS: docs/review/M5_SELF_REVIEW.md has substantive content
+PASS: skill template section Purpose has content
+PASS: skill template section Inputs has content
+PASS: skill template section Outputs has content
+PASS: skill template section Dependencies has content
+PASS: skill template section Invoked Prompt has content
+PASS: skill template section Invoked Methodology has content
+PASS: skill template section Invoked Evidence has content
+PASS: skill template section Workflow has content
+PASS: skill template section Failure Handling has content
+PASS: skill template section Review Checklist has content
+PASS: skills/master/master-skill.md exists
+PASS: skills/master/master-skill.md has compliance boundary
+PASS: skills/master/master-skill.md section Purpose has substantive content
+PASS: skills/master/master-skill.md section Inputs has substantive content
+PASS: skills/master/master-skill.md section Outputs has substantive content
+PASS: skills/master/master-skill.md section Dependencies has substantive content
+PASS: skills/master/master-skill.md section Invoked Prompt has substantive content
+PASS: skills/master/master-skill.md section Invoked Methodology has substantive content
+PASS: skills/master/master-skill.md section Invoked Evidence has substantive content
+PASS: skills/master/master-skill.md section Workflow has substantive content
+PASS: skills/master/master-skill.md section Failure Handling has substantive content
+PASS: skills/master/master-skill.md section Review Checklist has substantive content
+PASS: skills/master/master-skill.md references M4 Prompt
+PASS: skills/master/master-skill.md references M2 Methodology
+PASS: skills/master/master-skill.md references M3 Evidence Engine
+PASS: skills/master/master-skill.md prompt ref exists: prompts/evidence/evidence-chain.md
+PASS: skills/master/master-skill.md prompt ref exists: prompts/financial/anomaly-analysis.md
+PASS: skills/master/master-skill.md prompt ref exists: prompts/hot-topic/theme-expansion.md
+PASS: skills/master/master-skill.md prompt ref exists: prompts/report/generation.md
+PASS: skills/master/master-skill.md prompt ref exists: prompts/risk/analysis.md
+PASS: skills/master/master-skill.md prompt ref exists: prompts/supply-chain/chokepoint-analysis.md
+PASS: skills/master/master-skill.md prompt ref exists: prompts/valuation/analysis.md
+PASS: skills/master/master-skill.md methodology ref exists: docs/methodology/evidence-chain.md
+PASS: skills/master/master-skill.md methodology ref exists: docs/methodology/financial-anomaly.md
+PASS: skills/master/master-skill.md methodology ref exists: docs/methodology/risk.md
+PASS: skills/master/master-skill.md methodology ref exists: docs/methodology/supply-chain-chokepoint.md
+PASS: skills/master/master-skill.md methodology ref exists: docs/methodology/theme-expansion.md
+PASS: skills/master/master-skill.md methodology ref exists: docs/methodology/valuation.md
+PASS: skills/master/master-skill.md evidence ref exists: docs/evidence/evidence-card-specification.md
+PASS: skills/master/master-skill.md evidence ref exists: docs/evidence/evidence-validation-workflow.md
+PASS: skills/master/master-skill.md evidence ref exists: schemas/evidence/evidence-card.schema.json
+PASS: skills/master/master-skill.md uses M3 term: Evidence Card
+PASS: skills/master/master-skill.md uses M3 term: Evidence Chain
+PASS: skills/master/master-skill.md uses M3 term: supports
+PASS: skills/master/master-skill.md uses M3 term: refutes
+PASS: skills/master/master-skill.md uses M3 term: missing_evidence
+PASS: skills/master/master-skill.md uses M3 term: traceability
+PASS: skills/master/master-skill.md avoids forbidden pattern: 建议买入
+PASS: skills/master/master-skill.md avoids forbidden pattern: 建议卖出
+PASS: skills/master/master-skill.md avoids forbidden pattern: 应买入
+PASS: skills/master/master-skill.md avoids forbidden pattern: 应卖出
+PASS: skills/master/master-skill.md avoids forbidden pattern: 给予目标价
+PASS: skills/master/master-skill.md avoids forbidden pattern: 目标价为
+PASS: skills/master/master-skill.md avoids forbidden pattern: 预计涨到
+PASS: skills/master/master-skill.md avoids forbidden pattern: 保证盈利
+PASS: skills/master/master-skill.md avoids forbidden pattern: ## 1. System Prompt
+PASS: skills/master/master-skill.md avoids forbidden pattern: ## System Prompt
+PASS: skills/hot-topic/research-skill.md exists
+PASS: skills/hot-topic/research-skill.md has compliance boundary
+PASS: skills/hot-topic/research-skill.md section Purpose has substantive content
+PASS: skills/hot-topic/research-skill.md section Inputs has substantive content
+PASS: skills/hot-topic/research-skill.md section Outputs has substantive content
+PASS: skills/hot-topic/research-skill.md section Dependencies has substantive content
+PASS: skills/hot-topic/research-skill.md section Invoked Prompt has substantive content
+PASS: skills/hot-topic/research-skill.md section Invoked Methodology has substantive content
+PASS: skills/hot-topic/research-skill.md section Invoked Evidence has substantive content
+PASS: skills/hot-topic/research-skill.md section Workflow has substantive content
+PASS: skills/hot-topic/research-skill.md section Failure Handling has substantive content
+PASS: skills/hot-topic/research-skill.md section Review Checklist has substantive content
+PASS: skills/hot-topic/research-skill.md references M4 Prompt
+PASS: skills/hot-topic/research-skill.md references M2 Methodology
+PASS: skills/hot-topic/research-skill.md references M3 Evidence Engine
+PASS: skills/hot-topic/research-skill.md prompt ref exists: prompts/evidence/evidence-chain.md
+PASS: skills/hot-topic/research-skill.md prompt ref exists: prompts/hot-topic/theme-expansion.md
+PASS: skills/hot-topic/research-skill.md methodology ref exists: docs/methodology/evidence-chain.md
+PASS: skills/hot-topic/research-skill.md methodology ref exists: docs/methodology/theme-expansion.md
+PASS: skills/hot-topic/research-skill.md evidence ref exists: docs/evidence/evidence-card-specification.md
+PASS: skills/hot-topic/research-skill.md evidence ref exists: schemas/evidence/evidence-chain.schema.json
+PASS: skills/hot-topic/research-skill.md uses M3 term: Evidence Card
+PASS: skills/hot-topic/research-skill.md uses M3 term: Evidence Chain
+PASS: skills/hot-topic/research-skill.md uses M3 term: supports
+PASS: skills/hot-topic/research-skill.md uses M3 term: refutes
+PASS: skills/hot-topic/research-skill.md uses M3 term: missing_evidence
+PASS: skills/hot-topic/research-skill.md uses M3 term: traceability
+PASS: skills/hot-topic/research-skill.md avoids forbidden pattern: 建议买入
+PASS: skills/hot-topic/research-skill.md avoids forbidden pattern: 建议卖出
+PASS: skills/hot-topic/research-skill.md avoids forbidden pattern: 应买入
+PASS: skills/hot-topic/research-skill.md avoids forbidden pattern: 应卖出
+PASS: skills/hot-topic/research-skill.md avoids forbidden pattern: 给予目标价
+PASS: skills/hot-topic/research-skill.md avoids forbidden pattern: 目标价为
+PASS: skills/hot-topic/research-skill.md avoids forbidden pattern: 预计涨到
+PASS: skills/hot-topic/research-skill.md avoids forbidden pattern: 保证盈利
+PASS: skills/hot-topic/research-skill.md avoids forbidden pattern: ## 1. System Prompt
+PASS: skills/hot-topic/research-skill.md avoids forbidden pattern: ## System Prompt
+PASS: skills/supply-chain/supply-chain-skill.md exists
+PASS: skills/supply-chain/supply-chain-skill.md has compliance boundary
+PASS: skills/supply-chain/supply-chain-skill.md section Purpose has substantive content
+PASS: skills/supply-chain/supply-chain-skill.md section Inputs has substantive content
+PASS: skills/supply-chain/supply-chain-skill.md section Outputs has substantive content
+PASS: skills/supply-chain/supply-chain-skill.md section Dependencies has substantive content
+PASS: skills/supply-chain/supply-chain-skill.md section Invoked Prompt has substantive content
+PASS: skills/supply-chain/supply-chain-skill.md section Invoked Methodology has substantive content
+PASS: skills/supply-chain/supply-chain-skill.md section Invoked Evidence has substantive content
+PASS: skills/supply-chain/supply-chain-skill.md section Workflow has substantive content
+PASS: skills/supply-chain/supply-chain-skill.md section Failure Handling has substantive content
+PASS: skills/supply-chain/supply-chain-skill.md section Review Checklist has substantive content
+PASS: skills/supply-chain/supply-chain-skill.md references M4 Prompt
+PASS: skills/supply-chain/supply-chain-skill.md references M2 Methodology
+PASS: skills/supply-chain/supply-chain-skill.md references M3 Evidence Engine
+PASS: skills/supply-chain/supply-chain-skill.md prompt ref exists: prompts/supply-chain/chokepoint-analysis.md
+PASS: skills/supply-chain/supply-chain-skill.md methodology ref exists: docs/methodology/supply-chain-chokepoint.md
+PASS: skills/supply-chain/supply-chain-skill.md evidence ref exists: docs/evidence/evidence-card-specification.md
+PASS: skills/supply-chain/supply-chain-skill.md evidence ref exists: docs/evidence/evidence-level-standard.md
+PASS: skills/supply-chain/supply-chain-skill.md evidence ref exists: schemas/evidence/evidence-card.schema.json
+PASS: skills/supply-chain/supply-chain-skill.md uses M3 term: Evidence Card
+PASS: skills/supply-chain/supply-chain-skill.md uses M3 term: Evidence Chain
+PASS: skills/supply-chain/supply-chain-skill.md uses M3 term: supports
+PASS: skills/supply-chain/supply-chain-skill.md uses M3 term: refutes
+PASS: skills/supply-chain/supply-chain-skill.md uses M3 term: missing_evidence
+PASS: skills/supply-chain/supply-chain-skill.md uses M3 term: traceability
+PASS: skills/supply-chain/supply-chain-skill.md avoids forbidden pattern: 建议买入
+PASS: skills/supply-chain/supply-chain-skill.md avoids forbidden pattern: 建议卖出
+PASS: skills/supply-chain/supply-chain-skill.md avoids forbidden pattern: 应买入
+PASS: skills/supply-chain/supply-chain-skill.md avoids forbidden pattern: 应卖出
+PASS: skills/supply-chain/supply-chain-skill.md avoids forbidden pattern: 给予目标价
+PASS: skills/supply-chain/supply-chain-skill.md avoids forbidden pattern: 目标价为
+PASS: skills/supply-chain/supply-chain-skill.md avoids forbidden pattern: 预计涨到
+PASS: skills/supply-chain/supply-chain-skill.md avoids forbidden pattern: 保证盈利
+PASS: skills/supply-chain/supply-chain-skill.md avoids forbidden pattern: ## 1. System Prompt
+PASS: skills/supply-chain/supply-chain-skill.md avoids forbidden pattern: ## System Prompt
+PASS: skills/evidence/evidence-skill.md exists
+PASS: skills/evidence/evidence-skill.md has compliance boundary
+PASS: skills/evidence/evidence-skill.md section Purpose has substantive content
+PASS: skills/evidence/evidence-skill.md section Inputs has substantive content
+PASS: skills/evidence/evidence-skill.md section Outputs has substantive content
+PASS: skills/evidence/evidence-skill.md section Dependencies has substantive content
+PASS: skills/evidence/evidence-skill.md section Invoked Prompt has substantive content
+PASS: skills/evidence/evidence-skill.md section Invoked Methodology has substantive content
+PASS: skills/evidence/evidence-skill.md section Invoked Evidence has substantive content
+PASS: skills/evidence/evidence-skill.md section Workflow has substantive content
+PASS: skills/evidence/evidence-skill.md section Failure Handling has substantive content
+PASS: skills/evidence/evidence-skill.md section Review Checklist has substantive content
+PASS: skills/evidence/evidence-skill.md references M4 Prompt
+PASS: skills/evidence/evidence-skill.md references M2 Methodology
+PASS: skills/evidence/evidence-skill.md references M3 Evidence Engine
+PASS: skills/evidence/evidence-skill.md prompt ref exists: prompts/evidence/counter-consensus.md
+PASS: skills/evidence/evidence-skill.md prompt ref exists: prompts/evidence/evidence-chain.md
+PASS: skills/evidence/evidence-skill.md methodology ref exists: docs/methodology/counter-consensus.md
+PASS: skills/evidence/evidence-skill.md methodology ref exists: docs/methodology/evidence-chain.md
+PASS: skills/evidence/evidence-skill.md evidence ref exists: docs/evidence/evidence-card-specification.md
+PASS: skills/evidence/evidence-skill.md evidence ref exists: docs/evidence/evidence-validation-workflow.md
+PASS: skills/evidence/evidence-skill.md evidence ref exists: schemas/evidence/evidence-card.schema.json
+PASS: skills/evidence/evidence-skill.md evidence ref exists: schemas/evidence/evidence-chain.schema.json
+PASS: skills/evidence/evidence-skill.md uses M3 term: Evidence Card
+PASS: skills/evidence/evidence-skill.md uses M3 term: Evidence Chain
+PASS: skills/evidence/evidence-skill.md uses M3 term: supports
+PASS: skills/evidence/evidence-skill.md uses M3 term: refutes
+PASS: skills/evidence/evidence-skill.md uses M3 term: missing_evidence
+PASS: skills/evidence/evidence-skill.md uses M3 term: traceability
+PASS: skills/evidence/evidence-skill.md avoids forbidden pattern: 建议买入
+PASS: skills/evidence/evidence-skill.md avoids forbidden pattern: 建议卖出
+PASS: skills/evidence/evidence-skill.md avoids forbidden pattern: 应买入
+PASS: skills/evidence/evidence-skill.md avoids forbidden pattern: 应卖出
+PASS: skills/evidence/evidence-skill.md avoids forbidden pattern: 给予目标价
+PASS: skills/evidence/evidence-skill.md avoids forbidden pattern: 目标价为
+PASS: skills/evidence/evidence-skill.md avoids forbidden pattern: 预计涨到
+PASS: skills/evidence/evidence-skill.md avoids forbidden pattern: 保证盈利
+PASS: skills/evidence/evidence-skill.md avoids forbidden pattern: ## 1. System Prompt
+PASS: skills/evidence/evidence-skill.md avoids forbidden pattern: ## System Prompt
+PASS: skills/financial/financial-skill.md exists
+PASS: skills/financial/financial-skill.md has compliance boundary
+PASS: skills/financial/financial-skill.md section Purpose has substantive content
+PASS: skills/financial/financial-skill.md section Inputs has substantive content
+PASS: skills/financial/financial-skill.md section Outputs has substantive content
+PASS: skills/financial/financial-skill.md section Dependencies has substantive content
+PASS: skills/financial/financial-skill.md section Invoked Prompt has substantive content
+PASS: skills/financial/financial-skill.md section Invoked Methodology has substantive content
+PASS: skills/financial/financial-skill.md section Invoked Evidence has substantive content
+PASS: skills/financial/financial-skill.md section Workflow has substantive content
+PASS: skills/financial/financial-skill.md section Failure Handling has substantive content
+PASS: skills/financial/financial-skill.md section Review Checklist has substantive content
+PASS: skills/financial/financial-skill.md references M4 Prompt
+PASS: skills/financial/financial-skill.md references M2 Methodology
+PASS: skills/financial/financial-skill.md references M3 Evidence Engine
+PASS: skills/financial/financial-skill.md prompt ref exists: prompts/financial/anomaly-analysis.md
+PASS: skills/financial/financial-skill.md methodology ref exists: docs/methodology/financial-anomaly.md
+PASS: skills/financial/financial-skill.md evidence ref exists: docs/evidence/evidence-card-specification.md
+PASS: skills/financial/financial-skill.md evidence ref exists: schemas/evidence/evidence-card.schema.json
+PASS: skills/financial/financial-skill.md uses M3 term: Evidence Card
+PASS: skills/financial/financial-skill.md uses M3 term: Evidence Chain
+PASS: skills/financial/financial-skill.md uses M3 term: supports
+PASS: skills/financial/financial-skill.md uses M3 term: refutes
+PASS: skills/financial/financial-skill.md uses M3 term: missing_evidence
+PASS: skills/financial/financial-skill.md uses M3 term: traceability
+PASS: skills/financial/financial-skill.md avoids forbidden pattern: 建议买入
+PASS: skills/financial/financial-skill.md avoids forbidden pattern: 建议卖出
+PASS: skills/financial/financial-skill.md avoids forbidden pattern: 应买入
+PASS: skills/financial/financial-skill.md avoids forbidden pattern: 应卖出
+PASS: skills/financial/financial-skill.md avoids forbidden pattern: 给予目标价
+PASS: skills/financial/financial-skill.md avoids forbidden pattern: 目标价为
+PASS: skills/financial/financial-skill.md avoids forbidden pattern: 预计涨到
+PASS: skills/financial/financial-skill.md avoids forbidden pattern: 保证盈利
+PASS: skills/financial/financial-skill.md avoids forbidden pattern: ## 1. System Prompt
+PASS: skills/financial/financial-skill.md avoids forbidden pattern: ## System Prompt
+PASS: skills/news/news-skill.md exists
+PASS: skills/news/news-skill.md has compliance boundary
+PASS: skills/news/news-skill.md section Purpose has substantive content
+PASS: skills/news/news-skill.md section Inputs has substantive content
+PASS: skills/news/news-skill.md section Outputs has substantive content
+PASS: skills/news/news-skill.md section Dependencies has substantive content
+PASS: skills/news/news-skill.md section Invoked Prompt has substantive content
+PASS: skills/news/news-skill.md section Invoked Methodology has substantive content
+PASS: skills/news/news-skill.md section Invoked Evidence has substantive content
+PASS: skills/news/news-skill.md section Workflow has substantive content
+PASS: skills/news/news-skill.md section Failure Handling has substantive content
+PASS: skills/news/news-skill.md section Review Checklist has substantive content
+PASS: skills/news/news-skill.md references M4 Prompt
+PASS: skills/news/news-skill.md references M2 Methodology
+PASS: skills/news/news-skill.md references M3 Evidence Engine
+PASS: skills/news/news-skill.md prompt ref exists: prompts/evidence/evidence-chain.md
+PASS: skills/news/news-skill.md prompt ref exists: prompts/hot-topic/theme-expansion.md
+PASS: skills/news/news-skill.md methodology ref exists: docs/methodology/evidence-chain.md
+PASS: skills/news/news-skill.md methodology ref exists: docs/methodology/policy-driven.md
+PASS: skills/news/news-skill.md methodology ref exists: docs/methodology/theme-expansion.md
+PASS: skills/news/news-skill.md evidence ref exists: docs/evidence/evidence-validation-workflow.md
+PASS: skills/news/news-skill.md evidence ref exists: schemas/evidence/evidence-card.schema.json
+PASS: skills/news/news-skill.md uses M3 term: Evidence Card
+PASS: skills/news/news-skill.md uses M3 term: Evidence Chain
+PASS: skills/news/news-skill.md uses M3 term: supports
+PASS: skills/news/news-skill.md uses M3 term: refutes
+PASS: skills/news/news-skill.md uses M3 term: missing_evidence
+PASS: skills/news/news-skill.md uses M3 term: traceability
+PASS: skills/news/news-skill.md avoids forbidden pattern: 建议买入
+PASS: skills/news/news-skill.md avoids forbidden pattern: 建议卖出
+PASS: skills/news/news-skill.md avoids forbidden pattern: 应买入
+PASS: skills/news/news-skill.md avoids forbidden pattern: 应卖出
+PASS: skills/news/news-skill.md avoids forbidden pattern: 给予目标价
+PASS: skills/news/news-skill.md avoids forbidden pattern: 目标价为
+PASS: skills/news/news-skill.md avoids forbidden pattern: 预计涨到
+PASS: skills/news/news-skill.md avoids forbidden pattern: 保证盈利
+PASS: skills/news/news-skill.md avoids forbidden pattern: ## 1. System Prompt
+PASS: skills/news/news-skill.md avoids forbidden pattern: ## System Prompt
+PASS: skills/valuation/valuation-skill.md exists
+PASS: skills/valuation/valuation-skill.md has compliance boundary
+PASS: skills/valuation/valuation-skill.md section Purpose has substantive content
+PASS: skills/valuation/valuation-skill.md section Inputs has substantive content
+PASS: skills/valuation/valuation-skill.md section Outputs has substantive content
+PASS: skills/valuation/valuation-skill.md section Dependencies has substantive content
+PASS: skills/valuation/valuation-skill.md section Invoked Prompt has substantive content
+PASS: skills/valuation/valuation-skill.md section Invoked Methodology has substantive content
+PASS: skills/valuation/valuation-skill.md section Invoked Evidence has substantive content
+PASS: skills/valuation/valuation-skill.md section Workflow has substantive content
+PASS: skills/valuation/valuation-skill.md section Failure Handling has substantive content
+PASS: skills/valuation/valuation-skill.md section Review Checklist has substantive content
+PASS: skills/valuation/valuation-skill.md references M4 Prompt
+PASS: skills/valuation/valuation-skill.md references M2 Methodology
+PASS: skills/valuation/valuation-skill.md references M3 Evidence Engine
+PASS: skills/valuation/valuation-skill.md prompt ref exists: prompts/valuation/analysis.md
+PASS: skills/valuation/valuation-skill.md methodology ref exists: docs/methodology/valuation.md
+PASS: skills/valuation/valuation-skill.md evidence ref exists: docs/evidence/evidence-card-specification.md
+PASS: skills/valuation/valuation-skill.md evidence ref exists: schemas/evidence/evidence-chain.schema.json
+PASS: skills/valuation/valuation-skill.md uses M3 term: Evidence Card
+PASS: skills/valuation/valuation-skill.md uses M3 term: Evidence Chain
+PASS: skills/valuation/valuation-skill.md uses M3 term: supports
+PASS: skills/valuation/valuation-skill.md uses M3 term: refutes
+PASS: skills/valuation/valuation-skill.md uses M3 term: missing_evidence
+PASS: skills/valuation/valuation-skill.md uses M3 term: traceability
+PASS: skills/valuation/valuation-skill.md avoids forbidden pattern: 建议买入
+PASS: skills/valuation/valuation-skill.md avoids forbidden pattern: 建议卖出
+PASS: skills/valuation/valuation-skill.md avoids forbidden pattern: 应买入
+PASS: skills/valuation/valuation-skill.md avoids forbidden pattern: 应卖出
+PASS: skills/valuation/valuation-skill.md avoids forbidden pattern: 给予目标价
+PASS: skills/valuation/valuation-skill.md avoids forbidden pattern: 目标价为
+PASS: skills/valuation/valuation-skill.md avoids forbidden pattern: 预计涨到
+PASS: skills/valuation/valuation-skill.md avoids forbidden pattern: 保证盈利
+PASS: skills/valuation/valuation-skill.md avoids forbidden pattern: ## 1. System Prompt
+PASS: skills/valuation/valuation-skill.md avoids forbidden pattern: ## System Prompt
+PASS: skills/risk/risk-skill.md exists
+PASS: skills/risk/risk-skill.md has compliance boundary
+PASS: skills/risk/risk-skill.md section Purpose has substantive content
+PASS: skills/risk/risk-skill.md section Inputs has substantive content
+PASS: skills/risk/risk-skill.md section Outputs has substantive content
+PASS: skills/risk/risk-skill.md section Dependencies has substantive content
+PASS: skills/risk/risk-skill.md section Invoked Prompt has substantive content
+PASS: skills/risk/risk-skill.md section Invoked Methodology has substantive content
+PASS: skills/risk/risk-skill.md section Invoked Evidence has substantive content
+PASS: skills/risk/risk-skill.md section Workflow has substantive content
+PASS: skills/risk/risk-skill.md section Failure Handling has substantive content
+PASS: skills/risk/risk-skill.md section Review Checklist has substantive content
+PASS: skills/risk/risk-skill.md references M4 Prompt
+PASS: skills/risk/risk-skill.md references M2 Methodology
+PASS: skills/risk/risk-skill.md references M3 Evidence Engine
+PASS: skills/risk/risk-skill.md prompt ref exists: prompts/evidence/counter-consensus.md
+PASS: skills/risk/risk-skill.md prompt ref exists: prompts/risk/analysis.md
+PASS: skills/risk/risk-skill.md methodology ref exists: docs/methodology/counter-consensus.md
+PASS: skills/risk/risk-skill.md methodology ref exists: docs/methodology/risk.md
+PASS: skills/risk/risk-skill.md evidence ref exists: docs/evidence/evidence-review-standard.md
+PASS: skills/risk/risk-skill.md evidence ref exists: schemas/evidence/evidence-card.schema.json
+PASS: skills/risk/risk-skill.md uses M3 term: Evidence Card
+PASS: skills/risk/risk-skill.md uses M3 term: Evidence Chain
+PASS: skills/risk/risk-skill.md uses M3 term: supports
+PASS: skills/risk/risk-skill.md uses M3 term: refutes
+PASS: skills/risk/risk-skill.md uses M3 term: missing_evidence
+PASS: skills/risk/risk-skill.md uses M3 term: traceability
+PASS: skills/risk/risk-skill.md avoids forbidden pattern: 建议买入
+PASS: skills/risk/risk-skill.md avoids forbidden pattern: 建议卖出
+PASS: skills/risk/risk-skill.md avoids forbidden pattern: 应买入
+PASS: skills/risk/risk-skill.md avoids forbidden pattern: 应卖出
+PASS: skills/risk/risk-skill.md avoids forbidden pattern: 给予目标价
+PASS: skills/risk/risk-skill.md avoids forbidden pattern: 目标价为
+PASS: skills/risk/risk-skill.md avoids forbidden pattern: 预计涨到
+PASS: skills/risk/risk-skill.md avoids forbidden pattern: 保证盈利
+PASS: skills/risk/risk-skill.md avoids forbidden pattern: ## 1. System Prompt
+PASS: skills/risk/risk-skill.md avoids forbidden pattern: ## System Prompt
+PASS: skills/report/report-skill.md exists
+PASS: skills/report/report-skill.md has compliance boundary
+PASS: skills/report/report-skill.md section Purpose has substantive content
+PASS: skills/report/report-skill.md section Inputs has substantive content
+PASS: skills/report/report-skill.md section Outputs has substantive content
+PASS: skills/report/report-skill.md section Dependencies has substantive content
+PASS: skills/report/report-skill.md section Invoked Prompt has substantive content
+PASS: skills/report/report-skill.md section Invoked Methodology has substantive content
+PASS: skills/report/report-skill.md section Invoked Evidence has substantive content
+PASS: skills/report/report-skill.md section Workflow has substantive content
+PASS: skills/report/report-skill.md section Failure Handling has substantive content
+PASS: skills/report/report-skill.md section Review Checklist has substantive content
+PASS: skills/report/report-skill.md references M4 Prompt
+PASS: skills/report/report-skill.md references M2 Methodology
+PASS: skills/report/report-skill.md references M3 Evidence Engine
+PASS: skills/report/report-skill.md prompt ref exists: prompts/report/generation.md
+PASS: skills/report/report-skill.md methodology ref exists: docs/methodology/evidence-chain.md
+PASS: skills/report/report-skill.md methodology ref exists: docs/methodology/financial-anomaly.md
+PASS: skills/report/report-skill.md methodology ref exists: docs/methodology/risk.md
+PASS: skills/report/report-skill.md methodology ref exists: docs/methodology/supply-chain-chokepoint.md
+PASS: skills/report/report-skill.md methodology ref exists: docs/methodology/valuation.md
+PASS: skills/report/report-skill.md evidence ref exists: docs/evidence/evidence-review-standard.md
+PASS: skills/report/report-skill.md evidence ref exists: schemas/evidence/evidence-chain.schema.json
+PASS: skills/report/report-skill.md uses M3 term: Evidence Card
+PASS: skills/report/report-skill.md uses M3 term: Evidence Chain
+PASS: skills/report/report-skill.md uses M3 term: supports
+PASS: skills/report/report-skill.md uses M3 term: refutes
+PASS: skills/report/report-skill.md uses M3 term: missing_evidence
+PASS: skills/report/report-skill.md uses M3 term: traceability
+PASS: skills/report/report-skill.md avoids forbidden pattern: 建议买入
+PASS: skills/report/report-skill.md avoids forbidden pattern: 建议卖出
+PASS: skills/report/report-skill.md avoids forbidden pattern: 应买入
+PASS: skills/report/report-skill.md avoids forbidden pattern: 应卖出
+PASS: skills/report/report-skill.md avoids forbidden pattern: 给予目标价
+PASS: skills/report/report-skill.md avoids forbidden pattern: 目标价为
+PASS: skills/report/report-skill.md avoids forbidden pattern: 预计涨到
+PASS: skills/report/report-skill.md avoids forbidden pattern: 保证盈利
+PASS: skills/report/report-skill.md avoids forbidden pattern: ## 1. System Prompt
+PASS: skills/report/report-skill.md avoids forbidden pattern: ## System Prompt
+PASS: skills/verification/verification-skill.md exists
+PASS: skills/verification/verification-skill.md has compliance boundary
+PASS: skills/verification/verification-skill.md section Purpose has substantive content
+PASS: skills/verification/verification-skill.md section Inputs has substantive content
+PASS: skills/verification/verification-skill.md section Outputs has substantive content
+PASS: skills/verification/verification-skill.md section Dependencies has substantive content
+PASS: skills/verification/verification-skill.md section Invoked Prompt has substantive content
+PASS: skills/verification/verification-skill.md section Invoked Methodology has substantive content
+PASS: skills/verification/verification-skill.md section Invoked Evidence has substantive content
+PASS: skills/verification/verification-skill.md section Workflow has substantive content
+PASS: skills/verification/verification-skill.md section Failure Handling has substantive content
+PASS: skills/verification/verification-skill.md section Review Checklist has substantive content
+PASS: skills/verification/verification-skill.md references M4 Prompt
+PASS: skills/verification/verification-skill.md references M2 Methodology
+PASS: skills/verification/verification-skill.md references M3 Evidence Engine
+PASS: skills/verification/verification-skill.md prompt ref exists: prompts/evidence/evidence-chain.md
+PASS: skills/verification/verification-skill.md prompt ref exists: prompts/report/generation.md
+PASS: skills/verification/verification-skill.md methodology ref exists: docs/methodology/evidence-chain.md
+PASS: skills/verification/verification-skill.md methodology ref exists: docs/methodology/risk.md
+PASS: skills/verification/verification-skill.md evidence ref exists: docs/evidence/evidence-review-standard.md
+PASS: skills/verification/verification-skill.md evidence ref exists: docs/evidence/evidence-validation-workflow.md
+PASS: skills/verification/verification-skill.md evidence ref exists: schemas/evidence/evidence-card.schema.json
+PASS: skills/verification/verification-skill.md uses M3 term: Evidence Card
+PASS: skills/verification/verification-skill.md uses M3 term: Evidence Chain
+PASS: skills/verification/verification-skill.md uses M3 term: supports
+PASS: skills/verification/verification-skill.md uses M3 term: refutes
+PASS: skills/verification/verification-skill.md uses M3 term: missing_evidence
+PASS: skills/verification/verification-skill.md uses M3 term: traceability
+PASS: skills/verification/verification-skill.md avoids forbidden pattern: 建议买入
+PASS: skills/verification/verification-skill.md avoids forbidden pattern: 建议卖出
+PASS: skills/verification/verification-skill.md avoids forbidden pattern: 应买入
+PASS: skills/verification/verification-skill.md avoids forbidden pattern: 应卖出
+PASS: skills/verification/verification-skill.md avoids forbidden pattern: 给予目标价
+PASS: skills/verification/verification-skill.md avoids forbidden pattern: 目标价为
+PASS: skills/verification/verification-skill.md avoids forbidden pattern: 预计涨到
+PASS: skills/verification/verification-skill.md avoids forbidden pattern: 保证盈利
+PASS: skills/verification/verification-skill.md avoids forbidden pattern: ## 1. System Prompt
+PASS: skills/verification/verification-skill.md avoids forbidden pattern: ## System Prompt
+PASS: prior milestone artifact exists: docs/production/M1_COMPLETION_REPORT.md
+PASS: prior milestone artifact exists: docs/production/M2_COMPLETION_REPORT.md
+PASS: prior milestone artifact exists: docs/production/M3_COMPLETION_REPORT.md
+PASS: prior milestone artifact exists: docs/production/M4_COMPLETION_REPORT.md
+PASS: prior milestone artifact exists: scripts/validate_m1.py
+PASS: prior milestone artifact exists: scripts/validate_m2.py
+PASS: prior milestone artifact exists: scripts/validate_evidence.py
+PASS: prior milestone artifact exists: scripts/validate_prompt.py
+PASS: M5 skills include cross-milestone principle: Prompt Engine
+PASS: M5 skills include cross-milestone principle: Methodology
+PASS: M5 skills include cross-milestone principle: Evidence Engine
+PASS: M5 skills include cross-milestone principle: 反方
+PASS: M5 skills include cross-milestone principle: 不确定性
+PASS: M5 skills include cross-milestone principle: 不构成投资建议
+================================
+RESULT: PASS

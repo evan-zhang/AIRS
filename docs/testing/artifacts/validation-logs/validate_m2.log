@@ -1,0 +1,241 @@
+AIRS M2 Validation
+===================
+PASS: supply-chain-chokepoint.md exists
+PASS: supply-chain-chokepoint.md has disclaimer
+PASS: supply-chain-chokepoint.md section Purpose has substantive content
+PASS: supply-chain-chokepoint.md section Theory has substantive content
+PASS: supply-chain-chokepoint.md section Background has substantive content
+PASS: supply-chain-chokepoint.md section Applicable Scenarios has substantive content
+PASS: supply-chain-chokepoint.md section Non-applicable Scenarios has substantive content
+PASS: supply-chain-chokepoint.md section Inputs has substantive content
+PASS: supply-chain-chokepoint.md section Outputs has substantive content
+PASS: supply-chain-chokepoint.md section Workflow has substantive content
+PASS: supply-chain-chokepoint.md section Required Evidence has substantive content
+PASS: supply-chain-chokepoint.md section Counter Evidence has substantive content
+PASS: supply-chain-chokepoint.md section Failure Cases has substantive content
+PASS: supply-chain-chokepoint.md section Confidence has substantive content
+PASS: supply-chain-chokepoint.md section Benchmark Mapping has substantive content
+PASS: supply-chain-chokepoint.md section Future Prompt Mapping has substantive content
+PASS: supply-chain-chokepoint.md section Future Skill Mapping has substantive content
+PASS: supply-chain-chokepoint.md section Future Score Mapping has substantive content
+PASS: theme-expansion.md exists
+PASS: theme-expansion.md has disclaimer
+PASS: theme-expansion.md section Purpose has substantive content
+PASS: theme-expansion.md section Theory has substantive content
+PASS: theme-expansion.md section Background has substantive content
+PASS: theme-expansion.md section Applicable Scenarios has substantive content
+PASS: theme-expansion.md section Non-applicable Scenarios has substantive content
+PASS: theme-expansion.md section Inputs has substantive content
+PASS: theme-expansion.md section Outputs has substantive content
+PASS: theme-expansion.md section Workflow has substantive content
+PASS: theme-expansion.md section Required Evidence has substantive content
+PASS: theme-expansion.md section Counter Evidence has substantive content
+PASS: theme-expansion.md section Failure Cases has substantive content
+PASS: theme-expansion.md section Confidence has substantive content
+PASS: theme-expansion.md section Benchmark Mapping has substantive content
+PASS: theme-expansion.md section Future Prompt Mapping has substantive content
+PASS: theme-expansion.md section Future Skill Mapping has substantive content
+PASS: theme-expansion.md section Future Score Mapping has substantive content
+PASS: evidence-chain.md exists
+PASS: evidence-chain.md has disclaimer
+PASS: evidence-chain.md section Purpose has substantive content
+PASS: evidence-chain.md section Theory has substantive content
+PASS: evidence-chain.md section Background has substantive content
+PASS: evidence-chain.md section Applicable Scenarios has substantive content
+PASS: evidence-chain.md section Non-applicable Scenarios has substantive content
+PASS: evidence-chain.md section Inputs has substantive content
+PASS: evidence-chain.md section Outputs has substantive content
+PASS: evidence-chain.md section Workflow has substantive content
+PASS: evidence-chain.md section Required Evidence has substantive content
+PASS: evidence-chain.md section Counter Evidence has substantive content
+PASS: evidence-chain.md section Failure Cases has substantive content
+PASS: evidence-chain.md section Confidence has substantive content
+PASS: evidence-chain.md section Benchmark Mapping has substantive content
+PASS: evidence-chain.md section Future Prompt Mapping has substantive content
+PASS: evidence-chain.md section Future Skill Mapping has substantive content
+PASS: evidence-chain.md section Future Score Mapping has substantive content
+PASS: counter-consensus.md exists
+PASS: counter-consensus.md has disclaimer
+PASS: counter-consensus.md section Purpose has substantive content
+PASS: counter-consensus.md section Theory has substantive content
+PASS: counter-consensus.md section Background has substantive content
+PASS: counter-consensus.md section Applicable Scenarios has substantive content
+PASS: counter-consensus.md section Non-applicable Scenarios has substantive content
+PASS: counter-consensus.md section Inputs has substantive content
+PASS: counter-consensus.md section Outputs has substantive content
+PASS: counter-consensus.md section Workflow has substantive content
+PASS: counter-consensus.md section Required Evidence has substantive content
+PASS: counter-consensus.md section Counter Evidence has substantive content
+PASS: counter-consensus.md section Failure Cases has substantive content
+PASS: counter-consensus.md section Confidence has substantive content
+PASS: counter-consensus.md section Benchmark Mapping has substantive content
+PASS: counter-consensus.md section Future Prompt Mapping has substantive content
+PASS: counter-consensus.md section Future Skill Mapping has substantive content
+PASS: counter-consensus.md section Future Score Mapping has substantive content
+PASS: industry-lifecycle.md exists
+PASS: industry-lifecycle.md has disclaimer
+PASS: industry-lifecycle.md section Purpose has substantive content
+PASS: industry-lifecycle.md section Theory has substantive content
+PASS: industry-lifecycle.md section Background has substantive content
+PASS: industry-lifecycle.md section Applicable Scenarios has substantive content
+PASS: industry-lifecycle.md section Non-applicable Scenarios has substantive content
+PASS: industry-lifecycle.md section Inputs has substantive content
+PASS: industry-lifecycle.md section Outputs has substantive content
+PASS: industry-lifecycle.md section Workflow has substantive content
+PASS: industry-lifecycle.md section Required Evidence has substantive content
+PASS: industry-lifecycle.md section Counter Evidence has substantive content
+PASS: industry-lifecycle.md section Failure Cases has substantive content
+PASS: industry-lifecycle.md section Confidence has substantive content
+PASS: industry-lifecycle.md section Benchmark Mapping has substantive content
+PASS: industry-lifecycle.md section Future Prompt Mapping has substantive content
+PASS: industry-lifecycle.md section Future Skill Mapping has substantive content
+PASS: industry-lifecycle.md section Future Score Mapping has substantive content
+PASS: financial-anomaly.md exists
+PASS: financial-anomaly.md has disclaimer
+PASS: financial-anomaly.md section Purpose has substantive content
+PASS: financial-anomaly.md section Theory has substantive content
+PASS: financial-anomaly.md section Background has substantive content
+PASS: financial-anomaly.md section Applicable Scenarios has substantive content
+PASS: financial-anomaly.md section Non-applicable Scenarios has substantive content
+PASS: financial-anomaly.md section Inputs has substantive content
+PASS: financial-anomaly.md section Outputs has substantive content
+PASS: financial-anomaly.md section Workflow has substantive content
+PASS: financial-anomaly.md section Required Evidence has substantive content
+PASS: financial-anomaly.md section Counter Evidence has substantive content
+PASS: financial-anomaly.md section Failure Cases has substantive content
+PASS: financial-anomaly.md section Confidence has substantive content
+PASS: financial-anomaly.md section Benchmark Mapping has substantive content
+PASS: financial-anomaly.md section Future Prompt Mapping has substantive content
+PASS: financial-anomaly.md section Future Skill Mapping has substantive content
+PASS: financial-anomaly.md section Future Score Mapping has substantive content
+PASS: management-quality.md exists
+PASS: management-quality.md has disclaimer
+PASS: management-quality.md section Purpose has substantive content
+PASS: management-quality.md section Theory has substantive content
+PASS: management-quality.md section Background has substantive content
+PASS: management-quality.md section Applicable Scenarios has substantive content
+PASS: management-quality.md section Non-applicable Scenarios has substantive content
+PASS: management-quality.md section Inputs has substantive content
+PASS: management-quality.md section Outputs has substantive content
+PASS: management-quality.md section Workflow has substantive content
+PASS: management-quality.md section Required Evidence has substantive content
+PASS: management-quality.md section Counter Evidence has substantive content
+PASS: management-quality.md section Failure Cases has substantive content
+PASS: management-quality.md section Confidence has substantive content
+PASS: management-quality.md section Benchmark Mapping has substantive content
+PASS: management-quality.md section Future Prompt Mapping has substantive content
+PASS: management-quality.md section Future Skill Mapping has substantive content
+PASS: management-quality.md section Future Score Mapping has substantive content
+PASS: policy-driven.md exists
+PASS: policy-driven.md has disclaimer
+PASS: policy-driven.md section Purpose has substantive content
+PASS: policy-driven.md section Theory has substantive content
+PASS: policy-driven.md section Background has substantive content
+PASS: policy-driven.md section Applicable Scenarios has substantive content
+PASS: policy-driven.md section Non-applicable Scenarios has substantive content
+PASS: policy-driven.md section Inputs has substantive content
+PASS: policy-driven.md section Outputs has substantive content
+PASS: policy-driven.md section Workflow has substantive content
+PASS: policy-driven.md section Required Evidence has substantive content
+PASS: policy-driven.md section Counter Evidence has substantive content
+PASS: policy-driven.md section Failure Cases has substantive content
+PASS: policy-driven.md section Confidence has substantive content
+PASS: policy-driven.md section Benchmark Mapping has substantive content
+PASS: policy-driven.md section Future Prompt Mapping has substantive content
+PASS: policy-driven.md section Future Skill Mapping has substantive content
+PASS: policy-driven.md section Future Score Mapping has substantive content
+PASS: valuation.md exists
+PASS: valuation.md has disclaimer
+PASS: valuation.md section Purpose has substantive content
+PASS: valuation.md section Theory has substantive content
+PASS: valuation.md section Background has substantive content
+PASS: valuation.md section Applicable Scenarios has substantive content
+PASS: valuation.md section Non-applicable Scenarios has substantive content
+PASS: valuation.md section Inputs has substantive content
+PASS: valuation.md section Outputs has substantive content
+PASS: valuation.md section Workflow has substantive content
+PASS: valuation.md section Required Evidence has substantive content
+PASS: valuation.md section Counter Evidence has substantive content
+PASS: valuation.md section Failure Cases has substantive content
+PASS: valuation.md section Confidence has substantive content
+PASS: valuation.md section Benchmark Mapping has substantive content
+PASS: valuation.md section Future Prompt Mapping has substantive content
+PASS: valuation.md section Future Skill Mapping has substantive content
+PASS: valuation.md section Future Score Mapping has substantive content
+PASS: risk.md exists
+PASS: risk.md has disclaimer
+PASS: risk.md section Purpose has substantive content
+PASS: risk.md section Theory has substantive content
+PASS: risk.md section Background has substantive content
+PASS: risk.md section Applicable Scenarios has substantive content
+PASS: risk.md section Non-applicable Scenarios has substantive content
+PASS: risk.md section Inputs has substantive content
+PASS: risk.md section Outputs has substantive content
+PASS: risk.md section Workflow has substantive content
+PASS: risk.md section Required Evidence has substantive content
+PASS: risk.md section Counter Evidence has substantive content
+PASS: risk.md section Failure Cases has substantive content
+PASS: risk.md section Confidence has substantive content
+PASS: risk.md section Benchmark Mapping has substantive content
+PASS: risk.md section Future Prompt Mapping has substantive content
+PASS: risk.md section Future Skill Mapping has substantive content
+PASS: risk.md section Future Score Mapping has substantive content
+PASS: docs/adr/README.md exists
+PASS: docs/adr/README.md has content
+PASS: docs/rfc/README.md exists
+PASS: docs/rfc/README.md has content
+PASS: docs/methodology/DSL.md exists
+PASS: docs/methodology/DSL.md has content
+PASS: schemas/methodology/methodology.schema.json exists
+PASS: schemas/methodology/methodology.schema.json has content
+PASS: templates/methodology-template.md exists
+PASS: templates/methodology-template.md has content
+PASS: evaluation/rubrics/methodology-review-checklist.md exists
+PASS: evaluation/rubrics/methodology-review-checklist.md has content
+PASS: docs/production/M2_COMPLETION_REPORT.md exists
+PASS: docs/production/M2_COMPLETION_REPORT.md has content
+PASS: docs/review/M2_SELF_REVIEW.md exists
+PASS: docs/review/M2_SELF_REVIEW.md has content
+PASS: docs/adr directory exists
+PASS: docs/rfc directory exists
+PASS: schemas/methodology directory exists
+PASS: docs/review directory exists
+PASS: methodology.schema.json is valid JSON
+PASS: schema contains purpose
+PASS: schema contains theory
+PASS: schema contains background
+PASS: schema contains applicable_scenarios
+PASS: schema contains non_applicable_scenarios
+PASS: schema contains inputs
+PASS: schema contains outputs
+PASS: schema contains workflow
+PASS: schema contains required_evidence
+PASS: schema contains counter_evidence
+PASS: schema contains failure_cases
+PASS: schema contains confidence
+PASS: schema contains benchmark_mapping
+PASS: schema contains future_prompt_mapping
+PASS: schema contains future_skill_mapping
+PASS: schema contains future_score_mapping
+PASS: M1 reference exists: README.md
+PASS: M1 reference exists: ARCHITECTURE.md
+PASS: M1 reference exists: AGENTS.md
+PASS: M1 reference exists: SKILL.md
+PASS: M1 reference exists: ROADMAP.md
+PASS: M1 reference exists: docs/production/M1_COMPLETION_REPORT.md
+PASS: M2 content includes M1 principle: 证据
+PASS: M2 content includes M1 principle: 反方
+PASS: M2 content includes M1 principle: 不确定性
+PASS: M2 content includes M1 principle: 免责声明
+PASS: M2 content includes M1 principle: 不构成投资建议
+PASS: M2 avoids forbidden expression: 建议买入
+PASS: M2 avoids forbidden expression: 建议卖出
+PASS: M2 avoids forbidden expression: 应买入
+PASS: M2 avoids forbidden expression: 应卖出
+PASS: M2 avoids forbidden expression: 给予目标价
+PASS: M2 avoids forbidden expression: 目标价为
+PASS: M2 avoids forbidden expression: 预计涨到
+PASS: M2 avoids forbidden expression: 保证盈利
+PASS: schemas/README.md documents methodology schema
+===================
+RESULT: PASS

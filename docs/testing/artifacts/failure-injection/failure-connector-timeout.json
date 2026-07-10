@@ -1,0 +1,33 @@
+{
+  "attempts": 3,
+  "case_id": "failure-connector-timeout",
+  "errors": [],
+  "expected": "RetryPolicy should retry two timeout failures and recover on third attempt.",
+  "result": {
+    "connector_id": "flaky_timeout_news",
+    "data": {
+      "headline": "Mock news headline",
+      "publisher": "Mock News",
+      "query": "AI servers",
+      "url": "https://news.example.com/mock"
+    },
+    "disclaimer": "仅供 AIRS 工程开发和研究质量控制使用，不构成投资建议。",
+    "source": "Public News",
+    "source_type": "public_news",
+    "timestamp": "2026-07-10T08:53:01.115003+00:00",
+    "trace_id": "TRACE-4371B5565241",
+    "traceability": {
+      "cache_hit": false,
+      "connector": "flaky_timeout_news",
+      "request_id": "TRACE-4371B5565241",
+      "transformations": [
+        "mock_fetch",
+        "normalize"
+      ]
+    },
+    "url": "https://news.example.com/mock",
+    "version": "0.1.0"
+  },
+  "started_at": "2026-07-10T08:53:01.430953+00:00",
+  "status": "PASS"
+}

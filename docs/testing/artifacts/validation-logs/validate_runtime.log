@@ -1,0 +1,714 @@
+AIRS FEATURE-006 Research Agent Runtime Validation
+===================================================
+PASS: docs/runtime/runtime-architecture.md exists
+PASS: docs/runtime/runtime-architecture.md has substantive content
+PASS: docs/runtime/runtime-architecture.md has disclaimer
+PASS: docs/runtime/runtime-architecture.md avoids forbidden expression: 建议买入
+PASS: docs/runtime/runtime-architecture.md avoids forbidden expression: 建议卖出
+PASS: docs/runtime/runtime-architecture.md avoids forbidden expression: 保证收益
+PASS: docs/runtime/runtime-architecture.md avoids forbidden expression: 保证盈利
+PASS: docs/runtime/runtime-architecture.md avoids forbidden expression: 目标价为
+PASS: docs/runtime/runtime-architecture.md avoids forbidden expression: 应买入
+PASS: docs/runtime/runtime-architecture.md avoids forbidden expression: 应卖出
+PASS: docs/runtime/runtime-architecture.md avoids forbidden expression: 自动交易指令
+PASS: docs/runtime/runtime-architecture.md references Runtime
+PASS: docs/runtime/runtime-architecture.md references Agent
+PASS: docs/runtime/runtime-architecture.md references Workflow
+PASS: docs/runtime/runtime-lifecycle.md exists
+PASS: docs/runtime/runtime-lifecycle.md has substantive content
+PASS: docs/runtime/runtime-lifecycle.md has disclaimer
+PASS: docs/runtime/runtime-lifecycle.md avoids forbidden expression: 建议买入
+PASS: docs/runtime/runtime-lifecycle.md avoids forbidden expression: 建议卖出
+PASS: docs/runtime/runtime-lifecycle.md avoids forbidden expression: 保证收益
+PASS: docs/runtime/runtime-lifecycle.md avoids forbidden expression: 保证盈利
+PASS: docs/runtime/runtime-lifecycle.md avoids forbidden expression: 目标价为
+PASS: docs/runtime/runtime-lifecycle.md avoids forbidden expression: 应买入
+PASS: docs/runtime/runtime-lifecycle.md avoids forbidden expression: 应卖出
+PASS: docs/runtime/runtime-lifecycle.md avoids forbidden expression: 自动交易指令
+PASS: docs/runtime/runtime-lifecycle.md references Runtime
+PASS: docs/runtime/runtime-lifecycle.md references Agent
+PASS: docs/runtime/runtime-lifecycle.md references Workflow
+PASS: docs/runtime/agent-registry.md exists
+PASS: docs/runtime/agent-registry.md has substantive content
+PASS: docs/runtime/agent-registry.md has disclaimer
+PASS: docs/runtime/agent-registry.md avoids forbidden expression: 建议买入
+PASS: docs/runtime/agent-registry.md avoids forbidden expression: 建议卖出
+PASS: docs/runtime/agent-registry.md avoids forbidden expression: 保证收益
+PASS: docs/runtime/agent-registry.md avoids forbidden expression: 保证盈利
+PASS: docs/runtime/agent-registry.md avoids forbidden expression: 目标价为
+PASS: docs/runtime/agent-registry.md avoids forbidden expression: 应买入
+PASS: docs/runtime/agent-registry.md avoids forbidden expression: 应卖出
+PASS: docs/runtime/agent-registry.md avoids forbidden expression: 自动交易指令
+PASS: docs/runtime/agent-registry.md references Runtime
+PASS: docs/runtime/agent-registry.md references Agent
+PASS: docs/runtime/agent-registry.md references Workflow
+PASS: docs/runtime/task-dispatcher.md exists
+PASS: docs/runtime/task-dispatcher.md has substantive content
+PASS: docs/runtime/task-dispatcher.md has disclaimer
+PASS: docs/runtime/task-dispatcher.md avoids forbidden expression: 建议买入
+PASS: docs/runtime/task-dispatcher.md avoids forbidden expression: 建议卖出
+PASS: docs/runtime/task-dispatcher.md avoids forbidden expression: 保证收益
+PASS: docs/runtime/task-dispatcher.md avoids forbidden expression: 保证盈利
+PASS: docs/runtime/task-dispatcher.md avoids forbidden expression: 目标价为
+PASS: docs/runtime/task-dispatcher.md avoids forbidden expression: 应买入
+PASS: docs/runtime/task-dispatcher.md avoids forbidden expression: 应卖出
+PASS: docs/runtime/task-dispatcher.md avoids forbidden expression: 自动交易指令
+PASS: docs/runtime/task-dispatcher.md references Runtime
+PASS: docs/runtime/task-dispatcher.md references Agent
+PASS: docs/runtime/task-dispatcher.md references Workflow
+PASS: docs/runtime/message-bus.md exists
+PASS: docs/runtime/message-bus.md has substantive content
+PASS: docs/runtime/message-bus.md has disclaimer
+PASS: docs/runtime/message-bus.md avoids forbidden expression: 建议买入
+PASS: docs/runtime/message-bus.md avoids forbidden expression: 建议卖出
+PASS: docs/runtime/message-bus.md avoids forbidden expression: 保证收益
+PASS: docs/runtime/message-bus.md avoids forbidden expression: 保证盈利
+PASS: docs/runtime/message-bus.md avoids forbidden expression: 目标价为
+PASS: docs/runtime/message-bus.md avoids forbidden expression: 应买入
+PASS: docs/runtime/message-bus.md avoids forbidden expression: 应卖出
+PASS: docs/runtime/message-bus.md avoids forbidden expression: 自动交易指令
+PASS: docs/runtime/message-bus.md references Runtime
+PASS: docs/runtime/message-bus.md references Agent
+PASS: docs/runtime/message-bus.md references Workflow
+PASS: docs/runtime/event-bus.md exists
+PASS: docs/runtime/event-bus.md has substantive content
+PASS: docs/runtime/event-bus.md has disclaimer
+PASS: docs/runtime/event-bus.md avoids forbidden expression: 建议买入
+PASS: docs/runtime/event-bus.md avoids forbidden expression: 建议卖出
+PASS: docs/runtime/event-bus.md avoids forbidden expression: 保证收益
+PASS: docs/runtime/event-bus.md avoids forbidden expression: 保证盈利
+PASS: docs/runtime/event-bus.md avoids forbidden expression: 目标价为
+PASS: docs/runtime/event-bus.md avoids forbidden expression: 应买入
+PASS: docs/runtime/event-bus.md avoids forbidden expression: 应卖出
+PASS: docs/runtime/event-bus.md avoids forbidden expression: 自动交易指令
+PASS: docs/runtime/event-bus.md references Runtime
+PASS: docs/runtime/event-bus.md references Agent
+PASS: docs/runtime/event-bus.md references Workflow
+PASS: docs/runtime/state-manager.md exists
+PASS: docs/runtime/state-manager.md has substantive content
+PASS: docs/runtime/state-manager.md has disclaimer
+PASS: docs/runtime/state-manager.md avoids forbidden expression: 建议买入
+PASS: docs/runtime/state-manager.md avoids forbidden expression: 建议卖出
+PASS: docs/runtime/state-manager.md avoids forbidden expression: 保证收益
+PASS: docs/runtime/state-manager.md avoids forbidden expression: 保证盈利
+PASS: docs/runtime/state-manager.md avoids forbidden expression: 目标价为
+PASS: docs/runtime/state-manager.md avoids forbidden expression: 应买入
+PASS: docs/runtime/state-manager.md avoids forbidden expression: 应卖出
+PASS: docs/runtime/state-manager.md avoids forbidden expression: 自动交易指令
+PASS: docs/runtime/state-manager.md references Runtime
+PASS: docs/runtime/state-manager.md references Agent
+PASS: docs/runtime/state-manager.md references Workflow
+PASS: docs/runtime/memory-manager.md exists
+PASS: docs/runtime/memory-manager.md has substantive content
+PASS: docs/runtime/memory-manager.md has disclaimer
+PASS: docs/runtime/memory-manager.md avoids forbidden expression: 建议买入
+PASS: docs/runtime/memory-manager.md avoids forbidden expression: 建议卖出
+PASS: docs/runtime/memory-manager.md avoids forbidden expression: 保证收益
+PASS: docs/runtime/memory-manager.md avoids forbidden expression: 保证盈利
+PASS: docs/runtime/memory-manager.md avoids forbidden expression: 目标价为
+PASS: docs/runtime/memory-manager.md avoids forbidden expression: 应买入
+PASS: docs/runtime/memory-manager.md avoids forbidden expression: 应卖出
+PASS: docs/runtime/memory-manager.md avoids forbidden expression: 自动交易指令
+PASS: docs/runtime/memory-manager.md references Runtime
+PASS: docs/runtime/memory-manager.md references Agent
+PASS: docs/runtime/memory-manager.md references Workflow
+PASS: docs/runtime/resource-manager.md exists
+PASS: docs/runtime/resource-manager.md has substantive content
+PASS: docs/runtime/resource-manager.md has disclaimer
+PASS: docs/runtime/resource-manager.md avoids forbidden expression: 建议买入
+PASS: docs/runtime/resource-manager.md avoids forbidden expression: 建议卖出
+PASS: docs/runtime/resource-manager.md avoids forbidden expression: 保证收益
+PASS: docs/runtime/resource-manager.md avoids forbidden expression: 保证盈利
+PASS: docs/runtime/resource-manager.md avoids forbidden expression: 目标价为
+PASS: docs/runtime/resource-manager.md avoids forbidden expression: 应买入
+PASS: docs/runtime/resource-manager.md avoids forbidden expression: 应卖出
+PASS: docs/runtime/resource-manager.md avoids forbidden expression: 自动交易指令
+PASS: docs/runtime/resource-manager.md references Runtime
+PASS: docs/runtime/resource-manager.md references Agent
+PASS: docs/runtime/resource-manager.md references Workflow
+PASS: docs/runtime/runtime-monitor.md exists
+PASS: docs/runtime/runtime-monitor.md has substantive content
+PASS: docs/runtime/runtime-monitor.md has disclaimer
+PASS: docs/runtime/runtime-monitor.md avoids forbidden expression: 建议买入
+PASS: docs/runtime/runtime-monitor.md avoids forbidden expression: 建议卖出
+PASS: docs/runtime/runtime-monitor.md avoids forbidden expression: 保证收益
+PASS: docs/runtime/runtime-monitor.md avoids forbidden expression: 保证盈利
+PASS: docs/runtime/runtime-monitor.md avoids forbidden expression: 目标价为
+PASS: docs/runtime/runtime-monitor.md avoids forbidden expression: 应买入
+PASS: docs/runtime/runtime-monitor.md avoids forbidden expression: 应卖出
+PASS: docs/runtime/runtime-monitor.md avoids forbidden expression: 自动交易指令
+PASS: docs/runtime/runtime-monitor.md references Runtime
+PASS: docs/runtime/runtime-monitor.md references Agent
+PASS: docs/runtime/runtime-monitor.md references Workflow
+PASS: runtime/__init__.py exists
+PASS: runtime/__init__.py has substantive content
+PASS: runtime/__init__.py avoids forbidden expression: 建议买入
+PASS: runtime/__init__.py avoids forbidden expression: 建议卖出
+PASS: runtime/__init__.py avoids forbidden expression: 保证收益
+PASS: runtime/__init__.py avoids forbidden expression: 保证盈利
+PASS: runtime/__init__.py avoids forbidden expression: 目标价为
+PASS: runtime/__init__.py avoids forbidden expression: 应买入
+PASS: runtime/__init__.py avoids forbidden expression: 应卖出
+PASS: runtime/__init__.py avoids forbidden expression: 自动交易指令
+PASS: runtime/__init__.py contains runtime logic
+PASS: runtime/core.py exists
+PASS: runtime/core.py has substantive content
+PASS: runtime/core.py avoids forbidden expression: 建议买入
+PASS: runtime/core.py avoids forbidden expression: 建议卖出
+PASS: runtime/core.py avoids forbidden expression: 保证收益
+PASS: runtime/core.py avoids forbidden expression: 保证盈利
+PASS: runtime/core.py avoids forbidden expression: 目标价为
+PASS: runtime/core.py avoids forbidden expression: 应买入
+PASS: runtime/core.py avoids forbidden expression: 应卖出
+PASS: runtime/core.py avoids forbidden expression: 自动交易指令
+PASS: runtime/core.py contains runtime logic
+PASS: runtime/agent_registry.py exists
+PASS: runtime/agent_registry.py has substantive content
+PASS: runtime/agent_registry.py avoids forbidden expression: 建议买入
+PASS: runtime/agent_registry.py avoids forbidden expression: 建议卖出
+PASS: runtime/agent_registry.py avoids forbidden expression: 保证收益
+PASS: runtime/agent_registry.py avoids forbidden expression: 保证盈利
+PASS: runtime/agent_registry.py avoids forbidden expression: 目标价为
+PASS: runtime/agent_registry.py avoids forbidden expression: 应买入
+PASS: runtime/agent_registry.py avoids forbidden expression: 应卖出
+PASS: runtime/agent_registry.py avoids forbidden expression: 自动交易指令
+PASS: runtime/agent_registry.py contains runtime logic
+PASS: runtime/agent_lifecycle.py exists
+PASS: runtime/agent_lifecycle.py has substantive content
+PASS: runtime/agent_lifecycle.py avoids forbidden expression: 建议买入
+PASS: runtime/agent_lifecycle.py avoids forbidden expression: 建议卖出
+PASS: runtime/agent_lifecycle.py avoids forbidden expression: 保证收益
+PASS: runtime/agent_lifecycle.py avoids forbidden expression: 保证盈利
+PASS: runtime/agent_lifecycle.py avoids forbidden expression: 目标价为
+PASS: runtime/agent_lifecycle.py avoids forbidden expression: 应买入
+PASS: runtime/agent_lifecycle.py avoids forbidden expression: 应卖出
+PASS: runtime/agent_lifecycle.py avoids forbidden expression: 自动交易指令
+PASS: runtime/agent_lifecycle.py contains runtime logic
+PASS: runtime/agent_context.py exists
+PASS: runtime/agent_context.py has substantive content
+PASS: runtime/agent_context.py avoids forbidden expression: 建议买入
+PASS: runtime/agent_context.py avoids forbidden expression: 建议卖出
+PASS: runtime/agent_context.py avoids forbidden expression: 保证收益
+PASS: runtime/agent_context.py avoids forbidden expression: 保证盈利
+PASS: runtime/agent_context.py avoids forbidden expression: 目标价为
+PASS: runtime/agent_context.py avoids forbidden expression: 应买入
+PASS: runtime/agent_context.py avoids forbidden expression: 应卖出
+PASS: runtime/agent_context.py avoids forbidden expression: 自动交易指令
+PASS: runtime/agent_context.py contains runtime logic
+PASS: runtime/agent_session.py exists
+PASS: runtime/agent_session.py has substantive content
+PASS: runtime/agent_session.py avoids forbidden expression: 建议买入
+PASS: runtime/agent_session.py avoids forbidden expression: 建议卖出
+PASS: runtime/agent_session.py avoids forbidden expression: 保证收益
+PASS: runtime/agent_session.py avoids forbidden expression: 保证盈利
+PASS: runtime/agent_session.py avoids forbidden expression: 目标价为
+PASS: runtime/agent_session.py avoids forbidden expression: 应买入
+PASS: runtime/agent_session.py avoids forbidden expression: 应卖出
+PASS: runtime/agent_session.py avoids forbidden expression: 自动交易指令
+PASS: runtime/agent_session.py contains runtime logic
+PASS: runtime/task_dispatcher.py exists
+PASS: runtime/task_dispatcher.py has substantive content
+PASS: runtime/task_dispatcher.py avoids forbidden expression: 建议买入
+PASS: runtime/task_dispatcher.py avoids forbidden expression: 建议卖出
+PASS: runtime/task_dispatcher.py avoids forbidden expression: 保证收益
+PASS: runtime/task_dispatcher.py avoids forbidden expression: 保证盈利
+PASS: runtime/task_dispatcher.py avoids forbidden expression: 目标价为
+PASS: runtime/task_dispatcher.py avoids forbidden expression: 应买入
+PASS: runtime/task_dispatcher.py avoids forbidden expression: 应卖出
+PASS: runtime/task_dispatcher.py avoids forbidden expression: 自动交易指令
+PASS: runtime/task_dispatcher.py contains runtime logic
+PASS: runtime/message_bus.py exists
+PASS: runtime/message_bus.py has substantive content
+PASS: runtime/message_bus.py avoids forbidden expression: 建议买入
+PASS: runtime/message_bus.py avoids forbidden expression: 建议卖出
+PASS: runtime/message_bus.py avoids forbidden expression: 保证收益
+PASS: runtime/message_bus.py avoids forbidden expression: 保证盈利
+PASS: runtime/message_bus.py avoids forbidden expression: 目标价为
+PASS: runtime/message_bus.py avoids forbidden expression: 应买入
+PASS: runtime/message_bus.py avoids forbidden expression: 应卖出
+PASS: runtime/message_bus.py avoids forbidden expression: 自动交易指令
+PASS: runtime/message_bus.py contains runtime logic
+PASS: runtime/event_bus.py exists
+PASS: runtime/event_bus.py has substantive content
+PASS: runtime/event_bus.py avoids forbidden expression: 建议买入
+PASS: runtime/event_bus.py avoids forbidden expression: 建议卖出
+PASS: runtime/event_bus.py avoids forbidden expression: 保证收益
+PASS: runtime/event_bus.py avoids forbidden expression: 保证盈利
+PASS: runtime/event_bus.py avoids forbidden expression: 目标价为
+PASS: runtime/event_bus.py avoids forbidden expression: 应买入
+PASS: runtime/event_bus.py avoids forbidden expression: 应卖出
+PASS: runtime/event_bus.py avoids forbidden expression: 自动交易指令
+PASS: runtime/event_bus.py contains runtime logic
+PASS: runtime/state_manager.py exists
+PASS: runtime/state_manager.py has substantive content
+PASS: runtime/state_manager.py avoids forbidden expression: 建议买入
+PASS: runtime/state_manager.py avoids forbidden expression: 建议卖出
+PASS: runtime/state_manager.py avoids forbidden expression: 保证收益
+PASS: runtime/state_manager.py avoids forbidden expression: 保证盈利
+PASS: runtime/state_manager.py avoids forbidden expression: 目标价为
+PASS: runtime/state_manager.py avoids forbidden expression: 应买入
+PASS: runtime/state_manager.py avoids forbidden expression: 应卖出
+PASS: runtime/state_manager.py avoids forbidden expression: 自动交易指令
+PASS: runtime/state_manager.py contains runtime logic
+PASS: runtime/memory_manager.py exists
+PASS: runtime/memory_manager.py has substantive content
+PASS: runtime/memory_manager.py avoids forbidden expression: 建议买入
+PASS: runtime/memory_manager.py avoids forbidden expression: 建议卖出
+PASS: runtime/memory_manager.py avoids forbidden expression: 保证收益
+PASS: runtime/memory_manager.py avoids forbidden expression: 保证盈利
+PASS: runtime/memory_manager.py avoids forbidden expression: 目标价为
+PASS: runtime/memory_manager.py avoids forbidden expression: 应买入
+PASS: runtime/memory_manager.py avoids forbidden expression: 应卖出
+PASS: runtime/memory_manager.py avoids forbidden expression: 自动交易指令
+PASS: runtime/memory_manager.py contains runtime logic
+PASS: runtime/resource_manager.py exists
+PASS: runtime/resource_manager.py has substantive content
+PASS: runtime/resource_manager.py avoids forbidden expression: 建议买入
+PASS: runtime/resource_manager.py avoids forbidden expression: 建议卖出
+PASS: runtime/resource_manager.py avoids forbidden expression: 保证收益
+PASS: runtime/resource_manager.py avoids forbidden expression: 保证盈利
+PASS: runtime/resource_manager.py avoids forbidden expression: 目标价为
+PASS: runtime/resource_manager.py avoids forbidden expression: 应买入
+PASS: runtime/resource_manager.py avoids forbidden expression: 应卖出
+PASS: runtime/resource_manager.py avoids forbidden expression: 自动交易指令
+PASS: runtime/resource_manager.py contains runtime logic
+PASS: runtime/retry_scheduler.py exists
+PASS: runtime/retry_scheduler.py has substantive content
+PASS: runtime/retry_scheduler.py avoids forbidden expression: 建议买入
+PASS: runtime/retry_scheduler.py avoids forbidden expression: 建议卖出
+PASS: runtime/retry_scheduler.py avoids forbidden expression: 保证收益
+PASS: runtime/retry_scheduler.py avoids forbidden expression: 保证盈利
+PASS: runtime/retry_scheduler.py avoids forbidden expression: 目标价为
+PASS: runtime/retry_scheduler.py avoids forbidden expression: 应买入
+PASS: runtime/retry_scheduler.py avoids forbidden expression: 应卖出
+PASS: runtime/retry_scheduler.py avoids forbidden expression: 自动交易指令
+PASS: runtime/retry_scheduler.py contains runtime logic
+PASS: runtime/timeout_manager.py exists
+PASS: runtime/timeout_manager.py has substantive content
+PASS: runtime/timeout_manager.py avoids forbidden expression: 建议买入
+PASS: runtime/timeout_manager.py avoids forbidden expression: 建议卖出
+PASS: runtime/timeout_manager.py avoids forbidden expression: 保证收益
+PASS: runtime/timeout_manager.py avoids forbidden expression: 保证盈利
+PASS: runtime/timeout_manager.py avoids forbidden expression: 目标价为
+PASS: runtime/timeout_manager.py avoids forbidden expression: 应买入
+PASS: runtime/timeout_manager.py avoids forbidden expression: 应卖出
+PASS: runtime/timeout_manager.py avoids forbidden expression: 自动交易指令
+PASS: runtime/timeout_manager.py contains runtime logic
+PASS: runtime/cancellation_manager.py exists
+PASS: runtime/cancellation_manager.py has substantive content
+PASS: runtime/cancellation_manager.py avoids forbidden expression: 建议买入
+PASS: runtime/cancellation_manager.py avoids forbidden expression: 建议卖出
+PASS: runtime/cancellation_manager.py avoids forbidden expression: 保证收益
+PASS: runtime/cancellation_manager.py avoids forbidden expression: 保证盈利
+PASS: runtime/cancellation_manager.py avoids forbidden expression: 目标价为
+PASS: runtime/cancellation_manager.py avoids forbidden expression: 应买入
+PASS: runtime/cancellation_manager.py avoids forbidden expression: 应卖出
+PASS: runtime/cancellation_manager.py avoids forbidden expression: 自动交易指令
+PASS: runtime/cancellation_manager.py contains runtime logic
+PASS: runtime/runtime_monitor.py exists
+PASS: runtime/runtime_monitor.py has substantive content
+PASS: runtime/runtime_monitor.py avoids forbidden expression: 建议买入
+PASS: runtime/runtime_monitor.py avoids forbidden expression: 建议卖出
+PASS: runtime/runtime_monitor.py avoids forbidden expression: 保证收益
+PASS: runtime/runtime_monitor.py avoids forbidden expression: 保证盈利
+PASS: runtime/runtime_monitor.py avoids forbidden expression: 目标价为
+PASS: runtime/runtime_monitor.py avoids forbidden expression: 应买入
+PASS: runtime/runtime_monitor.py avoids forbidden expression: 应卖出
+PASS: runtime/runtime_monitor.py avoids forbidden expression: 自动交易指令
+PASS: runtime/runtime_monitor.py contains runtime logic
+PASS: runtime/README.md exists
+PASS: runtime/README.md has substantive content
+PASS: runtime/README.md has disclaimer
+PASS: runtime/README.md avoids forbidden expression: 建议买入
+PASS: runtime/README.md avoids forbidden expression: 建议卖出
+PASS: runtime/README.md avoids forbidden expression: 保证收益
+PASS: runtime/README.md avoids forbidden expression: 保证盈利
+PASS: runtime/README.md avoids forbidden expression: 目标价为
+PASS: runtime/README.md avoids forbidden expression: 应买入
+PASS: runtime/README.md avoids forbidden expression: 应卖出
+PASS: runtime/README.md avoids forbidden expression: 自动交易指令
+PASS: runtime/README.md contains runtime logic
+PASS: runtime/examples/company_research_runtime.py exists
+PASS: runtime/examples/company_research_runtime.py has substantive content
+PASS: runtime/examples/company_research_runtime.py avoids forbidden expression: 建议买入
+PASS: runtime/examples/company_research_runtime.py avoids forbidden expression: 建议卖出
+PASS: runtime/examples/company_research_runtime.py avoids forbidden expression: 保证收益
+PASS: runtime/examples/company_research_runtime.py avoids forbidden expression: 保证盈利
+PASS: runtime/examples/company_research_runtime.py avoids forbidden expression: 目标价为
+PASS: runtime/examples/company_research_runtime.py avoids forbidden expression: 应买入
+PASS: runtime/examples/company_research_runtime.py avoids forbidden expression: 应卖出
+PASS: runtime/examples/company_research_runtime.py avoids forbidden expression: 自动交易指令
+PASS: runtime/examples/company-research-runtime-example.md exists
+PASS: runtime/examples/company-research-runtime-example.md has substantive content
+PASS: runtime/examples/company-research-runtime-example.md has disclaimer
+PASS: runtime/examples/company-research-runtime-example.md avoids forbidden expression: 建议买入
+PASS: runtime/examples/company-research-runtime-example.md avoids forbidden expression: 建议卖出
+PASS: runtime/examples/company-research-runtime-example.md avoids forbidden expression: 保证收益
+PASS: runtime/examples/company-research-runtime-example.md avoids forbidden expression: 保证盈利
+PASS: runtime/examples/company-research-runtime-example.md avoids forbidden expression: 目标价为
+PASS: runtime/examples/company-research-runtime-example.md avoids forbidden expression: 应买入
+PASS: runtime/examples/company-research-runtime-example.md avoids forbidden expression: 应卖出
+PASS: runtime/examples/company-research-runtime-example.md avoids forbidden expression: 自动交易指令
+PASS: runtime/examples/company-research-runtime-example.md contains Runtime Plan
+PASS: runtime/examples/company-research-runtime-example.md contains Agent Graph
+PASS: runtime/examples/company-research-runtime-example.md contains Execution Timeline
+PASS: runtime/examples/company-research-runtime-example.md contains Event Log
+PASS: runtime/examples/company-research-runtime-example.md contains Context Snapshot
+PASS: runtime/examples/company-research-runtime-example.md contains Final State
+PASS: runtime/examples/industry_research_runtime.py exists
+PASS: runtime/examples/industry_research_runtime.py has substantive content
+PASS: runtime/examples/industry_research_runtime.py avoids forbidden expression: 建议买入
+PASS: runtime/examples/industry_research_runtime.py avoids forbidden expression: 建议卖出
+PASS: runtime/examples/industry_research_runtime.py avoids forbidden expression: 保证收益
+PASS: runtime/examples/industry_research_runtime.py avoids forbidden expression: 保证盈利
+PASS: runtime/examples/industry_research_runtime.py avoids forbidden expression: 目标价为
+PASS: runtime/examples/industry_research_runtime.py avoids forbidden expression: 应买入
+PASS: runtime/examples/industry_research_runtime.py avoids forbidden expression: 应卖出
+PASS: runtime/examples/industry_research_runtime.py avoids forbidden expression: 自动交易指令
+PASS: runtime/examples/industry-research-runtime-example.md exists
+PASS: runtime/examples/industry-research-runtime-example.md has substantive content
+PASS: runtime/examples/industry-research-runtime-example.md has disclaimer
+PASS: runtime/examples/industry-research-runtime-example.md avoids forbidden expression: 建议买入
+PASS: runtime/examples/industry-research-runtime-example.md avoids forbidden expression: 建议卖出
+PASS: runtime/examples/industry-research-runtime-example.md avoids forbidden expression: 保证收益
+PASS: runtime/examples/industry-research-runtime-example.md avoids forbidden expression: 保证盈利
+PASS: runtime/examples/industry-research-runtime-example.md avoids forbidden expression: 目标价为
+PASS: runtime/examples/industry-research-runtime-example.md avoids forbidden expression: 应买入
+PASS: runtime/examples/industry-research-runtime-example.md avoids forbidden expression: 应卖出
+PASS: runtime/examples/industry-research-runtime-example.md avoids forbidden expression: 自动交易指令
+PASS: runtime/examples/industry-research-runtime-example.md contains Runtime Plan
+PASS: runtime/examples/industry-research-runtime-example.md contains Agent Graph
+PASS: runtime/examples/industry-research-runtime-example.md contains Execution Timeline
+PASS: runtime/examples/industry-research-runtime-example.md contains Event Log
+PASS: runtime/examples/industry-research-runtime-example.md contains Context Snapshot
+PASS: runtime/examples/industry-research-runtime-example.md contains Final State
+PASS: runtime/examples/hot_topic_runtime.py exists
+PASS: runtime/examples/hot_topic_runtime.py has substantive content
+PASS: runtime/examples/hot_topic_runtime.py avoids forbidden expression: 建议买入
+PASS: runtime/examples/hot_topic_runtime.py avoids forbidden expression: 建议卖出
+PASS: runtime/examples/hot_topic_runtime.py avoids forbidden expression: 保证收益
+PASS: runtime/examples/hot_topic_runtime.py avoids forbidden expression: 保证盈利
+PASS: runtime/examples/hot_topic_runtime.py avoids forbidden expression: 目标价为
+PASS: runtime/examples/hot_topic_runtime.py avoids forbidden expression: 应买入
+PASS: runtime/examples/hot_topic_runtime.py avoids forbidden expression: 应卖出
+PASS: runtime/examples/hot_topic_runtime.py avoids forbidden expression: 自动交易指令
+PASS: runtime/examples/hot-topic-runtime-example.md exists
+PASS: runtime/examples/hot-topic-runtime-example.md has substantive content
+PASS: runtime/examples/hot-topic-runtime-example.md has disclaimer
+PASS: runtime/examples/hot-topic-runtime-example.md avoids forbidden expression: 建议买入
+PASS: runtime/examples/hot-topic-runtime-example.md avoids forbidden expression: 建议卖出
+PASS: runtime/examples/hot-topic-runtime-example.md avoids forbidden expression: 保证收益
+PASS: runtime/examples/hot-topic-runtime-example.md avoids forbidden expression: 保证盈利
+PASS: runtime/examples/hot-topic-runtime-example.md avoids forbidden expression: 目标价为
+PASS: runtime/examples/hot-topic-runtime-example.md avoids forbidden expression: 应买入
+PASS: runtime/examples/hot-topic-runtime-example.md avoids forbidden expression: 应卖出
+PASS: runtime/examples/hot-topic-runtime-example.md avoids forbidden expression: 自动交易指令
+PASS: runtime/examples/hot-topic-runtime-example.md contains Runtime Plan
+PASS: runtime/examples/hot-topic-runtime-example.md contains Agent Graph
+PASS: runtime/examples/hot-topic-runtime-example.md contains Execution Timeline
+PASS: runtime/examples/hot-topic-runtime-example.md contains Event Log
+PASS: runtime/examples/hot-topic-runtime-example.md contains Context Snapshot
+PASS: runtime/examples/hot-topic-runtime-example.md contains Final State
+PASS: runtime/examples/supply_chain_runtime.py exists
+PASS: runtime/examples/supply_chain_runtime.py has substantive content
+PASS: runtime/examples/supply_chain_runtime.py avoids forbidden expression: 建议买入
+PASS: runtime/examples/supply_chain_runtime.py avoids forbidden expression: 建议卖出
+PASS: runtime/examples/supply_chain_runtime.py avoids forbidden expression: 保证收益
+PASS: runtime/examples/supply_chain_runtime.py avoids forbidden expression: 保证盈利
+PASS: runtime/examples/supply_chain_runtime.py avoids forbidden expression: 目标价为
+PASS: runtime/examples/supply_chain_runtime.py avoids forbidden expression: 应买入
+PASS: runtime/examples/supply_chain_runtime.py avoids forbidden expression: 应卖出
+PASS: runtime/examples/supply_chain_runtime.py avoids forbidden expression: 自动交易指令
+PASS: runtime/examples/supply-chain-runtime-example.md exists
+PASS: runtime/examples/supply-chain-runtime-example.md has substantive content
+PASS: runtime/examples/supply-chain-runtime-example.md has disclaimer
+PASS: runtime/examples/supply-chain-runtime-example.md avoids forbidden expression: 建议买入
+PASS: runtime/examples/supply-chain-runtime-example.md avoids forbidden expression: 建议卖出
+PASS: runtime/examples/supply-chain-runtime-example.md avoids forbidden expression: 保证收益
+PASS: runtime/examples/supply-chain-runtime-example.md avoids forbidden expression: 保证盈利
+PASS: runtime/examples/supply-chain-runtime-example.md avoids forbidden expression: 目标价为
+PASS: runtime/examples/supply-chain-runtime-example.md avoids forbidden expression: 应买入
+PASS: runtime/examples/supply-chain-runtime-example.md avoids forbidden expression: 应卖出
+PASS: runtime/examples/supply-chain-runtime-example.md avoids forbidden expression: 自动交易指令
+PASS: runtime/examples/supply-chain-runtime-example.md contains Runtime Plan
+PASS: runtime/examples/supply-chain-runtime-example.md contains Agent Graph
+PASS: runtime/examples/supply-chain-runtime-example.md contains Execution Timeline
+PASS: runtime/examples/supply-chain-runtime-example.md contains Event Log
+PASS: runtime/examples/supply-chain-runtime-example.md contains Context Snapshot
+PASS: runtime/examples/supply-chain-runtime-example.md contains Final State
+PASS: runtime/examples/report_runtime.py exists
+PASS: runtime/examples/report_runtime.py has substantive content
+PASS: runtime/examples/report_runtime.py avoids forbidden expression: 建议买入
+PASS: runtime/examples/report_runtime.py avoids forbidden expression: 建议卖出
+PASS: runtime/examples/report_runtime.py avoids forbidden expression: 保证收益
+PASS: runtime/examples/report_runtime.py avoids forbidden expression: 保证盈利
+PASS: runtime/examples/report_runtime.py avoids forbidden expression: 目标价为
+PASS: runtime/examples/report_runtime.py avoids forbidden expression: 应买入
+PASS: runtime/examples/report_runtime.py avoids forbidden expression: 应卖出
+PASS: runtime/examples/report_runtime.py avoids forbidden expression: 自动交易指令
+PASS: runtime/examples/report-runtime-example.md exists
+PASS: runtime/examples/report-runtime-example.md has substantive content
+PASS: runtime/examples/report-runtime-example.md has disclaimer
+PASS: runtime/examples/report-runtime-example.md avoids forbidden expression: 建议买入
+PASS: runtime/examples/report-runtime-example.md avoids forbidden expression: 建议卖出
+PASS: runtime/examples/report-runtime-example.md avoids forbidden expression: 保证收益
+PASS: runtime/examples/report-runtime-example.md avoids forbidden expression: 保证盈利
+PASS: runtime/examples/report-runtime-example.md avoids forbidden expression: 目标价为
+PASS: runtime/examples/report-runtime-example.md avoids forbidden expression: 应买入
+PASS: runtime/examples/report-runtime-example.md avoids forbidden expression: 应卖出
+PASS: runtime/examples/report-runtime-example.md avoids forbidden expression: 自动交易指令
+PASS: runtime/examples/report-runtime-example.md contains Runtime Plan
+PASS: runtime/examples/report-runtime-example.md contains Agent Graph
+PASS: runtime/examples/report-runtime-example.md contains Execution Timeline
+PASS: runtime/examples/report-runtime-example.md contains Event Log
+PASS: runtime/examples/report-runtime-example.md contains Context Snapshot
+PASS: runtime/examples/report-runtime-example.md contains Final State
+PASS: runtime/examples/__init__.py exists
+PASS: schemas/runtime/runtime.schema.json exists
+PASS: schemas/runtime/runtime.schema.json is valid JSON
+PASS: schemas/runtime/runtime.schema.json contains $schema
+PASS: schemas/runtime/runtime.schema.json contains disclaimer
+PASS: schemas/runtime/runtime.schema.json contains 不构成投资建议
+PASS: schemas/runtime/agent.schema.json exists
+PASS: schemas/runtime/agent.schema.json is valid JSON
+PASS: schemas/runtime/agent.schema.json contains $schema
+PASS: schemas/runtime/agent.schema.json contains disclaimer
+PASS: schemas/runtime/agent.schema.json contains 不构成投资建议
+PASS: schemas/runtime/task.schema.json exists
+PASS: schemas/runtime/task.schema.json is valid JSON
+PASS: schemas/runtime/task.schema.json contains $schema
+PASS: schemas/runtime/task.schema.json contains disclaimer
+PASS: schemas/runtime/task.schema.json contains 不构成投资建议
+PASS: schemas/runtime/event.schema.json exists
+PASS: schemas/runtime/event.schema.json is valid JSON
+PASS: schemas/runtime/event.schema.json contains $schema
+PASS: schemas/runtime/event.schema.json contains disclaimer
+PASS: schemas/runtime/event.schema.json contains 不构成投资建议
+PASS: schemas/runtime/session.schema.json exists
+PASS: schemas/runtime/session.schema.json is valid JSON
+PASS: schemas/runtime/session.schema.json contains $schema
+PASS: schemas/runtime/session.schema.json contains disclaimer
+PASS: schemas/runtime/session.schema.json contains 不构成投资建议
+PASS: templates/runtime/runtime-dashboard.md exists
+PASS: templates/runtime/runtime-dashboard.md has substantive content
+PASS: templates/runtime/runtime-dashboard.md has disclaimer
+PASS: templates/runtime/runtime-dashboard.md avoids forbidden expression: 建议买入
+PASS: templates/runtime/runtime-dashboard.md avoids forbidden expression: 建议卖出
+PASS: templates/runtime/runtime-dashboard.md avoids forbidden expression: 保证收益
+PASS: templates/runtime/runtime-dashboard.md avoids forbidden expression: 保证盈利
+PASS: templates/runtime/runtime-dashboard.md avoids forbidden expression: 目标价为
+PASS: templates/runtime/runtime-dashboard.md avoids forbidden expression: 应买入
+PASS: templates/runtime/runtime-dashboard.md avoids forbidden expression: 应卖出
+PASS: templates/runtime/runtime-dashboard.md avoids forbidden expression: 自动交易指令
+PASS: templates/runtime/runtime-template.md exists
+PASS: templates/runtime/runtime-template.md has substantive content
+PASS: templates/runtime/runtime-template.md has disclaimer
+PASS: templates/runtime/runtime-template.md avoids forbidden expression: 建议买入
+PASS: templates/runtime/runtime-template.md avoids forbidden expression: 建议卖出
+PASS: templates/runtime/runtime-template.md avoids forbidden expression: 保证收益
+PASS: templates/runtime/runtime-template.md avoids forbidden expression: 保证盈利
+PASS: templates/runtime/runtime-template.md avoids forbidden expression: 目标价为
+PASS: templates/runtime/runtime-template.md avoids forbidden expression: 应买入
+PASS: templates/runtime/runtime-template.md avoids forbidden expression: 应卖出
+PASS: templates/runtime/runtime-template.md avoids forbidden expression: 自动交易指令
+PASS: templates/runtime/agent-template.md exists
+PASS: templates/runtime/agent-template.md has substantive content
+PASS: templates/runtime/agent-template.md has disclaimer
+PASS: templates/runtime/agent-template.md avoids forbidden expression: 建议买入
+PASS: templates/runtime/agent-template.md avoids forbidden expression: 建议卖出
+PASS: templates/runtime/agent-template.md avoids forbidden expression: 保证收益
+PASS: templates/runtime/agent-template.md avoids forbidden expression: 保证盈利
+PASS: templates/runtime/agent-template.md avoids forbidden expression: 目标价为
+PASS: templates/runtime/agent-template.md avoids forbidden expression: 应买入
+PASS: templates/runtime/agent-template.md avoids forbidden expression: 应卖出
+PASS: templates/runtime/agent-template.md avoids forbidden expression: 自动交易指令
+PASS: builder-output/research-agent-runtime/ISSUE.md exists
+PASS: builder-output/research-agent-runtime/ISSUE.md has substantive content
+PASS: builder-output/research-agent-runtime/ISSUE.md has disclaimer
+PASS: builder-output/research-agent-runtime/ISSUE.md avoids forbidden expression: 建议买入
+PASS: builder-output/research-agent-runtime/ISSUE.md avoids forbidden expression: 建议卖出
+PASS: builder-output/research-agent-runtime/ISSUE.md avoids forbidden expression: 保证收益
+PASS: builder-output/research-agent-runtime/ISSUE.md avoids forbidden expression: 保证盈利
+PASS: builder-output/research-agent-runtime/ISSUE.md avoids forbidden expression: 目标价为
+PASS: builder-output/research-agent-runtime/ISSUE.md avoids forbidden expression: 应买入
+PASS: builder-output/research-agent-runtime/ISSUE.md avoids forbidden expression: 应卖出
+PASS: builder-output/research-agent-runtime/ISSUE.md avoids forbidden expression: 自动交易指令
+PASS: builder-output/research-agent-runtime/ADR.md exists
+PASS: builder-output/research-agent-runtime/ADR.md has substantive content
+PASS: builder-output/research-agent-runtime/ADR.md has disclaimer
+PASS: builder-output/research-agent-runtime/ADR.md avoids forbidden expression: 建议买入
+PASS: builder-output/research-agent-runtime/ADR.md avoids forbidden expression: 建议卖出
+PASS: builder-output/research-agent-runtime/ADR.md avoids forbidden expression: 保证收益
+PASS: builder-output/research-agent-runtime/ADR.md avoids forbidden expression: 保证盈利
+PASS: builder-output/research-agent-runtime/ADR.md avoids forbidden expression: 目标价为
+PASS: builder-output/research-agent-runtime/ADR.md avoids forbidden expression: 应买入
+PASS: builder-output/research-agent-runtime/ADR.md avoids forbidden expression: 应卖出
+PASS: builder-output/research-agent-runtime/ADR.md avoids forbidden expression: 自动交易指令
+PASS: builder-output/research-agent-runtime/FEATURE_SPEC.md exists
+PASS: builder-output/research-agent-runtime/FEATURE_SPEC.md has substantive content
+PASS: builder-output/research-agent-runtime/FEATURE_SPEC.md has disclaimer
+PASS: builder-output/research-agent-runtime/FEATURE_SPEC.md avoids forbidden expression: 建议买入
+PASS: builder-output/research-agent-runtime/FEATURE_SPEC.md avoids forbidden expression: 建议卖出
+PASS: builder-output/research-agent-runtime/FEATURE_SPEC.md avoids forbidden expression: 保证收益
+PASS: builder-output/research-agent-runtime/FEATURE_SPEC.md avoids forbidden expression: 保证盈利
+PASS: builder-output/research-agent-runtime/FEATURE_SPEC.md avoids forbidden expression: 目标价为
+PASS: builder-output/research-agent-runtime/FEATURE_SPEC.md avoids forbidden expression: 应买入
+PASS: builder-output/research-agent-runtime/FEATURE_SPEC.md avoids forbidden expression: 应卖出
+PASS: builder-output/research-agent-runtime/FEATURE_SPEC.md avoids forbidden expression: 自动交易指令
+PASS: builder-output/research-agent-runtime/skill/research-agent-runtime-skill.md exists
+PASS: builder-output/research-agent-runtime/skill/research-agent-runtime-skill.md has substantive content
+PASS: builder-output/research-agent-runtime/skill/research-agent-runtime-skill.md has disclaimer
+PASS: builder-output/research-agent-runtime/skill/research-agent-runtime-skill.md avoids forbidden expression: 建议买入
+PASS: builder-output/research-agent-runtime/skill/research-agent-runtime-skill.md avoids forbidden expression: 建议卖出
+PASS: builder-output/research-agent-runtime/skill/research-agent-runtime-skill.md avoids forbidden expression: 保证收益
+PASS: builder-output/research-agent-runtime/skill/research-agent-runtime-skill.md avoids forbidden expression: 保证盈利
+PASS: builder-output/research-agent-runtime/skill/research-agent-runtime-skill.md avoids forbidden expression: 目标价为
+PASS: builder-output/research-agent-runtime/skill/research-agent-runtime-skill.md avoids forbidden expression: 应买入
+PASS: builder-output/research-agent-runtime/skill/research-agent-runtime-skill.md avoids forbidden expression: 应卖出
+PASS: builder-output/research-agent-runtime/skill/research-agent-runtime-skill.md avoids forbidden expression: 自动交易指令
+PASS: builder-output/research-agent-runtime/prompt/research-agent-runtime-prompt.md exists
+PASS: builder-output/research-agent-runtime/prompt/research-agent-runtime-prompt.md has substantive content
+PASS: builder-output/research-agent-runtime/prompt/research-agent-runtime-prompt.md has disclaimer
+PASS: builder-output/research-agent-runtime/prompt/research-agent-runtime-prompt.md avoids forbidden expression: 建议买入
+PASS: builder-output/research-agent-runtime/prompt/research-agent-runtime-prompt.md avoids forbidden expression: 建议卖出
+PASS: builder-output/research-agent-runtime/prompt/research-agent-runtime-prompt.md avoids forbidden expression: 保证收益
+PASS: builder-output/research-agent-runtime/prompt/research-agent-runtime-prompt.md avoids forbidden expression: 保证盈利
+PASS: builder-output/research-agent-runtime/prompt/research-agent-runtime-prompt.md avoids forbidden expression: 目标价为
+PASS: builder-output/research-agent-runtime/prompt/research-agent-runtime-prompt.md avoids forbidden expression: 应买入
+PASS: builder-output/research-agent-runtime/prompt/research-agent-runtime-prompt.md avoids forbidden expression: 应卖出
+PASS: builder-output/research-agent-runtime/prompt/research-agent-runtime-prompt.md avoids forbidden expression: 自动交易指令
+PASS: builder-output/research-agent-runtime/schema/research-agent-runtime.schema.json exists
+PASS: builder-output/research-agent-runtime/schema/research-agent-runtime.schema.json is valid JSON
+PASS: builder-output/research-agent-runtime/tests/test-research-agent-runtime.md exists
+PASS: builder-output/research-agent-runtime/tests/test-research-agent-runtime.md has substantive content
+PASS: builder-output/research-agent-runtime/tests/test-research-agent-runtime.md has disclaimer
+PASS: builder-output/research-agent-runtime/tests/test-research-agent-runtime.md avoids forbidden expression: 建议买入
+PASS: builder-output/research-agent-runtime/tests/test-research-agent-runtime.md avoids forbidden expression: 建议卖出
+PASS: builder-output/research-agent-runtime/tests/test-research-agent-runtime.md avoids forbidden expression: 保证收益
+PASS: builder-output/research-agent-runtime/tests/test-research-agent-runtime.md avoids forbidden expression: 保证盈利
+PASS: builder-output/research-agent-runtime/tests/test-research-agent-runtime.md avoids forbidden expression: 目标价为
+PASS: builder-output/research-agent-runtime/tests/test-research-agent-runtime.md avoids forbidden expression: 应买入
+PASS: builder-output/research-agent-runtime/tests/test-research-agent-runtime.md avoids forbidden expression: 应卖出
+PASS: builder-output/research-agent-runtime/tests/test-research-agent-runtime.md avoids forbidden expression: 自动交易指令
+PASS: builder-output/research-agent-runtime/benchmark/research-agent-runtime-benchmark.md exists
+PASS: builder-output/research-agent-runtime/benchmark/research-agent-runtime-benchmark.md has substantive content
+PASS: builder-output/research-agent-runtime/benchmark/research-agent-runtime-benchmark.md has disclaimer
+PASS: builder-output/research-agent-runtime/benchmark/research-agent-runtime-benchmark.md avoids forbidden expression: 建议买入
+PASS: builder-output/research-agent-runtime/benchmark/research-agent-runtime-benchmark.md avoids forbidden expression: 建议卖出
+PASS: builder-output/research-agent-runtime/benchmark/research-agent-runtime-benchmark.md avoids forbidden expression: 保证收益
+PASS: builder-output/research-agent-runtime/benchmark/research-agent-runtime-benchmark.md avoids forbidden expression: 保证盈利
+PASS: builder-output/research-agent-runtime/benchmark/research-agent-runtime-benchmark.md avoids forbidden expression: 目标价为
+PASS: builder-output/research-agent-runtime/benchmark/research-agent-runtime-benchmark.md avoids forbidden expression: 应买入
+PASS: builder-output/research-agent-runtime/benchmark/research-agent-runtime-benchmark.md avoids forbidden expression: 应卖出
+PASS: builder-output/research-agent-runtime/benchmark/research-agent-runtime-benchmark.md avoids forbidden expression: 自动交易指令
+PASS: builder-output/research-agent-runtime/PR_CHECKLIST.md exists
+PASS: builder-output/research-agent-runtime/PR_CHECKLIST.md has substantive content
+PASS: builder-output/research-agent-runtime/PR_CHECKLIST.md has disclaimer
+PASS: builder-output/research-agent-runtime/PR_CHECKLIST.md avoids forbidden expression: 建议买入
+PASS: builder-output/research-agent-runtime/PR_CHECKLIST.md avoids forbidden expression: 建议卖出
+PASS: builder-output/research-agent-runtime/PR_CHECKLIST.md avoids forbidden expression: 保证收益
+PASS: builder-output/research-agent-runtime/PR_CHECKLIST.md avoids forbidden expression: 保证盈利
+PASS: builder-output/research-agent-runtime/PR_CHECKLIST.md avoids forbidden expression: 目标价为
+PASS: builder-output/research-agent-runtime/PR_CHECKLIST.md avoids forbidden expression: 应买入
+PASS: builder-output/research-agent-runtime/PR_CHECKLIST.md avoids forbidden expression: 应卖出
+PASS: builder-output/research-agent-runtime/PR_CHECKLIST.md avoids forbidden expression: 自动交易指令
+PASS: builder-output/research-agent-runtime/RELEASE_NOTES.md exists
+PASS: builder-output/research-agent-runtime/RELEASE_NOTES.md has substantive content
+PASS: builder-output/research-agent-runtime/RELEASE_NOTES.md has disclaimer
+PASS: builder-output/research-agent-runtime/RELEASE_NOTES.md avoids forbidden expression: 建议买入
+PASS: builder-output/research-agent-runtime/RELEASE_NOTES.md avoids forbidden expression: 建议卖出
+PASS: builder-output/research-agent-runtime/RELEASE_NOTES.md avoids forbidden expression: 保证收益
+PASS: builder-output/research-agent-runtime/RELEASE_NOTES.md avoids forbidden expression: 保证盈利
+PASS: builder-output/research-agent-runtime/RELEASE_NOTES.md avoids forbidden expression: 目标价为
+PASS: builder-output/research-agent-runtime/RELEASE_NOTES.md avoids forbidden expression: 应买入
+PASS: builder-output/research-agent-runtime/RELEASE_NOTES.md avoids forbidden expression: 应卖出
+PASS: builder-output/research-agent-runtime/RELEASE_NOTES.md avoids forbidden expression: 自动交易指令
+PASS: docs/adr/ADR-0006-research-agent-runtime.md exists
+PASS: docs/adr/ADR-0006-research-agent-runtime.md has substantive content
+PASS: docs/adr/ADR-0006-research-agent-runtime.md has disclaimer
+PASS: docs/adr/ADR-0006-research-agent-runtime.md avoids forbidden expression: 建议买入
+PASS: docs/adr/ADR-0006-research-agent-runtime.md avoids forbidden expression: 建议卖出
+PASS: docs/adr/ADR-0006-research-agent-runtime.md avoids forbidden expression: 保证收益
+PASS: docs/adr/ADR-0006-research-agent-runtime.md avoids forbidden expression: 保证盈利
+PASS: docs/adr/ADR-0006-research-agent-runtime.md avoids forbidden expression: 目标价为
+PASS: docs/adr/ADR-0006-research-agent-runtime.md avoids forbidden expression: 应买入
+PASS: docs/adr/ADR-0006-research-agent-runtime.md avoids forbidden expression: 应卖出
+PASS: docs/adr/ADR-0006-research-agent-runtime.md avoids forbidden expression: 自动交易指令
+PASS: docs/production/FEATURE_006_COMPLETION_REPORT.md exists
+PASS: docs/production/FEATURE_006_COMPLETION_REPORT.md has substantive content
+PASS: docs/production/FEATURE_006_COMPLETION_REPORT.md has disclaimer
+PASS: docs/production/FEATURE_006_COMPLETION_REPORT.md avoids forbidden expression: 建议买入
+PASS: docs/production/FEATURE_006_COMPLETION_REPORT.md avoids forbidden expression: 建议卖出
+PASS: docs/production/FEATURE_006_COMPLETION_REPORT.md avoids forbidden expression: 保证收益
+PASS: docs/production/FEATURE_006_COMPLETION_REPORT.md avoids forbidden expression: 保证盈利
+PASS: docs/production/FEATURE_006_COMPLETION_REPORT.md avoids forbidden expression: 目标价为
+PASS: docs/production/FEATURE_006_COMPLETION_REPORT.md avoids forbidden expression: 应买入
+PASS: docs/production/FEATURE_006_COMPLETION_REPORT.md avoids forbidden expression: 应卖出
+PASS: docs/production/FEATURE_006_COMPLETION_REPORT.md avoids forbidden expression: 自动交易指令
+PASS: docs/review/FEATURE_006_SELF_REVIEW.md exists
+PASS: docs/review/FEATURE_006_SELF_REVIEW.md has substantive content
+PASS: docs/review/FEATURE_006_SELF_REVIEW.md has disclaimer
+PASS: docs/review/FEATURE_006_SELF_REVIEW.md avoids forbidden expression: 建议买入
+PASS: docs/review/FEATURE_006_SELF_REVIEW.md avoids forbidden expression: 建议卖出
+PASS: docs/review/FEATURE_006_SELF_REVIEW.md avoids forbidden expression: 保证收益
+PASS: docs/review/FEATURE_006_SELF_REVIEW.md avoids forbidden expression: 保证盈利
+PASS: docs/review/FEATURE_006_SELF_REVIEW.md avoids forbidden expression: 目标价为
+PASS: docs/review/FEATURE_006_SELF_REVIEW.md avoids forbidden expression: 应买入
+PASS: docs/review/FEATURE_006_SELF_REVIEW.md avoids forbidden expression: 应卖出
+PASS: docs/review/FEATURE_006_SELF_REVIEW.md avoids forbidden expression: 自动交易指令
+PASS: registry supports sync
+PASS: registry supports async
+PASS: registry supports parallel
+PASS: registry supports long_running
+PASS: registry supports human_in_the_loop
+PASS: runtime/examples/company_research_runtime.py outputs runtime_plan
+PASS: runtime/examples/company_research_runtime.py outputs agent_graph
+PASS: runtime/examples/company_research_runtime.py outputs execution_timeline
+PASS: runtime/examples/company_research_runtime.py outputs event_log
+PASS: runtime/examples/company_research_runtime.py outputs context_snapshot
+PASS: runtime/examples/company_research_runtime.py outputs final_state
+PASS: runtime/examples/company_research_runtime.py has event log
+PASS: runtime/examples/company_research_runtime.py carries disclaimer
+PASS: runtime/examples/industry_research_runtime.py outputs runtime_plan
+PASS: runtime/examples/industry_research_runtime.py outputs agent_graph
+PASS: runtime/examples/industry_research_runtime.py outputs execution_timeline
+PASS: runtime/examples/industry_research_runtime.py outputs event_log
+PASS: runtime/examples/industry_research_runtime.py outputs context_snapshot
+PASS: runtime/examples/industry_research_runtime.py outputs final_state
+PASS: runtime/examples/industry_research_runtime.py has event log
+PASS: runtime/examples/industry_research_runtime.py carries disclaimer
+PASS: runtime/examples/hot_topic_runtime.py outputs runtime_plan
+PASS: runtime/examples/hot_topic_runtime.py outputs agent_graph
+PASS: runtime/examples/hot_topic_runtime.py outputs execution_timeline
+PASS: runtime/examples/hot_topic_runtime.py outputs event_log
+PASS: runtime/examples/hot_topic_runtime.py outputs context_snapshot
+PASS: runtime/examples/hot_topic_runtime.py outputs final_state
+PASS: runtime/examples/hot_topic_runtime.py has event log
+PASS: runtime/examples/hot_topic_runtime.py carries disclaimer
+PASS: runtime/examples/supply_chain_runtime.py outputs runtime_plan
+PASS: runtime/examples/supply_chain_runtime.py outputs agent_graph
+PASS: runtime/examples/supply_chain_runtime.py outputs execution_timeline
+PASS: runtime/examples/supply_chain_runtime.py outputs event_log
+PASS: runtime/examples/supply_chain_runtime.py outputs context_snapshot
+PASS: runtime/examples/supply_chain_runtime.py outputs final_state
+PASS: runtime/examples/supply_chain_runtime.py has event log
+PASS: runtime/examples/supply_chain_runtime.py carries disclaimer
+PASS: runtime/examples/report_runtime.py outputs runtime_plan
+PASS: runtime/examples/report_runtime.py outputs agent_graph
+PASS: runtime/examples/report_runtime.py outputs execution_timeline
+PASS: runtime/examples/report_runtime.py outputs event_log
+PASS: runtime/examples/report_runtime.py outputs context_snapshot
+PASS: runtime/examples/report_runtime.py outputs final_state
+PASS: runtime/examples/report_runtime.py has event log
+PASS: runtime/examples/report_runtime.py carries disclaimer
+PASS: schemas/README documents runtime schemas
+PASS: CHANGELOG documents FEATURE-006
+PASS: runtime states workflow boundary
+PASS: runtime avoids direct business import from skills
+PASS: runtime avoids direct business import import skills
+PASS: runtime avoids direct business import from evidence
+PASS: runtime avoids direct business import import evidence
+PASS: runtime avoids direct business import from methodology
+PASS: runtime avoids direct business import import methodology
+===================================================
+RESULT: PASS

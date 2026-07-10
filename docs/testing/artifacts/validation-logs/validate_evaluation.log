@@ -1,0 +1,105 @@
+AIRS M6 Evaluation Engine Validation
+====================================
+PASS: docs/evaluation-engine/evaluation-architecture.md exists
+PASS: docs/evaluation-engine/evaluation-architecture.md has substantive content
+PASS: docs/evaluation-engine/evaluation-architecture.md has disclaimer
+PASS: docs/evaluation-engine/evaluation-architecture.md avoids forbidden expression: 建议买入
+PASS: docs/evaluation-engine/evaluation-architecture.md avoids forbidden expression: 建议卖出
+PASS: docs/evaluation-engine/evaluation-architecture.md avoids forbidden expression: 目标价为
+PASS: docs/evaluation-engine/evaluation-architecture.md avoids forbidden expression: 保证收益
+PASS: docs/evaluation-engine/evaluation-architecture.md avoids forbidden expression: 保证盈利
+PASS: docs/evaluation-engine/evaluation-workflow.md exists
+PASS: docs/evaluation-engine/evaluation-workflow.md has substantive content
+PASS: docs/evaluation-engine/evaluation-workflow.md has disclaimer
+PASS: docs/evaluation-engine/evaluation-workflow.md avoids forbidden expression: 建议买入
+PASS: docs/evaluation-engine/evaluation-workflow.md avoids forbidden expression: 建议卖出
+PASS: docs/evaluation-engine/evaluation-workflow.md avoids forbidden expression: 目标价为
+PASS: docs/evaluation-engine/evaluation-workflow.md avoids forbidden expression: 保证收益
+PASS: docs/evaluation-engine/evaluation-workflow.md avoids forbidden expression: 保证盈利
+PASS: docs/evaluation-engine/quality-gate.md exists
+PASS: docs/evaluation-engine/quality-gate.md has substantive content
+PASS: docs/evaluation-engine/quality-gate.md has disclaimer
+PASS: docs/evaluation-engine/quality-gate.md avoids forbidden expression: 建议买入
+PASS: docs/evaluation-engine/quality-gate.md avoids forbidden expression: 建议卖出
+PASS: docs/evaluation-engine/quality-gate.md avoids forbidden expression: 目标价为
+PASS: docs/evaluation-engine/quality-gate.md avoids forbidden expression: 保证收益
+PASS: docs/evaluation-engine/quality-gate.md avoids forbidden expression: 保证盈利
+PASS: docs/evaluation-engine/regression-strategy.md exists
+PASS: docs/evaluation-engine/regression-strategy.md has substantive content
+PASS: docs/evaluation-engine/regression-strategy.md has disclaimer
+PASS: docs/evaluation-engine/regression-strategy.md avoids forbidden expression: 建议买入
+PASS: docs/evaluation-engine/regression-strategy.md avoids forbidden expression: 建议卖出
+PASS: docs/evaluation-engine/regression-strategy.md avoids forbidden expression: 目标价为
+PASS: docs/evaluation-engine/regression-strategy.md avoids forbidden expression: 保证收益
+PASS: docs/evaluation-engine/regression-strategy.md avoids forbidden expression: 保证盈利
+PASS: evaluation/production-review-checklist.md exists
+PASS: evaluation/production-review-checklist.md has substantive content
+PASS: evaluation/production-review-checklist.md has disclaimer
+PASS: evaluation/production-review-checklist.md avoids forbidden expression: 建议买入
+PASS: evaluation/production-review-checklist.md avoids forbidden expression: 建议卖出
+PASS: evaluation/production-review-checklist.md avoids forbidden expression: 目标价为
+PASS: evaluation/production-review-checklist.md avoids forbidden expression: 保证收益
+PASS: evaluation/production-review-checklist.md avoids forbidden expression: 保证盈利
+PASS: evaluation/quality-gate.md exists
+PASS: evaluation/quality-gate.md has substantive content
+PASS: evaluation/quality-gate.md has disclaimer
+PASS: evaluation/quality-gate.md avoids forbidden expression: 建议买入
+PASS: evaluation/quality-gate.md avoids forbidden expression: 建议卖出
+PASS: evaluation/quality-gate.md avoids forbidden expression: 目标价为
+PASS: evaluation/quality-gate.md avoids forbidden expression: 保证收益
+PASS: evaluation/quality-gate.md avoids forbidden expression: 保证盈利
+PASS: evaluation/regression-checklist.md exists
+PASS: evaluation/regression-checklist.md has substantive content
+PASS: evaluation/regression-checklist.md has disclaimer
+PASS: evaluation/regression-checklist.md avoids forbidden expression: 建议买入
+PASS: evaluation/regression-checklist.md avoids forbidden expression: 建议卖出
+PASS: evaluation/regression-checklist.md avoids forbidden expression: 目标价为
+PASS: evaluation/regression-checklist.md avoids forbidden expression: 保证收益
+PASS: evaluation/regression-checklist.md avoids forbidden expression: 保证盈利
+PASS: templates/evaluation-template.md exists
+PASS: templates/evaluation-template.md has substantive content
+PASS: templates/evaluation-template.md has disclaimer
+PASS: templates/evaluation-template.md avoids forbidden expression: 建议买入
+PASS: templates/evaluation-template.md avoids forbidden expression: 建议卖出
+PASS: templates/evaluation-template.md avoids forbidden expression: 目标价为
+PASS: templates/evaluation-template.md avoids forbidden expression: 保证收益
+PASS: templates/evaluation-template.md avoids forbidden expression: 保证盈利
+PASS: schemas/score/evaluation.schema.json exists
+PASS: schemas/score/evaluation.schema.json has substantive content
+PASS: schemas/score/evaluation.schema.json has disclaimer
+PASS: schemas/score/evaluation.schema.json avoids forbidden expression: 建议买入
+PASS: schemas/score/evaluation.schema.json avoids forbidden expression: 建议卖出
+PASS: schemas/score/evaluation.schema.json avoids forbidden expression: 目标价为
+PASS: schemas/score/evaluation.schema.json avoids forbidden expression: 保证收益
+PASS: schemas/score/evaluation.schema.json avoids forbidden expression: 保证盈利
+PASS: docs/production/M6_COMPLETION_REPORT.md exists
+PASS: docs/production/M6_COMPLETION_REPORT.md has substantive content
+PASS: docs/production/M6_COMPLETION_REPORT.md has disclaimer
+PASS: docs/production/M6_COMPLETION_REPORT.md avoids forbidden expression: 建议买入
+PASS: docs/production/M6_COMPLETION_REPORT.md avoids forbidden expression: 建议卖出
+PASS: docs/production/M6_COMPLETION_REPORT.md avoids forbidden expression: 目标价为
+PASS: docs/production/M6_COMPLETION_REPORT.md avoids forbidden expression: 保证收益
+PASS: docs/production/M6_COMPLETION_REPORT.md avoids forbidden expression: 保证盈利
+PASS: docs/review/M6_SELF_REVIEW.md exists
+PASS: docs/review/M6_SELF_REVIEW.md has substantive content
+PASS: docs/review/M6_SELF_REVIEW.md has disclaimer
+PASS: docs/review/M6_SELF_REVIEW.md avoids forbidden expression: 建议买入
+PASS: docs/review/M6_SELF_REVIEW.md avoids forbidden expression: 建议卖出
+PASS: docs/review/M6_SELF_REVIEW.md avoids forbidden expression: 目标价为
+PASS: docs/review/M6_SELF_REVIEW.md avoids forbidden expression: 保证收益
+PASS: docs/review/M6_SELF_REVIEW.md avoids forbidden expression: 保证盈利
+PASS: Evaluation docs include PASS
+PASS: Evaluation docs include CONDITIONAL_PASS
+PASS: Evaluation docs include FAIL
+PASS: Evaluation docs include Evidence
+PASS: Evaluation docs include Score
+PASS: Evaluation docs include Quality Gate
+PASS: Evaluation docs include Regression
+PASS: regression dependency exists: scripts/validate_m1.py
+PASS: regression dependency exists: scripts/validate_m2.py
+PASS: regression dependency exists: scripts/validate_evidence.py
+PASS: regression dependency exists: scripts/validate_prompt.py
+PASS: regression dependency exists: scripts/validate_skill.py
+PASS: regression dependency exists: scripts/validate_score.py
+====================================
+RESULT: PASS

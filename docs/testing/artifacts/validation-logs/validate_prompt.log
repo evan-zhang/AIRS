@@ -1,0 +1,279 @@
+AIRS M4 Prompt Engine Validation
+=================================
+PASS: docs/prompt-engine directory exists
+PASS: prompt-architecture.md exists
+PASS: prompt-architecture.md has substantive content
+PASS: prompt-architecture.md has disclaimer
+PASS: prompt-dsl.md exists
+PASS: prompt-dsl.md has substantive content
+PASS: prompt-dsl.md has disclaimer
+PASS: prompt-lifecycle.md exists
+PASS: prompt-lifecycle.md has substantive content
+PASS: prompt-lifecycle.md has disclaimer
+PASS: prompt-versioning.md exists
+PASS: prompt-versioning.md has substantive content
+PASS: prompt-versioning.md has disclaimer
+PASS: prompt-governance.md exists
+PASS: prompt-governance.md has substantive content
+PASS: prompt-governance.md has disclaimer
+PASS: prompt-review-workflow.md exists
+PASS: prompt-review-workflow.md has substantive content
+PASS: prompt-review-workflow.md has disclaimer
+PASS: prompts/_dsl/prompt-dsl.md exists
+PASS: prompts/_dsl/prompt-dsl.md has substantive content
+PASS: prompts/_dsl/prompt.schema.json exists
+PASS: prompts/_dsl/prompt.schema.json has substantive content
+PASS: templates/prompt-template.md exists
+PASS: templates/prompt-template.md has substantive content
+PASS: schemas/prompt/prompt.schema.json exists
+PASS: schemas/prompt/prompt.schema.json has substantive content
+PASS: schemas/prompt/prompt-output.schema.json exists
+PASS: schemas/prompt/prompt-output.schema.json has substantive content
+PASS: evaluation/rubrics/prompt-review-checklist.md exists
+PASS: evaluation/rubrics/prompt-review-checklist.md has substantive content
+PASS: docs/production/M4_COMPLETION_REPORT.md exists
+PASS: docs/production/M4_COMPLETION_REPORT.md has substantive content
+PASS: docs/review/M4_SELF_REVIEW.md exists
+PASS: docs/review/M4_SELF_REVIEW.md has substantive content
+PASS: prompts/_dsl/prompt.schema.json is valid JSON
+PASS: prompt.schema.json declares $schema
+PASS: prompt.schema.json top-level type is object
+PASS: schemas/prompt/prompt.schema.json is valid JSON
+PASS: prompt.schema.json declares $schema
+PASS: prompt.schema.json top-level type is object
+PASS: schemas/prompt/prompt-output.schema.json is valid JSON
+PASS: prompt-output.schema.json declares $schema
+PASS: prompt-output.schema.json top-level type is object
+PASS: prompts/supply-chain/chokepoint-analysis.md exists
+PASS: prompts/supply-chain/chokepoint-analysis.md references docs/methodology/supply-chain-chokepoint.md
+PASS: prompts/supply-chain/chokepoint-analysis.md uses M3 Evidence Card terms
+PASS: prompts/supply-chain/chokepoint-analysis.md has compliance disclaimer
+PASS: prompts/supply-chain/chokepoint-analysis.md section System Prompt has substantive content
+PASS: prompts/supply-chain/chokepoint-analysis.md section User Template has substantive content
+PASS: prompts/supply-chain/chokepoint-analysis.md section Input Schema has substantive content
+PASS: prompts/supply-chain/chokepoint-analysis.md section Output Schema has substantive content
+PASS: prompts/supply-chain/chokepoint-analysis.md section Evidence Requirements has substantive content
+PASS: prompts/supply-chain/chokepoint-analysis.md section Failure Cases has substantive content
+PASS: prompts/supply-chain/chokepoint-analysis.md section Review Checklist has substantive content
+PASS: prompts/supply-chain/chokepoint-analysis.md avoids forbidden expression: 建议买入
+PASS: prompts/supply-chain/chokepoint-analysis.md avoids forbidden expression: 建议卖出
+PASS: prompts/supply-chain/chokepoint-analysis.md avoids forbidden expression: 应买入
+PASS: prompts/supply-chain/chokepoint-analysis.md avoids forbidden expression: 应卖出
+PASS: prompts/supply-chain/chokepoint-analysis.md avoids forbidden expression: 给予目标价
+PASS: prompts/supply-chain/chokepoint-analysis.md avoids forbidden expression: 目标价为
+PASS: prompts/supply-chain/chokepoint-analysis.md avoids forbidden expression: 预计涨到
+PASS: prompts/supply-chain/chokepoint-analysis.md avoids forbidden expression: 保证盈利
+PASS: prompts/hot-topic/theme-expansion.md exists
+PASS: prompts/hot-topic/theme-expansion.md references docs/methodology/theme-expansion.md
+PASS: prompts/hot-topic/theme-expansion.md uses M3 Evidence Card terms
+PASS: prompts/hot-topic/theme-expansion.md has compliance disclaimer
+PASS: prompts/hot-topic/theme-expansion.md section System Prompt has substantive content
+PASS: prompts/hot-topic/theme-expansion.md section User Template has substantive content
+PASS: prompts/hot-topic/theme-expansion.md section Input Schema has substantive content
+PASS: prompts/hot-topic/theme-expansion.md section Output Schema has substantive content
+PASS: prompts/hot-topic/theme-expansion.md section Evidence Requirements has substantive content
+PASS: prompts/hot-topic/theme-expansion.md section Failure Cases has substantive content
+PASS: prompts/hot-topic/theme-expansion.md section Review Checklist has substantive content
+PASS: prompts/hot-topic/theme-expansion.md avoids forbidden expression: 建议买入
+PASS: prompts/hot-topic/theme-expansion.md avoids forbidden expression: 建议卖出
+PASS: prompts/hot-topic/theme-expansion.md avoids forbidden expression: 应买入
+PASS: prompts/hot-topic/theme-expansion.md avoids forbidden expression: 应卖出
+PASS: prompts/hot-topic/theme-expansion.md avoids forbidden expression: 给予目标价
+PASS: prompts/hot-topic/theme-expansion.md avoids forbidden expression: 目标价为
+PASS: prompts/hot-topic/theme-expansion.md avoids forbidden expression: 预计涨到
+PASS: prompts/hot-topic/theme-expansion.md avoids forbidden expression: 保证盈利
+PASS: prompts/evidence/evidence-chain.md exists
+PASS: prompts/evidence/evidence-chain.md references docs/methodology/evidence-chain.md
+PASS: prompts/evidence/evidence-chain.md uses M3 Evidence Card terms
+PASS: prompts/evidence/evidence-chain.md has compliance disclaimer
+PASS: prompts/evidence/evidence-chain.md section System Prompt has substantive content
+PASS: prompts/evidence/evidence-chain.md section User Template has substantive content
+PASS: prompts/evidence/evidence-chain.md section Input Schema has substantive content
+PASS: prompts/evidence/evidence-chain.md section Output Schema has substantive content
+PASS: prompts/evidence/evidence-chain.md section Evidence Requirements has substantive content
+PASS: prompts/evidence/evidence-chain.md section Failure Cases has substantive content
+PASS: prompts/evidence/evidence-chain.md section Review Checklist has substantive content
+PASS: prompts/evidence/evidence-chain.md avoids forbidden expression: 建议买入
+PASS: prompts/evidence/evidence-chain.md avoids forbidden expression: 建议卖出
+PASS: prompts/evidence/evidence-chain.md avoids forbidden expression: 应买入
+PASS: prompts/evidence/evidence-chain.md avoids forbidden expression: 应卖出
+PASS: prompts/evidence/evidence-chain.md avoids forbidden expression: 给予目标价
+PASS: prompts/evidence/evidence-chain.md avoids forbidden expression: 目标价为
+PASS: prompts/evidence/evidence-chain.md avoids forbidden expression: 预计涨到
+PASS: prompts/evidence/evidence-chain.md avoids forbidden expression: 保证盈利
+PASS: prompts/evidence/counter-consensus.md exists
+PASS: prompts/evidence/counter-consensus.md references docs/methodology/counter-consensus.md
+PASS: prompts/evidence/counter-consensus.md uses M3 Evidence Card terms
+PASS: prompts/evidence/counter-consensus.md has compliance disclaimer
+PASS: prompts/evidence/counter-consensus.md section System Prompt has substantive content
+PASS: prompts/evidence/counter-consensus.md section User Template has substantive content
+PASS: prompts/evidence/counter-consensus.md section Input Schema has substantive content
+PASS: prompts/evidence/counter-consensus.md section Output Schema has substantive content
+PASS: prompts/evidence/counter-consensus.md section Evidence Requirements has substantive content
+PASS: prompts/evidence/counter-consensus.md section Failure Cases has substantive content
+PASS: prompts/evidence/counter-consensus.md section Review Checklist has substantive content
+PASS: prompts/evidence/counter-consensus.md avoids forbidden expression: 建议买入
+PASS: prompts/evidence/counter-consensus.md avoids forbidden expression: 建议卖出
+PASS: prompts/evidence/counter-consensus.md avoids forbidden expression: 应买入
+PASS: prompts/evidence/counter-consensus.md avoids forbidden expression: 应卖出
+PASS: prompts/evidence/counter-consensus.md avoids forbidden expression: 给予目标价
+PASS: prompts/evidence/counter-consensus.md avoids forbidden expression: 目标价为
+PASS: prompts/evidence/counter-consensus.md avoids forbidden expression: 预计涨到
+PASS: prompts/evidence/counter-consensus.md avoids forbidden expression: 保证盈利
+PASS: prompts/industry/lifecycle-analysis.md exists
+PASS: prompts/industry/lifecycle-analysis.md references docs/methodology/industry-lifecycle.md
+PASS: prompts/industry/lifecycle-analysis.md uses M3 Evidence Card terms
+PASS: prompts/industry/lifecycle-analysis.md has compliance disclaimer
+PASS: prompts/industry/lifecycle-analysis.md section System Prompt has substantive content
+PASS: prompts/industry/lifecycle-analysis.md section User Template has substantive content
+PASS: prompts/industry/lifecycle-analysis.md section Input Schema has substantive content
+PASS: prompts/industry/lifecycle-analysis.md section Output Schema has substantive content
+PASS: prompts/industry/lifecycle-analysis.md section Evidence Requirements has substantive content
+PASS: prompts/industry/lifecycle-analysis.md section Failure Cases has substantive content
+PASS: prompts/industry/lifecycle-analysis.md section Review Checklist has substantive content
+PASS: prompts/industry/lifecycle-analysis.md avoids forbidden expression: 建议买入
+PASS: prompts/industry/lifecycle-analysis.md avoids forbidden expression: 建议卖出
+PASS: prompts/industry/lifecycle-analysis.md avoids forbidden expression: 应买入
+PASS: prompts/industry/lifecycle-analysis.md avoids forbidden expression: 应卖出
+PASS: prompts/industry/lifecycle-analysis.md avoids forbidden expression: 给予目标价
+PASS: prompts/industry/lifecycle-analysis.md avoids forbidden expression: 目标价为
+PASS: prompts/industry/lifecycle-analysis.md avoids forbidden expression: 预计涨到
+PASS: prompts/industry/lifecycle-analysis.md avoids forbidden expression: 保证盈利
+PASS: prompts/financial/anomaly-analysis.md exists
+PASS: prompts/financial/anomaly-analysis.md references docs/methodology/financial-anomaly.md
+PASS: prompts/financial/anomaly-analysis.md uses M3 Evidence Card terms
+PASS: prompts/financial/anomaly-analysis.md has compliance disclaimer
+PASS: prompts/financial/anomaly-analysis.md section System Prompt has substantive content
+PASS: prompts/financial/anomaly-analysis.md section User Template has substantive content
+PASS: prompts/financial/anomaly-analysis.md section Input Schema has substantive content
+PASS: prompts/financial/anomaly-analysis.md section Output Schema has substantive content
+PASS: prompts/financial/anomaly-analysis.md section Evidence Requirements has substantive content
+PASS: prompts/financial/anomaly-analysis.md section Failure Cases has substantive content
+PASS: prompts/financial/anomaly-analysis.md section Review Checklist has substantive content
+PASS: prompts/financial/anomaly-analysis.md avoids forbidden expression: 建议买入
+PASS: prompts/financial/anomaly-analysis.md avoids forbidden expression: 建议卖出
+PASS: prompts/financial/anomaly-analysis.md avoids forbidden expression: 应买入
+PASS: prompts/financial/anomaly-analysis.md avoids forbidden expression: 应卖出
+PASS: prompts/financial/anomaly-analysis.md avoids forbidden expression: 给予目标价
+PASS: prompts/financial/anomaly-analysis.md avoids forbidden expression: 目标价为
+PASS: prompts/financial/anomaly-analysis.md avoids forbidden expression: 预计涨到
+PASS: prompts/financial/anomaly-analysis.md avoids forbidden expression: 保证盈利
+PASS: prompts/committee/management-quality.md exists
+PASS: prompts/committee/management-quality.md references docs/methodology/management-quality.md
+PASS: prompts/committee/management-quality.md uses M3 Evidence Card terms
+PASS: prompts/committee/management-quality.md has compliance disclaimer
+PASS: prompts/committee/management-quality.md section System Prompt has substantive content
+PASS: prompts/committee/management-quality.md section User Template has substantive content
+PASS: prompts/committee/management-quality.md section Input Schema has substantive content
+PASS: prompts/committee/management-quality.md section Output Schema has substantive content
+PASS: prompts/committee/management-quality.md section Evidence Requirements has substantive content
+PASS: prompts/committee/management-quality.md section Failure Cases has substantive content
+PASS: prompts/committee/management-quality.md section Review Checklist has substantive content
+PASS: prompts/committee/management-quality.md avoids forbidden expression: 建议买入
+PASS: prompts/committee/management-quality.md avoids forbidden expression: 建议卖出
+PASS: prompts/committee/management-quality.md avoids forbidden expression: 应买入
+PASS: prompts/committee/management-quality.md avoids forbidden expression: 应卖出
+PASS: prompts/committee/management-quality.md avoids forbidden expression: 给予目标价
+PASS: prompts/committee/management-quality.md avoids forbidden expression: 目标价为
+PASS: prompts/committee/management-quality.md avoids forbidden expression: 预计涨到
+PASS: prompts/committee/management-quality.md avoids forbidden expression: 保证盈利
+PASS: prompts/committee/policy-driven.md exists
+PASS: prompts/committee/policy-driven.md references docs/methodology/policy-driven.md
+PASS: prompts/committee/policy-driven.md uses M3 Evidence Card terms
+PASS: prompts/committee/policy-driven.md has compliance disclaimer
+PASS: prompts/committee/policy-driven.md section System Prompt has substantive content
+PASS: prompts/committee/policy-driven.md section User Template has substantive content
+PASS: prompts/committee/policy-driven.md section Input Schema has substantive content
+PASS: prompts/committee/policy-driven.md section Output Schema has substantive content
+PASS: prompts/committee/policy-driven.md section Evidence Requirements has substantive content
+PASS: prompts/committee/policy-driven.md section Failure Cases has substantive content
+PASS: prompts/committee/policy-driven.md section Review Checklist has substantive content
+PASS: prompts/committee/policy-driven.md avoids forbidden expression: 建议买入
+PASS: prompts/committee/policy-driven.md avoids forbidden expression: 建议卖出
+PASS: prompts/committee/policy-driven.md avoids forbidden expression: 应买入
+PASS: prompts/committee/policy-driven.md avoids forbidden expression: 应卖出
+PASS: prompts/committee/policy-driven.md avoids forbidden expression: 给予目标价
+PASS: prompts/committee/policy-driven.md avoids forbidden expression: 目标价为
+PASS: prompts/committee/policy-driven.md avoids forbidden expression: 预计涨到
+PASS: prompts/committee/policy-driven.md avoids forbidden expression: 保证盈利
+PASS: prompts/valuation/analysis.md exists
+PASS: prompts/valuation/analysis.md references docs/methodology/valuation.md
+PASS: prompts/valuation/analysis.md uses M3 Evidence Card terms
+PASS: prompts/valuation/analysis.md has compliance disclaimer
+PASS: prompts/valuation/analysis.md section System Prompt has substantive content
+PASS: prompts/valuation/analysis.md section User Template has substantive content
+PASS: prompts/valuation/analysis.md section Input Schema has substantive content
+PASS: prompts/valuation/analysis.md section Output Schema has substantive content
+PASS: prompts/valuation/analysis.md section Evidence Requirements has substantive content
+PASS: prompts/valuation/analysis.md section Failure Cases has substantive content
+PASS: prompts/valuation/analysis.md section Review Checklist has substantive content
+PASS: prompts/valuation/analysis.md avoids forbidden expression: 建议买入
+PASS: prompts/valuation/analysis.md avoids forbidden expression: 建议卖出
+PASS: prompts/valuation/analysis.md avoids forbidden expression: 应买入
+PASS: prompts/valuation/analysis.md avoids forbidden expression: 应卖出
+PASS: prompts/valuation/analysis.md avoids forbidden expression: 给予目标价
+PASS: prompts/valuation/analysis.md avoids forbidden expression: 目标价为
+PASS: prompts/valuation/analysis.md avoids forbidden expression: 预计涨到
+PASS: prompts/valuation/analysis.md avoids forbidden expression: 保证盈利
+PASS: prompts/risk/analysis.md exists
+PASS: prompts/risk/analysis.md references docs/methodology/risk.md
+PASS: prompts/risk/analysis.md uses M3 Evidence Card terms
+PASS: prompts/risk/analysis.md has compliance disclaimer
+PASS: prompts/risk/analysis.md section System Prompt has substantive content
+PASS: prompts/risk/analysis.md section User Template has substantive content
+PASS: prompts/risk/analysis.md section Input Schema has substantive content
+PASS: prompts/risk/analysis.md section Output Schema has substantive content
+PASS: prompts/risk/analysis.md section Evidence Requirements has substantive content
+PASS: prompts/risk/analysis.md section Failure Cases has substantive content
+PASS: prompts/risk/analysis.md section Review Checklist has substantive content
+PASS: prompts/risk/analysis.md avoids forbidden expression: 建议买入
+PASS: prompts/risk/analysis.md avoids forbidden expression: 建议卖出
+PASS: prompts/risk/analysis.md avoids forbidden expression: 应买入
+PASS: prompts/risk/analysis.md avoids forbidden expression: 应卖出
+PASS: prompts/risk/analysis.md avoids forbidden expression: 给予目标价
+PASS: prompts/risk/analysis.md avoids forbidden expression: 目标价为
+PASS: prompts/risk/analysis.md avoids forbidden expression: 预计涨到
+PASS: prompts/risk/analysis.md avoids forbidden expression: 保证盈利
+PASS: prompts/report/generation.md exists
+PASS: prompts/report/generation.md references docs/methodology/evidence-chain.md
+PASS: prompts/report/generation.md uses M3 Evidence Card terms
+PASS: prompts/report/generation.md has compliance disclaimer
+PASS: prompts/report/generation.md section System Prompt has substantive content
+PASS: prompts/report/generation.md section User Template has substantive content
+PASS: prompts/report/generation.md section Input Schema has substantive content
+PASS: prompts/report/generation.md section Output Schema has substantive content
+PASS: prompts/report/generation.md section Evidence Requirements has substantive content
+PASS: prompts/report/generation.md section Failure Cases has substantive content
+PASS: prompts/report/generation.md section Review Checklist has substantive content
+PASS: prompts/report/generation.md avoids forbidden expression: 建议买入
+PASS: prompts/report/generation.md avoids forbidden expression: 建议卖出
+PASS: prompts/report/generation.md avoids forbidden expression: 应买入
+PASS: prompts/report/generation.md avoids forbidden expression: 应卖出
+PASS: prompts/report/generation.md avoids forbidden expression: 给予目标价
+PASS: prompts/report/generation.md avoids forbidden expression: 目标价为
+PASS: prompts/report/generation.md avoids forbidden expression: 预计涨到
+PASS: prompts/report/generation.md avoids forbidden expression: 保证盈利
+PASS: M2 methodology exists: docs/methodology/supply-chain-chokepoint.md
+PASS: M2 methodology exists: docs/methodology/theme-expansion.md
+PASS: M2 methodology exists: docs/methodology/evidence-chain.md
+PASS: M2 methodology exists: docs/methodology/counter-consensus.md
+PASS: M2 methodology exists: docs/methodology/industry-lifecycle.md
+PASS: M2 methodology exists: docs/methodology/financial-anomaly.md
+PASS: M2 methodology exists: docs/methodology/management-quality.md
+PASS: M2 methodology exists: docs/methodology/policy-driven.md
+PASS: M2 methodology exists: docs/methodology/valuation.md
+PASS: M2 methodology exists: docs/methodology/risk.md
+PASS: M2 methodology exists: docs/methodology/evidence-chain.md
+PASS: M3 evidence reference exists: docs/evidence/evidence-card-specification.md
+PASS: M3 evidence reference exists: docs/evidence/evidence-validation-workflow.md
+PASS: M3 evidence reference exists: docs/evidence/evidence-architecture.md
+PASS: M3 evidence reference exists: schemas/evidence/evidence-card.schema.json
+PASS: M4 prompts include compatibility term: docs/methodology/
+PASS: M4 prompts include compatibility term: docs/evidence/
+PASS: M4 prompts include compatibility term: supports
+PASS: M4 prompts include compatibility term: refutes
+PASS: M4 prompts include compatibility term: missing_evidence
+PASS: M4 prompts include compatibility term: traceability
+PASS: schemas/README.md documents prompt schemas
+=================================
+RESULT: PASS

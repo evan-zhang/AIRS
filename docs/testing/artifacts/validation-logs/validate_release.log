@@ -1,0 +1,214 @@
+AIRS M8 Production Release Validation
+=====================================
+PASS: docs/production/production-guide.md exists
+PASS: docs/production/production-guide.md has substantive content
+PASS: docs/production/production-guide.md has disclaimer
+PASS: docs/production/production-guide.md avoids forbidden expression: 建议买入
+PASS: docs/production/production-guide.md avoids forbidden expression: 建议卖出
+PASS: docs/production/production-guide.md avoids forbidden expression: 保证收益
+PASS: docs/production/production-guide.md avoids forbidden expression: 保证盈利
+PASS: docs/production/production-guide.md avoids forbidden expression: 目标价为
+PASS: docs/production/deployment-guide.md exists
+PASS: docs/production/deployment-guide.md has substantive content
+PASS: docs/production/deployment-guide.md has disclaimer
+PASS: docs/production/deployment-guide.md avoids forbidden expression: 建议买入
+PASS: docs/production/deployment-guide.md avoids forbidden expression: 建议卖出
+PASS: docs/production/deployment-guide.md avoids forbidden expression: 保证收益
+PASS: docs/production/deployment-guide.md avoids forbidden expression: 保证盈利
+PASS: docs/production/deployment-guide.md avoids forbidden expression: 目标价为
+PASS: docs/production/upgrade-guide.md exists
+PASS: docs/production/upgrade-guide.md has substantive content
+PASS: docs/production/upgrade-guide.md has disclaimer
+PASS: docs/production/upgrade-guide.md avoids forbidden expression: 建议买入
+PASS: docs/production/upgrade-guide.md avoids forbidden expression: 建议卖出
+PASS: docs/production/upgrade-guide.md avoids forbidden expression: 保证收益
+PASS: docs/production/upgrade-guide.md avoids forbidden expression: 保证盈利
+PASS: docs/production/upgrade-guide.md avoids forbidden expression: 目标价为
+PASS: docs/production/maintenance-guide.md exists
+PASS: docs/production/maintenance-guide.md has substantive content
+PASS: docs/production/maintenance-guide.md has disclaimer
+PASS: docs/production/maintenance-guide.md avoids forbidden expression: 建议买入
+PASS: docs/production/maintenance-guide.md avoids forbidden expression: 建议卖出
+PASS: docs/production/maintenance-guide.md avoids forbidden expression: 保证收益
+PASS: docs/production/maintenance-guide.md avoids forbidden expression: 保证盈利
+PASS: docs/production/maintenance-guide.md avoids forbidden expression: 目标价为
+PASS: docs/production/governance-guide.md exists
+PASS: docs/production/governance-guide.md has substantive content
+PASS: docs/production/governance-guide.md has disclaimer
+PASS: docs/production/governance-guide.md avoids forbidden expression: 建议买入
+PASS: docs/production/governance-guide.md avoids forbidden expression: 建议卖出
+PASS: docs/production/governance-guide.md avoids forbidden expression: 保证收益
+PASS: docs/production/governance-guide.md avoids forbidden expression: 保证盈利
+PASS: docs/production/governance-guide.md avoids forbidden expression: 目标价为
+PASS: docs/production/release-checklist.md exists
+PASS: docs/production/release-checklist.md has substantive content
+PASS: docs/production/release-checklist.md has disclaimer
+PASS: docs/production/release-checklist.md avoids forbidden expression: 建议买入
+PASS: docs/production/release-checklist.md avoids forbidden expression: 建议卖出
+PASS: docs/production/release-checklist.md avoids forbidden expression: 保证收益
+PASS: docs/production/release-checklist.md avoids forbidden expression: 保证盈利
+PASS: docs/production/release-checklist.md avoids forbidden expression: 目标价为
+PASS: docs/production/release-notes.md exists
+PASS: docs/production/release-notes.md has substantive content
+PASS: docs/production/release-notes.md has disclaimer
+PASS: docs/production/release-notes.md avoids forbidden expression: 建议买入
+PASS: docs/production/release-notes.md avoids forbidden expression: 建议卖出
+PASS: docs/production/release-notes.md avoids forbidden expression: 保证收益
+PASS: docs/production/release-notes.md avoids forbidden expression: 保证盈利
+PASS: docs/production/release-notes.md avoids forbidden expression: 目标价为
+PASS: docs/production/production-acceptance-checklist.md exists
+PASS: docs/production/production-acceptance-checklist.md has substantive content
+PASS: docs/production/production-acceptance-checklist.md has disclaimer
+PASS: docs/production/production-acceptance-checklist.md avoids forbidden expression: 建议买入
+PASS: docs/production/production-acceptance-checklist.md avoids forbidden expression: 建议卖出
+PASS: docs/production/production-acceptance-checklist.md avoids forbidden expression: 保证收益
+PASS: docs/production/production-acceptance-checklist.md avoids forbidden expression: 保证盈利
+PASS: docs/production/production-acceptance-checklist.md avoids forbidden expression: 目标价为
+PASS: docs/production/final-quality-gate.md exists
+PASS: docs/production/final-quality-gate.md has substantive content
+PASS: docs/production/final-quality-gate.md has disclaimer
+PASS: docs/production/final-quality-gate.md avoids forbidden expression: 建议买入
+PASS: docs/production/final-quality-gate.md avoids forbidden expression: 建议卖出
+PASS: docs/production/final-quality-gate.md avoids forbidden expression: 保证收益
+PASS: docs/production/final-quality-gate.md avoids forbidden expression: 保证盈利
+PASS: docs/production/final-quality-gate.md avoids forbidden expression: 目标价为
+PASS: docs/production/regression-test-process.md exists
+PASS: docs/production/regression-test-process.md has substantive content
+PASS: docs/production/regression-test-process.md has disclaimer
+PASS: docs/production/regression-test-process.md avoids forbidden expression: 建议买入
+PASS: docs/production/regression-test-process.md avoids forbidden expression: 建议卖出
+PASS: docs/production/regression-test-process.md avoids forbidden expression: 保证收益
+PASS: docs/production/regression-test-process.md avoids forbidden expression: 保证盈利
+PASS: docs/production/regression-test-process.md avoids forbidden expression: 目标价为
+PASS: docs/governance/semantic-versioning.md exists
+PASS: docs/governance/semantic-versioning.md has substantive content
+PASS: docs/governance/semantic-versioning.md has disclaimer
+PASS: docs/governance/semantic-versioning.md avoids forbidden expression: 建议买入
+PASS: docs/governance/semantic-versioning.md avoids forbidden expression: 建议卖出
+PASS: docs/governance/semantic-versioning.md avoids forbidden expression: 保证收益
+PASS: docs/governance/semantic-versioning.md avoids forbidden expression: 保证盈利
+PASS: docs/governance/semantic-versioning.md avoids forbidden expression: 目标价为
+PASS: docs/governance/release-workflow.md exists
+PASS: docs/governance/release-workflow.md has substantive content
+PASS: docs/governance/release-workflow.md has disclaimer
+PASS: docs/governance/release-workflow.md avoids forbidden expression: 建议买入
+PASS: docs/governance/release-workflow.md avoids forbidden expression: 建议卖出
+PASS: docs/governance/release-workflow.md avoids forbidden expression: 保证收益
+PASS: docs/governance/release-workflow.md avoids forbidden expression: 保证盈利
+PASS: docs/governance/release-workflow.md avoids forbidden expression: 目标价为
+PASS: docs/production/M8_COMPLETION_REPORT.md exists
+PASS: docs/production/M8_COMPLETION_REPORT.md has substantive content
+PASS: docs/production/M8_COMPLETION_REPORT.md has disclaimer
+PASS: docs/production/M8_COMPLETION_REPORT.md avoids forbidden expression: 建议买入
+PASS: docs/production/M8_COMPLETION_REPORT.md avoids forbidden expression: 建议卖出
+PASS: docs/production/M8_COMPLETION_REPORT.md avoids forbidden expression: 保证收益
+PASS: docs/production/M8_COMPLETION_REPORT.md avoids forbidden expression: 保证盈利
+PASS: docs/production/M8_COMPLETION_REPORT.md avoids forbidden expression: 目标价为
+PASS: docs/production/PROJECT_HEALTH_REPORT.md exists
+PASS: docs/production/PROJECT_HEALTH_REPORT.md has substantive content
+PASS: docs/production/PROJECT_HEALTH_REPORT.md has disclaimer
+PASS: docs/production/PROJECT_HEALTH_REPORT.md avoids forbidden expression: 建议买入
+PASS: docs/production/PROJECT_HEALTH_REPORT.md avoids forbidden expression: 建议卖出
+PASS: docs/production/PROJECT_HEALTH_REPORT.md avoids forbidden expression: 保证收益
+PASS: docs/production/PROJECT_HEALTH_REPORT.md avoids forbidden expression: 保证盈利
+PASS: docs/production/PROJECT_HEALTH_REPORT.md avoids forbidden expression: 目标价为
+PASS: docs/production/FINAL_REVIEW.md exists
+PASS: docs/production/FINAL_REVIEW.md has substantive content
+PASS: docs/production/FINAL_REVIEW.md has disclaimer
+PASS: docs/production/FINAL_REVIEW.md avoids forbidden expression: 建议买入
+PASS: docs/production/FINAL_REVIEW.md avoids forbidden expression: 建议卖出
+PASS: docs/production/FINAL_REVIEW.md avoids forbidden expression: 保证收益
+PASS: docs/production/FINAL_REVIEW.md avoids forbidden expression: 保证盈利
+PASS: docs/production/FINAL_REVIEW.md avoids forbidden expression: 目标价为
+PASS: .github/ISSUE_TEMPLATE/bug_report.md exists
+PASS: .github/ISSUE_TEMPLATE/bug_report.md has substantive content
+PASS: .github/ISSUE_TEMPLATE/bug_report.md has disclaimer
+PASS: .github/ISSUE_TEMPLATE/bug_report.md avoids forbidden expression: 建议买入
+PASS: .github/ISSUE_TEMPLATE/bug_report.md avoids forbidden expression: 建议卖出
+PASS: .github/ISSUE_TEMPLATE/bug_report.md avoids forbidden expression: 保证收益
+PASS: .github/ISSUE_TEMPLATE/bug_report.md avoids forbidden expression: 保证盈利
+PASS: .github/ISSUE_TEMPLATE/bug_report.md avoids forbidden expression: 目标价为
+PASS: .github/ISSUE_TEMPLATE/feature_request.md exists
+PASS: .github/ISSUE_TEMPLATE/feature_request.md has substantive content
+PASS: .github/ISSUE_TEMPLATE/feature_request.md has disclaimer
+PASS: .github/ISSUE_TEMPLATE/feature_request.md avoids forbidden expression: 建议买入
+PASS: .github/ISSUE_TEMPLATE/feature_request.md avoids forbidden expression: 建议卖出
+PASS: .github/ISSUE_TEMPLATE/feature_request.md avoids forbidden expression: 保证收益
+PASS: .github/ISSUE_TEMPLATE/feature_request.md avoids forbidden expression: 保证盈利
+PASS: .github/ISSUE_TEMPLATE/feature_request.md avoids forbidden expression: 目标价为
+PASS: .github/pull_request_template.md exists
+PASS: .github/pull_request_template.md has substantive content
+PASS: .github/pull_request_template.md has disclaimer
+PASS: .github/pull_request_template.md avoids forbidden expression: 建议买入
+PASS: .github/pull_request_template.md avoids forbidden expression: 建议卖出
+PASS: .github/pull_request_template.md avoids forbidden expression: 保证收益
+PASS: .github/pull_request_template.md avoids forbidden expression: 保证盈利
+PASS: .github/pull_request_template.md avoids forbidden expression: 目标价为
+PASS: .github/CODEOWNERS exists
+PASS: .github/CODEOWNERS has substantive content
+PASS: .github/CODEOWNERS avoids forbidden expression: 建议买入
+PASS: .github/CODEOWNERS avoids forbidden expression: 建议卖出
+PASS: .github/CODEOWNERS avoids forbidden expression: 保证收益
+PASS: .github/CODEOWNERS avoids forbidden expression: 保证盈利
+PASS: .github/CODEOWNERS avoids forbidden expression: 目标价为
+PASS: .github/SECURITY.md exists
+PASS: .github/SECURITY.md has substantive content
+PASS: .github/SECURITY.md has disclaimer
+PASS: .github/SECURITY.md avoids forbidden expression: 建议买入
+PASS: .github/SECURITY.md avoids forbidden expression: 建议卖出
+PASS: .github/SECURITY.md avoids forbidden expression: 保证收益
+PASS: .github/SECURITY.md avoids forbidden expression: 保证盈利
+PASS: .github/SECURITY.md avoids forbidden expression: 目标价为
+PASS: .github/SUPPORT.md exists
+PASS: .github/SUPPORT.md has substantive content
+PASS: .github/SUPPORT.md has disclaimer
+PASS: .github/SUPPORT.md avoids forbidden expression: 建议买入
+PASS: .github/SUPPORT.md avoids forbidden expression: 建议卖出
+PASS: .github/SUPPORT.md avoids forbidden expression: 保证收益
+PASS: .github/SUPPORT.md avoids forbidden expression: 保证盈利
+PASS: .github/SUPPORT.md avoids forbidden expression: 目标价为
+PASS: README.md exists
+PASS: README.md has content
+PASS: CONTRIBUTING.md exists
+PASS: CONTRIBUTING.md has content
+PASS: CHANGELOG.md exists
+PASS: CHANGELOG.md has content
+PASS: ROADMAP.md exists
+PASS: ROADMAP.md has content
+PASS: LICENSE exists
+PASS: LICENSE has content
+PASS: README documents v1.0.0 Production
+PASS: README has feature list
+PASS: README has final disclaimer
+PASS: CONTRIBUTING references semantic versioning
+PASS: CONTRIBUTING references release workflow
+PASS: CHANGELOG documents v1.0.0 M8
+PASS: ROADMAP marks production completion
+PASS: ROADMAP includes V1.x and V2 direction
+PASS: LICENSE remains MIT
+PASS: LICENSE has AIRS disclaimer
+PASS: ADR records top-level updates
+PASS: scripts/validate_m1.py exists
+PASS: scripts/validate_m1.py emits result
+PASS: scripts/validate_m2.py exists
+PASS: scripts/validate_m2.py emits result
+PASS: scripts/validate_evidence.py exists
+PASS: scripts/validate_evidence.py emits result
+PASS: scripts/validate_prompt.py exists
+PASS: scripts/validate_prompt.py emits result
+PASS: scripts/validate_skill.py exists
+PASS: scripts/validate_skill.py emits result
+PASS: scripts/validate_score.py exists
+PASS: scripts/validate_score.py emits result
+PASS: scripts/validate_evaluation.py exists
+PASS: scripts/validate_evaluation.py emits result
+PASS: scripts/validate_benchmark.py exists
+PASS: scripts/validate_benchmark.py emits result
+PASS: scripts/validate_examples.py exists
+PASS: scripts/validate_examples.py emits result
+PASS: scripts/validate_release.py exists
+PASS: scripts/validate_release.py emits result
+PASS: scripts/production_check.py exists
+PASS: scripts/production_check.py emits result
+=====================================
+RESULT: PASS

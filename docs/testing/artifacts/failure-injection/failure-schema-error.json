@@ -1,0 +1,24 @@
+{
+  "case_id": "failure-schema-error",
+  "errors": [],
+  "expected": "KG validator should intercept malformed schema data before report generation.",
+  "started_at": "2026-07-10T08:53:01.438189+00:00",
+  "status": "PASS",
+  "validation": {
+    "errors": [
+      "节点 bad-node 类型非法：unsupported_type",
+      "节点 bad-node 缺少 source_refs。",
+      "节点 bad-node confidence 超出 0-1。",
+      "节点 bad-node 绑定未知 Evidence：missing-ev",
+      "边 bad-edge to_node 不存在：missing-node",
+      "边 bad-edge 关系类型非法：invalid_relation",
+      "边 bad-edge directionality 非法：sideways",
+      "边 bad-edge 引用未知 Evidence：missing-ev",
+      "边 bad-edge confidence 超出 0-1。"
+    ],
+    "passed": false,
+    "warnings": [
+      "边 bad-edge 未记录 missing_evidence。"
+    ]
+  }
+}
