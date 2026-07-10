@@ -1,0 +1,142 @@
+AIRS Production E2E Artifact Validation
+=======================================
+PASS: production summary exists
+PASS: production test report exists
+PASS: known issues exists
+PASS: overall production E2E status is PASS
+PASS: 8 production E2E cases recorded
+PASS: failure injection cases recorded
+PASS: prod-e2e-01-ai-compute artifact exists
+PASS: prod-e2e-01-ai-compute status PASS
+PASS: prod-e2e-01-ai-compute has execution_log
+PASS: prod-e2e-01-ai-compute has evidence_trace
+PASS: prod-e2e-01-ai-compute has airs_evidence_chain
+PASS: prod-e2e-01-ai-compute has kg_state
+PASS: prod-e2e-01-ai-compute has scorecard
+PASS: prod-e2e-01-ai-compute has committee_debate
+PASS: prod-e2e-01-ai-compute has final_report
+PASS: prod-e2e-01-ai-compute has memory_write_read
+PASS: prod-e2e-01-ai-compute has learning_feedback
+PASS: prod-e2e-01-ai-compute has all required checks
+PASS: prod-e2e-01-ai-compute KG validation passed
+PASS: prod-e2e-01-ai-compute report separates statement taxonomy
+PASS: prod-e2e-01-ai-compute report has disclaimer
+PASS: prod-e2e-02-semiconductor artifact exists
+PASS: prod-e2e-02-semiconductor status PASS
+PASS: prod-e2e-02-semiconductor has execution_log
+PASS: prod-e2e-02-semiconductor has evidence_trace
+PASS: prod-e2e-02-semiconductor has airs_evidence_chain
+PASS: prod-e2e-02-semiconductor has kg_state
+PASS: prod-e2e-02-semiconductor has scorecard
+PASS: prod-e2e-02-semiconductor has committee_debate
+PASS: prod-e2e-02-semiconductor has final_report
+PASS: prod-e2e-02-semiconductor has memory_write_read
+PASS: prod-e2e-02-semiconductor has learning_feedback
+PASS: prod-e2e-02-semiconductor has all required checks
+PASS: prod-e2e-02-semiconductor KG validation passed
+PASS: prod-e2e-02-semiconductor report separates statement taxonomy
+PASS: prod-e2e-02-semiconductor report has disclaimer
+PASS: prod-e2e-03-innovative-drug artifact exists
+PASS: prod-e2e-03-innovative-drug status PASS
+PASS: prod-e2e-03-innovative-drug has execution_log
+PASS: prod-e2e-03-innovative-drug has evidence_trace
+PASS: prod-e2e-03-innovative-drug has airs_evidence_chain
+PASS: prod-e2e-03-innovative-drug has kg_state
+PASS: prod-e2e-03-innovative-drug has scorecard
+PASS: prod-e2e-03-innovative-drug has committee_debate
+PASS: prod-e2e-03-innovative-drug has final_report
+PASS: prod-e2e-03-innovative-drug has memory_write_read
+PASS: prod-e2e-03-innovative-drug has learning_feedback
+PASS: prod-e2e-03-innovative-drug has all required checks
+PASS: prod-e2e-03-innovative-drug KG validation passed
+PASS: prod-e2e-03-innovative-drug report separates statement taxonomy
+PASS: prod-e2e-03-innovative-drug report has disclaimer
+PASS: prod-e2e-04-robotics artifact exists
+PASS: prod-e2e-04-robotics status PASS
+PASS: prod-e2e-04-robotics has execution_log
+PASS: prod-e2e-04-robotics has evidence_trace
+PASS: prod-e2e-04-robotics has airs_evidence_chain
+PASS: prod-e2e-04-robotics has kg_state
+PASS: prod-e2e-04-robotics has scorecard
+PASS: prod-e2e-04-robotics has committee_debate
+PASS: prod-e2e-04-robotics has final_report
+PASS: prod-e2e-04-robotics has memory_write_read
+PASS: prod-e2e-04-robotics has learning_feedback
+PASS: prod-e2e-04-robotics has all required checks
+PASS: prod-e2e-04-robotics KG validation passed
+PASS: prod-e2e-04-robotics report separates statement taxonomy
+PASS: prod-e2e-04-robotics report has disclaimer
+PASS: prod-e2e-05-new-energy artifact exists
+PASS: prod-e2e-05-new-energy status PASS
+PASS: prod-e2e-05-new-energy has execution_log
+PASS: prod-e2e-05-new-energy has evidence_trace
+PASS: prod-e2e-05-new-energy has airs_evidence_chain
+PASS: prod-e2e-05-new-energy has kg_state
+PASS: prod-e2e-05-new-energy has scorecard
+PASS: prod-e2e-05-new-energy has committee_debate
+PASS: prod-e2e-05-new-energy has final_report
+PASS: prod-e2e-05-new-energy has memory_write_read
+PASS: prod-e2e-05-new-energy has learning_feedback
+PASS: prod-e2e-05-new-energy has all required checks
+PASS: prod-e2e-05-new-energy KG validation passed
+PASS: prod-e2e-05-new-energy report separates statement taxonomy
+PASS: prod-e2e-05-new-energy report has disclaimer
+PASS: prod-e2e-06-peer-comparison artifact exists
+PASS: prod-e2e-06-peer-comparison status PASS
+PASS: prod-e2e-06-peer-comparison has execution_log
+PASS: prod-e2e-06-peer-comparison has evidence_trace
+PASS: prod-e2e-06-peer-comparison has airs_evidence_chain
+PASS: prod-e2e-06-peer-comparison has kg_state
+PASS: prod-e2e-06-peer-comparison has scorecard
+PASS: prod-e2e-06-peer-comparison has committee_debate
+PASS: prod-e2e-06-peer-comparison has final_report
+PASS: prod-e2e-06-peer-comparison has memory_write_read
+PASS: prod-e2e-06-peer-comparison has learning_feedback
+PASS: prod-e2e-06-peer-comparison has all required checks
+PASS: prod-e2e-06-peer-comparison KG validation passed
+PASS: prod-e2e-06-peer-comparison report separates statement taxonomy
+PASS: prod-e2e-06-peer-comparison report has disclaimer
+PASS: prod-e2e-07-news-impact artifact exists
+PASS: prod-e2e-07-news-impact status PASS
+PASS: prod-e2e-07-news-impact has execution_log
+PASS: prod-e2e-07-news-impact has evidence_trace
+PASS: prod-e2e-07-news-impact has airs_evidence_chain
+PASS: prod-e2e-07-news-impact has kg_state
+PASS: prod-e2e-07-news-impact has scorecard
+PASS: prod-e2e-07-news-impact has committee_debate
+PASS: prod-e2e-07-news-impact has final_report
+PASS: prod-e2e-07-news-impact has memory_write_read
+PASS: prod-e2e-07-news-impact has learning_feedback
+PASS: prod-e2e-07-news-impact has all required checks
+PASS: prod-e2e-07-news-impact KG validation passed
+PASS: prod-e2e-07-news-impact report separates statement taxonomy
+PASS: prod-e2e-07-news-impact report has disclaimer
+PASS: prod-e2e-08-memory-learning-regression artifact exists
+PASS: prod-e2e-08-memory-learning-regression status PASS
+PASS: prod-e2e-08-memory-learning-regression has execution_log
+PASS: prod-e2e-08-memory-learning-regression has evidence_trace
+PASS: prod-e2e-08-memory-learning-regression has airs_evidence_chain
+PASS: prod-e2e-08-memory-learning-regression has kg_state
+PASS: prod-e2e-08-memory-learning-regression has scorecard
+PASS: prod-e2e-08-memory-learning-regression has committee_debate
+PASS: prod-e2e-08-memory-learning-regression has final_report
+PASS: prod-e2e-08-memory-learning-regression has memory_write_read
+PASS: prod-e2e-08-memory-learning-regression has learning_feedback
+PASS: prod-e2e-08-memory-learning-regression has all required checks
+PASS: prod-e2e-08-memory-learning-regression KG validation passed
+PASS: prod-e2e-08-memory-learning-regression report separates statement taxonomy
+PASS: prod-e2e-08-memory-learning-regression report has disclaimer
+PASS: failure-connector-timeout artifact exists
+PASS: failure-connector-timeout expected failure behavior PASS
+PASS: failure-runtime-interruption artifact exists
+PASS: failure-runtime-interruption expected failure behavior PASS
+PASS: failure-schema-error artifact exists
+PASS: failure-schema-error expected failure behavior PASS
+PASS: docs/testing/PRODUCTION_TEST_REPORT.md exists
+PASS: docs/testing/PRODUCTION_TEST_REPORT.md has disclaimer
+PASS: docs/testing/KNOWN_ISSUES.md exists
+PASS: docs/testing/KNOWN_ISSUES.md has disclaimer
+PASS: docs/testing/TEST_PLAN.md exists
+PASS: docs/testing/TEST_PLAN.md has disclaimer
+=======================================
+RESULT: PASS

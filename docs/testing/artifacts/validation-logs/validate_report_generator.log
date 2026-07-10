@@ -1,0 +1,313 @@
+AIRS FEATURE-003 Research Report Generator Validation
+=====================================================
+PASS: docs/report-generator/report-generator-architecture.md exists
+PASS: docs/report-generator/report-generator-architecture.md has substantive content
+PASS: docs/report-generator/report-generator-architecture.md has disclaimer
+PASS: docs/report-generator/report-generator-architecture.md avoids forbidden expression: 建议买入
+PASS: docs/report-generator/report-generator-architecture.md avoids forbidden expression: 建议卖出
+PASS: docs/report-generator/report-generator-architecture.md avoids forbidden expression: 保证收益
+PASS: docs/report-generator/report-generator-architecture.md avoids forbidden expression: 保证盈利
+PASS: docs/report-generator/report-generator-architecture.md avoids forbidden expression: 目标价为
+PASS: docs/report-generator/report-generator-architecture.md avoids forbidden expression: 应买入
+PASS: docs/report-generator/report-generator-architecture.md avoids forbidden expression: 应卖出
+PASS: docs/report-generator/report-generator-architecture.md avoids forbidden expression: 自动交易指令
+PASS: docs/report-generator/report-generator-architecture.md references M2
+PASS: docs/report-generator/report-generator-architecture.md references M3
+PASS: docs/report-generator/report-generator-architecture.md references FEATURE-002
+PASS: docs/report-generator/report-generator-architecture.md references M4
+PASS: docs/report-generator/report-generator-architecture.md references M5
+PASS: docs/report-generator/report-generator-architecture.md references M6
+PASS: docs/report-generator/report-generator-workflow.md exists
+PASS: docs/report-generator/report-generator-workflow.md has substantive content
+PASS: docs/report-generator/report-generator-workflow.md has disclaimer
+PASS: docs/report-generator/report-generator-workflow.md avoids forbidden expression: 建议买入
+PASS: docs/report-generator/report-generator-workflow.md avoids forbidden expression: 建议卖出
+PASS: docs/report-generator/report-generator-workflow.md avoids forbidden expression: 保证收益
+PASS: docs/report-generator/report-generator-workflow.md avoids forbidden expression: 保证盈利
+PASS: docs/report-generator/report-generator-workflow.md avoids forbidden expression: 目标价为
+PASS: docs/report-generator/report-generator-workflow.md avoids forbidden expression: 应买入
+PASS: docs/report-generator/report-generator-workflow.md avoids forbidden expression: 应卖出
+PASS: docs/report-generator/report-generator-workflow.md avoids forbidden expression: 自动交易指令
+PASS: docs/report-generator/report-generator-workflow.md references M2
+PASS: docs/report-generator/report-generator-workflow.md references M3
+PASS: docs/report-generator/report-generator-workflow.md references FEATURE-002
+PASS: docs/report-generator/report-generator-workflow.md references M4
+PASS: docs/report-generator/report-generator-workflow.md references M5
+PASS: docs/report-generator/report-generator-workflow.md references M6
+PASS: docs/report-generator/report-generator-pipeline.md exists
+PASS: docs/report-generator/report-generator-pipeline.md has substantive content
+PASS: docs/report-generator/report-generator-pipeline.md has disclaimer
+PASS: docs/report-generator/report-generator-pipeline.md avoids forbidden expression: 建议买入
+PASS: docs/report-generator/report-generator-pipeline.md avoids forbidden expression: 建议卖出
+PASS: docs/report-generator/report-generator-pipeline.md avoids forbidden expression: 保证收益
+PASS: docs/report-generator/report-generator-pipeline.md avoids forbidden expression: 保证盈利
+PASS: docs/report-generator/report-generator-pipeline.md avoids forbidden expression: 目标价为
+PASS: docs/report-generator/report-generator-pipeline.md avoids forbidden expression: 应买入
+PASS: docs/report-generator/report-generator-pipeline.md avoids forbidden expression: 应卖出
+PASS: docs/report-generator/report-generator-pipeline.md avoids forbidden expression: 自动交易指令
+PASS: docs/report-generator/report-generator-pipeline.md references M2
+PASS: docs/report-generator/report-generator-pipeline.md references M3
+PASS: docs/report-generator/report-generator-pipeline.md references FEATURE-002
+PASS: docs/report-generator/report-generator-pipeline.md references M4
+PASS: docs/report-generator/report-generator-pipeline.md references M5
+PASS: docs/report-generator/report-generator-pipeline.md references M6
+PASS: report_generator/__init__.py exists
+PASS: report_generator/__init__.py contains report generator logic
+PASS: report_generator/model.py exists
+PASS: report_generator/model.py contains report generator logic
+PASS: report_generator/evidence_citation.py exists
+PASS: report_generator/evidence_citation.py contains report generator logic
+PASS: report_generator/kg_summary.py exists
+PASS: report_generator/kg_summary.py contains report generator logic
+PASS: report_generator/score_summary.py exists
+PASS: report_generator/score_summary.py contains report generator logic
+PASS: report_generator/composer.py exists
+PASS: report_generator/composer.py contains report generator logic
+PASS: report_generator/pipeline.py exists
+PASS: report_generator/pipeline.py contains report generator logic
+PASS: schemas/report/report.schema.json exists
+PASS: schemas/report/report.schema.json is valid JSON
+PASS: schemas/report/report.schema.json contains methodology_refs
+PASS: schemas/report/report.schema.json contains evidence_cards
+PASS: schemas/report/report.schema.json contains knowledge_graph_summary
+PASS: schemas/report/report.schema.json contains score_summary
+PASS: schemas/report/report.schema.json contains sections
+PASS: schemas/report/report.schema.json contains source_refs
+PASS: schemas/report/report.schema.json contains 不构成投资建议
+PASS: templates/report/research-report-template.md exists
+PASS: templates/report/research-report-template.md has substantive content
+PASS: templates/report/research-report-template.md has disclaimer
+PASS: templates/report/research-report-template.md avoids forbidden expression: 建议买入
+PASS: templates/report/research-report-template.md avoids forbidden expression: 建议卖出
+PASS: templates/report/research-report-template.md avoids forbidden expression: 保证收益
+PASS: templates/report/research-report-template.md avoids forbidden expression: 保证盈利
+PASS: templates/report/research-report-template.md avoids forbidden expression: 目标价为
+PASS: templates/report/research-report-template.md avoids forbidden expression: 应买入
+PASS: templates/report/research-report-template.md avoids forbidden expression: 应卖出
+PASS: templates/report/research-report-template.md avoids forbidden expression: 自动交易指令
+PASS: templates/builder/feature-request-research-report-generator.yaml exists
+PASS: templates/builder/feature-request-research-report-generator.yaml has substantive content
+PASS: templates/builder/feature-request-research-report-generator.yaml avoids forbidden expression: 建议买入
+PASS: templates/builder/feature-request-research-report-generator.yaml avoids forbidden expression: 建议卖出
+PASS: templates/builder/feature-request-research-report-generator.yaml avoids forbidden expression: 保证收益
+PASS: templates/builder/feature-request-research-report-generator.yaml avoids forbidden expression: 保证盈利
+PASS: templates/builder/feature-request-research-report-generator.yaml avoids forbidden expression: 目标价为
+PASS: templates/builder/feature-request-research-report-generator.yaml avoids forbidden expression: 应买入
+PASS: templates/builder/feature-request-research-report-generator.yaml avoids forbidden expression: 应卖出
+PASS: templates/builder/feature-request-research-report-generator.yaml avoids forbidden expression: 自动交易指令
+PASS: builder-output/research-report-generator/ISSUE.md exists
+PASS: builder-output/research-report-generator/ISSUE.md has substantive content
+PASS: builder-output/research-report-generator/ISSUE.md has disclaimer
+PASS: builder-output/research-report-generator/ISSUE.md avoids forbidden expression: 建议买入
+PASS: builder-output/research-report-generator/ISSUE.md avoids forbidden expression: 建议卖出
+PASS: builder-output/research-report-generator/ISSUE.md avoids forbidden expression: 保证收益
+PASS: builder-output/research-report-generator/ISSUE.md avoids forbidden expression: 保证盈利
+PASS: builder-output/research-report-generator/ISSUE.md avoids forbidden expression: 目标价为
+PASS: builder-output/research-report-generator/ISSUE.md avoids forbidden expression: 应买入
+PASS: builder-output/research-report-generator/ISSUE.md avoids forbidden expression: 应卖出
+PASS: builder-output/research-report-generator/ISSUE.md avoids forbidden expression: 自动交易指令
+PASS: builder-output/research-report-generator/ADR.md exists
+PASS: builder-output/research-report-generator/ADR.md has substantive content
+PASS: builder-output/research-report-generator/ADR.md has disclaimer
+PASS: builder-output/research-report-generator/ADR.md avoids forbidden expression: 建议买入
+PASS: builder-output/research-report-generator/ADR.md avoids forbidden expression: 建议卖出
+PASS: builder-output/research-report-generator/ADR.md avoids forbidden expression: 保证收益
+PASS: builder-output/research-report-generator/ADR.md avoids forbidden expression: 保证盈利
+PASS: builder-output/research-report-generator/ADR.md avoids forbidden expression: 目标价为
+PASS: builder-output/research-report-generator/ADR.md avoids forbidden expression: 应买入
+PASS: builder-output/research-report-generator/ADR.md avoids forbidden expression: 应卖出
+PASS: builder-output/research-report-generator/ADR.md avoids forbidden expression: 自动交易指令
+PASS: builder-output/research-report-generator/FEATURE_SPEC.md exists
+PASS: builder-output/research-report-generator/FEATURE_SPEC.md has substantive content
+PASS: builder-output/research-report-generator/FEATURE_SPEC.md has disclaimer
+PASS: builder-output/research-report-generator/FEATURE_SPEC.md avoids forbidden expression: 建议买入
+PASS: builder-output/research-report-generator/FEATURE_SPEC.md avoids forbidden expression: 建议卖出
+PASS: builder-output/research-report-generator/FEATURE_SPEC.md avoids forbidden expression: 保证收益
+PASS: builder-output/research-report-generator/FEATURE_SPEC.md avoids forbidden expression: 保证盈利
+PASS: builder-output/research-report-generator/FEATURE_SPEC.md avoids forbidden expression: 目标价为
+PASS: builder-output/research-report-generator/FEATURE_SPEC.md avoids forbidden expression: 应买入
+PASS: builder-output/research-report-generator/FEATURE_SPEC.md avoids forbidden expression: 应卖出
+PASS: builder-output/research-report-generator/FEATURE_SPEC.md avoids forbidden expression: 自动交易指令
+PASS: builder-output/research-report-generator/skill/research-report-generator-skill.md exists
+PASS: builder-output/research-report-generator/skill/research-report-generator-skill.md has substantive content
+PASS: builder-output/research-report-generator/skill/research-report-generator-skill.md has disclaimer
+PASS: builder-output/research-report-generator/skill/research-report-generator-skill.md avoids forbidden expression: 建议买入
+PASS: builder-output/research-report-generator/skill/research-report-generator-skill.md avoids forbidden expression: 建议卖出
+PASS: builder-output/research-report-generator/skill/research-report-generator-skill.md avoids forbidden expression: 保证收益
+PASS: builder-output/research-report-generator/skill/research-report-generator-skill.md avoids forbidden expression: 保证盈利
+PASS: builder-output/research-report-generator/skill/research-report-generator-skill.md avoids forbidden expression: 目标价为
+PASS: builder-output/research-report-generator/skill/research-report-generator-skill.md avoids forbidden expression: 应买入
+PASS: builder-output/research-report-generator/skill/research-report-generator-skill.md avoids forbidden expression: 应卖出
+PASS: builder-output/research-report-generator/skill/research-report-generator-skill.md avoids forbidden expression: 自动交易指令
+PASS: builder-output/research-report-generator/prompt/research-report-generator-prompt.md exists
+PASS: builder-output/research-report-generator/prompt/research-report-generator-prompt.md has substantive content
+PASS: builder-output/research-report-generator/prompt/research-report-generator-prompt.md has disclaimer
+PASS: builder-output/research-report-generator/prompt/research-report-generator-prompt.md avoids forbidden expression: 建议买入
+PASS: builder-output/research-report-generator/prompt/research-report-generator-prompt.md avoids forbidden expression: 建议卖出
+PASS: builder-output/research-report-generator/prompt/research-report-generator-prompt.md avoids forbidden expression: 保证收益
+PASS: builder-output/research-report-generator/prompt/research-report-generator-prompt.md avoids forbidden expression: 保证盈利
+PASS: builder-output/research-report-generator/prompt/research-report-generator-prompt.md avoids forbidden expression: 目标价为
+PASS: builder-output/research-report-generator/prompt/research-report-generator-prompt.md avoids forbidden expression: 应买入
+PASS: builder-output/research-report-generator/prompt/research-report-generator-prompt.md avoids forbidden expression: 应卖出
+PASS: builder-output/research-report-generator/prompt/research-report-generator-prompt.md avoids forbidden expression: 自动交易指令
+PASS: builder-output/research-report-generator/schema/research-report-generator.schema.json exists
+PASS: builder-output/research-report-generator/schema/research-report-generator.schema.json is valid JSON
+PASS: builder-output/research-report-generator/tests/test-research-report-generator.md exists
+PASS: builder-output/research-report-generator/tests/test-research-report-generator.md has substantive content
+PASS: builder-output/research-report-generator/tests/test-research-report-generator.md has disclaimer
+PASS: builder-output/research-report-generator/tests/test-research-report-generator.md avoids forbidden expression: 建议买入
+PASS: builder-output/research-report-generator/tests/test-research-report-generator.md avoids forbidden expression: 建议卖出
+PASS: builder-output/research-report-generator/tests/test-research-report-generator.md avoids forbidden expression: 保证收益
+PASS: builder-output/research-report-generator/tests/test-research-report-generator.md avoids forbidden expression: 保证盈利
+PASS: builder-output/research-report-generator/tests/test-research-report-generator.md avoids forbidden expression: 目标价为
+PASS: builder-output/research-report-generator/tests/test-research-report-generator.md avoids forbidden expression: 应买入
+PASS: builder-output/research-report-generator/tests/test-research-report-generator.md avoids forbidden expression: 应卖出
+PASS: builder-output/research-report-generator/tests/test-research-report-generator.md avoids forbidden expression: 自动交易指令
+PASS: builder-output/research-report-generator/benchmark/research-report-generator-benchmark.md exists
+PASS: builder-output/research-report-generator/benchmark/research-report-generator-benchmark.md has substantive content
+PASS: builder-output/research-report-generator/benchmark/research-report-generator-benchmark.md has disclaimer
+PASS: builder-output/research-report-generator/benchmark/research-report-generator-benchmark.md avoids forbidden expression: 建议买入
+PASS: builder-output/research-report-generator/benchmark/research-report-generator-benchmark.md avoids forbidden expression: 建议卖出
+PASS: builder-output/research-report-generator/benchmark/research-report-generator-benchmark.md avoids forbidden expression: 保证收益
+PASS: builder-output/research-report-generator/benchmark/research-report-generator-benchmark.md avoids forbidden expression: 保证盈利
+PASS: builder-output/research-report-generator/benchmark/research-report-generator-benchmark.md avoids forbidden expression: 目标价为
+PASS: builder-output/research-report-generator/benchmark/research-report-generator-benchmark.md avoids forbidden expression: 应买入
+PASS: builder-output/research-report-generator/benchmark/research-report-generator-benchmark.md avoids forbidden expression: 应卖出
+PASS: builder-output/research-report-generator/benchmark/research-report-generator-benchmark.md avoids forbidden expression: 自动交易指令
+PASS: builder-output/research-report-generator/PR_CHECKLIST.md exists
+PASS: builder-output/research-report-generator/PR_CHECKLIST.md has substantive content
+PASS: builder-output/research-report-generator/PR_CHECKLIST.md has disclaimer
+PASS: builder-output/research-report-generator/PR_CHECKLIST.md avoids forbidden expression: 建议买入
+PASS: builder-output/research-report-generator/PR_CHECKLIST.md avoids forbidden expression: 建议卖出
+PASS: builder-output/research-report-generator/PR_CHECKLIST.md avoids forbidden expression: 保证收益
+PASS: builder-output/research-report-generator/PR_CHECKLIST.md avoids forbidden expression: 保证盈利
+PASS: builder-output/research-report-generator/PR_CHECKLIST.md avoids forbidden expression: 目标价为
+PASS: builder-output/research-report-generator/PR_CHECKLIST.md avoids forbidden expression: 应买入
+PASS: builder-output/research-report-generator/PR_CHECKLIST.md avoids forbidden expression: 应卖出
+PASS: builder-output/research-report-generator/PR_CHECKLIST.md avoids forbidden expression: 自动交易指令
+PASS: builder-output/research-report-generator/RELEASE_NOTES.md exists
+PASS: builder-output/research-report-generator/RELEASE_NOTES.md has substantive content
+PASS: builder-output/research-report-generator/RELEASE_NOTES.md has disclaimer
+PASS: builder-output/research-report-generator/RELEASE_NOTES.md avoids forbidden expression: 建议买入
+PASS: builder-output/research-report-generator/RELEASE_NOTES.md avoids forbidden expression: 建议卖出
+PASS: builder-output/research-report-generator/RELEASE_NOTES.md avoids forbidden expression: 保证收益
+PASS: builder-output/research-report-generator/RELEASE_NOTES.md avoids forbidden expression: 保证盈利
+PASS: builder-output/research-report-generator/RELEASE_NOTES.md avoids forbidden expression: 目标价为
+PASS: builder-output/research-report-generator/RELEASE_NOTES.md avoids forbidden expression: 应买入
+PASS: builder-output/research-report-generator/RELEASE_NOTES.md avoids forbidden expression: 应卖出
+PASS: builder-output/research-report-generator/RELEASE_NOTES.md avoids forbidden expression: 自动交易指令
+PASS: docs/production/FEATURE_003_COMPLETION_REPORT.md exists
+PASS: docs/production/FEATURE_003_COMPLETION_REPORT.md has substantive content
+PASS: docs/production/FEATURE_003_COMPLETION_REPORT.md has disclaimer
+PASS: docs/production/FEATURE_003_COMPLETION_REPORT.md avoids forbidden expression: 建议买入
+PASS: docs/production/FEATURE_003_COMPLETION_REPORT.md avoids forbidden expression: 建议卖出
+PASS: docs/production/FEATURE_003_COMPLETION_REPORT.md avoids forbidden expression: 保证收益
+PASS: docs/production/FEATURE_003_COMPLETION_REPORT.md avoids forbidden expression: 保证盈利
+PASS: docs/production/FEATURE_003_COMPLETION_REPORT.md avoids forbidden expression: 目标价为
+PASS: docs/production/FEATURE_003_COMPLETION_REPORT.md avoids forbidden expression: 应买入
+PASS: docs/production/FEATURE_003_COMPLETION_REPORT.md avoids forbidden expression: 应卖出
+PASS: docs/production/FEATURE_003_COMPLETION_REPORT.md avoids forbidden expression: 自动交易指令
+PASS: docs/review/FEATURE_003_SELF_REVIEW.md exists
+PASS: docs/review/FEATURE_003_SELF_REVIEW.md has substantive content
+PASS: docs/review/FEATURE_003_SELF_REVIEW.md has disclaimer
+PASS: docs/review/FEATURE_003_SELF_REVIEW.md avoids forbidden expression: 建议买入
+PASS: docs/review/FEATURE_003_SELF_REVIEW.md avoids forbidden expression: 建议卖出
+PASS: docs/review/FEATURE_003_SELF_REVIEW.md avoids forbidden expression: 保证收益
+PASS: docs/review/FEATURE_003_SELF_REVIEW.md avoids forbidden expression: 保证盈利
+PASS: docs/review/FEATURE_003_SELF_REVIEW.md avoids forbidden expression: 目标价为
+PASS: docs/review/FEATURE_003_SELF_REVIEW.md avoids forbidden expression: 应买入
+PASS: docs/review/FEATURE_003_SELF_REVIEW.md avoids forbidden expression: 应卖出
+PASS: docs/review/FEATURE_003_SELF_REVIEW.md avoids forbidden expression: 自动交易指令
+PASS: examples/reports/ai-compute-industry-research-report.md exists
+PASS: examples/reports/ai-compute-industry-research-report.md has substantive content
+PASS: examples/reports/ai-compute-industry-research-report.md has disclaimer
+PASS: examples/reports/ai-compute-industry-research-report.md avoids forbidden expression: 建议买入
+PASS: examples/reports/ai-compute-industry-research-report.md avoids forbidden expression: 建议卖出
+PASS: examples/reports/ai-compute-industry-research-report.md avoids forbidden expression: 保证收益
+PASS: examples/reports/ai-compute-industry-research-report.md avoids forbidden expression: 保证盈利
+PASS: examples/reports/ai-compute-industry-research-report.md avoids forbidden expression: 目标价为
+PASS: examples/reports/ai-compute-industry-research-report.md avoids forbidden expression: 应买入
+PASS: examples/reports/ai-compute-industry-research-report.md avoids forbidden expression: 应卖出
+PASS: examples/reports/ai-compute-industry-research-report.md avoids forbidden expression: 自动交易指令
+PASS: examples/reports/ai-compute-industry-research-report.md contains section 1: 报告元数据
+PASS: examples/reports/ai-compute-industry-research-report.md contains section 2: 研究问题与范围
+PASS: examples/reports/ai-compute-industry-research-report.md contains section 3: 方法论引用
+PASS: examples/reports/ai-compute-industry-research-report.md contains section 4: 核心观点
+PASS: examples/reports/ai-compute-industry-research-report.md contains section 5: Evidence 引用表
+PASS: examples/reports/ai-compute-industry-research-report.md contains section 6: Evidence Chain 汇总
+PASS: examples/reports/ai-compute-industry-research-report.md contains section 7: Knowledge Graph 汇总
+PASS: examples/reports/ai-compute-industry-research-report.md contains section 8: Score Summary
+PASS: examples/reports/ai-compute-industry-research-report.md contains section 9: 反方观点
+PASS: examples/reports/ai-compute-industry-research-report.md contains section 10: 不确定性与缺口
+PASS: examples/reports/ai-compute-industry-research-report.md contains section 11: 风险提示
+PASS: examples/reports/ai-compute-industry-research-report.md contains section 12: 免责声明
+PASS: examples/reports/ai-compute-industry-research-report.md contains Evidence 引用表
+PASS: examples/reports/ai-compute-industry-research-report.md contains Knowledge Graph 汇总
+PASS: examples/reports/ai-compute-industry-research-report.md contains Score Summary
+PASS: examples/reports/ai-compute-industry-research-report.md contains Quality Gate
+PASS: examples/reports/ai-compute-industry-research-report.md contains Scorecard
+PASS: examples/reports/ai-compute-industry-research-report.md contains 不构成投资建议
+PASS: examples/reports/innovative-drug-industry-research-report.md exists
+PASS: examples/reports/innovative-drug-industry-research-report.md has substantive content
+PASS: examples/reports/innovative-drug-industry-research-report.md has disclaimer
+PASS: examples/reports/innovative-drug-industry-research-report.md avoids forbidden expression: 建议买入
+PASS: examples/reports/innovative-drug-industry-research-report.md avoids forbidden expression: 建议卖出
+PASS: examples/reports/innovative-drug-industry-research-report.md avoids forbidden expression: 保证收益
+PASS: examples/reports/innovative-drug-industry-research-report.md avoids forbidden expression: 保证盈利
+PASS: examples/reports/innovative-drug-industry-research-report.md avoids forbidden expression: 目标价为
+PASS: examples/reports/innovative-drug-industry-research-report.md avoids forbidden expression: 应买入
+PASS: examples/reports/innovative-drug-industry-research-report.md avoids forbidden expression: 应卖出
+PASS: examples/reports/innovative-drug-industry-research-report.md avoids forbidden expression: 自动交易指令
+PASS: examples/reports/innovative-drug-industry-research-report.md contains section 1: 报告元数据
+PASS: examples/reports/innovative-drug-industry-research-report.md contains section 2: 研究问题与范围
+PASS: examples/reports/innovative-drug-industry-research-report.md contains section 3: 方法论引用
+PASS: examples/reports/innovative-drug-industry-research-report.md contains section 4: 核心观点
+PASS: examples/reports/innovative-drug-industry-research-report.md contains section 5: Evidence 引用表
+PASS: examples/reports/innovative-drug-industry-research-report.md contains section 6: Evidence Chain 汇总
+PASS: examples/reports/innovative-drug-industry-research-report.md contains section 7: Knowledge Graph 汇总
+PASS: examples/reports/innovative-drug-industry-research-report.md contains section 8: Score Summary
+PASS: examples/reports/innovative-drug-industry-research-report.md contains section 9: 反方观点
+PASS: examples/reports/innovative-drug-industry-research-report.md contains section 10: 不确定性与缺口
+PASS: examples/reports/innovative-drug-industry-research-report.md contains section 11: 风险提示
+PASS: examples/reports/innovative-drug-industry-research-report.md contains section 12: 免责声明
+PASS: examples/reports/innovative-drug-industry-research-report.md contains Evidence 引用表
+PASS: examples/reports/innovative-drug-industry-research-report.md contains Knowledge Graph 汇总
+PASS: examples/reports/innovative-drug-industry-research-report.md contains Score Summary
+PASS: examples/reports/innovative-drug-industry-research-report.md contains Quality Gate
+PASS: examples/reports/innovative-drug-industry-research-report.md contains Scorecard
+PASS: examples/reports/innovative-drug-industry-research-report.md contains 不构成投资建议
+PASS: examples/reports/ai-compute-industry-research-report.json exists
+PASS: examples/reports/ai-compute-industry-research-report.json is valid JSON
+PASS: examples/reports/ai-compute-industry-research-report.json has exactly 12 sections
+PASS: examples/reports/ai-compute-industry-research-report.json has disclaimer
+PASS: examples/reports/ai-compute-industry-research-report.json has source ref M2_methodology
+PASS: examples/reports/ai-compute-industry-research-report.json has source ref M3_evidence
+PASS: examples/reports/ai-compute-industry-research-report.json has source ref FEATURE_002_knowledge_graph
+PASS: examples/reports/ai-compute-industry-research-report.json has source ref M4_prompt
+PASS: examples/reports/ai-compute-industry-research-report.json has source ref M5_skill
+PASS: examples/reports/ai-compute-industry-research-report.json has source ref M6_score_eval
+PASS: examples/reports/ai-compute-industry-research-report.json KG evidence refs resolve
+PASS: examples/reports/ai-compute-industry-research-report.json Score evidence refs resolve
+PASS: examples/reports/ai-compute-industry-research-report.json has valid quality gate
+PASS: examples/reports/innovative-drug-industry-research-report.json exists
+PASS: examples/reports/innovative-drug-industry-research-report.json is valid JSON
+PASS: examples/reports/innovative-drug-industry-research-report.json has exactly 12 sections
+PASS: examples/reports/innovative-drug-industry-research-report.json has disclaimer
+PASS: examples/reports/innovative-drug-industry-research-report.json has source ref M2_methodology
+PASS: examples/reports/innovative-drug-industry-research-report.json has source ref M3_evidence
+PASS: examples/reports/innovative-drug-industry-research-report.json has source ref FEATURE_002_knowledge_graph
+PASS: examples/reports/innovative-drug-industry-research-report.json has source ref M4_prompt
+PASS: examples/reports/innovative-drug-industry-research-report.json has source ref M5_skill
+PASS: examples/reports/innovative-drug-industry-research-report.json has source ref M6_score_eval
+PASS: examples/reports/innovative-drug-industry-research-report.json KG evidence refs resolve
+PASS: examples/reports/innovative-drug-industry-research-report.json Score evidence refs resolve
+PASS: examples/reports/innovative-drug-industry-research-report.json has valid quality gate
+PASS: examples/knowledge-graph/ai-compute-supply-chain.json exists
+PASS: examples/knowledge-graph/ai-compute-supply-chain.json is valid JSON
+PASS: ReportPipeline creates 12 sections
+PASS: runtime markdown contains Evidence citations
+PASS: runtime markdown contains KG ID
+PASS: runtime markdown contains Scorecard ID
+PASS: runtime markdown contains disclaimer
+=====================================================
+RESULT: PASS

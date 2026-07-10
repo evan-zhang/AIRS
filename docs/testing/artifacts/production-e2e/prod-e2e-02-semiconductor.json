@@ -1,0 +1,1704 @@
+{
+  "airs_evidence_chain": {
+    "chain_id": "chain-prod-e2e-02-semiconductor",
+    "claim": "Semiconductor Localization 的研究价值来自需求驱动、供应链瓶颈和风险反证之间的动态平衡。",
+    "counter_evidence_refs": [
+      "ev-counter-01",
+      "ev-counter-02"
+    ],
+    "disclaimer": "仅用于 AIRS 投资研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+    "evidence_cards": {
+      "ev-01": {
+        "confidence": 0.82,
+        "evidence_id": "ev-01",
+        "evidence_level": "L2",
+        "refutes": [],
+        "source": "connector:news",
+        "supports": [
+          "st-fact-01"
+        ],
+        "title": "Semiconductor Localization demand signal"
+      },
+      "ev-02": {
+        "confidence": 0.74,
+        "evidence_id": "ev-02",
+        "evidence_level": "L2",
+        "refutes": [],
+        "source": "connector:industry",
+        "supports": [
+          "st-infer-01"
+        ],
+        "title": "Semiconductor Localization supply constraint"
+      },
+      "ev-03": {
+        "confidence": 0.58,
+        "evidence_id": "ev-03",
+        "evidence_level": "L3",
+        "refutes": [],
+        "source": "connector:policy",
+        "supports": [
+          "st-assume-01"
+        ],
+        "title": "Semiconductor Localization policy or scenario input"
+      },
+      "ev-counter-01": {
+        "confidence": 0.54,
+        "evidence_id": "ev-counter-01",
+        "evidence_level": "L3",
+        "refutes": [
+          "st-infer-01"
+        ],
+        "source": "connector:news",
+        "supports": [],
+        "title": "counter demand evidence"
+      },
+      "ev-counter-02": {
+        "confidence": 0.51,
+        "evidence_id": "ev-counter-02",
+        "evidence_level": "L3",
+        "refutes": [
+          "st-assume-01"
+        ],
+        "source": "connector:financial",
+        "supports": [],
+        "title": "competition counter evidence"
+      }
+    },
+    "methodology_refs": [
+      "docs/methodology/evidence-chain.md"
+    ],
+    "missing_evidence": [
+      "真实订单明细",
+      "产能利用率",
+      "价格时间序列"
+    ],
+    "overall_confidence": 0.66
+  },
+  "case_id": "prod-e2e-02-semiconductor",
+  "checks": [
+    {
+      "name": "planner",
+      "status": "PASS"
+    },
+    {
+      "name": "runtime",
+      "status": "PASS"
+    },
+    {
+      "name": "connectors",
+      "status": "PASS"
+    },
+    {
+      "name": "evidence_trace",
+      "status": "PASS"
+    },
+    {
+      "name": "knowledge_graph",
+      "status": "PASS"
+    },
+    {
+      "name": "scorecard",
+      "status": "PASS"
+    },
+    {
+      "name": "committee",
+      "status": "PASS"
+    },
+    {
+      "name": "report_taxonomy",
+      "status": "PASS"
+    },
+    {
+      "name": "memory",
+      "status": "PASS"
+    },
+    {
+      "name": "learning",
+      "status": "PASS"
+    }
+  ],
+  "committee_debate": {
+    "consensus": {
+      "agreed_points": [
+        "结论必须保留证据引用和不确定性。",
+        "后续 Research Engine 只能执行经 Committee 记录的任务范围。",
+        "任何推荐表述必须符合 Recommendation Schema 的合规边界。"
+      ],
+      "consensus_id": "consensus-aic-plan-prod-e2e-02-semiconductor",
+      "consensus_level": "no_consensus",
+      "decision_threshold": "无 REJECT 且达到至少 6 个角色投票。",
+      "disclaimer": "仅用于 AIRS 投资研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+      "unresolved_questions": [
+        "关键证据尚未由 Connector 采集验证。",
+        "Scorecard 尚未由 M6 计算。"
+      ]
+    },
+    "decision": {
+      "consensus": {
+        "agreed_points": [
+          "结论必须保留证据引用和不确定性。",
+          "后续 Research Engine 只能执行经 Committee 记录的任务范围。",
+          "任何推荐表述必须符合 Recommendation Schema 的合规边界。"
+        ],
+        "consensus_id": "consensus-aic-plan-prod-e2e-02-semiconductor",
+        "consensus_level": "no_consensus",
+        "decision_threshold": "无 REJECT 且达到至少 6 个角色投票。",
+        "disclaimer": "仅用于 AIRS 投资研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+        "unresolved_questions": [
+          "关键证据尚未由 Connector 采集验证。",
+          "Scorecard 尚未由 M6 计算。"
+        ]
+      },
+      "decision_id": "decision-aic-plan-prod-e2e-02-semiconductor",
+      "disclaimer": "仅用于 AIRS 投资研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+      "final_recommendation": "允许在限定范围内进入 Research Engine 继续研究，所有结论仅供研究质量控制。",
+      "follow_up_tasks": [
+        "Research Engine 执行证据采集。",
+        "Review Agent 复核 Minority Report。"
+      ],
+      "minority_report": [
+        "Bear Analyst 要求在证据不足时降级结论。"
+      ],
+      "planner_ref": "plan-prod-e2e-02-semiconductor",
+      "research_engine_gate": "BLOCK",
+      "session_id": "aic-plan-prod-e2e-02-semiconductor",
+      "voting_result": {
+        "disclaimer": "仅用于 AIRS 投资研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+        "outcome": "FAIL",
+        "quorum_met": true,
+        "summary": {
+          "approve": 4,
+          "conditional_approve": 4,
+          "reject": 1
+        },
+        "vote_id": "vote-aic-plan-prod-e2e-02-semiconductor",
+        "votes": [
+          {
+            "rationale": "Semiconductor Localization 的正向命题只有在证据链、供需数据和评分结果一致时才可保留。",
+            "role_id": "bull_analyst",
+            "vote": "APPROVE"
+          },
+          {
+            "rationale": "Semiconductor Localization 的主要风险在于共识交易、数据滞后和替代技术路线，结论必须保留失败情景。",
+            "role_id": "bear_analyst",
+            "vote": "CONDITIONAL_APPROVE"
+          },
+          {
+            "rationale": "财务口径必须区分事实、推断、假设和观点，并与 Recommendation Schema 对齐。",
+            "role_id": "financial_analyst",
+            "vote": "CONDITIONAL_APPROVE"
+          },
+          {
+            "rationale": "产业判断必须复用 M2 方法论和 FEATURE-002 Knowledge Graph，不在 Committee 内重复定义产业图谱。",
+            "role_id": "industry_analyst",
+            "vote": "CONDITIONAL_APPROVE"
+          },
+          {
+            "rationale": "产业专家确认议题需覆盖产业生命周期、供应链卡点、政策驱动和反共识四类既有方法论。",
+            "role_id": "industry_expert",
+            "vote": "APPROVE"
+          },
+          {
+            "rationale": "风险专家要求所有 Final Recommendation 仅表达研究跟踪结论，并保留数据、模型、市场和执行风险。",
+            "role_id": "risk_expert",
+            "vote": "APPROVE"
+          },
+          {
+            "rationale": "组合专家仅评估组合暴露、相关性和优先级，不输出仓位、买卖或交易动作。",
+            "role_id": "portfolio_expert",
+            "vote": "APPROVE"
+          },
+          {
+            "rationale": "证据链必须引用 M3 Evidence Card 和 Evidence Chain，且每个关键命题至少有支持证据和反方证据。",
+            "role_id": "evidence_reviewer",
+            "vote": "REJECT"
+          },
+          {
+            "rationale": "若结论依赖单一景气假设、单一数据源或单一路径外推，必须降级为有条件研究结论。",
+            "role_id": "devils_advocate",
+            "vote": "CONDITIONAL_APPROVE"
+          }
+        ]
+      }
+    },
+    "disclaimer": "仅用于 AIRS 投资研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+    "session": {
+      "agenda": [
+        {
+          "output": "确认 Planner 产物完整。",
+          "owner": "moderator",
+          "step": "planner_gate"
+        },
+        {
+          "output": "形成初始正反意见。",
+          "owner": "all_participants",
+          "step": "role_opening"
+        },
+        {
+          "output": "证据缺口和反方证据清单。",
+          "owner": "evidence_reviewer",
+          "step": "evidence_challenge"
+        },
+        {
+          "output": "替代解释和失败场景。",
+          "owner": "devils_advocate",
+          "step": "counter_argument"
+        },
+        {
+          "output": "共识、分歧和降级条件。",
+          "owner": "moderator",
+          "step": "consensus_building"
+        },
+        {
+          "output": "结构化 Vote。",
+          "owner": "voting_engine",
+          "step": "vote"
+        },
+        {
+          "output": "Decision Record 和后续任务。",
+          "owner": "recorder",
+          "step": "decision_record"
+        }
+      ],
+      "boundary_check": {
+        "allowed": true,
+        "disclaimer": "仅用于 AIRS 投资研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+        "forbidden_hits": [],
+        "role_id": "moderator",
+        "rule": "Final Recommendation 只能是研究结论覆盖范围和后续验证任务。"
+      },
+      "challenges": [
+        {
+          "challenge": "证据链必须引用 M3 Evidence Card 和 Evidence Chain，且每个关键命题至少有支持证据和反方证据。",
+          "challenge_type": "evidence_integrity",
+          "disclaimer": "仅用于 AIRS 投资研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "gaps": [
+            "等待 Research Engine 执行后补充原始证据卡。"
+          ],
+          "pass": false,
+          "role_id": "evidence_reviewer"
+        },
+        {
+          "alternative_explanations": [
+            "周期补库存",
+            "政策节奏变化",
+            "竞争扩产",
+            "数据样本偏差"
+          ],
+          "challenge": "若结论依赖单一景气假设、单一数据源或单一路径外推，必须降级为有条件研究结论。",
+          "challenge_type": "counter_argument",
+          "disclaimer": "仅用于 AIRS 投资研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "pass": true,
+          "role_id": "devils_advocate"
+        }
+      ],
+      "committee_position": "after_planner_before_research_engine",
+      "disclaimer": "仅用于 AIRS 投资研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+      "evidence_review": {
+        "gaps": [
+          "等待 Research Engine 执行后补充原始证据卡。"
+        ],
+        "required_refs": [
+          "schemas/evidence/evidence-card.schema.json",
+          "schemas/evidence/evidence-chain.schema.json"
+        ]
+      },
+      "final_recommendation": "允许在限定范围内进入 Research Engine 继续研究，所有结论仅供研究质量控制。",
+      "follow_up_tasks": [
+        "Research Engine 执行证据采集。",
+        "Review Agent 复核 Minority Report。"
+      ],
+      "infrastructure_refs": {
+        "evidence": "schemas/evidence/evidence-chain.schema.json",
+        "investment_engine": "docs/investment-engine/engine-architecture.md",
+        "orchestrator": "docs/orchestrator/orchestrator-architecture.md",
+        "planner": "docs/planner/planner-architecture.md",
+        "recommendation": "schemas/investment/recommendation.schema.json",
+        "report": "templates/report/research-report-template.md",
+        "runtime": "docs/runtime/runtime-architecture.md",
+        "score": "schemas/score/scorecard.schema.json"
+      },
+      "minority_report": [
+        "Bear Analyst 要求在证据不足时降级结论。"
+      ],
+      "opinions": [
+        {
+          "confidence": 0.68,
+          "disclaimer": "仅用于 AIRS 投资研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "opinion": "Semiconductor Localization 的正向命题只有在证据链、供需数据和评分结果一致时才可保留。",
+          "required_evidence": [
+            "M3 Evidence Chain",
+            "M6 Scorecard",
+            "FEATURE-008 Thesis"
+          ],
+          "role_id": "bull_analyst",
+          "stance": "support_with_conditions"
+        },
+        {
+          "confidence": 0.72,
+          "disclaimer": "仅用于 AIRS 投资研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "opinion": "Semiconductor Localization 的主要风险在于共识交易、数据滞后和替代技术路线，结论必须保留失败情景。",
+          "required_evidence": [
+            "Counter Evidence",
+            "Missing Evidence",
+            "Risk Methodology"
+          ],
+          "role_id": "bear_analyst",
+          "stance": "challenge"
+        },
+        {
+          "confidence": 0.64,
+          "disclaimer": "仅用于 AIRS 投资研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "opinion": "财务口径必须区分事实、推断、假设和观点，并与 Recommendation Schema 对齐。",
+          "required_evidence": [
+            "financial statements",
+            "valuation methodology",
+            "scorecard refs"
+          ],
+          "role_id": "financial_analyst",
+          "stance": "verify_financials"
+        },
+        {
+          "confidence": 0.7,
+          "disclaimer": "仅用于 AIRS 投资研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "opinion": "产业判断必须复用 M2 方法论和 FEATURE-002 Knowledge Graph，不在 Committee 内重复定义产业图谱。",
+          "required_evidence": [
+            "methodology refs",
+            "knowledge graph refs",
+            "connector refs"
+          ],
+          "role_id": "industry_analyst",
+          "stance": "verify_industry_structure"
+        },
+        {
+          "confidence": 0.69,
+          "disclaimer": "仅用于 AIRS 投资研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "finding": "产业专家确认议题需覆盖产业生命周期、供应链卡点、政策驱动和反共识四类既有方法论。",
+          "required_refs": [
+            "docs/methodology/industry-lifecycle.md",
+            "docs/methodology/supply-chain-chokepoint.md"
+          ],
+          "role_id": "industry_expert"
+        },
+        {
+          "confidence": 0.74,
+          "disclaimer": "仅用于 AIRS 投资研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "finding": "风险专家要求所有 Final Recommendation 仅表达研究跟踪结论，并保留数据、模型、市场和执行风险。",
+          "required_refs": [
+            "docs/methodology/risk.md",
+            "schemas/score/evaluation.schema.json"
+          ],
+          "role_id": "risk_expert"
+        },
+        {
+          "confidence": 0.62,
+          "disclaimer": "仅用于 AIRS 投资研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "finding": "组合专家仅评估组合暴露、相关性和优先级，不输出仓位、买卖或交易动作。",
+          "required_refs": [
+            "schemas/investment/investment-request.schema.json",
+            "templates/investment/thesis-template.md"
+          ],
+          "role_id": "portfolio_expert"
+        }
+      ],
+      "participants": [
+        "bull_analyst",
+        "bear_analyst",
+        "financial_analyst",
+        "industry_analyst",
+        "industry_expert",
+        "risk_expert",
+        "portfolio_expert",
+        "evidence_reviewer",
+        "devils_advocate",
+        "moderator"
+      ],
+      "planner_ref": "plan-prod-e2e-02-semiconductor",
+      "session_id": "aic-plan-prod-e2e-02-semiconductor",
+      "unresolved_questions": [
+        "关键证据尚未由 Connector 采集验证。",
+        "Scorecard 尚未由 M6 计算。"
+      ]
+    },
+    "vote": {
+      "disclaimer": "仅用于 AIRS 投资研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+      "outcome": "FAIL",
+      "quorum_met": true,
+      "summary": {
+        "approve": 4,
+        "conditional_approve": 4,
+        "reject": 1
+      },
+      "vote_id": "vote-aic-plan-prod-e2e-02-semiconductor",
+      "votes": [
+        {
+          "rationale": "Semiconductor Localization 的正向命题只有在证据链、供需数据和评分结果一致时才可保留。",
+          "role_id": "bull_analyst",
+          "vote": "APPROVE"
+        },
+        {
+          "rationale": "Semiconductor Localization 的主要风险在于共识交易、数据滞后和替代技术路线，结论必须保留失败情景。",
+          "role_id": "bear_analyst",
+          "vote": "CONDITIONAL_APPROVE"
+        },
+        {
+          "rationale": "财务口径必须区分事实、推断、假设和观点，并与 Recommendation Schema 对齐。",
+          "role_id": "financial_analyst",
+          "vote": "CONDITIONAL_APPROVE"
+        },
+        {
+          "rationale": "产业判断必须复用 M2 方法论和 FEATURE-002 Knowledge Graph，不在 Committee 内重复定义产业图谱。",
+          "role_id": "industry_analyst",
+          "vote": "CONDITIONAL_APPROVE"
+        },
+        {
+          "rationale": "产业专家确认议题需覆盖产业生命周期、供应链卡点、政策驱动和反共识四类既有方法论。",
+          "role_id": "industry_expert",
+          "vote": "APPROVE"
+        },
+        {
+          "rationale": "风险专家要求所有 Final Recommendation 仅表达研究跟踪结论，并保留数据、模型、市场和执行风险。",
+          "role_id": "risk_expert",
+          "vote": "APPROVE"
+        },
+        {
+          "rationale": "组合专家仅评估组合暴露、相关性和优先级，不输出仓位、买卖或交易动作。",
+          "role_id": "portfolio_expert",
+          "vote": "APPROVE"
+        },
+        {
+          "rationale": "证据链必须引用 M3 Evidence Card 和 Evidence Chain，且每个关键命题至少有支持证据和反方证据。",
+          "role_id": "evidence_reviewer",
+          "vote": "REJECT"
+        },
+        {
+          "rationale": "若结论依赖单一景气假设、单一数据源或单一路径外推，必须降级为有条件研究结论。",
+          "role_id": "devils_advocate",
+          "vote": "CONDITIONAL_APPROVE"
+        }
+      ]
+    }
+  },
+  "completed_at": "2026-07-10T09:16:02.011614+00:00",
+  "disclaimer": "仅用于 AIRS 投资研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+  "errors": [],
+  "evidence_trace": [
+    {
+      "case_id": "prod-e2e-02-semiconductor",
+      "connector_id": "news",
+      "request": {
+        "language": "zh",
+        "query": "semiconductor equipment localization"
+      },
+      "required_output_fields": [
+        "connector_id",
+        "source",
+        "url",
+        "timestamp",
+        "version",
+        "trace_id",
+        "data",
+        "traceability"
+      ],
+      "result": {
+        "connector_id": "news",
+        "data": {
+          "headline": "Mock news headline",
+          "publisher": "Mock News",
+          "query": "AI servers",
+          "url": "https://news.example.com/mock"
+        },
+        "disclaimer": "仅供 AIRS 工程开发和研究质量控制使用，不构成投资建议。",
+        "source": "Public News",
+        "source_type": "public_news",
+        "timestamp": "2026-07-10T09:16:02.011380+00:00",
+        "trace_id": "TRACE-04A4F5E78199",
+        "traceability": {
+          "cache_hit": false,
+          "connector": "news",
+          "request_id": "TRACE-04A4F5E78199",
+          "transformations": [
+            "mock_fetch",
+            "normalize"
+          ]
+        },
+        "url": "https://news.example.com/mock",
+        "version": "0.1.0"
+      }
+    },
+    {
+      "case_id": "prod-e2e-02-semiconductor",
+      "connector_id": "yahoo_finance",
+      "request": {
+        "range": "1d",
+        "symbol": "ASML"
+      },
+      "required_output_fields": [
+        "connector_id",
+        "source",
+        "url",
+        "timestamp",
+        "version",
+        "trace_id",
+        "data",
+        "traceability"
+      ],
+      "result": {
+        "connector_id": "yahoo_finance",
+        "data": {
+          "currency": "USD",
+          "last_price": 100.0,
+          "symbol": "AAPL",
+          "url": "https://finance.yahoo.com/quote/AAPL"
+        },
+        "disclaimer": "仅供 AIRS 工程开发和研究质量控制使用，不构成投资建议。",
+        "source": "Yahoo Finance",
+        "source_type": "trusted_third_party",
+        "timestamp": "2026-07-10T09:16:02.011388+00:00",
+        "trace_id": "TRACE-6E5C2C4A29AE",
+        "traceability": {
+          "cache_hit": false,
+          "connector": "yahoo_finance",
+          "request_id": "TRACE-6E5C2C4A29AE",
+          "transformations": [
+            "mock_fetch",
+            "normalize"
+          ]
+        },
+        "url": "https://finance.yahoo.com/quote/AAPL",
+        "version": "0.1.0"
+      }
+    }
+  ],
+  "execution_log": [
+    {
+      "agent_id": null,
+      "event_id": "evt-c303f1dffc1c",
+      "event_type": "RUNTIME_STARTED",
+      "payload": {
+        "runtime_id": "runtime-from-planner-prod-e2e-02-semiconductor",
+        "workflow_id": "workflow-prod-e2e-02-semiconductor"
+      },
+      "session_id": null,
+      "severity": "INFO",
+      "task_id": null,
+      "timestamp": "2026-07-10T09:16:02.010892+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "methodology_selector",
+      "event_id": "evt-e7441f4d1ac0",
+      "event_type": "TASK_DISPATCHED",
+      "payload": {
+        "agent_type": "sync"
+      },
+      "session_id": "ses-a2baef76d1ac",
+      "severity": "INFO",
+      "task_id": "goal_analysis",
+      "timestamp": "2026-07-10T09:16:02.010901+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "methodology_selector",
+      "event_id": "evt-84f8508ee38d",
+      "event_type": "AGENT_INITIALIZED",
+      "payload": {},
+      "session_id": "ses-a2baef76d1ac",
+      "severity": "INFO",
+      "task_id": "goal_analysis",
+      "timestamp": "2026-07-10T09:16:02.010905+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "methodology_selector",
+      "event_id": "evt-ad6d1aba0d33",
+      "event_type": "AGENT_RUNNING",
+      "payload": {},
+      "session_id": "ses-a2baef76d1ac",
+      "severity": "INFO",
+      "task_id": "goal_analysis",
+      "timestamp": "2026-07-10T09:16:02.010908+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "methodology_selector",
+      "event_id": "evt-112be2d93337",
+      "event_type": "AGENT_COMPLETED",
+      "payload": {
+        "agent_id": "methodology_selector",
+        "agent_type": "sync",
+        "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+        "refs": [
+          "docs/runtime/runtime-architecture.md"
+        ],
+        "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
+        "task_id": "goal_analysis"
+      },
+      "session_id": "ses-a2baef76d1ac",
+      "severity": "INFO",
+      "task_id": "goal_analysis",
+      "timestamp": "2026-07-10T09:16:02.010913+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "methodology_selector",
+      "event_id": "evt-499f51e9fe9c",
+      "event_type": "TASK_DISPATCHED",
+      "payload": {
+        "agent_type": "sync"
+      },
+      "session_id": "ses-933237b0389e",
+      "severity": "INFO",
+      "task_id": "scope",
+      "timestamp": "2026-07-10T09:16:02.010933+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "methodology_selector",
+      "event_id": "evt-f8922c57e2f6",
+      "event_type": "AGENT_INITIALIZED",
+      "payload": {},
+      "session_id": "ses-933237b0389e",
+      "severity": "INFO",
+      "task_id": "scope",
+      "timestamp": "2026-07-10T09:16:02.010937+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "methodology_selector",
+      "event_id": "evt-c14d866e061a",
+      "event_type": "AGENT_RUNNING",
+      "payload": {},
+      "session_id": "ses-933237b0389e",
+      "severity": "INFO",
+      "task_id": "scope",
+      "timestamp": "2026-07-10T09:16:02.010939+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "methodology_selector",
+      "event_id": "evt-f44b75188aac",
+      "event_type": "AGENT_COMPLETED",
+      "payload": {
+        "agent_id": "methodology_selector",
+        "agent_type": "sync",
+        "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+        "refs": [
+          "docs/runtime/runtime-architecture.md"
+        ],
+        "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
+        "task_id": "scope"
+      },
+      "session_id": "ses-933237b0389e",
+      "severity": "INFO",
+      "task_id": "scope",
+      "timestamp": "2026-07-10T09:16:02.010943+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "methodology_selector",
+      "event_id": "evt-459e8b889ff2",
+      "event_type": "TASK_DISPATCHED",
+      "payload": {
+        "agent_type": "sync"
+      },
+      "session_id": "ses-32bd437e708d",
+      "severity": "INFO",
+      "task_id": "methodology_selection",
+      "timestamp": "2026-07-10T09:16:02.010960+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "methodology_selector",
+      "event_id": "evt-13c74e802bd3",
+      "event_type": "AGENT_INITIALIZED",
+      "payload": {},
+      "session_id": "ses-32bd437e708d",
+      "severity": "INFO",
+      "task_id": "methodology_selection",
+      "timestamp": "2026-07-10T09:16:02.010963+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "methodology_selector",
+      "event_id": "evt-8218e9777730",
+      "event_type": "AGENT_RUNNING",
+      "payload": {},
+      "session_id": "ses-32bd437e708d",
+      "severity": "INFO",
+      "task_id": "methodology_selection",
+      "timestamp": "2026-07-10T09:16:02.010966+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "methodology_selector",
+      "event_id": "evt-3ebba4d6706d",
+      "event_type": "AGENT_COMPLETED",
+      "payload": {
+        "agent_id": "methodology_selector",
+        "agent_type": "sync",
+        "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+        "refs": [
+          "docs/runtime/runtime-architecture.md"
+        ],
+        "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
+        "task_id": "methodology_selection"
+      },
+      "session_id": "ses-32bd437e708d",
+      "severity": "INFO",
+      "task_id": "methodology_selection",
+      "timestamp": "2026-07-10T09:16:02.010970+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "evidence_collector",
+      "event_id": "evt-7f86a3e22873",
+      "event_type": "TASK_DISPATCHED",
+      "payload": {
+        "agent_type": "async"
+      },
+      "session_id": "ses-251dcc0e7fea",
+      "severity": "INFO",
+      "task_id": "connector_plan",
+      "timestamp": "2026-07-10T09:16:02.010987+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "evidence_collector",
+      "event_id": "evt-1ae5c4437d7d",
+      "event_type": "AGENT_INITIALIZED",
+      "payload": {},
+      "session_id": "ses-251dcc0e7fea",
+      "severity": "INFO",
+      "task_id": "connector_plan",
+      "timestamp": "2026-07-10T09:16:02.010990+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "evidence_collector",
+      "event_id": "evt-abc193f5308b",
+      "event_type": "AGENT_RUNNING",
+      "payload": {},
+      "session_id": "ses-251dcc0e7fea",
+      "severity": "INFO",
+      "task_id": "connector_plan",
+      "timestamp": "2026-07-10T09:16:02.010993+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "evidence_collector",
+      "event_id": "evt-5a4936fc23a3",
+      "event_type": "AGENT_COMPLETED",
+      "payload": {
+        "agent_id": "evidence_collector",
+        "agent_type": "async",
+        "async_state": "READY_FOR_RESUME",
+        "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+        "refs": [
+          "docs/runtime/runtime-architecture.md",
+          "docs/evidence/evidence-architecture.md"
+        ],
+        "result": "采集并登记证据引用 已由 Runtime 调度完成",
+        "task_id": "connector_plan"
+      },
+      "session_id": "ses-251dcc0e7fea",
+      "severity": "INFO",
+      "task_id": "connector_plan",
+      "timestamp": "2026-07-10T09:16:02.010997+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "parallel_researcher",
+      "event_id": "evt-14abf6226245",
+      "event_type": "TASK_DISPATCHED",
+      "payload": {
+        "agent_type": "parallel"
+      },
+      "session_id": "ses-a460fdf1c271",
+      "severity": "INFO",
+      "task_id": "skill_plan",
+      "timestamp": "2026-07-10T09:16:02.011013+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "parallel_researcher",
+      "event_id": "evt-905203df0bd4",
+      "event_type": "AGENT_INITIALIZED",
+      "payload": {},
+      "session_id": "ses-a460fdf1c271",
+      "severity": "INFO",
+      "task_id": "skill_plan",
+      "timestamp": "2026-07-10T09:16:02.011016+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "parallel_researcher",
+      "event_id": "evt-4fd3151b65e2",
+      "event_type": "AGENT_RUNNING",
+      "payload": {},
+      "session_id": "ses-a460fdf1c271",
+      "severity": "INFO",
+      "task_id": "skill_plan",
+      "timestamp": "2026-07-10T09:16:02.011019+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "parallel_researcher",
+      "event_id": "evt-d08d4ad452a5",
+      "event_type": "AGENT_COMPLETED",
+      "payload": {
+        "agent_id": "parallel_researcher",
+        "agent_type": "parallel",
+        "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+        "parallel_branches": [
+          "branch-a",
+          "branch-b"
+        ],
+        "refs": [
+          "docs/runtime/runtime-architecture.md"
+        ],
+        "result": "并行拆分研究子任务 已由 Runtime 调度完成",
+        "task_id": "skill_plan"
+      },
+      "session_id": "ses-a460fdf1c271",
+      "severity": "INFO",
+      "task_id": "skill_plan",
+      "timestamp": "2026-07-10T09:16:02.011023+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "evidence_collector",
+      "event_id": "evt-24de04572a2a",
+      "event_type": "TASK_DISPATCHED",
+      "payload": {
+        "agent_type": "async"
+      },
+      "session_id": "ses-b749d907b24c",
+      "severity": "INFO",
+      "task_id": "evidence_plan",
+      "timestamp": "2026-07-10T09:16:02.011041+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "evidence_collector",
+      "event_id": "evt-76cf7e949a21",
+      "event_type": "AGENT_INITIALIZED",
+      "payload": {},
+      "session_id": "ses-b749d907b24c",
+      "severity": "INFO",
+      "task_id": "evidence_plan",
+      "timestamp": "2026-07-10T09:16:02.011044+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "evidence_collector",
+      "event_id": "evt-e03370b324e5",
+      "event_type": "AGENT_RUNNING",
+      "payload": {},
+      "session_id": "ses-b749d907b24c",
+      "severity": "INFO",
+      "task_id": "evidence_plan",
+      "timestamp": "2026-07-10T09:16:02.011047+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "evidence_collector",
+      "event_id": "evt-d3a39c2b5c4b",
+      "event_type": "AGENT_COMPLETED",
+      "payload": {
+        "agent_id": "evidence_collector",
+        "agent_type": "async",
+        "async_state": "READY_FOR_RESUME",
+        "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+        "refs": [
+          "docs/runtime/runtime-architecture.md",
+          "docs/evidence/evidence-architecture.md"
+        ],
+        "result": "采集并登记证据引用 已由 Runtime 调度完成",
+        "task_id": "evidence_plan"
+      },
+      "session_id": "ses-b749d907b24c",
+      "severity": "INFO",
+      "task_id": "evidence_plan",
+      "timestamp": "2026-07-10T09:16:02.011052+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "parallel_researcher",
+      "event_id": "evt-0a709a9f6147",
+      "event_type": "TASK_DISPATCHED",
+      "payload": {
+        "agent_type": "parallel"
+      },
+      "session_id": "ses-44af121bdacc",
+      "severity": "INFO",
+      "task_id": "knowledge_graph_plan",
+      "timestamp": "2026-07-10T09:16:02.011069+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "parallel_researcher",
+      "event_id": "evt-ad0d202fd2ce",
+      "event_type": "AGENT_INITIALIZED",
+      "payload": {},
+      "session_id": "ses-44af121bdacc",
+      "severity": "INFO",
+      "task_id": "knowledge_graph_plan",
+      "timestamp": "2026-07-10T09:16:02.011072+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "parallel_researcher",
+      "event_id": "evt-5c9d929ae4bb",
+      "event_type": "AGENT_RUNNING",
+      "payload": {},
+      "session_id": "ses-44af121bdacc",
+      "severity": "INFO",
+      "task_id": "knowledge_graph_plan",
+      "timestamp": "2026-07-10T09:16:02.011075+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "parallel_researcher",
+      "event_id": "evt-8e1a4ee6f2fb",
+      "event_type": "AGENT_COMPLETED",
+      "payload": {
+        "agent_id": "parallel_researcher",
+        "agent_type": "parallel",
+        "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+        "parallel_branches": [
+          "branch-a",
+          "branch-b"
+        ],
+        "refs": [
+          "docs/runtime/runtime-architecture.md"
+        ],
+        "result": "并行拆分研究子任务 已由 Runtime 调度完成",
+        "task_id": "knowledge_graph_plan"
+      },
+      "session_id": "ses-44af121bdacc",
+      "severity": "INFO",
+      "task_id": "knowledge_graph_plan",
+      "timestamp": "2026-07-10T09:16:02.011079+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "report_composer",
+      "event_id": "evt-4b1fe9b05011",
+      "event_type": "TASK_DISPATCHED",
+      "payload": {
+        "agent_type": "sync"
+      },
+      "session_id": "ses-940f19c64e95",
+      "severity": "INFO",
+      "task_id": "score_plan",
+      "timestamp": "2026-07-10T09:16:02.011096+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "report_composer",
+      "event_id": "evt-6b3a944e992f",
+      "event_type": "AGENT_INITIALIZED",
+      "payload": {},
+      "session_id": "ses-940f19c64e95",
+      "severity": "INFO",
+      "task_id": "score_plan",
+      "timestamp": "2026-07-10T09:16:02.011099+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "report_composer",
+      "event_id": "evt-2a47a18b28b2",
+      "event_type": "AGENT_RUNNING",
+      "payload": {},
+      "session_id": "ses-940f19c64e95",
+      "severity": "INFO",
+      "task_id": "score_plan",
+      "timestamp": "2026-07-10T09:16:02.011101+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "report_composer",
+      "event_id": "evt-2c0f13f2ab9c",
+      "event_type": "AGENT_COMPLETED",
+      "payload": {
+        "agent_id": "report_composer",
+        "agent_type": "sync",
+        "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+        "refs": [
+          "docs/runtime/runtime-architecture.md",
+          "templates/report/research-report-template.md"
+        ],
+        "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
+        "task_id": "score_plan"
+      },
+      "session_id": "ses-940f19c64e95",
+      "severity": "INFO",
+      "task_id": "score_plan",
+      "timestamp": "2026-07-10T09:16:02.011105+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "report_composer",
+      "event_id": "evt-7c17f662876e",
+      "event_type": "TASK_DISPATCHED",
+      "payload": {
+        "agent_type": "sync"
+      },
+      "session_id": "ses-fc4f7dcebfb8",
+      "severity": "INFO",
+      "task_id": "report_plan",
+      "timestamp": "2026-07-10T09:16:02.011121+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "report_composer",
+      "event_id": "evt-4c8df0c2784a",
+      "event_type": "AGENT_INITIALIZED",
+      "payload": {},
+      "session_id": "ses-fc4f7dcebfb8",
+      "severity": "INFO",
+      "task_id": "report_plan",
+      "timestamp": "2026-07-10T09:16:02.011124+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "report_composer",
+      "event_id": "evt-db22d8929424",
+      "event_type": "AGENT_RUNNING",
+      "payload": {},
+      "session_id": "ses-fc4f7dcebfb8",
+      "severity": "INFO",
+      "task_id": "report_plan",
+      "timestamp": "2026-07-10T09:16:02.011127+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "report_composer",
+      "event_id": "evt-1e2c6810494a",
+      "event_type": "AGENT_COMPLETED",
+      "payload": {
+        "agent_id": "report_composer",
+        "agent_type": "sync",
+        "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+        "refs": [
+          "docs/runtime/runtime-architecture.md",
+          "templates/report/research-report-template.md"
+        ],
+        "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
+        "task_id": "report_plan"
+      },
+      "session_id": "ses-fc4f7dcebfb8",
+      "severity": "INFO",
+      "task_id": "report_plan",
+      "timestamp": "2026-07-10T09:16:02.011131+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "human_reviewer",
+      "event_id": "evt-6c390513e420",
+      "event_type": "TASK_DISPATCHED",
+      "payload": {
+        "agent_type": "human_in_the_loop"
+      },
+      "session_id": "ses-28725a731f88",
+      "severity": "INFO",
+      "task_id": "review_plan",
+      "timestamp": "2026-07-10T09:16:02.011148+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "human_reviewer",
+      "event_id": "evt-30758ebcffe4",
+      "event_type": "AGENT_INITIALIZED",
+      "payload": {},
+      "session_id": "ses-28725a731f88",
+      "severity": "INFO",
+      "task_id": "review_plan",
+      "timestamp": "2026-07-10T09:16:02.011151+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "human_reviewer",
+      "event_id": "evt-354cdbe5c9c7",
+      "event_type": "AGENT_RUNNING",
+      "payload": {},
+      "session_id": "ses-28725a731f88",
+      "severity": "INFO",
+      "task_id": "review_plan",
+      "timestamp": "2026-07-10T09:16:02.011154+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "human_reviewer",
+      "event_id": "evt-258d4ba84295",
+      "event_type": "AGENT_WAITING_FOR_HUMAN",
+      "payload": {
+        "agent_id": "human_reviewer",
+        "agent_type": "human_in_the_loop",
+        "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+        "human_prompt": "请确认研究边界和证据缺口。",
+        "refs": [
+          "docs/runtime/runtime-architecture.md"
+        ],
+        "result": "人工确认或补充输入 已由 Runtime 调度完成",
+        "task_id": "review_plan"
+      },
+      "session_id": "ses-28725a731f88",
+      "severity": "INFO",
+      "task_id": "review_plan",
+      "timestamp": "2026-07-10T09:16:02.011158+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "report_composer",
+      "event_id": "evt-3f37dcd59052",
+      "event_type": "TASK_DISPATCHED",
+      "payload": {
+        "agent_type": "sync"
+      },
+      "session_id": "ses-3df0d29fd4d8",
+      "severity": "INFO",
+      "task_id": "runtime_plan",
+      "timestamp": "2026-07-10T09:16:02.011174+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "report_composer",
+      "event_id": "evt-acccae2aa9c3",
+      "event_type": "AGENT_INITIALIZED",
+      "payload": {},
+      "session_id": "ses-3df0d29fd4d8",
+      "severity": "INFO",
+      "task_id": "runtime_plan",
+      "timestamp": "2026-07-10T09:16:02.011178+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "report_composer",
+      "event_id": "evt-f4cde849d299",
+      "event_type": "AGENT_RUNNING",
+      "payload": {},
+      "session_id": "ses-3df0d29fd4d8",
+      "severity": "INFO",
+      "task_id": "runtime_plan",
+      "timestamp": "2026-07-10T09:16:02.011180+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": "report_composer",
+      "event_id": "evt-40fc47676aa5",
+      "event_type": "AGENT_COMPLETED",
+      "payload": {
+        "agent_id": "report_composer",
+        "agent_type": "sync",
+        "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+        "refs": [
+          "docs/runtime/runtime-architecture.md",
+          "templates/report/research-report-template.md"
+        ],
+        "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
+        "task_id": "runtime_plan"
+      },
+      "session_id": "ses-3df0d29fd4d8",
+      "severity": "INFO",
+      "task_id": "runtime_plan",
+      "timestamp": "2026-07-10T09:16:02.011184+00:00",
+      "trace_id": null
+    },
+    {
+      "agent_id": null,
+      "event_id": "evt-783b81a798bb",
+      "event_type": "RUNTIME_COMPLETED",
+      "payload": {
+        "runtime_id": "runtime-from-planner-prod-e2e-02-semiconductor",
+        "workflow_id": "workflow-prod-e2e-02-semiconductor"
+      },
+      "session_id": null,
+      "severity": "INFO",
+      "task_id": null,
+      "timestamp": "2026-07-10T09:16:02.011199+00:00",
+      "trace_id": null
+    }
+  ],
+  "final_report": "# Semiconductor Localization Final Research Report\n\n免责声明：仅用于 AIRS 投资研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。\n\n## Investment Thesis\nSemiconductor Localization 的研究价值来自需求驱动、供应链瓶颈和风险反证之间的动态平衡。\n\n## Knowledge Graph\nGraph: kg-prod-e2e-02-semiconductor with 3 nodes and 2 edges.\n\n## Evidence Chain\nEvidence cards: ev-01, ev-02, ev-03, ev-counter-01, ev-counter-02. Counter evidence: ev-counter-01, ev-counter-02.\n\n## Supply Chain Analysis\nNodes: 需求变化, 供给约束, Semiconductor Localization.\n\n## Chokepoint Analysis\nKey chokepoints: 需求变化, 供给约束.\n\n## Score Card\nOverall Score: 69.3 / Quality Gate: CONDITIONAL_PASS.\n\n## Risk Analysis\nSemiconductor Localization 的主要风险来自需求、利润率、政策和证据缺口，需要持续复核。\n\n## Catalyst Analysis\nCatalysts: Semiconductor Localization 订单或招标披露, Semiconductor Localization 政策或监管更新, Semiconductor Localization 产能或良率改善.\n\n## Recommendation Standard\nResearch stance: 可继续研究. Facts/Inference/Assumption/Opinion coverage: {'Fact': 1, 'Inference': 1, 'Assumption': 1, 'Opinion': 1}.\n\n## Final Research Report\n本报告输出研究跟踪框架、证据缺口和复核路径，不输出确定性投资建议、交易指令、目标价或收益承诺。",
+  "kg_state": {
+    "graph": {
+      "chokepoint_analysis": [],
+      "disclaimer": "本图谱仅用于 AIRS 投资研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+      "edges": [
+        {
+          "attributes": {},
+          "confidence": 0.68,
+          "counter_evidence_refs": [
+            "ev-counter-01"
+          ],
+          "directionality": "directed",
+          "edge_id": "edge-topic-claim",
+          "evidence_refs": [
+            "ev-01",
+            "ev-02"
+          ],
+          "from_node": "topic",
+          "missing_evidence": [
+            "connector raw source freshness check"
+          ],
+          "relation_type": "supports",
+          "to_node": "claim"
+        },
+        {
+          "attributes": {},
+          "confidence": 0.58,
+          "counter_evidence_refs": [
+            "ev-01"
+          ],
+          "directionality": "directed",
+          "edge_id": "edge-risk-claim",
+          "evidence_refs": [
+            "ev-counter-01",
+            "ev-counter-02"
+          ],
+          "from_node": "risk",
+          "missing_evidence": [
+            "validated operating metrics"
+          ],
+          "relation_type": "refutes",
+          "to_node": "claim"
+        }
+      ],
+      "evidence_cards": {
+        "ev-01": {
+          "confidence": 0.82,
+          "evidence_id": "ev-01",
+          "evidence_level": "L2",
+          "refutes": [],
+          "source": "connector:news",
+          "supports": [
+            "st-fact-01"
+          ],
+          "title": "Semiconductor Localization demand signal"
+        },
+        "ev-02": {
+          "confidence": 0.74,
+          "evidence_id": "ev-02",
+          "evidence_level": "L2",
+          "refutes": [],
+          "source": "connector:industry",
+          "supports": [
+            "st-infer-01"
+          ],
+          "title": "Semiconductor Localization supply constraint"
+        },
+        "ev-03": {
+          "confidence": 0.58,
+          "evidence_id": "ev-03",
+          "evidence_level": "L3",
+          "refutes": [],
+          "source": "connector:policy",
+          "supports": [
+            "st-assume-01"
+          ],
+          "title": "Semiconductor Localization policy or scenario input"
+        },
+        "ev-counter-01": {
+          "confidence": 0.54,
+          "evidence_id": "ev-counter-01",
+          "evidence_level": "L3",
+          "refutes": [
+            "st-infer-01"
+          ],
+          "source": "connector:news",
+          "supports": [],
+          "title": "counter demand evidence"
+        },
+        "ev-counter-02": {
+          "confidence": 0.51,
+          "evidence_id": "ev-counter-02",
+          "evidence_level": "L3",
+          "refutes": [
+            "st-assume-01"
+          ],
+          "source": "connector:financial",
+          "supports": [],
+          "title": "competition counter evidence"
+        }
+      },
+      "graph_id": "prod-kg-prod-e2e-02-semiconductor",
+      "metadata": {},
+      "methodology_refs": [
+        "docs/methodology/evidence-chain.md",
+        "docs/methodology/supply-chain-chokepoint.md"
+      ],
+      "nodes": [
+        {
+          "attributes": {
+            "case_id": "prod-e2e-02-semiconductor"
+          },
+          "confidence": 0.82,
+          "evidence_bindings": [
+            {
+              "claim_id": "st-fact-01",
+              "evidence_id": "ev-01",
+              "relation": "supports",
+              "strength": "strong"
+            }
+          ],
+          "label": "Semiconductor Localization",
+          "node_id": "topic",
+          "node_type": "industry",
+          "source_refs": [
+            "connector-trace:TRACE-04A4F5E78199"
+          ]
+        },
+        {
+          "attributes": {
+            "statement_type": "Inference"
+          },
+          "confidence": 0.66,
+          "evidence_bindings": [
+            {
+              "claim_id": "st-infer-01",
+              "evidence_id": "ev-02",
+              "relation": "supports",
+              "strength": "medium"
+            },
+            {
+              "claim_id": "st-infer-01",
+              "evidence_id": "ev-counter-01",
+              "relation": "refutes",
+              "strength": "medium"
+            }
+          ],
+          "label": "Semiconductor Localization 的研究价值来自需求驱动、供应链瓶颈和风险反证之间的动态平衡。",
+          "node_id": "claim",
+          "node_type": "claim",
+          "source_refs": [
+            "chain-prod-e2e-02-semiconductor"
+          ]
+        },
+        {
+          "attributes": {
+            "missing_evidence": [
+              "真实订单明细",
+              "产能利用率",
+              "价格时间序列"
+            ]
+          },
+          "confidence": 0.64,
+          "evidence_bindings": [
+            {
+              "claim_id": "st-assume-01",
+              "evidence_id": "ev-counter-02",
+              "relation": "refutes",
+              "strength": "medium"
+            }
+          ],
+          "label": "counter evidence and missing evidence risk",
+          "node_id": "risk",
+          "node_type": "risk",
+          "source_refs": [
+            "chain-prod-e2e-02-semiconductor"
+          ]
+        }
+      ],
+      "path_analysis": [],
+      "research_question": "验证半导体设备与材料链条中的证据采集、KG 整合和委员会审议",
+      "title": "半导体国产替代端到端研究 Production KG",
+      "version": "0.1.0"
+    },
+    "validation": {
+      "errors": [],
+      "passed": true,
+      "warnings": []
+    }
+  },
+  "learning_feedback": {
+    "disclaimer": "仅用于 AIRS 研究质量改进，不构成投资建议",
+    "feedback": [
+      {
+        "disclaimer": "仅用于 AIRS 研究质量改进，不构成投资建议",
+        "evidence_refs": [
+          "ev-01",
+          "ev-02",
+          "ev-03",
+          "ev-counter-01",
+          "ev-counter-02"
+        ],
+        "feedback_id": "FB-0001",
+        "issue_type": "traceability_check",
+        "metadata": {},
+        "observation": "Production E2E verified traceability through planner, runtime, connectors, KG, committee, memory, and learning.",
+        "severity": "low",
+        "source_ref": "prod-e2e-02-semiconductor",
+        "source_type": "production_e2e",
+        "target_module": "report"
+      }
+    ],
+    "governance": {
+      "approval_required": true,
+      "auto_apply": false,
+      "review_agent_gate": "REQUIRED",
+      "rollback_required": true
+    },
+    "learning_id": "learn-prod-e2e-02-semiconductor",
+    "memory_consolidation": {
+      "disclaimer": "仅用于 AIRS 研究质量改进，不构成投资建议",
+      "governance_status": "pending_human_review",
+      "memory_type": "learning_consolidation",
+      "optimization_count": 2,
+      "pattern_count": 1,
+      "retention": "保留规则候选、证据引用和回滚计划；不保留无来源结论。",
+      "rule_count": 1,
+      "source_refs": [
+        "chain-prod-e2e-02-semiconductor",
+        "prod-kg-prod-e2e-02-semiconductor"
+      ]
+    },
+    "optimizations": [
+      {
+        "change_type": "prompt_guardrail",
+        "disclaimer": "仅用于 AIRS 研究质量改进，不构成投资建议",
+        "proposal_id": "PROMPT-RULE-0001",
+        "review_status": "pending_review",
+        "source_rule": "RULE-0001",
+        "summary": "在 Prompt 输出要求中加入证据引用、反方观点和不确定性检查项。",
+        "target": "prompts/"
+      },
+      {
+        "change_type": "score_calibration",
+        "disclaimer": "仅用于 AIRS 研究质量改进，不构成投资建议",
+        "proposal_id": "SCORE-RULE-0001",
+        "review_status": "pending_review",
+        "source_rule": "RULE-0001",
+        "summary": "降低低证据置信度样本权重，提高 Outcome 偏差、反方证据和缺失证据的惩罚权重。",
+        "target": "schemas/score/scorecard.schema.json"
+      }
+    ],
+    "outcomes": [
+      {
+        "disclaimer": "仅用于 AIRS 研究质量改进，不构成投资建议",
+        "evidence_refs": [],
+        "expected_result": "",
+        "horizon": "post_review",
+        "lessons": [],
+        "observed_result": "",
+        "outcome_id": "outcome-prod-e2e-02-semiconductor",
+        "research_ref": "unknown",
+        "variance_level": "medium"
+      }
+    ],
+    "patterns": [
+      {
+        "confidence": 0.6,
+        "description": "report 模块反复出现 traceability_check，需要转化为可评审改进规则。",
+        "disclaimer": "仅用于 AIRS 研究质量改进，不构成投资建议",
+        "evidence_refs": [
+          "ev-01",
+          "ev-02",
+          "ev-03",
+          "ev-counter-01",
+          "ev-counter-02"
+        ],
+        "frequency": 1,
+        "pattern_id": "PAT-0001",
+        "pattern_type": "traceability_check",
+        "severity_mix": {
+          "low": 1
+        },
+        "target_module": "report"
+      }
+    ],
+    "rules": [
+      {
+        "disclaimer": "仅用于 AIRS 研究质量改进，不构成投资建议",
+        "evidence_refs": [
+          "ev-01",
+          "ev-02",
+          "ev-03",
+          "ev-counter-01",
+          "ev-counter-02"
+        ],
+        "pattern_id": "PAT-0001",
+        "rationale": "来源模式 PAT-0001 置信度 0.6，用于降低重复质量缺陷。",
+        "required_review": "human_review_required",
+        "rollback_plan": "若回归测试失败或 Review Agent 拒绝，则保持原规则并归档候选。",
+        "rule_id": "RULE-0001",
+        "rule_text": "当 report 出现 traceability_check 且频次达到 1 次时，必须增加证据复核、反方观点或不确定性标注。",
+        "status": "candidate",
+        "target_module": "report"
+      }
+    ],
+    "source_refs": [
+      "chain-prod-e2e-02-semiconductor",
+      "prod-kg-prod-e2e-02-semiconductor"
+    ]
+  },
+  "memory_write_read": {
+    "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+    "source_ref": "chain-prod-e2e-02-semiconductor",
+    "value": {
+      "committee_decision": {
+        "consensus": {
+          "agreed_points": [
+            "结论必须保留证据引用和不确定性。",
+            "后续 Research Engine 只能执行经 Committee 记录的任务范围。",
+            "任何推荐表述必须符合 Recommendation Schema 的合规边界。"
+          ],
+          "consensus_id": "consensus-aic-plan-prod-e2e-02-semiconductor",
+          "consensus_level": "no_consensus",
+          "decision_threshold": "无 REJECT 且达到至少 6 个角色投票。",
+          "disclaimer": "仅用于 AIRS 投资研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "unresolved_questions": [
+            "关键证据尚未由 Connector 采集验证。",
+            "Scorecard 尚未由 M6 计算。"
+          ]
+        },
+        "decision_id": "decision-aic-plan-prod-e2e-02-semiconductor",
+        "disclaimer": "仅用于 AIRS 投资研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+        "final_recommendation": "允许在限定范围内进入 Research Engine 继续研究，所有结论仅供研究质量控制。",
+        "follow_up_tasks": [
+          "Research Engine 执行证据采集。",
+          "Review Agent 复核 Minority Report。"
+        ],
+        "minority_report": [
+          "Bear Analyst 要求在证据不足时降级结论。"
+        ],
+        "planner_ref": "plan-prod-e2e-02-semiconductor",
+        "research_engine_gate": "BLOCK",
+        "session_id": "aic-plan-prod-e2e-02-semiconductor",
+        "voting_result": {
+          "disclaimer": "仅用于 AIRS 投资研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "outcome": "FAIL",
+          "quorum_met": true,
+          "summary": {
+            "approve": 4,
+            "conditional_approve": 4,
+            "reject": 1
+          },
+          "vote_id": "vote-aic-plan-prod-e2e-02-semiconductor",
+          "votes": [
+            {
+              "rationale": "Semiconductor Localization 的正向命题只有在证据链、供需数据和评分结果一致时才可保留。",
+              "role_id": "bull_analyst",
+              "vote": "APPROVE"
+            },
+            {
+              "rationale": "Semiconductor Localization 的主要风险在于共识交易、数据滞后和替代技术路线，结论必须保留失败情景。",
+              "role_id": "bear_analyst",
+              "vote": "CONDITIONAL_APPROVE"
+            },
+            {
+              "rationale": "财务口径必须区分事实、推断、假设和观点，并与 Recommendation Schema 对齐。",
+              "role_id": "financial_analyst",
+              "vote": "CONDITIONAL_APPROVE"
+            },
+            {
+              "rationale": "产业判断必须复用 M2 方法论和 FEATURE-002 Knowledge Graph，不在 Committee 内重复定义产业图谱。",
+              "role_id": "industry_analyst",
+              "vote": "CONDITIONAL_APPROVE"
+            },
+            {
+              "rationale": "产业专家确认议题需覆盖产业生命周期、供应链卡点、政策驱动和反共识四类既有方法论。",
+              "role_id": "industry_expert",
+              "vote": "APPROVE"
+            },
+            {
+              "rationale": "风险专家要求所有 Final Recommendation 仅表达研究跟踪结论，并保留数据、模型、市场和执行风险。",
+              "role_id": "risk_expert",
+              "vote": "APPROVE"
+            },
+            {
+              "rationale": "组合专家仅评估组合暴露、相关性和优先级，不输出仓位、买卖或交易动作。",
+              "role_id": "portfolio_expert",
+              "vote": "APPROVE"
+            },
+            {
+              "rationale": "证据链必须引用 M3 Evidence Card 和 Evidence Chain，且每个关键命题至少有支持证据和反方证据。",
+              "role_id": "evidence_reviewer",
+              "vote": "REJECT"
+            },
+            {
+              "rationale": "若结论依赖单一景气假设、单一数据源或单一路径外推，必须降级为有条件研究结论。",
+              "role_id": "devils_advocate",
+              "vote": "CONDITIONAL_APPROVE"
+            }
+          ]
+        }
+      },
+      "plan_id": "plan-prod-e2e-02-semiconductor",
+      "scorecard": {
+        "confidence_score": 0.66,
+        "disclaimer": "仅供研究参考，不构成投资建议",
+        "evidence_chain_refs": [
+          "ev-01",
+          "ev-02",
+          "ev-03",
+          "ev-counter-01",
+          "ev-counter-02"
+        ],
+        "methodology_refs": [
+          "docs/score-engine/score-architecture.md"
+        ],
+        "overall_grade": "B",
+        "overall_score": 69.3,
+        "quality_gate": "CONDITIONAL_PASS",
+        "scorecard_id": "score-chain-prod-e2e-02-semiconductor",
+        "scores": [
+          {
+            "raw_score": 66.0,
+            "score_type": "evidence",
+            "weight": 0.45
+          },
+          {
+            "raw_score": 63.0,
+            "score_type": "chokepoint",
+            "weight": 0.35
+          },
+          {
+            "raw_score": 88,
+            "score_type": "risk_control",
+            "weight": 0.2
+          }
+        ]
+      }
+    }
+  },
+  "scorecard": {
+    "confidence_score": 0.66,
+    "disclaimer": "仅供研究参考，不构成投资建议",
+    "evidence_chain_refs": [
+      "ev-01",
+      "ev-02",
+      "ev-03",
+      "ev-counter-01",
+      "ev-counter-02"
+    ],
+    "methodology_refs": [
+      "docs/score-engine/score-architecture.md"
+    ],
+    "overall_grade": "B",
+    "overall_score": 69.3,
+    "quality_gate": "CONDITIONAL_PASS",
+    "scorecard_id": "score-chain-prod-e2e-02-semiconductor",
+    "scores": [
+      {
+        "raw_score": 66.0,
+        "score_type": "evidence",
+        "weight": 0.45
+      },
+      {
+        "raw_score": 63.0,
+        "score_type": "chokepoint",
+        "weight": 0.35
+      },
+      {
+        "raw_score": 88,
+        "score_type": "risk_control",
+        "weight": 0.2
+      }
+    ]
+  },
+  "started_at": "2026-07-10T09:16:02.010816+00:00",
+  "status": "PASS",
+  "title": "半导体国产替代端到端研究"
+}

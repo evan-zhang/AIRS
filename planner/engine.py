@@ -4,6 +4,8 @@ from __future__ import annotations
 
 from typing import Any
 
+from common.contract import CONTRACT_VERSION
+
 from .budget import plan_budget
 from .confidence import plan_confidence
 from .dependency import plan_dependencies
@@ -45,6 +47,7 @@ class AutonomousResearchPlanner:
         runtime = plan_runtime(parsed_goal, workflow, budget)
         plan = {
             "planner_version": "0.1.0",
+            "contract_version": CONTRACT_VERSION,
             "plan_id": f"plan-{parsed_goal['goal_id']}",
             "goal_analysis": parsed_goal,
             "intent_analysis": intent,

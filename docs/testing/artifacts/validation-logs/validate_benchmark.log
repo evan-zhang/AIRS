@@ -1,0 +1,578 @@
+AIRS M7 Benchmark Validation
+============================
+PASS: docs/benchmark/benchmark-architecture.md exists
+PASS: docs/benchmark/benchmark-architecture.md has substantive content
+PASS: docs/benchmark/benchmark-architecture.md has disclaimer
+PASS: docs/benchmark/benchmark-architecture.md avoids forbidden expression: 建议买入
+PASS: docs/benchmark/benchmark-architecture.md avoids forbidden expression: 建议卖出
+PASS: docs/benchmark/benchmark-architecture.md avoids forbidden expression: 保证收益
+PASS: docs/benchmark/benchmark-architecture.md avoids forbidden expression: 保证盈利
+PASS: docs/benchmark/benchmark-lifecycle.md exists
+PASS: docs/benchmark/benchmark-lifecycle.md has substantive content
+PASS: docs/benchmark/benchmark-lifecycle.md has disclaimer
+PASS: docs/benchmark/benchmark-lifecycle.md avoids forbidden expression: 建议买入
+PASS: docs/benchmark/benchmark-lifecycle.md avoids forbidden expression: 建议卖出
+PASS: docs/benchmark/benchmark-lifecycle.md avoids forbidden expression: 保证收益
+PASS: docs/benchmark/benchmark-lifecycle.md avoids forbidden expression: 保证盈利
+PASS: docs/benchmark/benchmark-classification.md exists
+PASS: docs/benchmark/benchmark-classification.md has substantive content
+PASS: docs/benchmark/benchmark-classification.md has disclaimer
+PASS: docs/benchmark/benchmark-classification.md avoids forbidden expression: 建议买入
+PASS: docs/benchmark/benchmark-classification.md avoids forbidden expression: 建议卖出
+PASS: docs/benchmark/benchmark-classification.md avoids forbidden expression: 保证收益
+PASS: docs/benchmark/benchmark-classification.md avoids forbidden expression: 保证盈利
+PASS: docs/benchmark/benchmark-governance.md exists
+PASS: docs/benchmark/benchmark-governance.md has substantive content
+PASS: docs/benchmark/benchmark-governance.md has disclaimer
+PASS: docs/benchmark/benchmark-governance.md avoids forbidden expression: 建议买入
+PASS: docs/benchmark/benchmark-governance.md avoids forbidden expression: 建议卖出
+PASS: docs/benchmark/benchmark-governance.md avoids forbidden expression: 保证收益
+PASS: docs/benchmark/benchmark-governance.md avoids forbidden expression: 保证盈利
+PASS: benchmark/ai/template.md exists
+PASS: benchmark/ai/template.md has substantive content
+PASS: benchmark/ai/template.md has disclaimer
+PASS: benchmark/ai/template.md avoids forbidden expression: 建议买入
+PASS: benchmark/ai/template.md avoids forbidden expression: 建议卖出
+PASS: benchmark/ai/template.md avoids forbidden expression: 保证收益
+PASS: benchmark/ai/template.md avoids forbidden expression: 保证盈利
+PASS: benchmark/ai/template.md includes M3 Evidence
+PASS: benchmark/ai/template.md includes Evidence ID
+PASS: benchmark/ai/template.md includes Evidence Level
+PASS: benchmark/ai/template.md includes Confidence
+PASS: benchmark/ai/template.md includes Weight
+PASS: benchmark/ai/template.md includes M6
+PASS: benchmark/ai/template.md includes Scorecard
+PASS: benchmark/ai/template.md includes Quality Gate
+PASS: benchmark/ai/template.md includes 反方观点
+PASS: benchmark/ai/template.md includes 不确定性
+PASS: benchmark/ai/gold-standard.md exists
+PASS: benchmark/ai/gold-standard.md has substantive content
+PASS: benchmark/ai/gold-standard.md has disclaimer
+PASS: benchmark/ai/gold-standard.md avoids forbidden expression: 建议买入
+PASS: benchmark/ai/gold-standard.md avoids forbidden expression: 建议卖出
+PASS: benchmark/ai/gold-standard.md avoids forbidden expression: 保证收益
+PASS: benchmark/ai/gold-standard.md avoids forbidden expression: 保证盈利
+PASS: benchmark/ai/gold-standard.md includes M3 Evidence
+PASS: benchmark/ai/gold-standard.md includes Evidence ID
+PASS: benchmark/ai/gold-standard.md includes Evidence Level
+PASS: benchmark/ai/gold-standard.md includes Confidence
+PASS: benchmark/ai/gold-standard.md includes Weight
+PASS: benchmark/ai/gold-standard.md includes M6
+PASS: benchmark/ai/gold-standard.md includes Scorecard
+PASS: benchmark/ai/gold-standard.md includes Quality Gate
+PASS: benchmark/ai/gold-standard.md includes 反方观点
+PASS: benchmark/ai/gold-standard.md includes 不确定性
+PASS: benchmark/ai/evaluation-criteria.md exists
+PASS: benchmark/ai/evaluation-criteria.md has substantive content
+PASS: benchmark/ai/evaluation-criteria.md has disclaimer
+PASS: benchmark/ai/evaluation-criteria.md avoids forbidden expression: 建议买入
+PASS: benchmark/ai/evaluation-criteria.md avoids forbidden expression: 建议卖出
+PASS: benchmark/ai/evaluation-criteria.md avoids forbidden expression: 保证收益
+PASS: benchmark/ai/evaluation-criteria.md avoids forbidden expression: 保证盈利
+PASS: benchmark/ai/evaluation-criteria.md includes M3 Evidence
+PASS: benchmark/ai/evaluation-criteria.md includes Evidence ID
+PASS: benchmark/ai/evaluation-criteria.md includes Evidence Level
+PASS: benchmark/ai/evaluation-criteria.md includes Confidence
+PASS: benchmark/ai/evaluation-criteria.md includes Weight
+PASS: benchmark/ai/evaluation-criteria.md includes M6
+PASS: benchmark/ai/evaluation-criteria.md includes Scorecard
+PASS: benchmark/ai/evaluation-criteria.md includes Quality Gate
+PASS: benchmark/ai/evaluation-criteria.md includes 反方观点
+PASS: benchmark/ai/evaluation-criteria.md includes 不确定性
+PASS: benchmark/ai/expected-output.md exists
+PASS: benchmark/ai/expected-output.md has substantive content
+PASS: benchmark/ai/expected-output.md has disclaimer
+PASS: benchmark/ai/expected-output.md avoids forbidden expression: 建议买入
+PASS: benchmark/ai/expected-output.md avoids forbidden expression: 建议卖出
+PASS: benchmark/ai/expected-output.md avoids forbidden expression: 保证收益
+PASS: benchmark/ai/expected-output.md avoids forbidden expression: 保证盈利
+PASS: benchmark/ai/expected-output.md includes M3 Evidence
+PASS: benchmark/ai/expected-output.md includes Evidence ID
+PASS: benchmark/ai/expected-output.md includes Evidence Level
+PASS: benchmark/ai/expected-output.md includes Confidence
+PASS: benchmark/ai/expected-output.md includes Weight
+PASS: benchmark/ai/expected-output.md includes M6
+PASS: benchmark/ai/expected-output.md includes Scorecard
+PASS: benchmark/ai/expected-output.md includes Quality Gate
+PASS: benchmark/ai/expected-output.md includes 反方观点
+PASS: benchmark/ai/expected-output.md includes 不确定性
+PASS: benchmark/ai/failure-cases.md exists
+PASS: benchmark/ai/failure-cases.md has substantive content
+PASS: benchmark/ai/failure-cases.md has disclaimer
+PASS: benchmark/ai/failure-cases.md avoids forbidden expression: 建议买入
+PASS: benchmark/ai/failure-cases.md avoids forbidden expression: 建议卖出
+PASS: benchmark/ai/failure-cases.md avoids forbidden expression: 保证收益
+PASS: benchmark/ai/failure-cases.md avoids forbidden expression: 保证盈利
+PASS: benchmark/ai/failure-cases.md includes M3 Evidence
+PASS: benchmark/ai/failure-cases.md includes Evidence ID
+PASS: benchmark/ai/failure-cases.md includes Evidence Level
+PASS: benchmark/ai/failure-cases.md includes Confidence
+PASS: benchmark/ai/failure-cases.md includes Weight
+PASS: benchmark/ai/failure-cases.md includes M6
+PASS: benchmark/ai/failure-cases.md includes Scorecard
+PASS: benchmark/ai/failure-cases.md includes Quality Gate
+PASS: benchmark/ai/failure-cases.md includes 反方观点
+PASS: benchmark/ai/failure-cases.md includes 不确定性
+PASS: benchmark/semiconductor/template.md exists
+PASS: benchmark/semiconductor/template.md has substantive content
+PASS: benchmark/semiconductor/template.md has disclaimer
+PASS: benchmark/semiconductor/template.md avoids forbidden expression: 建议买入
+PASS: benchmark/semiconductor/template.md avoids forbidden expression: 建议卖出
+PASS: benchmark/semiconductor/template.md avoids forbidden expression: 保证收益
+PASS: benchmark/semiconductor/template.md avoids forbidden expression: 保证盈利
+PASS: benchmark/semiconductor/template.md includes M3 Evidence
+PASS: benchmark/semiconductor/template.md includes Evidence ID
+PASS: benchmark/semiconductor/template.md includes Evidence Level
+PASS: benchmark/semiconductor/template.md includes Confidence
+PASS: benchmark/semiconductor/template.md includes Weight
+PASS: benchmark/semiconductor/template.md includes M6
+PASS: benchmark/semiconductor/template.md includes Scorecard
+PASS: benchmark/semiconductor/template.md includes Quality Gate
+PASS: benchmark/semiconductor/template.md includes 反方观点
+PASS: benchmark/semiconductor/template.md includes 不确定性
+PASS: benchmark/semiconductor/gold-standard.md exists
+PASS: benchmark/semiconductor/gold-standard.md has substantive content
+PASS: benchmark/semiconductor/gold-standard.md has disclaimer
+PASS: benchmark/semiconductor/gold-standard.md avoids forbidden expression: 建议买入
+PASS: benchmark/semiconductor/gold-standard.md avoids forbidden expression: 建议卖出
+PASS: benchmark/semiconductor/gold-standard.md avoids forbidden expression: 保证收益
+PASS: benchmark/semiconductor/gold-standard.md avoids forbidden expression: 保证盈利
+PASS: benchmark/semiconductor/gold-standard.md includes M3 Evidence
+PASS: benchmark/semiconductor/gold-standard.md includes Evidence ID
+PASS: benchmark/semiconductor/gold-standard.md includes Evidence Level
+PASS: benchmark/semiconductor/gold-standard.md includes Confidence
+PASS: benchmark/semiconductor/gold-standard.md includes Weight
+PASS: benchmark/semiconductor/gold-standard.md includes M6
+PASS: benchmark/semiconductor/gold-standard.md includes Scorecard
+PASS: benchmark/semiconductor/gold-standard.md includes Quality Gate
+PASS: benchmark/semiconductor/gold-standard.md includes 反方观点
+PASS: benchmark/semiconductor/gold-standard.md includes 不确定性
+PASS: benchmark/semiconductor/evaluation-criteria.md exists
+PASS: benchmark/semiconductor/evaluation-criteria.md has substantive content
+PASS: benchmark/semiconductor/evaluation-criteria.md has disclaimer
+PASS: benchmark/semiconductor/evaluation-criteria.md avoids forbidden expression: 建议买入
+PASS: benchmark/semiconductor/evaluation-criteria.md avoids forbidden expression: 建议卖出
+PASS: benchmark/semiconductor/evaluation-criteria.md avoids forbidden expression: 保证收益
+PASS: benchmark/semiconductor/evaluation-criteria.md avoids forbidden expression: 保证盈利
+PASS: benchmark/semiconductor/evaluation-criteria.md includes M3 Evidence
+PASS: benchmark/semiconductor/evaluation-criteria.md includes Evidence ID
+PASS: benchmark/semiconductor/evaluation-criteria.md includes Evidence Level
+PASS: benchmark/semiconductor/evaluation-criteria.md includes Confidence
+PASS: benchmark/semiconductor/evaluation-criteria.md includes Weight
+PASS: benchmark/semiconductor/evaluation-criteria.md includes M6
+PASS: benchmark/semiconductor/evaluation-criteria.md includes Scorecard
+PASS: benchmark/semiconductor/evaluation-criteria.md includes Quality Gate
+PASS: benchmark/semiconductor/evaluation-criteria.md includes 反方观点
+PASS: benchmark/semiconductor/evaluation-criteria.md includes 不确定性
+PASS: benchmark/semiconductor/expected-output.md exists
+PASS: benchmark/semiconductor/expected-output.md has substantive content
+PASS: benchmark/semiconductor/expected-output.md has disclaimer
+PASS: benchmark/semiconductor/expected-output.md avoids forbidden expression: 建议买入
+PASS: benchmark/semiconductor/expected-output.md avoids forbidden expression: 建议卖出
+PASS: benchmark/semiconductor/expected-output.md avoids forbidden expression: 保证收益
+PASS: benchmark/semiconductor/expected-output.md avoids forbidden expression: 保证盈利
+PASS: benchmark/semiconductor/expected-output.md includes M3 Evidence
+PASS: benchmark/semiconductor/expected-output.md includes Evidence ID
+PASS: benchmark/semiconductor/expected-output.md includes Evidence Level
+PASS: benchmark/semiconductor/expected-output.md includes Confidence
+PASS: benchmark/semiconductor/expected-output.md includes Weight
+PASS: benchmark/semiconductor/expected-output.md includes M6
+PASS: benchmark/semiconductor/expected-output.md includes Scorecard
+PASS: benchmark/semiconductor/expected-output.md includes Quality Gate
+PASS: benchmark/semiconductor/expected-output.md includes 反方观点
+PASS: benchmark/semiconductor/expected-output.md includes 不确定性
+PASS: benchmark/semiconductor/failure-cases.md exists
+PASS: benchmark/semiconductor/failure-cases.md has substantive content
+PASS: benchmark/semiconductor/failure-cases.md has disclaimer
+PASS: benchmark/semiconductor/failure-cases.md avoids forbidden expression: 建议买入
+PASS: benchmark/semiconductor/failure-cases.md avoids forbidden expression: 建议卖出
+PASS: benchmark/semiconductor/failure-cases.md avoids forbidden expression: 保证收益
+PASS: benchmark/semiconductor/failure-cases.md avoids forbidden expression: 保证盈利
+PASS: benchmark/semiconductor/failure-cases.md includes M3 Evidence
+PASS: benchmark/semiconductor/failure-cases.md includes Evidence ID
+PASS: benchmark/semiconductor/failure-cases.md includes Evidence Level
+PASS: benchmark/semiconductor/failure-cases.md includes Confidence
+PASS: benchmark/semiconductor/failure-cases.md includes Weight
+PASS: benchmark/semiconductor/failure-cases.md includes M6
+PASS: benchmark/semiconductor/failure-cases.md includes Scorecard
+PASS: benchmark/semiconductor/failure-cases.md includes Quality Gate
+PASS: benchmark/semiconductor/failure-cases.md includes 反方观点
+PASS: benchmark/semiconductor/failure-cases.md includes 不确定性
+PASS: benchmark/innovative-drug/template.md exists
+PASS: benchmark/innovative-drug/template.md has substantive content
+PASS: benchmark/innovative-drug/template.md has disclaimer
+PASS: benchmark/innovative-drug/template.md avoids forbidden expression: 建议买入
+PASS: benchmark/innovative-drug/template.md avoids forbidden expression: 建议卖出
+PASS: benchmark/innovative-drug/template.md avoids forbidden expression: 保证收益
+PASS: benchmark/innovative-drug/template.md avoids forbidden expression: 保证盈利
+PASS: benchmark/innovative-drug/template.md includes M3 Evidence
+PASS: benchmark/innovative-drug/template.md includes Evidence ID
+PASS: benchmark/innovative-drug/template.md includes Evidence Level
+PASS: benchmark/innovative-drug/template.md includes Confidence
+PASS: benchmark/innovative-drug/template.md includes Weight
+PASS: benchmark/innovative-drug/template.md includes M6
+PASS: benchmark/innovative-drug/template.md includes Scorecard
+PASS: benchmark/innovative-drug/template.md includes Quality Gate
+PASS: benchmark/innovative-drug/template.md includes 反方观点
+PASS: benchmark/innovative-drug/template.md includes 不确定性
+PASS: benchmark/innovative-drug/gold-standard.md exists
+PASS: benchmark/innovative-drug/gold-standard.md has substantive content
+PASS: benchmark/innovative-drug/gold-standard.md has disclaimer
+PASS: benchmark/innovative-drug/gold-standard.md avoids forbidden expression: 建议买入
+PASS: benchmark/innovative-drug/gold-standard.md avoids forbidden expression: 建议卖出
+PASS: benchmark/innovative-drug/gold-standard.md avoids forbidden expression: 保证收益
+PASS: benchmark/innovative-drug/gold-standard.md avoids forbidden expression: 保证盈利
+PASS: benchmark/innovative-drug/gold-standard.md includes M3 Evidence
+PASS: benchmark/innovative-drug/gold-standard.md includes Evidence ID
+PASS: benchmark/innovative-drug/gold-standard.md includes Evidence Level
+PASS: benchmark/innovative-drug/gold-standard.md includes Confidence
+PASS: benchmark/innovative-drug/gold-standard.md includes Weight
+PASS: benchmark/innovative-drug/gold-standard.md includes M6
+PASS: benchmark/innovative-drug/gold-standard.md includes Scorecard
+PASS: benchmark/innovative-drug/gold-standard.md includes Quality Gate
+PASS: benchmark/innovative-drug/gold-standard.md includes 反方观点
+PASS: benchmark/innovative-drug/gold-standard.md includes 不确定性
+PASS: benchmark/innovative-drug/evaluation-criteria.md exists
+PASS: benchmark/innovative-drug/evaluation-criteria.md has substantive content
+PASS: benchmark/innovative-drug/evaluation-criteria.md has disclaimer
+PASS: benchmark/innovative-drug/evaluation-criteria.md avoids forbidden expression: 建议买入
+PASS: benchmark/innovative-drug/evaluation-criteria.md avoids forbidden expression: 建议卖出
+PASS: benchmark/innovative-drug/evaluation-criteria.md avoids forbidden expression: 保证收益
+PASS: benchmark/innovative-drug/evaluation-criteria.md avoids forbidden expression: 保证盈利
+PASS: benchmark/innovative-drug/evaluation-criteria.md includes M3 Evidence
+PASS: benchmark/innovative-drug/evaluation-criteria.md includes Evidence ID
+PASS: benchmark/innovative-drug/evaluation-criteria.md includes Evidence Level
+PASS: benchmark/innovative-drug/evaluation-criteria.md includes Confidence
+PASS: benchmark/innovative-drug/evaluation-criteria.md includes Weight
+PASS: benchmark/innovative-drug/evaluation-criteria.md includes M6
+PASS: benchmark/innovative-drug/evaluation-criteria.md includes Scorecard
+PASS: benchmark/innovative-drug/evaluation-criteria.md includes Quality Gate
+PASS: benchmark/innovative-drug/evaluation-criteria.md includes 反方观点
+PASS: benchmark/innovative-drug/evaluation-criteria.md includes 不确定性
+PASS: benchmark/innovative-drug/expected-output.md exists
+PASS: benchmark/innovative-drug/expected-output.md has substantive content
+PASS: benchmark/innovative-drug/expected-output.md has disclaimer
+PASS: benchmark/innovative-drug/expected-output.md avoids forbidden expression: 建议买入
+PASS: benchmark/innovative-drug/expected-output.md avoids forbidden expression: 建议卖出
+PASS: benchmark/innovative-drug/expected-output.md avoids forbidden expression: 保证收益
+PASS: benchmark/innovative-drug/expected-output.md avoids forbidden expression: 保证盈利
+PASS: benchmark/innovative-drug/expected-output.md includes M3 Evidence
+PASS: benchmark/innovative-drug/expected-output.md includes Evidence ID
+PASS: benchmark/innovative-drug/expected-output.md includes Evidence Level
+PASS: benchmark/innovative-drug/expected-output.md includes Confidence
+PASS: benchmark/innovative-drug/expected-output.md includes Weight
+PASS: benchmark/innovative-drug/expected-output.md includes M6
+PASS: benchmark/innovative-drug/expected-output.md includes Scorecard
+PASS: benchmark/innovative-drug/expected-output.md includes Quality Gate
+PASS: benchmark/innovative-drug/expected-output.md includes 反方观点
+PASS: benchmark/innovative-drug/expected-output.md includes 不确定性
+PASS: benchmark/innovative-drug/failure-cases.md exists
+PASS: benchmark/innovative-drug/failure-cases.md has substantive content
+PASS: benchmark/innovative-drug/failure-cases.md has disclaimer
+PASS: benchmark/innovative-drug/failure-cases.md avoids forbidden expression: 建议买入
+PASS: benchmark/innovative-drug/failure-cases.md avoids forbidden expression: 建议卖出
+PASS: benchmark/innovative-drug/failure-cases.md avoids forbidden expression: 保证收益
+PASS: benchmark/innovative-drug/failure-cases.md avoids forbidden expression: 保证盈利
+PASS: benchmark/innovative-drug/failure-cases.md includes M3 Evidence
+PASS: benchmark/innovative-drug/failure-cases.md includes Evidence ID
+PASS: benchmark/innovative-drug/failure-cases.md includes Evidence Level
+PASS: benchmark/innovative-drug/failure-cases.md includes Confidence
+PASS: benchmark/innovative-drug/failure-cases.md includes Weight
+PASS: benchmark/innovative-drug/failure-cases.md includes M6
+PASS: benchmark/innovative-drug/failure-cases.md includes Scorecard
+PASS: benchmark/innovative-drug/failure-cases.md includes Quality Gate
+PASS: benchmark/innovative-drug/failure-cases.md includes 反方观点
+PASS: benchmark/innovative-drug/failure-cases.md includes 不确定性
+PASS: benchmark/robotics/template.md exists
+PASS: benchmark/robotics/template.md has substantive content
+PASS: benchmark/robotics/template.md has disclaimer
+PASS: benchmark/robotics/template.md avoids forbidden expression: 建议买入
+PASS: benchmark/robotics/template.md avoids forbidden expression: 建议卖出
+PASS: benchmark/robotics/template.md avoids forbidden expression: 保证收益
+PASS: benchmark/robotics/template.md avoids forbidden expression: 保证盈利
+PASS: benchmark/robotics/template.md includes M3 Evidence
+PASS: benchmark/robotics/template.md includes Evidence ID
+PASS: benchmark/robotics/template.md includes Evidence Level
+PASS: benchmark/robotics/template.md includes Confidence
+PASS: benchmark/robotics/template.md includes Weight
+PASS: benchmark/robotics/template.md includes M6
+PASS: benchmark/robotics/template.md includes Scorecard
+PASS: benchmark/robotics/template.md includes Quality Gate
+PASS: benchmark/robotics/template.md includes 反方观点
+PASS: benchmark/robotics/template.md includes 不确定性
+PASS: benchmark/robotics/gold-standard.md exists
+PASS: benchmark/robotics/gold-standard.md has substantive content
+PASS: benchmark/robotics/gold-standard.md has disclaimer
+PASS: benchmark/robotics/gold-standard.md avoids forbidden expression: 建议买入
+PASS: benchmark/robotics/gold-standard.md avoids forbidden expression: 建议卖出
+PASS: benchmark/robotics/gold-standard.md avoids forbidden expression: 保证收益
+PASS: benchmark/robotics/gold-standard.md avoids forbidden expression: 保证盈利
+PASS: benchmark/robotics/gold-standard.md includes M3 Evidence
+PASS: benchmark/robotics/gold-standard.md includes Evidence ID
+PASS: benchmark/robotics/gold-standard.md includes Evidence Level
+PASS: benchmark/robotics/gold-standard.md includes Confidence
+PASS: benchmark/robotics/gold-standard.md includes Weight
+PASS: benchmark/robotics/gold-standard.md includes M6
+PASS: benchmark/robotics/gold-standard.md includes Scorecard
+PASS: benchmark/robotics/gold-standard.md includes Quality Gate
+PASS: benchmark/robotics/gold-standard.md includes 反方观点
+PASS: benchmark/robotics/gold-standard.md includes 不确定性
+PASS: benchmark/robotics/evaluation-criteria.md exists
+PASS: benchmark/robotics/evaluation-criteria.md has substantive content
+PASS: benchmark/robotics/evaluation-criteria.md has disclaimer
+PASS: benchmark/robotics/evaluation-criteria.md avoids forbidden expression: 建议买入
+PASS: benchmark/robotics/evaluation-criteria.md avoids forbidden expression: 建议卖出
+PASS: benchmark/robotics/evaluation-criteria.md avoids forbidden expression: 保证收益
+PASS: benchmark/robotics/evaluation-criteria.md avoids forbidden expression: 保证盈利
+PASS: benchmark/robotics/evaluation-criteria.md includes M3 Evidence
+PASS: benchmark/robotics/evaluation-criteria.md includes Evidence ID
+PASS: benchmark/robotics/evaluation-criteria.md includes Evidence Level
+PASS: benchmark/robotics/evaluation-criteria.md includes Confidence
+PASS: benchmark/robotics/evaluation-criteria.md includes Weight
+PASS: benchmark/robotics/evaluation-criteria.md includes M6
+PASS: benchmark/robotics/evaluation-criteria.md includes Scorecard
+PASS: benchmark/robotics/evaluation-criteria.md includes Quality Gate
+PASS: benchmark/robotics/evaluation-criteria.md includes 反方观点
+PASS: benchmark/robotics/evaluation-criteria.md includes 不确定性
+PASS: benchmark/robotics/expected-output.md exists
+PASS: benchmark/robotics/expected-output.md has substantive content
+PASS: benchmark/robotics/expected-output.md has disclaimer
+PASS: benchmark/robotics/expected-output.md avoids forbidden expression: 建议买入
+PASS: benchmark/robotics/expected-output.md avoids forbidden expression: 建议卖出
+PASS: benchmark/robotics/expected-output.md avoids forbidden expression: 保证收益
+PASS: benchmark/robotics/expected-output.md avoids forbidden expression: 保证盈利
+PASS: benchmark/robotics/expected-output.md includes M3 Evidence
+PASS: benchmark/robotics/expected-output.md includes Evidence ID
+PASS: benchmark/robotics/expected-output.md includes Evidence Level
+PASS: benchmark/robotics/expected-output.md includes Confidence
+PASS: benchmark/robotics/expected-output.md includes Weight
+PASS: benchmark/robotics/expected-output.md includes M6
+PASS: benchmark/robotics/expected-output.md includes Scorecard
+PASS: benchmark/robotics/expected-output.md includes Quality Gate
+PASS: benchmark/robotics/expected-output.md includes 反方观点
+PASS: benchmark/robotics/expected-output.md includes 不确定性
+PASS: benchmark/robotics/failure-cases.md exists
+PASS: benchmark/robotics/failure-cases.md has substantive content
+PASS: benchmark/robotics/failure-cases.md has disclaimer
+PASS: benchmark/robotics/failure-cases.md avoids forbidden expression: 建议买入
+PASS: benchmark/robotics/failure-cases.md avoids forbidden expression: 建议卖出
+PASS: benchmark/robotics/failure-cases.md avoids forbidden expression: 保证收益
+PASS: benchmark/robotics/failure-cases.md avoids forbidden expression: 保证盈利
+PASS: benchmark/robotics/failure-cases.md includes M3 Evidence
+PASS: benchmark/robotics/failure-cases.md includes Evidence ID
+PASS: benchmark/robotics/failure-cases.md includes Evidence Level
+PASS: benchmark/robotics/failure-cases.md includes Confidence
+PASS: benchmark/robotics/failure-cases.md includes Weight
+PASS: benchmark/robotics/failure-cases.md includes M6
+PASS: benchmark/robotics/failure-cases.md includes Scorecard
+PASS: benchmark/robotics/failure-cases.md includes Quality Gate
+PASS: benchmark/robotics/failure-cases.md includes 反方观点
+PASS: benchmark/robotics/failure-cases.md includes 不确定性
+PASS: benchmark/new-energy/template.md exists
+PASS: benchmark/new-energy/template.md has substantive content
+PASS: benchmark/new-energy/template.md has disclaimer
+PASS: benchmark/new-energy/template.md avoids forbidden expression: 建议买入
+PASS: benchmark/new-energy/template.md avoids forbidden expression: 建议卖出
+PASS: benchmark/new-energy/template.md avoids forbidden expression: 保证收益
+PASS: benchmark/new-energy/template.md avoids forbidden expression: 保证盈利
+PASS: benchmark/new-energy/template.md includes M3 Evidence
+PASS: benchmark/new-energy/template.md includes Evidence ID
+PASS: benchmark/new-energy/template.md includes Evidence Level
+PASS: benchmark/new-energy/template.md includes Confidence
+PASS: benchmark/new-energy/template.md includes Weight
+PASS: benchmark/new-energy/template.md includes M6
+PASS: benchmark/new-energy/template.md includes Scorecard
+PASS: benchmark/new-energy/template.md includes Quality Gate
+PASS: benchmark/new-energy/template.md includes 反方观点
+PASS: benchmark/new-energy/template.md includes 不确定性
+PASS: benchmark/new-energy/gold-standard.md exists
+PASS: benchmark/new-energy/gold-standard.md has substantive content
+PASS: benchmark/new-energy/gold-standard.md has disclaimer
+PASS: benchmark/new-energy/gold-standard.md avoids forbidden expression: 建议买入
+PASS: benchmark/new-energy/gold-standard.md avoids forbidden expression: 建议卖出
+PASS: benchmark/new-energy/gold-standard.md avoids forbidden expression: 保证收益
+PASS: benchmark/new-energy/gold-standard.md avoids forbidden expression: 保证盈利
+PASS: benchmark/new-energy/gold-standard.md includes M3 Evidence
+PASS: benchmark/new-energy/gold-standard.md includes Evidence ID
+PASS: benchmark/new-energy/gold-standard.md includes Evidence Level
+PASS: benchmark/new-energy/gold-standard.md includes Confidence
+PASS: benchmark/new-energy/gold-standard.md includes Weight
+PASS: benchmark/new-energy/gold-standard.md includes M6
+PASS: benchmark/new-energy/gold-standard.md includes Scorecard
+PASS: benchmark/new-energy/gold-standard.md includes Quality Gate
+PASS: benchmark/new-energy/gold-standard.md includes 反方观点
+PASS: benchmark/new-energy/gold-standard.md includes 不确定性
+PASS: benchmark/new-energy/evaluation-criteria.md exists
+PASS: benchmark/new-energy/evaluation-criteria.md has substantive content
+PASS: benchmark/new-energy/evaluation-criteria.md has disclaimer
+PASS: benchmark/new-energy/evaluation-criteria.md avoids forbidden expression: 建议买入
+PASS: benchmark/new-energy/evaluation-criteria.md avoids forbidden expression: 建议卖出
+PASS: benchmark/new-energy/evaluation-criteria.md avoids forbidden expression: 保证收益
+PASS: benchmark/new-energy/evaluation-criteria.md avoids forbidden expression: 保证盈利
+PASS: benchmark/new-energy/evaluation-criteria.md includes M3 Evidence
+PASS: benchmark/new-energy/evaluation-criteria.md includes Evidence ID
+PASS: benchmark/new-energy/evaluation-criteria.md includes Evidence Level
+PASS: benchmark/new-energy/evaluation-criteria.md includes Confidence
+PASS: benchmark/new-energy/evaluation-criteria.md includes Weight
+PASS: benchmark/new-energy/evaluation-criteria.md includes M6
+PASS: benchmark/new-energy/evaluation-criteria.md includes Scorecard
+PASS: benchmark/new-energy/evaluation-criteria.md includes Quality Gate
+PASS: benchmark/new-energy/evaluation-criteria.md includes 反方观点
+PASS: benchmark/new-energy/evaluation-criteria.md includes 不确定性
+PASS: benchmark/new-energy/expected-output.md exists
+PASS: benchmark/new-energy/expected-output.md has substantive content
+PASS: benchmark/new-energy/expected-output.md has disclaimer
+PASS: benchmark/new-energy/expected-output.md avoids forbidden expression: 建议买入
+PASS: benchmark/new-energy/expected-output.md avoids forbidden expression: 建议卖出
+PASS: benchmark/new-energy/expected-output.md avoids forbidden expression: 保证收益
+PASS: benchmark/new-energy/expected-output.md avoids forbidden expression: 保证盈利
+PASS: benchmark/new-energy/expected-output.md includes M3 Evidence
+PASS: benchmark/new-energy/expected-output.md includes Evidence ID
+PASS: benchmark/new-energy/expected-output.md includes Evidence Level
+PASS: benchmark/new-energy/expected-output.md includes Confidence
+PASS: benchmark/new-energy/expected-output.md includes Weight
+PASS: benchmark/new-energy/expected-output.md includes M6
+PASS: benchmark/new-energy/expected-output.md includes Scorecard
+PASS: benchmark/new-energy/expected-output.md includes Quality Gate
+PASS: benchmark/new-energy/expected-output.md includes 反方观点
+PASS: benchmark/new-energy/expected-output.md includes 不确定性
+PASS: benchmark/new-energy/failure-cases.md exists
+PASS: benchmark/new-energy/failure-cases.md has substantive content
+PASS: benchmark/new-energy/failure-cases.md has disclaimer
+PASS: benchmark/new-energy/failure-cases.md avoids forbidden expression: 建议买入
+PASS: benchmark/new-energy/failure-cases.md avoids forbidden expression: 建议卖出
+PASS: benchmark/new-energy/failure-cases.md avoids forbidden expression: 保证收益
+PASS: benchmark/new-energy/failure-cases.md avoids forbidden expression: 保证盈利
+PASS: benchmark/new-energy/failure-cases.md includes M3 Evidence
+PASS: benchmark/new-energy/failure-cases.md includes Evidence ID
+PASS: benchmark/new-energy/failure-cases.md includes Evidence Level
+PASS: benchmark/new-energy/failure-cases.md includes Confidence
+PASS: benchmark/new-energy/failure-cases.md includes Weight
+PASS: benchmark/new-energy/failure-cases.md includes M6
+PASS: benchmark/new-energy/failure-cases.md includes Scorecard
+PASS: benchmark/new-energy/failure-cases.md includes Quality Gate
+PASS: benchmark/new-energy/failure-cases.md includes 反方观点
+PASS: benchmark/new-energy/failure-cases.md includes 不确定性
+PASS: benchmark/general/template.md exists
+PASS: benchmark/general/template.md has substantive content
+PASS: benchmark/general/template.md has disclaimer
+PASS: benchmark/general/template.md avoids forbidden expression: 建议买入
+PASS: benchmark/general/template.md avoids forbidden expression: 建议卖出
+PASS: benchmark/general/template.md avoids forbidden expression: 保证收益
+PASS: benchmark/general/template.md avoids forbidden expression: 保证盈利
+PASS: benchmark/general/template.md includes M3 Evidence
+PASS: benchmark/general/template.md includes Evidence ID
+PASS: benchmark/general/template.md includes Evidence Level
+PASS: benchmark/general/template.md includes Confidence
+PASS: benchmark/general/template.md includes Weight
+PASS: benchmark/general/template.md includes M6
+PASS: benchmark/general/template.md includes Scorecard
+PASS: benchmark/general/template.md includes Quality Gate
+PASS: benchmark/general/template.md includes 反方观点
+PASS: benchmark/general/template.md includes 不确定性
+PASS: benchmark/general/gold-standard.md exists
+PASS: benchmark/general/gold-standard.md has substantive content
+PASS: benchmark/general/gold-standard.md has disclaimer
+PASS: benchmark/general/gold-standard.md avoids forbidden expression: 建议买入
+PASS: benchmark/general/gold-standard.md avoids forbidden expression: 建议卖出
+PASS: benchmark/general/gold-standard.md avoids forbidden expression: 保证收益
+PASS: benchmark/general/gold-standard.md avoids forbidden expression: 保证盈利
+PASS: benchmark/general/gold-standard.md includes M3 Evidence
+PASS: benchmark/general/gold-standard.md includes Evidence ID
+PASS: benchmark/general/gold-standard.md includes Evidence Level
+PASS: benchmark/general/gold-standard.md includes Confidence
+PASS: benchmark/general/gold-standard.md includes Weight
+PASS: benchmark/general/gold-standard.md includes M6
+PASS: benchmark/general/gold-standard.md includes Scorecard
+PASS: benchmark/general/gold-standard.md includes Quality Gate
+PASS: benchmark/general/gold-standard.md includes 反方观点
+PASS: benchmark/general/gold-standard.md includes 不确定性
+PASS: benchmark/general/evaluation-criteria.md exists
+PASS: benchmark/general/evaluation-criteria.md has substantive content
+PASS: benchmark/general/evaluation-criteria.md has disclaimer
+PASS: benchmark/general/evaluation-criteria.md avoids forbidden expression: 建议买入
+PASS: benchmark/general/evaluation-criteria.md avoids forbidden expression: 建议卖出
+PASS: benchmark/general/evaluation-criteria.md avoids forbidden expression: 保证收益
+PASS: benchmark/general/evaluation-criteria.md avoids forbidden expression: 保证盈利
+PASS: benchmark/general/evaluation-criteria.md includes M3 Evidence
+PASS: benchmark/general/evaluation-criteria.md includes Evidence ID
+PASS: benchmark/general/evaluation-criteria.md includes Evidence Level
+PASS: benchmark/general/evaluation-criteria.md includes Confidence
+PASS: benchmark/general/evaluation-criteria.md includes Weight
+PASS: benchmark/general/evaluation-criteria.md includes M6
+PASS: benchmark/general/evaluation-criteria.md includes Scorecard
+PASS: benchmark/general/evaluation-criteria.md includes Quality Gate
+PASS: benchmark/general/evaluation-criteria.md includes 反方观点
+PASS: benchmark/general/evaluation-criteria.md includes 不确定性
+PASS: benchmark/general/expected-output.md exists
+PASS: benchmark/general/expected-output.md has substantive content
+PASS: benchmark/general/expected-output.md has disclaimer
+PASS: benchmark/general/expected-output.md avoids forbidden expression: 建议买入
+PASS: benchmark/general/expected-output.md avoids forbidden expression: 建议卖出
+PASS: benchmark/general/expected-output.md avoids forbidden expression: 保证收益
+PASS: benchmark/general/expected-output.md avoids forbidden expression: 保证盈利
+PASS: benchmark/general/expected-output.md includes M3 Evidence
+PASS: benchmark/general/expected-output.md includes Evidence ID
+PASS: benchmark/general/expected-output.md includes Evidence Level
+PASS: benchmark/general/expected-output.md includes Confidence
+PASS: benchmark/general/expected-output.md includes Weight
+PASS: benchmark/general/expected-output.md includes M6
+PASS: benchmark/general/expected-output.md includes Scorecard
+PASS: benchmark/general/expected-output.md includes Quality Gate
+PASS: benchmark/general/expected-output.md includes 反方观点
+PASS: benchmark/general/expected-output.md includes 不确定性
+PASS: benchmark/general/failure-cases.md exists
+PASS: benchmark/general/failure-cases.md has substantive content
+PASS: benchmark/general/failure-cases.md has disclaimer
+PASS: benchmark/general/failure-cases.md avoids forbidden expression: 建议买入
+PASS: benchmark/general/failure-cases.md avoids forbidden expression: 建议卖出
+PASS: benchmark/general/failure-cases.md avoids forbidden expression: 保证收益
+PASS: benchmark/general/failure-cases.md avoids forbidden expression: 保证盈利
+PASS: benchmark/general/failure-cases.md includes M3 Evidence
+PASS: benchmark/general/failure-cases.md includes Evidence ID
+PASS: benchmark/general/failure-cases.md includes Evidence Level
+PASS: benchmark/general/failure-cases.md includes Confidence
+PASS: benchmark/general/failure-cases.md includes Weight
+PASS: benchmark/general/failure-cases.md includes M6
+PASS: benchmark/general/failure-cases.md includes Scorecard
+PASS: benchmark/general/failure-cases.md includes Quality Gate
+PASS: benchmark/general/failure-cases.md includes 反方观点
+PASS: benchmark/general/failure-cases.md includes 不确定性
+PASS: schemas/benchmark/benchmark.schema.json exists
+PASS: schemas/benchmark/benchmark.schema.json declares $schema
+PASS: schemas/benchmark/benchmark.schema.json top-level type is object
+PASS: schemas/benchmark/benchmark.schema.json has compliance boundary
+PASS: schemas/benchmark/benchmark-result.schema.json exists
+PASS: schemas/benchmark/benchmark-result.schema.json declares $schema
+PASS: schemas/benchmark/benchmark-result.schema.json top-level type is object
+PASS: schemas/benchmark/benchmark-result.schema.json has compliance boundary
+PASS: schemas/benchmark/example.schema.json exists
+PASS: schemas/benchmark/example.schema.json declares $schema
+PASS: schemas/benchmark/example.schema.json top-level type is object
+PASS: schemas/benchmark/example.schema.json has compliance boundary
+PASS: templates/benchmark-case-template.md exists
+PASS: templates/benchmark-case-template.md has substantive content
+PASS: templates/benchmark-case-template.md has disclaimer
+PASS: templates/benchmark-case-template.md avoids forbidden expression: 建议买入
+PASS: templates/benchmark-case-template.md avoids forbidden expression: 建议卖出
+PASS: templates/benchmark-case-template.md avoids forbidden expression: 保证收益
+PASS: templates/benchmark-case-template.md avoids forbidden expression: 保证盈利
+PASS: templates/benchmark-template.md exists
+PASS: templates/benchmark-template.md has substantive content
+PASS: templates/benchmark-template.md has disclaimer
+PASS: templates/benchmark-template.md avoids forbidden expression: 建议买入
+PASS: templates/benchmark-template.md avoids forbidden expression: 建议卖出
+PASS: templates/benchmark-template.md avoids forbidden expression: 保证收益
+PASS: templates/benchmark-template.md avoids forbidden expression: 保证盈利
+PASS: templates/example-template.md exists
+PASS: templates/example-template.md has substantive content
+PASS: templates/example-template.md has disclaimer
+PASS: templates/example-template.md avoids forbidden expression: 建议买入
+PASS: templates/example-template.md avoids forbidden expression: 建议卖出
+PASS: templates/example-template.md avoids forbidden expression: 保证收益
+PASS: templates/example-template.md avoids forbidden expression: 保证盈利
+PASS: schemas/README documents benchmark schema
+PASS: schemas/README documents example schema
+PASS: benchmark template maps M4/M3/M6
+============================
+RESULT: PASS

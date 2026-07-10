@@ -1,0 +1,786 @@
+AIRS FEATURE-010 Autonomous Investment Committee Validation
+===========================================================
+PASS: docs/committee/committee-architecture.md exists
+PASS: docs/committee/committee-architecture.md has substantive content
+PASS: docs/committee/committee-architecture.md has disclaimer
+PASS: docs/committee/committee-architecture.md avoids forbidden expression: 建议买入
+PASS: docs/committee/committee-architecture.md avoids forbidden expression: 建议卖出
+PASS: docs/committee/committee-architecture.md avoids forbidden expression: 保证收益
+PASS: docs/committee/committee-architecture.md avoids forbidden expression: 保证盈利
+PASS: docs/committee/committee-architecture.md avoids forbidden expression: 目标价为
+PASS: docs/committee/committee-architecture.md avoids forbidden expression: 应买入
+PASS: docs/committee/committee-architecture.md avoids forbidden expression: 应卖出
+PASS: docs/committee/committee-architecture.md avoids forbidden expression: 自动交易指令
+PASS: docs/committee/committee-architecture.md references Planner and Research Engine
+PASS: docs/committee/committee-lifecycle.md exists
+PASS: docs/committee/committee-lifecycle.md has substantive content
+PASS: docs/committee/committee-lifecycle.md has disclaimer
+PASS: docs/committee/committee-lifecycle.md avoids forbidden expression: 建议买入
+PASS: docs/committee/committee-lifecycle.md avoids forbidden expression: 建议卖出
+PASS: docs/committee/committee-lifecycle.md avoids forbidden expression: 保证收益
+PASS: docs/committee/committee-lifecycle.md avoids forbidden expression: 保证盈利
+PASS: docs/committee/committee-lifecycle.md avoids forbidden expression: 目标价为
+PASS: docs/committee/committee-lifecycle.md avoids forbidden expression: 应买入
+PASS: docs/committee/committee-lifecycle.md avoids forbidden expression: 应卖出
+PASS: docs/committee/committee-lifecycle.md avoids forbidden expression: 自动交易指令
+PASS: docs/committee/committee-lifecycle.md references Planner and Research Engine
+PASS: docs/committee/role-definitions.md exists
+PASS: docs/committee/role-definitions.md has substantive content
+PASS: docs/committee/role-definitions.md has disclaimer
+PASS: docs/committee/role-definitions.md avoids forbidden expression: 建议买入
+PASS: docs/committee/role-definitions.md avoids forbidden expression: 建议卖出
+PASS: docs/committee/role-definitions.md avoids forbidden expression: 保证收益
+PASS: docs/committee/role-definitions.md avoids forbidden expression: 保证盈利
+PASS: docs/committee/role-definitions.md avoids forbidden expression: 目标价为
+PASS: docs/committee/role-definitions.md avoids forbidden expression: 应买入
+PASS: docs/committee/role-definitions.md avoids forbidden expression: 应卖出
+PASS: docs/committee/role-definitions.md avoids forbidden expression: 自动交易指令
+PASS: docs/committee/role-definitions.md references Planner and Research Engine
+PASS: docs/committee/debate-rules.md exists
+PASS: docs/committee/debate-rules.md has substantive content
+PASS: docs/committee/debate-rules.md has disclaimer
+PASS: docs/committee/debate-rules.md avoids forbidden expression: 建议买入
+PASS: docs/committee/debate-rules.md avoids forbidden expression: 建议卖出
+PASS: docs/committee/debate-rules.md avoids forbidden expression: 保证收益
+PASS: docs/committee/debate-rules.md avoids forbidden expression: 保证盈利
+PASS: docs/committee/debate-rules.md avoids forbidden expression: 目标价为
+PASS: docs/committee/debate-rules.md avoids forbidden expression: 应买入
+PASS: docs/committee/debate-rules.md avoids forbidden expression: 应卖出
+PASS: docs/committee/debate-rules.md avoids forbidden expression: 自动交易指令
+PASS: docs/committee/debate-rules.md references Planner and Research Engine
+PASS: docs/committee/evidence-challenge.md exists
+PASS: docs/committee/evidence-challenge.md has substantive content
+PASS: docs/committee/evidence-challenge.md has disclaimer
+PASS: docs/committee/evidence-challenge.md avoids forbidden expression: 建议买入
+PASS: docs/committee/evidence-challenge.md avoids forbidden expression: 建议卖出
+PASS: docs/committee/evidence-challenge.md avoids forbidden expression: 保证收益
+PASS: docs/committee/evidence-challenge.md avoids forbidden expression: 保证盈利
+PASS: docs/committee/evidence-challenge.md avoids forbidden expression: 目标价为
+PASS: docs/committee/evidence-challenge.md avoids forbidden expression: 应买入
+PASS: docs/committee/evidence-challenge.md avoids forbidden expression: 应卖出
+PASS: docs/committee/evidence-challenge.md avoids forbidden expression: 自动交易指令
+PASS: docs/committee/evidence-challenge.md references Planner and Research Engine
+PASS: docs/committee/counter-argument.md exists
+PASS: docs/committee/counter-argument.md has substantive content
+PASS: docs/committee/counter-argument.md has disclaimer
+PASS: docs/committee/counter-argument.md avoids forbidden expression: 建议买入
+PASS: docs/committee/counter-argument.md avoids forbidden expression: 建议卖出
+PASS: docs/committee/counter-argument.md avoids forbidden expression: 保证收益
+PASS: docs/committee/counter-argument.md avoids forbidden expression: 保证盈利
+PASS: docs/committee/counter-argument.md avoids forbidden expression: 目标价为
+PASS: docs/committee/counter-argument.md avoids forbidden expression: 应买入
+PASS: docs/committee/counter-argument.md avoids forbidden expression: 应卖出
+PASS: docs/committee/counter-argument.md avoids forbidden expression: 自动交易指令
+PASS: docs/committee/counter-argument.md references Planner and Research Engine
+PASS: docs/committee/consensus-building.md exists
+PASS: docs/committee/consensus-building.md has substantive content
+PASS: docs/committee/consensus-building.md has disclaimer
+PASS: docs/committee/consensus-building.md avoids forbidden expression: 建议买入
+PASS: docs/committee/consensus-building.md avoids forbidden expression: 建议卖出
+PASS: docs/committee/consensus-building.md avoids forbidden expression: 保证收益
+PASS: docs/committee/consensus-building.md avoids forbidden expression: 保证盈利
+PASS: docs/committee/consensus-building.md avoids forbidden expression: 目标价为
+PASS: docs/committee/consensus-building.md avoids forbidden expression: 应买入
+PASS: docs/committee/consensus-building.md avoids forbidden expression: 应卖出
+PASS: docs/committee/consensus-building.md avoids forbidden expression: 自动交易指令
+PASS: docs/committee/consensus-building.md references Planner and Research Engine
+PASS: docs/committee/voting-mechanism.md exists
+PASS: docs/committee/voting-mechanism.md has substantive content
+PASS: docs/committee/voting-mechanism.md has disclaimer
+PASS: docs/committee/voting-mechanism.md avoids forbidden expression: 建议买入
+PASS: docs/committee/voting-mechanism.md avoids forbidden expression: 建议卖出
+PASS: docs/committee/voting-mechanism.md avoids forbidden expression: 保证收益
+PASS: docs/committee/voting-mechanism.md avoids forbidden expression: 保证盈利
+PASS: docs/committee/voting-mechanism.md avoids forbidden expression: 目标价为
+PASS: docs/committee/voting-mechanism.md avoids forbidden expression: 应买入
+PASS: docs/committee/voting-mechanism.md avoids forbidden expression: 应卖出
+PASS: docs/committee/voting-mechanism.md avoids forbidden expression: 自动交易指令
+PASS: docs/committee/voting-mechanism.md references Planner and Research Engine
+PASS: docs/committee/minority-report.md exists
+PASS: docs/committee/minority-report.md has substantive content
+PASS: docs/committee/minority-report.md has disclaimer
+PASS: docs/committee/minority-report.md avoids forbidden expression: 建议买入
+PASS: docs/committee/minority-report.md avoids forbidden expression: 建议卖出
+PASS: docs/committee/minority-report.md avoids forbidden expression: 保证收益
+PASS: docs/committee/minority-report.md avoids forbidden expression: 保证盈利
+PASS: docs/committee/minority-report.md avoids forbidden expression: 目标价为
+PASS: docs/committee/minority-report.md avoids forbidden expression: 应买入
+PASS: docs/committee/minority-report.md avoids forbidden expression: 应卖出
+PASS: docs/committee/minority-report.md avoids forbidden expression: 自动交易指令
+PASS: docs/committee/minority-report.md references Planner and Research Engine
+PASS: docs/committee/decision-recorder.md exists
+PASS: docs/committee/decision-recorder.md has substantive content
+PASS: docs/committee/decision-recorder.md has disclaimer
+PASS: docs/committee/decision-recorder.md avoids forbidden expression: 建议买入
+PASS: docs/committee/decision-recorder.md avoids forbidden expression: 建议卖出
+PASS: docs/committee/decision-recorder.md avoids forbidden expression: 保证收益
+PASS: docs/committee/decision-recorder.md avoids forbidden expression: 保证盈利
+PASS: docs/committee/decision-recorder.md avoids forbidden expression: 目标价为
+PASS: docs/committee/decision-recorder.md avoids forbidden expression: 应买入
+PASS: docs/committee/decision-recorder.md avoids forbidden expression: 应卖出
+PASS: docs/committee/decision-recorder.md avoids forbidden expression: 自动交易指令
+PASS: docs/committee/decision-recorder.md references Planner and Research Engine
+PASS: docs/committee/committee-governance.md exists
+PASS: docs/committee/committee-governance.md has substantive content
+PASS: docs/committee/committee-governance.md has disclaimer
+PASS: docs/committee/committee-governance.md avoids forbidden expression: 建议买入
+PASS: docs/committee/committee-governance.md avoids forbidden expression: 建议卖出
+PASS: docs/committee/committee-governance.md avoids forbidden expression: 保证收益
+PASS: docs/committee/committee-governance.md avoids forbidden expression: 保证盈利
+PASS: docs/committee/committee-governance.md avoids forbidden expression: 目标价为
+PASS: docs/committee/committee-governance.md avoids forbidden expression: 应买入
+PASS: docs/committee/committee-governance.md avoids forbidden expression: 应卖出
+PASS: docs/committee/committee-governance.md avoids forbidden expression: 自动交易指令
+PASS: docs/committee/committee-governance.md references Planner and Research Engine
+PASS: docs/committee/committee-review-workflow.md exists
+PASS: docs/committee/committee-review-workflow.md has substantive content
+PASS: docs/committee/committee-review-workflow.md has disclaimer
+PASS: docs/committee/committee-review-workflow.md avoids forbidden expression: 建议买入
+PASS: docs/committee/committee-review-workflow.md avoids forbidden expression: 建议卖出
+PASS: docs/committee/committee-review-workflow.md avoids forbidden expression: 保证收益
+PASS: docs/committee/committee-review-workflow.md avoids forbidden expression: 保证盈利
+PASS: docs/committee/committee-review-workflow.md avoids forbidden expression: 目标价为
+PASS: docs/committee/committee-review-workflow.md avoids forbidden expression: 应买入
+PASS: docs/committee/committee-review-workflow.md avoids forbidden expression: 应卖出
+PASS: docs/committee/committee-review-workflow.md avoids forbidden expression: 自动交易指令
+PASS: docs/committee/committee-review-workflow.md references Planner and Research Engine
+PASS: committee/__init__.py exists
+PASS: committee/__init__.py has substantive content
+PASS: committee/__init__.py avoids forbidden expression: 建议买入
+PASS: committee/__init__.py avoids forbidden expression: 建议卖出
+PASS: committee/__init__.py avoids forbidden expression: 保证收益
+PASS: committee/__init__.py avoids forbidden expression: 保证盈利
+PASS: committee/__init__.py avoids forbidden expression: 目标价为
+PASS: committee/__init__.py avoids forbidden expression: 应买入
+PASS: committee/__init__.py avoids forbidden expression: 应卖出
+PASS: committee/__init__.py avoids forbidden expression: 自动交易指令
+PASS: committee/__init__.py contains committee logic
+PASS: committee/coordinator.py exists
+PASS: committee/coordinator.py has substantive content
+PASS: committee/coordinator.py avoids forbidden expression: 建议买入
+PASS: committee/coordinator.py avoids forbidden expression: 建议卖出
+PASS: committee/coordinator.py avoids forbidden expression: 保证收益
+PASS: committee/coordinator.py avoids forbidden expression: 保证盈利
+PASS: committee/coordinator.py avoids forbidden expression: 目标价为
+PASS: committee/coordinator.py avoids forbidden expression: 应买入
+PASS: committee/coordinator.py avoids forbidden expression: 应卖出
+PASS: committee/coordinator.py avoids forbidden expression: 自动交易指令
+PASS: committee/coordinator.py contains committee logic
+PASS: committee/role_registry.py exists
+PASS: committee/role_registry.py has substantive content
+PASS: committee/role_registry.py avoids forbidden expression: 建议买入
+PASS: committee/role_registry.py avoids forbidden expression: 建议卖出
+PASS: committee/role_registry.py avoids forbidden expression: 保证收益
+PASS: committee/role_registry.py avoids forbidden expression: 保证盈利
+PASS: committee/role_registry.py avoids forbidden expression: 目标价为
+PASS: committee/role_registry.py avoids forbidden expression: 应买入
+PASS: committee/role_registry.py avoids forbidden expression: 应卖出
+PASS: committee/role_registry.py avoids forbidden expression: 自动交易指令
+PASS: committee/role_registry.py contains committee logic
+PASS: committee/analysts.py exists
+PASS: committee/analysts.py has substantive content
+PASS: committee/analysts.py avoids forbidden expression: 建议买入
+PASS: committee/analysts.py avoids forbidden expression: 建议卖出
+PASS: committee/analysts.py avoids forbidden expression: 保证收益
+PASS: committee/analysts.py avoids forbidden expression: 保证盈利
+PASS: committee/analysts.py avoids forbidden expression: 目标价为
+PASS: committee/analysts.py avoids forbidden expression: 应买入
+PASS: committee/analysts.py avoids forbidden expression: 应卖出
+PASS: committee/analysts.py avoids forbidden expression: 自动交易指令
+PASS: committee/analysts.py contains committee logic
+PASS: committee/experts.py exists
+PASS: committee/experts.py has substantive content
+PASS: committee/experts.py avoids forbidden expression: 建议买入
+PASS: committee/experts.py avoids forbidden expression: 建议卖出
+PASS: committee/experts.py avoids forbidden expression: 保证收益
+PASS: committee/experts.py avoids forbidden expression: 保证盈利
+PASS: committee/experts.py avoids forbidden expression: 目标价为
+PASS: committee/experts.py avoids forbidden expression: 应买入
+PASS: committee/experts.py avoids forbidden expression: 应卖出
+PASS: committee/experts.py avoids forbidden expression: 自动交易指令
+PASS: committee/experts.py contains committee logic
+PASS: committee/reviewer.py exists
+PASS: committee/reviewer.py has substantive content
+PASS: committee/reviewer.py avoids forbidden expression: 建议买入
+PASS: committee/reviewer.py avoids forbidden expression: 建议卖出
+PASS: committee/reviewer.py avoids forbidden expression: 保证收益
+PASS: committee/reviewer.py avoids forbidden expression: 保证盈利
+PASS: committee/reviewer.py avoids forbidden expression: 目标价为
+PASS: committee/reviewer.py avoids forbidden expression: 应买入
+PASS: committee/reviewer.py avoids forbidden expression: 应卖出
+PASS: committee/reviewer.py avoids forbidden expression: 自动交易指令
+PASS: committee/reviewer.py contains committee logic
+PASS: committee/moderator.py exists
+PASS: committee/moderator.py has substantive content
+PASS: committee/moderator.py avoids forbidden expression: 建议买入
+PASS: committee/moderator.py avoids forbidden expression: 建议卖出
+PASS: committee/moderator.py avoids forbidden expression: 保证收益
+PASS: committee/moderator.py avoids forbidden expression: 保证盈利
+PASS: committee/moderator.py avoids forbidden expression: 目标价为
+PASS: committee/moderator.py avoids forbidden expression: 应买入
+PASS: committee/moderator.py avoids forbidden expression: 应卖出
+PASS: committee/moderator.py avoids forbidden expression: 自动交易指令
+PASS: committee/moderator.py contains committee logic
+PASS: committee/voting_engine.py exists
+PASS: committee/voting_engine.py has substantive content
+PASS: committee/voting_engine.py avoids forbidden expression: 建议买入
+PASS: committee/voting_engine.py avoids forbidden expression: 建议卖出
+PASS: committee/voting_engine.py avoids forbidden expression: 保证收益
+PASS: committee/voting_engine.py avoids forbidden expression: 保证盈利
+PASS: committee/voting_engine.py avoids forbidden expression: 目标价为
+PASS: committee/voting_engine.py avoids forbidden expression: 应买入
+PASS: committee/voting_engine.py avoids forbidden expression: 应卖出
+PASS: committee/voting_engine.py avoids forbidden expression: 自动交易指令
+PASS: committee/voting_engine.py contains committee logic
+PASS: committee/consensus_engine.py exists
+PASS: committee/consensus_engine.py has substantive content
+PASS: committee/consensus_engine.py avoids forbidden expression: 建议买入
+PASS: committee/consensus_engine.py avoids forbidden expression: 建议卖出
+PASS: committee/consensus_engine.py avoids forbidden expression: 保证收益
+PASS: committee/consensus_engine.py avoids forbidden expression: 保证盈利
+PASS: committee/consensus_engine.py avoids forbidden expression: 目标价为
+PASS: committee/consensus_engine.py avoids forbidden expression: 应买入
+PASS: committee/consensus_engine.py avoids forbidden expression: 应卖出
+PASS: committee/consensus_engine.py avoids forbidden expression: 自动交易指令
+PASS: committee/consensus_engine.py contains committee logic
+PASS: committee/recorder.py exists
+PASS: committee/recorder.py has substantive content
+PASS: committee/recorder.py avoids forbidden expression: 建议买入
+PASS: committee/recorder.py avoids forbidden expression: 建议卖出
+PASS: committee/recorder.py avoids forbidden expression: 保证收益
+PASS: committee/recorder.py avoids forbidden expression: 保证盈利
+PASS: committee/recorder.py avoids forbidden expression: 目标价为
+PASS: committee/recorder.py avoids forbidden expression: 应买入
+PASS: committee/recorder.py avoids forbidden expression: 应卖出
+PASS: committee/recorder.py avoids forbidden expression: 自动交易指令
+PASS: committee/recorder.py contains committee logic
+PASS: committee/README.md exists
+PASS: committee/README.md has substantive content
+PASS: committee/README.md has disclaimer
+PASS: committee/README.md avoids forbidden expression: 建议买入
+PASS: committee/README.md avoids forbidden expression: 建议卖出
+PASS: committee/README.md avoids forbidden expression: 保证收益
+PASS: committee/README.md avoids forbidden expression: 保证盈利
+PASS: committee/README.md avoids forbidden expression: 目标价为
+PASS: committee/README.md avoids forbidden expression: 应买入
+PASS: committee/README.md avoids forbidden expression: 应卖出
+PASS: committee/README.md avoids forbidden expression: 自动交易指令
+PASS: committee/README.md contains committee logic
+PASS: schemas/committee/committee.schema.json exists
+PASS: schemas/committee/committee.schema.json valid JSON
+PASS: schemas/committee/committee.schema.json has compliance language
+PASS: schemas/committee/committee-session.schema.json exists
+PASS: schemas/committee/committee-session.schema.json valid JSON
+PASS: schemas/committee/committee-session.schema.json has compliance language
+PASS: schemas/committee/committee-vote.schema.json exists
+PASS: schemas/committee/committee-vote.schema.json valid JSON
+PASS: schemas/committee/committee-vote.schema.json has compliance language
+PASS: schemas/committee/committee-decision.schema.json exists
+PASS: schemas/committee/committee-decision.schema.json valid JSON
+PASS: schemas/committee/committee-decision.schema.json has compliance language
+PASS: templates/committee/committee-session-template.md exists
+PASS: templates/committee/committee-session-template.md has substantive content
+PASS: templates/committee/committee-session-template.md has disclaimer
+PASS: templates/committee/committee-session-template.md avoids forbidden expression: 建议买入
+PASS: templates/committee/committee-session-template.md avoids forbidden expression: 建议卖出
+PASS: templates/committee/committee-session-template.md avoids forbidden expression: 保证收益
+PASS: templates/committee/committee-session-template.md avoids forbidden expression: 保证盈利
+PASS: templates/committee/committee-session-template.md avoids forbidden expression: 目标价为
+PASS: templates/committee/committee-session-template.md avoids forbidden expression: 应买入
+PASS: templates/committee/committee-session-template.md avoids forbidden expression: 应卖出
+PASS: templates/committee/committee-session-template.md avoids forbidden expression: 自动交易指令
+PASS: templates/committee/committee-decision-template.md exists
+PASS: templates/committee/committee-decision-template.md has substantive content
+PASS: templates/committee/committee-decision-template.md has disclaimer
+PASS: templates/committee/committee-decision-template.md avoids forbidden expression: 建议买入
+PASS: templates/committee/committee-decision-template.md avoids forbidden expression: 建议卖出
+PASS: templates/committee/committee-decision-template.md avoids forbidden expression: 保证收益
+PASS: templates/committee/committee-decision-template.md avoids forbidden expression: 保证盈利
+PASS: templates/committee/committee-decision-template.md avoids forbidden expression: 目标价为
+PASS: templates/committee/committee-decision-template.md avoids forbidden expression: 应买入
+PASS: templates/committee/committee-decision-template.md avoids forbidden expression: 应卖出
+PASS: templates/committee/committee-decision-template.md avoids forbidden expression: 自动交易指令
+PASS: builder/requests/feature-request-autonomous-investment-committee.yaml exists
+PASS: builder/requests/feature-request-autonomous-investment-committee.yaml has substantive content
+PASS: builder/requests/feature-request-autonomous-investment-committee.yaml avoids forbidden expression: 建议买入
+PASS: builder/requests/feature-request-autonomous-investment-committee.yaml avoids forbidden expression: 建议卖出
+PASS: builder/requests/feature-request-autonomous-investment-committee.yaml avoids forbidden expression: 保证收益
+PASS: builder/requests/feature-request-autonomous-investment-committee.yaml avoids forbidden expression: 保证盈利
+PASS: builder/requests/feature-request-autonomous-investment-committee.yaml avoids forbidden expression: 目标价为
+PASS: builder/requests/feature-request-autonomous-investment-committee.yaml avoids forbidden expression: 应买入
+PASS: builder/requests/feature-request-autonomous-investment-committee.yaml avoids forbidden expression: 应卖出
+PASS: builder/requests/feature-request-autonomous-investment-committee.yaml avoids forbidden expression: 自动交易指令
+PASS: builder-output/autonomous-investment-committee/ISSUE.md exists
+PASS: builder-output/autonomous-investment-committee/ISSUE.md has substantive content
+PASS: builder-output/autonomous-investment-committee/ISSUE.md has disclaimer
+PASS: builder-output/autonomous-investment-committee/ISSUE.md avoids forbidden expression: 建议买入
+PASS: builder-output/autonomous-investment-committee/ISSUE.md avoids forbidden expression: 建议卖出
+PASS: builder-output/autonomous-investment-committee/ISSUE.md avoids forbidden expression: 保证收益
+PASS: builder-output/autonomous-investment-committee/ISSUE.md avoids forbidden expression: 保证盈利
+PASS: builder-output/autonomous-investment-committee/ISSUE.md avoids forbidden expression: 目标价为
+PASS: builder-output/autonomous-investment-committee/ISSUE.md avoids forbidden expression: 应买入
+PASS: builder-output/autonomous-investment-committee/ISSUE.md avoids forbidden expression: 应卖出
+PASS: builder-output/autonomous-investment-committee/ISSUE.md avoids forbidden expression: 自动交易指令
+PASS: builder-output/autonomous-investment-committee/ADR.md exists
+PASS: builder-output/autonomous-investment-committee/ADR.md has substantive content
+PASS: builder-output/autonomous-investment-committee/ADR.md has disclaimer
+PASS: builder-output/autonomous-investment-committee/ADR.md avoids forbidden expression: 建议买入
+PASS: builder-output/autonomous-investment-committee/ADR.md avoids forbidden expression: 建议卖出
+PASS: builder-output/autonomous-investment-committee/ADR.md avoids forbidden expression: 保证收益
+PASS: builder-output/autonomous-investment-committee/ADR.md avoids forbidden expression: 保证盈利
+PASS: builder-output/autonomous-investment-committee/ADR.md avoids forbidden expression: 目标价为
+PASS: builder-output/autonomous-investment-committee/ADR.md avoids forbidden expression: 应买入
+PASS: builder-output/autonomous-investment-committee/ADR.md avoids forbidden expression: 应卖出
+PASS: builder-output/autonomous-investment-committee/ADR.md avoids forbidden expression: 自动交易指令
+PASS: builder-output/autonomous-investment-committee/FEATURE_SPEC.md exists
+PASS: builder-output/autonomous-investment-committee/FEATURE_SPEC.md has substantive content
+PASS: builder-output/autonomous-investment-committee/FEATURE_SPEC.md has disclaimer
+PASS: builder-output/autonomous-investment-committee/FEATURE_SPEC.md avoids forbidden expression: 建议买入
+PASS: builder-output/autonomous-investment-committee/FEATURE_SPEC.md avoids forbidden expression: 建议卖出
+PASS: builder-output/autonomous-investment-committee/FEATURE_SPEC.md avoids forbidden expression: 保证收益
+PASS: builder-output/autonomous-investment-committee/FEATURE_SPEC.md avoids forbidden expression: 保证盈利
+PASS: builder-output/autonomous-investment-committee/FEATURE_SPEC.md avoids forbidden expression: 目标价为
+PASS: builder-output/autonomous-investment-committee/FEATURE_SPEC.md avoids forbidden expression: 应买入
+PASS: builder-output/autonomous-investment-committee/FEATURE_SPEC.md avoids forbidden expression: 应卖出
+PASS: builder-output/autonomous-investment-committee/FEATURE_SPEC.md avoids forbidden expression: 自动交易指令
+PASS: builder-output/autonomous-investment-committee/skill/autonomous-investment-committee-skill.md exists
+PASS: builder-output/autonomous-investment-committee/skill/autonomous-investment-committee-skill.md has substantive content
+PASS: builder-output/autonomous-investment-committee/skill/autonomous-investment-committee-skill.md has disclaimer
+PASS: builder-output/autonomous-investment-committee/skill/autonomous-investment-committee-skill.md avoids forbidden expression: 建议买入
+PASS: builder-output/autonomous-investment-committee/skill/autonomous-investment-committee-skill.md avoids forbidden expression: 建议卖出
+PASS: builder-output/autonomous-investment-committee/skill/autonomous-investment-committee-skill.md avoids forbidden expression: 保证收益
+PASS: builder-output/autonomous-investment-committee/skill/autonomous-investment-committee-skill.md avoids forbidden expression: 保证盈利
+PASS: builder-output/autonomous-investment-committee/skill/autonomous-investment-committee-skill.md avoids forbidden expression: 目标价为
+PASS: builder-output/autonomous-investment-committee/skill/autonomous-investment-committee-skill.md avoids forbidden expression: 应买入
+PASS: builder-output/autonomous-investment-committee/skill/autonomous-investment-committee-skill.md avoids forbidden expression: 应卖出
+PASS: builder-output/autonomous-investment-committee/skill/autonomous-investment-committee-skill.md avoids forbidden expression: 自动交易指令
+PASS: builder-output/autonomous-investment-committee/prompt/autonomous-investment-committee-prompt.md exists
+PASS: builder-output/autonomous-investment-committee/prompt/autonomous-investment-committee-prompt.md has substantive content
+PASS: builder-output/autonomous-investment-committee/prompt/autonomous-investment-committee-prompt.md has disclaimer
+PASS: builder-output/autonomous-investment-committee/prompt/autonomous-investment-committee-prompt.md avoids forbidden expression: 建议买入
+PASS: builder-output/autonomous-investment-committee/prompt/autonomous-investment-committee-prompt.md avoids forbidden expression: 建议卖出
+PASS: builder-output/autonomous-investment-committee/prompt/autonomous-investment-committee-prompt.md avoids forbidden expression: 保证收益
+PASS: builder-output/autonomous-investment-committee/prompt/autonomous-investment-committee-prompt.md avoids forbidden expression: 保证盈利
+PASS: builder-output/autonomous-investment-committee/prompt/autonomous-investment-committee-prompt.md avoids forbidden expression: 目标价为
+PASS: builder-output/autonomous-investment-committee/prompt/autonomous-investment-committee-prompt.md avoids forbidden expression: 应买入
+PASS: builder-output/autonomous-investment-committee/prompt/autonomous-investment-committee-prompt.md avoids forbidden expression: 应卖出
+PASS: builder-output/autonomous-investment-committee/prompt/autonomous-investment-committee-prompt.md avoids forbidden expression: 自动交易指令
+PASS: builder-output/autonomous-investment-committee/schema/autonomous-investment-committee.schema.json exists
+PASS: builder-output/autonomous-investment-committee/schema/autonomous-investment-committee.schema.json valid JSON
+PASS: builder-output/autonomous-investment-committee/schema/autonomous-investment-committee.schema.json has compliance language
+PASS: builder-output/autonomous-investment-committee/tests/test-autonomous-investment-committee.md exists
+PASS: builder-output/autonomous-investment-committee/tests/test-autonomous-investment-committee.md has substantive content
+PASS: builder-output/autonomous-investment-committee/tests/test-autonomous-investment-committee.md has disclaimer
+PASS: builder-output/autonomous-investment-committee/tests/test-autonomous-investment-committee.md avoids forbidden expression: 建议买入
+PASS: builder-output/autonomous-investment-committee/tests/test-autonomous-investment-committee.md avoids forbidden expression: 建议卖出
+PASS: builder-output/autonomous-investment-committee/tests/test-autonomous-investment-committee.md avoids forbidden expression: 保证收益
+PASS: builder-output/autonomous-investment-committee/tests/test-autonomous-investment-committee.md avoids forbidden expression: 保证盈利
+PASS: builder-output/autonomous-investment-committee/tests/test-autonomous-investment-committee.md avoids forbidden expression: 目标价为
+PASS: builder-output/autonomous-investment-committee/tests/test-autonomous-investment-committee.md avoids forbidden expression: 应买入
+PASS: builder-output/autonomous-investment-committee/tests/test-autonomous-investment-committee.md avoids forbidden expression: 应卖出
+PASS: builder-output/autonomous-investment-committee/tests/test-autonomous-investment-committee.md avoids forbidden expression: 自动交易指令
+PASS: builder-output/autonomous-investment-committee/benchmark/autonomous-investment-committee-benchmark.md exists
+PASS: builder-output/autonomous-investment-committee/benchmark/autonomous-investment-committee-benchmark.md has substantive content
+PASS: builder-output/autonomous-investment-committee/benchmark/autonomous-investment-committee-benchmark.md has disclaimer
+PASS: builder-output/autonomous-investment-committee/benchmark/autonomous-investment-committee-benchmark.md avoids forbidden expression: 建议买入
+PASS: builder-output/autonomous-investment-committee/benchmark/autonomous-investment-committee-benchmark.md avoids forbidden expression: 建议卖出
+PASS: builder-output/autonomous-investment-committee/benchmark/autonomous-investment-committee-benchmark.md avoids forbidden expression: 保证收益
+PASS: builder-output/autonomous-investment-committee/benchmark/autonomous-investment-committee-benchmark.md avoids forbidden expression: 保证盈利
+PASS: builder-output/autonomous-investment-committee/benchmark/autonomous-investment-committee-benchmark.md avoids forbidden expression: 目标价为
+PASS: builder-output/autonomous-investment-committee/benchmark/autonomous-investment-committee-benchmark.md avoids forbidden expression: 应买入
+PASS: builder-output/autonomous-investment-committee/benchmark/autonomous-investment-committee-benchmark.md avoids forbidden expression: 应卖出
+PASS: builder-output/autonomous-investment-committee/benchmark/autonomous-investment-committee-benchmark.md avoids forbidden expression: 自动交易指令
+PASS: builder-output/autonomous-investment-committee/PR_CHECKLIST.md exists
+PASS: builder-output/autonomous-investment-committee/PR_CHECKLIST.md has substantive content
+PASS: builder-output/autonomous-investment-committee/PR_CHECKLIST.md has disclaimer
+PASS: builder-output/autonomous-investment-committee/PR_CHECKLIST.md avoids forbidden expression: 建议买入
+PASS: builder-output/autonomous-investment-committee/PR_CHECKLIST.md avoids forbidden expression: 建议卖出
+PASS: builder-output/autonomous-investment-committee/PR_CHECKLIST.md avoids forbidden expression: 保证收益
+PASS: builder-output/autonomous-investment-committee/PR_CHECKLIST.md avoids forbidden expression: 保证盈利
+PASS: builder-output/autonomous-investment-committee/PR_CHECKLIST.md avoids forbidden expression: 目标价为
+PASS: builder-output/autonomous-investment-committee/PR_CHECKLIST.md avoids forbidden expression: 应买入
+PASS: builder-output/autonomous-investment-committee/PR_CHECKLIST.md avoids forbidden expression: 应卖出
+PASS: builder-output/autonomous-investment-committee/PR_CHECKLIST.md avoids forbidden expression: 自动交易指令
+PASS: builder-output/autonomous-investment-committee/RELEASE_NOTES.md exists
+PASS: builder-output/autonomous-investment-committee/RELEASE_NOTES.md has substantive content
+PASS: builder-output/autonomous-investment-committee/RELEASE_NOTES.md has disclaimer
+PASS: builder-output/autonomous-investment-committee/RELEASE_NOTES.md avoids forbidden expression: 建议买入
+PASS: builder-output/autonomous-investment-committee/RELEASE_NOTES.md avoids forbidden expression: 建议卖出
+PASS: builder-output/autonomous-investment-committee/RELEASE_NOTES.md avoids forbidden expression: 保证收益
+PASS: builder-output/autonomous-investment-committee/RELEASE_NOTES.md avoids forbidden expression: 保证盈利
+PASS: builder-output/autonomous-investment-committee/RELEASE_NOTES.md avoids forbidden expression: 目标价为
+PASS: builder-output/autonomous-investment-committee/RELEASE_NOTES.md avoids forbidden expression: 应买入
+PASS: builder-output/autonomous-investment-committee/RELEASE_NOTES.md avoids forbidden expression: 应卖出
+PASS: builder-output/autonomous-investment-committee/RELEASE_NOTES.md avoids forbidden expression: 自动交易指令
+PASS: docs/adr/ADR-0010-autonomous-investment-committee.md exists
+PASS: docs/adr/ADR-0010-autonomous-investment-committee.md has substantive content
+PASS: docs/adr/ADR-0010-autonomous-investment-committee.md has disclaimer
+PASS: docs/adr/ADR-0010-autonomous-investment-committee.md avoids forbidden expression: 建议买入
+PASS: docs/adr/ADR-0010-autonomous-investment-committee.md avoids forbidden expression: 建议卖出
+PASS: docs/adr/ADR-0010-autonomous-investment-committee.md avoids forbidden expression: 保证收益
+PASS: docs/adr/ADR-0010-autonomous-investment-committee.md avoids forbidden expression: 保证盈利
+PASS: docs/adr/ADR-0010-autonomous-investment-committee.md avoids forbidden expression: 目标价为
+PASS: docs/adr/ADR-0010-autonomous-investment-committee.md avoids forbidden expression: 应买入
+PASS: docs/adr/ADR-0010-autonomous-investment-committee.md avoids forbidden expression: 应卖出
+PASS: docs/adr/ADR-0010-autonomous-investment-committee.md avoids forbidden expression: 自动交易指令
+PASS: docs/production/M10_COMPLETION_REPORT.md exists
+PASS: docs/production/M10_COMPLETION_REPORT.md has substantive content
+PASS: docs/production/M10_COMPLETION_REPORT.md has disclaimer
+PASS: docs/production/M10_COMPLETION_REPORT.md avoids forbidden expression: 建议买入
+PASS: docs/production/M10_COMPLETION_REPORT.md avoids forbidden expression: 建议卖出
+PASS: docs/production/M10_COMPLETION_REPORT.md avoids forbidden expression: 保证收益
+PASS: docs/production/M10_COMPLETION_REPORT.md avoids forbidden expression: 保证盈利
+PASS: docs/production/M10_COMPLETION_REPORT.md avoids forbidden expression: 目标价为
+PASS: docs/production/M10_COMPLETION_REPORT.md avoids forbidden expression: 应买入
+PASS: docs/production/M10_COMPLETION_REPORT.md avoids forbidden expression: 应卖出
+PASS: docs/production/M10_COMPLETION_REPORT.md avoids forbidden expression: 自动交易指令
+PASS: docs/review/M10_SELF_REVIEW.md exists
+PASS: docs/review/M10_SELF_REVIEW.md has substantive content
+PASS: docs/review/M10_SELF_REVIEW.md has disclaimer
+PASS: docs/review/M10_SELF_REVIEW.md avoids forbidden expression: 建议买入
+PASS: docs/review/M10_SELF_REVIEW.md avoids forbidden expression: 建议卖出
+PASS: docs/review/M10_SELF_REVIEW.md avoids forbidden expression: 保证收益
+PASS: docs/review/M10_SELF_REVIEW.md avoids forbidden expression: 保证盈利
+PASS: docs/review/M10_SELF_REVIEW.md avoids forbidden expression: 目标价为
+PASS: docs/review/M10_SELF_REVIEW.md avoids forbidden expression: 应买入
+PASS: docs/review/M10_SELF_REVIEW.md avoids forbidden expression: 应卖出
+PASS: docs/review/M10_SELF_REVIEW.md avoids forbidden expression: 自动交易指令
+PASS: schemas/README documents committee schemas
+PASS: CHANGELOG documents FEATURE-010
+PASS: committee examples package exists
+PASS: committee/examples/ai_compute.py exists
+PASS: committee/examples/ai_compute.py has substantive content
+PASS: committee/examples/ai_compute.py avoids forbidden expression: 建议买入
+PASS: committee/examples/ai_compute.py avoids forbidden expression: 建议卖出
+PASS: committee/examples/ai_compute.py avoids forbidden expression: 保证收益
+PASS: committee/examples/ai_compute.py avoids forbidden expression: 保证盈利
+PASS: committee/examples/ai_compute.py avoids forbidden expression: 目标价为
+PASS: committee/examples/ai_compute.py avoids forbidden expression: 应买入
+PASS: committee/examples/ai_compute.py avoids forbidden expression: 应卖出
+PASS: committee/examples/ai_compute.py avoids forbidden expression: 自动交易指令
+PASS: committee/examples/ai-compute.md exists
+PASS: committee/examples/ai-compute.md has substantive content
+PASS: committee/examples/ai-compute.md has disclaimer
+PASS: committee/examples/ai-compute.md avoids forbidden expression: 建议买入
+PASS: committee/examples/ai-compute.md avoids forbidden expression: 建议卖出
+PASS: committee/examples/ai-compute.md avoids forbidden expression: 保证收益
+PASS: committee/examples/ai-compute.md avoids forbidden expression: 保证盈利
+PASS: committee/examples/ai-compute.md avoids forbidden expression: 目标价为
+PASS: committee/examples/ai-compute.md avoids forbidden expression: 应买入
+PASS: committee/examples/ai-compute.md avoids forbidden expression: 应卖出
+PASS: committee/examples/ai-compute.md avoids forbidden expression: 自动交易指令
+PASS: committee/examples/ai-compute.md contains Participants
+PASS: committee/examples/ai-compute.md contains Debate Timeline
+PASS: committee/examples/ai-compute.md contains Evidence Review
+PASS: committee/examples/ai-compute.md contains Opinions
+PASS: committee/examples/ai-compute.md contains Unresolved Questions
+PASS: committee/examples/ai-compute.md contains Voting Result
+PASS: committee/examples/ai-compute.md contains Final Recommendation
+PASS: committee/examples/ai-compute.md contains Minority Report
+PASS: committee/examples/ai-compute.md contains Follow-up Tasks
+PASS: committee/examples/ai_compute.py outputs Participants
+PASS: committee/examples/ai_compute.py outputs Debate Timeline
+PASS: committee/examples/ai_compute.py outputs Evidence Review
+PASS: committee/examples/ai_compute.py outputs Opinions
+PASS: committee/examples/ai_compute.py outputs Unresolved Questions
+PASS: committee/examples/ai_compute.py outputs Voting Result
+PASS: committee/examples/ai_compute.py outputs Final Recommendation
+PASS: committee/examples/ai_compute.py outputs Minority Report
+PASS: committee/examples/ai_compute.py outputs Follow-up Tasks
+PASS: committee/examples/ai_compute.py has research engine gate
+PASS: committee/examples/ai_compute.py quorum met
+PASS: committee/examples/ai_compute.py carries disclaimer
+PASS: committee/examples/ai_compute.py avoids forbidden expression: 建议买入
+PASS: committee/examples/ai_compute.py avoids forbidden expression: 建议卖出
+PASS: committee/examples/ai_compute.py avoids forbidden expression: 保证收益
+PASS: committee/examples/ai_compute.py avoids forbidden expression: 保证盈利
+PASS: committee/examples/ai_compute.py avoids forbidden expression: 目标价为
+PASS: committee/examples/ai_compute.py avoids forbidden expression: 应买入
+PASS: committee/examples/ai_compute.py avoids forbidden expression: 应卖出
+PASS: committee/examples/ai_compute.py avoids forbidden expression: 自动交易指令
+PASS: committee/examples/innovative_drug.py exists
+PASS: committee/examples/innovative_drug.py has substantive content
+PASS: committee/examples/innovative_drug.py avoids forbidden expression: 建议买入
+PASS: committee/examples/innovative_drug.py avoids forbidden expression: 建议卖出
+PASS: committee/examples/innovative_drug.py avoids forbidden expression: 保证收益
+PASS: committee/examples/innovative_drug.py avoids forbidden expression: 保证盈利
+PASS: committee/examples/innovative_drug.py avoids forbidden expression: 目标价为
+PASS: committee/examples/innovative_drug.py avoids forbidden expression: 应买入
+PASS: committee/examples/innovative_drug.py avoids forbidden expression: 应卖出
+PASS: committee/examples/innovative_drug.py avoids forbidden expression: 自动交易指令
+PASS: committee/examples/innovative-drug.md exists
+PASS: committee/examples/innovative-drug.md has substantive content
+PASS: committee/examples/innovative-drug.md has disclaimer
+PASS: committee/examples/innovative-drug.md avoids forbidden expression: 建议买入
+PASS: committee/examples/innovative-drug.md avoids forbidden expression: 建议卖出
+PASS: committee/examples/innovative-drug.md avoids forbidden expression: 保证收益
+PASS: committee/examples/innovative-drug.md avoids forbidden expression: 保证盈利
+PASS: committee/examples/innovative-drug.md avoids forbidden expression: 目标价为
+PASS: committee/examples/innovative-drug.md avoids forbidden expression: 应买入
+PASS: committee/examples/innovative-drug.md avoids forbidden expression: 应卖出
+PASS: committee/examples/innovative-drug.md avoids forbidden expression: 自动交易指令
+PASS: committee/examples/innovative-drug.md contains Participants
+PASS: committee/examples/innovative-drug.md contains Debate Timeline
+PASS: committee/examples/innovative-drug.md contains Evidence Review
+PASS: committee/examples/innovative-drug.md contains Opinions
+PASS: committee/examples/innovative-drug.md contains Unresolved Questions
+PASS: committee/examples/innovative-drug.md contains Voting Result
+PASS: committee/examples/innovative-drug.md contains Final Recommendation
+PASS: committee/examples/innovative-drug.md contains Minority Report
+PASS: committee/examples/innovative-drug.md contains Follow-up Tasks
+PASS: committee/examples/innovative_drug.py outputs Participants
+PASS: committee/examples/innovative_drug.py outputs Debate Timeline
+PASS: committee/examples/innovative_drug.py outputs Evidence Review
+PASS: committee/examples/innovative_drug.py outputs Opinions
+PASS: committee/examples/innovative_drug.py outputs Unresolved Questions
+PASS: committee/examples/innovative_drug.py outputs Voting Result
+PASS: committee/examples/innovative_drug.py outputs Final Recommendation
+PASS: committee/examples/innovative_drug.py outputs Minority Report
+PASS: committee/examples/innovative_drug.py outputs Follow-up Tasks
+PASS: committee/examples/innovative_drug.py has research engine gate
+PASS: committee/examples/innovative_drug.py quorum met
+PASS: committee/examples/innovative_drug.py carries disclaimer
+PASS: committee/examples/innovative_drug.py avoids forbidden expression: 建议买入
+PASS: committee/examples/innovative_drug.py avoids forbidden expression: 建议卖出
+PASS: committee/examples/innovative_drug.py avoids forbidden expression: 保证收益
+PASS: committee/examples/innovative_drug.py avoids forbidden expression: 保证盈利
+PASS: committee/examples/innovative_drug.py avoids forbidden expression: 目标价为
+PASS: committee/examples/innovative_drug.py avoids forbidden expression: 应买入
+PASS: committee/examples/innovative_drug.py avoids forbidden expression: 应卖出
+PASS: committee/examples/innovative_drug.py avoids forbidden expression: 自动交易指令
+PASS: committee/examples/semiconductor.py exists
+PASS: committee/examples/semiconductor.py has substantive content
+PASS: committee/examples/semiconductor.py avoids forbidden expression: 建议买入
+PASS: committee/examples/semiconductor.py avoids forbidden expression: 建议卖出
+PASS: committee/examples/semiconductor.py avoids forbidden expression: 保证收益
+PASS: committee/examples/semiconductor.py avoids forbidden expression: 保证盈利
+PASS: committee/examples/semiconductor.py avoids forbidden expression: 目标价为
+PASS: committee/examples/semiconductor.py avoids forbidden expression: 应买入
+PASS: committee/examples/semiconductor.py avoids forbidden expression: 应卖出
+PASS: committee/examples/semiconductor.py avoids forbidden expression: 自动交易指令
+PASS: committee/examples/semiconductor.md exists
+PASS: committee/examples/semiconductor.md has substantive content
+PASS: committee/examples/semiconductor.md has disclaimer
+PASS: committee/examples/semiconductor.md avoids forbidden expression: 建议买入
+PASS: committee/examples/semiconductor.md avoids forbidden expression: 建议卖出
+PASS: committee/examples/semiconductor.md avoids forbidden expression: 保证收益
+PASS: committee/examples/semiconductor.md avoids forbidden expression: 保证盈利
+PASS: committee/examples/semiconductor.md avoids forbidden expression: 目标价为
+PASS: committee/examples/semiconductor.md avoids forbidden expression: 应买入
+PASS: committee/examples/semiconductor.md avoids forbidden expression: 应卖出
+PASS: committee/examples/semiconductor.md avoids forbidden expression: 自动交易指令
+PASS: committee/examples/semiconductor.md contains Participants
+PASS: committee/examples/semiconductor.md contains Debate Timeline
+PASS: committee/examples/semiconductor.md contains Evidence Review
+PASS: committee/examples/semiconductor.md contains Opinions
+PASS: committee/examples/semiconductor.md contains Unresolved Questions
+PASS: committee/examples/semiconductor.md contains Voting Result
+PASS: committee/examples/semiconductor.md contains Final Recommendation
+PASS: committee/examples/semiconductor.md contains Minority Report
+PASS: committee/examples/semiconductor.md contains Follow-up Tasks
+PASS: committee/examples/semiconductor.py outputs Participants
+PASS: committee/examples/semiconductor.py outputs Debate Timeline
+PASS: committee/examples/semiconductor.py outputs Evidence Review
+PASS: committee/examples/semiconductor.py outputs Opinions
+PASS: committee/examples/semiconductor.py outputs Unresolved Questions
+PASS: committee/examples/semiconductor.py outputs Voting Result
+PASS: committee/examples/semiconductor.py outputs Final Recommendation
+PASS: committee/examples/semiconductor.py outputs Minority Report
+PASS: committee/examples/semiconductor.py outputs Follow-up Tasks
+PASS: committee/examples/semiconductor.py has research engine gate
+PASS: committee/examples/semiconductor.py quorum met
+PASS: committee/examples/semiconductor.py carries disclaimer
+PASS: committee/examples/semiconductor.py avoids forbidden expression: 建议买入
+PASS: committee/examples/semiconductor.py avoids forbidden expression: 建议卖出
+PASS: committee/examples/semiconductor.py avoids forbidden expression: 保证收益
+PASS: committee/examples/semiconductor.py avoids forbidden expression: 保证盈利
+PASS: committee/examples/semiconductor.py avoids forbidden expression: 目标价为
+PASS: committee/examples/semiconductor.py avoids forbidden expression: 应买入
+PASS: committee/examples/semiconductor.py avoids forbidden expression: 应卖出
+PASS: committee/examples/semiconductor.py avoids forbidden expression: 自动交易指令
+PASS: committee/examples/robotics.py exists
+PASS: committee/examples/robotics.py has substantive content
+PASS: committee/examples/robotics.py avoids forbidden expression: 建议买入
+PASS: committee/examples/robotics.py avoids forbidden expression: 建议卖出
+PASS: committee/examples/robotics.py avoids forbidden expression: 保证收益
+PASS: committee/examples/robotics.py avoids forbidden expression: 保证盈利
+PASS: committee/examples/robotics.py avoids forbidden expression: 目标价为
+PASS: committee/examples/robotics.py avoids forbidden expression: 应买入
+PASS: committee/examples/robotics.py avoids forbidden expression: 应卖出
+PASS: committee/examples/robotics.py avoids forbidden expression: 自动交易指令
+PASS: committee/examples/robotics.md exists
+PASS: committee/examples/robotics.md has substantive content
+PASS: committee/examples/robotics.md has disclaimer
+PASS: committee/examples/robotics.md avoids forbidden expression: 建议买入
+PASS: committee/examples/robotics.md avoids forbidden expression: 建议卖出
+PASS: committee/examples/robotics.md avoids forbidden expression: 保证收益
+PASS: committee/examples/robotics.md avoids forbidden expression: 保证盈利
+PASS: committee/examples/robotics.md avoids forbidden expression: 目标价为
+PASS: committee/examples/robotics.md avoids forbidden expression: 应买入
+PASS: committee/examples/robotics.md avoids forbidden expression: 应卖出
+PASS: committee/examples/robotics.md avoids forbidden expression: 自动交易指令
+PASS: committee/examples/robotics.md contains Participants
+PASS: committee/examples/robotics.md contains Debate Timeline
+PASS: committee/examples/robotics.md contains Evidence Review
+PASS: committee/examples/robotics.md contains Opinions
+PASS: committee/examples/robotics.md contains Unresolved Questions
+PASS: committee/examples/robotics.md contains Voting Result
+PASS: committee/examples/robotics.md contains Final Recommendation
+PASS: committee/examples/robotics.md contains Minority Report
+PASS: committee/examples/robotics.md contains Follow-up Tasks
+PASS: committee/examples/robotics.py outputs Participants
+PASS: committee/examples/robotics.py outputs Debate Timeline
+PASS: committee/examples/robotics.py outputs Evidence Review
+PASS: committee/examples/robotics.py outputs Opinions
+PASS: committee/examples/robotics.py outputs Unresolved Questions
+PASS: committee/examples/robotics.py outputs Voting Result
+PASS: committee/examples/robotics.py outputs Final Recommendation
+PASS: committee/examples/robotics.py outputs Minority Report
+PASS: committee/examples/robotics.py outputs Follow-up Tasks
+PASS: committee/examples/robotics.py has research engine gate
+PASS: committee/examples/robotics.py quorum met
+PASS: committee/examples/robotics.py carries disclaimer
+PASS: committee/examples/robotics.py avoids forbidden expression: 建议买入
+PASS: committee/examples/robotics.py avoids forbidden expression: 建议卖出
+PASS: committee/examples/robotics.py avoids forbidden expression: 保证收益
+PASS: committee/examples/robotics.py avoids forbidden expression: 保证盈利
+PASS: committee/examples/robotics.py avoids forbidden expression: 目标价为
+PASS: committee/examples/robotics.py avoids forbidden expression: 应买入
+PASS: committee/examples/robotics.py avoids forbidden expression: 应卖出
+PASS: committee/examples/robotics.py avoids forbidden expression: 自动交易指令
+PASS: committee/examples/new_energy.py exists
+PASS: committee/examples/new_energy.py has substantive content
+PASS: committee/examples/new_energy.py avoids forbidden expression: 建议买入
+PASS: committee/examples/new_energy.py avoids forbidden expression: 建议卖出
+PASS: committee/examples/new_energy.py avoids forbidden expression: 保证收益
+PASS: committee/examples/new_energy.py avoids forbidden expression: 保证盈利
+PASS: committee/examples/new_energy.py avoids forbidden expression: 目标价为
+PASS: committee/examples/new_energy.py avoids forbidden expression: 应买入
+PASS: committee/examples/new_energy.py avoids forbidden expression: 应卖出
+PASS: committee/examples/new_energy.py avoids forbidden expression: 自动交易指令
+PASS: committee/examples/new-energy.md exists
+PASS: committee/examples/new-energy.md has substantive content
+PASS: committee/examples/new-energy.md has disclaimer
+PASS: committee/examples/new-energy.md avoids forbidden expression: 建议买入
+PASS: committee/examples/new-energy.md avoids forbidden expression: 建议卖出
+PASS: committee/examples/new-energy.md avoids forbidden expression: 保证收益
+PASS: committee/examples/new-energy.md avoids forbidden expression: 保证盈利
+PASS: committee/examples/new-energy.md avoids forbidden expression: 目标价为
+PASS: committee/examples/new-energy.md avoids forbidden expression: 应买入
+PASS: committee/examples/new-energy.md avoids forbidden expression: 应卖出
+PASS: committee/examples/new-energy.md avoids forbidden expression: 自动交易指令
+PASS: committee/examples/new-energy.md contains Participants
+PASS: committee/examples/new-energy.md contains Debate Timeline
+PASS: committee/examples/new-energy.md contains Evidence Review
+PASS: committee/examples/new-energy.md contains Opinions
+PASS: committee/examples/new-energy.md contains Unresolved Questions
+PASS: committee/examples/new-energy.md contains Voting Result
+PASS: committee/examples/new-energy.md contains Final Recommendation
+PASS: committee/examples/new-energy.md contains Minority Report
+PASS: committee/examples/new-energy.md contains Follow-up Tasks
+PASS: committee/examples/new_energy.py outputs Participants
+PASS: committee/examples/new_energy.py outputs Debate Timeline
+PASS: committee/examples/new_energy.py outputs Evidence Review
+PASS: committee/examples/new_energy.py outputs Opinions
+PASS: committee/examples/new_energy.py outputs Unresolved Questions
+PASS: committee/examples/new_energy.py outputs Voting Result
+PASS: committee/examples/new_energy.py outputs Final Recommendation
+PASS: committee/examples/new_energy.py outputs Minority Report
+PASS: committee/examples/new_energy.py outputs Follow-up Tasks
+PASS: committee/examples/new_energy.py has research engine gate
+PASS: committee/examples/new_energy.py quorum met
+PASS: committee/examples/new_energy.py carries disclaimer
+PASS: committee/examples/new_energy.py avoids forbidden expression: 建议买入
+PASS: committee/examples/new_energy.py avoids forbidden expression: 建议卖出
+PASS: committee/examples/new_energy.py avoids forbidden expression: 保证收益
+PASS: committee/examples/new_energy.py avoids forbidden expression: 保证盈利
+PASS: committee/examples/new_energy.py avoids forbidden expression: 目标价为
+PASS: committee/examples/new_energy.py avoids forbidden expression: 应买入
+PASS: committee/examples/new_energy.py avoids forbidden expression: 应卖出
+PASS: committee/examples/new_energy.py avoids forbidden expression: 自动交易指令
+PASS: committee/examples/hk_stock.py exists
+PASS: committee/examples/hk_stock.py has substantive content
+PASS: committee/examples/hk_stock.py avoids forbidden expression: 建议买入
+PASS: committee/examples/hk_stock.py avoids forbidden expression: 建议卖出
+PASS: committee/examples/hk_stock.py avoids forbidden expression: 保证收益
+PASS: committee/examples/hk_stock.py avoids forbidden expression: 保证盈利
+PASS: committee/examples/hk_stock.py avoids forbidden expression: 目标价为
+PASS: committee/examples/hk_stock.py avoids forbidden expression: 应买入
+PASS: committee/examples/hk_stock.py avoids forbidden expression: 应卖出
+PASS: committee/examples/hk_stock.py avoids forbidden expression: 自动交易指令
+PASS: committee/examples/hk-stock.md exists
+PASS: committee/examples/hk-stock.md has substantive content
+PASS: committee/examples/hk-stock.md has disclaimer
+PASS: committee/examples/hk-stock.md avoids forbidden expression: 建议买入
+PASS: committee/examples/hk-stock.md avoids forbidden expression: 建议卖出
+PASS: committee/examples/hk-stock.md avoids forbidden expression: 保证收益
+PASS: committee/examples/hk-stock.md avoids forbidden expression: 保证盈利
+PASS: committee/examples/hk-stock.md avoids forbidden expression: 目标价为
+PASS: committee/examples/hk-stock.md avoids forbidden expression: 应买入
+PASS: committee/examples/hk-stock.md avoids forbidden expression: 应卖出
+PASS: committee/examples/hk-stock.md avoids forbidden expression: 自动交易指令
+PASS: committee/examples/hk-stock.md contains Participants
+PASS: committee/examples/hk-stock.md contains Debate Timeline
+PASS: committee/examples/hk-stock.md contains Evidence Review
+PASS: committee/examples/hk-stock.md contains Opinions
+PASS: committee/examples/hk-stock.md contains Unresolved Questions
+PASS: committee/examples/hk-stock.md contains Voting Result
+PASS: committee/examples/hk-stock.md contains Final Recommendation
+PASS: committee/examples/hk-stock.md contains Minority Report
+PASS: committee/examples/hk-stock.md contains Follow-up Tasks
+PASS: committee/examples/hk_stock.py outputs Participants
+PASS: committee/examples/hk_stock.py outputs Debate Timeline
+PASS: committee/examples/hk_stock.py outputs Evidence Review
+PASS: committee/examples/hk_stock.py outputs Opinions
+PASS: committee/examples/hk_stock.py outputs Unresolved Questions
+PASS: committee/examples/hk_stock.py outputs Voting Result
+PASS: committee/examples/hk_stock.py outputs Final Recommendation
+PASS: committee/examples/hk_stock.py outputs Minority Report
+PASS: committee/examples/hk_stock.py outputs Follow-up Tasks
+PASS: committee/examples/hk_stock.py has research engine gate
+PASS: committee/examples/hk_stock.py quorum met
+PASS: committee/examples/hk_stock.py carries disclaimer
+PASS: committee/examples/hk_stock.py avoids forbidden expression: 建议买入
+PASS: committee/examples/hk_stock.py avoids forbidden expression: 建议卖出
+PASS: committee/examples/hk_stock.py avoids forbidden expression: 保证收益
+PASS: committee/examples/hk_stock.py avoids forbidden expression: 保证盈利
+PASS: committee/examples/hk_stock.py avoids forbidden expression: 目标价为
+PASS: committee/examples/hk_stock.py avoids forbidden expression: 应买入
+PASS: committee/examples/hk_stock.py avoids forbidden expression: 应卖出
+PASS: committee/examples/hk_stock.py avoids forbidden expression: 自动交易指令
+PASS: AIC position marker exists
+PASS: AIC sits after Planner before Research Engine
+PASS: AIC references existing capability schemas/evidence/evidence-chain.schema.json
+PASS: AIC references existing capability schemas/score/scorecard.schema.json
+PASS: AIC references existing capability schemas/investment/recommendation.schema.json
+PASS: AIC references existing capability docs/runtime/runtime-architecture.md
+PASS: AIC references existing capability docs/orchestrator/orchestrator-architecture.md
+PASS: committee avoids direct data access requests.
+PASS: committee avoids direct data access urllib
+PASS: committee avoids direct data access http.client
+PASS: committee avoids direct data access yfinance
+PASS: committee avoids direct data access longbridge
+PASS: found 21 regression validate scripts
+PASS: validate_benchmark.py PASS
+PASS: validate_builder.py PASS
+PASS: validate_connectors.py PASS
+PASS: validate_e2e.py PASS
+PASS: validate_evaluation.py PASS
+PASS: validate_evidence.py PASS
+PASS: validate_examples.py PASS
+PASS: validate_investment_engine.py PASS
+PASS: validate_knowledge_graph.py PASS
+PASS: validate_m1.py PASS
+PASS: validate_m10.py PASS
+PASS: validate_m11.py PASS
+PASS: validate_m2.py PASS
+PASS: validate_planner.py PASS
+PASS: validate_prompt.py PASS
+PASS: validate_release.py PASS
+PASS: validate_report_generator.py PASS
+PASS: validate_runtime.py PASS
+PASS: validate_score.py PASS
+PASS: validate_skill.py PASS
+PASS: validate_workspace.py PASS
+===========================================================
+RESULT: PASS

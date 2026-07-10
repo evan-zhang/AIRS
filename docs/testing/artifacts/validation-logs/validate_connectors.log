@@ -1,0 +1,453 @@
+AIRS FEATURE-004 Data Connector Framework Validation
+====================================================
+PASS: docs/data-connectors/connector-architecture.md exists
+PASS: docs/data-connectors/connector-architecture.md has substantive content
+PASS: docs/data-connectors/connector-architecture.md has disclaimer
+PASS: docs/data-connectors/connector-architecture.md avoids forbidden expression: 建议买入
+PASS: docs/data-connectors/connector-architecture.md avoids forbidden expression: 建议卖出
+PASS: docs/data-connectors/connector-architecture.md avoids forbidden expression: 保证收益
+PASS: docs/data-connectors/connector-architecture.md avoids forbidden expression: 保证盈利
+PASS: docs/data-connectors/connector-architecture.md avoids forbidden expression: 目标价为
+PASS: docs/data-connectors/connector-architecture.md avoids forbidden expression: 应买入
+PASS: docs/data-connectors/connector-architecture.md avoids forbidden expression: 应卖出
+PASS: docs/data-connectors/connector-architecture.md references Connector
+PASS: docs/data-connectors/connector-architecture.md references Source
+PASS: docs/data-connectors/connector-architecture.md references Trace
+PASS: docs/data-connectors/connector-architecture.md references Evidence
+PASS: docs/data-connectors/connector-lifecycle.md exists
+PASS: docs/data-connectors/connector-lifecycle.md has substantive content
+PASS: docs/data-connectors/connector-lifecycle.md has disclaimer
+PASS: docs/data-connectors/connector-lifecycle.md avoids forbidden expression: 建议买入
+PASS: docs/data-connectors/connector-lifecycle.md avoids forbidden expression: 建议卖出
+PASS: docs/data-connectors/connector-lifecycle.md avoids forbidden expression: 保证收益
+PASS: docs/data-connectors/connector-lifecycle.md avoids forbidden expression: 保证盈利
+PASS: docs/data-connectors/connector-lifecycle.md avoids forbidden expression: 目标价为
+PASS: docs/data-connectors/connector-lifecycle.md avoids forbidden expression: 应买入
+PASS: docs/data-connectors/connector-lifecycle.md avoids forbidden expression: 应卖出
+PASS: docs/data-connectors/connector-lifecycle.md references Connector
+PASS: docs/data-connectors/connector-lifecycle.md references Source
+PASS: docs/data-connectors/connector-lifecycle.md references Trace
+PASS: docs/data-connectors/connector-lifecycle.md references Evidence
+PASS: docs/data-connectors/connector-interface.md exists
+PASS: docs/data-connectors/connector-interface.md has substantive content
+PASS: docs/data-connectors/connector-interface.md has disclaimer
+PASS: docs/data-connectors/connector-interface.md avoids forbidden expression: 建议买入
+PASS: docs/data-connectors/connector-interface.md avoids forbidden expression: 建议卖出
+PASS: docs/data-connectors/connector-interface.md avoids forbidden expression: 保证收益
+PASS: docs/data-connectors/connector-interface.md avoids forbidden expression: 保证盈利
+PASS: docs/data-connectors/connector-interface.md avoids forbidden expression: 目标价为
+PASS: docs/data-connectors/connector-interface.md avoids forbidden expression: 应买入
+PASS: docs/data-connectors/connector-interface.md avoids forbidden expression: 应卖出
+PASS: docs/data-connectors/connector-interface.md references Connector
+PASS: docs/data-connectors/connector-interface.md references Source
+PASS: docs/data-connectors/connector-interface.md references Trace
+PASS: docs/data-connectors/connector-interface.md references Evidence
+PASS: docs/data-connectors/source-priority.md exists
+PASS: docs/data-connectors/source-priority.md has substantive content
+PASS: docs/data-connectors/source-priority.md has disclaimer
+PASS: docs/data-connectors/source-priority.md avoids forbidden expression: 建议买入
+PASS: docs/data-connectors/source-priority.md avoids forbidden expression: 建议卖出
+PASS: docs/data-connectors/source-priority.md avoids forbidden expression: 保证收益
+PASS: docs/data-connectors/source-priority.md avoids forbidden expression: 保证盈利
+PASS: docs/data-connectors/source-priority.md avoids forbidden expression: 目标价为
+PASS: docs/data-connectors/source-priority.md avoids forbidden expression: 应买入
+PASS: docs/data-connectors/source-priority.md avoids forbidden expression: 应卖出
+PASS: docs/data-connectors/source-priority.md references Connector
+PASS: docs/data-connectors/source-priority.md references Source
+PASS: docs/data-connectors/source-priority.md references Trace
+PASS: docs/data-connectors/source-priority.md references Evidence
+PASS: docs/data-connectors/connector-governance.md exists
+PASS: docs/data-connectors/connector-governance.md has substantive content
+PASS: docs/data-connectors/connector-governance.md has disclaimer
+PASS: docs/data-connectors/connector-governance.md avoids forbidden expression: 建议买入
+PASS: docs/data-connectors/connector-governance.md avoids forbidden expression: 建议卖出
+PASS: docs/data-connectors/connector-governance.md avoids forbidden expression: 保证收益
+PASS: docs/data-connectors/connector-governance.md avoids forbidden expression: 保证盈利
+PASS: docs/data-connectors/connector-governance.md avoids forbidden expression: 目标价为
+PASS: docs/data-connectors/connector-governance.md avoids forbidden expression: 应买入
+PASS: docs/data-connectors/connector-governance.md avoids forbidden expression: 应卖出
+PASS: docs/data-connectors/connector-governance.md references Connector
+PASS: docs/data-connectors/connector-governance.md references Source
+PASS: docs/data-connectors/connector-governance.md references Trace
+PASS: docs/data-connectors/connector-governance.md references Evidence
+PASS: data_connectors/__init__.py exists
+PASS: data_connectors/__init__.py contains connector logic
+PASS: data_connectors/registry.py exists
+PASS: data_connectors/registry.py contains connector logic
+PASS: data_connectors/base.py exists
+PASS: data_connectors/base.py contains connector logic
+PASS: data_connectors/auth.py exists
+PASS: data_connectors/auth.py contains connector logic
+PASS: data_connectors/rate_limiter.py exists
+PASS: data_connectors/rate_limiter.py contains connector logic
+PASS: data_connectors/cache.py exists
+PASS: data_connectors/cache.py contains connector logic
+PASS: data_connectors/retry.py exists
+PASS: data_connectors/retry.py contains connector logic
+PASS: data_connectors/normalizer.py exists
+PASS: data_connectors/normalizer.py contains connector logic
+PASS: data_connectors/priority.py exists
+PASS: data_connectors/priority.py contains connector logic
+PASS: data_connectors/health_check.py exists
+PASS: data_connectors/health_check.py contains connector logic
+PASS: data_connectors/README.md exists
+PASS: data_connectors/README.md contains connector logic
+PASS: schemas/connectors/connector.schema.json exists
+PASS: schemas/connectors/connector.schema.json is valid JSON
+PASS: schemas/connectors/connector.schema.json contains source
+PASS: schemas/connectors/connector.schema.json contains url
+PASS: schemas/connectors/connector.schema.json contains timestamp
+PASS: schemas/connectors/connector.schema.json contains version
+PASS: schemas/connectors/connector.schema.json contains trace_id
+PASS: schemas/connectors/connector.schema.json contains 不构成投资建议
+PASS: schemas/connectors/datasource.schema.json exists
+PASS: schemas/connectors/datasource.schema.json is valid JSON
+PASS: schemas/connectors/datasource.schema.json contains source
+PASS: schemas/connectors/datasource.schema.json contains url
+PASS: schemas/connectors/datasource.schema.json contains timestamp
+PASS: schemas/connectors/datasource.schema.json contains version
+PASS: schemas/connectors/datasource.schema.json contains trace_id
+PASS: schemas/connectors/datasource.schema.json contains 不构成投资建议
+PASS: schemas/connectors/connector-result.schema.json exists
+PASS: schemas/connectors/connector-result.schema.json is valid JSON
+PASS: schemas/connectors/connector-result.schema.json contains source
+PASS: schemas/connectors/connector-result.schema.json contains url
+PASS: schemas/connectors/connector-result.schema.json contains timestamp
+PASS: schemas/connectors/connector-result.schema.json contains version
+PASS: schemas/connectors/connector-result.schema.json contains trace_id
+PASS: schemas/connectors/connector-result.schema.json contains 不构成投资建议
+PASS: templates/connectors/connector-template.md exists
+PASS: templates/connectors/connector-template.md has substantive content
+PASS: templates/connectors/connector-template.md has disclaimer
+PASS: templates/connectors/connector-template.md avoids forbidden expression: 建议买入
+PASS: templates/connectors/connector-template.md avoids forbidden expression: 建议卖出
+PASS: templates/connectors/connector-template.md avoids forbidden expression: 保证收益
+PASS: templates/connectors/connector-template.md avoids forbidden expression: 保证盈利
+PASS: templates/connectors/connector-template.md avoids forbidden expression: 目标价为
+PASS: templates/connectors/connector-template.md avoids forbidden expression: 应买入
+PASS: templates/connectors/connector-template.md avoids forbidden expression: 应卖出
+PASS: templates/connectors/connector-config-template.yaml exists
+PASS: templates/connectors/connector-config-template.yaml has substantive content
+PASS: templates/connectors/connector-config-template.yaml has disclaimer
+PASS: templates/connectors/connector-config-template.yaml avoids forbidden expression: 建议买入
+PASS: templates/connectors/connector-config-template.yaml avoids forbidden expression: 建议卖出
+PASS: templates/connectors/connector-config-template.yaml avoids forbidden expression: 保证收益
+PASS: templates/connectors/connector-config-template.yaml avoids forbidden expression: 保证盈利
+PASS: templates/connectors/connector-config-template.yaml avoids forbidden expression: 目标价为
+PASS: templates/connectors/connector-config-template.yaml avoids forbidden expression: 应买入
+PASS: templates/connectors/connector-config-template.yaml avoids forbidden expression: 应卖出
+PASS: templates/connectors/connector-test-template.md exists
+PASS: templates/connectors/connector-test-template.md has substantive content
+PASS: templates/connectors/connector-test-template.md has disclaimer
+PASS: templates/connectors/connector-test-template.md avoids forbidden expression: 建议买入
+PASS: templates/connectors/connector-test-template.md avoids forbidden expression: 建议卖出
+PASS: templates/connectors/connector-test-template.md avoids forbidden expression: 保证收益
+PASS: templates/connectors/connector-test-template.md avoids forbidden expression: 保证盈利
+PASS: templates/connectors/connector-test-template.md avoids forbidden expression: 目标价为
+PASS: templates/connectors/connector-test-template.md avoids forbidden expression: 应买入
+PASS: templates/connectors/connector-test-template.md avoids forbidden expression: 应卖出
+PASS: templates/builder/feature-request-data-connector-framework.yaml exists
+PASS: templates/builder/feature-request-data-connector-framework.yaml has substantive content
+PASS: templates/builder/feature-request-data-connector-framework.yaml has disclaimer
+PASS: templates/builder/feature-request-data-connector-framework.yaml avoids forbidden expression: 建议买入
+PASS: templates/builder/feature-request-data-connector-framework.yaml avoids forbidden expression: 建议卖出
+PASS: templates/builder/feature-request-data-connector-framework.yaml avoids forbidden expression: 保证收益
+PASS: templates/builder/feature-request-data-connector-framework.yaml avoids forbidden expression: 保证盈利
+PASS: templates/builder/feature-request-data-connector-framework.yaml avoids forbidden expression: 目标价为
+PASS: templates/builder/feature-request-data-connector-framework.yaml avoids forbidden expression: 应买入
+PASS: templates/builder/feature-request-data-connector-framework.yaml avoids forbidden expression: 应卖出
+PASS: builder-output/data-connector-framework/ISSUE.md exists
+PASS: builder-output/data-connector-framework/ISSUE.md has substantive content
+PASS: builder-output/data-connector-framework/ISSUE.md has disclaimer
+PASS: builder-output/data-connector-framework/ISSUE.md avoids forbidden expression: 建议买入
+PASS: builder-output/data-connector-framework/ISSUE.md avoids forbidden expression: 建议卖出
+PASS: builder-output/data-connector-framework/ISSUE.md avoids forbidden expression: 保证收益
+PASS: builder-output/data-connector-framework/ISSUE.md avoids forbidden expression: 保证盈利
+PASS: builder-output/data-connector-framework/ISSUE.md avoids forbidden expression: 目标价为
+PASS: builder-output/data-connector-framework/ISSUE.md avoids forbidden expression: 应买入
+PASS: builder-output/data-connector-framework/ISSUE.md avoids forbidden expression: 应卖出
+PASS: builder-output/data-connector-framework/ADR.md exists
+PASS: builder-output/data-connector-framework/ADR.md has substantive content
+PASS: builder-output/data-connector-framework/ADR.md has disclaimer
+PASS: builder-output/data-connector-framework/ADR.md avoids forbidden expression: 建议买入
+PASS: builder-output/data-connector-framework/ADR.md avoids forbidden expression: 建议卖出
+PASS: builder-output/data-connector-framework/ADR.md avoids forbidden expression: 保证收益
+PASS: builder-output/data-connector-framework/ADR.md avoids forbidden expression: 保证盈利
+PASS: builder-output/data-connector-framework/ADR.md avoids forbidden expression: 目标价为
+PASS: builder-output/data-connector-framework/ADR.md avoids forbidden expression: 应买入
+PASS: builder-output/data-connector-framework/ADR.md avoids forbidden expression: 应卖出
+PASS: builder-output/data-connector-framework/FEATURE_SPEC.md exists
+PASS: builder-output/data-connector-framework/FEATURE_SPEC.md has substantive content
+PASS: builder-output/data-connector-framework/FEATURE_SPEC.md has disclaimer
+PASS: builder-output/data-connector-framework/FEATURE_SPEC.md avoids forbidden expression: 建议买入
+PASS: builder-output/data-connector-framework/FEATURE_SPEC.md avoids forbidden expression: 建议卖出
+PASS: builder-output/data-connector-framework/FEATURE_SPEC.md avoids forbidden expression: 保证收益
+PASS: builder-output/data-connector-framework/FEATURE_SPEC.md avoids forbidden expression: 保证盈利
+PASS: builder-output/data-connector-framework/FEATURE_SPEC.md avoids forbidden expression: 目标价为
+PASS: builder-output/data-connector-framework/FEATURE_SPEC.md avoids forbidden expression: 应买入
+PASS: builder-output/data-connector-framework/FEATURE_SPEC.md avoids forbidden expression: 应卖出
+PASS: builder-output/data-connector-framework/skill/data-connector-framework-skill.md exists
+PASS: builder-output/data-connector-framework/skill/data-connector-framework-skill.md has substantive content
+PASS: builder-output/data-connector-framework/skill/data-connector-framework-skill.md has disclaimer
+PASS: builder-output/data-connector-framework/skill/data-connector-framework-skill.md avoids forbidden expression: 建议买入
+PASS: builder-output/data-connector-framework/skill/data-connector-framework-skill.md avoids forbidden expression: 建议卖出
+PASS: builder-output/data-connector-framework/skill/data-connector-framework-skill.md avoids forbidden expression: 保证收益
+PASS: builder-output/data-connector-framework/skill/data-connector-framework-skill.md avoids forbidden expression: 保证盈利
+PASS: builder-output/data-connector-framework/skill/data-connector-framework-skill.md avoids forbidden expression: 目标价为
+PASS: builder-output/data-connector-framework/skill/data-connector-framework-skill.md avoids forbidden expression: 应买入
+PASS: builder-output/data-connector-framework/skill/data-connector-framework-skill.md avoids forbidden expression: 应卖出
+PASS: builder-output/data-connector-framework/prompt/data-connector-framework-prompt.md exists
+PASS: builder-output/data-connector-framework/prompt/data-connector-framework-prompt.md has substantive content
+PASS: builder-output/data-connector-framework/prompt/data-connector-framework-prompt.md has disclaimer
+PASS: builder-output/data-connector-framework/prompt/data-connector-framework-prompt.md avoids forbidden expression: 建议买入
+PASS: builder-output/data-connector-framework/prompt/data-connector-framework-prompt.md avoids forbidden expression: 建议卖出
+PASS: builder-output/data-connector-framework/prompt/data-connector-framework-prompt.md avoids forbidden expression: 保证收益
+PASS: builder-output/data-connector-framework/prompt/data-connector-framework-prompt.md avoids forbidden expression: 保证盈利
+PASS: builder-output/data-connector-framework/prompt/data-connector-framework-prompt.md avoids forbidden expression: 目标价为
+PASS: builder-output/data-connector-framework/prompt/data-connector-framework-prompt.md avoids forbidden expression: 应买入
+PASS: builder-output/data-connector-framework/prompt/data-connector-framework-prompt.md avoids forbidden expression: 应卖出
+PASS: builder-output/data-connector-framework/schema/data-connector-framework.schema.json exists
+PASS: builder-output/data-connector-framework/schema/data-connector-framework.schema.json is valid JSON
+PASS: builder-output/data-connector-framework/tests/test-data-connector-framework.md exists
+PASS: builder-output/data-connector-framework/tests/test-data-connector-framework.md has substantive content
+PASS: builder-output/data-connector-framework/tests/test-data-connector-framework.md has disclaimer
+PASS: builder-output/data-connector-framework/tests/test-data-connector-framework.md avoids forbidden expression: 建议买入
+PASS: builder-output/data-connector-framework/tests/test-data-connector-framework.md avoids forbidden expression: 建议卖出
+PASS: builder-output/data-connector-framework/tests/test-data-connector-framework.md avoids forbidden expression: 保证收益
+PASS: builder-output/data-connector-framework/tests/test-data-connector-framework.md avoids forbidden expression: 保证盈利
+PASS: builder-output/data-connector-framework/tests/test-data-connector-framework.md avoids forbidden expression: 目标价为
+PASS: builder-output/data-connector-framework/tests/test-data-connector-framework.md avoids forbidden expression: 应买入
+PASS: builder-output/data-connector-framework/tests/test-data-connector-framework.md avoids forbidden expression: 应卖出
+PASS: builder-output/data-connector-framework/benchmark/data-connector-framework-benchmark.md exists
+PASS: builder-output/data-connector-framework/benchmark/data-connector-framework-benchmark.md has substantive content
+PASS: builder-output/data-connector-framework/benchmark/data-connector-framework-benchmark.md has disclaimer
+PASS: builder-output/data-connector-framework/benchmark/data-connector-framework-benchmark.md avoids forbidden expression: 建议买入
+PASS: builder-output/data-connector-framework/benchmark/data-connector-framework-benchmark.md avoids forbidden expression: 建议卖出
+PASS: builder-output/data-connector-framework/benchmark/data-connector-framework-benchmark.md avoids forbidden expression: 保证收益
+PASS: builder-output/data-connector-framework/benchmark/data-connector-framework-benchmark.md avoids forbidden expression: 保证盈利
+PASS: builder-output/data-connector-framework/benchmark/data-connector-framework-benchmark.md avoids forbidden expression: 目标价为
+PASS: builder-output/data-connector-framework/benchmark/data-connector-framework-benchmark.md avoids forbidden expression: 应买入
+PASS: builder-output/data-connector-framework/benchmark/data-connector-framework-benchmark.md avoids forbidden expression: 应卖出
+PASS: builder-output/data-connector-framework/PR_CHECKLIST.md exists
+PASS: builder-output/data-connector-framework/PR_CHECKLIST.md has substantive content
+PASS: builder-output/data-connector-framework/PR_CHECKLIST.md has disclaimer
+PASS: builder-output/data-connector-framework/PR_CHECKLIST.md avoids forbidden expression: 建议买入
+PASS: builder-output/data-connector-framework/PR_CHECKLIST.md avoids forbidden expression: 建议卖出
+PASS: builder-output/data-connector-framework/PR_CHECKLIST.md avoids forbidden expression: 保证收益
+PASS: builder-output/data-connector-framework/PR_CHECKLIST.md avoids forbidden expression: 保证盈利
+PASS: builder-output/data-connector-framework/PR_CHECKLIST.md avoids forbidden expression: 目标价为
+PASS: builder-output/data-connector-framework/PR_CHECKLIST.md avoids forbidden expression: 应买入
+PASS: builder-output/data-connector-framework/PR_CHECKLIST.md avoids forbidden expression: 应卖出
+PASS: builder-output/data-connector-framework/RELEASE_NOTES.md exists
+PASS: builder-output/data-connector-framework/RELEASE_NOTES.md has substantive content
+PASS: builder-output/data-connector-framework/RELEASE_NOTES.md has disclaimer
+PASS: builder-output/data-connector-framework/RELEASE_NOTES.md avoids forbidden expression: 建议买入
+PASS: builder-output/data-connector-framework/RELEASE_NOTES.md avoids forbidden expression: 建议卖出
+PASS: builder-output/data-connector-framework/RELEASE_NOTES.md avoids forbidden expression: 保证收益
+PASS: builder-output/data-connector-framework/RELEASE_NOTES.md avoids forbidden expression: 保证盈利
+PASS: builder-output/data-connector-framework/RELEASE_NOTES.md avoids forbidden expression: 目标价为
+PASS: builder-output/data-connector-framework/RELEASE_NOTES.md avoids forbidden expression: 应买入
+PASS: builder-output/data-connector-framework/RELEASE_NOTES.md avoids forbidden expression: 应卖出
+PASS: docs/adr/ADR-0004-data-connector-framework.md exists
+PASS: docs/adr/ADR-0004-data-connector-framework.md has substantive content
+PASS: docs/adr/ADR-0004-data-connector-framework.md has disclaimer
+PASS: docs/adr/ADR-0004-data-connector-framework.md avoids forbidden expression: 建议买入
+PASS: docs/adr/ADR-0004-data-connector-framework.md avoids forbidden expression: 建议卖出
+PASS: docs/adr/ADR-0004-data-connector-framework.md avoids forbidden expression: 保证收益
+PASS: docs/adr/ADR-0004-data-connector-framework.md avoids forbidden expression: 保证盈利
+PASS: docs/adr/ADR-0004-data-connector-framework.md avoids forbidden expression: 目标价为
+PASS: docs/adr/ADR-0004-data-connector-framework.md avoids forbidden expression: 应买入
+PASS: docs/adr/ADR-0004-data-connector-framework.md avoids forbidden expression: 应卖出
+PASS: docs/production/FEATURE_004_COMPLETION_REPORT.md exists
+PASS: docs/production/FEATURE_004_COMPLETION_REPORT.md has substantive content
+PASS: docs/production/FEATURE_004_COMPLETION_REPORT.md has disclaimer
+PASS: docs/production/FEATURE_004_COMPLETION_REPORT.md avoids forbidden expression: 建议买入
+PASS: docs/production/FEATURE_004_COMPLETION_REPORT.md avoids forbidden expression: 建议卖出
+PASS: docs/production/FEATURE_004_COMPLETION_REPORT.md avoids forbidden expression: 保证收益
+PASS: docs/production/FEATURE_004_COMPLETION_REPORT.md avoids forbidden expression: 保证盈利
+PASS: docs/production/FEATURE_004_COMPLETION_REPORT.md avoids forbidden expression: 目标价为
+PASS: docs/production/FEATURE_004_COMPLETION_REPORT.md avoids forbidden expression: 应买入
+PASS: docs/production/FEATURE_004_COMPLETION_REPORT.md avoids forbidden expression: 应卖出
+PASS: docs/review/FEATURE_004_SELF_REVIEW.md exists
+PASS: docs/review/FEATURE_004_SELF_REVIEW.md has substantive content
+PASS: docs/review/FEATURE_004_SELF_REVIEW.md has disclaimer
+PASS: docs/review/FEATURE_004_SELF_REVIEW.md avoids forbidden expression: 建议买入
+PASS: docs/review/FEATURE_004_SELF_REVIEW.md avoids forbidden expression: 建议卖出
+PASS: docs/review/FEATURE_004_SELF_REVIEW.md avoids forbidden expression: 保证收益
+PASS: docs/review/FEATURE_004_SELF_REVIEW.md avoids forbidden expression: 保证盈利
+PASS: docs/review/FEATURE_004_SELF_REVIEW.md avoids forbidden expression: 目标价为
+PASS: docs/review/FEATURE_004_SELF_REVIEW.md avoids forbidden expression: 应买入
+PASS: docs/review/FEATURE_004_SELF_REVIEW.md avoids forbidden expression: 应卖出
+PASS: default registry has six connectors
+PASS: data_connectors/connectors/sec_edgar.py exists
+PASS: data_connectors/connectors/sec_edgar.py has substantive content
+PASS: data_connectors/connectors/sec_edgar.py avoids forbidden expression: 建议买入
+PASS: data_connectors/connectors/sec_edgar.py avoids forbidden expression: 建议卖出
+PASS: data_connectors/connectors/sec_edgar.py avoids forbidden expression: 保证收益
+PASS: data_connectors/connectors/sec_edgar.py avoids forbidden expression: 保证盈利
+PASS: data_connectors/connectors/sec_edgar.py avoids forbidden expression: 目标价为
+PASS: data_connectors/connectors/sec_edgar.py avoids forbidden expression: 应买入
+PASS: data_connectors/connectors/sec_edgar.py avoids forbidden expression: 应卖出
+PASS: data_connectors/connectors/sec_edgar.py declares CONFIG
+PASS: data_connectors/connectors/sec_edgar.py declares INPUT_SCHEMA
+PASS: data_connectors/connectors/sec_edgar.py declares OUTPUT_SCHEMA
+PASS: data_connectors/connectors/sec_edgar.py declares ERROR_HANDLING
+PASS: data_connectors/connectors/sec_edgar.py declares RETRY_POLICY
+PASS: data_connectors/connectors/sec_edgar.py declares CACHE_STRATEGY
+PASS: data_connectors/connectors/sec_edgar.py declares health_check
+PASS: data_connectors/connectors/sec_edgar.py declares TEST_CASE
+PASS: data_connectors/connectors/sec_edgar.py result has source
+PASS: data_connectors/connectors/sec_edgar.py result has url
+PASS: data_connectors/connectors/sec_edgar.py result has timestamp
+PASS: data_connectors/connectors/sec_edgar.py result has version
+PASS: data_connectors/connectors/sec_edgar.py result has trace_id
+PASS: data_connectors/connectors/sec_edgar.py result has traceability
+PASS: data_connectors/connectors/sec_edgar.py result has disclaimer
+PASS: data_connectors/connectors/sec_edgar.py health check PASS
+PASS: data_connectors/connectors/sec_edgar.py handles input error
+PASS: data_connectors/connectors/yahoo_finance.py exists
+PASS: data_connectors/connectors/yahoo_finance.py has substantive content
+PASS: data_connectors/connectors/yahoo_finance.py avoids forbidden expression: 建议买入
+PASS: data_connectors/connectors/yahoo_finance.py avoids forbidden expression: 建议卖出
+PASS: data_connectors/connectors/yahoo_finance.py avoids forbidden expression: 保证收益
+PASS: data_connectors/connectors/yahoo_finance.py avoids forbidden expression: 保证盈利
+PASS: data_connectors/connectors/yahoo_finance.py avoids forbidden expression: 目标价为
+PASS: data_connectors/connectors/yahoo_finance.py avoids forbidden expression: 应买入
+PASS: data_connectors/connectors/yahoo_finance.py avoids forbidden expression: 应卖出
+PASS: data_connectors/connectors/yahoo_finance.py declares CONFIG
+PASS: data_connectors/connectors/yahoo_finance.py declares INPUT_SCHEMA
+PASS: data_connectors/connectors/yahoo_finance.py declares OUTPUT_SCHEMA
+PASS: data_connectors/connectors/yahoo_finance.py declares ERROR_HANDLING
+PASS: data_connectors/connectors/yahoo_finance.py declares RETRY_POLICY
+PASS: data_connectors/connectors/yahoo_finance.py declares CACHE_STRATEGY
+PASS: data_connectors/connectors/yahoo_finance.py declares health_check
+PASS: data_connectors/connectors/yahoo_finance.py declares TEST_CASE
+PASS: data_connectors/connectors/yahoo_finance.py result has source
+PASS: data_connectors/connectors/yahoo_finance.py result has url
+PASS: data_connectors/connectors/yahoo_finance.py result has timestamp
+PASS: data_connectors/connectors/yahoo_finance.py result has version
+PASS: data_connectors/connectors/yahoo_finance.py result has trace_id
+PASS: data_connectors/connectors/yahoo_finance.py result has traceability
+PASS: data_connectors/connectors/yahoo_finance.py result has disclaimer
+PASS: data_connectors/connectors/yahoo_finance.py health check PASS
+PASS: data_connectors/connectors/yahoo_finance.py handles input error
+PASS: data_connectors/connectors/alpha_vantage.py exists
+PASS: data_connectors/connectors/alpha_vantage.py has substantive content
+PASS: data_connectors/connectors/alpha_vantage.py avoids forbidden expression: 建议买入
+PASS: data_connectors/connectors/alpha_vantage.py avoids forbidden expression: 建议卖出
+PASS: data_connectors/connectors/alpha_vantage.py avoids forbidden expression: 保证收益
+PASS: data_connectors/connectors/alpha_vantage.py avoids forbidden expression: 保证盈利
+PASS: data_connectors/connectors/alpha_vantage.py avoids forbidden expression: 目标价为
+PASS: data_connectors/connectors/alpha_vantage.py avoids forbidden expression: 应买入
+PASS: data_connectors/connectors/alpha_vantage.py avoids forbidden expression: 应卖出
+PASS: data_connectors/connectors/alpha_vantage.py declares CONFIG
+PASS: data_connectors/connectors/alpha_vantage.py declares INPUT_SCHEMA
+PASS: data_connectors/connectors/alpha_vantage.py declares OUTPUT_SCHEMA
+PASS: data_connectors/connectors/alpha_vantage.py declares ERROR_HANDLING
+PASS: data_connectors/connectors/alpha_vantage.py declares RETRY_POLICY
+PASS: data_connectors/connectors/alpha_vantage.py declares CACHE_STRATEGY
+PASS: data_connectors/connectors/alpha_vantage.py declares health_check
+PASS: data_connectors/connectors/alpha_vantage.py declares TEST_CASE
+PASS: data_connectors/connectors/alpha_vantage.py result has source
+PASS: data_connectors/connectors/alpha_vantage.py result has url
+PASS: data_connectors/connectors/alpha_vantage.py result has timestamp
+PASS: data_connectors/connectors/alpha_vantage.py result has version
+PASS: data_connectors/connectors/alpha_vantage.py result has trace_id
+PASS: data_connectors/connectors/alpha_vantage.py result has traceability
+PASS: data_connectors/connectors/alpha_vantage.py result has disclaimer
+PASS: data_connectors/connectors/alpha_vantage.py health check PASS
+PASS: data_connectors/connectors/alpha_vantage.py handles input error
+PASS: data_connectors/connectors/news.py exists
+PASS: data_connectors/connectors/news.py has substantive content
+PASS: data_connectors/connectors/news.py avoids forbidden expression: 建议买入
+PASS: data_connectors/connectors/news.py avoids forbidden expression: 建议卖出
+PASS: data_connectors/connectors/news.py avoids forbidden expression: 保证收益
+PASS: data_connectors/connectors/news.py avoids forbidden expression: 保证盈利
+PASS: data_connectors/connectors/news.py avoids forbidden expression: 目标价为
+PASS: data_connectors/connectors/news.py avoids forbidden expression: 应买入
+PASS: data_connectors/connectors/news.py avoids forbidden expression: 应卖出
+PASS: data_connectors/connectors/news.py declares CONFIG
+PASS: data_connectors/connectors/news.py declares INPUT_SCHEMA
+PASS: data_connectors/connectors/news.py declares OUTPUT_SCHEMA
+PASS: data_connectors/connectors/news.py declares ERROR_HANDLING
+PASS: data_connectors/connectors/news.py declares RETRY_POLICY
+PASS: data_connectors/connectors/news.py declares CACHE_STRATEGY
+PASS: data_connectors/connectors/news.py declares health_check
+PASS: data_connectors/connectors/news.py declares TEST_CASE
+PASS: data_connectors/connectors/news.py result has source
+PASS: data_connectors/connectors/news.py result has url
+PASS: data_connectors/connectors/news.py result has timestamp
+PASS: data_connectors/connectors/news.py result has version
+PASS: data_connectors/connectors/news.py result has trace_id
+PASS: data_connectors/connectors/news.py result has traceability
+PASS: data_connectors/connectors/news.py result has disclaimer
+PASS: data_connectors/connectors/news.py health check PASS
+PASS: data_connectors/connectors/news.py handles input error
+PASS: data_connectors/connectors/github.py exists
+PASS: data_connectors/connectors/github.py has substantive content
+PASS: data_connectors/connectors/github.py avoids forbidden expression: 建议买入
+PASS: data_connectors/connectors/github.py avoids forbidden expression: 建议卖出
+PASS: data_connectors/connectors/github.py avoids forbidden expression: 保证收益
+PASS: data_connectors/connectors/github.py avoids forbidden expression: 保证盈利
+PASS: data_connectors/connectors/github.py avoids forbidden expression: 目标价为
+PASS: data_connectors/connectors/github.py avoids forbidden expression: 应买入
+PASS: data_connectors/connectors/github.py avoids forbidden expression: 应卖出
+PASS: data_connectors/connectors/github.py declares CONFIG
+PASS: data_connectors/connectors/github.py declares INPUT_SCHEMA
+PASS: data_connectors/connectors/github.py declares OUTPUT_SCHEMA
+PASS: data_connectors/connectors/github.py declares ERROR_HANDLING
+PASS: data_connectors/connectors/github.py declares RETRY_POLICY
+PASS: data_connectors/connectors/github.py declares CACHE_STRATEGY
+PASS: data_connectors/connectors/github.py declares health_check
+PASS: data_connectors/connectors/github.py declares TEST_CASE
+PASS: data_connectors/connectors/github.py result has source
+PASS: data_connectors/connectors/github.py result has url
+PASS: data_connectors/connectors/github.py result has timestamp
+PASS: data_connectors/connectors/github.py result has version
+PASS: data_connectors/connectors/github.py result has trace_id
+PASS: data_connectors/connectors/github.py result has traceability
+PASS: data_connectors/connectors/github.py result has disclaimer
+PASS: data_connectors/connectors/github.py health check PASS
+PASS: data_connectors/connectors/github.py handles input error
+PASS: data_connectors/connectors/rss.py exists
+PASS: data_connectors/connectors/rss.py has substantive content
+PASS: data_connectors/connectors/rss.py avoids forbidden expression: 建议买入
+PASS: data_connectors/connectors/rss.py avoids forbidden expression: 建议卖出
+PASS: data_connectors/connectors/rss.py avoids forbidden expression: 保证收益
+PASS: data_connectors/connectors/rss.py avoids forbidden expression: 保证盈利
+PASS: data_connectors/connectors/rss.py avoids forbidden expression: 目标价为
+PASS: data_connectors/connectors/rss.py avoids forbidden expression: 应买入
+PASS: data_connectors/connectors/rss.py avoids forbidden expression: 应卖出
+PASS: data_connectors/connectors/rss.py declares CONFIG
+PASS: data_connectors/connectors/rss.py declares INPUT_SCHEMA
+PASS: data_connectors/connectors/rss.py declares OUTPUT_SCHEMA
+PASS: data_connectors/connectors/rss.py declares ERROR_HANDLING
+PASS: data_connectors/connectors/rss.py declares RETRY_POLICY
+PASS: data_connectors/connectors/rss.py declares CACHE_STRATEGY
+PASS: data_connectors/connectors/rss.py declares health_check
+PASS: data_connectors/connectors/rss.py declares TEST_CASE
+PASS: data_connectors/connectors/rss.py result has source
+PASS: data_connectors/connectors/rss.py result has url
+PASS: data_connectors/connectors/rss.py result has timestamp
+PASS: data_connectors/connectors/rss.py result has version
+PASS: data_connectors/connectors/rss.py result has trace_id
+PASS: data_connectors/connectors/rss.py result has traceability
+PASS: data_connectors/connectors/rss.py result has disclaimer
+PASS: data_connectors/connectors/rss.py health check PASS
+PASS: data_connectors/connectors/rss.py handles input error
+PASS: schemas/README documents connector schemas
+PASS: CHANGELOG documents FEATURE-004
+PASS: docs/data-connectors/connector-architecture.md aligns with Evidence trace field Source
+PASS: docs/data-connectors/connector-architecture.md aligns with Evidence trace field URL
+PASS: docs/data-connectors/connector-architecture.md aligns with Evidence trace field Timestamp
+PASS: docs/data-connectors/connector-architecture.md aligns with Evidence trace field Version
+PASS: docs/data-connectors/connector-architecture.md aligns with Evidence trace field Trace ID
+PASS: docs/data-connectors/connector-architecture.md aligns with Evidence trace field Traceability
+PASS: docs/data-connectors/connector-interface.md aligns with Evidence trace field Source
+PASS: docs/data-connectors/connector-interface.md aligns with Evidence trace field URL
+PASS: docs/data-connectors/connector-interface.md aligns with Evidence trace field Timestamp
+PASS: docs/data-connectors/connector-interface.md aligns with Evidence trace field Version
+PASS: docs/data-connectors/connector-interface.md aligns with Evidence trace field Trace ID
+PASS: docs/data-connectors/connector-interface.md aligns with Evidence trace field Traceability
+====================================================
+RESULT: PASS

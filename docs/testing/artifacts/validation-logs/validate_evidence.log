@@ -1,0 +1,139 @@
+AIRS M3 Evidence Engine Validation
+===================================
+PASS: docs/evidence directory exists
+PASS: evidence-architecture.md exists
+PASS: evidence-architecture.md has substantive content
+PASS: evidence-architecture.md has disclaimer
+PASS: evidence-card-specification.md exists
+PASS: evidence-card-specification.md has substantive content
+PASS: evidence-card-specification.md has disclaimer
+PASS: evidence-dsl.md exists
+PASS: evidence-dsl.md has substantive content
+PASS: evidence-dsl.md has disclaimer
+PASS: evidence-level-standard.md exists
+PASS: evidence-level-standard.md has substantive content
+PASS: evidence-level-standard.md has disclaimer
+PASS: evidence-review-standard.md exists
+PASS: evidence-review-standard.md has substantive content
+PASS: evidence-review-standard.md has disclaimer
+PASS: evidence-validation-workflow.md exists
+PASS: evidence-validation-workflow.md has substantive content
+PASS: evidence-validation-workflow.md has disclaimer
+PASS: evidence-lifecycle.md exists
+PASS: evidence-lifecycle.md has substantive content
+PASS: evidence-lifecycle.md has disclaimer
+PASS: evidence-governance.md exists
+PASS: evidence-governance.md has substantive content
+PASS: evidence-governance.md has disclaimer
+PASS: schemas/evidence directory exists
+PASS: evidence.schema.json exists
+PASS: evidence.schema.json is valid JSON
+PASS: evidence.schema.json declares $schema
+PASS: evidence.schema.json top-level type is object
+PASS: evidence-card.schema.json exists
+PASS: evidence-card.schema.json is valid JSON
+PASS: evidence-card.schema.json declares $schema
+PASS: evidence-card.schema.json top-level type is object
+PASS: evidence-chain.schema.json exists
+PASS: evidence-chain.schema.json is valid JSON
+PASS: evidence-chain.schema.json declares $schema
+PASS: evidence-chain.schema.json top-level type is object
+PASS: evidence-card.schema.json is valid JSON
+PASS: evidence-card requires evidence_id
+PASS: evidence-card defines evidence_id
+PASS: evidence-card requires title
+PASS: evidence-card defines title
+PASS: evidence-card requires category
+PASS: evidence-card defines category
+PASS: evidence-card requires source
+PASS: evidence-card defines source
+PASS: evidence-card requires source_type
+PASS: evidence-card defines source_type
+PASS: evidence-card requires url
+PASS: evidence-card defines url
+PASS: evidence-card requires publication_time
+PASS: evidence-card defines publication_time
+PASS: evidence-card requires collection_time
+PASS: evidence-card defines collection_time
+PASS: evidence-card requires confidence
+PASS: evidence-card defines confidence
+PASS: evidence-card requires evidence_level
+PASS: evidence-card defines evidence_level
+PASS: evidence-card requires supports
+PASS: evidence-card defines supports
+PASS: evidence-card requires refutes
+PASS: evidence-card defines refutes
+PASS: evidence-card requires missing_evidence
+PASS: evidence-card defines missing_evidence
+PASS: evidence-card requires weight
+PASS: evidence-card defines weight
+PASS: evidence-card requires traceability
+PASS: evidence-card defines traceability
+PASS: evidence-card requires version
+PASS: evidence-card defines version
+PASS: templates/evidence-card-template.md exists
+PASS: templates/evidence-card-template.md has substantive content
+PASS: templates/evidence-chain-template.md exists
+PASS: templates/evidence-chain-template.md has substantive content
+PASS: evaluation/rubrics/evidence-review-checklist.md exists
+PASS: evaluation/rubrics/evidence-review-checklist.md has substantive content
+PASS: docs/production/M3_COMPLETION_REPORT.md exists
+PASS: docs/production/M3_COMPLETION_REPORT.md has substantive content
+PASS: docs/review/M3_SELF_REVIEW.md exists
+PASS: docs/review/M3_SELF_REVIEW.md has substantive content
+PASS: template contains Evidence ID
+PASS: template contains Title
+PASS: template contains Category
+PASS: template contains Source
+PASS: template contains Source Type
+PASS: template contains URL
+PASS: template contains Publication Time
+PASS: template contains Collection Time
+PASS: template contains Confidence
+PASS: template contains Evidence Level
+PASS: template contains Supports
+PASS: template contains Refutes
+PASS: template contains Missing Evidence
+PASS: template contains Weight
+PASS: template contains Traceability
+PASS: template contains Version
+PASS: ARCHITECTURE.md Evidence Layer remains compatible
+PASS: M2 methodology exists: supply-chain-chokepoint.md
+PASS: supply-chain-chokepoint.md has Required Evidence
+PASS: supply-chain-chokepoint.md has Counter Evidence
+PASS: M2 methodology exists: theme-expansion.md
+PASS: theme-expansion.md has Required Evidence
+PASS: theme-expansion.md has Counter Evidence
+PASS: M2 methodology exists: evidence-chain.md
+PASS: evidence-chain.md has Required Evidence
+PASS: evidence-chain.md has Counter Evidence
+PASS: M2 methodology exists: counter-consensus.md
+PASS: counter-consensus.md has Required Evidence
+PASS: counter-consensus.md has Counter Evidence
+PASS: M2 methodology exists: industry-lifecycle.md
+PASS: industry-lifecycle.md has Required Evidence
+PASS: industry-lifecycle.md has Counter Evidence
+PASS: M2 methodology exists: financial-anomaly.md
+PASS: financial-anomaly.md has Required Evidence
+PASS: financial-anomaly.md has Counter Evidence
+PASS: M2 methodology exists: management-quality.md
+PASS: management-quality.md has Required Evidence
+PASS: management-quality.md has Counter Evidence
+PASS: M2 methodology exists: policy-driven.md
+PASS: policy-driven.md has Required Evidence
+PASS: policy-driven.md has Counter Evidence
+PASS: M2 methodology exists: valuation.md
+PASS: valuation.md has Required Evidence
+PASS: valuation.md has Counter Evidence
+PASS: M2 methodology exists: risk.md
+PASS: risk.md has Required Evidence
+PASS: risk.md has Counter Evidence
+PASS: M3 docs include compatibility term: Required Evidence
+PASS: M3 docs include compatibility term: Counter Evidence
+PASS: M3 docs include compatibility term: supports
+PASS: M3 docs include compatibility term: refutes
+PASS: M3 docs include compatibility term: missing_evidence
+PASS: M3 docs include compatibility term: 不构成投资建议
+PASS: schemas/README.md documents evidence schemas
+===================================
+RESULT: PASS

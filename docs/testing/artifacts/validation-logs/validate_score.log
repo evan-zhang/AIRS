@@ -1,0 +1,225 @@
+AIRS M6 Score Engine Validation
+================================
+PASS: docs/score-engine/score-architecture.md exists
+PASS: docs/score-engine/score-architecture.md has substantive content
+PASS: docs/score-engine/score-architecture.md has disclaimer
+PASS: docs/score-engine/score-architecture.md avoids forbidden expression: 建议买入
+PASS: docs/score-engine/score-architecture.md avoids forbidden expression: 建议卖出
+PASS: docs/score-engine/score-architecture.md avoids forbidden expression: 目标价为
+PASS: docs/score-engine/score-architecture.md avoids forbidden expression: 保证收益
+PASS: docs/score-engine/score-architecture.md avoids forbidden expression: 保证盈利
+PASS: docs/score-engine/score-dsl.md exists
+PASS: docs/score-engine/score-dsl.md has substantive content
+PASS: docs/score-engine/score-dsl.md has disclaimer
+PASS: docs/score-engine/score-dsl.md avoids forbidden expression: 建议买入
+PASS: docs/score-engine/score-dsl.md avoids forbidden expression: 建议卖出
+PASS: docs/score-engine/score-dsl.md avoids forbidden expression: 目标价为
+PASS: docs/score-engine/score-dsl.md avoids forbidden expression: 保证收益
+PASS: docs/score-engine/score-dsl.md avoids forbidden expression: 保证盈利
+PASS: docs/score-engine/score-lifecycle.md exists
+PASS: docs/score-engine/score-lifecycle.md has substantive content
+PASS: docs/score-engine/score-lifecycle.md has disclaimer
+PASS: docs/score-engine/score-lifecycle.md avoids forbidden expression: 建议买入
+PASS: docs/score-engine/score-lifecycle.md avoids forbidden expression: 建议卖出
+PASS: docs/score-engine/score-lifecycle.md avoids forbidden expression: 目标价为
+PASS: docs/score-engine/score-lifecycle.md avoids forbidden expression: 保证收益
+PASS: docs/score-engine/score-lifecycle.md avoids forbidden expression: 保证盈利
+PASS: docs/score-engine/weight-system.md exists
+PASS: docs/score-engine/weight-system.md has substantive content
+PASS: docs/score-engine/weight-system.md has disclaimer
+PASS: docs/score-engine/weight-system.md avoids forbidden expression: 建议买入
+PASS: docs/score-engine/weight-system.md avoids forbidden expression: 建议卖出
+PASS: docs/score-engine/weight-system.md avoids forbidden expression: 目标价为
+PASS: docs/score-engine/weight-system.md avoids forbidden expression: 保证收益
+PASS: docs/score-engine/weight-system.md avoids forbidden expression: 保证盈利
+PASS: scoring/theme-score.md exists
+PASS: scoring/theme-score.md has substantive content
+PASS: scoring/theme-score.md has disclaimer
+PASS: scoring/theme-score.md avoids forbidden expression: 建议买入
+PASS: scoring/theme-score.md avoids forbidden expression: 建议卖出
+PASS: scoring/theme-score.md avoids forbidden expression: 目标价为
+PASS: scoring/theme-score.md avoids forbidden expression: 保证收益
+PASS: scoring/theme-score.md avoids forbidden expression: 保证盈利
+PASS: scoring/theme-score.md includes 评分目的
+PASS: scoring/theme-score.md includes 评分维度
+PASS: scoring/theme-score.md includes 计算公式
+PASS: scoring/theme-score.md includes 输入输出
+PASS: scoring/theme-score.md includes Evidence
+PASS: scoring/theme-score.md includes Methodology
+PASS: scoring/theme-score.md includes 权重建议
+PASS: scoring/evidence-score.md exists
+PASS: scoring/evidence-score.md has substantive content
+PASS: scoring/evidence-score.md has disclaimer
+PASS: scoring/evidence-score.md avoids forbidden expression: 建议买入
+PASS: scoring/evidence-score.md avoids forbidden expression: 建议卖出
+PASS: scoring/evidence-score.md avoids forbidden expression: 目标价为
+PASS: scoring/evidence-score.md avoids forbidden expression: 保证收益
+PASS: scoring/evidence-score.md avoids forbidden expression: 保证盈利
+PASS: scoring/evidence-score.md includes 评分目的
+PASS: scoring/evidence-score.md includes 评分维度
+PASS: scoring/evidence-score.md includes 计算公式
+PASS: scoring/evidence-score.md includes 输入输出
+PASS: scoring/evidence-score.md includes Evidence
+PASS: scoring/evidence-score.md includes Methodology
+PASS: scoring/evidence-score.md includes 权重建议
+PASS: scoring/methodology-score.md exists
+PASS: scoring/methodology-score.md has substantive content
+PASS: scoring/methodology-score.md has disclaimer
+PASS: scoring/methodology-score.md avoids forbidden expression: 建议买入
+PASS: scoring/methodology-score.md avoids forbidden expression: 建议卖出
+PASS: scoring/methodology-score.md avoids forbidden expression: 目标价为
+PASS: scoring/methodology-score.md avoids forbidden expression: 保证收益
+PASS: scoring/methodology-score.md avoids forbidden expression: 保证盈利
+PASS: scoring/methodology-score.md includes 评分目的
+PASS: scoring/methodology-score.md includes 评分维度
+PASS: scoring/methodology-score.md includes 计算公式
+PASS: scoring/methodology-score.md includes 输入输出
+PASS: scoring/methodology-score.md includes Evidence
+PASS: scoring/methodology-score.md includes Methodology
+PASS: scoring/methodology-score.md includes 权重建议
+PASS: scoring/prompt-score.md exists
+PASS: scoring/prompt-score.md has substantive content
+PASS: scoring/prompt-score.md has disclaimer
+PASS: scoring/prompt-score.md avoids forbidden expression: 建议买入
+PASS: scoring/prompt-score.md avoids forbidden expression: 建议卖出
+PASS: scoring/prompt-score.md avoids forbidden expression: 目标价为
+PASS: scoring/prompt-score.md avoids forbidden expression: 保证收益
+PASS: scoring/prompt-score.md avoids forbidden expression: 保证盈利
+PASS: scoring/prompt-score.md includes 评分目的
+PASS: scoring/prompt-score.md includes 评分维度
+PASS: scoring/prompt-score.md includes 计算公式
+PASS: scoring/prompt-score.md includes 输入输出
+PASS: scoring/prompt-score.md includes Evidence
+PASS: scoring/prompt-score.md includes Methodology
+PASS: scoring/prompt-score.md includes 权重建议
+PASS: scoring/skill-score.md exists
+PASS: scoring/skill-score.md has substantive content
+PASS: scoring/skill-score.md has disclaimer
+PASS: scoring/skill-score.md avoids forbidden expression: 建议买入
+PASS: scoring/skill-score.md avoids forbidden expression: 建议卖出
+PASS: scoring/skill-score.md avoids forbidden expression: 目标价为
+PASS: scoring/skill-score.md avoids forbidden expression: 保证收益
+PASS: scoring/skill-score.md avoids forbidden expression: 保证盈利
+PASS: scoring/skill-score.md includes 评分目的
+PASS: scoring/skill-score.md includes 评分维度
+PASS: scoring/skill-score.md includes 计算公式
+PASS: scoring/skill-score.md includes 输入输出
+PASS: scoring/skill-score.md includes Evidence
+PASS: scoring/skill-score.md includes Methodology
+PASS: scoring/skill-score.md includes 权重建议
+PASS: scoring/report-score.md exists
+PASS: scoring/report-score.md has substantive content
+PASS: scoring/report-score.md has disclaimer
+PASS: scoring/report-score.md avoids forbidden expression: 建议买入
+PASS: scoring/report-score.md avoids forbidden expression: 建议卖出
+PASS: scoring/report-score.md avoids forbidden expression: 目标价为
+PASS: scoring/report-score.md avoids forbidden expression: 保证收益
+PASS: scoring/report-score.md avoids forbidden expression: 保证盈利
+PASS: scoring/report-score.md includes 评分目的
+PASS: scoring/report-score.md includes 评分维度
+PASS: scoring/report-score.md includes 计算公式
+PASS: scoring/report-score.md includes 输入输出
+PASS: scoring/report-score.md includes Evidence
+PASS: scoring/report-score.md includes Methodology
+PASS: scoring/report-score.md includes 权重建议
+PASS: scoring/risk-score.md exists
+PASS: scoring/risk-score.md has substantive content
+PASS: scoring/risk-score.md has disclaimer
+PASS: scoring/risk-score.md avoids forbidden expression: 建议买入
+PASS: scoring/risk-score.md avoids forbidden expression: 建议卖出
+PASS: scoring/risk-score.md avoids forbidden expression: 目标价为
+PASS: scoring/risk-score.md avoids forbidden expression: 保证收益
+PASS: scoring/risk-score.md avoids forbidden expression: 保证盈利
+PASS: scoring/risk-score.md includes 评分目的
+PASS: scoring/risk-score.md includes 评分维度
+PASS: scoring/risk-score.md includes 计算公式
+PASS: scoring/risk-score.md includes 输入输出
+PASS: scoring/risk-score.md includes Evidence
+PASS: scoring/risk-score.md includes Methodology
+PASS: scoring/risk-score.md includes 权重建议
+PASS: scoring/confidence-score.md exists
+PASS: scoring/confidence-score.md has substantive content
+PASS: scoring/confidence-score.md has disclaimer
+PASS: scoring/confidence-score.md avoids forbidden expression: 建议买入
+PASS: scoring/confidence-score.md avoids forbidden expression: 建议卖出
+PASS: scoring/confidence-score.md avoids forbidden expression: 目标价为
+PASS: scoring/confidence-score.md avoids forbidden expression: 保证收益
+PASS: scoring/confidence-score.md avoids forbidden expression: 保证盈利
+PASS: scoring/confidence-score.md includes 评分目的
+PASS: scoring/confidence-score.md includes 评分维度
+PASS: scoring/confidence-score.md includes 计算公式
+PASS: scoring/confidence-score.md includes 输入输出
+PASS: scoring/confidence-score.md includes Evidence
+PASS: scoring/confidence-score.md includes Methodology
+PASS: scoring/confidence-score.md includes 权重建议
+PASS: scoring/overall-score.md exists
+PASS: scoring/overall-score.md has substantive content
+PASS: scoring/overall-score.md has disclaimer
+PASS: scoring/overall-score.md avoids forbidden expression: 建议买入
+PASS: scoring/overall-score.md avoids forbidden expression: 建议卖出
+PASS: scoring/overall-score.md avoids forbidden expression: 目标价为
+PASS: scoring/overall-score.md avoids forbidden expression: 保证收益
+PASS: scoring/overall-score.md avoids forbidden expression: 保证盈利
+PASS: scoring/overall-score.md includes 评分目的
+PASS: scoring/overall-score.md includes 评分维度
+PASS: scoring/overall-score.md includes 计算公式
+PASS: scoring/overall-score.md includes 输入输出
+PASS: scoring/overall-score.md includes Evidence
+PASS: scoring/overall-score.md includes Methodology
+PASS: scoring/overall-score.md includes 权重建议
+PASS: schemas/score/score.schema.json exists
+PASS: schemas/score/score.schema.json declares $schema
+PASS: schemas/score/score.schema.json top-level type is object
+PASS: schemas/score/score.schema.json has compliance boundary
+PASS: schemas/score/scorecard.schema.json exists
+PASS: schemas/score/scorecard.schema.json declares $schema
+PASS: schemas/score/scorecard.schema.json top-level type is object
+PASS: schemas/score/scorecard.schema.json has compliance boundary
+PASS: schemas/score/evaluation.schema.json exists
+PASS: schemas/score/evaluation.schema.json declares $schema
+PASS: schemas/score/evaluation.schema.json top-level type is object
+PASS: schemas/score/evaluation.schema.json has compliance boundary
+PASS: templates/scorecard-template.md exists
+PASS: templates/scorecard-template.md has substantive content
+PASS: templates/scorecard-template.md has disclaimer
+PASS: templates/scorecard-template.md avoids forbidden expression: 建议买入
+PASS: templates/scorecard-template.md avoids forbidden expression: 建议卖出
+PASS: templates/scorecard-template.md avoids forbidden expression: 目标价为
+PASS: templates/scorecard-template.md avoids forbidden expression: 保证收益
+PASS: templates/scorecard-template.md avoids forbidden expression: 保证盈利
+PASS: templates/evaluation-template.md exists
+PASS: templates/evaluation-template.md has substantive content
+PASS: templates/evaluation-template.md has disclaimer
+PASS: templates/evaluation-template.md avoids forbidden expression: 建议买入
+PASS: templates/evaluation-template.md avoids forbidden expression: 建议卖出
+PASS: templates/evaluation-template.md avoids forbidden expression: 目标价为
+PASS: templates/evaluation-template.md avoids forbidden expression: 保证收益
+PASS: templates/evaluation-template.md avoids forbidden expression: 保证盈利
+PASS: docs/production/M6_COMPLETION_REPORT.md exists
+PASS: docs/production/M6_COMPLETION_REPORT.md has substantive content
+PASS: docs/production/M6_COMPLETION_REPORT.md has disclaimer
+PASS: docs/production/M6_COMPLETION_REPORT.md avoids forbidden expression: 建议买入
+PASS: docs/production/M6_COMPLETION_REPORT.md avoids forbidden expression: 建议卖出
+PASS: docs/production/M6_COMPLETION_REPORT.md avoids forbidden expression: 目标价为
+PASS: docs/production/M6_COMPLETION_REPORT.md avoids forbidden expression: 保证收益
+PASS: docs/production/M6_COMPLETION_REPORT.md avoids forbidden expression: 保证盈利
+PASS: docs/review/M6_SELF_REVIEW.md exists
+PASS: docs/review/M6_SELF_REVIEW.md has substantive content
+PASS: docs/review/M6_SELF_REVIEW.md has disclaimer
+PASS: docs/review/M6_SELF_REVIEW.md avoids forbidden expression: 建议买入
+PASS: docs/review/M6_SELF_REVIEW.md avoids forbidden expression: 建议卖出
+PASS: docs/review/M6_SELF_REVIEW.md avoids forbidden expression: 目标价为
+PASS: docs/review/M6_SELF_REVIEW.md avoids forbidden expression: 保证收益
+PASS: docs/review/M6_SELF_REVIEW.md avoids forbidden expression: 保证盈利
+PASS: Evidence Score maps M3 term: Evidence Level
+PASS: Evidence Score maps M3 term: Confidence
+PASS: Evidence Score maps M3 term: Weight
+PASS: Evidence Score maps M3 term: supports
+PASS: Evidence Score maps M3 term: refutes
+PASS: Evidence Score maps M3 term: missing_evidence
+PASS: Methodology Score maps M2 Future Score Mapping
+PASS: Prompt Score maps M4
+PASS: Skill Score maps M5
+PASS: schemas/README documents score schema
+================================
+RESULT: PASS
