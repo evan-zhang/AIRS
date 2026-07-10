@@ -1,5 +1,22 @@
 # AIRS 变更日志
 
+## [FEATURE-008] Investment Research Engine - 2026-07-10
+
+### Added
+
+- 新增 `builder/requests/feature-request-investment-research-engine.yaml` 并生成 `builder-output/investment-research-engine/` Feature Package。
+- 新增 `docs/investment-engine/`，覆盖 Engine 架构、研究管线、创意生成和 Recommendation 标准。
+- 新增 `docs/orchestrator/orchestrator-architecture.md`，明确 Orchestrator 与 Runtime、Workspace、Evidence 的边界。
+- 新增 `investment_engine/` 最小可运行 Python Engine，统一输出 Investment Thesis、Knowledge Graph、Evidence Chain、Supply Chain Analysis、Chokepoint Analysis、Score Card、Risk Analysis、Catalyst Analysis 和 Final Research Report。
+- 新增 `investment_engine/examples/` 五个案例：AI 算力、创新药、半导体、机器人、新能源。
+- 新增 `schemas/investment/`、`templates/investment/` 和 `scripts/validate_investment_engine.py`。
+- 新增 `docs/adr/ADR-0008-investment-research-engine.md`、`docs/production/FEATURE_008_COMPLETION_REPORT.md` 和 `docs/review/FEATURE_008_SELF_REVIEW.md`。
+
+### Compliance
+
+- Recommendation 强制区分 Fact、Inference、Assumption 和 Opinion。
+- Engine 仅用于研究流程编排和质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。
+
 ## [FEATURE-007] AI Research Workspace - 2026-07-10
 
 ### Added
