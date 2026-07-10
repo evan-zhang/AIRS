@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://airs.local/schemas/planner/research-goal.schema.json",
+  "title": "AIRS Research Goal",
+  "description": "Autonomous Research Planner 的研究目标 Schema。仅用于研究质量控制，不构成投资建议。",
+  "type": "object",
+  "required": ["goal_id", "raw_goal", "goal_type", "subject", "time_horizon", "success_criteria", "disclaimer"],
+  "properties": {
+    "goal_id": {"type": "string", "minLength": 4},
+    "raw_goal": {"type": "string", "minLength": 4},
+    "goal_type": {
+      "type": "string",
+      "enum": ["company", "industry", "theme", "supply_chain", "chokepoint", "policy", "portfolio", "comparative"]
+    },
+    "subject": {"type": "string", "minLength": 2},
+    "time_horizon": {"type": "string", "minLength": 2},
+    "geography": {"type": "string"},
+    "constraints": {"type": "array", "items": {"type": "string"}},
+    "success_criteria": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "disclaimer": {"type": "string", "description": "必须包含不构成投资建议。"}
+  },
+  "additionalProperties": true
+}

@@ -20,6 +20,7 @@ schemas/
 ├── connectors/        # Data Connector Framework 相关 Schema
 ├── workspace/         # AI Research Workspace 相关 Schema
 ├── investment/        # Investment Research Engine 相关 Schema
+├── planner/           # Autonomous Research Planner 相关 Schema
 ├── report/            # 报告相关 Schema
 └── evaluation/        # 评估相关 Schema
 ```
@@ -40,6 +41,15 @@ schemas/
 ### 研究相关 Schema
 
 - **research/**：研究意图、研究计划、研究发现
+
+### Planner 相关 Schema
+
+- **schemas/planner/**：Autonomous Research Planner 相关 Schema，用于 FEATURE-009 目标解析、研究计划、规划任务和规划结果。
+- **schemas/planner/research-goal.schema.json**：Research Goal Schema，定义 goal_id、raw_goal、goal_type、subject、time_horizon、constraints、success_criteria 和免责声明。
+- **schemas/planner/research-plan.schema.json**：Research Plan Schema，要求包含 Goal Analysis、Scope、Required Connectors/Methodologies/Skills/Runtime、Expected Evidence/KG、Execution Order、Budget、Confidence、Deliverables 和 Risks。
+- **schemas/planner/planning-task.schema.json**：Planning Task Schema，用于描述 Planner 生成的任务节点、依赖、Agent Role、输出和质量门禁。
+- **schemas/planner/planning-result.schema.json**：Planning Result Schema，用于记录 Planner Gate、Runtime 前置阻断、验证状态和已知缺口。
+- Planner Schema 明确要求 Runtime 只能接收 `planner_generated=true` 的计划，不能直接接收用户请求；所有 Planner 产物仅用于研究质量控制，不构成投资建议。
 
 ### 证据相关 Schema
 

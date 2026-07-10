@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://airs.local/schemas/planner/research-plan.schema.json",
+  "title": "AIRS Research Plan",
+  "description": "Autonomous Research Planner 输出的 Research Plan Schema。Planner 是 Runtime 前置入口，计划仅用于研究质量控制，不构成投资建议。",
+  "type": "object",
+  "required": [
+    "plan_id",
+    "goal_analysis",
+    "scope",
+    "required_connectors",
+    "required_methodologies",
+    "required_skills",
+    "required_runtime",
+    "expected_evidence",
+    "expected_kg",
+    "execution_order",
+    "budget",
+    "confidence",
+    "expected_deliverables",
+    "risks",
+    "disclaimer"
+  ],
+  "properties": {
+    "plan_id": {"type": "string"},
+    "goal_analysis": {"$ref": "research-goal.schema.json"},
+    "intent_analysis": {"type": "object"},
+    "scope": {"type": "object"},
+    "required_connectors": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "required_methodologies": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "required_skills": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "required_runtime": {
+      "type": "object",
+      "required": ["planner_generated", "raw_user_request_allowed", "workflow_id", "tasks"],
+      "properties": {
+        "planner_generated": {"type": "boolean", "const": true},
+        "raw_user_request_allowed": {"type": "boolean", "const": false},
+        "workflow_id": {"type": "string"},
+        "tasks": {"type": "array"}
+      },
+      "additionalProperties": true
+    },
+    "expected_evidence": {"type": "object"},
+    "expected_kg": {"type": "object"},
+    "execution_order": {"type": "array", "items": {"type": "string"}, "minItems": 3},
+    "dependencies": {"type": "object"},
+    "workflow": {"type": "object"},
+    "resources": {"type": "object"},
+    "budget": {"type": "object"},
+    "confidence": {"type": "object"},
+    "expected_deliverables": {"type": "array", "items": {"type": "string"}, "minItems": 4},
+    "risks": {"type": "array", "items": {"type": "string"}},
+    "infrastructure_refs": {"type": "object"},
+    "disclaimer": {"type": "string", "description": "必须包含不构成投资建议。"}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://airs.local/schemas/planner/planning-task.schema.json",
+  "title": "AIRS Planning Task",
+  "description": "Planner 生成的规划任务 Schema。任务进入 Runtime 前必须经过 Planner Gate，不构成投资建议。",
+  "type": "object",
+  "required": ["task_id", "agent_role", "dependencies", "expected_output", "quality_gate"],
+  "properties": {
+    "task_id": {"type": "string"},
+    "agent_role": {"type": "string", "enum": ["Research Agent", "Review Agent", "Verification Agent", "Code Agent"]},
+    "dependencies": {"type": "array", "items": {"type": "string"}},
+    "expected_output": {"type": "string"},
+    "quality_gate": {"type": "string"},
+    "planner_generated": {"type": "boolean"}
+  },
+  "additionalProperties": true
+}

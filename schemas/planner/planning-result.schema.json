@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://airs.local/schemas/planner/planning-result.schema.json",
+  "title": "AIRS Planning Result",
+  "description": "Planner 执行结果 Schema，用于记录 Research Plan、门禁、验证状态和已知缺口。仅用于研究质量控制，不构成投资建议。",
+  "type": "object",
+  "required": ["result_id", "plan_id", "status", "research_plan", "validation", "known_gaps", "disclaimer"],
+  "properties": {
+    "result_id": {"type": "string"},
+    "plan_id": {"type": "string"},
+    "status": {"type": "string", "enum": ["PASS", "CONDITIONAL_PASS", "FAIL"]},
+    "research_plan": {"$ref": "research-plan.schema.json"},
+    "validation": {
+      "type": "object",
+      "required": ["planner_gate", "runtime_blocked_until_planner_complete"],
+      "properties": {
+        "planner_gate": {"type": "string"},
+        "runtime_blocked_until_planner_complete": {"type": "boolean", "const": true}
+      },
+      "additionalProperties": true
+    },
+    "known_gaps": {"type": "array", "items": {"type": "string"}},
+    "disclaimer": {"type": "string", "description": "必须包含不构成投资建议。"}
+  },
+  "additionalProperties": true
+}

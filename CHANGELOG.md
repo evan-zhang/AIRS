@@ -1,5 +1,21 @@
 # AIRS 变更日志
 
+## [FEATURE-009] Autonomous Research Planner - 2026-07-10
+
+### Added
+
+- 新增 `builder/requests/feature-request-autonomous-research-planner.yaml` 并生成 `builder-output/autonomous-research-planner/` Feature Package。
+- 新增 `docs/planner/` 12 份 Planner 架构与组件文档，明确 Planner 是 AIRS 最上层入口。
+- 新增 `planner/` 最小可运行 Python Planner，覆盖 Goal Parser、Intent Analyzer、Scope Builder、Planning Engine、Dependency、Workflow、Runtime、Resource、Budget、Confidence 和 Optimizer。
+- 新增 `planner/examples/` 8 个研究目标示例：Company、Industry、Theme、Supply Chain、Chokepoint、Policy、Portfolio、Comparative Research。
+- 新增 `schemas/planner/`、`templates/planner/` 和 `scripts/validate_planner.py`。
+- 新增 `docs/adr/ADR-0009-autonomous-research-planner.md`、`docs/production/FEATURE_009_COMPLETION_REPORT.md` 和 `docs/review/FEATURE_009_SELF_REVIEW.md`。
+
+### Compliance
+
+- Runtime 不允许直接接收用户请求，必须接收 Planner 生成的 Runtime Plan。
+- Planner 仅生成研究计划、执行链路、预算、置信度和风险，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。
+
 ## [FEATURE-008] Investment Research Engine - 2026-07-10
 
 ### Added
