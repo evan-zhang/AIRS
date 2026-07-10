@@ -1,5 +1,22 @@
 # AIRS 变更日志
 
+## [FEATURE-013] Real Data Integration - 2026-07-10
+
+### Added
+
+- 新增 `data_connectors/http_client.py`、`env_config.py`、`persistent_cache.py`、`secret_masking.py` 和 `real_payload.py`，提供标准库 HTTP、环境配置、持久化缓存、密钥脱敏和真实追溯字段。
+- 新增 `.env.example`，记录 Mock/Real 双模式、GitHub Token 和 News endpoint 配置模板。
+- SEC EDGAR、RSS、GitHub、News Connector 升级为 `fetch_real()` / `fetch_mock()` / `fetch()` 双模式。
+- 新增 `tests/integration/`，覆盖真实 SEC EDGAR、RSS、GitHub、News 以及 Connector → Evidence → KG → Report 链路。
+- 新增 `docs/data-connectors/real-data-integration.md`、`docs/adr/ADR-0013-real-data-integration.md`、`docs/production/FEATURE_013_COMPLETION_REPORT.md` 和 `docs/review/FEATURE_013_SELF_REVIEW.md`。
+
+### Compliance
+
+- 默认 Mock 模式保留，真实网络或凭证不可用时集成测试 SKIP，不伪造真实通过。
+- 真实输出包含 source、url、publication_time、collection_time、trace_id、connector_version、raw_hash 和 confidence。
+- 密钥只来自环境变量或本地 `.env`，输出和缓存执行 Secret Masking。
+- 本 Feature 仅用于 AIRS 工程开发、研究质量控制和数据接入治理，不构成投资建议。
+
 ## [FEATURE-012] Autonomous Learning Engine - 2026-07-10
 
 ### Added

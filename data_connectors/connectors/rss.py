@@ -1,15 +1,20 @@
 from __future__ import annotations
+import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 from typing import Any
 from data_connectors.base import BaseConnector, CacheStrategy, ConnectorConfig, ConnectorRequest, ConnectorResult, HealthStatus, RetryPolicy
+from data_connectors.env_config import EnvConfig
+from data_connectors.http_client import HTTPClient
 from data_connectors.normalizer import DataNormalizer
+from data_connectors.persistent_cache import PersistentCache
+from data_connectors.real_payload import envelope
 
 CONFIG = {'connector_id': 'rss',
  'name': 'RSS',
  'source': 'RSS Feed',
  'source_type': 'public_news',
  'base_url': 'https://example.com/feed.xml',
- 'version': '0.1.0',
+ 'version': '0.2.0',
  'priority': 'public_news',
  'auth_type': 'none'}
 INPUT_SCHEMA = {'type': 'object',
@@ -35,7 +40,7 @@ TEST_CASE = {'input': {'feed_url': 'https://example.com/feed.xml', 'limit': 5},
 
 
 class RSSConnector(BaseConnector):
-    """Mock RSS Connector with Config/Input/Output/Error/Retry/Cache/Health/Test."""
+    """RSS Connector with real feed parsing, mock fallback, Config/Input/Output/Error/Retry/Cache/Health/Test."""
 
     def __init__(self) -> None:
         self.config = ConnectorConfig(
@@ -51,6 +56,9 @@ class RSSConnector(BaseConnector):
             cache_strategy=CacheStrategy(**CACHE_STRATEGY),
         )
         self.normalizer = DataNormalizer()
+        self.env = EnvConfig()
+        self.cache = PersistentCache()
+        self.http = HTTPClient.from_env(self.connector_id, self.config.retry_policy)
 
     def input_schema(self) -> dict[str, Any]:
         return INPUT_SCHEMA
@@ -63,16 +71,63 @@ class RSSConnector(BaseConnector):
         missing = [field for field in required if field not in request.query]
         if missing:
             return self.error_result(request, "INPUT_VALIDATION_ERROR", f"missing required fields: {missing}", retryable=False)
-        raw = self._mock_raw(request)
+        if self.env.real_enabled(self.connector_id, request.query):
+            try:
+                raw = self.fetch_real(request)
+            except Exception:
+                raw = self.fetch_mock(request)
+        else:
+            raw = self.fetch_mock(request)
         return self.normalize(raw, request)
 
+    def fetch_mock(self, request: ConnectorRequest) -> dict[str, Any]:
+        feed_url = request.query.get("feed_url", "https://example.com/feed.xml")
+        return envelope(
+            self.config,
+            request,
+            url=feed_url,
+            publication_time=request.timestamp,
+            confidence=0.50,
+            mode="mock",
+            payload={"feed_url": feed_url, "items": [{"title": "Mock RSS item"}]},
+        )
+
     def _mock_raw(self, request: ConnectorRequest) -> dict[str, Any]:
-        return {'feed_url': 'https://example.com/feed.xml',
- 'items': [{'title': 'Mock RSS item'}],
- 'url': 'https://example.com/feed.xml'}
+        return self.fetch_mock(request)
+
+    def fetch_real(self, request: ConnectorRequest) -> dict[str, Any]:
+        feed_url = str(request.query["feed_url"]).strip()
+        limit = int(request.query.get("limit", 10))
+        cache_key = self.cache.key(self.connector_id, self.config.version, {"feed_url": feed_url, "limit": limit})
+        cached = self.cache.get(cache_key, self.config.cache_strategy.ttl_seconds)
+        if cached:
+            cached["cache_hit"] = True
+            return cached
+        response = self.http.get(feed_url)
+        root = ET.fromstring(response.text)
+        channel = root.find("channel")
+        items = []
+        publication_time = request.timestamp
+        if channel is not None:
+            for item in channel.findall("item")[:limit]:
+                pub_date = item.findtext("pubDate") or item.findtext("published") or request.timestamp
+                publication_time = publication_time if items else pub_date
+                items.append({"title": item.findtext("title"), "link": item.findtext("link"), "published": pub_date, "description": item.findtext("description")})
+            feed_title = channel.findtext("title")
+        else:
+            ns = {"atom": "http://www.w3.org/2005/Atom"}
+            feed_title = root.findtext("atom:title", default="", namespaces=ns)
+            for entry in root.findall("atom:entry", ns)[:limit]:
+                published = entry.findtext("atom:published", default=entry.findtext("atom:updated", default=request.timestamp, namespaces=ns), namespaces=ns)
+                publication_time = publication_time if items else published
+                link = entry.find("atom:link", ns)
+                items.append({"title": entry.findtext("atom:title", default="", namespaces=ns), "link": link.get("href") if link is not None else None, "published": published, "summary": entry.findtext("atom:summary", default="", namespaces=ns)})
+        raw = envelope(self.config, request, url=feed_url, publication_time=publication_time, confidence=0.75, mode="real", payload={"feed_url": feed_url, "feed_title": feed_title, "items": items, "status_code": response.status_code})
+        self.cache.set(cache_key, raw)
+        return raw
 
     def normalize(self, raw: dict[str, Any], request: ConnectorRequest) -> ConnectorResult:
-        return self.normalizer.result(self.config, request, raw, raw.get("url", self.config.base_url))
+        return self.normalizer.result(self.config, request, raw, raw.get("url", self.config.base_url), transformations=[raw.get("mode", "mock") + "_fetch", "normalize"])
 
     def health_check(self) -> HealthStatus:
         return HealthStatus(

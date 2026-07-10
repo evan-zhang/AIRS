@@ -2,14 +2,18 @@ from __future__ import annotations
 from datetime import datetime, timezone
 from typing import Any
 from data_connectors.base import BaseConnector, CacheStrategy, ConnectorConfig, ConnectorRequest, ConnectorResult, HealthStatus, RetryPolicy
+from data_connectors.env_config import EnvConfig
+from data_connectors.http_client import HTTPClient
 from data_connectors.normalizer import DataNormalizer
+from data_connectors.persistent_cache import PersistentCache
+from data_connectors.real_payload import envelope
 
 CONFIG = {'connector_id': 'github',
  'name': 'GitHub',
  'source': 'GitHub',
  'source_type': 'community',
  'base_url': 'https://api.github.com',
- 'version': '0.1.0',
+ 'version': '0.2.0',
  'priority': 'community',
  'auth_type': 'bearer_token'}
 INPUT_SCHEMA = {'type': 'object', 'required': ['repo'], 'properties': {'repo': {'type': 'string'}, 'path': {'type': 'string'}}}
@@ -33,7 +37,7 @@ TEST_CASE = {'input': {'repo': 'openai/openai-python', 'path': 'README.md'},
 
 
 class GitHubConnector(BaseConnector):
-    """Mock GitHub Connector with Config/Input/Output/Error/Retry/Cache/Health/Test."""
+    """GitHub Connector with real API mode, mock fallback, Config/Input/Output/Error/Retry/Cache/Health/Test."""
 
     def __init__(self) -> None:
         self.config = ConnectorConfig(
@@ -49,6 +53,9 @@ class GitHubConnector(BaseConnector):
             cache_strategy=CacheStrategy(**CACHE_STRATEGY),
         )
         self.normalizer = DataNormalizer()
+        self.env = EnvConfig()
+        self.cache = PersistentCache()
+        self.http = HTTPClient.from_env(self.connector_id, self.config.retry_policy)
 
     def input_schema(self) -> dict[str, Any]:
         return INPUT_SCHEMA
@@ -61,17 +68,63 @@ class GitHubConnector(BaseConnector):
         missing = [field for field in required if field not in request.query]
         if missing:
             return self.error_result(request, "INPUT_VALIDATION_ERROR", f"missing required fields: {missing}", retryable=False)
-        raw = self._mock_raw(request)
+        if self.env.real_enabled(self.connector_id, request.query):
+            try:
+                raw = self.fetch_real(request)
+            except Exception:
+                raw = self.fetch_mock(request)
+        else:
+            raw = self.fetch_mock(request)
         return self.normalize(raw, request)
 
+    def fetch_mock(self, request: ConnectorRequest) -> dict[str, Any]:
+        repo = request.query.get("repo", "openai/openai-python")
+        return envelope(
+            self.config,
+            request,
+            url=f"https://github.com/{repo}",
+            publication_time=request.timestamp,
+            confidence=0.50,
+            mode="mock",
+            payload={"repo": repo, "stars": 1000, "license": "Apache-2.0"},
+        )
+
     def _mock_raw(self, request: ConnectorRequest) -> dict[str, Any]:
-        return {'repo': 'openai/openai-python',
- 'stars': 1000,
- 'license': 'Apache-2.0',
- 'url': 'https://github.com/openai/openai-python'}
+        return self.fetch_mock(request)
+
+    def fetch_real(self, request: ConnectorRequest) -> dict[str, Any]:
+        repo = str(request.query["repo"]).strip()
+        action = str(request.query.get("action", "repo")).strip().lower()
+        token = self.env.get("GITHUB_TOKEN")
+        headers = {"Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28"}
+        if token:
+            headers["Authorization"] = f"Bearer {token}"
+        if action == "issues":
+            endpoint = f"{self.config.base_url}/repos/{repo}/issues"
+            params = {"state": request.query.get("state", "open"), "per_page": int(request.query.get("limit", 10))}
+        elif action == "releases":
+            endpoint = f"{self.config.base_url}/repos/{repo}/releases"
+            params = {"per_page": int(request.query.get("limit", 10))}
+        elif action == "search":
+            endpoint = f"{self.config.base_url}/search/repositories"
+            params = {"q": request.query.get("query", repo), "per_page": int(request.query.get("limit", 10))}
+        else:
+            endpoint = f"{self.config.base_url}/repos/{repo}"
+            params = {}
+        cache_key = self.cache.key(self.connector_id, self.config.version, {"endpoint": endpoint, "params": params})
+        cached = self.cache.get(cache_key, self.config.cache_strategy.ttl_seconds)
+        if cached:
+            cached["cache_hit"] = True
+            return cached
+        response = self.http.get(endpoint, headers=headers, params=params, secrets=[token])
+        payload = response.json()
+        publication_time = payload.get("pushed_at") or payload.get("updated_at") or request.timestamp
+        raw = envelope(self.config, request, url=response.url, publication_time=publication_time, confidence=0.80, mode="real", payload={"repo": repo, "action": action, "response": payload, "status_code": response.status_code})
+        self.cache.set(cache_key, raw)
+        return raw
 
     def normalize(self, raw: dict[str, Any], request: ConnectorRequest) -> ConnectorResult:
-        return self.normalizer.result(self.config, request, raw, raw.get("url", self.config.base_url))
+        return self.normalizer.result(self.config, request, raw, raw.get("url", self.config.base_url), transformations=[raw.get("mode", "mock") + "_fetch", "normalize"])
 
     def health_check(self) -> HealthStatus:
         return HealthStatus(

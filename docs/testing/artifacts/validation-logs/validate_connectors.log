@@ -1,5 +1,11 @@
 AIRS FEATURE-004 Data Connector Framework Validation
 ====================================================
+PASS: .env.example exists
+PASS: .env.example documents AIRS_CONNECTOR_MODE
+PASS: .env.example documents GITHUB_TOKEN
+PASS: .env.example documents NEWS_API_ENDPOINT
+PASS: .env.example documents NEWS_API_KEY
+PASS: .env.example warns against real secrets
 PASS: docs/data-connectors/connector-architecture.md exists
 PASS: docs/data-connectors/connector-architecture.md has substantive content
 PASS: docs/data-connectors/connector-architecture.md has disclaimer
@@ -70,6 +76,20 @@ PASS: docs/data-connectors/connector-governance.md references Connector
 PASS: docs/data-connectors/connector-governance.md references Source
 PASS: docs/data-connectors/connector-governance.md references Trace
 PASS: docs/data-connectors/connector-governance.md references Evidence
+PASS: docs/data-connectors/real-data-integration.md exists
+PASS: docs/data-connectors/real-data-integration.md has substantive content
+PASS: docs/data-connectors/real-data-integration.md has disclaimer
+PASS: docs/data-connectors/real-data-integration.md avoids forbidden expression: 建议买入
+PASS: docs/data-connectors/real-data-integration.md avoids forbidden expression: 建议卖出
+PASS: docs/data-connectors/real-data-integration.md avoids forbidden expression: 保证收益
+PASS: docs/data-connectors/real-data-integration.md avoids forbidden expression: 保证盈利
+PASS: docs/data-connectors/real-data-integration.md avoids forbidden expression: 目标价为
+PASS: docs/data-connectors/real-data-integration.md avoids forbidden expression: 应买入
+PASS: docs/data-connectors/real-data-integration.md avoids forbidden expression: 应卖出
+PASS: docs/data-connectors/real-data-integration.md references Connector
+PASS: docs/data-connectors/real-data-integration.md references Source
+PASS: docs/data-connectors/real-data-integration.md references Trace
+PASS: docs/data-connectors/real-data-integration.md references Evidence
 PASS: data_connectors/__init__.py exists
 PASS: data_connectors/__init__.py contains connector logic
 PASS: data_connectors/registry.py exists
@@ -90,6 +110,16 @@ PASS: data_connectors/priority.py exists
 PASS: data_connectors/priority.py contains connector logic
 PASS: data_connectors/health_check.py exists
 PASS: data_connectors/health_check.py contains connector logic
+PASS: data_connectors/http_client.py exists
+PASS: data_connectors/http_client.py contains connector logic
+PASS: data_connectors/env_config.py exists
+PASS: data_connectors/env_config.py contains connector logic
+PASS: data_connectors/persistent_cache.py exists
+PASS: data_connectors/persistent_cache.py contains connector logic
+PASS: data_connectors/secret_masking.py exists
+PASS: data_connectors/secret_masking.py contains connector logic
+PASS: data_connectors/real_payload.py exists
+PASS: data_connectors/real_payload.py contains connector logic
 PASS: data_connectors/README.md exists
 PASS: data_connectors/README.md contains connector logic
 PASS: schemas/connectors/connector.schema.json exists
@@ -258,6 +288,16 @@ PASS: docs/adr/ADR-0004-data-connector-framework.md avoids forbidden expression:
 PASS: docs/adr/ADR-0004-data-connector-framework.md avoids forbidden expression: 目标价为
 PASS: docs/adr/ADR-0004-data-connector-framework.md avoids forbidden expression: 应买入
 PASS: docs/adr/ADR-0004-data-connector-framework.md avoids forbidden expression: 应卖出
+PASS: docs/adr/ADR-0013-real-data-integration.md exists
+PASS: docs/adr/ADR-0013-real-data-integration.md has substantive content
+PASS: docs/adr/ADR-0013-real-data-integration.md has disclaimer
+PASS: docs/adr/ADR-0013-real-data-integration.md avoids forbidden expression: 建议买入
+PASS: docs/adr/ADR-0013-real-data-integration.md avoids forbidden expression: 建议卖出
+PASS: docs/adr/ADR-0013-real-data-integration.md avoids forbidden expression: 保证收益
+PASS: docs/adr/ADR-0013-real-data-integration.md avoids forbidden expression: 保证盈利
+PASS: docs/adr/ADR-0013-real-data-integration.md avoids forbidden expression: 目标价为
+PASS: docs/adr/ADR-0013-real-data-integration.md avoids forbidden expression: 应买入
+PASS: docs/adr/ADR-0013-real-data-integration.md avoids forbidden expression: 应卖出
 PASS: docs/production/FEATURE_004_COMPLETION_REPORT.md exists
 PASS: docs/production/FEATURE_004_COMPLETION_REPORT.md has substantive content
 PASS: docs/production/FEATURE_004_COMPLETION_REPORT.md has disclaimer
@@ -268,6 +308,16 @@ PASS: docs/production/FEATURE_004_COMPLETION_REPORT.md avoids forbidden expressi
 PASS: docs/production/FEATURE_004_COMPLETION_REPORT.md avoids forbidden expression: 目标价为
 PASS: docs/production/FEATURE_004_COMPLETION_REPORT.md avoids forbidden expression: 应买入
 PASS: docs/production/FEATURE_004_COMPLETION_REPORT.md avoids forbidden expression: 应卖出
+PASS: docs/production/FEATURE_013_COMPLETION_REPORT.md exists
+PASS: docs/production/FEATURE_013_COMPLETION_REPORT.md has substantive content
+PASS: docs/production/FEATURE_013_COMPLETION_REPORT.md has disclaimer
+PASS: docs/production/FEATURE_013_COMPLETION_REPORT.md avoids forbidden expression: 建议买入
+PASS: docs/production/FEATURE_013_COMPLETION_REPORT.md avoids forbidden expression: 建议卖出
+PASS: docs/production/FEATURE_013_COMPLETION_REPORT.md avoids forbidden expression: 保证收益
+PASS: docs/production/FEATURE_013_COMPLETION_REPORT.md avoids forbidden expression: 保证盈利
+PASS: docs/production/FEATURE_013_COMPLETION_REPORT.md avoids forbidden expression: 目标价为
+PASS: docs/production/FEATURE_013_COMPLETION_REPORT.md avoids forbidden expression: 应买入
+PASS: docs/production/FEATURE_013_COMPLETION_REPORT.md avoids forbidden expression: 应卖出
 PASS: docs/review/FEATURE_004_SELF_REVIEW.md exists
 PASS: docs/review/FEATURE_004_SELF_REVIEW.md has substantive content
 PASS: docs/review/FEATURE_004_SELF_REVIEW.md has disclaimer
@@ -278,6 +328,16 @@ PASS: docs/review/FEATURE_004_SELF_REVIEW.md avoids forbidden expression: 保证
 PASS: docs/review/FEATURE_004_SELF_REVIEW.md avoids forbidden expression: 目标价为
 PASS: docs/review/FEATURE_004_SELF_REVIEW.md avoids forbidden expression: 应买入
 PASS: docs/review/FEATURE_004_SELF_REVIEW.md avoids forbidden expression: 应卖出
+PASS: docs/review/FEATURE_013_SELF_REVIEW.md exists
+PASS: docs/review/FEATURE_013_SELF_REVIEW.md has substantive content
+PASS: docs/review/FEATURE_013_SELF_REVIEW.md has disclaimer
+PASS: docs/review/FEATURE_013_SELF_REVIEW.md avoids forbidden expression: 建议买入
+PASS: docs/review/FEATURE_013_SELF_REVIEW.md avoids forbidden expression: 建议卖出
+PASS: docs/review/FEATURE_013_SELF_REVIEW.md avoids forbidden expression: 保证收益
+PASS: docs/review/FEATURE_013_SELF_REVIEW.md avoids forbidden expression: 保证盈利
+PASS: docs/review/FEATURE_013_SELF_REVIEW.md avoids forbidden expression: 目标价为
+PASS: docs/review/FEATURE_013_SELF_REVIEW.md avoids forbidden expression: 应买入
+PASS: docs/review/FEATURE_013_SELF_REVIEW.md avoids forbidden expression: 应卖出
 PASS: default registry has six connectors
 PASS: data_connectors/connectors/sec_edgar.py exists
 PASS: data_connectors/connectors/sec_edgar.py has substantive content
@@ -296,6 +356,9 @@ PASS: data_connectors/connectors/sec_edgar.py declares RETRY_POLICY
 PASS: data_connectors/connectors/sec_edgar.py declares CACHE_STRATEGY
 PASS: data_connectors/connectors/sec_edgar.py declares health_check
 PASS: data_connectors/connectors/sec_edgar.py declares TEST_CASE
+PASS: data_connectors/connectors/sec_edgar.py supports fetch_real
+PASS: data_connectors/connectors/sec_edgar.py supports fetch_mock
+PASS: data_connectors/connectors/sec_edgar.py supports real_enabled
 PASS: data_connectors/connectors/sec_edgar.py result has source
 PASS: data_connectors/connectors/sec_edgar.py result has url
 PASS: data_connectors/connectors/sec_edgar.py result has timestamp
@@ -305,6 +368,17 @@ PASS: data_connectors/connectors/sec_edgar.py result has traceability
 PASS: data_connectors/connectors/sec_edgar.py result has disclaimer
 PASS: data_connectors/connectors/sec_edgar.py health check PASS
 PASS: data_connectors/connectors/sec_edgar.py handles input error
+PASS: data_connectors/connectors/sec_edgar.py mock data has source
+PASS: data_connectors/connectors/sec_edgar.py mock data has url
+PASS: data_connectors/connectors/sec_edgar.py mock data has publication_time
+PASS: data_connectors/connectors/sec_edgar.py mock data has collection_time
+PASS: data_connectors/connectors/sec_edgar.py mock data has trace_id
+PASS: data_connectors/connectors/sec_edgar.py mock data has connector_version
+PASS: data_connectors/connectors/sec_edgar.py mock data has raw_hash
+PASS: data_connectors/connectors/sec_edgar.py mock data has confidence
+PASS: validator real fields match connector helper
+PASS: data_connectors/connectors/sec_edgar.py defaults to mock mode
+PASS: data_connectors/connectors/sec_edgar.py exposes fetch_real
 PASS: data_connectors/connectors/yahoo_finance.py exists
 PASS: data_connectors/connectors/yahoo_finance.py has substantive content
 PASS: data_connectors/connectors/yahoo_finance.py avoids forbidden expression: 建议买入
@@ -374,6 +448,9 @@ PASS: data_connectors/connectors/news.py declares RETRY_POLICY
 PASS: data_connectors/connectors/news.py declares CACHE_STRATEGY
 PASS: data_connectors/connectors/news.py declares health_check
 PASS: data_connectors/connectors/news.py declares TEST_CASE
+PASS: data_connectors/connectors/news.py supports fetch_real
+PASS: data_connectors/connectors/news.py supports fetch_mock
+PASS: data_connectors/connectors/news.py supports real_enabled
 PASS: data_connectors/connectors/news.py result has source
 PASS: data_connectors/connectors/news.py result has url
 PASS: data_connectors/connectors/news.py result has timestamp
@@ -383,6 +460,17 @@ PASS: data_connectors/connectors/news.py result has traceability
 PASS: data_connectors/connectors/news.py result has disclaimer
 PASS: data_connectors/connectors/news.py health check PASS
 PASS: data_connectors/connectors/news.py handles input error
+PASS: data_connectors/connectors/news.py mock data has source
+PASS: data_connectors/connectors/news.py mock data has url
+PASS: data_connectors/connectors/news.py mock data has publication_time
+PASS: data_connectors/connectors/news.py mock data has collection_time
+PASS: data_connectors/connectors/news.py mock data has trace_id
+PASS: data_connectors/connectors/news.py mock data has connector_version
+PASS: data_connectors/connectors/news.py mock data has raw_hash
+PASS: data_connectors/connectors/news.py mock data has confidence
+PASS: validator real fields match connector helper
+PASS: data_connectors/connectors/news.py defaults to mock mode
+PASS: data_connectors/connectors/news.py exposes fetch_real
 PASS: data_connectors/connectors/github.py exists
 PASS: data_connectors/connectors/github.py has substantive content
 PASS: data_connectors/connectors/github.py avoids forbidden expression: 建议买入
@@ -400,6 +488,9 @@ PASS: data_connectors/connectors/github.py declares RETRY_POLICY
 PASS: data_connectors/connectors/github.py declares CACHE_STRATEGY
 PASS: data_connectors/connectors/github.py declares health_check
 PASS: data_connectors/connectors/github.py declares TEST_CASE
+PASS: data_connectors/connectors/github.py supports fetch_real
+PASS: data_connectors/connectors/github.py supports fetch_mock
+PASS: data_connectors/connectors/github.py supports real_enabled
 PASS: data_connectors/connectors/github.py result has source
 PASS: data_connectors/connectors/github.py result has url
 PASS: data_connectors/connectors/github.py result has timestamp
@@ -409,6 +500,17 @@ PASS: data_connectors/connectors/github.py result has traceability
 PASS: data_connectors/connectors/github.py result has disclaimer
 PASS: data_connectors/connectors/github.py health check PASS
 PASS: data_connectors/connectors/github.py handles input error
+PASS: data_connectors/connectors/github.py mock data has source
+PASS: data_connectors/connectors/github.py mock data has url
+PASS: data_connectors/connectors/github.py mock data has publication_time
+PASS: data_connectors/connectors/github.py mock data has collection_time
+PASS: data_connectors/connectors/github.py mock data has trace_id
+PASS: data_connectors/connectors/github.py mock data has connector_version
+PASS: data_connectors/connectors/github.py mock data has raw_hash
+PASS: data_connectors/connectors/github.py mock data has confidence
+PASS: validator real fields match connector helper
+PASS: data_connectors/connectors/github.py defaults to mock mode
+PASS: data_connectors/connectors/github.py exposes fetch_real
 PASS: data_connectors/connectors/rss.py exists
 PASS: data_connectors/connectors/rss.py has substantive content
 PASS: data_connectors/connectors/rss.py avoids forbidden expression: 建议买入
@@ -426,6 +528,9 @@ PASS: data_connectors/connectors/rss.py declares RETRY_POLICY
 PASS: data_connectors/connectors/rss.py declares CACHE_STRATEGY
 PASS: data_connectors/connectors/rss.py declares health_check
 PASS: data_connectors/connectors/rss.py declares TEST_CASE
+PASS: data_connectors/connectors/rss.py supports fetch_real
+PASS: data_connectors/connectors/rss.py supports fetch_mock
+PASS: data_connectors/connectors/rss.py supports real_enabled
 PASS: data_connectors/connectors/rss.py result has source
 PASS: data_connectors/connectors/rss.py result has url
 PASS: data_connectors/connectors/rss.py result has timestamp
@@ -435,8 +540,20 @@ PASS: data_connectors/connectors/rss.py result has traceability
 PASS: data_connectors/connectors/rss.py result has disclaimer
 PASS: data_connectors/connectors/rss.py health check PASS
 PASS: data_connectors/connectors/rss.py handles input error
+PASS: data_connectors/connectors/rss.py mock data has source
+PASS: data_connectors/connectors/rss.py mock data has url
+PASS: data_connectors/connectors/rss.py mock data has publication_time
+PASS: data_connectors/connectors/rss.py mock data has collection_time
+PASS: data_connectors/connectors/rss.py mock data has trace_id
+PASS: data_connectors/connectors/rss.py mock data has connector_version
+PASS: data_connectors/connectors/rss.py mock data has raw_hash
+PASS: data_connectors/connectors/rss.py mock data has confidence
+PASS: validator real fields match connector helper
+PASS: data_connectors/connectors/rss.py defaults to mock mode
+PASS: data_connectors/connectors/rss.py exposes fetch_real
 PASS: schemas/README documents connector schemas
 PASS: CHANGELOG documents FEATURE-004
+PASS: CHANGELOG documents FEATURE-013
 PASS: docs/data-connectors/connector-architecture.md aligns with Evidence trace field Source
 PASS: docs/data-connectors/connector-architecture.md aligns with Evidence trace field URL
 PASS: docs/data-connectors/connector-architecture.md aligns with Evidence trace field Timestamp
