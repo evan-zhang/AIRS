@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://airs.local/schemas/investment/recommendation.schema.json",
+  "title": "AIRS Investment Recommendation Standard",
+  "description": "Compliance-safe recommendation structure. 仅用于研究质量控制，不构成投资建议。",
+  "type": "object",
+  "required": ["recommendation_id", "topic", "research_stance", "statement_coverage", "statements", "prohibited_actions", "disclaimer"],
+  "properties": {
+    "recommendation_id": {"type": "string"},
+    "topic": {"type": "string"},
+    "research_stance": {
+      "type": "string",
+      "description": "研究跟踪立场，不得表达买卖指令。"
+    },
+    "quality_gate": {"type": "string", "enum": ["PASS", "CONDITIONAL_PASS", "FAIL"]},
+    "statement_coverage": {
+      "type": "object",
+      "required": ["Fact", "Inference", "Assumption", "Opinion"],
+      "properties": {
+        "Fact": {"type": "integer", "minimum": 1},
+        "Inference": {"type": "integer", "minimum": 1},
+        "Assumption": {"type": "integer", "minimum": 1},
+        "Opinion": {"type": "integer", "minimum": 1}
+      }
+    },
+    "statements": {
+      "type": "array",
+      "items": {"$ref": "investment-thesis.schema.json#/properties/statements/items"}
+    },
+    "prohibited_actions": {
+      "type": "array",
+      "contains": {"const": "不提供买入/卖出指令"}
+    },
+    "disclaimer": {
+      "type": "string",
+      "const": "仅用于 AIRS 投资研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。"
+    }
+  },
+  "additionalProperties": true
+}

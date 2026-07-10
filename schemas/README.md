@@ -19,6 +19,7 @@ schemas/
 ├── benchmark/         # Benchmark 与生产示例 Schema
 ├── connectors/        # Data Connector Framework 相关 Schema
 ├── workspace/         # AI Research Workspace 相关 Schema
+├── investment/        # Investment Research Engine 相关 Schema
 ├── report/            # 报告相关 Schema
 └── evaluation/        # 评估相关 Schema
 ```
@@ -101,6 +102,14 @@ schemas/
 - **schemas/workspace/artifact.schema.json**：Artifact Schema，统一登记 Evidence、Knowledge Graph、Scorecard、Report、Review 和 Export 产物。
 - **schemas/workspace/snapshot.schema.json**：Snapshot Schema，用于 Review、Replay、Export 和 Verification Agent 复核。
 - Workspace Schema 只用于统一入口、资产治理、审计和质量控制；Agent 执行仍由 Runtime 调度，不构成投资建议。
+
+### Investment Research Engine 相关 Schema
+
+- **schemas/investment/**：FEATURE-008 Investment Research Engine 相关 Schema，用于描述投资研究请求、研究命题和合规 Recommendation。
+- **schemas/investment/investment-request.schema.json**：Engine 输入 Schema，要求包含 request_id、topic、scope、time_horizon 和免责声明。
+- **schemas/investment/investment-thesis.schema.json**：Investment Thesis Schema，要求每个命题保留 Fact、Inference、Assumption、Opinion 类型、证据引用、置信度和方法论引用。
+- **schemas/investment/recommendation.schema.json**：Recommendation Schema，要求 statement_coverage 同时覆盖 Fact、Inference、Assumption 和 Opinion，并禁止买卖指令、目标价、收益承诺和自动交易。
+- Investment Schema 只用于研究质量控制和结构化表达；Engine 必须通过 Runtime 编排并引用 Evidence、Knowledge Graph、Score 和 Report，不构成投资建议。
 
 ### Connector 相关 Schema
 

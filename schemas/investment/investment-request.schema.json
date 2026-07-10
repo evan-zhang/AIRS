@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://airs.local/schemas/investment/investment-request.schema.json",
+  "title": "AIRS Investment Request",
+  "description": "Investment Research Engine input request. 仅用于研究质量控制，不构成投资建议。",
+  "type": "object",
+  "required": ["request_id", "topic", "scope", "time_horizon", "disclaimer"],
+  "properties": {
+    "request_id": {"type": "string", "minLength": 3},
+    "topic": {"type": "string", "minLength": 1},
+    "scope": {"type": "string", "minLength": 5},
+    "time_horizon": {"type": "string"},
+    "constraints": {"type": "array", "items": {"type": "string"}},
+    "preferred_sources": {"type": "array", "items": {"type": "string"}},
+    "disclaimer": {
+      "type": "string",
+      "const": "仅用于 AIRS 投资研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。"
+    }
+  },
+  "additionalProperties": true
+}
