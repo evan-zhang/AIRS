@@ -32,6 +32,8 @@ def handle_research(path: str, payload: dict[str, Any]) -> dict[str, Any]:
         "endpoint": path,
         "request_id": result["request"]["request_id"],
         "company": result["company"],
+        "data_lineage": result.get("data_lineage"),
+        "stable_release_gate": result.get("stable_release_gate"),
         "result": result,
         "disclaimer": DISCLAIMER,
     }

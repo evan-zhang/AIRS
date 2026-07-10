@@ -23,6 +23,10 @@ VALIDATORS = [
     "scripts/validate_release.py",
     "scripts/validate_builder.py",
     "scripts/validate_knowledge_graph.py",
+    "scripts/validate_productization.py",
+    "scripts/validate_architecture_stabilization.py",
+    "scripts/validate_e2e.py",
+    "scripts/validate_stable_release.py",
 ]
 
 

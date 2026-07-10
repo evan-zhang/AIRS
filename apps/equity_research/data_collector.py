@@ -150,5 +150,7 @@ class EquityDataCollector:
 
 
 def _requires_real_data(request: ResearchRequest) -> bool:
+    if request.require_real_data:
+        return True
     raw = request.raw_input.lower()
     return "production" in raw or "real_data" in raw or "真实数据" in raw

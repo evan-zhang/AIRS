@@ -73,24 +73,30 @@ def summarize_data_lineage(connector_results: list[dict[str, Any]]) -> dict[str,
     mock_sources: list[str] = []
     skipped_sources: list[str] = []
     fallback_sources: list[str] = []
+    unknown_sources: list[str] = []
     for result in connector_results:
         connector_id = str(result.get("connector_id", "unknown"))
         mode = str(result.get("data", {}).get("mode") or result.get("traceability", {}).get("mode") or "unknown").lower()
         if mode == "real":
             real_sources.append(connector_id)
-        elif mode == "mock":
+        elif mode.startswith("mock"):
             mock_sources.append(connector_id)
-        elif mode == "skip":
+        elif mode.startswith("skip"):
             skipped_sources.append(connector_id)
         elif "fallback" in mode:
             fallback_sources.append(connector_id)
         else:
-            mock_sources.append(connector_id)
+            unknown_sources.append(connector_id)
+    degraded_sources = sorted(set(mock_sources + skipped_sources + fallback_sources + unknown_sources))
     return {
         "real_sources": sorted(set(real_sources)),
         "mock_sources": sorted(set(mock_sources)),
         "skipped_sources": sorted(set(skipped_sources)),
         "fallback_sources": sorted(set(fallback_sources)),
+        "unknown_sources": sorted(set(unknown_sources)),
+        "degraded_sources": degraded_sources,
+        "real_source_count": len(set(real_sources)),
+        "degraded_source_count": len(degraded_sources),
         "disclaimer": DISCLAIMER,
     }
 

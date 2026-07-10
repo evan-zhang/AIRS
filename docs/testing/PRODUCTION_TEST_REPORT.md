@@ -4,7 +4,7 @@
 
 - Version under test: v1.0.0-rc1
 - Branch: test/production-e2e-validation
-- Generated at: 2026-07-10T11:15:04.638328+00:00
+- Generated at: 2026-07-10T15:21:15.359271+00:00
 - Overall status: PASS
 - Production E2E: 8 PASS / 0 FAIL / 8 total
 - Failure Injection: 3 PASS / 0 FAIL / 3 total
@@ -15,56 +15,56 @@
 - Status: PASS
 - Test file: `tests/production-e2e/test_01_ai_compute.py`
 - Artifact: `docs/testing/artifacts/production-e2e/prod-e2e-01-ai-compute.json`
-- Checks: planner=PASS, runtime=PASS, connectors=PASS, evidence_trace=PASS, knowledge_graph=PASS, scorecard=PASS, committee=PASS, report_taxonomy=PASS, memory=PASS, learning=PASS
+- Checks: planner=PASS, runtime=PASS, connectors=PASS, connector_lineage=PASS, stable_release_gate=PASS, evidence_trace=PASS, knowledge_graph=PASS, scorecard=PASS, committee=PASS, report_taxonomy=PASS, memory=PASS, learning=PASS
 - Failure reason: None
 
 ### prod-e2e-02-semiconductor
 - Status: PASS
 - Test file: `tests/production-e2e/test_02_semiconductor.py`
 - Artifact: `docs/testing/artifacts/production-e2e/prod-e2e-02-semiconductor.json`
-- Checks: planner=PASS, runtime=PASS, connectors=PASS, evidence_trace=PASS, knowledge_graph=PASS, scorecard=PASS, committee=PASS, report_taxonomy=PASS, memory=PASS, learning=PASS
+- Checks: planner=PASS, runtime=PASS, connectors=PASS, connector_lineage=PASS, stable_release_gate=PASS, evidence_trace=PASS, knowledge_graph=PASS, scorecard=PASS, committee=PASS, report_taxonomy=PASS, memory=PASS, learning=PASS
 - Failure reason: None
 
 ### prod-e2e-03-innovative-drug
 - Status: PASS
 - Test file: `tests/production-e2e/test_03_innovative_drug.py`
 - Artifact: `docs/testing/artifacts/production-e2e/prod-e2e-03-innovative-drug.json`
-- Checks: planner=PASS, runtime=PASS, connectors=PASS, evidence_trace=PASS, knowledge_graph=PASS, scorecard=PASS, committee=PASS, report_taxonomy=PASS, memory=PASS, learning=PASS
+- Checks: planner=PASS, runtime=PASS, connectors=PASS, connector_lineage=PASS, stable_release_gate=PASS, evidence_trace=PASS, knowledge_graph=PASS, scorecard=PASS, committee=PASS, report_taxonomy=PASS, memory=PASS, learning=PASS
 - Failure reason: None
 
 ### prod-e2e-04-robotics
 - Status: PASS
 - Test file: `tests/production-e2e/test_04_robotics.py`
 - Artifact: `docs/testing/artifacts/production-e2e/prod-e2e-04-robotics.json`
-- Checks: planner=PASS, runtime=PASS, connectors=PASS, evidence_trace=PASS, knowledge_graph=PASS, scorecard=PASS, committee=PASS, report_taxonomy=PASS, memory=PASS, learning=PASS
+- Checks: planner=PASS, runtime=PASS, connectors=PASS, connector_lineage=PASS, stable_release_gate=PASS, evidence_trace=PASS, knowledge_graph=PASS, scorecard=PASS, committee=PASS, report_taxonomy=PASS, memory=PASS, learning=PASS
 - Failure reason: None
 
 ### prod-e2e-05-new-energy
 - Status: PASS
 - Test file: `tests/production-e2e/test_05_new_energy.py`
 - Artifact: `docs/testing/artifacts/production-e2e/prod-e2e-05-new-energy.json`
-- Checks: planner=PASS, runtime=PASS, connectors=PASS, evidence_trace=PASS, knowledge_graph=PASS, scorecard=PASS, committee=PASS, report_taxonomy=PASS, memory=PASS, learning=PASS
+- Checks: planner=PASS, runtime=PASS, connectors=PASS, connector_lineage=PASS, stable_release_gate=PASS, evidence_trace=PASS, knowledge_graph=PASS, scorecard=PASS, committee=PASS, report_taxonomy=PASS, memory=PASS, learning=PASS
 - Failure reason: None
 
 ### prod-e2e-06-peer-comparison
 - Status: PASS
 - Test file: `tests/production-e2e/test_06_peer_comparison.py`
 - Artifact: `docs/testing/artifacts/production-e2e/prod-e2e-06-peer-comparison.json`
-- Checks: planner=PASS, runtime=PASS, connectors=PASS, evidence_trace=PASS, knowledge_graph=PASS, scorecard=PASS, committee=PASS, report_taxonomy=PASS, memory=PASS, learning=PASS
+- Checks: planner=PASS, runtime=PASS, connectors=PASS, connector_lineage=PASS, stable_release_gate=PASS, evidence_trace=PASS, knowledge_graph=PASS, scorecard=PASS, committee=PASS, report_taxonomy=PASS, memory=PASS, learning=PASS
 - Failure reason: None
 
 ### prod-e2e-07-news-impact
 - Status: PASS
 - Test file: `tests/production-e2e/test_07_news_impact.py`
 - Artifact: `docs/testing/artifacts/production-e2e/prod-e2e-07-news-impact.json`
-- Checks: planner=PASS, runtime=PASS, connectors=PASS, evidence_trace=PASS, knowledge_graph=PASS, scorecard=PASS, committee=PASS, report_taxonomy=PASS, memory=PASS, learning=PASS
+- Checks: planner=PASS, runtime=PASS, connectors=PASS, connector_lineage=PASS, stable_release_gate=PASS, evidence_trace=PASS, knowledge_graph=PASS, scorecard=PASS, committee=PASS, report_taxonomy=PASS, memory=PASS, learning=PASS
 - Failure reason: None
 
 ### prod-e2e-08-memory-learning-regression
 - Status: PASS
 - Test file: `tests/production-e2e/test_08_memory_learning_regression.py`
 - Artifact: `docs/testing/artifacts/production-e2e/prod-e2e-08-memory-learning-regression.json`
-- Checks: planner=PASS, runtime=PASS, connectors=PASS, evidence_trace=PASS, knowledge_graph=PASS, scorecard=PASS, committee=PASS, report_taxonomy=PASS, memory=PASS, learning=PASS
+- Checks: planner=PASS, runtime=PASS, connectors=PASS, connector_lineage=PASS, stable_release_gate=PASS, evidence_trace=PASS, knowledge_graph=PASS, scorecard=PASS, committee=PASS, report_taxonomy=PASS, memory=PASS, learning=PASS
 - Failure reason: None
 
 ## Failure Injection Cases

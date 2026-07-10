@@ -6,7 +6,7 @@ from data_connectors.env_config import EnvConfig
 from data_connectors.http_client import HTTPClient
 from data_connectors.normalizer import DataNormalizer
 from data_connectors.persistent_cache import PersistentCache
-from data_connectors.real_payload import envelope
+from data_connectors.real_payload import envelope, fallback_envelope
 
 CONFIG = {'connector_id': 'news',
  'name': 'News',
@@ -71,8 +71,8 @@ class NewsConnector(BaseConnector):
         if self.env.real_enabled(self.connector_id, request.query) and self.env.get("NEWS_API_ENDPOINT"):
             try:
                 raw = self.fetch_real(request)
-            except Exception:
-                raw = self.fetch_mock(request)
+            except Exception as exc:  # noqa: BLE001
+                raw = fallback_envelope(self.config, request, error=exc, url="https://news.example.com/fallback", payload={"query": request.query.get("query", "AI servers"), "headline": "Fallback mock news headline", "publisher": "Mock News"})
         else:
             raw = self.fetch_mock(request)
         return self.normalize(raw, request)

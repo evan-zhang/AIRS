@@ -7,7 +7,7 @@ from data_connectors.env_config import EnvConfig
 from data_connectors.http_client import HTTPClient, HTTPClientError
 from data_connectors.normalizer import DataNormalizer
 from data_connectors.persistent_cache import PersistentCache
-from data_connectors.real_payload import envelope
+from data_connectors.real_payload import envelope, fallback_envelope
 
 CONFIG = {'connector_id': 'sec_edgar',
  'name': 'SEC EDGAR',
@@ -74,8 +74,8 @@ class SECEdgarConnector(BaseConnector):
         if self.env.real_enabled(self.connector_id, request.query):
             try:
                 raw = self.fetch_real(request)
-            except Exception:
-                raw = self.fetch_mock(request)
+            except Exception as exc:  # noqa: BLE001
+                raw = fallback_envelope(self.config, request, error=exc, url="https://www.sec.gov/edgar/fallback", payload={"filing_type": request.query.get("form_type", "10-K"), "company": "Fallback Mock Company", "period": "UNKNOWN"})
         else:
             raw = self.fetch_mock(request)
         return self.normalize(raw, request)

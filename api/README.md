@@ -15,6 +15,7 @@ python3 api/server.py
 - `AIRS_API_KEY`：启用 `Authorization: Bearer <key>` 或 `X-AIRS-API-Key` 鉴权。
 - `AIRS_CORS_ALLOW_ORIGINS`：逗号分隔的允许来源，默认仅本地 Web。
 - `AIRS_MAX_BODY_BYTES`：请求体大小上限。
+- `AIRS_RATE_LIMIT_PER_MINUTE`：单客户端/单 API key 每分钟请求上限，默认 120；设为 0 可在本地测试中关闭。
 - `AIRS_EXPOSE_ERRORS=false`：默认隐藏内部错误细节。
 
 ## Endpoints

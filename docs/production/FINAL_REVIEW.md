@@ -4,6 +4,8 @@
 **版本**：v1.0.0  
 **审查范围**：AIRS V1.0 Production Release
 
+> QA Sprint 3 更新：本报告是 M8 生产交付阶段的历史 Final Review。Stable 发布最终判断以 `docs/release/RELEASE_READINESS_REVIEW_V2.md` 为准；未完成或未验证事项以 `docs/qa/STABLE_RELEASE_REMEDIATION_REPORT.md` 和 `docs/review/STABLE_RELEASE_SELF_REVIEW.md` 为准。
+
 ## 1. 审查结论
 
 AIRS V1.0 已达到 Production Release 的工程与治理标准。M1-M8 的核心交付完整，所有 validate 脚本和生产聚合检查通过，生产指南、部署、升级、维护、治理、发布、验收、质量门禁、回归、安全和支持文件均已建立。

@@ -39,3 +39,7 @@ docker compose up
 - `airs-cache`：Connector 与产品缓存。
 
 默认使用 Mock Connector 模式。真实数据源需要通过环境变量显式启用。
+
+## Health check
+
+`docker/docker-compose.yml` 为 API 容器配置了带 `X-AIRS-API-Key` 的 `/health` 检查。Web 容器会等待 API healthy 后启动。该 health check 只证明容器、鉴权和 API 路由可用，不证明真实外部数据源可用。

@@ -89,6 +89,14 @@
       "status": "PASS"
     },
     {
+      "name": "connector_lineage",
+      "status": "PASS"
+    },
+    {
+      "name": "stable_release_gate",
+      "status": "PASS"
+    },
+    {
       "name": "evidence_trace",
       "status": "PASS"
     },
@@ -479,7 +487,24 @@
       ]
     }
   },
-  "completed_at": "2026-07-10T11:15:04.192391+00:00",
+  "completed_at": "2026-07-10T15:21:14.920307+00:00",
+  "connector_lineage": {
+    "degraded_source_count": 2,
+    "degraded_sources": [
+      "news",
+      "yahoo_finance"
+    ],
+    "disclaimer": "AIRS 契约校验仅用于研究质量控制，不构成投资建议。",
+    "fallback_sources": [],
+    "mock_sources": [
+      "news",
+      "yahoo_finance"
+    ],
+    "real_source_count": 0,
+    "real_sources": [],
+    "skipped_sources": [],
+    "unknown_sources": []
+  },
   "disclaimer": "仅用于 AIRS 投资研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
   "errors": [],
   "evidence_trace": [
@@ -503,7 +528,7 @@
       "result": {
         "connector_id": "news",
         "data": {
-          "collection_time": "2026-07-10T11:15:04.192086+00:00",
+          "collection_time": "2026-07-10T15:21:14.920083+00:00",
           "confidence": 0.5,
           "connector_version": "0.2.0",
           "mode": "mock",
@@ -512,21 +537,22 @@
             "publisher": "Mock News",
             "query": "innovative drug pipeline catalyst"
           },
-          "publication_time": "2026-07-10T11:15:04.192070+00:00",
+          "publication_time": "2026-07-10T15:21:14.920074+00:00",
           "raw_hash": "916d2bd394871bf671e2f53e753fa02fcdb6b71228c3d9e4e932f2298bea50a5",
           "source": "Public News",
-          "trace_id": "TRACE-B367EF41446B",
+          "trace_id": "TRACE-BAD229CFDE64",
           "url": "https://news.example.com/mock"
         },
         "disclaimer": "仅供 AIRS 工程开发和研究质量控制使用，不构成投资建议。",
         "source": "Public News",
         "source_type": "public_news",
-        "timestamp": "2026-07-10T11:15:04.192070+00:00",
-        "trace_id": "TRACE-B367EF41446B",
+        "timestamp": "2026-07-10T15:21:14.920074+00:00",
+        "trace_id": "TRACE-BAD229CFDE64",
         "traceability": {
           "cache_hit": false,
           "connector": "news",
-          "request_id": "TRACE-B367EF41446B",
+          "mode": "mock",
+          "request_id": "TRACE-BAD229CFDE64",
           "transformations": [
             "mock_fetch",
             "normalize"
@@ -558,24 +584,26 @@
         "data": {
           "currency": "USD",
           "last_price": 100.0,
-          "symbol": "AAPL",
-          "url": "https://finance.yahoo.com/quote/AAPL"
+          "mode": "mock",
+          "symbol": "MRNA",
+          "url": "https://finance.yahoo.com/quote/MRNA"
         },
         "disclaimer": "仅供 AIRS 工程开发和研究质量控制使用，不构成投资建议。",
         "source": "Yahoo Finance",
         "source_type": "trusted_third_party",
-        "timestamp": "2026-07-10T11:15:04.192115+00:00",
-        "trace_id": "TRACE-A6CC284678D9",
+        "timestamp": "2026-07-10T15:21:14.920102+00:00",
+        "trace_id": "TRACE-F0C44B6915C3",
         "traceability": {
           "cache_hit": false,
           "connector": "yahoo_finance",
-          "request_id": "TRACE-A6CC284678D9",
+          "mode": "mock",
+          "request_id": "TRACE-F0C44B6915C3",
           "transformations": [
             "mock_fetch",
             "normalize"
           ]
         },
-        "url": "https://finance.yahoo.com/quote/AAPL",
+        "url": "https://finance.yahoo.com/quote/MRNA",
         "version": "0.1.0"
       }
     }
@@ -583,7 +611,7 @@
   "execution_log": [
     {
       "agent_id": null,
-      "event_id": "evt-a9fbad11ffda",
+      "event_id": "evt-ed9662b101c9",
       "event_type": "RUNTIME_STARTED",
       "payload": {
         "runtime_id": "runtime-from-planner-prod-e2e-03-innovative-drug",
@@ -592,47 +620,47 @@
       "session_id": null,
       "severity": "INFO",
       "task_id": null,
-      "timestamp": "2026-07-10T11:15:04.190124+00:00",
+      "timestamp": "2026-07-10T15:21:14.919369+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-61c7509d7d48",
+      "event_id": "evt-e1591077b8e8",
       "event_type": "TASK_DISPATCHED",
       "payload": {
         "agent_type": "sync"
       },
-      "session_id": "ses-8d3973cc868e",
+      "session_id": "ses-160552776757",
       "severity": "INFO",
       "task_id": "goal_analysis",
-      "timestamp": "2026-07-10T11:15:04.190213+00:00",
+      "timestamp": "2026-07-10T15:21:14.919377+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-97314091aa4a",
+      "event_id": "evt-747ab8e6efdb",
       "event_type": "AGENT_INITIALIZED",
       "payload": {},
-      "session_id": "ses-8d3973cc868e",
+      "session_id": "ses-160552776757",
       "severity": "INFO",
       "task_id": "goal_analysis",
-      "timestamp": "2026-07-10T11:15:04.190222+00:00",
+      "timestamp": "2026-07-10T15:21:14.919382+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-7f9cbc3915c9",
+      "event_id": "evt-d5928d5233c1",
       "event_type": "AGENT_RUNNING",
       "payload": {},
-      "session_id": "ses-8d3973cc868e",
+      "session_id": "ses-160552776757",
       "severity": "INFO",
       "task_id": "goal_analysis",
-      "timestamp": "2026-07-10T11:15:04.190228+00:00",
+      "timestamp": "2026-07-10T15:21:14.919385+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-8c411cd979e1",
+      "event_id": "evt-64bd671d7547",
       "event_type": "AGENT_COMPLETED",
       "payload": {
         "agent_id": "methodology_selector",
@@ -644,50 +672,50 @@
         "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
         "task_id": "goal_analysis"
       },
-      "session_id": "ses-8d3973cc868e",
+      "session_id": "ses-160552776757",
       "severity": "INFO",
       "task_id": "goal_analysis",
-      "timestamp": "2026-07-10T11:15:04.190236+00:00",
+      "timestamp": "2026-07-10T15:21:14.919390+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-1c48615e188e",
+      "event_id": "evt-964f72e149ec",
       "event_type": "TASK_DISPATCHED",
       "payload": {
         "agent_type": "sync"
       },
-      "session_id": "ses-21913f406379",
+      "session_id": "ses-c3c0edd56dad",
       "severity": "INFO",
       "task_id": "scope",
-      "timestamp": "2026-07-10T11:15:04.190344+00:00",
+      "timestamp": "2026-07-10T15:21:14.919414+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-95d02fc4c53b",
+      "event_id": "evt-23f1c139e311",
       "event_type": "AGENT_INITIALIZED",
       "payload": {},
-      "session_id": "ses-21913f406379",
+      "session_id": "ses-c3c0edd56dad",
       "severity": "INFO",
       "task_id": "scope",
-      "timestamp": "2026-07-10T11:15:04.190437+00:00",
+      "timestamp": "2026-07-10T15:21:14.919418+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-71ee437c74dd",
+      "event_id": "evt-ddb301f86584",
       "event_type": "AGENT_RUNNING",
       "payload": {},
-      "session_id": "ses-21913f406379",
+      "session_id": "ses-c3c0edd56dad",
       "severity": "INFO",
       "task_id": "scope",
-      "timestamp": "2026-07-10T11:15:04.190452+00:00",
+      "timestamp": "2026-07-10T15:21:14.919421+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-3071a04ce90e",
+      "event_id": "evt-d6c2088e7e06",
       "event_type": "AGENT_COMPLETED",
       "payload": {
         "agent_id": "methodology_selector",
@@ -699,50 +727,50 @@
         "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
         "task_id": "scope"
       },
-      "session_id": "ses-21913f406379",
+      "session_id": "ses-c3c0edd56dad",
       "severity": "INFO",
       "task_id": "scope",
-      "timestamp": "2026-07-10T11:15:04.190483+00:00",
+      "timestamp": "2026-07-10T15:21:14.919424+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-95ac6ef5a5de",
+      "event_id": "evt-c76a28cb670c",
       "event_type": "TASK_DISPATCHED",
       "payload": {
         "agent_type": "sync"
       },
-      "session_id": "ses-ad55e439466b",
+      "session_id": "ses-94f82c03e0b5",
       "severity": "INFO",
       "task_id": "methodology_selection",
-      "timestamp": "2026-07-10T11:15:04.190561+00:00",
+      "timestamp": "2026-07-10T15:21:14.919443+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-4f6abd2f27d7",
+      "event_id": "evt-75f66ff1ef85",
       "event_type": "AGENT_INITIALIZED",
       "payload": {},
-      "session_id": "ses-ad55e439466b",
+      "session_id": "ses-94f82c03e0b5",
       "severity": "INFO",
       "task_id": "methodology_selection",
-      "timestamp": "2026-07-10T11:15:04.190573+00:00",
+      "timestamp": "2026-07-10T15:21:14.919447+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-3685dcddd052",
+      "event_id": "evt-6b9b74df045c",
       "event_type": "AGENT_RUNNING",
       "payload": {},
-      "session_id": "ses-ad55e439466b",
+      "session_id": "ses-94f82c03e0b5",
       "severity": "INFO",
       "task_id": "methodology_selection",
-      "timestamp": "2026-07-10T11:15:04.190578+00:00",
+      "timestamp": "2026-07-10T15:21:14.919449+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-ad3805fccb31",
+      "event_id": "evt-d426c5846cd7",
       "event_type": "AGENT_COMPLETED",
       "payload": {
         "agent_id": "methodology_selector",
@@ -754,50 +782,50 @@
         "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
         "task_id": "methodology_selection"
       },
-      "session_id": "ses-ad55e439466b",
+      "session_id": "ses-94f82c03e0b5",
       "severity": "INFO",
       "task_id": "methodology_selection",
-      "timestamp": "2026-07-10T11:15:04.190586+00:00",
+      "timestamp": "2026-07-10T15:21:14.919453+00:00",
       "trace_id": null
     },
     {
       "agent_id": "evidence_collector",
-      "event_id": "evt-b0c5f2143635",
+      "event_id": "evt-11282f85a004",
       "event_type": "TASK_DISPATCHED",
       "payload": {
         "agent_type": "async"
       },
-      "session_id": "ses-13266459a2c5",
+      "session_id": "ses-be746a09576f",
       "severity": "INFO",
       "task_id": "connector_plan",
-      "timestamp": "2026-07-10T11:15:04.190644+00:00",
+      "timestamp": "2026-07-10T15:21:14.919473+00:00",
       "trace_id": null
     },
     {
       "agent_id": "evidence_collector",
-      "event_id": "evt-d55737f22f37",
+      "event_id": "evt-dec4ae2c1c2b",
       "event_type": "AGENT_INITIALIZED",
       "payload": {},
-      "session_id": "ses-13266459a2c5",
+      "session_id": "ses-be746a09576f",
       "severity": "INFO",
       "task_id": "connector_plan",
-      "timestamp": "2026-07-10T11:15:04.190652+00:00",
+      "timestamp": "2026-07-10T15:21:14.919476+00:00",
       "trace_id": null
     },
     {
       "agent_id": "evidence_collector",
-      "event_id": "evt-cbbf6da9a155",
+      "event_id": "evt-7f04e2f1f967",
       "event_type": "AGENT_RUNNING",
       "payload": {},
-      "session_id": "ses-13266459a2c5",
+      "session_id": "ses-be746a09576f",
       "severity": "INFO",
       "task_id": "connector_plan",
-      "timestamp": "2026-07-10T11:15:04.190703+00:00",
+      "timestamp": "2026-07-10T15:21:14.919479+00:00",
       "trace_id": null
     },
     {
       "agent_id": "evidence_collector",
-      "event_id": "evt-d72a5ce20423",
+      "event_id": "evt-0fad0633c18e",
       "event_type": "AGENT_COMPLETED",
       "payload": {
         "agent_id": "evidence_collector",
@@ -811,50 +839,50 @@
         "result": "采集并登记证据引用 已由 Runtime 调度完成",
         "task_id": "connector_plan"
       },
-      "session_id": "ses-13266459a2c5",
+      "session_id": "ses-be746a09576f",
       "severity": "INFO",
       "task_id": "connector_plan",
-      "timestamp": "2026-07-10T11:15:04.190810+00:00",
+      "timestamp": "2026-07-10T15:21:14.919482+00:00",
       "trace_id": null
     },
     {
       "agent_id": "parallel_researcher",
-      "event_id": "evt-4049439a45cb",
+      "event_id": "evt-d58e8733ec40",
       "event_type": "TASK_DISPATCHED",
       "payload": {
         "agent_type": "parallel"
       },
-      "session_id": "ses-aef169260938",
+      "session_id": "ses-bd4cd90cb5f9",
       "severity": "INFO",
       "task_id": "skill_plan",
-      "timestamp": "2026-07-10T11:15:04.191105+00:00",
+      "timestamp": "2026-07-10T15:21:14.919501+00:00",
       "trace_id": null
     },
     {
       "agent_id": "parallel_researcher",
-      "event_id": "evt-3e55cdc9b964",
+      "event_id": "evt-cee7299e60d9",
       "event_type": "AGENT_INITIALIZED",
       "payload": {},
-      "session_id": "ses-aef169260938",
+      "session_id": "ses-bd4cd90cb5f9",
       "severity": "INFO",
       "task_id": "skill_plan",
-      "timestamp": "2026-07-10T11:15:04.191139+00:00",
+      "timestamp": "2026-07-10T15:21:14.919504+00:00",
       "trace_id": null
     },
     {
       "agent_id": "parallel_researcher",
-      "event_id": "evt-d4e697f643dc",
+      "event_id": "evt-8b8de69273e5",
       "event_type": "AGENT_RUNNING",
       "payload": {},
-      "session_id": "ses-aef169260938",
+      "session_id": "ses-bd4cd90cb5f9",
       "severity": "INFO",
       "task_id": "skill_plan",
-      "timestamp": "2026-07-10T11:15:04.191145+00:00",
+      "timestamp": "2026-07-10T15:21:14.919507+00:00",
       "trace_id": null
     },
     {
       "agent_id": "parallel_researcher",
-      "event_id": "evt-a101a07ba437",
+      "event_id": "evt-37c8b139228b",
       "event_type": "AGENT_COMPLETED",
       "payload": {
         "agent_id": "parallel_researcher",
@@ -870,50 +898,50 @@
         "result": "并行拆分研究子任务 已由 Runtime 调度完成",
         "task_id": "skill_plan"
       },
-      "session_id": "ses-aef169260938",
+      "session_id": "ses-bd4cd90cb5f9",
       "severity": "INFO",
       "task_id": "skill_plan",
-      "timestamp": "2026-07-10T11:15:04.191154+00:00",
+      "timestamp": "2026-07-10T15:21:14.919511+00:00",
       "trace_id": null
     },
     {
       "agent_id": "evidence_collector",
-      "event_id": "evt-e364a3607be3",
+      "event_id": "evt-379cec366dbb",
       "event_type": "TASK_DISPATCHED",
       "payload": {
         "agent_type": "async"
       },
-      "session_id": "ses-775110b62c04",
+      "session_id": "ses-bd053ced2bbd",
       "severity": "INFO",
       "task_id": "evidence_plan",
-      "timestamp": "2026-07-10T11:15:04.191214+00:00",
+      "timestamp": "2026-07-10T15:21:14.919528+00:00",
       "trace_id": null
     },
     {
       "agent_id": "evidence_collector",
-      "event_id": "evt-4e990e68861e",
+      "event_id": "evt-9868b90a4e56",
       "event_type": "AGENT_INITIALIZED",
       "payload": {},
-      "session_id": "ses-775110b62c04",
+      "session_id": "ses-bd053ced2bbd",
       "severity": "INFO",
       "task_id": "evidence_plan",
-      "timestamp": "2026-07-10T11:15:04.191220+00:00",
+      "timestamp": "2026-07-10T15:21:14.919531+00:00",
       "trace_id": null
     },
     {
       "agent_id": "evidence_collector",
-      "event_id": "evt-13f3721d0dcd",
+      "event_id": "evt-fb07ffb38556",
       "event_type": "AGENT_RUNNING",
       "payload": {},
-      "session_id": "ses-775110b62c04",
+      "session_id": "ses-bd053ced2bbd",
       "severity": "INFO",
       "task_id": "evidence_plan",
-      "timestamp": "2026-07-10T11:15:04.191225+00:00",
+      "timestamp": "2026-07-10T15:21:14.919533+00:00",
       "trace_id": null
     },
     {
       "agent_id": "evidence_collector",
-      "event_id": "evt-cc64757da81c",
+      "event_id": "evt-248c4c35dfc8",
       "event_type": "AGENT_COMPLETED",
       "payload": {
         "agent_id": "evidence_collector",
@@ -927,50 +955,50 @@
         "result": "采集并登记证据引用 已由 Runtime 调度完成",
         "task_id": "evidence_plan"
       },
-      "session_id": "ses-775110b62c04",
+      "session_id": "ses-bd053ced2bbd",
       "severity": "INFO",
       "task_id": "evidence_plan",
-      "timestamp": "2026-07-10T11:15:04.191232+00:00",
+      "timestamp": "2026-07-10T15:21:14.919537+00:00",
       "trace_id": null
     },
     {
       "agent_id": "parallel_researcher",
-      "event_id": "evt-db2665ee92d0",
+      "event_id": "evt-911d32cdcf8b",
       "event_type": "TASK_DISPATCHED",
       "payload": {
         "agent_type": "parallel"
       },
-      "session_id": "ses-59bf2b01ab8b",
+      "session_id": "ses-e2822ed09197",
       "severity": "INFO",
       "task_id": "knowledge_graph_plan",
-      "timestamp": "2026-07-10T11:15:04.191266+00:00",
+      "timestamp": "2026-07-10T15:21:14.919555+00:00",
       "trace_id": null
     },
     {
       "agent_id": "parallel_researcher",
-      "event_id": "evt-1af01868cb5a",
+      "event_id": "evt-9b67727b05e9",
       "event_type": "AGENT_INITIALIZED",
       "payload": {},
-      "session_id": "ses-59bf2b01ab8b",
+      "session_id": "ses-e2822ed09197",
       "severity": "INFO",
       "task_id": "knowledge_graph_plan",
-      "timestamp": "2026-07-10T11:15:04.191271+00:00",
+      "timestamp": "2026-07-10T15:21:14.919558+00:00",
       "trace_id": null
     },
     {
       "agent_id": "parallel_researcher",
-      "event_id": "evt-6a072614d00f",
+      "event_id": "evt-c21780d340bb",
       "event_type": "AGENT_RUNNING",
       "payload": {},
-      "session_id": "ses-59bf2b01ab8b",
+      "session_id": "ses-e2822ed09197",
       "severity": "INFO",
       "task_id": "knowledge_graph_plan",
-      "timestamp": "2026-07-10T11:15:04.191276+00:00",
+      "timestamp": "2026-07-10T15:21:14.919561+00:00",
       "trace_id": null
     },
     {
       "agent_id": "parallel_researcher",
-      "event_id": "evt-c396b298d163",
+      "event_id": "evt-e1b5b4f94d2b",
       "event_type": "AGENT_COMPLETED",
       "payload": {
         "agent_id": "parallel_researcher",
@@ -986,50 +1014,50 @@
         "result": "并行拆分研究子任务 已由 Runtime 调度完成",
         "task_id": "knowledge_graph_plan"
       },
-      "session_id": "ses-59bf2b01ab8b",
+      "session_id": "ses-e2822ed09197",
       "severity": "INFO",
       "task_id": "knowledge_graph_plan",
-      "timestamp": "2026-07-10T11:15:04.191282+00:00",
+      "timestamp": "2026-07-10T15:21:14.919565+00:00",
       "trace_id": null
     },
     {
       "agent_id": "report_composer",
-      "event_id": "evt-23469e1152ed",
+      "event_id": "evt-d0bcdf6a7930",
       "event_type": "TASK_DISPATCHED",
       "payload": {
         "agent_type": "sync"
       },
-      "session_id": "ses-67d345f9ac03",
+      "session_id": "ses-25063b86ccd0",
       "severity": "INFO",
       "task_id": "score_plan",
-      "timestamp": "2026-07-10T11:15:04.191317+00:00",
+      "timestamp": "2026-07-10T15:21:14.919587+00:00",
       "trace_id": null
     },
     {
       "agent_id": "report_composer",
-      "event_id": "evt-c0cffd43ec5e",
+      "event_id": "evt-ccbae6e12599",
       "event_type": "AGENT_INITIALIZED",
       "payload": {},
-      "session_id": "ses-67d345f9ac03",
+      "session_id": "ses-25063b86ccd0",
       "severity": "INFO",
       "task_id": "score_plan",
-      "timestamp": "2026-07-10T11:15:04.191322+00:00",
+      "timestamp": "2026-07-10T15:21:14.919593+00:00",
       "trace_id": null
     },
     {
       "agent_id": "report_composer",
-      "event_id": "evt-ace0b517b165",
+      "event_id": "evt-fb223a4ae21e",
       "event_type": "AGENT_RUNNING",
       "payload": {},
-      "session_id": "ses-67d345f9ac03",
+      "session_id": "ses-25063b86ccd0",
       "severity": "INFO",
       "task_id": "score_plan",
-      "timestamp": "2026-07-10T11:15:04.191326+00:00",
+      "timestamp": "2026-07-10T15:21:14.919596+00:00",
       "trace_id": null
     },
     {
       "agent_id": "report_composer",
-      "event_id": "evt-088bc458430a",
+      "event_id": "evt-789c6eb251f5",
       "event_type": "AGENT_COMPLETED",
       "payload": {
         "agent_id": "report_composer",
@@ -1042,50 +1070,50 @@
         "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
         "task_id": "score_plan"
       },
-      "session_id": "ses-67d345f9ac03",
+      "session_id": "ses-25063b86ccd0",
       "severity": "INFO",
       "task_id": "score_plan",
-      "timestamp": "2026-07-10T11:15:04.191333+00:00",
+      "timestamp": "2026-07-10T15:21:14.919600+00:00",
       "trace_id": null
     },
     {
       "agent_id": "report_composer",
-      "event_id": "evt-a8eedceb78a3",
+      "event_id": "evt-988f840bc093",
       "event_type": "TASK_DISPATCHED",
       "payload": {
         "agent_type": "sync"
       },
-      "session_id": "ses-f871c568fd66",
+      "session_id": "ses-d4c2d7a90260",
       "severity": "INFO",
       "task_id": "report_plan",
-      "timestamp": "2026-07-10T11:15:04.191365+00:00",
+      "timestamp": "2026-07-10T15:21:14.919619+00:00",
       "trace_id": null
     },
     {
       "agent_id": "report_composer",
-      "event_id": "evt-7bf07da1044f",
+      "event_id": "evt-5cf299e427d9",
       "event_type": "AGENT_INITIALIZED",
       "payload": {},
-      "session_id": "ses-f871c568fd66",
+      "session_id": "ses-d4c2d7a90260",
       "severity": "INFO",
       "task_id": "report_plan",
-      "timestamp": "2026-07-10T11:15:04.191370+00:00",
+      "timestamp": "2026-07-10T15:21:14.919622+00:00",
       "trace_id": null
     },
     {
       "agent_id": "report_composer",
-      "event_id": "evt-3c4a346c4614",
+      "event_id": "evt-e0c8bf154afe",
       "event_type": "AGENT_RUNNING",
       "payload": {},
-      "session_id": "ses-f871c568fd66",
+      "session_id": "ses-d4c2d7a90260",
       "severity": "INFO",
       "task_id": "report_plan",
-      "timestamp": "2026-07-10T11:15:04.191375+00:00",
+      "timestamp": "2026-07-10T15:21:14.919625+00:00",
       "trace_id": null
     },
     {
       "agent_id": "report_composer",
-      "event_id": "evt-33a7417ae1c1",
+      "event_id": "evt-f4b676924b7d",
       "event_type": "AGENT_COMPLETED",
       "payload": {
         "agent_id": "report_composer",
@@ -1098,50 +1126,50 @@
         "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
         "task_id": "report_plan"
       },
-      "session_id": "ses-f871c568fd66",
+      "session_id": "ses-d4c2d7a90260",
       "severity": "INFO",
       "task_id": "report_plan",
-      "timestamp": "2026-07-10T11:15:04.191380+00:00",
+      "timestamp": "2026-07-10T15:21:14.919628+00:00",
       "trace_id": null
     },
     {
       "agent_id": "human_reviewer",
-      "event_id": "evt-38e175739d0c",
+      "event_id": "evt-5fb4152fdd24",
       "event_type": "TASK_DISPATCHED",
       "payload": {
         "agent_type": "human_in_the_loop"
       },
-      "session_id": "ses-9fb9e2dd8b8e",
+      "session_id": "ses-870b180d8600",
       "severity": "INFO",
       "task_id": "review_plan",
-      "timestamp": "2026-07-10T11:15:04.191413+00:00",
+      "timestamp": "2026-07-10T15:21:14.919648+00:00",
       "trace_id": null
     },
     {
       "agent_id": "human_reviewer",
-      "event_id": "evt-8b306533590d",
+      "event_id": "evt-1081065e0c61",
       "event_type": "AGENT_INITIALIZED",
       "payload": {},
-      "session_id": "ses-9fb9e2dd8b8e",
+      "session_id": "ses-870b180d8600",
       "severity": "INFO",
       "task_id": "review_plan",
-      "timestamp": "2026-07-10T11:15:04.191418+00:00",
+      "timestamp": "2026-07-10T15:21:14.919651+00:00",
       "trace_id": null
     },
     {
       "agent_id": "human_reviewer",
-      "event_id": "evt-a0438722523c",
+      "event_id": "evt-e06ac0d2a382",
       "event_type": "AGENT_RUNNING",
       "payload": {},
-      "session_id": "ses-9fb9e2dd8b8e",
+      "session_id": "ses-870b180d8600",
       "severity": "INFO",
       "task_id": "review_plan",
-      "timestamp": "2026-07-10T11:15:04.191422+00:00",
+      "timestamp": "2026-07-10T15:21:14.919654+00:00",
       "trace_id": null
     },
     {
       "agent_id": "human_reviewer",
-      "event_id": "evt-9fe5b451bb69",
+      "event_id": "evt-07671a86d813",
       "event_type": "AGENT_WAITING_FOR_HUMAN",
       "payload": {
         "agent_id": "human_reviewer",
@@ -1154,50 +1182,50 @@
         "result": "人工确认或补充输入 已由 Runtime 调度完成",
         "task_id": "review_plan"
       },
-      "session_id": "ses-9fb9e2dd8b8e",
+      "session_id": "ses-870b180d8600",
       "severity": "INFO",
       "task_id": "review_plan",
-      "timestamp": "2026-07-10T11:15:04.191429+00:00",
+      "timestamp": "2026-07-10T15:21:14.919657+00:00",
       "trace_id": null
     },
     {
       "agent_id": "report_composer",
-      "event_id": "evt-d6ad6cfbe3a1",
+      "event_id": "evt-d4a98e238e03",
       "event_type": "TASK_DISPATCHED",
       "payload": {
         "agent_type": "sync"
       },
-      "session_id": "ses-7a345cb1e682",
+      "session_id": "ses-4b0b5692570f",
       "severity": "INFO",
       "task_id": "runtime_plan",
-      "timestamp": "2026-07-10T11:15:04.191463+00:00",
+      "timestamp": "2026-07-10T15:21:14.919676+00:00",
       "trace_id": null
     },
     {
       "agent_id": "report_composer",
-      "event_id": "evt-a4ce7ed74d0f",
+      "event_id": "evt-12c8d31ec755",
       "event_type": "AGENT_INITIALIZED",
       "payload": {},
-      "session_id": "ses-7a345cb1e682",
+      "session_id": "ses-4b0b5692570f",
       "severity": "INFO",
       "task_id": "runtime_plan",
-      "timestamp": "2026-07-10T11:15:04.191468+00:00",
+      "timestamp": "2026-07-10T15:21:14.919679+00:00",
       "trace_id": null
     },
     {
       "agent_id": "report_composer",
-      "event_id": "evt-bf610b5e99c2",
+      "event_id": "evt-e996147fa2db",
       "event_type": "AGENT_RUNNING",
       "payload": {},
-      "session_id": "ses-7a345cb1e682",
+      "session_id": "ses-4b0b5692570f",
       "severity": "INFO",
       "task_id": "runtime_plan",
-      "timestamp": "2026-07-10T11:15:04.191475+00:00",
+      "timestamp": "2026-07-10T15:21:14.919682+00:00",
       "trace_id": null
     },
     {
       "agent_id": "report_composer",
-      "event_id": "evt-4566dae299da",
+      "event_id": "evt-7cab3da6bf4d",
       "event_type": "AGENT_COMPLETED",
       "payload": {
         "agent_id": "report_composer",
@@ -1210,15 +1238,15 @@
         "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
         "task_id": "runtime_plan"
       },
-      "session_id": "ses-7a345cb1e682",
+      "session_id": "ses-4b0b5692570f",
       "severity": "INFO",
       "task_id": "runtime_plan",
-      "timestamp": "2026-07-10T11:15:04.191481+00:00",
+      "timestamp": "2026-07-10T15:21:14.919685+00:00",
       "trace_id": null
     },
     {
       "agent_id": null,
-      "event_id": "evt-146fadc0a676",
+      "event_id": "evt-a09f717885a1",
       "event_type": "RUNTIME_COMPLETED",
       "payload": {
         "runtime_id": "runtime-from-planner-prod-e2e-03-innovative-drug",
@@ -1227,7 +1255,7 @@
       "session_id": null,
       "severity": "INFO",
       "task_id": null,
-      "timestamp": "2026-07-10T11:15:04.191510+00:00",
+      "timestamp": "2026-07-10T15:21:14.919704+00:00",
       "trace_id": null
     }
   ],
@@ -1357,7 +1385,7 @@
           "node_id": "topic",
           "node_type": "industry",
           "source_refs": [
-            "connector-trace:TRACE-B367EF41446B"
+            "connector-trace:TRACE-BAD229CFDE64"
           ]
         },
         {
@@ -1673,6 +1701,2648 @@
       }
     }
   },
+  "orchestrator": {
+    "boundary": {
+      "orchestrator_owns": "contract validation and runtime handoff",
+      "planner_owns": "research plan and task graph",
+      "runtime_owns": "agent dispatch, state and events"
+    },
+    "contract_version": "planner-runtime-contract-v1",
+    "disclaimer": "AIRS Orchestrator 仅用于研究流程编排和质量控制，不构成投资建议。",
+    "orchestrator_version": "0.1.0",
+    "planner_ref": "plan-prod-e2e-03-innovative-drug",
+    "runtime": {
+      "agent_graph": {
+        "edges": [
+          {
+            "from": [],
+            "to": "goal_analysis"
+          },
+          {
+            "from": [
+              "goal_analysis"
+            ],
+            "to": "scope"
+          },
+          {
+            "from": [
+              "scope"
+            ],
+            "to": "methodology_selection"
+          },
+          {
+            "from": [
+              "methodology_selection"
+            ],
+            "to": "connector_plan"
+          },
+          {
+            "from": [
+              "connector_plan"
+            ],
+            "to": "skill_plan"
+          },
+          {
+            "from": [
+              "skill_plan"
+            ],
+            "to": "evidence_plan"
+          },
+          {
+            "from": [
+              "evidence_plan"
+            ],
+            "to": "knowledge_graph_plan"
+          },
+          {
+            "from": [
+              "knowledge_graph_plan"
+            ],
+            "to": "score_plan"
+          },
+          {
+            "from": [
+              "score_plan"
+            ],
+            "to": "report_plan"
+          },
+          {
+            "from": [
+              "report_plan"
+            ],
+            "to": "review_plan"
+          },
+          {
+            "from": [
+              "review_plan"
+            ],
+            "to": "runtime_plan"
+          }
+        ],
+        "nodes": [
+          "evidence_collector",
+          "human_reviewer",
+          "long_running_researcher",
+          "methodology_selector",
+          "parallel_researcher",
+          "report_composer"
+        ]
+      },
+      "context_snapshot": [
+        {
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "input_data": {
+            "case_id": "prod-e2e-03-innovative-drug",
+            "plan_id": "plan-prod-e2e-03-innovative-drug",
+            "planner_task": {
+              "agent_role": "Research Agent",
+              "dependencies": [],
+              "expected_output": "goal_analysis",
+              "quality_gate": "planner_gate",
+              "task_id": "goal_analysis"
+            }
+          },
+          "memory": {},
+          "output_data": {
+            "agent_id": "methodology_selector",
+            "agent_type": "sync",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
+            "task_id": "goal_analysis"
+          },
+          "refs": [
+            "docs/runtime/runtime-architecture.md"
+          ],
+          "runtime_id": "runtime-from-planner-prod-e2e-03-innovative-drug",
+          "task_id": "goal_analysis",
+          "workflow_id": "workflow-prod-e2e-03-innovative-drug"
+        },
+        {
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "input_data": {
+            "case_id": "prod-e2e-03-innovative-drug",
+            "plan_id": "plan-prod-e2e-03-innovative-drug",
+            "planner_task": {
+              "agent_role": "Research Agent",
+              "dependencies": [
+                "goal_analysis"
+              ],
+              "expected_output": "scope",
+              "quality_gate": "planner_gate",
+              "task_id": "scope"
+            }
+          },
+          "memory": {},
+          "output_data": {
+            "agent_id": "methodology_selector",
+            "agent_type": "sync",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
+            "task_id": "scope"
+          },
+          "refs": [
+            "docs/runtime/runtime-architecture.md"
+          ],
+          "runtime_id": "runtime-from-planner-prod-e2e-03-innovative-drug",
+          "task_id": "scope",
+          "workflow_id": "workflow-prod-e2e-03-innovative-drug"
+        },
+        {
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "input_data": {
+            "case_id": "prod-e2e-03-innovative-drug",
+            "plan_id": "plan-prod-e2e-03-innovative-drug",
+            "planner_task": {
+              "agent_role": "Research Agent",
+              "dependencies": [
+                "scope"
+              ],
+              "expected_output": "methodology_selection",
+              "quality_gate": "planner_gate",
+              "task_id": "methodology_selection"
+            }
+          },
+          "memory": {},
+          "output_data": {
+            "agent_id": "methodology_selector",
+            "agent_type": "sync",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
+            "task_id": "methodology_selection"
+          },
+          "refs": [
+            "docs/runtime/runtime-architecture.md"
+          ],
+          "runtime_id": "runtime-from-planner-prod-e2e-03-innovative-drug",
+          "task_id": "methodology_selection",
+          "workflow_id": "workflow-prod-e2e-03-innovative-drug"
+        },
+        {
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "input_data": {
+            "case_id": "prod-e2e-03-innovative-drug",
+            "plan_id": "plan-prod-e2e-03-innovative-drug",
+            "planner_task": {
+              "agent_role": "Research Agent",
+              "dependencies": [
+                "methodology_selection"
+              ],
+              "expected_output": "connector_plan",
+              "quality_gate": "planner_gate",
+              "task_id": "connector_plan"
+            }
+          },
+          "memory": {},
+          "output_data": {
+            "agent_id": "evidence_collector",
+            "agent_type": "async",
+            "async_state": "READY_FOR_RESUME",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md",
+              "docs/evidence/evidence-architecture.md"
+            ],
+            "result": "采集并登记证据引用 已由 Runtime 调度完成",
+            "task_id": "connector_plan"
+          },
+          "refs": [
+            "docs/runtime/runtime-architecture.md"
+          ],
+          "runtime_id": "runtime-from-planner-prod-e2e-03-innovative-drug",
+          "task_id": "connector_plan",
+          "workflow_id": "workflow-prod-e2e-03-innovative-drug"
+        },
+        {
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "input_data": {
+            "case_id": "prod-e2e-03-innovative-drug",
+            "plan_id": "plan-prod-e2e-03-innovative-drug",
+            "planner_task": {
+              "agent_role": "Research Agent",
+              "dependencies": [
+                "connector_plan"
+              ],
+              "expected_output": "skill_plan",
+              "quality_gate": "planner_gate",
+              "task_id": "skill_plan"
+            }
+          },
+          "memory": {},
+          "output_data": {
+            "agent_id": "parallel_researcher",
+            "agent_type": "parallel",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "parallel_branches": [
+              "branch-a",
+              "branch-b"
+            ],
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "result": "并行拆分研究子任务 已由 Runtime 调度完成",
+            "task_id": "skill_plan"
+          },
+          "refs": [
+            "docs/runtime/runtime-architecture.md"
+          ],
+          "runtime_id": "runtime-from-planner-prod-e2e-03-innovative-drug",
+          "task_id": "skill_plan",
+          "workflow_id": "workflow-prod-e2e-03-innovative-drug"
+        },
+        {
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "input_data": {
+            "case_id": "prod-e2e-03-innovative-drug",
+            "plan_id": "plan-prod-e2e-03-innovative-drug",
+            "planner_task": {
+              "agent_role": "Research Agent",
+              "dependencies": [
+                "skill_plan"
+              ],
+              "expected_output": "evidence_plan",
+              "quality_gate": "planner_gate",
+              "task_id": "evidence_plan"
+            }
+          },
+          "memory": {},
+          "output_data": {
+            "agent_id": "evidence_collector",
+            "agent_type": "async",
+            "async_state": "READY_FOR_RESUME",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md",
+              "docs/evidence/evidence-architecture.md"
+            ],
+            "result": "采集并登记证据引用 已由 Runtime 调度完成",
+            "task_id": "evidence_plan"
+          },
+          "refs": [
+            "docs/runtime/runtime-architecture.md"
+          ],
+          "runtime_id": "runtime-from-planner-prod-e2e-03-innovative-drug",
+          "task_id": "evidence_plan",
+          "workflow_id": "workflow-prod-e2e-03-innovative-drug"
+        },
+        {
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "input_data": {
+            "case_id": "prod-e2e-03-innovative-drug",
+            "plan_id": "plan-prod-e2e-03-innovative-drug",
+            "planner_task": {
+              "agent_role": "Research Agent",
+              "dependencies": [
+                "evidence_plan"
+              ],
+              "expected_output": "knowledge_graph_plan",
+              "quality_gate": "planner_gate",
+              "task_id": "knowledge_graph_plan"
+            }
+          },
+          "memory": {},
+          "output_data": {
+            "agent_id": "parallel_researcher",
+            "agent_type": "parallel",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "parallel_branches": [
+              "branch-a",
+              "branch-b"
+            ],
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "result": "并行拆分研究子任务 已由 Runtime 调度完成",
+            "task_id": "knowledge_graph_plan"
+          },
+          "refs": [
+            "docs/runtime/runtime-architecture.md"
+          ],
+          "runtime_id": "runtime-from-planner-prod-e2e-03-innovative-drug",
+          "task_id": "knowledge_graph_plan",
+          "workflow_id": "workflow-prod-e2e-03-innovative-drug"
+        },
+        {
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "input_data": {
+            "case_id": "prod-e2e-03-innovative-drug",
+            "plan_id": "plan-prod-e2e-03-innovative-drug",
+            "planner_task": {
+              "agent_role": "Research Agent",
+              "dependencies": [
+                "knowledge_graph_plan"
+              ],
+              "expected_output": "score_plan",
+              "quality_gate": "planner_gate",
+              "task_id": "score_plan"
+            }
+          },
+          "memory": {},
+          "output_data": {
+            "agent_id": "report_composer",
+            "agent_type": "sync",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md",
+              "templates/report/research-report-template.md"
+            ],
+            "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
+            "task_id": "score_plan"
+          },
+          "refs": [
+            "docs/runtime/runtime-architecture.md"
+          ],
+          "runtime_id": "runtime-from-planner-prod-e2e-03-innovative-drug",
+          "task_id": "score_plan",
+          "workflow_id": "workflow-prod-e2e-03-innovative-drug"
+        },
+        {
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "input_data": {
+            "case_id": "prod-e2e-03-innovative-drug",
+            "plan_id": "plan-prod-e2e-03-innovative-drug",
+            "planner_task": {
+              "agent_role": "Research Agent",
+              "dependencies": [
+                "score_plan"
+              ],
+              "expected_output": "report_plan",
+              "quality_gate": "planner_gate",
+              "task_id": "report_plan"
+            }
+          },
+          "memory": {},
+          "output_data": {
+            "agent_id": "report_composer",
+            "agent_type": "sync",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md",
+              "templates/report/research-report-template.md"
+            ],
+            "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
+            "task_id": "report_plan"
+          },
+          "refs": [
+            "docs/runtime/runtime-architecture.md"
+          ],
+          "runtime_id": "runtime-from-planner-prod-e2e-03-innovative-drug",
+          "task_id": "report_plan",
+          "workflow_id": "workflow-prod-e2e-03-innovative-drug"
+        },
+        {
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "input_data": {
+            "case_id": "prod-e2e-03-innovative-drug",
+            "plan_id": "plan-prod-e2e-03-innovative-drug",
+            "planner_task": {
+              "agent_role": "Review Agent",
+              "dependencies": [
+                "report_plan"
+              ],
+              "expected_output": "review_plan",
+              "quality_gate": "planner_gate",
+              "task_id": "review_plan"
+            }
+          },
+          "memory": {},
+          "output_data": {
+            "agent_id": "human_reviewer",
+            "agent_type": "human_in_the_loop",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "human_prompt": "请确认研究边界和证据缺口。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "result": "人工确认或补充输入 已由 Runtime 调度完成",
+            "task_id": "review_plan"
+          },
+          "refs": [
+            "docs/runtime/runtime-architecture.md"
+          ],
+          "runtime_id": "runtime-from-planner-prod-e2e-03-innovative-drug",
+          "task_id": "review_plan",
+          "workflow_id": "workflow-prod-e2e-03-innovative-drug"
+        },
+        {
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "input_data": {
+            "case_id": "prod-e2e-03-innovative-drug",
+            "plan_id": "plan-prod-e2e-03-innovative-drug",
+            "planner_task": {
+              "agent_role": "Review Agent",
+              "dependencies": [
+                "review_plan"
+              ],
+              "expected_output": "runtime_plan",
+              "quality_gate": "planner_gate",
+              "task_id": "runtime_plan"
+            }
+          },
+          "memory": {},
+          "output_data": {
+            "agent_id": "report_composer",
+            "agent_type": "sync",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md",
+              "templates/report/research-report-template.md"
+            ],
+            "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
+            "task_id": "runtime_plan"
+          },
+          "refs": [
+            "docs/runtime/runtime-architecture.md"
+          ],
+          "runtime_id": "runtime-from-planner-prod-e2e-03-innovative-drug",
+          "task_id": "runtime_plan",
+          "workflow_id": "workflow-prod-e2e-03-innovative-drug"
+        }
+      ],
+      "event_log": [
+        {
+          "agent_id": null,
+          "event_id": "evt-ed9662b101c9",
+          "event_type": "RUNTIME_STARTED",
+          "payload": {
+            "runtime_id": "runtime-from-planner-prod-e2e-03-innovative-drug",
+            "workflow_id": "workflow-prod-e2e-03-innovative-drug"
+          },
+          "session_id": null,
+          "severity": "INFO",
+          "task_id": null,
+          "timestamp": "2026-07-10T15:21:14.919369+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-e1591077b8e8",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "sync"
+          },
+          "session_id": "ses-160552776757",
+          "severity": "INFO",
+          "task_id": "goal_analysis",
+          "timestamp": "2026-07-10T15:21:14.919377+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-747ab8e6efdb",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-160552776757",
+          "severity": "INFO",
+          "task_id": "goal_analysis",
+          "timestamp": "2026-07-10T15:21:14.919382+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-d5928d5233c1",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-160552776757",
+          "severity": "INFO",
+          "task_id": "goal_analysis",
+          "timestamp": "2026-07-10T15:21:14.919385+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-64bd671d7547",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "methodology_selector",
+            "agent_type": "sync",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
+            "task_id": "goal_analysis"
+          },
+          "session_id": "ses-160552776757",
+          "severity": "INFO",
+          "task_id": "goal_analysis",
+          "timestamp": "2026-07-10T15:21:14.919390+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-964f72e149ec",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "sync"
+          },
+          "session_id": "ses-c3c0edd56dad",
+          "severity": "INFO",
+          "task_id": "scope",
+          "timestamp": "2026-07-10T15:21:14.919414+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-23f1c139e311",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-c3c0edd56dad",
+          "severity": "INFO",
+          "task_id": "scope",
+          "timestamp": "2026-07-10T15:21:14.919418+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-ddb301f86584",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-c3c0edd56dad",
+          "severity": "INFO",
+          "task_id": "scope",
+          "timestamp": "2026-07-10T15:21:14.919421+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-d6c2088e7e06",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "methodology_selector",
+            "agent_type": "sync",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
+            "task_id": "scope"
+          },
+          "session_id": "ses-c3c0edd56dad",
+          "severity": "INFO",
+          "task_id": "scope",
+          "timestamp": "2026-07-10T15:21:14.919424+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-c76a28cb670c",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "sync"
+          },
+          "session_id": "ses-94f82c03e0b5",
+          "severity": "INFO",
+          "task_id": "methodology_selection",
+          "timestamp": "2026-07-10T15:21:14.919443+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-75f66ff1ef85",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-94f82c03e0b5",
+          "severity": "INFO",
+          "task_id": "methodology_selection",
+          "timestamp": "2026-07-10T15:21:14.919447+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-6b9b74df045c",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-94f82c03e0b5",
+          "severity": "INFO",
+          "task_id": "methodology_selection",
+          "timestamp": "2026-07-10T15:21:14.919449+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-d426c5846cd7",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "methodology_selector",
+            "agent_type": "sync",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
+            "task_id": "methodology_selection"
+          },
+          "session_id": "ses-94f82c03e0b5",
+          "severity": "INFO",
+          "task_id": "methodology_selection",
+          "timestamp": "2026-07-10T15:21:14.919453+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "evidence_collector",
+          "event_id": "evt-11282f85a004",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "async"
+          },
+          "session_id": "ses-be746a09576f",
+          "severity": "INFO",
+          "task_id": "connector_plan",
+          "timestamp": "2026-07-10T15:21:14.919473+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "evidence_collector",
+          "event_id": "evt-dec4ae2c1c2b",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-be746a09576f",
+          "severity": "INFO",
+          "task_id": "connector_plan",
+          "timestamp": "2026-07-10T15:21:14.919476+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "evidence_collector",
+          "event_id": "evt-7f04e2f1f967",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-be746a09576f",
+          "severity": "INFO",
+          "task_id": "connector_plan",
+          "timestamp": "2026-07-10T15:21:14.919479+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "evidence_collector",
+          "event_id": "evt-0fad0633c18e",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "evidence_collector",
+            "agent_type": "async",
+            "async_state": "READY_FOR_RESUME",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md",
+              "docs/evidence/evidence-architecture.md"
+            ],
+            "result": "采集并登记证据引用 已由 Runtime 调度完成",
+            "task_id": "connector_plan"
+          },
+          "session_id": "ses-be746a09576f",
+          "severity": "INFO",
+          "task_id": "connector_plan",
+          "timestamp": "2026-07-10T15:21:14.919482+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "parallel_researcher",
+          "event_id": "evt-d58e8733ec40",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "parallel"
+          },
+          "session_id": "ses-bd4cd90cb5f9",
+          "severity": "INFO",
+          "task_id": "skill_plan",
+          "timestamp": "2026-07-10T15:21:14.919501+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "parallel_researcher",
+          "event_id": "evt-cee7299e60d9",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-bd4cd90cb5f9",
+          "severity": "INFO",
+          "task_id": "skill_plan",
+          "timestamp": "2026-07-10T15:21:14.919504+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "parallel_researcher",
+          "event_id": "evt-8b8de69273e5",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-bd4cd90cb5f9",
+          "severity": "INFO",
+          "task_id": "skill_plan",
+          "timestamp": "2026-07-10T15:21:14.919507+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "parallel_researcher",
+          "event_id": "evt-37c8b139228b",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "parallel_researcher",
+            "agent_type": "parallel",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "parallel_branches": [
+              "branch-a",
+              "branch-b"
+            ],
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "result": "并行拆分研究子任务 已由 Runtime 调度完成",
+            "task_id": "skill_plan"
+          },
+          "session_id": "ses-bd4cd90cb5f9",
+          "severity": "INFO",
+          "task_id": "skill_plan",
+          "timestamp": "2026-07-10T15:21:14.919511+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "evidence_collector",
+          "event_id": "evt-379cec366dbb",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "async"
+          },
+          "session_id": "ses-bd053ced2bbd",
+          "severity": "INFO",
+          "task_id": "evidence_plan",
+          "timestamp": "2026-07-10T15:21:14.919528+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "evidence_collector",
+          "event_id": "evt-9868b90a4e56",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-bd053ced2bbd",
+          "severity": "INFO",
+          "task_id": "evidence_plan",
+          "timestamp": "2026-07-10T15:21:14.919531+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "evidence_collector",
+          "event_id": "evt-fb07ffb38556",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-bd053ced2bbd",
+          "severity": "INFO",
+          "task_id": "evidence_plan",
+          "timestamp": "2026-07-10T15:21:14.919533+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "evidence_collector",
+          "event_id": "evt-248c4c35dfc8",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "evidence_collector",
+            "agent_type": "async",
+            "async_state": "READY_FOR_RESUME",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md",
+              "docs/evidence/evidence-architecture.md"
+            ],
+            "result": "采集并登记证据引用 已由 Runtime 调度完成",
+            "task_id": "evidence_plan"
+          },
+          "session_id": "ses-bd053ced2bbd",
+          "severity": "INFO",
+          "task_id": "evidence_plan",
+          "timestamp": "2026-07-10T15:21:14.919537+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "parallel_researcher",
+          "event_id": "evt-911d32cdcf8b",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "parallel"
+          },
+          "session_id": "ses-e2822ed09197",
+          "severity": "INFO",
+          "task_id": "knowledge_graph_plan",
+          "timestamp": "2026-07-10T15:21:14.919555+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "parallel_researcher",
+          "event_id": "evt-9b67727b05e9",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-e2822ed09197",
+          "severity": "INFO",
+          "task_id": "knowledge_graph_plan",
+          "timestamp": "2026-07-10T15:21:14.919558+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "parallel_researcher",
+          "event_id": "evt-c21780d340bb",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-e2822ed09197",
+          "severity": "INFO",
+          "task_id": "knowledge_graph_plan",
+          "timestamp": "2026-07-10T15:21:14.919561+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "parallel_researcher",
+          "event_id": "evt-e1b5b4f94d2b",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "parallel_researcher",
+            "agent_type": "parallel",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "parallel_branches": [
+              "branch-a",
+              "branch-b"
+            ],
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "result": "并行拆分研究子任务 已由 Runtime 调度完成",
+            "task_id": "knowledge_graph_plan"
+          },
+          "session_id": "ses-e2822ed09197",
+          "severity": "INFO",
+          "task_id": "knowledge_graph_plan",
+          "timestamp": "2026-07-10T15:21:14.919565+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-d0bcdf6a7930",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "sync"
+          },
+          "session_id": "ses-25063b86ccd0",
+          "severity": "INFO",
+          "task_id": "score_plan",
+          "timestamp": "2026-07-10T15:21:14.919587+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-ccbae6e12599",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-25063b86ccd0",
+          "severity": "INFO",
+          "task_id": "score_plan",
+          "timestamp": "2026-07-10T15:21:14.919593+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-fb223a4ae21e",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-25063b86ccd0",
+          "severity": "INFO",
+          "task_id": "score_plan",
+          "timestamp": "2026-07-10T15:21:14.919596+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-789c6eb251f5",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "report_composer",
+            "agent_type": "sync",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md",
+              "templates/report/research-report-template.md"
+            ],
+            "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
+            "task_id": "score_plan"
+          },
+          "session_id": "ses-25063b86ccd0",
+          "severity": "INFO",
+          "task_id": "score_plan",
+          "timestamp": "2026-07-10T15:21:14.919600+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-988f840bc093",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "sync"
+          },
+          "session_id": "ses-d4c2d7a90260",
+          "severity": "INFO",
+          "task_id": "report_plan",
+          "timestamp": "2026-07-10T15:21:14.919619+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-5cf299e427d9",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-d4c2d7a90260",
+          "severity": "INFO",
+          "task_id": "report_plan",
+          "timestamp": "2026-07-10T15:21:14.919622+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-e0c8bf154afe",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-d4c2d7a90260",
+          "severity": "INFO",
+          "task_id": "report_plan",
+          "timestamp": "2026-07-10T15:21:14.919625+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-f4b676924b7d",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "report_composer",
+            "agent_type": "sync",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md",
+              "templates/report/research-report-template.md"
+            ],
+            "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
+            "task_id": "report_plan"
+          },
+          "session_id": "ses-d4c2d7a90260",
+          "severity": "INFO",
+          "task_id": "report_plan",
+          "timestamp": "2026-07-10T15:21:14.919628+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "human_reviewer",
+          "event_id": "evt-5fb4152fdd24",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "human_in_the_loop"
+          },
+          "session_id": "ses-870b180d8600",
+          "severity": "INFO",
+          "task_id": "review_plan",
+          "timestamp": "2026-07-10T15:21:14.919648+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "human_reviewer",
+          "event_id": "evt-1081065e0c61",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-870b180d8600",
+          "severity": "INFO",
+          "task_id": "review_plan",
+          "timestamp": "2026-07-10T15:21:14.919651+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "human_reviewer",
+          "event_id": "evt-e06ac0d2a382",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-870b180d8600",
+          "severity": "INFO",
+          "task_id": "review_plan",
+          "timestamp": "2026-07-10T15:21:14.919654+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "human_reviewer",
+          "event_id": "evt-07671a86d813",
+          "event_type": "AGENT_WAITING_FOR_HUMAN",
+          "payload": {
+            "agent_id": "human_reviewer",
+            "agent_type": "human_in_the_loop",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "human_prompt": "请确认研究边界和证据缺口。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "result": "人工确认或补充输入 已由 Runtime 调度完成",
+            "task_id": "review_plan"
+          },
+          "session_id": "ses-870b180d8600",
+          "severity": "INFO",
+          "task_id": "review_plan",
+          "timestamp": "2026-07-10T15:21:14.919657+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-d4a98e238e03",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "sync"
+          },
+          "session_id": "ses-4b0b5692570f",
+          "severity": "INFO",
+          "task_id": "runtime_plan",
+          "timestamp": "2026-07-10T15:21:14.919676+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-12c8d31ec755",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-4b0b5692570f",
+          "severity": "INFO",
+          "task_id": "runtime_plan",
+          "timestamp": "2026-07-10T15:21:14.919679+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-e996147fa2db",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-4b0b5692570f",
+          "severity": "INFO",
+          "task_id": "runtime_plan",
+          "timestamp": "2026-07-10T15:21:14.919682+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-7cab3da6bf4d",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "report_composer",
+            "agent_type": "sync",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md",
+              "templates/report/research-report-template.md"
+            ],
+            "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
+            "task_id": "runtime_plan"
+          },
+          "session_id": "ses-4b0b5692570f",
+          "severity": "INFO",
+          "task_id": "runtime_plan",
+          "timestamp": "2026-07-10T15:21:14.919685+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": null,
+          "event_id": "evt-a09f717885a1",
+          "event_type": "RUNTIME_COMPLETED",
+          "payload": {
+            "runtime_id": "runtime-from-planner-prod-e2e-03-innovative-drug",
+            "workflow_id": "workflow-prod-e2e-03-innovative-drug"
+          },
+          "session_id": null,
+          "severity": "INFO",
+          "task_id": null,
+          "timestamp": "2026-07-10T15:21:14.919704+00:00",
+          "trace_id": null
+        }
+      ],
+      "execution_timeline": [
+        {
+          "agent_id": null,
+          "event_id": "evt-ed9662b101c9",
+          "event_type": "RUNTIME_STARTED",
+          "payload": {
+            "runtime_id": "runtime-from-planner-prod-e2e-03-innovative-drug",
+            "workflow_id": "workflow-prod-e2e-03-innovative-drug"
+          },
+          "session_id": null,
+          "severity": "INFO",
+          "task_id": null,
+          "timestamp": "2026-07-10T15:21:14.919369+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-e1591077b8e8",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "sync"
+          },
+          "session_id": "ses-160552776757",
+          "severity": "INFO",
+          "task_id": "goal_analysis",
+          "timestamp": "2026-07-10T15:21:14.919377+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-747ab8e6efdb",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-160552776757",
+          "severity": "INFO",
+          "task_id": "goal_analysis",
+          "timestamp": "2026-07-10T15:21:14.919382+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-d5928d5233c1",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-160552776757",
+          "severity": "INFO",
+          "task_id": "goal_analysis",
+          "timestamp": "2026-07-10T15:21:14.919385+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-64bd671d7547",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "methodology_selector",
+            "agent_type": "sync",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
+            "task_id": "goal_analysis"
+          },
+          "session_id": "ses-160552776757",
+          "severity": "INFO",
+          "task_id": "goal_analysis",
+          "timestamp": "2026-07-10T15:21:14.919390+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-964f72e149ec",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "sync"
+          },
+          "session_id": "ses-c3c0edd56dad",
+          "severity": "INFO",
+          "task_id": "scope",
+          "timestamp": "2026-07-10T15:21:14.919414+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-23f1c139e311",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-c3c0edd56dad",
+          "severity": "INFO",
+          "task_id": "scope",
+          "timestamp": "2026-07-10T15:21:14.919418+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-ddb301f86584",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-c3c0edd56dad",
+          "severity": "INFO",
+          "task_id": "scope",
+          "timestamp": "2026-07-10T15:21:14.919421+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-d6c2088e7e06",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "methodology_selector",
+            "agent_type": "sync",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
+            "task_id": "scope"
+          },
+          "session_id": "ses-c3c0edd56dad",
+          "severity": "INFO",
+          "task_id": "scope",
+          "timestamp": "2026-07-10T15:21:14.919424+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-c76a28cb670c",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "sync"
+          },
+          "session_id": "ses-94f82c03e0b5",
+          "severity": "INFO",
+          "task_id": "methodology_selection",
+          "timestamp": "2026-07-10T15:21:14.919443+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-75f66ff1ef85",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-94f82c03e0b5",
+          "severity": "INFO",
+          "task_id": "methodology_selection",
+          "timestamp": "2026-07-10T15:21:14.919447+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-6b9b74df045c",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-94f82c03e0b5",
+          "severity": "INFO",
+          "task_id": "methodology_selection",
+          "timestamp": "2026-07-10T15:21:14.919449+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-d426c5846cd7",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "methodology_selector",
+            "agent_type": "sync",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
+            "task_id": "methodology_selection"
+          },
+          "session_id": "ses-94f82c03e0b5",
+          "severity": "INFO",
+          "task_id": "methodology_selection",
+          "timestamp": "2026-07-10T15:21:14.919453+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "evidence_collector",
+          "event_id": "evt-11282f85a004",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "async"
+          },
+          "session_id": "ses-be746a09576f",
+          "severity": "INFO",
+          "task_id": "connector_plan",
+          "timestamp": "2026-07-10T15:21:14.919473+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "evidence_collector",
+          "event_id": "evt-dec4ae2c1c2b",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-be746a09576f",
+          "severity": "INFO",
+          "task_id": "connector_plan",
+          "timestamp": "2026-07-10T15:21:14.919476+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "evidence_collector",
+          "event_id": "evt-7f04e2f1f967",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-be746a09576f",
+          "severity": "INFO",
+          "task_id": "connector_plan",
+          "timestamp": "2026-07-10T15:21:14.919479+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "evidence_collector",
+          "event_id": "evt-0fad0633c18e",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "evidence_collector",
+            "agent_type": "async",
+            "async_state": "READY_FOR_RESUME",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md",
+              "docs/evidence/evidence-architecture.md"
+            ],
+            "result": "采集并登记证据引用 已由 Runtime 调度完成",
+            "task_id": "connector_plan"
+          },
+          "session_id": "ses-be746a09576f",
+          "severity": "INFO",
+          "task_id": "connector_plan",
+          "timestamp": "2026-07-10T15:21:14.919482+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "parallel_researcher",
+          "event_id": "evt-d58e8733ec40",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "parallel"
+          },
+          "session_id": "ses-bd4cd90cb5f9",
+          "severity": "INFO",
+          "task_id": "skill_plan",
+          "timestamp": "2026-07-10T15:21:14.919501+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "parallel_researcher",
+          "event_id": "evt-cee7299e60d9",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-bd4cd90cb5f9",
+          "severity": "INFO",
+          "task_id": "skill_plan",
+          "timestamp": "2026-07-10T15:21:14.919504+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "parallel_researcher",
+          "event_id": "evt-8b8de69273e5",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-bd4cd90cb5f9",
+          "severity": "INFO",
+          "task_id": "skill_plan",
+          "timestamp": "2026-07-10T15:21:14.919507+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "parallel_researcher",
+          "event_id": "evt-37c8b139228b",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "parallel_researcher",
+            "agent_type": "parallel",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "parallel_branches": [
+              "branch-a",
+              "branch-b"
+            ],
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "result": "并行拆分研究子任务 已由 Runtime 调度完成",
+            "task_id": "skill_plan"
+          },
+          "session_id": "ses-bd4cd90cb5f9",
+          "severity": "INFO",
+          "task_id": "skill_plan",
+          "timestamp": "2026-07-10T15:21:14.919511+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "evidence_collector",
+          "event_id": "evt-379cec366dbb",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "async"
+          },
+          "session_id": "ses-bd053ced2bbd",
+          "severity": "INFO",
+          "task_id": "evidence_plan",
+          "timestamp": "2026-07-10T15:21:14.919528+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "evidence_collector",
+          "event_id": "evt-9868b90a4e56",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-bd053ced2bbd",
+          "severity": "INFO",
+          "task_id": "evidence_plan",
+          "timestamp": "2026-07-10T15:21:14.919531+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "evidence_collector",
+          "event_id": "evt-fb07ffb38556",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-bd053ced2bbd",
+          "severity": "INFO",
+          "task_id": "evidence_plan",
+          "timestamp": "2026-07-10T15:21:14.919533+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "evidence_collector",
+          "event_id": "evt-248c4c35dfc8",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "evidence_collector",
+            "agent_type": "async",
+            "async_state": "READY_FOR_RESUME",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md",
+              "docs/evidence/evidence-architecture.md"
+            ],
+            "result": "采集并登记证据引用 已由 Runtime 调度完成",
+            "task_id": "evidence_plan"
+          },
+          "session_id": "ses-bd053ced2bbd",
+          "severity": "INFO",
+          "task_id": "evidence_plan",
+          "timestamp": "2026-07-10T15:21:14.919537+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "parallel_researcher",
+          "event_id": "evt-911d32cdcf8b",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "parallel"
+          },
+          "session_id": "ses-e2822ed09197",
+          "severity": "INFO",
+          "task_id": "knowledge_graph_plan",
+          "timestamp": "2026-07-10T15:21:14.919555+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "parallel_researcher",
+          "event_id": "evt-9b67727b05e9",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-e2822ed09197",
+          "severity": "INFO",
+          "task_id": "knowledge_graph_plan",
+          "timestamp": "2026-07-10T15:21:14.919558+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "parallel_researcher",
+          "event_id": "evt-c21780d340bb",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-e2822ed09197",
+          "severity": "INFO",
+          "task_id": "knowledge_graph_plan",
+          "timestamp": "2026-07-10T15:21:14.919561+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "parallel_researcher",
+          "event_id": "evt-e1b5b4f94d2b",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "parallel_researcher",
+            "agent_type": "parallel",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "parallel_branches": [
+              "branch-a",
+              "branch-b"
+            ],
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "result": "并行拆分研究子任务 已由 Runtime 调度完成",
+            "task_id": "knowledge_graph_plan"
+          },
+          "session_id": "ses-e2822ed09197",
+          "severity": "INFO",
+          "task_id": "knowledge_graph_plan",
+          "timestamp": "2026-07-10T15:21:14.919565+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-d0bcdf6a7930",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "sync"
+          },
+          "session_id": "ses-25063b86ccd0",
+          "severity": "INFO",
+          "task_id": "score_plan",
+          "timestamp": "2026-07-10T15:21:14.919587+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-ccbae6e12599",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-25063b86ccd0",
+          "severity": "INFO",
+          "task_id": "score_plan",
+          "timestamp": "2026-07-10T15:21:14.919593+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-fb223a4ae21e",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-25063b86ccd0",
+          "severity": "INFO",
+          "task_id": "score_plan",
+          "timestamp": "2026-07-10T15:21:14.919596+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-789c6eb251f5",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "report_composer",
+            "agent_type": "sync",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md",
+              "templates/report/research-report-template.md"
+            ],
+            "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
+            "task_id": "score_plan"
+          },
+          "session_id": "ses-25063b86ccd0",
+          "severity": "INFO",
+          "task_id": "score_plan",
+          "timestamp": "2026-07-10T15:21:14.919600+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-988f840bc093",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "sync"
+          },
+          "session_id": "ses-d4c2d7a90260",
+          "severity": "INFO",
+          "task_id": "report_plan",
+          "timestamp": "2026-07-10T15:21:14.919619+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-5cf299e427d9",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-d4c2d7a90260",
+          "severity": "INFO",
+          "task_id": "report_plan",
+          "timestamp": "2026-07-10T15:21:14.919622+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-e0c8bf154afe",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-d4c2d7a90260",
+          "severity": "INFO",
+          "task_id": "report_plan",
+          "timestamp": "2026-07-10T15:21:14.919625+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-f4b676924b7d",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "report_composer",
+            "agent_type": "sync",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md",
+              "templates/report/research-report-template.md"
+            ],
+            "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
+            "task_id": "report_plan"
+          },
+          "session_id": "ses-d4c2d7a90260",
+          "severity": "INFO",
+          "task_id": "report_plan",
+          "timestamp": "2026-07-10T15:21:14.919628+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "human_reviewer",
+          "event_id": "evt-5fb4152fdd24",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "human_in_the_loop"
+          },
+          "session_id": "ses-870b180d8600",
+          "severity": "INFO",
+          "task_id": "review_plan",
+          "timestamp": "2026-07-10T15:21:14.919648+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "human_reviewer",
+          "event_id": "evt-1081065e0c61",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-870b180d8600",
+          "severity": "INFO",
+          "task_id": "review_plan",
+          "timestamp": "2026-07-10T15:21:14.919651+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "human_reviewer",
+          "event_id": "evt-e06ac0d2a382",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-870b180d8600",
+          "severity": "INFO",
+          "task_id": "review_plan",
+          "timestamp": "2026-07-10T15:21:14.919654+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "human_reviewer",
+          "event_id": "evt-07671a86d813",
+          "event_type": "AGENT_WAITING_FOR_HUMAN",
+          "payload": {
+            "agent_id": "human_reviewer",
+            "agent_type": "human_in_the_loop",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "human_prompt": "请确认研究边界和证据缺口。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "result": "人工确认或补充输入 已由 Runtime 调度完成",
+            "task_id": "review_plan"
+          },
+          "session_id": "ses-870b180d8600",
+          "severity": "INFO",
+          "task_id": "review_plan",
+          "timestamp": "2026-07-10T15:21:14.919657+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-d4a98e238e03",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "sync"
+          },
+          "session_id": "ses-4b0b5692570f",
+          "severity": "INFO",
+          "task_id": "runtime_plan",
+          "timestamp": "2026-07-10T15:21:14.919676+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-12c8d31ec755",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-4b0b5692570f",
+          "severity": "INFO",
+          "task_id": "runtime_plan",
+          "timestamp": "2026-07-10T15:21:14.919679+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-e996147fa2db",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-4b0b5692570f",
+          "severity": "INFO",
+          "task_id": "runtime_plan",
+          "timestamp": "2026-07-10T15:21:14.919682+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-7cab3da6bf4d",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "report_composer",
+            "agent_type": "sync",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md",
+              "templates/report/research-report-template.md"
+            ],
+            "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
+            "task_id": "runtime_plan"
+          },
+          "session_id": "ses-4b0b5692570f",
+          "severity": "INFO",
+          "task_id": "runtime_plan",
+          "timestamp": "2026-07-10T15:21:14.919685+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": null,
+          "event_id": "evt-a09f717885a1",
+          "event_type": "RUNTIME_COMPLETED",
+          "payload": {
+            "runtime_id": "runtime-from-planner-prod-e2e-03-innovative-drug",
+            "workflow_id": "workflow-prod-e2e-03-innovative-drug"
+          },
+          "session_id": null,
+          "severity": "INFO",
+          "task_id": null,
+          "timestamp": "2026-07-10T15:21:14.919704+00:00",
+          "trace_id": null
+        }
+      ],
+      "final_state": {
+        "agent_states": {
+          "ses-160552776757": "COMPLETED",
+          "ses-25063b86ccd0": "COMPLETED",
+          "ses-4b0b5692570f": "COMPLETED",
+          "ses-870b180d8600": "WAITING_FOR_HUMAN",
+          "ses-94f82c03e0b5": "COMPLETED",
+          "ses-bd053ced2bbd": "COMPLETED",
+          "ses-bd4cd90cb5f9": "COMPLETED",
+          "ses-be746a09576f": "COMPLETED",
+          "ses-c3c0edd56dad": "COMPLETED",
+          "ses-d4c2d7a90260": "COMPLETED",
+          "ses-e2822ed09197": "COMPLETED"
+        },
+        "context_snapshots": [
+          {
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "input_data": {
+              "case_id": "prod-e2e-03-innovative-drug",
+              "plan_id": "plan-prod-e2e-03-innovative-drug",
+              "planner_task": {
+                "agent_role": "Research Agent",
+                "dependencies": [],
+                "expected_output": "goal_analysis",
+                "quality_gate": "planner_gate",
+                "task_id": "goal_analysis"
+              }
+            },
+            "memory": {},
+            "output_data": {
+              "agent_id": "methodology_selector",
+              "agent_type": "sync",
+              "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+              "refs": [
+                "docs/runtime/runtime-architecture.md"
+              ],
+              "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
+              "task_id": "goal_analysis"
+            },
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "runtime_id": "runtime-from-planner-prod-e2e-03-innovative-drug",
+            "task_id": "goal_analysis",
+            "workflow_id": "workflow-prod-e2e-03-innovative-drug"
+          },
+          {
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "input_data": {
+              "case_id": "prod-e2e-03-innovative-drug",
+              "plan_id": "plan-prod-e2e-03-innovative-drug",
+              "planner_task": {
+                "agent_role": "Research Agent",
+                "dependencies": [
+                  "goal_analysis"
+                ],
+                "expected_output": "scope",
+                "quality_gate": "planner_gate",
+                "task_id": "scope"
+              }
+            },
+            "memory": {},
+            "output_data": {
+              "agent_id": "methodology_selector",
+              "agent_type": "sync",
+              "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+              "refs": [
+                "docs/runtime/runtime-architecture.md"
+              ],
+              "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
+              "task_id": "scope"
+            },
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "runtime_id": "runtime-from-planner-prod-e2e-03-innovative-drug",
+            "task_id": "scope",
+            "workflow_id": "workflow-prod-e2e-03-innovative-drug"
+          },
+          {
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "input_data": {
+              "case_id": "prod-e2e-03-innovative-drug",
+              "plan_id": "plan-prod-e2e-03-innovative-drug",
+              "planner_task": {
+                "agent_role": "Research Agent",
+                "dependencies": [
+                  "scope"
+                ],
+                "expected_output": "methodology_selection",
+                "quality_gate": "planner_gate",
+                "task_id": "methodology_selection"
+              }
+            },
+            "memory": {},
+            "output_data": {
+              "agent_id": "methodology_selector",
+              "agent_type": "sync",
+              "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+              "refs": [
+                "docs/runtime/runtime-architecture.md"
+              ],
+              "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
+              "task_id": "methodology_selection"
+            },
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "runtime_id": "runtime-from-planner-prod-e2e-03-innovative-drug",
+            "task_id": "methodology_selection",
+            "workflow_id": "workflow-prod-e2e-03-innovative-drug"
+          },
+          {
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "input_data": {
+              "case_id": "prod-e2e-03-innovative-drug",
+              "plan_id": "plan-prod-e2e-03-innovative-drug",
+              "planner_task": {
+                "agent_role": "Research Agent",
+                "dependencies": [
+                  "methodology_selection"
+                ],
+                "expected_output": "connector_plan",
+                "quality_gate": "planner_gate",
+                "task_id": "connector_plan"
+              }
+            },
+            "memory": {},
+            "output_data": {
+              "agent_id": "evidence_collector",
+              "agent_type": "async",
+              "async_state": "READY_FOR_RESUME",
+              "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+              "refs": [
+                "docs/runtime/runtime-architecture.md",
+                "docs/evidence/evidence-architecture.md"
+              ],
+              "result": "采集并登记证据引用 已由 Runtime 调度完成",
+              "task_id": "connector_plan"
+            },
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "runtime_id": "runtime-from-planner-prod-e2e-03-innovative-drug",
+            "task_id": "connector_plan",
+            "workflow_id": "workflow-prod-e2e-03-innovative-drug"
+          },
+          {
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "input_data": {
+              "case_id": "prod-e2e-03-innovative-drug",
+              "plan_id": "plan-prod-e2e-03-innovative-drug",
+              "planner_task": {
+                "agent_role": "Research Agent",
+                "dependencies": [
+                  "connector_plan"
+                ],
+                "expected_output": "skill_plan",
+                "quality_gate": "planner_gate",
+                "task_id": "skill_plan"
+              }
+            },
+            "memory": {},
+            "output_data": {
+              "agent_id": "parallel_researcher",
+              "agent_type": "parallel",
+              "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+              "parallel_branches": [
+                "branch-a",
+                "branch-b"
+              ],
+              "refs": [
+                "docs/runtime/runtime-architecture.md"
+              ],
+              "result": "并行拆分研究子任务 已由 Runtime 调度完成",
+              "task_id": "skill_plan"
+            },
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "runtime_id": "runtime-from-planner-prod-e2e-03-innovative-drug",
+            "task_id": "skill_plan",
+            "workflow_id": "workflow-prod-e2e-03-innovative-drug"
+          },
+          {
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "input_data": {
+              "case_id": "prod-e2e-03-innovative-drug",
+              "plan_id": "plan-prod-e2e-03-innovative-drug",
+              "planner_task": {
+                "agent_role": "Research Agent",
+                "dependencies": [
+                  "skill_plan"
+                ],
+                "expected_output": "evidence_plan",
+                "quality_gate": "planner_gate",
+                "task_id": "evidence_plan"
+              }
+            },
+            "memory": {},
+            "output_data": {
+              "agent_id": "evidence_collector",
+              "agent_type": "async",
+              "async_state": "READY_FOR_RESUME",
+              "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+              "refs": [
+                "docs/runtime/runtime-architecture.md",
+                "docs/evidence/evidence-architecture.md"
+              ],
+              "result": "采集并登记证据引用 已由 Runtime 调度完成",
+              "task_id": "evidence_plan"
+            },
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "runtime_id": "runtime-from-planner-prod-e2e-03-innovative-drug",
+            "task_id": "evidence_plan",
+            "workflow_id": "workflow-prod-e2e-03-innovative-drug"
+          },
+          {
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "input_data": {
+              "case_id": "prod-e2e-03-innovative-drug",
+              "plan_id": "plan-prod-e2e-03-innovative-drug",
+              "planner_task": {
+                "agent_role": "Research Agent",
+                "dependencies": [
+                  "evidence_plan"
+                ],
+                "expected_output": "knowledge_graph_plan",
+                "quality_gate": "planner_gate",
+                "task_id": "knowledge_graph_plan"
+              }
+            },
+            "memory": {},
+            "output_data": {
+              "agent_id": "parallel_researcher",
+              "agent_type": "parallel",
+              "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+              "parallel_branches": [
+                "branch-a",
+                "branch-b"
+              ],
+              "refs": [
+                "docs/runtime/runtime-architecture.md"
+              ],
+              "result": "并行拆分研究子任务 已由 Runtime 调度完成",
+              "task_id": "knowledge_graph_plan"
+            },
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "runtime_id": "runtime-from-planner-prod-e2e-03-innovative-drug",
+            "task_id": "knowledge_graph_plan",
+            "workflow_id": "workflow-prod-e2e-03-innovative-drug"
+          },
+          {
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "input_data": {
+              "case_id": "prod-e2e-03-innovative-drug",
+              "plan_id": "plan-prod-e2e-03-innovative-drug",
+              "planner_task": {
+                "agent_role": "Research Agent",
+                "dependencies": [
+                  "knowledge_graph_plan"
+                ],
+                "expected_output": "score_plan",
+                "quality_gate": "planner_gate",
+                "task_id": "score_plan"
+              }
+            },
+            "memory": {},
+            "output_data": {
+              "agent_id": "report_composer",
+              "agent_type": "sync",
+              "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+              "refs": [
+                "docs/runtime/runtime-architecture.md",
+                "templates/report/research-report-template.md"
+              ],
+              "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
+              "task_id": "score_plan"
+            },
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "runtime_id": "runtime-from-planner-prod-e2e-03-innovative-drug",
+            "task_id": "score_plan",
+            "workflow_id": "workflow-prod-e2e-03-innovative-drug"
+          },
+          {
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "input_data": {
+              "case_id": "prod-e2e-03-innovative-drug",
+              "plan_id": "plan-prod-e2e-03-innovative-drug",
+              "planner_task": {
+                "agent_role": "Research Agent",
+                "dependencies": [
+                  "score_plan"
+                ],
+                "expected_output": "report_plan",
+                "quality_gate": "planner_gate",
+                "task_id": "report_plan"
+              }
+            },
+            "memory": {},
+            "output_data": {
+              "agent_id": "report_composer",
+              "agent_type": "sync",
+              "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+              "refs": [
+                "docs/runtime/runtime-architecture.md",
+                "templates/report/research-report-template.md"
+              ],
+              "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
+              "task_id": "report_plan"
+            },
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "runtime_id": "runtime-from-planner-prod-e2e-03-innovative-drug",
+            "task_id": "report_plan",
+            "workflow_id": "workflow-prod-e2e-03-innovative-drug"
+          },
+          {
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "input_data": {
+              "case_id": "prod-e2e-03-innovative-drug",
+              "plan_id": "plan-prod-e2e-03-innovative-drug",
+              "planner_task": {
+                "agent_role": "Review Agent",
+                "dependencies": [
+                  "report_plan"
+                ],
+                "expected_output": "review_plan",
+                "quality_gate": "planner_gate",
+                "task_id": "review_plan"
+              }
+            },
+            "memory": {},
+            "output_data": {
+              "agent_id": "human_reviewer",
+              "agent_type": "human_in_the_loop",
+              "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+              "human_prompt": "请确认研究边界和证据缺口。",
+              "refs": [
+                "docs/runtime/runtime-architecture.md"
+              ],
+              "result": "人工确认或补充输入 已由 Runtime 调度完成",
+              "task_id": "review_plan"
+            },
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "runtime_id": "runtime-from-planner-prod-e2e-03-innovative-drug",
+            "task_id": "review_plan",
+            "workflow_id": "workflow-prod-e2e-03-innovative-drug"
+          },
+          {
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "input_data": {
+              "case_id": "prod-e2e-03-innovative-drug",
+              "plan_id": "plan-prod-e2e-03-innovative-drug",
+              "planner_task": {
+                "agent_role": "Review Agent",
+                "dependencies": [
+                  "review_plan"
+                ],
+                "expected_output": "runtime_plan",
+                "quality_gate": "planner_gate",
+                "task_id": "runtime_plan"
+              }
+            },
+            "memory": {},
+            "output_data": {
+              "agent_id": "report_composer",
+              "agent_type": "sync",
+              "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+              "refs": [
+                "docs/runtime/runtime-architecture.md",
+                "templates/report/research-report-template.md"
+              ],
+              "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
+              "task_id": "runtime_plan"
+            },
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "runtime_id": "runtime-from-planner-prod-e2e-03-innovative-drug",
+            "task_id": "runtime_plan",
+            "workflow_id": "workflow-prod-e2e-03-innovative-drug"
+          }
+        ],
+        "quality_gate": "PASS",
+        "runtime_state": {
+          "completed_at": "2026-07-10T15:21:14.919701+00:00",
+          "runtime_id": "runtime-from-planner-prod-e2e-03-innovative-drug",
+          "started_at": "2026-07-10T15:21:14.919363+00:00",
+          "status": "COMPLETED",
+          "workflow_id": "workflow-prod-e2e-03-innovative-drug"
+        },
+        "task_states": {
+          "connector_plan": "COMPLETED",
+          "evidence_plan": "COMPLETED",
+          "goal_analysis": "COMPLETED",
+          "knowledge_graph_plan": "COMPLETED",
+          "methodology_selection": "COMPLETED",
+          "report_plan": "COMPLETED",
+          "review_plan": "WAITING_FOR_HUMAN",
+          "runtime_plan": "COMPLETED",
+          "scope": "COMPLETED",
+          "score_plan": "COMPLETED",
+          "skill_plan": "COMPLETED"
+        }
+      },
+      "metrics": {
+        "cancelled_tasks": 0,
+        "completed_tasks": 10,
+        "disclaimer_coverage": "PASS",
+        "event_count": 46,
+        "failed_tasks": 0,
+        "human_waiting_count": 1,
+        "message_count": 0,
+        "total_tasks": 11
+      },
+      "outputs": [
+        {
+          "agent_id": "methodology_selector",
+          "agent_type": "sync",
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "refs": [
+            "docs/runtime/runtime-architecture.md"
+          ],
+          "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
+          "task_id": "goal_analysis"
+        },
+        {
+          "agent_id": "methodology_selector",
+          "agent_type": "sync",
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "refs": [
+            "docs/runtime/runtime-architecture.md"
+          ],
+          "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
+          "task_id": "scope"
+        },
+        {
+          "agent_id": "methodology_selector",
+          "agent_type": "sync",
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "refs": [
+            "docs/runtime/runtime-architecture.md"
+          ],
+          "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
+          "task_id": "methodology_selection"
+        },
+        {
+          "agent_id": "evidence_collector",
+          "agent_type": "async",
+          "async_state": "READY_FOR_RESUME",
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "refs": [
+            "docs/runtime/runtime-architecture.md",
+            "docs/evidence/evidence-architecture.md"
+          ],
+          "result": "采集并登记证据引用 已由 Runtime 调度完成",
+          "task_id": "connector_plan"
+        },
+        {
+          "agent_id": "parallel_researcher",
+          "agent_type": "parallel",
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "parallel_branches": [
+            "branch-a",
+            "branch-b"
+          ],
+          "refs": [
+            "docs/runtime/runtime-architecture.md"
+          ],
+          "result": "并行拆分研究子任务 已由 Runtime 调度完成",
+          "task_id": "skill_plan"
+        },
+        {
+          "agent_id": "evidence_collector",
+          "agent_type": "async",
+          "async_state": "READY_FOR_RESUME",
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "refs": [
+            "docs/runtime/runtime-architecture.md",
+            "docs/evidence/evidence-architecture.md"
+          ],
+          "result": "采集并登记证据引用 已由 Runtime 调度完成",
+          "task_id": "evidence_plan"
+        },
+        {
+          "agent_id": "parallel_researcher",
+          "agent_type": "parallel",
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "parallel_branches": [
+            "branch-a",
+            "branch-b"
+          ],
+          "refs": [
+            "docs/runtime/runtime-architecture.md"
+          ],
+          "result": "并行拆分研究子任务 已由 Runtime 调度完成",
+          "task_id": "knowledge_graph_plan"
+        },
+        {
+          "agent_id": "report_composer",
+          "agent_type": "sync",
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "refs": [
+            "docs/runtime/runtime-architecture.md",
+            "templates/report/research-report-template.md"
+          ],
+          "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
+          "task_id": "score_plan"
+        },
+        {
+          "agent_id": "report_composer",
+          "agent_type": "sync",
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "refs": [
+            "docs/runtime/runtime-architecture.md",
+            "templates/report/research-report-template.md"
+          ],
+          "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
+          "task_id": "report_plan"
+        },
+        {
+          "agent_id": "human_reviewer",
+          "agent_type": "human_in_the_loop",
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "human_prompt": "请确认研究边界和证据缺口。",
+          "refs": [
+            "docs/runtime/runtime-architecture.md"
+          ],
+          "result": "人工确认或补充输入 已由 Runtime 调度完成",
+          "task_id": "review_plan"
+        },
+        {
+          "agent_id": "report_composer",
+          "agent_type": "sync",
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "refs": [
+            "docs/runtime/runtime-architecture.md",
+            "templates/report/research-report-template.md"
+          ],
+          "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
+          "task_id": "runtime_plan"
+        }
+      ],
+      "runtime_plan": {
+        "agent_types": [
+          "sync",
+          "parallel",
+          "long_running",
+          "human_in_the_loop"
+        ],
+        "case_id": "prod-e2e-03-innovative-drug",
+        "contract_version": "planner-runtime-contract-v1",
+        "expected_outputs": [
+          "event_log",
+          "state_snapshot",
+          "artifact_refs",
+          "final_state"
+        ],
+        "max_concurrency": 3,
+        "plan_id": "plan-prod-e2e-03-innovative-drug",
+        "planner_generated": true,
+        "raw_user_request_allowed": false,
+        "runtime_boundary": "Runtime 只能执行 Planner 生成的 Workflow、Task Graph 和 Context，不直接接收用户请求。",
+        "runtime_id": "runtime-from-planner-prod-e2e-03-innovative-drug",
+        "tasks": [
+          {
+            "agent_id": "methodology_selector",
+            "agent_role": "Research Agent",
+            "contract_version": "planner-runtime-contract-v1",
+            "dependencies": [],
+            "expected_output": "goal_analysis",
+            "input": {
+              "case_id": "prod-e2e-03-innovative-drug",
+              "plan_id": "plan-prod-e2e-03-innovative-drug",
+              "planner_task": {
+                "agent_role": "Research Agent",
+                "dependencies": [],
+                "expected_output": "goal_analysis",
+                "quality_gate": "planner_gate",
+                "task_id": "goal_analysis"
+              }
+            },
+            "quality_gate": "planner_gate",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "task_id": "goal_analysis"
+          },
+          {
+            "agent_id": "methodology_selector",
+            "agent_role": "Research Agent",
+            "contract_version": "planner-runtime-contract-v1",
+            "dependencies": [
+              "goal_analysis"
+            ],
+            "expected_output": "scope",
+            "input": {
+              "case_id": "prod-e2e-03-innovative-drug",
+              "plan_id": "plan-prod-e2e-03-innovative-drug",
+              "planner_task": {
+                "agent_role": "Research Agent",
+                "dependencies": [
+                  "goal_analysis"
+                ],
+                "expected_output": "scope",
+                "quality_gate": "planner_gate",
+                "task_id": "scope"
+              }
+            },
+            "quality_gate": "planner_gate",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "task_id": "scope"
+          },
+          {
+            "agent_id": "methodology_selector",
+            "agent_role": "Research Agent",
+            "contract_version": "planner-runtime-contract-v1",
+            "dependencies": [
+              "scope"
+            ],
+            "expected_output": "methodology_selection",
+            "input": {
+              "case_id": "prod-e2e-03-innovative-drug",
+              "plan_id": "plan-prod-e2e-03-innovative-drug",
+              "planner_task": {
+                "agent_role": "Research Agent",
+                "dependencies": [
+                  "scope"
+                ],
+                "expected_output": "methodology_selection",
+                "quality_gate": "planner_gate",
+                "task_id": "methodology_selection"
+              }
+            },
+            "quality_gate": "planner_gate",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "task_id": "methodology_selection"
+          },
+          {
+            "agent_id": "evidence_collector",
+            "agent_role": "Research Agent",
+            "contract_version": "planner-runtime-contract-v1",
+            "dependencies": [
+              "methodology_selection"
+            ],
+            "expected_output": "connector_plan",
+            "input": {
+              "case_id": "prod-e2e-03-innovative-drug",
+              "plan_id": "plan-prod-e2e-03-innovative-drug",
+              "planner_task": {
+                "agent_role": "Research Agent",
+                "dependencies": [
+                  "methodology_selection"
+                ],
+                "expected_output": "connector_plan",
+                "quality_gate": "planner_gate",
+                "task_id": "connector_plan"
+              }
+            },
+            "quality_gate": "planner_gate",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "task_id": "connector_plan"
+          },
+          {
+            "agent_id": "parallel_researcher",
+            "agent_role": "Research Agent",
+            "contract_version": "planner-runtime-contract-v1",
+            "dependencies": [
+              "connector_plan"
+            ],
+            "expected_output": "skill_plan",
+            "input": {
+              "case_id": "prod-e2e-03-innovative-drug",
+              "plan_id": "plan-prod-e2e-03-innovative-drug",
+              "planner_task": {
+                "agent_role": "Research Agent",
+                "dependencies": [
+                  "connector_plan"
+                ],
+                "expected_output": "skill_plan",
+                "quality_gate": "planner_gate",
+                "task_id": "skill_plan"
+              }
+            },
+            "quality_gate": "planner_gate",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "task_id": "skill_plan"
+          },
+          {
+            "agent_id": "evidence_collector",
+            "agent_role": "Research Agent",
+            "contract_version": "planner-runtime-contract-v1",
+            "dependencies": [
+              "skill_plan"
+            ],
+            "expected_output": "evidence_plan",
+            "input": {
+              "case_id": "prod-e2e-03-innovative-drug",
+              "plan_id": "plan-prod-e2e-03-innovative-drug",
+              "planner_task": {
+                "agent_role": "Research Agent",
+                "dependencies": [
+                  "skill_plan"
+                ],
+                "expected_output": "evidence_plan",
+                "quality_gate": "planner_gate",
+                "task_id": "evidence_plan"
+              }
+            },
+            "quality_gate": "planner_gate",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "task_id": "evidence_plan"
+          },
+          {
+            "agent_id": "parallel_researcher",
+            "agent_role": "Research Agent",
+            "contract_version": "planner-runtime-contract-v1",
+            "dependencies": [
+              "evidence_plan"
+            ],
+            "expected_output": "knowledge_graph_plan",
+            "input": {
+              "case_id": "prod-e2e-03-innovative-drug",
+              "plan_id": "plan-prod-e2e-03-innovative-drug",
+              "planner_task": {
+                "agent_role": "Research Agent",
+                "dependencies": [
+                  "evidence_plan"
+                ],
+                "expected_output": "knowledge_graph_plan",
+                "quality_gate": "planner_gate",
+                "task_id": "knowledge_graph_plan"
+              }
+            },
+            "quality_gate": "planner_gate",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "task_id": "knowledge_graph_plan"
+          },
+          {
+            "agent_id": "report_composer",
+            "agent_role": "Research Agent",
+            "contract_version": "planner-runtime-contract-v1",
+            "dependencies": [
+              "knowledge_graph_plan"
+            ],
+            "expected_output": "score_plan",
+            "input": {
+              "case_id": "prod-e2e-03-innovative-drug",
+              "plan_id": "plan-prod-e2e-03-innovative-drug",
+              "planner_task": {
+                "agent_role": "Research Agent",
+                "dependencies": [
+                  "knowledge_graph_plan"
+                ],
+                "expected_output": "score_plan",
+                "quality_gate": "planner_gate",
+                "task_id": "score_plan"
+              }
+            },
+            "quality_gate": "planner_gate",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "task_id": "score_plan"
+          },
+          {
+            "agent_id": "report_composer",
+            "agent_role": "Research Agent",
+            "contract_version": "planner-runtime-contract-v1",
+            "dependencies": [
+              "score_plan"
+            ],
+            "expected_output": "report_plan",
+            "input": {
+              "case_id": "prod-e2e-03-innovative-drug",
+              "plan_id": "plan-prod-e2e-03-innovative-drug",
+              "planner_task": {
+                "agent_role": "Research Agent",
+                "dependencies": [
+                  "score_plan"
+                ],
+                "expected_output": "report_plan",
+                "quality_gate": "planner_gate",
+                "task_id": "report_plan"
+              }
+            },
+            "quality_gate": "planner_gate",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "task_id": "report_plan"
+          },
+          {
+            "agent_id": "human_reviewer",
+            "agent_role": "Review Agent",
+            "contract_version": "planner-runtime-contract-v1",
+            "dependencies": [
+              "report_plan"
+            ],
+            "expected_output": "review_plan",
+            "input": {
+              "case_id": "prod-e2e-03-innovative-drug",
+              "plan_id": "plan-prod-e2e-03-innovative-drug",
+              "planner_task": {
+                "agent_role": "Review Agent",
+                "dependencies": [
+                  "report_plan"
+                ],
+                "expected_output": "review_plan",
+                "quality_gate": "planner_gate",
+                "task_id": "review_plan"
+              }
+            },
+            "quality_gate": "planner_gate",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "task_id": "review_plan"
+          },
+          {
+            "agent_id": "report_composer",
+            "agent_role": "Review Agent",
+            "contract_version": "planner-runtime-contract-v1",
+            "dependencies": [
+              "review_plan"
+            ],
+            "expected_output": "runtime_plan",
+            "input": {
+              "case_id": "prod-e2e-03-innovative-drug",
+              "plan_id": "plan-prod-e2e-03-innovative-drug",
+              "planner_task": {
+                "agent_role": "Review Agent",
+                "dependencies": [
+                  "review_plan"
+                ],
+                "expected_output": "runtime_plan",
+                "quality_gate": "planner_gate",
+                "task_id": "runtime_plan"
+              }
+            },
+            "quality_gate": "planner_gate",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "task_id": "runtime_plan"
+          }
+        ],
+        "timeout_minutes": 106,
+        "workflow_id": "workflow-prod-e2e-03-innovative-drug"
+      }
+    }
+  },
   "scorecard": {
     "confidence_score": 0.66,
     "disclaimer": "仅供研究参考，不构成投资建议",
@@ -1708,7 +4378,27 @@
       }
     ]
   },
-  "started_at": "2026-07-10T11:15:04.190024+00:00",
+  "stable_release_gate": {
+    "details": {
+      "allow_degraded": false,
+      "degraded_sources": [
+        "news",
+        "yahoo_finance"
+      ],
+      "min_real_sources": 1,
+      "real_sources": [],
+      "require_real_sources": false
+    },
+    "disclaimer": "AIRS Stable 发布门禁仅用于工程质量检查，不构成投资建议。",
+    "errors": [],
+    "passed": true,
+    "status": "PASS",
+    "unverified": [],
+    "warnings": [
+      "degraded sources present: ['news', 'yahoo_finance']"
+    ]
+  },
+  "started_at": "2026-07-10T15:21:14.919302+00:00",
   "status": "PASS",
   "title": "创新药管线端到端研究"
 }

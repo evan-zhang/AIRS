@@ -16,6 +16,7 @@ from typing import Any
 from committee.coordinator import run_committee
 from common.contract import CONTRACT_VERSION, runtime_task_from_planner_task
 from common.contract_validation import summarize_data_lineage
+from common.release_gate import evaluate_connector_lineage
 from data_connectors.base import ConnectorRequest
 from data_connectors.registry import default_registry as default_connector_registry
 from investment_engine.pipeline import run_research
@@ -285,6 +286,12 @@ def run_production_case(case_data: dict[str, Any]) -> dict[str, Any]:
     errors = []
     connector_errors = assert_connector_trace(connector_trace)
     connector_lineage = summarize_data_lineage([item["result"] for item in connector_trace])
+    stable_gate = evaluate_connector_lineage(
+        connector_lineage,
+        require_real_sources=bool(case.expectations.get("require_real_sources")),
+        min_real_sources=int(case.expectations.get("min_real_sources", 1)),
+        allow_degraded=bool(case.expectations.get("allow_degraded_sources", False)),
+    )
     report_errors = assert_report_taxonomy(engine_result)
     kg_errors = [] if kg_state["validation"]["passed"] else kg_state["validation"]["errors"]
     runtime_errors = [] if runtime["final_state"]["runtime_state"].get("status") == "COMPLETED" else ["runtime did not complete"]
@@ -296,6 +303,7 @@ def run_production_case(case_data: dict[str, Any]) -> dict[str, Any]:
         "runtime": not runtime_errors,
         "connectors": not connector_errors,
         "connector_lineage": bool(connector_lineage["real_sources"] or connector_lineage["mock_sources"] or connector_lineage["skipped_sources"]),
+        "stable_release_gate": stable_gate.passed if case.expectations.get("require_real_sources") else True,
         "evidence_trace": len(engine_result["evidence_chain"]["evidence_cards"]) >= case.expectations.get("min_evidence_cards", 4),
         "knowledge_graph": not kg_errors,
         "scorecard": engine_result["score_card"]["quality_gate"] in {"PASS", "CONDITIONAL_PASS"},
@@ -307,6 +315,7 @@ def run_production_case(case_data: dict[str, Any]) -> dict[str, Any]:
     for name, passed in check_map.items():
         checks.append({"name": name, "status": "PASS" if passed else "FAIL"})
     errors.extend(connector_errors + report_errors + kg_errors + runtime_errors + memory_errors + learning_errors)
+    errors.extend(stable_gate.errors)
     if not check_map["planner"]:
         errors.append("planner did not produce runtime plan and execution order")
 
@@ -323,6 +332,7 @@ def run_production_case(case_data: dict[str, Any]) -> dict[str, Any]:
         "orchestrator": orchestration,
         "evidence_trace": connector_trace,
         "connector_lineage": connector_lineage,
+        "stable_release_gate": stable_gate.to_dict(),
         "airs_evidence_chain": engine_result["evidence_chain"],
         "kg_state": kg_state,
         "scorecard": engine_result["score_card"],

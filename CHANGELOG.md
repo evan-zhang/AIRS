@@ -1,5 +1,37 @@
 # AIRS 变更日志
 
+## [QA-SPRINT-3] Stable Release Remediation - 2026-07-10
+
+### Fixed
+
+- B1 / TD-003：新增 Stable release gate，Mock、SKIP、Fallback、Unknown 数据源不得计入真实生产 PASS。
+- B2：新增 `config/airs.stable.yaml` Stable profile，区分本地 demo/mock profile 与 Stable real-data gate profile。
+- B4：新增 `docs/release/RELEASE_READINESS_REVIEW_V2.md`，统一记录 Stable 发布决策、剩余风险和未验证项。
+- H4：Connector real-mode fallback 统一标记为 `fallback_mock`，并进入 `data_lineage.fallback_sources`。
+- H5 / TD-002：新增 `scripts/validate_stable_release.py`，并将 Stable remediation validator、E2E artifact validator 纳入 `production_check.py`。
+- H6 / TD-006：API 新增 rate limit；invalid JSON 默认走错误脱敏；Docker Compose 新增 API key healthcheck。
+
+### Added
+
+- 新增 `common/release_gate.py`。
+- 新增 `docs/adr/ADR-0017-stable-release-gates.md`。
+- 新增 `docs/qa/STABLE_RELEASE_REMEDIATION_REPORT.md`。
+- 新增 `docs/review/STABLE_RELEASE_SELF_REVIEW.md`。
+
+### Validation
+
+- `python3 scripts/run_production_tests.py`：PASS。
+- `python3 scripts/validate_e2e.py`：PASS。
+- `python3 cli/airs.py init` / `demo` / `validate --all`：PASS。
+- `python3 scripts/validate_stable_release.py`：PASS，未设置真实外部探测时记录 UNVERIFIED。
+- `python3 -m pytest -q`：PASS，含真实连接器集成测试的 1 个 SKIP。
+- Docker compose config 解析通过；Docker daemon 当前不可用，image build / compose up / container health 未验证。
+
+### Compliance
+
+- QA Sprint 3 不新增投资研究业务功能，不提供投资建议、交易指令、目标价或收益承诺。
+- 无法在当前环境验证的 Docker build / compose health 被记录为未验证，不伪造通过。
+
 ## [QA-SPRINT-2] Architecture Stabilization - 2026-07-10
 
 ### Fixed

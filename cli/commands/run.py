@@ -21,12 +21,14 @@ def _load_input(args: argparse.Namespace) -> str | dict[str, object]:
         "market": args.market,
         "research_question": args.query,
         "time_range": args.time_range,
+        "require_real_data": args.real_data,
     }
 
 
 def run(args: argparse.Namespace) -> dict[str, object]:
     payload = _load_input(args)
     result = run_equity_research(payload)
+    exit_code = 1 if result.get("quality_gate") == "FAIL" else 0
     if args.output:
         out = Path(args.output)
         out.parent.mkdir(parents=True, exist_ok=True)
@@ -34,15 +36,19 @@ def run(args: argparse.Namespace) -> dict[str, object]:
     if args.markdown:
         EquityResearchReportExporter().write_markdown(result["report"], args.markdown)
     return {
-        "exit_code": 0,
+        "exit_code": exit_code,
         "request_id": result["request"]["request_id"],
         "company": result["company"]["company_name"],
+        "status": result.get("status"),
+        "quality_gate": result.get("quality_gate"),
         "output": args.output,
         "markdown": args.markdown,
         "message": "\n".join(
             [
                 f"研究任务完成：{result['company']['company_name']}",
                 f"Request ID: {result['request']['request_id']}",
+                f"Status: {result.get('status')}",
+                f"Quality Gate: {result.get('quality_gate')}",
                 f"JSON: {args.output or '未写入文件'}",
                 f"Markdown: {args.markdown or '未写入文件'}",
                 f"免责声明：{DISCLAIMER}",
@@ -57,8 +63,8 @@ def register(subparsers: argparse._SubParsersAction[argparse.ArgumentParser]) ->
     parser.add_argument("--symbol", default="NVDA", help="股票代码。")
     parser.add_argument("--market", default="US", help="市场代码。")
     parser.add_argument("--time-range", default="latest", help="研究时间范围。")
+    parser.add_argument("--real-data", action="store_true", help="要求真实数据源；Mock/SKIP/Fallback 会导致质量门禁失败。")
     parser.add_argument("--input-json", help="从 JSON 文件读取完整研究请求。")
     parser.add_argument("--output", help="写入 JSON 结果路径。")
     parser.add_argument("--markdown", help="写入 Markdown 报告路径。")
     parser.set_defaults(func=run)
-

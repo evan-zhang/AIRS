@@ -7,6 +7,7 @@ import argparse
 import json
 import os
 import sys
+import time
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from typing import Any
@@ -26,6 +27,7 @@ from api.routes.workspace import handle_workspace
 DISCLAIMER = "AIRS API 仅用于投资研究流程编排、证据追溯和质量控制，不构成投资建议。"
 DEFAULT_MAX_BODY_BYTES = 1_048_576
 LOCAL_HOSTS = {"127.0.0.1", "localhost", "::1"}
+RATE_BUCKETS: dict[str, list[float]] = {}
 
 
 def _env_bool(name: str, default: bool = False) -> bool:
@@ -43,6 +45,7 @@ def _security_config() -> dict[str, Any]:
         "cors_origins": origins,
         "max_body_bytes": int(os.environ.get("AIRS_MAX_BODY_BYTES", str(DEFAULT_MAX_BODY_BYTES))),
         "expose_errors": _env_bool("AIRS_EXPOSE_ERRORS", False),
+        "rate_limit_per_minute": int(os.environ.get("AIRS_RATE_LIMIT_PER_MINUTE", "120")),
     }
 
 
@@ -82,6 +85,23 @@ class AIRSRequestHandler(BaseHTTPRequestHandler):
         header_key = self.headers.get("X-AIRS-API-Key", "")
         return header_key == api_key or bearer == f"Bearer {api_key}"
 
+    def _rate_limited(self) -> bool:
+        limit = self.server.security_config["rate_limit_per_minute"]  # type: ignore[attr-defined]
+        if limit <= 0:
+            return False
+        client = self.client_address[0] if self.client_address else "unknown"
+        api_key = self.headers.get("X-AIRS-API-Key") or self.headers.get("Authorization") or "anonymous"
+        bucket_key = f"{client}:{api_key}"
+        now = time.monotonic()
+        window_start = now - 60
+        bucket = [item for item in RATE_BUCKETS.get(bucket_key, []) if item >= window_start]
+        if len(bucket) >= limit:
+            RATE_BUCKETS[bucket_key] = bucket
+            return True
+        bucket.append(now)
+        RATE_BUCKETS[bucket_key] = bucket
+        return False
+
     def _send_error(self, status: int, code: str, exc: Exception | None = None) -> None:
         expose = self.server.security_config["expose_errors"]  # type: ignore[attr-defined]
         payload = {"error": code}
@@ -95,6 +115,9 @@ class AIRSRequestHandler(BaseHTTPRequestHandler):
     def do_GET(self) -> None:  # noqa: N802
         if not self._authorized():
             self._send(401, {"error": "unauthorized"})
+            return
+        if self._rate_limited():
+            self._send(429, {"error": "rate_limited"})
             return
         path = urlparse(self.path).path
         try:
@@ -113,6 +136,9 @@ class AIRSRequestHandler(BaseHTTPRequestHandler):
         if not self._authorized():
             self._send(401, {"error": "unauthorized"})
             return
+        if self._rate_limited():
+            self._send(429, {"error": "rate_limited"})
+            return
         path = urlparse(self.path).path
         try:
             if path in {"/research", "/company", "/theme", "/report"}:
@@ -120,7 +146,7 @@ class AIRSRequestHandler(BaseHTTPRequestHandler):
             else:
                 self._send(404, {"error": "not_found", "path": path})
         except json.JSONDecodeError as exc:
-            self._send(400, {"error": "invalid_json", "message": str(exc)})
+            self._send_error(400, "invalid_json", exc)
         except ValueError as exc:
             self._send_error(413 if "too large" in str(exc) else 400, "invalid_request", exc)
         except Exception as exc:  # noqa: BLE001

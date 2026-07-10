@@ -89,6 +89,14 @@
       "status": "PASS"
     },
     {
+      "name": "connector_lineage",
+      "status": "PASS"
+    },
+    {
+      "name": "stable_release_gate",
+      "status": "PASS"
+    },
+    {
       "name": "evidence_trace",
       "status": "PASS"
     },
@@ -479,7 +487,24 @@
       ]
     }
   },
-  "completed_at": "2026-07-10T11:15:04.210419+00:00",
+  "completed_at": "2026-07-10T15:21:14.929934+00:00",
+  "connector_lineage": {
+    "degraded_source_count": 2,
+    "degraded_sources": [
+      "news",
+      "yahoo_finance"
+    ],
+    "disclaimer": "AIRS 契约校验仅用于研究质量控制，不构成投资建议。",
+    "fallback_sources": [],
+    "mock_sources": [
+      "news",
+      "yahoo_finance"
+    ],
+    "real_source_count": 0,
+    "real_sources": [],
+    "skipped_sources": [],
+    "unknown_sources": []
+  },
   "disclaimer": "仅用于 AIRS 投资研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
   "errors": [],
   "evidence_trace": [
@@ -503,7 +528,7 @@
       "result": {
         "connector_id": "news",
         "data": {
-          "collection_time": "2026-07-10T11:15:04.210110+00:00",
+          "collection_time": "2026-07-10T15:21:14.929687+00:00",
           "confidence": 0.5,
           "connector_version": "0.2.0",
           "mode": "mock",
@@ -512,21 +537,22 @@
             "publisher": "Mock News",
             "query": "investment research learning feedback"
           },
-          "publication_time": "2026-07-10T11:15:04.210099+00:00",
+          "publication_time": "2026-07-10T15:21:14.929677+00:00",
           "raw_hash": "72a2d2a43346eef9c78f2a5e22afc49f660bb815524dd3bb435db9a6c37bc7f3",
           "source": "Public News",
-          "trace_id": "TRACE-C3CCE51684FD",
+          "trace_id": "TRACE-575464574F54",
           "url": "https://news.example.com/mock"
         },
         "disclaimer": "仅供 AIRS 工程开发和研究质量控制使用，不构成投资建议。",
         "source": "Public News",
         "source_type": "public_news",
-        "timestamp": "2026-07-10T11:15:04.210099+00:00",
-        "trace_id": "TRACE-C3CCE51684FD",
+        "timestamp": "2026-07-10T15:21:14.929677+00:00",
+        "trace_id": "TRACE-575464574F54",
         "traceability": {
           "cache_hit": false,
           "connector": "news",
-          "request_id": "TRACE-C3CCE51684FD",
+          "mode": "mock",
+          "request_id": "TRACE-575464574F54",
           "transformations": [
             "mock_fetch",
             "normalize"
@@ -558,18 +584,20 @@
         "data": {
           "currency": "USD",
           "last_price": 100.0,
+          "mode": "mock",
           "symbol": "AAPL",
           "url": "https://finance.yahoo.com/quote/AAPL"
         },
         "disclaimer": "仅供 AIRS 工程开发和研究质量控制使用，不构成投资建议。",
         "source": "Yahoo Finance",
         "source_type": "trusted_third_party",
-        "timestamp": "2026-07-10T11:15:04.210137+00:00",
-        "trace_id": "TRACE-055F6E08885C",
+        "timestamp": "2026-07-10T15:21:14.929709+00:00",
+        "trace_id": "TRACE-464B79EAE7BC",
         "traceability": {
           "cache_hit": false,
           "connector": "yahoo_finance",
-          "request_id": "TRACE-055F6E08885C",
+          "mode": "mock",
+          "request_id": "TRACE-464B79EAE7BC",
           "transformations": [
             "mock_fetch",
             "normalize"
@@ -583,7 +611,7 @@
   "execution_log": [
     {
       "agent_id": null,
-      "event_id": "evt-3873ba92bb60",
+      "event_id": "evt-630bf28ce6fb",
       "event_type": "RUNTIME_STARTED",
       "payload": {
         "runtime_id": "runtime-from-planner-prod-e2e-08-memory-learning-regression",
@@ -592,47 +620,47 @@
       "session_id": null,
       "severity": "INFO",
       "task_id": null,
-      "timestamp": "2026-07-10T11:15:04.209075+00:00",
+      "timestamp": "2026-07-10T15:21:14.929083+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-16a48fdb9e1e",
+      "event_id": "evt-8c944721260b",
       "event_type": "TASK_DISPATCHED",
       "payload": {
         "agent_type": "sync"
       },
-      "session_id": "ses-613bac5c7a23",
+      "session_id": "ses-bcadeb780d2f",
       "severity": "INFO",
       "task_id": "goal_analysis",
-      "timestamp": "2026-07-10T11:15:04.209089+00:00",
+      "timestamp": "2026-07-10T15:21:14.929092+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-6fcd68497673",
+      "event_id": "evt-b3f283876573",
       "event_type": "AGENT_INITIALIZED",
       "payload": {},
-      "session_id": "ses-613bac5c7a23",
+      "session_id": "ses-bcadeb780d2f",
       "severity": "INFO",
       "task_id": "goal_analysis",
-      "timestamp": "2026-07-10T11:15:04.209094+00:00",
+      "timestamp": "2026-07-10T15:21:14.929097+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-3ef4f3559c84",
+      "event_id": "evt-8141a7081148",
       "event_type": "AGENT_RUNNING",
       "payload": {},
-      "session_id": "ses-613bac5c7a23",
+      "session_id": "ses-bcadeb780d2f",
       "severity": "INFO",
       "task_id": "goal_analysis",
-      "timestamp": "2026-07-10T11:15:04.209099+00:00",
+      "timestamp": "2026-07-10T15:21:14.929101+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-32d04f506b82",
+      "event_id": "evt-30edec295957",
       "event_type": "AGENT_COMPLETED",
       "payload": {
         "agent_id": "methodology_selector",
@@ -644,50 +672,50 @@
         "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
         "task_id": "goal_analysis"
       },
-      "session_id": "ses-613bac5c7a23",
+      "session_id": "ses-bcadeb780d2f",
       "severity": "INFO",
       "task_id": "goal_analysis",
-      "timestamp": "2026-07-10T11:15:04.209106+00:00",
+      "timestamp": "2026-07-10T15:21:14.929106+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-e297cc112cfc",
+      "event_id": "evt-fc334240cf63",
       "event_type": "TASK_DISPATCHED",
       "payload": {
         "agent_type": "sync"
       },
-      "session_id": "ses-8f13f7612fae",
+      "session_id": "ses-93dc11c840b1",
       "severity": "INFO",
       "task_id": "scope",
-      "timestamp": "2026-07-10T11:15:04.209141+00:00",
+      "timestamp": "2026-07-10T15:21:14.929129+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-6a8f78a1148c",
+      "event_id": "evt-6c69d9aca4c8",
       "event_type": "AGENT_INITIALIZED",
       "payload": {},
-      "session_id": "ses-8f13f7612fae",
+      "session_id": "ses-93dc11c840b1",
       "severity": "INFO",
       "task_id": "scope",
-      "timestamp": "2026-07-10T11:15:04.209146+00:00",
+      "timestamp": "2026-07-10T15:21:14.929133+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-c404da2d12bc",
+      "event_id": "evt-eeb665cb7355",
       "event_type": "AGENT_RUNNING",
       "payload": {},
-      "session_id": "ses-8f13f7612fae",
+      "session_id": "ses-93dc11c840b1",
       "severity": "INFO",
       "task_id": "scope",
-      "timestamp": "2026-07-10T11:15:04.209151+00:00",
+      "timestamp": "2026-07-10T15:21:14.929135+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-4c29109e43bd",
+      "event_id": "evt-b3942057bda3",
       "event_type": "AGENT_COMPLETED",
       "payload": {
         "agent_id": "methodology_selector",
@@ -699,50 +727,50 @@
         "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
         "task_id": "scope"
       },
-      "session_id": "ses-8f13f7612fae",
+      "session_id": "ses-93dc11c840b1",
       "severity": "INFO",
       "task_id": "scope",
-      "timestamp": "2026-07-10T11:15:04.209156+00:00",
+      "timestamp": "2026-07-10T15:21:14.929139+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-4035addcbcf4",
+      "event_id": "evt-a51bdb05cc1c",
       "event_type": "TASK_DISPATCHED",
       "payload": {
         "agent_type": "sync"
       },
-      "session_id": "ses-67a057221301",
+      "session_id": "ses-c679d92bce15",
       "severity": "INFO",
       "task_id": "methodology_selection",
-      "timestamp": "2026-07-10T11:15:04.209188+00:00",
+      "timestamp": "2026-07-10T15:21:14.929158+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-f573d12ab1d0",
+      "event_id": "evt-47b8287723f9",
       "event_type": "AGENT_INITIALIZED",
       "payload": {},
-      "session_id": "ses-67a057221301",
+      "session_id": "ses-c679d92bce15",
       "severity": "INFO",
       "task_id": "methodology_selection",
-      "timestamp": "2026-07-10T11:15:04.209193+00:00",
+      "timestamp": "2026-07-10T15:21:14.929162+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-d5a9e0231371",
+      "event_id": "evt-866b1d4582f5",
       "event_type": "AGENT_RUNNING",
       "payload": {},
-      "session_id": "ses-67a057221301",
+      "session_id": "ses-c679d92bce15",
       "severity": "INFO",
       "task_id": "methodology_selection",
-      "timestamp": "2026-07-10T11:15:04.209197+00:00",
+      "timestamp": "2026-07-10T15:21:14.929165+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-c805ecc4bb31",
+      "event_id": "evt-01ebf371ff2e",
       "event_type": "AGENT_COMPLETED",
       "payload": {
         "agent_id": "methodology_selector",
@@ -754,50 +782,50 @@
         "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
         "task_id": "methodology_selection"
       },
-      "session_id": "ses-67a057221301",
+      "session_id": "ses-c679d92bce15",
       "severity": "INFO",
       "task_id": "methodology_selection",
-      "timestamp": "2026-07-10T11:15:04.209203+00:00",
+      "timestamp": "2026-07-10T15:21:14.929169+00:00",
       "trace_id": null
     },
     {
       "agent_id": "evidence_collector",
-      "event_id": "evt-2a7d85852681",
+      "event_id": "evt-b05b6a6859e0",
       "event_type": "TASK_DISPATCHED",
       "payload": {
         "agent_type": "async"
       },
-      "session_id": "ses-0d4c66ade369",
+      "session_id": "ses-997dc17da255",
       "severity": "INFO",
       "task_id": "connector_plan",
-      "timestamp": "2026-07-10T11:15:04.209233+00:00",
+      "timestamp": "2026-07-10T15:21:14.929184+00:00",
       "trace_id": null
     },
     {
       "agent_id": "evidence_collector",
-      "event_id": "evt-1387c84ba9b5",
+      "event_id": "evt-5114a3d1c84f",
       "event_type": "AGENT_INITIALIZED",
       "payload": {},
-      "session_id": "ses-0d4c66ade369",
+      "session_id": "ses-997dc17da255",
       "severity": "INFO",
       "task_id": "connector_plan",
-      "timestamp": "2026-07-10T11:15:04.209238+00:00",
+      "timestamp": "2026-07-10T15:21:14.929188+00:00",
       "trace_id": null
     },
     {
       "agent_id": "evidence_collector",
-      "event_id": "evt-588362f11e82",
+      "event_id": "evt-ec908342e30d",
       "event_type": "AGENT_RUNNING",
       "payload": {},
-      "session_id": "ses-0d4c66ade369",
+      "session_id": "ses-997dc17da255",
       "severity": "INFO",
       "task_id": "connector_plan",
-      "timestamp": "2026-07-10T11:15:04.209243+00:00",
+      "timestamp": "2026-07-10T15:21:14.929190+00:00",
       "trace_id": null
     },
     {
       "agent_id": "evidence_collector",
-      "event_id": "evt-ddd68ab6d4c5",
+      "event_id": "evt-b5321253b006",
       "event_type": "AGENT_COMPLETED",
       "payload": {
         "agent_id": "evidence_collector",
@@ -811,50 +839,50 @@
         "result": "采集并登记证据引用 已由 Runtime 调度完成",
         "task_id": "connector_plan"
       },
-      "session_id": "ses-0d4c66ade369",
+      "session_id": "ses-997dc17da255",
       "severity": "INFO",
       "task_id": "connector_plan",
-      "timestamp": "2026-07-10T11:15:04.209248+00:00",
+      "timestamp": "2026-07-10T15:21:14.929194+00:00",
       "trace_id": null
     },
     {
       "agent_id": "parallel_researcher",
-      "event_id": "evt-51e0f30a1aea",
+      "event_id": "evt-e020f3dd8075",
       "event_type": "TASK_DISPATCHED",
       "payload": {
         "agent_type": "parallel"
       },
-      "session_id": "ses-4ee778decdd0",
+      "session_id": "ses-40cc7e70f47a",
       "severity": "INFO",
       "task_id": "skill_plan",
-      "timestamp": "2026-07-10T11:15:04.209280+00:00",
+      "timestamp": "2026-07-10T15:21:14.929211+00:00",
       "trace_id": null
     },
     {
       "agent_id": "parallel_researcher",
-      "event_id": "evt-aeca8127f2ee",
+      "event_id": "evt-b3ee69ca26ca",
       "event_type": "AGENT_INITIALIZED",
       "payload": {},
-      "session_id": "ses-4ee778decdd0",
+      "session_id": "ses-40cc7e70f47a",
       "severity": "INFO",
       "task_id": "skill_plan",
-      "timestamp": "2026-07-10T11:15:04.209285+00:00",
+      "timestamp": "2026-07-10T15:21:14.929215+00:00",
       "trace_id": null
     },
     {
       "agent_id": "parallel_researcher",
-      "event_id": "evt-2cc6d79bb50e",
+      "event_id": "evt-361054ec90c6",
       "event_type": "AGENT_RUNNING",
       "payload": {},
-      "session_id": "ses-4ee778decdd0",
+      "session_id": "ses-40cc7e70f47a",
       "severity": "INFO",
       "task_id": "skill_plan",
-      "timestamp": "2026-07-10T11:15:04.209290+00:00",
+      "timestamp": "2026-07-10T15:21:14.929218+00:00",
       "trace_id": null
     },
     {
       "agent_id": "parallel_researcher",
-      "event_id": "evt-61326dec81a9",
+      "event_id": "evt-95e94dc40e51",
       "event_type": "AGENT_COMPLETED",
       "payload": {
         "agent_id": "parallel_researcher",
@@ -870,50 +898,50 @@
         "result": "并行拆分研究子任务 已由 Runtime 调度完成",
         "task_id": "skill_plan"
       },
-      "session_id": "ses-4ee778decdd0",
+      "session_id": "ses-40cc7e70f47a",
       "severity": "INFO",
       "task_id": "skill_plan",
-      "timestamp": "2026-07-10T11:15:04.209296+00:00",
+      "timestamp": "2026-07-10T15:21:14.929222+00:00",
       "trace_id": null
     },
     {
       "agent_id": "evidence_collector",
-      "event_id": "evt-b2c707774784",
+      "event_id": "evt-f44edd81426f",
       "event_type": "TASK_DISPATCHED",
       "payload": {
         "agent_type": "async"
       },
-      "session_id": "ses-df11a66b0a64",
+      "session_id": "ses-5996e999eec8",
       "severity": "INFO",
       "task_id": "evidence_plan",
-      "timestamp": "2026-07-10T11:15:04.209329+00:00",
+      "timestamp": "2026-07-10T15:21:14.929239+00:00",
       "trace_id": null
     },
     {
       "agent_id": "evidence_collector",
-      "event_id": "evt-f4903796bfc9",
+      "event_id": "evt-a18c1dd69478",
       "event_type": "AGENT_INITIALIZED",
       "payload": {},
-      "session_id": "ses-df11a66b0a64",
+      "session_id": "ses-5996e999eec8",
       "severity": "INFO",
       "task_id": "evidence_plan",
-      "timestamp": "2026-07-10T11:15:04.209334+00:00",
+      "timestamp": "2026-07-10T15:21:14.929242+00:00",
       "trace_id": null
     },
     {
       "agent_id": "evidence_collector",
-      "event_id": "evt-4c32f222eff7",
+      "event_id": "evt-eebb816cb1f1",
       "event_type": "AGENT_RUNNING",
       "payload": {},
-      "session_id": "ses-df11a66b0a64",
+      "session_id": "ses-5996e999eec8",
       "severity": "INFO",
       "task_id": "evidence_plan",
-      "timestamp": "2026-07-10T11:15:04.209338+00:00",
+      "timestamp": "2026-07-10T15:21:14.929245+00:00",
       "trace_id": null
     },
     {
       "agent_id": "evidence_collector",
-      "event_id": "evt-5d4727e3b0c3",
+      "event_id": "evt-3e6409010f4f",
       "event_type": "AGENT_COMPLETED",
       "payload": {
         "agent_id": "evidence_collector",
@@ -927,50 +955,50 @@
         "result": "采集并登记证据引用 已由 Runtime 调度完成",
         "task_id": "evidence_plan"
       },
-      "session_id": "ses-df11a66b0a64",
+      "session_id": "ses-5996e999eec8",
       "severity": "INFO",
       "task_id": "evidence_plan",
-      "timestamp": "2026-07-10T11:15:04.209344+00:00",
+      "timestamp": "2026-07-10T15:21:14.929248+00:00",
       "trace_id": null
     },
     {
       "agent_id": "parallel_researcher",
-      "event_id": "evt-9f6ee7457e7e",
+      "event_id": "evt-4139d3eb7d51",
       "event_type": "TASK_DISPATCHED",
       "payload": {
         "agent_type": "parallel"
       },
-      "session_id": "ses-863b2df0d4d6",
+      "session_id": "ses-b088eb93515c",
       "severity": "INFO",
       "task_id": "knowledge_graph_plan",
-      "timestamp": "2026-07-10T11:15:04.209376+00:00",
+      "timestamp": "2026-07-10T15:21:14.929265+00:00",
       "trace_id": null
     },
     {
       "agent_id": "parallel_researcher",
-      "event_id": "evt-bd1537625ab7",
+      "event_id": "evt-7a487766d9f0",
       "event_type": "AGENT_INITIALIZED",
       "payload": {},
-      "session_id": "ses-863b2df0d4d6",
+      "session_id": "ses-b088eb93515c",
       "severity": "INFO",
       "task_id": "knowledge_graph_plan",
-      "timestamp": "2026-07-10T11:15:04.209381+00:00",
+      "timestamp": "2026-07-10T15:21:14.929269+00:00",
       "trace_id": null
     },
     {
       "agent_id": "parallel_researcher",
-      "event_id": "evt-0672e73a3503",
+      "event_id": "evt-4aef68efc3e6",
       "event_type": "AGENT_RUNNING",
       "payload": {},
-      "session_id": "ses-863b2df0d4d6",
+      "session_id": "ses-b088eb93515c",
       "severity": "INFO",
       "task_id": "knowledge_graph_plan",
-      "timestamp": "2026-07-10T11:15:04.209386+00:00",
+      "timestamp": "2026-07-10T15:21:14.929272+00:00",
       "trace_id": null
     },
     {
       "agent_id": "parallel_researcher",
-      "event_id": "evt-af3226d91963",
+      "event_id": "evt-fddc161a096c",
       "event_type": "AGENT_COMPLETED",
       "payload": {
         "agent_id": "parallel_researcher",
@@ -986,50 +1014,50 @@
         "result": "并行拆分研究子任务 已由 Runtime 调度完成",
         "task_id": "knowledge_graph_plan"
       },
-      "session_id": "ses-863b2df0d4d6",
+      "session_id": "ses-b088eb93515c",
       "severity": "INFO",
       "task_id": "knowledge_graph_plan",
-      "timestamp": "2026-07-10T11:15:04.209392+00:00",
+      "timestamp": "2026-07-10T15:21:14.929276+00:00",
       "trace_id": null
     },
     {
       "agent_id": "report_composer",
-      "event_id": "evt-9bb36b7f50a3",
+      "event_id": "evt-351457407f69",
       "event_type": "TASK_DISPATCHED",
       "payload": {
         "agent_type": "sync"
       },
-      "session_id": "ses-549be34bffb1",
+      "session_id": "ses-6862d0494dd1",
       "severity": "INFO",
       "task_id": "score_plan",
-      "timestamp": "2026-07-10T11:15:04.209423+00:00",
+      "timestamp": "2026-07-10T15:21:14.929300+00:00",
       "trace_id": null
     },
     {
       "agent_id": "report_composer",
-      "event_id": "evt-244bf1cdcb16",
+      "event_id": "evt-6305e78b065c",
       "event_type": "AGENT_INITIALIZED",
       "payload": {},
-      "session_id": "ses-549be34bffb1",
+      "session_id": "ses-6862d0494dd1",
       "severity": "INFO",
       "task_id": "score_plan",
-      "timestamp": "2026-07-10T11:15:04.209429+00:00",
+      "timestamp": "2026-07-10T15:21:14.929304+00:00",
       "trace_id": null
     },
     {
       "agent_id": "report_composer",
-      "event_id": "evt-e4b4efbaf0d0",
+      "event_id": "evt-714753114b4b",
       "event_type": "AGENT_RUNNING",
       "payload": {},
-      "session_id": "ses-549be34bffb1",
+      "session_id": "ses-6862d0494dd1",
       "severity": "INFO",
       "task_id": "score_plan",
-      "timestamp": "2026-07-10T11:15:04.209433+00:00",
+      "timestamp": "2026-07-10T15:21:14.929306+00:00",
       "trace_id": null
     },
     {
       "agent_id": "report_composer",
-      "event_id": "evt-9515232155a0",
+      "event_id": "evt-9f9868a4980d",
       "event_type": "AGENT_COMPLETED",
       "payload": {
         "agent_id": "report_composer",
@@ -1042,50 +1070,50 @@
         "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
         "task_id": "score_plan"
       },
-      "session_id": "ses-549be34bffb1",
+      "session_id": "ses-6862d0494dd1",
       "severity": "INFO",
       "task_id": "score_plan",
-      "timestamp": "2026-07-10T11:15:04.209439+00:00",
+      "timestamp": "2026-07-10T15:21:14.929310+00:00",
       "trace_id": null
     },
     {
       "agent_id": "report_composer",
-      "event_id": "evt-294fc6aea172",
+      "event_id": "evt-3cc53cdbbce7",
       "event_type": "TASK_DISPATCHED",
       "payload": {
         "agent_type": "sync"
       },
-      "session_id": "ses-fd3755f1b3a6",
+      "session_id": "ses-73a6569384c1",
       "severity": "INFO",
       "task_id": "report_plan",
-      "timestamp": "2026-07-10T11:15:04.209469+00:00",
+      "timestamp": "2026-07-10T15:21:14.929327+00:00",
       "trace_id": null
     },
     {
       "agent_id": "report_composer",
-      "event_id": "evt-f0f96c0b9fb4",
+      "event_id": "evt-64c50cfa4c80",
       "event_type": "AGENT_INITIALIZED",
       "payload": {},
-      "session_id": "ses-fd3755f1b3a6",
+      "session_id": "ses-73a6569384c1",
       "severity": "INFO",
       "task_id": "report_plan",
-      "timestamp": "2026-07-10T11:15:04.209474+00:00",
+      "timestamp": "2026-07-10T15:21:14.929331+00:00",
       "trace_id": null
     },
     {
       "agent_id": "report_composer",
-      "event_id": "evt-17f039826096",
+      "event_id": "evt-51287ec790fc",
       "event_type": "AGENT_RUNNING",
       "payload": {},
-      "session_id": "ses-fd3755f1b3a6",
+      "session_id": "ses-73a6569384c1",
       "severity": "INFO",
       "task_id": "report_plan",
-      "timestamp": "2026-07-10T11:15:04.209479+00:00",
+      "timestamp": "2026-07-10T15:21:14.929334+00:00",
       "trace_id": null
     },
     {
       "agent_id": "report_composer",
-      "event_id": "evt-d83fa4fed9f4",
+      "event_id": "evt-70ac8d5b8588",
       "event_type": "AGENT_COMPLETED",
       "payload": {
         "agent_id": "report_composer",
@@ -1098,50 +1126,50 @@
         "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
         "task_id": "report_plan"
       },
-      "session_id": "ses-fd3755f1b3a6",
+      "session_id": "ses-73a6569384c1",
       "severity": "INFO",
       "task_id": "report_plan",
-      "timestamp": "2026-07-10T11:15:04.209484+00:00",
+      "timestamp": "2026-07-10T15:21:14.929337+00:00",
       "trace_id": null
     },
     {
       "agent_id": "human_reviewer",
-      "event_id": "evt-5910bce78756",
+      "event_id": "evt-fbde824ecfe8",
       "event_type": "TASK_DISPATCHED",
       "payload": {
         "agent_type": "human_in_the_loop"
       },
-      "session_id": "ses-1d216c252ff8",
+      "session_id": "ses-ce7d033aa9f0",
       "severity": "INFO",
       "task_id": "review_plan",
-      "timestamp": "2026-07-10T11:15:04.209515+00:00",
+      "timestamp": "2026-07-10T15:21:14.929357+00:00",
       "trace_id": null
     },
     {
       "agent_id": "human_reviewer",
-      "event_id": "evt-651cee3b8855",
+      "event_id": "evt-d2ee5273d808",
       "event_type": "AGENT_INITIALIZED",
       "payload": {},
-      "session_id": "ses-1d216c252ff8",
+      "session_id": "ses-ce7d033aa9f0",
       "severity": "INFO",
       "task_id": "review_plan",
-      "timestamp": "2026-07-10T11:15:04.209575+00:00",
+      "timestamp": "2026-07-10T15:21:14.929360+00:00",
       "trace_id": null
     },
     {
       "agent_id": "human_reviewer",
-      "event_id": "evt-850b4b00e31b",
+      "event_id": "evt-41e07d100ef6",
       "event_type": "AGENT_RUNNING",
       "payload": {},
-      "session_id": "ses-1d216c252ff8",
+      "session_id": "ses-ce7d033aa9f0",
       "severity": "INFO",
       "task_id": "review_plan",
-      "timestamp": "2026-07-10T11:15:04.209580+00:00",
+      "timestamp": "2026-07-10T15:21:14.929362+00:00",
       "trace_id": null
     },
     {
       "agent_id": "human_reviewer",
-      "event_id": "evt-42873e10c9eb",
+      "event_id": "evt-01202dc93827",
       "event_type": "AGENT_WAITING_FOR_HUMAN",
       "payload": {
         "agent_id": "human_reviewer",
@@ -1154,50 +1182,50 @@
         "result": "人工确认或补充输入 已由 Runtime 调度完成",
         "task_id": "review_plan"
       },
-      "session_id": "ses-1d216c252ff8",
+      "session_id": "ses-ce7d033aa9f0",
       "severity": "INFO",
       "task_id": "review_plan",
-      "timestamp": "2026-07-10T11:15:04.209587+00:00",
+      "timestamp": "2026-07-10T15:21:14.929366+00:00",
       "trace_id": null
     },
     {
       "agent_id": "report_composer",
-      "event_id": "evt-5820d836724d",
+      "event_id": "evt-64908c8a7edb",
       "event_type": "TASK_DISPATCHED",
       "payload": {
         "agent_type": "sync"
       },
-      "session_id": "ses-e9efe7e96b1a",
+      "session_id": "ses-53ea335c8254",
       "severity": "INFO",
       "task_id": "runtime_plan",
-      "timestamp": "2026-07-10T11:15:04.209620+00:00",
+      "timestamp": "2026-07-10T15:21:14.929384+00:00",
       "trace_id": null
     },
     {
       "agent_id": "report_composer",
-      "event_id": "evt-09b8cf50707b",
+      "event_id": "evt-17471bfe0f9d",
       "event_type": "AGENT_INITIALIZED",
       "payload": {},
-      "session_id": "ses-e9efe7e96b1a",
+      "session_id": "ses-53ea335c8254",
       "severity": "INFO",
       "task_id": "runtime_plan",
-      "timestamp": "2026-07-10T11:15:04.209625+00:00",
+      "timestamp": "2026-07-10T15:21:14.929388+00:00",
       "trace_id": null
     },
     {
       "agent_id": "report_composer",
-      "event_id": "evt-c0ba61bb8505",
+      "event_id": "evt-4bb433c3c1ed",
       "event_type": "AGENT_RUNNING",
       "payload": {},
-      "session_id": "ses-e9efe7e96b1a",
+      "session_id": "ses-53ea335c8254",
       "severity": "INFO",
       "task_id": "runtime_plan",
-      "timestamp": "2026-07-10T11:15:04.209630+00:00",
+      "timestamp": "2026-07-10T15:21:14.929391+00:00",
       "trace_id": null
     },
     {
       "agent_id": "report_composer",
-      "event_id": "evt-b2580ecc569d",
+      "event_id": "evt-eb8688d0578f",
       "event_type": "AGENT_COMPLETED",
       "payload": {
         "agent_id": "report_composer",
@@ -1210,15 +1238,15 @@
         "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
         "task_id": "runtime_plan"
       },
-      "session_id": "ses-e9efe7e96b1a",
+      "session_id": "ses-53ea335c8254",
       "severity": "INFO",
       "task_id": "runtime_plan",
-      "timestamp": "2026-07-10T11:15:04.209635+00:00",
+      "timestamp": "2026-07-10T15:21:14.929394+00:00",
       "trace_id": null
     },
     {
       "agent_id": null,
-      "event_id": "evt-4dac24ee0802",
+      "event_id": "evt-ab866aca7546",
       "event_type": "RUNTIME_COMPLETED",
       "payload": {
         "runtime_id": "runtime-from-planner-prod-e2e-08-memory-learning-regression",
@@ -1227,7 +1255,7 @@
       "session_id": null,
       "severity": "INFO",
       "task_id": null,
-      "timestamp": "2026-07-10T11:15:04.209663+00:00",
+      "timestamp": "2026-07-10T15:21:14.929413+00:00",
       "trace_id": null
     }
   ],
@@ -1357,7 +1385,7 @@
           "node_id": "topic",
           "node_type": "industry",
           "source_refs": [
-            "connector-trace:TRACE-C3CCE51684FD"
+            "connector-trace:TRACE-575464574F54"
           ]
         },
         {
@@ -1673,6 +1701,2648 @@
       }
     }
   },
+  "orchestrator": {
+    "boundary": {
+      "orchestrator_owns": "contract validation and runtime handoff",
+      "planner_owns": "research plan and task graph",
+      "runtime_owns": "agent dispatch, state and events"
+    },
+    "contract_version": "planner-runtime-contract-v1",
+    "disclaimer": "AIRS Orchestrator 仅用于研究流程编排和质量控制，不构成投资建议。",
+    "orchestrator_version": "0.1.0",
+    "planner_ref": "plan-prod-e2e-08-memory-learning-regression",
+    "runtime": {
+      "agent_graph": {
+        "edges": [
+          {
+            "from": [],
+            "to": "goal_analysis"
+          },
+          {
+            "from": [
+              "goal_analysis"
+            ],
+            "to": "scope"
+          },
+          {
+            "from": [
+              "scope"
+            ],
+            "to": "methodology_selection"
+          },
+          {
+            "from": [
+              "methodology_selection"
+            ],
+            "to": "connector_plan"
+          },
+          {
+            "from": [
+              "connector_plan"
+            ],
+            "to": "skill_plan"
+          },
+          {
+            "from": [
+              "skill_plan"
+            ],
+            "to": "evidence_plan"
+          },
+          {
+            "from": [
+              "evidence_plan"
+            ],
+            "to": "knowledge_graph_plan"
+          },
+          {
+            "from": [
+              "knowledge_graph_plan"
+            ],
+            "to": "score_plan"
+          },
+          {
+            "from": [
+              "score_plan"
+            ],
+            "to": "report_plan"
+          },
+          {
+            "from": [
+              "report_plan"
+            ],
+            "to": "review_plan"
+          },
+          {
+            "from": [
+              "review_plan"
+            ],
+            "to": "runtime_plan"
+          }
+        ],
+        "nodes": [
+          "evidence_collector",
+          "human_reviewer",
+          "long_running_researcher",
+          "methodology_selector",
+          "parallel_researcher",
+          "report_composer"
+        ]
+      },
+      "context_snapshot": [
+        {
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "input_data": {
+            "case_id": "prod-e2e-08-memory-learning-regression",
+            "plan_id": "plan-prod-e2e-08-memory-learning-regression",
+            "planner_task": {
+              "agent_role": "Research Agent",
+              "dependencies": [],
+              "expected_output": "goal_analysis",
+              "quality_gate": "planner_gate",
+              "task_id": "goal_analysis"
+            }
+          },
+          "memory": {},
+          "output_data": {
+            "agent_id": "methodology_selector",
+            "agent_type": "sync",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
+            "task_id": "goal_analysis"
+          },
+          "refs": [
+            "docs/runtime/runtime-architecture.md"
+          ],
+          "runtime_id": "runtime-from-planner-prod-e2e-08-memory-learning-regression",
+          "task_id": "goal_analysis",
+          "workflow_id": "workflow-prod-e2e-08-memory-learning-regression"
+        },
+        {
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "input_data": {
+            "case_id": "prod-e2e-08-memory-learning-regression",
+            "plan_id": "plan-prod-e2e-08-memory-learning-regression",
+            "planner_task": {
+              "agent_role": "Research Agent",
+              "dependencies": [
+                "goal_analysis"
+              ],
+              "expected_output": "scope",
+              "quality_gate": "planner_gate",
+              "task_id": "scope"
+            }
+          },
+          "memory": {},
+          "output_data": {
+            "agent_id": "methodology_selector",
+            "agent_type": "sync",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
+            "task_id": "scope"
+          },
+          "refs": [
+            "docs/runtime/runtime-architecture.md"
+          ],
+          "runtime_id": "runtime-from-planner-prod-e2e-08-memory-learning-regression",
+          "task_id": "scope",
+          "workflow_id": "workflow-prod-e2e-08-memory-learning-regression"
+        },
+        {
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "input_data": {
+            "case_id": "prod-e2e-08-memory-learning-regression",
+            "plan_id": "plan-prod-e2e-08-memory-learning-regression",
+            "planner_task": {
+              "agent_role": "Research Agent",
+              "dependencies": [
+                "scope"
+              ],
+              "expected_output": "methodology_selection",
+              "quality_gate": "planner_gate",
+              "task_id": "methodology_selection"
+            }
+          },
+          "memory": {},
+          "output_data": {
+            "agent_id": "methodology_selector",
+            "agent_type": "sync",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
+            "task_id": "methodology_selection"
+          },
+          "refs": [
+            "docs/runtime/runtime-architecture.md"
+          ],
+          "runtime_id": "runtime-from-planner-prod-e2e-08-memory-learning-regression",
+          "task_id": "methodology_selection",
+          "workflow_id": "workflow-prod-e2e-08-memory-learning-regression"
+        },
+        {
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "input_data": {
+            "case_id": "prod-e2e-08-memory-learning-regression",
+            "plan_id": "plan-prod-e2e-08-memory-learning-regression",
+            "planner_task": {
+              "agent_role": "Research Agent",
+              "dependencies": [
+                "methodology_selection"
+              ],
+              "expected_output": "connector_plan",
+              "quality_gate": "planner_gate",
+              "task_id": "connector_plan"
+            }
+          },
+          "memory": {},
+          "output_data": {
+            "agent_id": "evidence_collector",
+            "agent_type": "async",
+            "async_state": "READY_FOR_RESUME",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md",
+              "docs/evidence/evidence-architecture.md"
+            ],
+            "result": "采集并登记证据引用 已由 Runtime 调度完成",
+            "task_id": "connector_plan"
+          },
+          "refs": [
+            "docs/runtime/runtime-architecture.md"
+          ],
+          "runtime_id": "runtime-from-planner-prod-e2e-08-memory-learning-regression",
+          "task_id": "connector_plan",
+          "workflow_id": "workflow-prod-e2e-08-memory-learning-regression"
+        },
+        {
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "input_data": {
+            "case_id": "prod-e2e-08-memory-learning-regression",
+            "plan_id": "plan-prod-e2e-08-memory-learning-regression",
+            "planner_task": {
+              "agent_role": "Research Agent",
+              "dependencies": [
+                "connector_plan"
+              ],
+              "expected_output": "skill_plan",
+              "quality_gate": "planner_gate",
+              "task_id": "skill_plan"
+            }
+          },
+          "memory": {},
+          "output_data": {
+            "agent_id": "parallel_researcher",
+            "agent_type": "parallel",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "parallel_branches": [
+              "branch-a",
+              "branch-b"
+            ],
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "result": "并行拆分研究子任务 已由 Runtime 调度完成",
+            "task_id": "skill_plan"
+          },
+          "refs": [
+            "docs/runtime/runtime-architecture.md"
+          ],
+          "runtime_id": "runtime-from-planner-prod-e2e-08-memory-learning-regression",
+          "task_id": "skill_plan",
+          "workflow_id": "workflow-prod-e2e-08-memory-learning-regression"
+        },
+        {
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "input_data": {
+            "case_id": "prod-e2e-08-memory-learning-regression",
+            "plan_id": "plan-prod-e2e-08-memory-learning-regression",
+            "planner_task": {
+              "agent_role": "Research Agent",
+              "dependencies": [
+                "skill_plan"
+              ],
+              "expected_output": "evidence_plan",
+              "quality_gate": "planner_gate",
+              "task_id": "evidence_plan"
+            }
+          },
+          "memory": {},
+          "output_data": {
+            "agent_id": "evidence_collector",
+            "agent_type": "async",
+            "async_state": "READY_FOR_RESUME",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md",
+              "docs/evidence/evidence-architecture.md"
+            ],
+            "result": "采集并登记证据引用 已由 Runtime 调度完成",
+            "task_id": "evidence_plan"
+          },
+          "refs": [
+            "docs/runtime/runtime-architecture.md"
+          ],
+          "runtime_id": "runtime-from-planner-prod-e2e-08-memory-learning-regression",
+          "task_id": "evidence_plan",
+          "workflow_id": "workflow-prod-e2e-08-memory-learning-regression"
+        },
+        {
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "input_data": {
+            "case_id": "prod-e2e-08-memory-learning-regression",
+            "plan_id": "plan-prod-e2e-08-memory-learning-regression",
+            "planner_task": {
+              "agent_role": "Research Agent",
+              "dependencies": [
+                "evidence_plan"
+              ],
+              "expected_output": "knowledge_graph_plan",
+              "quality_gate": "planner_gate",
+              "task_id": "knowledge_graph_plan"
+            }
+          },
+          "memory": {},
+          "output_data": {
+            "agent_id": "parallel_researcher",
+            "agent_type": "parallel",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "parallel_branches": [
+              "branch-a",
+              "branch-b"
+            ],
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "result": "并行拆分研究子任务 已由 Runtime 调度完成",
+            "task_id": "knowledge_graph_plan"
+          },
+          "refs": [
+            "docs/runtime/runtime-architecture.md"
+          ],
+          "runtime_id": "runtime-from-planner-prod-e2e-08-memory-learning-regression",
+          "task_id": "knowledge_graph_plan",
+          "workflow_id": "workflow-prod-e2e-08-memory-learning-regression"
+        },
+        {
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "input_data": {
+            "case_id": "prod-e2e-08-memory-learning-regression",
+            "plan_id": "plan-prod-e2e-08-memory-learning-regression",
+            "planner_task": {
+              "agent_role": "Research Agent",
+              "dependencies": [
+                "knowledge_graph_plan"
+              ],
+              "expected_output": "score_plan",
+              "quality_gate": "planner_gate",
+              "task_id": "score_plan"
+            }
+          },
+          "memory": {},
+          "output_data": {
+            "agent_id": "report_composer",
+            "agent_type": "sync",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md",
+              "templates/report/research-report-template.md"
+            ],
+            "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
+            "task_id": "score_plan"
+          },
+          "refs": [
+            "docs/runtime/runtime-architecture.md"
+          ],
+          "runtime_id": "runtime-from-planner-prod-e2e-08-memory-learning-regression",
+          "task_id": "score_plan",
+          "workflow_id": "workflow-prod-e2e-08-memory-learning-regression"
+        },
+        {
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "input_data": {
+            "case_id": "prod-e2e-08-memory-learning-regression",
+            "plan_id": "plan-prod-e2e-08-memory-learning-regression",
+            "planner_task": {
+              "agent_role": "Research Agent",
+              "dependencies": [
+                "score_plan"
+              ],
+              "expected_output": "report_plan",
+              "quality_gate": "planner_gate",
+              "task_id": "report_plan"
+            }
+          },
+          "memory": {},
+          "output_data": {
+            "agent_id": "report_composer",
+            "agent_type": "sync",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md",
+              "templates/report/research-report-template.md"
+            ],
+            "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
+            "task_id": "report_plan"
+          },
+          "refs": [
+            "docs/runtime/runtime-architecture.md"
+          ],
+          "runtime_id": "runtime-from-planner-prod-e2e-08-memory-learning-regression",
+          "task_id": "report_plan",
+          "workflow_id": "workflow-prod-e2e-08-memory-learning-regression"
+        },
+        {
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "input_data": {
+            "case_id": "prod-e2e-08-memory-learning-regression",
+            "plan_id": "plan-prod-e2e-08-memory-learning-regression",
+            "planner_task": {
+              "agent_role": "Review Agent",
+              "dependencies": [
+                "report_plan"
+              ],
+              "expected_output": "review_plan",
+              "quality_gate": "planner_gate",
+              "task_id": "review_plan"
+            }
+          },
+          "memory": {},
+          "output_data": {
+            "agent_id": "human_reviewer",
+            "agent_type": "human_in_the_loop",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "human_prompt": "请确认研究边界和证据缺口。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "result": "人工确认或补充输入 已由 Runtime 调度完成",
+            "task_id": "review_plan"
+          },
+          "refs": [
+            "docs/runtime/runtime-architecture.md"
+          ],
+          "runtime_id": "runtime-from-planner-prod-e2e-08-memory-learning-regression",
+          "task_id": "review_plan",
+          "workflow_id": "workflow-prod-e2e-08-memory-learning-regression"
+        },
+        {
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "input_data": {
+            "case_id": "prod-e2e-08-memory-learning-regression",
+            "plan_id": "plan-prod-e2e-08-memory-learning-regression",
+            "planner_task": {
+              "agent_role": "Review Agent",
+              "dependencies": [
+                "review_plan"
+              ],
+              "expected_output": "runtime_plan",
+              "quality_gate": "planner_gate",
+              "task_id": "runtime_plan"
+            }
+          },
+          "memory": {},
+          "output_data": {
+            "agent_id": "report_composer",
+            "agent_type": "sync",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md",
+              "templates/report/research-report-template.md"
+            ],
+            "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
+            "task_id": "runtime_plan"
+          },
+          "refs": [
+            "docs/runtime/runtime-architecture.md"
+          ],
+          "runtime_id": "runtime-from-planner-prod-e2e-08-memory-learning-regression",
+          "task_id": "runtime_plan",
+          "workflow_id": "workflow-prod-e2e-08-memory-learning-regression"
+        }
+      ],
+      "event_log": [
+        {
+          "agent_id": null,
+          "event_id": "evt-630bf28ce6fb",
+          "event_type": "RUNTIME_STARTED",
+          "payload": {
+            "runtime_id": "runtime-from-planner-prod-e2e-08-memory-learning-regression",
+            "workflow_id": "workflow-prod-e2e-08-memory-learning-regression"
+          },
+          "session_id": null,
+          "severity": "INFO",
+          "task_id": null,
+          "timestamp": "2026-07-10T15:21:14.929083+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-8c944721260b",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "sync"
+          },
+          "session_id": "ses-bcadeb780d2f",
+          "severity": "INFO",
+          "task_id": "goal_analysis",
+          "timestamp": "2026-07-10T15:21:14.929092+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-b3f283876573",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-bcadeb780d2f",
+          "severity": "INFO",
+          "task_id": "goal_analysis",
+          "timestamp": "2026-07-10T15:21:14.929097+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-8141a7081148",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-bcadeb780d2f",
+          "severity": "INFO",
+          "task_id": "goal_analysis",
+          "timestamp": "2026-07-10T15:21:14.929101+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-30edec295957",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "methodology_selector",
+            "agent_type": "sync",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
+            "task_id": "goal_analysis"
+          },
+          "session_id": "ses-bcadeb780d2f",
+          "severity": "INFO",
+          "task_id": "goal_analysis",
+          "timestamp": "2026-07-10T15:21:14.929106+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-fc334240cf63",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "sync"
+          },
+          "session_id": "ses-93dc11c840b1",
+          "severity": "INFO",
+          "task_id": "scope",
+          "timestamp": "2026-07-10T15:21:14.929129+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-6c69d9aca4c8",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-93dc11c840b1",
+          "severity": "INFO",
+          "task_id": "scope",
+          "timestamp": "2026-07-10T15:21:14.929133+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-eeb665cb7355",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-93dc11c840b1",
+          "severity": "INFO",
+          "task_id": "scope",
+          "timestamp": "2026-07-10T15:21:14.929135+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-b3942057bda3",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "methodology_selector",
+            "agent_type": "sync",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
+            "task_id": "scope"
+          },
+          "session_id": "ses-93dc11c840b1",
+          "severity": "INFO",
+          "task_id": "scope",
+          "timestamp": "2026-07-10T15:21:14.929139+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-a51bdb05cc1c",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "sync"
+          },
+          "session_id": "ses-c679d92bce15",
+          "severity": "INFO",
+          "task_id": "methodology_selection",
+          "timestamp": "2026-07-10T15:21:14.929158+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-47b8287723f9",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-c679d92bce15",
+          "severity": "INFO",
+          "task_id": "methodology_selection",
+          "timestamp": "2026-07-10T15:21:14.929162+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-866b1d4582f5",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-c679d92bce15",
+          "severity": "INFO",
+          "task_id": "methodology_selection",
+          "timestamp": "2026-07-10T15:21:14.929165+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-01ebf371ff2e",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "methodology_selector",
+            "agent_type": "sync",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
+            "task_id": "methodology_selection"
+          },
+          "session_id": "ses-c679d92bce15",
+          "severity": "INFO",
+          "task_id": "methodology_selection",
+          "timestamp": "2026-07-10T15:21:14.929169+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "evidence_collector",
+          "event_id": "evt-b05b6a6859e0",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "async"
+          },
+          "session_id": "ses-997dc17da255",
+          "severity": "INFO",
+          "task_id": "connector_plan",
+          "timestamp": "2026-07-10T15:21:14.929184+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "evidence_collector",
+          "event_id": "evt-5114a3d1c84f",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-997dc17da255",
+          "severity": "INFO",
+          "task_id": "connector_plan",
+          "timestamp": "2026-07-10T15:21:14.929188+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "evidence_collector",
+          "event_id": "evt-ec908342e30d",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-997dc17da255",
+          "severity": "INFO",
+          "task_id": "connector_plan",
+          "timestamp": "2026-07-10T15:21:14.929190+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "evidence_collector",
+          "event_id": "evt-b5321253b006",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "evidence_collector",
+            "agent_type": "async",
+            "async_state": "READY_FOR_RESUME",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md",
+              "docs/evidence/evidence-architecture.md"
+            ],
+            "result": "采集并登记证据引用 已由 Runtime 调度完成",
+            "task_id": "connector_plan"
+          },
+          "session_id": "ses-997dc17da255",
+          "severity": "INFO",
+          "task_id": "connector_plan",
+          "timestamp": "2026-07-10T15:21:14.929194+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "parallel_researcher",
+          "event_id": "evt-e020f3dd8075",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "parallel"
+          },
+          "session_id": "ses-40cc7e70f47a",
+          "severity": "INFO",
+          "task_id": "skill_plan",
+          "timestamp": "2026-07-10T15:21:14.929211+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "parallel_researcher",
+          "event_id": "evt-b3ee69ca26ca",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-40cc7e70f47a",
+          "severity": "INFO",
+          "task_id": "skill_plan",
+          "timestamp": "2026-07-10T15:21:14.929215+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "parallel_researcher",
+          "event_id": "evt-361054ec90c6",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-40cc7e70f47a",
+          "severity": "INFO",
+          "task_id": "skill_plan",
+          "timestamp": "2026-07-10T15:21:14.929218+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "parallel_researcher",
+          "event_id": "evt-95e94dc40e51",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "parallel_researcher",
+            "agent_type": "parallel",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "parallel_branches": [
+              "branch-a",
+              "branch-b"
+            ],
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "result": "并行拆分研究子任务 已由 Runtime 调度完成",
+            "task_id": "skill_plan"
+          },
+          "session_id": "ses-40cc7e70f47a",
+          "severity": "INFO",
+          "task_id": "skill_plan",
+          "timestamp": "2026-07-10T15:21:14.929222+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "evidence_collector",
+          "event_id": "evt-f44edd81426f",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "async"
+          },
+          "session_id": "ses-5996e999eec8",
+          "severity": "INFO",
+          "task_id": "evidence_plan",
+          "timestamp": "2026-07-10T15:21:14.929239+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "evidence_collector",
+          "event_id": "evt-a18c1dd69478",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-5996e999eec8",
+          "severity": "INFO",
+          "task_id": "evidence_plan",
+          "timestamp": "2026-07-10T15:21:14.929242+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "evidence_collector",
+          "event_id": "evt-eebb816cb1f1",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-5996e999eec8",
+          "severity": "INFO",
+          "task_id": "evidence_plan",
+          "timestamp": "2026-07-10T15:21:14.929245+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "evidence_collector",
+          "event_id": "evt-3e6409010f4f",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "evidence_collector",
+            "agent_type": "async",
+            "async_state": "READY_FOR_RESUME",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md",
+              "docs/evidence/evidence-architecture.md"
+            ],
+            "result": "采集并登记证据引用 已由 Runtime 调度完成",
+            "task_id": "evidence_plan"
+          },
+          "session_id": "ses-5996e999eec8",
+          "severity": "INFO",
+          "task_id": "evidence_plan",
+          "timestamp": "2026-07-10T15:21:14.929248+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "parallel_researcher",
+          "event_id": "evt-4139d3eb7d51",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "parallel"
+          },
+          "session_id": "ses-b088eb93515c",
+          "severity": "INFO",
+          "task_id": "knowledge_graph_plan",
+          "timestamp": "2026-07-10T15:21:14.929265+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "parallel_researcher",
+          "event_id": "evt-7a487766d9f0",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-b088eb93515c",
+          "severity": "INFO",
+          "task_id": "knowledge_graph_plan",
+          "timestamp": "2026-07-10T15:21:14.929269+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "parallel_researcher",
+          "event_id": "evt-4aef68efc3e6",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-b088eb93515c",
+          "severity": "INFO",
+          "task_id": "knowledge_graph_plan",
+          "timestamp": "2026-07-10T15:21:14.929272+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "parallel_researcher",
+          "event_id": "evt-fddc161a096c",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "parallel_researcher",
+            "agent_type": "parallel",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "parallel_branches": [
+              "branch-a",
+              "branch-b"
+            ],
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "result": "并行拆分研究子任务 已由 Runtime 调度完成",
+            "task_id": "knowledge_graph_plan"
+          },
+          "session_id": "ses-b088eb93515c",
+          "severity": "INFO",
+          "task_id": "knowledge_graph_plan",
+          "timestamp": "2026-07-10T15:21:14.929276+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-351457407f69",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "sync"
+          },
+          "session_id": "ses-6862d0494dd1",
+          "severity": "INFO",
+          "task_id": "score_plan",
+          "timestamp": "2026-07-10T15:21:14.929300+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-6305e78b065c",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-6862d0494dd1",
+          "severity": "INFO",
+          "task_id": "score_plan",
+          "timestamp": "2026-07-10T15:21:14.929304+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-714753114b4b",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-6862d0494dd1",
+          "severity": "INFO",
+          "task_id": "score_plan",
+          "timestamp": "2026-07-10T15:21:14.929306+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-9f9868a4980d",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "report_composer",
+            "agent_type": "sync",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md",
+              "templates/report/research-report-template.md"
+            ],
+            "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
+            "task_id": "score_plan"
+          },
+          "session_id": "ses-6862d0494dd1",
+          "severity": "INFO",
+          "task_id": "score_plan",
+          "timestamp": "2026-07-10T15:21:14.929310+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-3cc53cdbbce7",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "sync"
+          },
+          "session_id": "ses-73a6569384c1",
+          "severity": "INFO",
+          "task_id": "report_plan",
+          "timestamp": "2026-07-10T15:21:14.929327+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-64c50cfa4c80",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-73a6569384c1",
+          "severity": "INFO",
+          "task_id": "report_plan",
+          "timestamp": "2026-07-10T15:21:14.929331+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-51287ec790fc",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-73a6569384c1",
+          "severity": "INFO",
+          "task_id": "report_plan",
+          "timestamp": "2026-07-10T15:21:14.929334+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-70ac8d5b8588",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "report_composer",
+            "agent_type": "sync",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md",
+              "templates/report/research-report-template.md"
+            ],
+            "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
+            "task_id": "report_plan"
+          },
+          "session_id": "ses-73a6569384c1",
+          "severity": "INFO",
+          "task_id": "report_plan",
+          "timestamp": "2026-07-10T15:21:14.929337+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "human_reviewer",
+          "event_id": "evt-fbde824ecfe8",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "human_in_the_loop"
+          },
+          "session_id": "ses-ce7d033aa9f0",
+          "severity": "INFO",
+          "task_id": "review_plan",
+          "timestamp": "2026-07-10T15:21:14.929357+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "human_reviewer",
+          "event_id": "evt-d2ee5273d808",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-ce7d033aa9f0",
+          "severity": "INFO",
+          "task_id": "review_plan",
+          "timestamp": "2026-07-10T15:21:14.929360+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "human_reviewer",
+          "event_id": "evt-41e07d100ef6",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-ce7d033aa9f0",
+          "severity": "INFO",
+          "task_id": "review_plan",
+          "timestamp": "2026-07-10T15:21:14.929362+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "human_reviewer",
+          "event_id": "evt-01202dc93827",
+          "event_type": "AGENT_WAITING_FOR_HUMAN",
+          "payload": {
+            "agent_id": "human_reviewer",
+            "agent_type": "human_in_the_loop",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "human_prompt": "请确认研究边界和证据缺口。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "result": "人工确认或补充输入 已由 Runtime 调度完成",
+            "task_id": "review_plan"
+          },
+          "session_id": "ses-ce7d033aa9f0",
+          "severity": "INFO",
+          "task_id": "review_plan",
+          "timestamp": "2026-07-10T15:21:14.929366+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-64908c8a7edb",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "sync"
+          },
+          "session_id": "ses-53ea335c8254",
+          "severity": "INFO",
+          "task_id": "runtime_plan",
+          "timestamp": "2026-07-10T15:21:14.929384+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-17471bfe0f9d",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-53ea335c8254",
+          "severity": "INFO",
+          "task_id": "runtime_plan",
+          "timestamp": "2026-07-10T15:21:14.929388+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-4bb433c3c1ed",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-53ea335c8254",
+          "severity": "INFO",
+          "task_id": "runtime_plan",
+          "timestamp": "2026-07-10T15:21:14.929391+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-eb8688d0578f",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "report_composer",
+            "agent_type": "sync",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md",
+              "templates/report/research-report-template.md"
+            ],
+            "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
+            "task_id": "runtime_plan"
+          },
+          "session_id": "ses-53ea335c8254",
+          "severity": "INFO",
+          "task_id": "runtime_plan",
+          "timestamp": "2026-07-10T15:21:14.929394+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": null,
+          "event_id": "evt-ab866aca7546",
+          "event_type": "RUNTIME_COMPLETED",
+          "payload": {
+            "runtime_id": "runtime-from-planner-prod-e2e-08-memory-learning-regression",
+            "workflow_id": "workflow-prod-e2e-08-memory-learning-regression"
+          },
+          "session_id": null,
+          "severity": "INFO",
+          "task_id": null,
+          "timestamp": "2026-07-10T15:21:14.929413+00:00",
+          "trace_id": null
+        }
+      ],
+      "execution_timeline": [
+        {
+          "agent_id": null,
+          "event_id": "evt-630bf28ce6fb",
+          "event_type": "RUNTIME_STARTED",
+          "payload": {
+            "runtime_id": "runtime-from-planner-prod-e2e-08-memory-learning-regression",
+            "workflow_id": "workflow-prod-e2e-08-memory-learning-regression"
+          },
+          "session_id": null,
+          "severity": "INFO",
+          "task_id": null,
+          "timestamp": "2026-07-10T15:21:14.929083+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-8c944721260b",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "sync"
+          },
+          "session_id": "ses-bcadeb780d2f",
+          "severity": "INFO",
+          "task_id": "goal_analysis",
+          "timestamp": "2026-07-10T15:21:14.929092+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-b3f283876573",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-bcadeb780d2f",
+          "severity": "INFO",
+          "task_id": "goal_analysis",
+          "timestamp": "2026-07-10T15:21:14.929097+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-8141a7081148",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-bcadeb780d2f",
+          "severity": "INFO",
+          "task_id": "goal_analysis",
+          "timestamp": "2026-07-10T15:21:14.929101+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-30edec295957",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "methodology_selector",
+            "agent_type": "sync",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
+            "task_id": "goal_analysis"
+          },
+          "session_id": "ses-bcadeb780d2f",
+          "severity": "INFO",
+          "task_id": "goal_analysis",
+          "timestamp": "2026-07-10T15:21:14.929106+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-fc334240cf63",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "sync"
+          },
+          "session_id": "ses-93dc11c840b1",
+          "severity": "INFO",
+          "task_id": "scope",
+          "timestamp": "2026-07-10T15:21:14.929129+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-6c69d9aca4c8",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-93dc11c840b1",
+          "severity": "INFO",
+          "task_id": "scope",
+          "timestamp": "2026-07-10T15:21:14.929133+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-eeb665cb7355",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-93dc11c840b1",
+          "severity": "INFO",
+          "task_id": "scope",
+          "timestamp": "2026-07-10T15:21:14.929135+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-b3942057bda3",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "methodology_selector",
+            "agent_type": "sync",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
+            "task_id": "scope"
+          },
+          "session_id": "ses-93dc11c840b1",
+          "severity": "INFO",
+          "task_id": "scope",
+          "timestamp": "2026-07-10T15:21:14.929139+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-a51bdb05cc1c",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "sync"
+          },
+          "session_id": "ses-c679d92bce15",
+          "severity": "INFO",
+          "task_id": "methodology_selection",
+          "timestamp": "2026-07-10T15:21:14.929158+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-47b8287723f9",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-c679d92bce15",
+          "severity": "INFO",
+          "task_id": "methodology_selection",
+          "timestamp": "2026-07-10T15:21:14.929162+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-866b1d4582f5",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-c679d92bce15",
+          "severity": "INFO",
+          "task_id": "methodology_selection",
+          "timestamp": "2026-07-10T15:21:14.929165+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "methodology_selector",
+          "event_id": "evt-01ebf371ff2e",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "methodology_selector",
+            "agent_type": "sync",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
+            "task_id": "methodology_selection"
+          },
+          "session_id": "ses-c679d92bce15",
+          "severity": "INFO",
+          "task_id": "methodology_selection",
+          "timestamp": "2026-07-10T15:21:14.929169+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "evidence_collector",
+          "event_id": "evt-b05b6a6859e0",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "async"
+          },
+          "session_id": "ses-997dc17da255",
+          "severity": "INFO",
+          "task_id": "connector_plan",
+          "timestamp": "2026-07-10T15:21:14.929184+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "evidence_collector",
+          "event_id": "evt-5114a3d1c84f",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-997dc17da255",
+          "severity": "INFO",
+          "task_id": "connector_plan",
+          "timestamp": "2026-07-10T15:21:14.929188+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "evidence_collector",
+          "event_id": "evt-ec908342e30d",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-997dc17da255",
+          "severity": "INFO",
+          "task_id": "connector_plan",
+          "timestamp": "2026-07-10T15:21:14.929190+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "evidence_collector",
+          "event_id": "evt-b5321253b006",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "evidence_collector",
+            "agent_type": "async",
+            "async_state": "READY_FOR_RESUME",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md",
+              "docs/evidence/evidence-architecture.md"
+            ],
+            "result": "采集并登记证据引用 已由 Runtime 调度完成",
+            "task_id": "connector_plan"
+          },
+          "session_id": "ses-997dc17da255",
+          "severity": "INFO",
+          "task_id": "connector_plan",
+          "timestamp": "2026-07-10T15:21:14.929194+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "parallel_researcher",
+          "event_id": "evt-e020f3dd8075",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "parallel"
+          },
+          "session_id": "ses-40cc7e70f47a",
+          "severity": "INFO",
+          "task_id": "skill_plan",
+          "timestamp": "2026-07-10T15:21:14.929211+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "parallel_researcher",
+          "event_id": "evt-b3ee69ca26ca",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-40cc7e70f47a",
+          "severity": "INFO",
+          "task_id": "skill_plan",
+          "timestamp": "2026-07-10T15:21:14.929215+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "parallel_researcher",
+          "event_id": "evt-361054ec90c6",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-40cc7e70f47a",
+          "severity": "INFO",
+          "task_id": "skill_plan",
+          "timestamp": "2026-07-10T15:21:14.929218+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "parallel_researcher",
+          "event_id": "evt-95e94dc40e51",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "parallel_researcher",
+            "agent_type": "parallel",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "parallel_branches": [
+              "branch-a",
+              "branch-b"
+            ],
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "result": "并行拆分研究子任务 已由 Runtime 调度完成",
+            "task_id": "skill_plan"
+          },
+          "session_id": "ses-40cc7e70f47a",
+          "severity": "INFO",
+          "task_id": "skill_plan",
+          "timestamp": "2026-07-10T15:21:14.929222+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "evidence_collector",
+          "event_id": "evt-f44edd81426f",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "async"
+          },
+          "session_id": "ses-5996e999eec8",
+          "severity": "INFO",
+          "task_id": "evidence_plan",
+          "timestamp": "2026-07-10T15:21:14.929239+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "evidence_collector",
+          "event_id": "evt-a18c1dd69478",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-5996e999eec8",
+          "severity": "INFO",
+          "task_id": "evidence_plan",
+          "timestamp": "2026-07-10T15:21:14.929242+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "evidence_collector",
+          "event_id": "evt-eebb816cb1f1",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-5996e999eec8",
+          "severity": "INFO",
+          "task_id": "evidence_plan",
+          "timestamp": "2026-07-10T15:21:14.929245+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "evidence_collector",
+          "event_id": "evt-3e6409010f4f",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "evidence_collector",
+            "agent_type": "async",
+            "async_state": "READY_FOR_RESUME",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md",
+              "docs/evidence/evidence-architecture.md"
+            ],
+            "result": "采集并登记证据引用 已由 Runtime 调度完成",
+            "task_id": "evidence_plan"
+          },
+          "session_id": "ses-5996e999eec8",
+          "severity": "INFO",
+          "task_id": "evidence_plan",
+          "timestamp": "2026-07-10T15:21:14.929248+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "parallel_researcher",
+          "event_id": "evt-4139d3eb7d51",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "parallel"
+          },
+          "session_id": "ses-b088eb93515c",
+          "severity": "INFO",
+          "task_id": "knowledge_graph_plan",
+          "timestamp": "2026-07-10T15:21:14.929265+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "parallel_researcher",
+          "event_id": "evt-7a487766d9f0",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-b088eb93515c",
+          "severity": "INFO",
+          "task_id": "knowledge_graph_plan",
+          "timestamp": "2026-07-10T15:21:14.929269+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "parallel_researcher",
+          "event_id": "evt-4aef68efc3e6",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-b088eb93515c",
+          "severity": "INFO",
+          "task_id": "knowledge_graph_plan",
+          "timestamp": "2026-07-10T15:21:14.929272+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "parallel_researcher",
+          "event_id": "evt-fddc161a096c",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "parallel_researcher",
+            "agent_type": "parallel",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "parallel_branches": [
+              "branch-a",
+              "branch-b"
+            ],
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "result": "并行拆分研究子任务 已由 Runtime 调度完成",
+            "task_id": "knowledge_graph_plan"
+          },
+          "session_id": "ses-b088eb93515c",
+          "severity": "INFO",
+          "task_id": "knowledge_graph_plan",
+          "timestamp": "2026-07-10T15:21:14.929276+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-351457407f69",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "sync"
+          },
+          "session_id": "ses-6862d0494dd1",
+          "severity": "INFO",
+          "task_id": "score_plan",
+          "timestamp": "2026-07-10T15:21:14.929300+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-6305e78b065c",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-6862d0494dd1",
+          "severity": "INFO",
+          "task_id": "score_plan",
+          "timestamp": "2026-07-10T15:21:14.929304+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-714753114b4b",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-6862d0494dd1",
+          "severity": "INFO",
+          "task_id": "score_plan",
+          "timestamp": "2026-07-10T15:21:14.929306+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-9f9868a4980d",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "report_composer",
+            "agent_type": "sync",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md",
+              "templates/report/research-report-template.md"
+            ],
+            "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
+            "task_id": "score_plan"
+          },
+          "session_id": "ses-6862d0494dd1",
+          "severity": "INFO",
+          "task_id": "score_plan",
+          "timestamp": "2026-07-10T15:21:14.929310+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-3cc53cdbbce7",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "sync"
+          },
+          "session_id": "ses-73a6569384c1",
+          "severity": "INFO",
+          "task_id": "report_plan",
+          "timestamp": "2026-07-10T15:21:14.929327+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-64c50cfa4c80",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-73a6569384c1",
+          "severity": "INFO",
+          "task_id": "report_plan",
+          "timestamp": "2026-07-10T15:21:14.929331+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-51287ec790fc",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-73a6569384c1",
+          "severity": "INFO",
+          "task_id": "report_plan",
+          "timestamp": "2026-07-10T15:21:14.929334+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-70ac8d5b8588",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "report_composer",
+            "agent_type": "sync",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md",
+              "templates/report/research-report-template.md"
+            ],
+            "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
+            "task_id": "report_plan"
+          },
+          "session_id": "ses-73a6569384c1",
+          "severity": "INFO",
+          "task_id": "report_plan",
+          "timestamp": "2026-07-10T15:21:14.929337+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "human_reviewer",
+          "event_id": "evt-fbde824ecfe8",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "human_in_the_loop"
+          },
+          "session_id": "ses-ce7d033aa9f0",
+          "severity": "INFO",
+          "task_id": "review_plan",
+          "timestamp": "2026-07-10T15:21:14.929357+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "human_reviewer",
+          "event_id": "evt-d2ee5273d808",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-ce7d033aa9f0",
+          "severity": "INFO",
+          "task_id": "review_plan",
+          "timestamp": "2026-07-10T15:21:14.929360+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "human_reviewer",
+          "event_id": "evt-41e07d100ef6",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-ce7d033aa9f0",
+          "severity": "INFO",
+          "task_id": "review_plan",
+          "timestamp": "2026-07-10T15:21:14.929362+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "human_reviewer",
+          "event_id": "evt-01202dc93827",
+          "event_type": "AGENT_WAITING_FOR_HUMAN",
+          "payload": {
+            "agent_id": "human_reviewer",
+            "agent_type": "human_in_the_loop",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "human_prompt": "请确认研究边界和证据缺口。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "result": "人工确认或补充输入 已由 Runtime 调度完成",
+            "task_id": "review_plan"
+          },
+          "session_id": "ses-ce7d033aa9f0",
+          "severity": "INFO",
+          "task_id": "review_plan",
+          "timestamp": "2026-07-10T15:21:14.929366+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-64908c8a7edb",
+          "event_type": "TASK_DISPATCHED",
+          "payload": {
+            "agent_type": "sync"
+          },
+          "session_id": "ses-53ea335c8254",
+          "severity": "INFO",
+          "task_id": "runtime_plan",
+          "timestamp": "2026-07-10T15:21:14.929384+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-17471bfe0f9d",
+          "event_type": "AGENT_INITIALIZED",
+          "payload": {},
+          "session_id": "ses-53ea335c8254",
+          "severity": "INFO",
+          "task_id": "runtime_plan",
+          "timestamp": "2026-07-10T15:21:14.929388+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-4bb433c3c1ed",
+          "event_type": "AGENT_RUNNING",
+          "payload": {},
+          "session_id": "ses-53ea335c8254",
+          "severity": "INFO",
+          "task_id": "runtime_plan",
+          "timestamp": "2026-07-10T15:21:14.929391+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": "report_composer",
+          "event_id": "evt-eb8688d0578f",
+          "event_type": "AGENT_COMPLETED",
+          "payload": {
+            "agent_id": "report_composer",
+            "agent_type": "sync",
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "refs": [
+              "docs/runtime/runtime-architecture.md",
+              "templates/report/research-report-template.md"
+            ],
+            "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
+            "task_id": "runtime_plan"
+          },
+          "session_id": "ses-53ea335c8254",
+          "severity": "INFO",
+          "task_id": "runtime_plan",
+          "timestamp": "2026-07-10T15:21:14.929394+00:00",
+          "trace_id": null
+        },
+        {
+          "agent_id": null,
+          "event_id": "evt-ab866aca7546",
+          "event_type": "RUNTIME_COMPLETED",
+          "payload": {
+            "runtime_id": "runtime-from-planner-prod-e2e-08-memory-learning-regression",
+            "workflow_id": "workflow-prod-e2e-08-memory-learning-regression"
+          },
+          "session_id": null,
+          "severity": "INFO",
+          "task_id": null,
+          "timestamp": "2026-07-10T15:21:14.929413+00:00",
+          "trace_id": null
+        }
+      ],
+      "final_state": {
+        "agent_states": {
+          "ses-40cc7e70f47a": "COMPLETED",
+          "ses-53ea335c8254": "COMPLETED",
+          "ses-5996e999eec8": "COMPLETED",
+          "ses-6862d0494dd1": "COMPLETED",
+          "ses-73a6569384c1": "COMPLETED",
+          "ses-93dc11c840b1": "COMPLETED",
+          "ses-997dc17da255": "COMPLETED",
+          "ses-b088eb93515c": "COMPLETED",
+          "ses-bcadeb780d2f": "COMPLETED",
+          "ses-c679d92bce15": "COMPLETED",
+          "ses-ce7d033aa9f0": "WAITING_FOR_HUMAN"
+        },
+        "context_snapshots": [
+          {
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "input_data": {
+              "case_id": "prod-e2e-08-memory-learning-regression",
+              "plan_id": "plan-prod-e2e-08-memory-learning-regression",
+              "planner_task": {
+                "agent_role": "Research Agent",
+                "dependencies": [],
+                "expected_output": "goal_analysis",
+                "quality_gate": "planner_gate",
+                "task_id": "goal_analysis"
+              }
+            },
+            "memory": {},
+            "output_data": {
+              "agent_id": "methodology_selector",
+              "agent_type": "sync",
+              "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+              "refs": [
+                "docs/runtime/runtime-architecture.md"
+              ],
+              "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
+              "task_id": "goal_analysis"
+            },
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "runtime_id": "runtime-from-planner-prod-e2e-08-memory-learning-regression",
+            "task_id": "goal_analysis",
+            "workflow_id": "workflow-prod-e2e-08-memory-learning-regression"
+          },
+          {
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "input_data": {
+              "case_id": "prod-e2e-08-memory-learning-regression",
+              "plan_id": "plan-prod-e2e-08-memory-learning-regression",
+              "planner_task": {
+                "agent_role": "Research Agent",
+                "dependencies": [
+                  "goal_analysis"
+                ],
+                "expected_output": "scope",
+                "quality_gate": "planner_gate",
+                "task_id": "scope"
+              }
+            },
+            "memory": {},
+            "output_data": {
+              "agent_id": "methodology_selector",
+              "agent_type": "sync",
+              "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+              "refs": [
+                "docs/runtime/runtime-architecture.md"
+              ],
+              "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
+              "task_id": "scope"
+            },
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "runtime_id": "runtime-from-planner-prod-e2e-08-memory-learning-regression",
+            "task_id": "scope",
+            "workflow_id": "workflow-prod-e2e-08-memory-learning-regression"
+          },
+          {
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "input_data": {
+              "case_id": "prod-e2e-08-memory-learning-regression",
+              "plan_id": "plan-prod-e2e-08-memory-learning-regression",
+              "planner_task": {
+                "agent_role": "Research Agent",
+                "dependencies": [
+                  "scope"
+                ],
+                "expected_output": "methodology_selection",
+                "quality_gate": "planner_gate",
+                "task_id": "methodology_selection"
+              }
+            },
+            "memory": {},
+            "output_data": {
+              "agent_id": "methodology_selector",
+              "agent_type": "sync",
+              "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+              "refs": [
+                "docs/runtime/runtime-architecture.md"
+              ],
+              "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
+              "task_id": "methodology_selection"
+            },
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "runtime_id": "runtime-from-planner-prod-e2e-08-memory-learning-regression",
+            "task_id": "methodology_selection",
+            "workflow_id": "workflow-prod-e2e-08-memory-learning-regression"
+          },
+          {
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "input_data": {
+              "case_id": "prod-e2e-08-memory-learning-regression",
+              "plan_id": "plan-prod-e2e-08-memory-learning-regression",
+              "planner_task": {
+                "agent_role": "Research Agent",
+                "dependencies": [
+                  "methodology_selection"
+                ],
+                "expected_output": "connector_plan",
+                "quality_gate": "planner_gate",
+                "task_id": "connector_plan"
+              }
+            },
+            "memory": {},
+            "output_data": {
+              "agent_id": "evidence_collector",
+              "agent_type": "async",
+              "async_state": "READY_FOR_RESUME",
+              "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+              "refs": [
+                "docs/runtime/runtime-architecture.md",
+                "docs/evidence/evidence-architecture.md"
+              ],
+              "result": "采集并登记证据引用 已由 Runtime 调度完成",
+              "task_id": "connector_plan"
+            },
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "runtime_id": "runtime-from-planner-prod-e2e-08-memory-learning-regression",
+            "task_id": "connector_plan",
+            "workflow_id": "workflow-prod-e2e-08-memory-learning-regression"
+          },
+          {
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "input_data": {
+              "case_id": "prod-e2e-08-memory-learning-regression",
+              "plan_id": "plan-prod-e2e-08-memory-learning-regression",
+              "planner_task": {
+                "agent_role": "Research Agent",
+                "dependencies": [
+                  "connector_plan"
+                ],
+                "expected_output": "skill_plan",
+                "quality_gate": "planner_gate",
+                "task_id": "skill_plan"
+              }
+            },
+            "memory": {},
+            "output_data": {
+              "agent_id": "parallel_researcher",
+              "agent_type": "parallel",
+              "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+              "parallel_branches": [
+                "branch-a",
+                "branch-b"
+              ],
+              "refs": [
+                "docs/runtime/runtime-architecture.md"
+              ],
+              "result": "并行拆分研究子任务 已由 Runtime 调度完成",
+              "task_id": "skill_plan"
+            },
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "runtime_id": "runtime-from-planner-prod-e2e-08-memory-learning-regression",
+            "task_id": "skill_plan",
+            "workflow_id": "workflow-prod-e2e-08-memory-learning-regression"
+          },
+          {
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "input_data": {
+              "case_id": "prod-e2e-08-memory-learning-regression",
+              "plan_id": "plan-prod-e2e-08-memory-learning-regression",
+              "planner_task": {
+                "agent_role": "Research Agent",
+                "dependencies": [
+                  "skill_plan"
+                ],
+                "expected_output": "evidence_plan",
+                "quality_gate": "planner_gate",
+                "task_id": "evidence_plan"
+              }
+            },
+            "memory": {},
+            "output_data": {
+              "agent_id": "evidence_collector",
+              "agent_type": "async",
+              "async_state": "READY_FOR_RESUME",
+              "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+              "refs": [
+                "docs/runtime/runtime-architecture.md",
+                "docs/evidence/evidence-architecture.md"
+              ],
+              "result": "采集并登记证据引用 已由 Runtime 调度完成",
+              "task_id": "evidence_plan"
+            },
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "runtime_id": "runtime-from-planner-prod-e2e-08-memory-learning-regression",
+            "task_id": "evidence_plan",
+            "workflow_id": "workflow-prod-e2e-08-memory-learning-regression"
+          },
+          {
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "input_data": {
+              "case_id": "prod-e2e-08-memory-learning-regression",
+              "plan_id": "plan-prod-e2e-08-memory-learning-regression",
+              "planner_task": {
+                "agent_role": "Research Agent",
+                "dependencies": [
+                  "evidence_plan"
+                ],
+                "expected_output": "knowledge_graph_plan",
+                "quality_gate": "planner_gate",
+                "task_id": "knowledge_graph_plan"
+              }
+            },
+            "memory": {},
+            "output_data": {
+              "agent_id": "parallel_researcher",
+              "agent_type": "parallel",
+              "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+              "parallel_branches": [
+                "branch-a",
+                "branch-b"
+              ],
+              "refs": [
+                "docs/runtime/runtime-architecture.md"
+              ],
+              "result": "并行拆分研究子任务 已由 Runtime 调度完成",
+              "task_id": "knowledge_graph_plan"
+            },
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "runtime_id": "runtime-from-planner-prod-e2e-08-memory-learning-regression",
+            "task_id": "knowledge_graph_plan",
+            "workflow_id": "workflow-prod-e2e-08-memory-learning-regression"
+          },
+          {
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "input_data": {
+              "case_id": "prod-e2e-08-memory-learning-regression",
+              "plan_id": "plan-prod-e2e-08-memory-learning-regression",
+              "planner_task": {
+                "agent_role": "Research Agent",
+                "dependencies": [
+                  "knowledge_graph_plan"
+                ],
+                "expected_output": "score_plan",
+                "quality_gate": "planner_gate",
+                "task_id": "score_plan"
+              }
+            },
+            "memory": {},
+            "output_data": {
+              "agent_id": "report_composer",
+              "agent_type": "sync",
+              "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+              "refs": [
+                "docs/runtime/runtime-architecture.md",
+                "templates/report/research-report-template.md"
+              ],
+              "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
+              "task_id": "score_plan"
+            },
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "runtime_id": "runtime-from-planner-prod-e2e-08-memory-learning-regression",
+            "task_id": "score_plan",
+            "workflow_id": "workflow-prod-e2e-08-memory-learning-regression"
+          },
+          {
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "input_data": {
+              "case_id": "prod-e2e-08-memory-learning-regression",
+              "plan_id": "plan-prod-e2e-08-memory-learning-regression",
+              "planner_task": {
+                "agent_role": "Research Agent",
+                "dependencies": [
+                  "score_plan"
+                ],
+                "expected_output": "report_plan",
+                "quality_gate": "planner_gate",
+                "task_id": "report_plan"
+              }
+            },
+            "memory": {},
+            "output_data": {
+              "agent_id": "report_composer",
+              "agent_type": "sync",
+              "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+              "refs": [
+                "docs/runtime/runtime-architecture.md",
+                "templates/report/research-report-template.md"
+              ],
+              "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
+              "task_id": "report_plan"
+            },
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "runtime_id": "runtime-from-planner-prod-e2e-08-memory-learning-regression",
+            "task_id": "report_plan",
+            "workflow_id": "workflow-prod-e2e-08-memory-learning-regression"
+          },
+          {
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "input_data": {
+              "case_id": "prod-e2e-08-memory-learning-regression",
+              "plan_id": "plan-prod-e2e-08-memory-learning-regression",
+              "planner_task": {
+                "agent_role": "Review Agent",
+                "dependencies": [
+                  "report_plan"
+                ],
+                "expected_output": "review_plan",
+                "quality_gate": "planner_gate",
+                "task_id": "review_plan"
+              }
+            },
+            "memory": {},
+            "output_data": {
+              "agent_id": "human_reviewer",
+              "agent_type": "human_in_the_loop",
+              "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+              "human_prompt": "请确认研究边界和证据缺口。",
+              "refs": [
+                "docs/runtime/runtime-architecture.md"
+              ],
+              "result": "人工确认或补充输入 已由 Runtime 调度完成",
+              "task_id": "review_plan"
+            },
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "runtime_id": "runtime-from-planner-prod-e2e-08-memory-learning-regression",
+            "task_id": "review_plan",
+            "workflow_id": "workflow-prod-e2e-08-memory-learning-regression"
+          },
+          {
+            "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+            "input_data": {
+              "case_id": "prod-e2e-08-memory-learning-regression",
+              "plan_id": "plan-prod-e2e-08-memory-learning-regression",
+              "planner_task": {
+                "agent_role": "Review Agent",
+                "dependencies": [
+                  "review_plan"
+                ],
+                "expected_output": "runtime_plan",
+                "quality_gate": "planner_gate",
+                "task_id": "runtime_plan"
+              }
+            },
+            "memory": {},
+            "output_data": {
+              "agent_id": "report_composer",
+              "agent_type": "sync",
+              "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+              "refs": [
+                "docs/runtime/runtime-architecture.md",
+                "templates/report/research-report-template.md"
+              ],
+              "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
+              "task_id": "runtime_plan"
+            },
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "runtime_id": "runtime-from-planner-prod-e2e-08-memory-learning-regression",
+            "task_id": "runtime_plan",
+            "workflow_id": "workflow-prod-e2e-08-memory-learning-regression"
+          }
+        ],
+        "quality_gate": "PASS",
+        "runtime_state": {
+          "completed_at": "2026-07-10T15:21:14.929409+00:00",
+          "runtime_id": "runtime-from-planner-prod-e2e-08-memory-learning-regression",
+          "started_at": "2026-07-10T15:21:14.929074+00:00",
+          "status": "COMPLETED",
+          "workflow_id": "workflow-prod-e2e-08-memory-learning-regression"
+        },
+        "task_states": {
+          "connector_plan": "COMPLETED",
+          "evidence_plan": "COMPLETED",
+          "goal_analysis": "COMPLETED",
+          "knowledge_graph_plan": "COMPLETED",
+          "methodology_selection": "COMPLETED",
+          "report_plan": "COMPLETED",
+          "review_plan": "WAITING_FOR_HUMAN",
+          "runtime_plan": "COMPLETED",
+          "scope": "COMPLETED",
+          "score_plan": "COMPLETED",
+          "skill_plan": "COMPLETED"
+        }
+      },
+      "metrics": {
+        "cancelled_tasks": 0,
+        "completed_tasks": 10,
+        "disclaimer_coverage": "PASS",
+        "event_count": 46,
+        "failed_tasks": 0,
+        "human_waiting_count": 1,
+        "message_count": 0,
+        "total_tasks": 11
+      },
+      "outputs": [
+        {
+          "agent_id": "methodology_selector",
+          "agent_type": "sync",
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "refs": [
+            "docs/runtime/runtime-architecture.md"
+          ],
+          "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
+          "task_id": "goal_analysis"
+        },
+        {
+          "agent_id": "methodology_selector",
+          "agent_type": "sync",
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "refs": [
+            "docs/runtime/runtime-architecture.md"
+          ],
+          "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
+          "task_id": "scope"
+        },
+        {
+          "agent_id": "methodology_selector",
+          "agent_type": "sync",
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "refs": [
+            "docs/runtime/runtime-architecture.md"
+          ],
+          "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
+          "task_id": "methodology_selection"
+        },
+        {
+          "agent_id": "evidence_collector",
+          "agent_type": "async",
+          "async_state": "READY_FOR_RESUME",
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "refs": [
+            "docs/runtime/runtime-architecture.md",
+            "docs/evidence/evidence-architecture.md"
+          ],
+          "result": "采集并登记证据引用 已由 Runtime 调度完成",
+          "task_id": "connector_plan"
+        },
+        {
+          "agent_id": "parallel_researcher",
+          "agent_type": "parallel",
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "parallel_branches": [
+            "branch-a",
+            "branch-b"
+          ],
+          "refs": [
+            "docs/runtime/runtime-architecture.md"
+          ],
+          "result": "并行拆分研究子任务 已由 Runtime 调度完成",
+          "task_id": "skill_plan"
+        },
+        {
+          "agent_id": "evidence_collector",
+          "agent_type": "async",
+          "async_state": "READY_FOR_RESUME",
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "refs": [
+            "docs/runtime/runtime-architecture.md",
+            "docs/evidence/evidence-architecture.md"
+          ],
+          "result": "采集并登记证据引用 已由 Runtime 调度完成",
+          "task_id": "evidence_plan"
+        },
+        {
+          "agent_id": "parallel_researcher",
+          "agent_type": "parallel",
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "parallel_branches": [
+            "branch-a",
+            "branch-b"
+          ],
+          "refs": [
+            "docs/runtime/runtime-architecture.md"
+          ],
+          "result": "并行拆分研究子任务 已由 Runtime 调度完成",
+          "task_id": "knowledge_graph_plan"
+        },
+        {
+          "agent_id": "report_composer",
+          "agent_type": "sync",
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "refs": [
+            "docs/runtime/runtime-architecture.md",
+            "templates/report/research-report-template.md"
+          ],
+          "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
+          "task_id": "score_plan"
+        },
+        {
+          "agent_id": "report_composer",
+          "agent_type": "sync",
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "refs": [
+            "docs/runtime/runtime-architecture.md",
+            "templates/report/research-report-template.md"
+          ],
+          "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
+          "task_id": "report_plan"
+        },
+        {
+          "agent_id": "human_reviewer",
+          "agent_type": "human_in_the_loop",
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "human_prompt": "请确认研究边界和证据缺口。",
+          "refs": [
+            "docs/runtime/runtime-architecture.md"
+          ],
+          "result": "人工确认或补充输入 已由 Runtime 调度完成",
+          "task_id": "review_plan"
+        },
+        {
+          "agent_id": "report_composer",
+          "agent_type": "sync",
+          "disclaimer": "仅供研究参考，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+          "refs": [
+            "docs/runtime/runtime-architecture.md",
+            "templates/report/research-report-template.md"
+          ],
+          "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
+          "task_id": "runtime_plan"
+        }
+      ],
+      "runtime_plan": {
+        "agent_types": [
+          "sync",
+          "parallel",
+          "long_running",
+          "human_in_the_loop"
+        ],
+        "case_id": "prod-e2e-08-memory-learning-regression",
+        "contract_version": "planner-runtime-contract-v1",
+        "expected_outputs": [
+          "event_log",
+          "state_snapshot",
+          "artifact_refs",
+          "final_state"
+        ],
+        "max_concurrency": 3,
+        "plan_id": "plan-prod-e2e-08-memory-learning-regression",
+        "planner_generated": true,
+        "raw_user_request_allowed": false,
+        "runtime_boundary": "Runtime 只能执行 Planner 生成的 Workflow、Task Graph 和 Context，不直接接收用户请求。",
+        "runtime_id": "runtime-from-planner-prod-e2e-08-memory-learning-regression",
+        "tasks": [
+          {
+            "agent_id": "methodology_selector",
+            "agent_role": "Research Agent",
+            "contract_version": "planner-runtime-contract-v1",
+            "dependencies": [],
+            "expected_output": "goal_analysis",
+            "input": {
+              "case_id": "prod-e2e-08-memory-learning-regression",
+              "plan_id": "plan-prod-e2e-08-memory-learning-regression",
+              "planner_task": {
+                "agent_role": "Research Agent",
+                "dependencies": [],
+                "expected_output": "goal_analysis",
+                "quality_gate": "planner_gate",
+                "task_id": "goal_analysis"
+              }
+            },
+            "quality_gate": "planner_gate",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "task_id": "goal_analysis"
+          },
+          {
+            "agent_id": "methodology_selector",
+            "agent_role": "Research Agent",
+            "contract_version": "planner-runtime-contract-v1",
+            "dependencies": [
+              "goal_analysis"
+            ],
+            "expected_output": "scope",
+            "input": {
+              "case_id": "prod-e2e-08-memory-learning-regression",
+              "plan_id": "plan-prod-e2e-08-memory-learning-regression",
+              "planner_task": {
+                "agent_role": "Research Agent",
+                "dependencies": [
+                  "goal_analysis"
+                ],
+                "expected_output": "scope",
+                "quality_gate": "planner_gate",
+                "task_id": "scope"
+              }
+            },
+            "quality_gate": "planner_gate",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "task_id": "scope"
+          },
+          {
+            "agent_id": "methodology_selector",
+            "agent_role": "Research Agent",
+            "contract_version": "planner-runtime-contract-v1",
+            "dependencies": [
+              "scope"
+            ],
+            "expected_output": "methodology_selection",
+            "input": {
+              "case_id": "prod-e2e-08-memory-learning-regression",
+              "plan_id": "plan-prod-e2e-08-memory-learning-regression",
+              "planner_task": {
+                "agent_role": "Research Agent",
+                "dependencies": [
+                  "scope"
+                ],
+                "expected_output": "methodology_selection",
+                "quality_gate": "planner_gate",
+                "task_id": "methodology_selection"
+              }
+            },
+            "quality_gate": "planner_gate",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "task_id": "methodology_selection"
+          },
+          {
+            "agent_id": "evidence_collector",
+            "agent_role": "Research Agent",
+            "contract_version": "planner-runtime-contract-v1",
+            "dependencies": [
+              "methodology_selection"
+            ],
+            "expected_output": "connector_plan",
+            "input": {
+              "case_id": "prod-e2e-08-memory-learning-regression",
+              "plan_id": "plan-prod-e2e-08-memory-learning-regression",
+              "planner_task": {
+                "agent_role": "Research Agent",
+                "dependencies": [
+                  "methodology_selection"
+                ],
+                "expected_output": "connector_plan",
+                "quality_gate": "planner_gate",
+                "task_id": "connector_plan"
+              }
+            },
+            "quality_gate": "planner_gate",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "task_id": "connector_plan"
+          },
+          {
+            "agent_id": "parallel_researcher",
+            "agent_role": "Research Agent",
+            "contract_version": "planner-runtime-contract-v1",
+            "dependencies": [
+              "connector_plan"
+            ],
+            "expected_output": "skill_plan",
+            "input": {
+              "case_id": "prod-e2e-08-memory-learning-regression",
+              "plan_id": "plan-prod-e2e-08-memory-learning-regression",
+              "planner_task": {
+                "agent_role": "Research Agent",
+                "dependencies": [
+                  "connector_plan"
+                ],
+                "expected_output": "skill_plan",
+                "quality_gate": "planner_gate",
+                "task_id": "skill_plan"
+              }
+            },
+            "quality_gate": "planner_gate",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "task_id": "skill_plan"
+          },
+          {
+            "agent_id": "evidence_collector",
+            "agent_role": "Research Agent",
+            "contract_version": "planner-runtime-contract-v1",
+            "dependencies": [
+              "skill_plan"
+            ],
+            "expected_output": "evidence_plan",
+            "input": {
+              "case_id": "prod-e2e-08-memory-learning-regression",
+              "plan_id": "plan-prod-e2e-08-memory-learning-regression",
+              "planner_task": {
+                "agent_role": "Research Agent",
+                "dependencies": [
+                  "skill_plan"
+                ],
+                "expected_output": "evidence_plan",
+                "quality_gate": "planner_gate",
+                "task_id": "evidence_plan"
+              }
+            },
+            "quality_gate": "planner_gate",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "task_id": "evidence_plan"
+          },
+          {
+            "agent_id": "parallel_researcher",
+            "agent_role": "Research Agent",
+            "contract_version": "planner-runtime-contract-v1",
+            "dependencies": [
+              "evidence_plan"
+            ],
+            "expected_output": "knowledge_graph_plan",
+            "input": {
+              "case_id": "prod-e2e-08-memory-learning-regression",
+              "plan_id": "plan-prod-e2e-08-memory-learning-regression",
+              "planner_task": {
+                "agent_role": "Research Agent",
+                "dependencies": [
+                  "evidence_plan"
+                ],
+                "expected_output": "knowledge_graph_plan",
+                "quality_gate": "planner_gate",
+                "task_id": "knowledge_graph_plan"
+              }
+            },
+            "quality_gate": "planner_gate",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "task_id": "knowledge_graph_plan"
+          },
+          {
+            "agent_id": "report_composer",
+            "agent_role": "Research Agent",
+            "contract_version": "planner-runtime-contract-v1",
+            "dependencies": [
+              "knowledge_graph_plan"
+            ],
+            "expected_output": "score_plan",
+            "input": {
+              "case_id": "prod-e2e-08-memory-learning-regression",
+              "plan_id": "plan-prod-e2e-08-memory-learning-regression",
+              "planner_task": {
+                "agent_role": "Research Agent",
+                "dependencies": [
+                  "knowledge_graph_plan"
+                ],
+                "expected_output": "score_plan",
+                "quality_gate": "planner_gate",
+                "task_id": "score_plan"
+              }
+            },
+            "quality_gate": "planner_gate",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "task_id": "score_plan"
+          },
+          {
+            "agent_id": "report_composer",
+            "agent_role": "Research Agent",
+            "contract_version": "planner-runtime-contract-v1",
+            "dependencies": [
+              "score_plan"
+            ],
+            "expected_output": "report_plan",
+            "input": {
+              "case_id": "prod-e2e-08-memory-learning-regression",
+              "plan_id": "plan-prod-e2e-08-memory-learning-regression",
+              "planner_task": {
+                "agent_role": "Research Agent",
+                "dependencies": [
+                  "score_plan"
+                ],
+                "expected_output": "report_plan",
+                "quality_gate": "planner_gate",
+                "task_id": "report_plan"
+              }
+            },
+            "quality_gate": "planner_gate",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "task_id": "report_plan"
+          },
+          {
+            "agent_id": "human_reviewer",
+            "agent_role": "Review Agent",
+            "contract_version": "planner-runtime-contract-v1",
+            "dependencies": [
+              "report_plan"
+            ],
+            "expected_output": "review_plan",
+            "input": {
+              "case_id": "prod-e2e-08-memory-learning-regression",
+              "plan_id": "plan-prod-e2e-08-memory-learning-regression",
+              "planner_task": {
+                "agent_role": "Review Agent",
+                "dependencies": [
+                  "report_plan"
+                ],
+                "expected_output": "review_plan",
+                "quality_gate": "planner_gate",
+                "task_id": "review_plan"
+              }
+            },
+            "quality_gate": "planner_gate",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "task_id": "review_plan"
+          },
+          {
+            "agent_id": "report_composer",
+            "agent_role": "Review Agent",
+            "contract_version": "planner-runtime-contract-v1",
+            "dependencies": [
+              "review_plan"
+            ],
+            "expected_output": "runtime_plan",
+            "input": {
+              "case_id": "prod-e2e-08-memory-learning-regression",
+              "plan_id": "plan-prod-e2e-08-memory-learning-regression",
+              "planner_task": {
+                "agent_role": "Review Agent",
+                "dependencies": [
+                  "review_plan"
+                ],
+                "expected_output": "runtime_plan",
+                "quality_gate": "planner_gate",
+                "task_id": "runtime_plan"
+              }
+            },
+            "quality_gate": "planner_gate",
+            "refs": [
+              "docs/runtime/runtime-architecture.md"
+            ],
+            "task_id": "runtime_plan"
+          }
+        ],
+        "timeout_minutes": 106,
+        "workflow_id": "workflow-prod-e2e-08-memory-learning-regression"
+      }
+    }
+  },
   "scorecard": {
     "confidence_score": 0.66,
     "disclaimer": "仅供研究参考，不构成投资建议",
@@ -1708,7 +4378,27 @@
       }
     ]
   },
-  "started_at": "2026-07-10T11:15:04.208993+00:00",
+  "stable_release_gate": {
+    "details": {
+      "allow_degraded": false,
+      "degraded_sources": [
+        "news",
+        "yahoo_finance"
+      ],
+      "min_real_sources": 1,
+      "real_sources": [],
+      "require_real_sources": false
+    },
+    "disclaimer": "AIRS Stable 发布门禁仅用于工程质量检查，不构成投资建议。",
+    "errors": [],
+    "passed": true,
+    "status": "PASS",
+    "unverified": [],
+    "warnings": [
+      "degraded sources present: ['news', 'yahoo_finance']"
+    ]
+  },
+  "started_at": "2026-07-10T15:21:14.929007+00:00",
   "status": "PASS",
   "title": "Memory/Learning 回归端到端研究"
 }

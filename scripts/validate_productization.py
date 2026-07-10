@@ -46,7 +46,7 @@ WEB_FILES = [
     "web/README.md",
 ]
 DOCKER_FILES = ["docker/Dockerfile", "docker/docker-compose.yml", "docker/README.md"]
-CONFIG_FILES = ["config/airs.yaml", "config/README.md", ".env.example"]
+CONFIG_FILES = ["config/airs.yaml", "config/airs.stable.yaml", "config/README.md", ".env.example"]
 DEMO_FILES = ["demo/nvidia.json", "demo/tsmc.json", "demo/concord-medical.json", "demo/run_demo.py"]
 DOC_FILES = [
     "docs/product/overview.md",
@@ -157,4 +157,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

@@ -48,6 +48,7 @@ class ResearchRequest:
     peer_companies: list[str] = field(default_factory=list)
     risk_preference: str = "balanced"
     language: str = "zh"
+    require_real_data: bool = False
     created_at: str = field(default_factory=lambda: date.today().isoformat())
     disclaimer: str = DISCLAIMER
 
@@ -81,6 +82,7 @@ def parse_research_request(user_input: str | dict[str, Any]) -> ResearchRequest:
             peer_companies=peers,
             risk_preference=str(user_input.get("risk_preference") or "balanced"),
             language=str(user_input.get("language") or "zh"),
+            require_real_data=_as_bool(user_input.get("require_real_data") or user_input.get("real_data")),
         )
 
     raw = str(user_input).strip()
@@ -99,6 +101,7 @@ def parse_research_request(user_input: str | dict[str, Any]) -> ResearchRequest:
         focus_areas=_normalize_focus([], raw),
         peer_companies=peers,
         risk_preference=_infer_risk_preference(raw),
+        require_real_data=_mentions_real_data(raw),
     )
 
 
@@ -178,3 +181,15 @@ def _infer_risk_preference(raw: str) -> str:
         return "aggressive"
     return "balanced"
 
+
+def _as_bool(value: Any) -> bool:
+    if isinstance(value, bool):
+        return value
+    if value is None:
+        return False
+    return str(value).strip().lower() in {"1", "true", "yes", "on", "real", "required"}
+
+
+def _mentions_real_data(raw: str) -> bool:
+    lowered = raw.lower()
+    return "production" in lowered or "real_data" in lowered or "真实数据" in lowered

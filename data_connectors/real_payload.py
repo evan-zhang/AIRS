@@ -44,3 +44,19 @@ def envelope(config: ConnectorConfig, request: ConnectorRequest, *, url: str, pu
         "mode": mode,
         "payload": safe_payload,
     }
+
+
+def fallback_envelope(config: ConnectorConfig, request: ConnectorRequest, *, error: Exception, payload: dict[str, Any], url: str | None = None) -> dict[str, Any]:
+    return envelope(
+        config,
+        request,
+        url=url or config.base_url,
+        publication_time=request.timestamp,
+        confidence=0.25,
+        mode="fallback_mock",
+        payload={
+            **payload,
+            "fallback_reason": str(error),
+            "fallback_policy": "real_fetch_failed_degraded_to_mock",
+        },
+    )
