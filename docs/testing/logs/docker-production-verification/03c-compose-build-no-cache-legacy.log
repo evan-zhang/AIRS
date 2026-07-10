@@ -1,0 +1,4 @@
+2026-07-10T22:51:49.789880+00:00
++ DOCKER_BUILDKIT=0 AIRS_API_KEY=*** docker compose build --no-cache
+b'time="2026-07-11T06:51:49+08:00" level=warning msg="Docker Compose is configured to build using Bake, but buildkit isn\'t enabled"\n Service api  Building\n'
+TIMEOUT: legacy docker compose build did not complete within 240 seconds

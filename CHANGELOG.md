@@ -1,5 +1,24 @@
 # AIRS 变更日志
 
+## [QA-SPRINT-4] Docker Production Verification - 2026-07-11
+
+### Verification
+
+- Docker daemon 状态检查：PASS。
+- Docker compose config 解析：PASS。
+- `docker compose build --no-cache`：FAIL，阻塞于 `python:3.11-slim` 基础镜像 metadata / pull 阶段。
+- `docker pull python:3.11-slim`：TIMEOUT。
+- `DOCKER_BUILDKIT=0 docker compose build --no-cache`：TIMEOUT。
+- 主机侧 pytest、production_check、validate_stable_release、全部 validate_*、Production E2E、Failure Injection：PASS。
+- 主机侧 API security、CLI init/demo/validate、APP-001/Core real-data gate、Real Connector probe：PASS。
+
+### Release Decision
+
+- 新增 `docs/qa/DOCKER_PRODUCTION_VERIFICATION_REPORT.md`。
+- 新增 `docs/review/DOCKER_VERIFICATION_SELF_REVIEW.md`。
+- 新增 `docs/release/RELEASE_READINESS_REVIEW_V3.md`。
+- V3 决策：Reject。Docker production verification 未完成前，不允许发布 `v1.0.0 Stable`。
+
 ## [QA-SPRINT-3] Stable Release Remediation - 2026-07-10
 
 ### Fixed

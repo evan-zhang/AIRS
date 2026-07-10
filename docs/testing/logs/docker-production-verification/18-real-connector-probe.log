@@ -1,0 +1,16 @@
+Fri Jul 10 22:59:03 UTC 2026
+AIRS Stable Release Remediation Validation
+==========================================
+PASS: Fallback source is recorded separately
+PASS: Mock source is recorded separately
+PASS: Stable gate rejects degraded lineage even with one real source
+PASS: Public API bind is rejected without API key
+PASS: API rate limiter blocks second request over limit
+PASS: Mock demo is marked completed_with_degradation
+PASS: Stable gate is not required for demo-mode request
+PASS: Stable gate blocks degraded real-data APP result
+PASS: APP quality gate fails when required real data is degraded
+PASS: APP lineage records degraded sources
+==========================================
+RESULT: PASS
+免责声明：本验证仅用于 AIRS Stable 发布阻塞项修复检查，不构成投资建议。

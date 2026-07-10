@@ -1,0 +1,29 @@
+2026-07-10T22:58:49.760881+00:00
+[
+  [
+    "unauthorized_health",
+    401
+  ],
+  [
+    "authorized_health",
+    200
+  ],
+  [
+    "rate_first_business_after_readiness",
+    200
+  ],
+  [
+    "rate_limited_after_window_exhausted",
+    429
+  ],
+  [
+    "body_limit",
+    413
+  ],
+  [
+    "invalid_json_redacted",
+    400,
+    "{\n  \"error\": \"invalid_json\",\n  \"disclaimer\": \"AIRS API \u4ec5\u7528\u4e8e\u6295\u8d44\u7814\u7a76\u6d41\u7a0b\u7f16\u6392\u3001\u8bc1\u636e\u8ffd\u6eaf\u548c\u8d28\u91cf\u63a7\u5236\uff0c\u4e0d\u6784\u6210\u6295\u8d44\u5efa\u8bae\u3002\"\n}"
+  ]
+]
+PASS
