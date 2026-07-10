@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "{{feature_name}} Feature Schema",
+  "description": "{{feature_summary}}。本 Schema 仅用于 AIRS 工程开发与研究质量控制，不构成投资建议。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "feature_id",
+    "feature_name",
+    "inputs",
+    "outputs",
+    "disclaimer"
+  ],
+  "properties": {
+    "feature_id": {
+      "type": "string",
+      "const": "{{feature_id}}"
+    },
+    "feature_name": {
+      "type": "string",
+      "const": "{{feature_name}}"
+    },
+    "inputs": {
+      "type": "object",
+      "description": "Feature 输入。"
+    },
+    "outputs": {
+      "type": "object",
+      "description": "Feature 输出。"
+    },
+    "risk_level": {
+      "type": "string",
+      "enum": ["LOW", "MEDIUM", "HIGH", "CRITICAL"],
+      "default": "{{risk_level}}"
+    },
+    "disclaimer": {
+      "type": "string",
+      "description": "{{disclaimer}}"
+    }
+  }
+}

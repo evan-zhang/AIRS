@@ -73,6 +73,14 @@ schemas/
 - **schemas/benchmark/example.schema.json**：Production Example 结构 Schema，用于描述示例 ID、方法论引用、Prompt 引用、Evidence ID、Scorecard、Quality Gate 和报告章节。
 - Benchmark Schema 只用于 AIRS 回归测试与研究质量控制，必须复用 M3 Evidence Card、M4 Prompt 和 M6 Scorecard，不构成投资建议。
 
+### Builder 相关 Schema
+
+- **schemas/builder/**：AIRS Builder 相关 Schema，用于 FEATURE-001 Feature Package 生成与验证。
+- **schemas/builder/feature-request.schema.json**：Feature Request Schema，用于验证 Builder 输入，要求包含 feature_id、feature_name、feature_summary、business_goal、user_scenarios、dependencies、constraints、expected_outputs 和 risk_level。
+- **schemas/builder/feature-package.schema.json**：Feature Package Schema，用于描述 Builder 输出包的结构、artifact 清单和验证状态。
+- **schemas/builder/generated-artifact.schema.json**：Generated Artifact Schema，用于描述单个生成物的 artifact_type、path、template_ref、required 和 status。
+- Builder Schema 只用于工程开发包生成和质量控制，不重新定义 M2-M7 研究规则，不构成投资建议。
+
 ### 报告相关 Schema
 
 - **report/**：报告结构、报告元数据、报告质量

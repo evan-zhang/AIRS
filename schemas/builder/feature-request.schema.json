@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://airs.local/schemas/builder/feature-request.schema.json",
+  "title": "AIRS Builder Feature Request Schema",
+  "description": "验证 AIRS Builder 输入的 Feature Request。仅用于工程开发和研究质量控制，不构成投资建议。",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "feature_id",
+    "feature_name",
+    "feature_summary",
+    "business_goal",
+    "user_scenarios",
+    "dependencies",
+    "constraints",
+    "expected_outputs",
+    "risk_level"
+  ],
+  "properties": {
+    "feature_id": {
+      "type": "string",
+      "pattern": "^FEATURE-[0-9]{3,}$",
+      "description": "Feature 编号，例如 FEATURE-001。"
+    },
+    "feature_name": {
+      "type": "string",
+      "minLength": 3,
+      "description": "Feature 名称。"
+    },
+    "feature_summary": {
+      "type": "string",
+      "minLength": 20,
+      "description": "Feature 摘要。"
+    },
+    "business_goal": {
+      "type": "string",
+      "minLength": 20,
+      "description": "业务目标。"
+    },
+    "user_scenarios": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 5
+      }
+    },
+    "dependencies": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 3
+      }
+    },
+    "constraints": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 5
+      }
+    },
+    "expected_outputs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 3
+      }
+    },
+    "risk_level": {
+      "type": "string",
+      "enum": ["LOW", "MEDIUM", "HIGH", "CRITICAL"]
+    },
+    "feature_slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "disclaimer": {
+      "type": "string",
+      "description": "合规免责声明，必须说明不构成投资建议。"
+    }
+  }
+}

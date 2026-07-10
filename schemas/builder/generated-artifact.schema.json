@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://airs.local/schemas/builder/generated-artifact.schema.json",
+  "title": "AIRS Builder Generated Artifact Schema",
+  "description": "验证 Builder 单个生成物的元数据。仅用于工程开发和研究质量控制，不构成投资建议。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifact_type",
+    "path",
+    "template_ref",
+    "required",
+    "status"
+  ],
+  "properties": {
+    "artifact_type": {
+      "type": "string",
+      "enum": [
+        "issue",
+        "adr",
+        "feature_spec",
+        "skill",
+        "prompt",
+        "schema",
+        "tests",
+        "benchmark",
+        "pr_checklist",
+        "release_notes"
+      ]
+    },
+    "path": {
+      "type": "string",
+      "minLength": 3
+    },
+    "template_ref": {
+      "type": "string",
+      "minLength": 3
+    },
+    "required": {
+      "type": "boolean"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["GENERATED", "VALIDATED", "NEEDS_FIX", "SKIPPED"]
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

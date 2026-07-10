@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AIRS News Connector Schema",
+  "description": "用于描述新闻事件接入、Evidence 引用、影响假设和不确定性。仅用于研究质量控制，不构成投资建议。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["event_id", "source", "published_at", "normalized_event", "evidence_refs", "disclaimer"],
+  "properties": {
+    "event_id": {"type": "string"},
+    "source": {
+      "type": "object",
+      "required": ["name", "url", "source_type"],
+      "properties": {
+        "name": {"type": "string"},
+        "url": {"type": "string"},
+        "source_type": {"type": "string", "enum": ["official", "media", "research", "company", "policy", "other"]}
+      }
+    },
+    "published_at": {"type": "string"},
+    "collected_at": {"type": "string"},
+    "normalized_event": {
+      "type": "object",
+      "required": ["event_type", "entities", "affected_scope"],
+      "properties": {
+        "event_type": {"type": "string", "enum": ["policy", "earnings", "supply_chain", "product", "regulatory", "macro", "other"]},
+        "entities": {"type": "array", "items": {"type": "string"}},
+        "affected_scope": {"type": "array", "items": {"type": "string"}},
+        "fact_statements": {"type": "array", "items": {"type": "string"}},
+        "interpretations": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "evidence_refs": {"type": "array", "items": {"type": "string"}},
+    "impact_hypotheses": {"type": "array", "items": {"type": "string"}},
+    "counter_sources": {"type": "array", "items": {"type": "string"}},
+    "missing_evidence": {"type": "array", "items": {"type": "string"}},
+    "uncertainties": {"type": "array", "items": {"type": "string"}},
+    "disclaimer": {"type": "string"}
+  }
+}
