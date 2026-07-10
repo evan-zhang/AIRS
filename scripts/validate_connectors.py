@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate AIRS FEATURE-004 Data Connector Framework deliverables."""
+"""Validate AIRS Data Connector Framework deliverables, including FEATURE-013."""
 from __future__ import annotations
 import importlib
 import json
@@ -13,6 +13,7 @@ DOCS = [
     "docs/data-connectors/connector-interface.md",
     "docs/data-connectors/source-priority.md",
     "docs/data-connectors/connector-governance.md",
+    "docs/data-connectors/real-data-integration.md",
 ]
 CORE = [
     "data_connectors/__init__.py",
@@ -25,6 +26,11 @@ CORE = [
     "data_connectors/normalizer.py",
     "data_connectors/priority.py",
     "data_connectors/health_check.py",
+    "data_connectors/http_client.py",
+    "data_connectors/env_config.py",
+    "data_connectors/persistent_cache.py",
+    "data_connectors/secret_masking.py",
+    "data_connectors/real_payload.py",
     "data_connectors/README.md",
 ]
 CONNECTORS = {
@@ -60,11 +66,16 @@ BUILDER_PACKAGE = [
 ]
 REPORTS = [
     "docs/adr/ADR-0004-data-connector-framework.md",
+    "docs/adr/ADR-0013-real-data-integration.md",
     "docs/production/FEATURE_004_COMPLETION_REPORT.md",
+    "docs/production/FEATURE_013_COMPLETION_REPORT.md",
     "docs/review/FEATURE_004_SELF_REVIEW.md",
+    "docs/review/FEATURE_013_SELF_REVIEW.md",
 ]
 REQUIRED_TERMS = ["CONFIG", "INPUT_SCHEMA", "OUTPUT_SCHEMA", "ERROR_HANDLING", "RETRY_POLICY", "CACHE_STRATEGY", "health_check", "TEST_CASE"]
 TRACE_FIELDS = ["source", "url", "timestamp", "version", "trace_id", "traceability"]
+REAL_DATA_FIELDS = ["source", "url", "publication_time", "collection_time", "trace_id", "connector_version", "raw_hash", "confidence"]
+REAL_CONNECTORS = {"sec_edgar", "github", "news", "rss"}
 FORBIDDEN = ["建议买入", "建议卖出", "保证收益", "保证盈利", "目标价为", "应买入", "应卖出"]
 
 
@@ -109,6 +120,12 @@ def validate_json(rel: str, failures: list[str]) -> dict:
 
 
 def validate_static(failures: list[str]) -> None:
+    check((ROOT / ".env.example").exists(), ".env.example exists", "missing .env.example", failures)
+    if (ROOT / ".env.example").exists():
+        env_example = read(".env.example")
+        for term in ["AIRS_CONNECTOR_MODE", "GITHUB_TOKEN", "NEWS_API_ENDPOINT", "NEWS_API_KEY"]:
+            check(term in env_example, f".env.example documents {term}", f".env.example missing {term}", failures)
+        check("Do not commit real secrets" in env_example, ".env.example warns against real secrets", ".env.example missing secret warning", failures)
     for rel in DOCS:
         text = validate_text(rel, failures, min_size=500)
         for term in ["Connector", "Source", "Trace", "Evidence"]:
@@ -138,12 +155,17 @@ def validate_static(failures: list[str]) -> None:
 def validate_connectors(failures: list[str]) -> None:
     sys.path.insert(0, str(ROOT))
     from data_connectors import ConnectorRequest, default_registry
+    from data_connectors.real_payload import REQUIRED_REAL_FIELDS
     registry = default_registry()
     check(set(registry.list_ids()) == {"alpha_vantage", "github", "news", "rss", "sec_edgar", "yahoo_finance"}, "default registry has six connectors", "default registry missing connectors", failures)
     for rel, cls in CONNECTORS.items():
         text = validate_text(rel, failures, min_size=1000, disclaimer=False)
         for term in REQUIRED_TERMS:
             check(term in text, f"{rel} declares {term}", f"{rel} missing {term}", failures)
+        connector_id = Path(rel).stem
+        if connector_id in REAL_CONNECTORS:
+            for term in ["fetch_real", "fetch_mock", "real_enabled"]:
+                check(term in text, f"{rel} supports {term}", f"{rel} missing {term}", failures)
         module_name = rel[:-3].replace("/", ".")
         module = importlib.import_module(module_name)
         connector = getattr(module, cls)()
@@ -155,6 +177,13 @@ def validate_connectors(failures: list[str]) -> None:
         check(connector.health_check().status == "PASS", f"{rel} health check PASS", f"{rel} health check failed", failures)
         bad = connector.fetch(ConnectorRequest({})).to_dict()
         check("error" in bad and bad["error"]["error_code"] == "INPUT_VALIDATION_ERROR", f"{rel} handles input error", f"{rel} missing input error handling", failures)
+        if connector.connector_id in REAL_CONNECTORS:
+            mock_raw = connector.fetch_mock(ConnectorRequest(test["input"]))
+            for field in REAL_DATA_FIELDS:
+                check(field in mock_raw and mock_raw[field] is not None, f"{rel} mock data has {field}", f"{rel} mock data missing {field}", failures)
+            check(REAL_DATA_FIELDS == REQUIRED_REAL_FIELDS, "validator real fields match connector helper", "validator real fields mismatch helper", failures)
+            check(result["data"].get("mode") == "mock", f"{rel} defaults to mock mode", f"{rel} does not default to mock mode", failures)
+            check("fetch_real" in dir(connector), f"{rel} exposes fetch_real", f"{rel} missing fetch_real method", failures)
 
 
 def validate_consistency(failures: list[str]) -> None:
@@ -162,6 +191,7 @@ def validate_consistency(failures: list[str]) -> None:
     changelog = read("CHANGELOG.md")
     check("schemas/connectors/" in schema_readme and "connector-result.schema.json" in schema_readme, "schemas/README documents connector schemas", "schemas/README missing connector schemas", failures)
     check("FEATURE-004" in changelog and "Data Connector Framework" in changelog, "CHANGELOG documents FEATURE-004", "CHANGELOG missing FEATURE-004", failures)
+    check("FEATURE-013" in changelog and "Real Data Integration" in changelog, "CHANGELOG documents FEATURE-013", "CHANGELOG missing FEATURE-013", failures)
     for rel in ["docs/data-connectors/connector-architecture.md", "docs/data-connectors/connector-interface.md"]:
         text = read(rel)
         for term in ["Source", "URL", "Timestamp", "Version", "Trace ID", "Traceability"]:

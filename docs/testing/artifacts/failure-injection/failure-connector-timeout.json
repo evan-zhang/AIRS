@@ -6,28 +6,38 @@
   "result": {
     "connector_id": "flaky_timeout_news",
     "data": {
-      "headline": "Mock news headline",
-      "publisher": "Mock News",
-      "query": "AI servers",
+      "collection_time": "2026-07-10T10:16:49.397431+00:00",
+      "confidence": 0.5,
+      "connector_version": "0.2.0",
+      "mode": "mock",
+      "payload": {
+        "headline": "Mock news headline",
+        "publisher": "Mock News",
+        "query": "timeout retry case"
+      },
+      "publication_time": "2026-07-10T10:16:48.955205+00:00",
+      "raw_hash": "9795b35ce23b60e566ba65523b1f073f4e2e8379f4a933f3817f8a7097219b53",
+      "source": "Public News",
+      "trace_id": "TRACE-9490DE075CB8",
       "url": "https://news.example.com/mock"
     },
     "disclaimer": "仅供 AIRS 工程开发和研究质量控制使用，不构成投资建议。",
     "source": "Public News",
     "source_type": "public_news",
-    "timestamp": "2026-07-10T09:16:02.022750+00:00",
-    "trace_id": "TRACE-E38DBA58DFC3",
+    "timestamp": "2026-07-10T10:16:48.955205+00:00",
+    "trace_id": "TRACE-9490DE075CB8",
     "traceability": {
       "cache_hit": false,
       "connector": "flaky_timeout_news",
-      "request_id": "TRACE-E38DBA58DFC3",
+      "request_id": "TRACE-9490DE075CB8",
       "transformations": [
         "mock_fetch",
         "normalize"
       ]
     },
     "url": "https://news.example.com/mock",
-    "version": "0.1.0"
+    "version": "0.2.0"
   },
-  "started_at": "2026-07-10T09:16:02.329735+00:00",
+  "started_at": "2026-07-10T10:16:49.397475+00:00",
   "status": "PASS"
 }
