@@ -1,0 +1,27 @@
+feature_id: "FEATURE-XXX"
+feature_name: "Example Feature"
+feature_summary: "说明该 Feature 要解决的工程或研究流程问题，并保持足够具体，便于 Code Agent 开发。"
+business_goal: "说明该 Feature 对 AIRS 工程开发、研究质量控制或回归验证的业务价值。"
+user_scenarios:
+  - "Code Agent 读取 Feature Package 后可以直接开发。"
+  - "Review Agent 可以按 ADR、Spec、Tests 和 Benchmark 审查。"
+dependencies:
+  - "templates/skill-template.md"
+  - "templates/prompt-template.md"
+  - "templates/benchmark-template.md"
+  - "docs/evidence/evidence-card-specification.md"
+constraints:
+  - "不得重复定义 M2-M7 规则，只能引用。"
+  - "所有投资相关内容必须包含免责声明。"
+expected_outputs:
+  - "ISSUE.md"
+  - "ADR.md"
+  - "FEATURE_SPEC.md"
+  - "Skill 草案"
+  - "Prompt 草案"
+  - "Schema 草案"
+  - "Tests"
+  - "Benchmark"
+  - "PR Checklist"
+  - "Release Notes"
+risk_level: "MEDIUM"

@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://airs.local/schemas/builder/feature-package.schema.json",
+  "title": "AIRS Builder Feature Package Schema",
+  "description": "验证 Builder 生成的完整 Feature Package 结构。仅用于工程开发和质量控制，不构成投资建议。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "feature_id",
+    "feature_slug",
+    "package_path",
+    "artifacts",
+    "validation",
+    "disclaimer"
+  ],
+  "properties": {
+    "feature_id": {
+      "type": "string",
+      "pattern": "^FEATURE-[0-9]{3,}$"
+    },
+    "feature_slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "package_path": {
+      "type": "string",
+      "pattern": "^builder-output/[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "artifacts": {
+      "type": "array",
+      "minItems": 10,
+      "items": {
+        "$ref": "./generated-artifact.schema.json"
+      }
+    },
+    "validation": {
+      "type": "object",
+      "required": ["status", "checks"],
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["PASS", "FAIL", "CONDITIONAL_PASS"]
+        },
+        "checks": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "disclaimer": {
+      "type": "string",
+      "minLength": 20,
+      "description": "必须包含不构成投资建议。"
+    }
+  }
+}

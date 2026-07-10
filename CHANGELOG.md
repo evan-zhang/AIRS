@@ -9,6 +9,32 @@
 
 ## [Unreleased]
 
+### Added - FEATURE-001: AIRS Builder
+- 新增 `docs/builder/` Builder 架构、生命周期、治理和生成流程文档。
+- 新增 `builder/` 本地 Feature Package 生成器入口、模板 registry 和 generators 目录说明。
+- 新增 `schemas/builder/` 下 Feature Request、Feature Package 和 Generated Artifact 三个 Schema。
+- 新增 `templates/builder/` 下 11 个 Builder 生成模板。
+- 新增 `scripts/validate_builder.py` 自检脚本。
+- 新增两个生产级 Feature Package 示例：`builder-output/knowledge-graph-engine/` 与 `builder-output/news-connector/`。
+- 新增 `docs/adr/ADR-0003-feature-builder.md`、`docs/production/FEATURE_001_COMPLETION_REPORT.md` 和 `docs/review/FEATURE_001_SELF_REVIEW.md`。
+
+### Validation - FEATURE-001
+- `validate_m1.py` PASS。
+- `validate_m2.py` PASS。
+- `validate_evidence.py` PASS。
+- `validate_prompt.py` PASS。
+- `validate_skill.py` PASS。
+- `validate_score.py` PASS。
+- `validate_evaluation.py` PASS。
+- `validate_benchmark.py` PASS。
+- `validate_examples.py` PASS。
+- `validate_release.py` PASS。
+- `validate_builder.py` PASS。
+
+### Compliance - FEATURE-001
+- AIRS Builder 只用于工程开发包生成和研究质量控制，不构成投资建议。
+- Builder 模板引用 M4 Prompt、M5 Skill 与 M7 Benchmark 既有模板，不重复定义 M2-M7 规则。
+
 ### Planned
 - V1.x: Runtime、Benchmark Runner、Scorecard Runner、更多生产示例和回归数据集。
 

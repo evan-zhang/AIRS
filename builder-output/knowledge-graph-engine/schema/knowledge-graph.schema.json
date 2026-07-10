@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AIRS Knowledge Graph Schema",
+  "description": "用于描述 AIRS 研究图谱节点、边、证据引用和不确定性。仅用于研究质量控制，不构成投资建议。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["graph_id", "nodes", "edges", "methodology_refs", "disclaimer"],
+  "properties": {
+    "graph_id": {"type": "string"},
+    "methodology_refs": {"type": "array", "items": {"type": "string"}},
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["node_id", "node_type", "label", "confidence"],
+        "properties": {
+          "node_id": {"type": "string"},
+          "node_type": {"type": "string", "enum": ["company", "industry", "product", "supply_chain_node", "policy", "event", "evidence", "claim", "risk"]},
+          "label": {"type": "string"},
+          "source_refs": {"type": "array", "items": {"type": "string"}},
+          "confidence": {"type": "string", "enum": ["HIGH", "MEDIUM", "LOW"]}
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["edge_id", "from_node", "to_node", "relation_type", "evidence_refs"],
+        "properties": {
+          "edge_id": {"type": "string"},
+          "from_node": {"type": "string"},
+          "to_node": {"type": "string"},
+          "relation_type": {"type": "string", "enum": ["supports", "refutes", "depends_on", "belongs_to", "affected_by", "competes_with", "has_risk"]},
+          "evidence_refs": {"type": "array", "items": {"type": "string"}},
+          "directionality": {"type": "string", "enum": ["directed", "undirected"]}
+        }
+      }
+    },
+    "missing_evidence": {"type": "array", "items": {"type": "string"}},
+    "uncertainties": {"type": "array", "items": {"type": "string"}},
+    "disclaimer": {"type": "string"}
+  }
+}
