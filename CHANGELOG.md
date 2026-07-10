@@ -1,5 +1,23 @@
 # AIRS 变更日志
 
+## [APP-001] Equity Research App - 2026-07-10
+
+### Added
+
+- 新增 `apps/equity_research/`，提供首个可直接运行的股票研究应用入口。
+- 新增 Request Parser、Company Resolver、Data Collector、Analyzer、Report Exporter 和 App 主编排。
+- 新增 `docs/apps/equity-research/` 架构、用户指南和输出规范。
+- 新增 `schemas/apps/equity-research/` 研究请求与研究结果 Schema。
+- 新增 `templates/apps/equity-research/equity-research-report-template.md` 15 段报告模板。
+- 新增 NVIDIA、TSMC、康哲药业和同行对比 4 个案例，真实数据不可用时保留 Mock/SKIP 降级说明。
+- 新增 `scripts/validate_equity_research_app.py`、`docs/adr/ADR-0014-equity-research-app.md`、`docs/production/APP_001_COMPLETION_REPORT.md` 和 `docs/review/APP_001_SELF_REVIEW.md`。
+
+### Compliance
+
+- APP-001 输出固定包含 15 个 section，并严格区分 Facts / Inference / Assumption / Opinion。
+- App 全链路串联 Planner、Committee、Runtime、Connector、Investment Engine、Evidence、Knowledge Graph、Score、Report Generator、Memory 和 Learning。
+- 所有股票研究输出仅用于研究流程编排、证据追溯和质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。
+
 ## [FEATURE-013] Real Data Integration - 2026-07-10
 
 ### Added
