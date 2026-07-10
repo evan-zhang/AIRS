@@ -1,0 +1,455 @@
+{
+  "graph_id": "KG-20260710-INNOVATIVE-DRUG",
+  "title": "创新药产业链知识图谱",
+  "research_question": "创新药产业链中，哪些研发、临床、生产或商业化环节可能形成约束？",
+  "methodology_refs": [
+    "supply-chain-chokepoint",
+    "industry-lifecycle",
+    "evidence-chain"
+  ],
+  "evidence_cards": {
+    "EV-20260710-DRG1": {
+      "evidence_id": "EV-20260710-DRG1",
+      "title": "靶点发现到临床转化存在长周期约束",
+      "category": "industry",
+      "source": "AIRS 示例证据库",
+      "source_type": "industry_report",
+      "url": "internal://airs/examples/innovative-drug/evidence-1",
+      "publication_time": "2026-07-10T00:00:00+08:00",
+      "collection_time": "2026-07-10T10:00:00+08:00",
+      "confidence": 0.72,
+      "evidence_level": "B",
+      "supports": [
+        {
+          "claim_id": "CL-DRG-CLINICAL",
+          "statement": "临床转化和入组效率是创新药研发路径的重要约束。",
+          "strength": "strong"
+        }
+      ],
+      "refutes": [
+        {
+          "claim_id": "CL-DRG-FAST-TRACK",
+          "statement": "突破性疗法和优先审评可能缩短部分项目周期。",
+          "strength": "medium"
+        }
+      ],
+      "missing_evidence": [
+        "需要补充具体适应症入组速度和终点达成数据。"
+      ],
+      "weight": 0.34,
+      "traceability": {
+        "collected_by": "Research Agent",
+        "collection_method": "示例化证据卡整理",
+        "source_locator": "examples/knowledge-graph/innovative-drug-industry-chain.json",
+        "transformations": [
+          "结构化为 Evidence Card"
+        ]
+      },
+      "version": "0.1.0"
+    },
+    "EV-20260710-DRG2": {
+      "evidence_id": "EV-20260710-DRG2",
+      "title": "CMC 与放大生产影响商业化进度",
+      "category": "supply_chain",
+      "source": "AIRS 示例证据库",
+      "source_type": "expert_opinion",
+      "url": "internal://airs/examples/innovative-drug/evidence-2",
+      "publication_time": "2026-07-10T00:00:00+08:00",
+      "collection_time": "2026-07-10T10:10:00+08:00",
+      "confidence": 0.7,
+      "evidence_level": "B",
+      "supports": [
+        {
+          "claim_id": "CL-DRG-CMC",
+          "statement": "CMC、质量体系和放大生产会影响创新药上市与供应稳定性。",
+          "strength": "strong"
+        }
+      ],
+      "refutes": [
+        {
+          "claim_id": "CL-DRG-CDMO",
+          "statement": "成熟 CDMO 资源可部分缓解生产放大瓶颈。",
+          "strength": "medium"
+        }
+      ],
+      "missing_evidence": [
+        "需要补充具体产品批次成功率、质量偏差和产能利用率。"
+      ],
+      "weight": 0.33,
+      "traceability": {
+        "collected_by": "Research Agent",
+        "collection_method": "示例化证据卡整理",
+        "source_locator": "examples/knowledge-graph/innovative-drug-industry-chain.json",
+        "transformations": [
+          "结构化为 Evidence Card"
+        ]
+      },
+      "version": "0.1.0"
+    },
+    "EV-20260710-DRG3": {
+      "evidence_id": "EV-20260710-DRG3",
+      "title": "医保准入与商业化放量不确定性",
+      "category": "counter_evidence",
+      "source": "AIRS 示例证据库",
+      "source_type": "government_policy",
+      "url": "internal://airs/examples/innovative-drug/evidence-3",
+      "publication_time": "2026-07-10T00:00:00+08:00",
+      "collection_time": "2026-07-10T10:20:00+08:00",
+      "confidence": 0.68,
+      "evidence_level": "B",
+      "supports": [
+        {
+          "claim_id": "CL-DRG-ACCESS",
+          "statement": "医保准入、支付能力和医生教育会影响商业化兑现。",
+          "strength": "medium"
+        }
+      ],
+      "refutes": [
+        {
+          "claim_id": "CL-DRG-RD-ONLY",
+          "statement": "仅用研发进度解释产业链约束是不完整的。",
+          "strength": "medium"
+        }
+      ],
+      "missing_evidence": [
+        "需要补充医保谈判结果、院内准入和真实世界使用数据。"
+      ],
+      "weight": 0.33,
+      "traceability": {
+        "collected_by": "Research Agent",
+        "collection_method": "示例化证据卡整理",
+        "source_locator": "examples/knowledge-graph/innovative-drug-industry-chain.json",
+        "transformations": [
+          "结构化为 Evidence Card"
+        ]
+      },
+      "version": "0.1.0"
+    }
+  },
+  "nodes": [
+    {
+      "node_id": "N-DRG-INDUSTRY",
+      "node_type": "industry",
+      "label": "创新药产业",
+      "source_refs": [
+        "EV-20260710-DRG1"
+      ],
+      "confidence": 0.76,
+      "evidence_bindings": [
+        {
+          "evidence_id": "EV-20260710-DRG1",
+          "claim_id": "CL-DRG-CLINICAL",
+          "relation": "contextualizes",
+          "strength": "medium"
+        }
+      ],
+      "attributes": {
+        "layer": "industry"
+      }
+    },
+    {
+      "node_id": "N-DRG-DISCOVERY",
+      "node_type": "supply_chain_node",
+      "label": "靶点发现与候选药物",
+      "source_refs": [
+        "EV-20260710-DRG1"
+      ],
+      "confidence": 0.72,
+      "evidence_bindings": [
+        {
+          "evidence_id": "EV-20260710-DRG1",
+          "claim_id": "CL-DRG-CLINICAL",
+          "relation": "supports",
+          "strength": "medium"
+        }
+      ],
+      "attributes": {
+        "scarcity": 0.66,
+        "substitutability": 0.62,
+        "capacity_expansion_difficulty": 0.58,
+        "certification_cycle": 0.5,
+        "bargaining_power": 0.54,
+        "evidence_quality": 0.72,
+        "missing_evidence": [
+          "需要补充具体靶点竞争格局和成药性验证。"
+        ]
+      }
+    },
+    {
+      "node_id": "N-DRG-CLINICAL",
+      "node_type": "supply_chain_node",
+      "label": "临床试验入组与终点验证",
+      "source_refs": [
+        "EV-20260710-DRG1",
+        "EV-20260710-DRG3"
+      ],
+      "confidence": 0.74,
+      "evidence_bindings": [
+        {
+          "evidence_id": "EV-20260710-DRG1",
+          "claim_id": "CL-DRG-CLINICAL",
+          "relation": "supports",
+          "strength": "strong"
+        }
+      ],
+      "attributes": {
+        "scarcity": 0.78,
+        "substitutability": 0.74,
+        "capacity_expansion_difficulty": 0.7,
+        "certification_cycle": 0.9,
+        "bargaining_power": 0.62,
+        "evidence_quality": 0.72,
+        "missing_evidence": [
+          "需要补充分适应症入组效率、退出率和终点事件数。"
+        ]
+      }
+    },
+    {
+      "node_id": "N-DRG-CMC",
+      "node_type": "supply_chain_node",
+      "label": "CMC 与放大生产",
+      "source_refs": [
+        "EV-20260710-DRG2"
+      ],
+      "confidence": 0.71,
+      "evidence_bindings": [
+        {
+          "evidence_id": "EV-20260710-DRG2",
+          "claim_id": "CL-DRG-CMC",
+          "relation": "supports",
+          "strength": "strong"
+        }
+      ],
+      "attributes": {
+        "scarcity": 0.7,
+        "substitutability": 0.68,
+        "capacity_expansion_difficulty": 0.82,
+        "certification_cycle": 0.78,
+        "bargaining_power": 0.66,
+        "evidence_quality": 0.7,
+        "missing_evidence": [
+          "需要补充批次成功率、质量偏差和 CDMO 可用产能。"
+        ]
+      }
+    },
+    {
+      "node_id": "N-DRG-ACCESS",
+      "node_type": "policy",
+      "label": "医保准入与支付",
+      "source_refs": [
+        "EV-20260710-DRG3"
+      ],
+      "confidence": 0.68,
+      "evidence_bindings": [
+        {
+          "evidence_id": "EV-20260710-DRG3",
+          "claim_id": "CL-DRG-ACCESS",
+          "relation": "qualifies",
+          "strength": "medium"
+        }
+      ],
+      "attributes": {
+        "policy_type": "access"
+      }
+    },
+    {
+      "node_id": "N-DRG-COMMERCIAL",
+      "node_type": "product",
+      "label": "商业化放量",
+      "source_refs": [
+        "EV-20260710-DRG2",
+        "EV-20260710-DRG3"
+      ],
+      "confidence": 0.67,
+      "evidence_bindings": [
+        {
+          "evidence_id": "EV-20260710-DRG3",
+          "claim_id": "CL-DRG-ACCESS",
+          "relation": "supports",
+          "strength": "medium"
+        }
+      ],
+      "attributes": {
+        "scarcity": 0.48,
+        "substitutability": 0.56,
+        "capacity_expansion_difficulty": 0.52,
+        "certification_cycle": 0.6,
+        "bargaining_power": 0.5,
+        "evidence_quality": 0.68,
+        "missing_evidence": [
+          "需要补充院内准入、医生教育和真实世界处方数据。"
+        ]
+      }
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "E-DRG-IND-DISCOVERY",
+      "from_node": "N-DRG-INDUSTRY",
+      "to_node": "N-DRG-DISCOVERY",
+      "relation_type": "depends_on",
+      "evidence_refs": [
+        "EV-20260710-DRG1"
+      ],
+      "directionality": "directed",
+      "counter_evidence_refs": [
+        "EV-20260710-DRG1"
+      ],
+      "missing_evidence": [
+        "需要补充不同技术路线的候选药物成功率。"
+      ],
+      "confidence": 0.7,
+      "attributes": {
+        "logic": "研发起点"
+      }
+    },
+    {
+      "edge_id": "E-DRG-DISCOVERY-CLINICAL",
+      "from_node": "N-DRG-DISCOVERY",
+      "to_node": "N-DRG-CLINICAL",
+      "relation_type": "depends_on",
+      "evidence_refs": [
+        "EV-20260710-DRG1"
+      ],
+      "directionality": "directed",
+      "counter_evidence_refs": [
+        "EV-20260710-DRG1"
+      ],
+      "missing_evidence": [
+        "需要补充临床前转化成功率。"
+      ],
+      "confidence": 0.72,
+      "attributes": {
+        "logic": "研发转化"
+      }
+    },
+    {
+      "edge_id": "E-DRG-CLINICAL-CMC",
+      "from_node": "N-DRG-CLINICAL",
+      "to_node": "N-DRG-CMC",
+      "relation_type": "depends_on",
+      "evidence_refs": [
+        "EV-20260710-DRG2"
+      ],
+      "directionality": "directed",
+      "counter_evidence_refs": [
+        "EV-20260710-DRG2"
+      ],
+      "missing_evidence": [
+        "需要补充临床批与商业批的一致性数据。"
+      ],
+      "confidence": 0.69,
+      "attributes": {
+        "logic": "生产放大"
+      }
+    },
+    {
+      "edge_id": "E-DRG-CMC-COMMERCIAL",
+      "from_node": "N-DRG-CMC",
+      "to_node": "N-DRG-COMMERCIAL",
+      "relation_type": "supports",
+      "evidence_refs": [
+        "EV-20260710-DRG2"
+      ],
+      "directionality": "directed",
+      "counter_evidence_refs": [
+        "EV-20260710-DRG2"
+      ],
+      "missing_evidence": [
+        "需要补充商业化供应稳定性和质量体系检查结果。"
+      ],
+      "confidence": 0.68,
+      "attributes": {
+        "logic": "供应保障"
+      }
+    },
+    {
+      "edge_id": "E-DRG-ACCESS-COMMERCIAL",
+      "from_node": "N-DRG-ACCESS",
+      "to_node": "N-DRG-COMMERCIAL",
+      "relation_type": "affected_by",
+      "evidence_refs": [
+        "EV-20260710-DRG3"
+      ],
+      "directionality": "directed",
+      "counter_evidence_refs": [],
+      "missing_evidence": [
+        "需要补充医保谈判、院内准入和支付方数据。"
+      ],
+      "confidence": 0.66,
+      "attributes": {
+        "logic": "支付与准入"
+      }
+    }
+  ],
+  "path_analysis": [
+    {
+      "path_id": "PATH-N-DRG-INDUSTRY-N-DRG-DISCOVERY-N-DRG-CLINICAL-N-DRG-CMC-N-DRG-COMMERCIAL",
+      "node_path": [
+        "N-DRG-INDUSTRY",
+        "N-DRG-DISCOVERY",
+        "N-DRG-CLINICAL",
+        "N-DRG-CMC",
+        "N-DRG-COMMERCIAL"
+      ],
+      "node_labels": [
+        "创新药产业",
+        "靶点发现与候选药物",
+        "临床试验入组与终点验证",
+        "CMC 与放大生产",
+        "商业化放量"
+      ],
+      "edge_path": [
+        "E-DRG-IND-DISCOVERY",
+        "E-DRG-DISCOVERY-CLINICAL",
+        "E-DRG-CLINICAL-CMC",
+        "E-DRG-CMC-COMMERCIAL"
+      ],
+      "relation_types": [
+        "depends_on",
+        "depends_on",
+        "depends_on",
+        "supports"
+      ],
+      "evidence_refs": [
+        "EV-20260710-DRG1",
+        "EV-20260710-DRG2"
+      ],
+      "path_confidence": 0.6975,
+      "interpretation": "创新药产业 -> 靶点发现与候选药物 -> 临床试验入组与终点验证 -> CMC 与放大生产 -> 商业化放量"
+    }
+  ],
+  "chokepoint_analysis": [
+    {
+      "node_id": "N-DRG-CLINICAL",
+      "label": "临床试验入组与终点验证",
+      "chokepoint_score": 0.864,
+      "risk_level": "HIGH",
+      "drivers": [
+        "供给稀缺",
+        "替代难度高",
+        "扩产难度高",
+        "认证周期长",
+        "证据质量较高"
+      ],
+      "evidence_refs": [
+        "EV-20260710-DRG1",
+        "EV-20260710-DRG3"
+      ],
+      "counter_evidence_refs": [
+        "EV-20260710-DRG1",
+        "EV-20260710-DRG2"
+      ],
+      "missing_evidence": [
+        "需要补充分适应症入组效率、退出率和终点事件数。"
+      ]
+    }
+  ],
+  "metadata": {
+    "created_by": "Code Agent",
+    "created_at": "2026-07-10",
+    "example_type": "production_example"
+  },
+  "disclaimer": "本图谱仅用于 AIRS 投资研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+  "version": "0.1.0"
+}

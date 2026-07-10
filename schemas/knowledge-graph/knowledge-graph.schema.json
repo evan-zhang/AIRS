@@ -1,0 +1,231 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://airs.local/schemas/knowledge-graph/knowledge-graph.schema.json",
+  "title": "AIRS Knowledge Graph Schema",
+  "description": "定义 AIRS Knowledge Graph Engine 的节点、关系、Evidence 绑定、路径分析和卡脖子分析输出。本 Schema 仅用于投资研究质量控制，不构成投资建议。",
+  "type": "object",
+  "required": [
+    "graph_id",
+    "title",
+    "research_question",
+    "methodology_refs",
+    "evidence_cards",
+    "nodes",
+    "edges",
+    "path_analysis",
+    "chokepoint_analysis",
+    "disclaimer",
+    "version"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "graph_id": {
+      "type": "string",
+      "pattern": "^KG-[0-9]{8}-[A-Z0-9-]+$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 4
+    },
+    "research_question": {
+      "type": "string",
+      "minLength": 8
+    },
+    "methodology_refs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      },
+      "description": "M2 Methodology 引用，例如 supply-chain-chokepoint。"
+    },
+    "evidence_cards": {
+      "type": "object",
+      "minProperties": 1,
+      "description": "M3 Evidence Card 字典，键为 evidence_id。"
+    },
+    "nodes": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "$ref": "#/$defs/node"
+      }
+    },
+    "edges": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "$ref": "#/$defs/edge"
+      }
+    },
+    "path_analysis": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/pathAnalysis"
+      }
+    },
+    "chokepoint_analysis": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/chokepointAnalysis"
+      }
+    },
+    "metadata": {
+      "type": "object"
+    },
+    "disclaimer": {
+      "type": "string",
+      "pattern": "不构成投资建议"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    }
+  },
+  "$defs": {
+    "evidenceBinding": {
+      "type": "object",
+      "required": ["evidence_id", "claim_id", "relation", "strength"],
+      "additionalProperties": false,
+      "properties": {
+        "evidence_id": {
+          "type": "string",
+          "pattern": "^EV-[0-9]{8}-[A-Z0-9]{4,}$"
+        },
+        "claim_id": {
+          "type": "string"
+        },
+        "relation": {
+          "type": "string",
+          "enum": ["supports", "refutes", "contextualizes", "qualifies"]
+        },
+        "strength": {
+          "type": "string",
+          "enum": ["strong", "medium", "weak"]
+        }
+      }
+    },
+    "node": {
+      "type": "object",
+      "required": ["node_id", "node_type", "label", "source_refs", "confidence"],
+      "additionalProperties": false,
+      "properties": {
+        "node_id": {
+          "type": "string",
+          "pattern": "^N-[A-Z0-9-]+$"
+        },
+        "node_type": {
+          "type": "string",
+          "enum": ["company", "industry", "product", "supply_chain_node", "policy", "event", "evidence", "claim", "risk"]
+        },
+        "label": {
+          "type": "string",
+          "minLength": 2
+        },
+        "source_refs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "evidence_bindings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidenceBinding"
+          }
+        },
+        "attributes": {
+          "type": "object"
+        }
+      }
+    },
+    "edge": {
+      "type": "object",
+      "required": ["edge_id", "from_node", "to_node", "relation_type", "evidence_refs", "directionality"],
+      "additionalProperties": false,
+      "properties": {
+        "edge_id": {
+          "type": "string",
+          "pattern": "^E-[A-Z0-9-]+$"
+        },
+        "from_node": {
+          "type": "string"
+        },
+        "to_node": {
+          "type": "string"
+        },
+        "relation_type": {
+          "type": "string",
+          "enum": ["supports", "refutes", "depends_on", "belongs_to", "affected_by", "competes_with", "has_risk"]
+        },
+        "evidence_refs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "pattern": "^EV-[0-9]{8}-[A-Z0-9]{4,}$"
+          }
+        },
+        "directionality": {
+          "type": "string",
+          "enum": ["directed", "undirected"]
+        },
+        "counter_evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "missing_evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "attributes": {
+          "type": "object"
+        }
+      }
+    },
+    "pathAnalysis": {
+      "type": "object",
+      "required": ["path_id", "node_path", "edge_path", "evidence_refs", "path_confidence"],
+      "additionalProperties": true,
+      "properties": {
+        "path_id": { "type": "string" },
+        "node_path": { "type": "array", "minItems": 2, "items": { "type": "string" } },
+        "edge_path": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "evidence_refs": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "path_confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "chokepointAnalysis": {
+      "type": "object",
+      "required": ["node_id", "label", "chokepoint_score", "risk_level", "drivers", "evidence_refs", "missing_evidence"],
+      "additionalProperties": true,
+      "properties": {
+        "node_id": { "type": "string" },
+        "label": { "type": "string" },
+        "chokepoint_score": { "type": "number", "minimum": 0, "maximum": 1 },
+        "risk_level": { "type": "string", "enum": ["LOW", "MEDIUM", "HIGH"] },
+        "drivers": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "evidence_refs": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "counter_evidence_refs": { "type": "array", "items": { "type": "string" } },
+        "missing_evidence": { "type": "array", "minItems": 1, "items": { "type": "string" } }
+      }
+    }
+  }
+}

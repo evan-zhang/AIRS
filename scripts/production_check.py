@@ -21,6 +21,8 @@ VALIDATORS = [
     "scripts/validate_benchmark.py",
     "scripts/validate_examples.py",
     "scripts/validate_release.py",
+    "scripts/validate_builder.py",
+    "scripts/validate_knowledge_graph.py",
 ]
 
 

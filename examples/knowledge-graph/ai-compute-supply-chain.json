@@ -1,0 +1,463 @@
+{
+  "graph_id": "KG-20260710-AI-COMPUTE",
+  "title": "AI 算力供应链知识图谱",
+  "research_question": "AI 服务器需求增长下，哪些供应链环节可能形成卡脖子约束？",
+  "methodology_refs": [
+    "supply-chain-chokepoint",
+    "evidence-chain",
+    "counter-consensus"
+  ],
+  "evidence_cards": {
+    "EV-20260710-AIC1": {
+      "evidence_id": "EV-20260710-AIC1",
+      "title": "AI 加速器与高带宽内存需求联动",
+      "category": "supply_chain",
+      "source": "AIRS 示例证据库",
+      "source_type": "industry_report",
+      "url": "internal://airs/examples/ai-compute/evidence-1",
+      "publication_time": "2026-07-10T00:00:00+08:00",
+      "collection_time": "2026-07-10T09:00:00+08:00",
+      "confidence": 0.78,
+      "evidence_level": "B",
+      "supports": [
+        {
+          "claim_id": "CL-AIC-HBM",
+          "statement": "AI 加速器需求会放大 HBM 和先进封装的配套约束。",
+          "strength": "strong"
+        }
+      ],
+      "refutes": [
+        {
+          "claim_id": "CL-AIC-NO-BOTTLENECK",
+          "statement": "若 HBM 与封装扩产同步落地，瓶颈强度会下降。",
+          "strength": "medium"
+        }
+      ],
+      "missing_evidence": [
+        "仍需跟踪各供应商季度产能与客户认证节奏。"
+      ],
+      "weight": 0.36,
+      "traceability": {
+        "collected_by": "Research Agent",
+        "collection_method": "示例化证据卡整理",
+        "source_locator": "examples/knowledge-graph/ai-compute-supply-chain.json",
+        "transformations": [
+          "结构化为 Evidence Card"
+        ]
+      },
+      "version": "0.1.0"
+    },
+    "EV-20260710-AIC2": {
+      "evidence_id": "EV-20260710-AIC2",
+      "title": "先进封装产能与验证周期约束",
+      "category": "supply_chain",
+      "source": "AIRS 示例证据库",
+      "source_type": "industry_report",
+      "url": "internal://airs/examples/ai-compute/evidence-2",
+      "publication_time": "2026-07-10T00:00:00+08:00",
+      "collection_time": "2026-07-10T09:10:00+08:00",
+      "confidence": 0.74,
+      "evidence_level": "B",
+      "supports": [
+        {
+          "claim_id": "CL-AIC-PACKAGE",
+          "statement": "先进封装具有产能、设备和客户验证多重约束。",
+          "strength": "strong"
+        }
+      ],
+      "refutes": [
+        {
+          "claim_id": "CL-AIC-PACKAGE-EXPANSION",
+          "statement": "新增封装产线释放可能缓解中期约束。",
+          "strength": "medium"
+        }
+      ],
+      "missing_evidence": [
+        "仍需补充不同封装技术路线的良率和排产数据。"
+      ],
+      "weight": 0.34,
+      "traceability": {
+        "collected_by": "Research Agent",
+        "collection_method": "示例化证据卡整理",
+        "source_locator": "examples/knowledge-graph/ai-compute-supply-chain.json",
+        "transformations": [
+          "结构化为 Evidence Card"
+        ]
+      },
+      "version": "0.1.0"
+    },
+    "EV-20260710-AIC3": {
+      "evidence_id": "EV-20260710-AIC3",
+      "title": "高速互连与服务器交付不确定性",
+      "category": "counter_evidence",
+      "source": "AIRS 示例证据库",
+      "source_type": "expert_opinion",
+      "url": "internal://airs/examples/ai-compute/evidence-3",
+      "publication_time": "2026-07-10T00:00:00+08:00",
+      "collection_time": "2026-07-10T09:20:00+08:00",
+      "confidence": 0.62,
+      "evidence_level": "C",
+      "supports": [
+        {
+          "claim_id": "CL-AIC-NETWORK",
+          "statement": "高速互连与整机交付也可能成为约束。",
+          "strength": "medium"
+        }
+      ],
+      "refutes": [
+        {
+          "claim_id": "CL-AIC-HBM-ONLY",
+          "statement": "单一 HBM 视角不足以解释全部交付瓶颈。",
+          "strength": "medium"
+        }
+      ],
+      "missing_evidence": [
+        "需要补充交换芯片、光模块和整机厂交付数据。"
+      ],
+      "weight": 0.3,
+      "traceability": {
+        "collected_by": "Research Agent",
+        "collection_method": "示例化证据卡整理",
+        "source_locator": "examples/knowledge-graph/ai-compute-supply-chain.json",
+        "transformations": [
+          "结构化为 Evidence Card"
+        ]
+      },
+      "version": "0.1.0"
+    }
+  },
+  "nodes": [
+    {
+      "node_id": "N-AIC-INDUSTRY",
+      "node_type": "industry",
+      "label": "AI 算力产业",
+      "source_refs": [
+        "EV-20260710-AIC1"
+      ],
+      "confidence": 0.8,
+      "evidence_bindings": [
+        {
+          "evidence_id": "EV-20260710-AIC1",
+          "claim_id": "CL-AIC-HBM",
+          "relation": "contextualizes",
+          "strength": "medium"
+        }
+      ],
+      "attributes": {
+        "layer": "industry"
+      }
+    },
+    {
+      "node_id": "N-AIC-GPU",
+      "node_type": "product",
+      "label": "AI 加速器",
+      "source_refs": [
+        "EV-20260710-AIC1"
+      ],
+      "confidence": 0.82,
+      "evidence_bindings": [
+        {
+          "evidence_id": "EV-20260710-AIC1",
+          "claim_id": "CL-AIC-HBM",
+          "relation": "supports",
+          "strength": "strong"
+        }
+      ],
+      "attributes": {
+        "layer": "compute"
+      }
+    },
+    {
+      "node_id": "N-AIC-HBM",
+      "node_type": "supply_chain_node",
+      "label": "高带宽内存 HBM",
+      "source_refs": [
+        "EV-20260710-AIC1",
+        "EV-20260710-AIC3"
+      ],
+      "confidence": 0.78,
+      "evidence_bindings": [
+        {
+          "evidence_id": "EV-20260710-AIC1",
+          "claim_id": "CL-AIC-HBM",
+          "relation": "supports",
+          "strength": "strong"
+        }
+      ],
+      "attributes": {
+        "scarcity": 0.88,
+        "substitutability": 0.82,
+        "capacity_expansion_difficulty": 0.84,
+        "certification_cycle": 0.78,
+        "bargaining_power": 0.76,
+        "evidence_quality": 0.78,
+        "missing_evidence": [
+          "需要持续跟踪 HBM 供应商扩产、良率和客户认证节奏。"
+        ]
+      }
+    },
+    {
+      "node_id": "N-AIC-PACKAGE",
+      "node_type": "supply_chain_node",
+      "label": "先进封装",
+      "source_refs": [
+        "EV-20260710-AIC2"
+      ],
+      "confidence": 0.76,
+      "evidence_bindings": [
+        {
+          "evidence_id": "EV-20260710-AIC2",
+          "claim_id": "CL-AIC-PACKAGE",
+          "relation": "supports",
+          "strength": "strong"
+        }
+      ],
+      "attributes": {
+        "scarcity": 0.8,
+        "substitutability": 0.75,
+        "capacity_expansion_difficulty": 0.86,
+        "certification_cycle": 0.82,
+        "bargaining_power": 0.72,
+        "evidence_quality": 0.74,
+        "missing_evidence": [
+          "需要补充先进封装排产、设备交付和良率数据。"
+        ]
+      }
+    },
+    {
+      "node_id": "N-AIC-SERVER",
+      "node_type": "product",
+      "label": "AI 服务器",
+      "source_refs": [
+        "EV-20260710-AIC1",
+        "EV-20260710-AIC3"
+      ],
+      "confidence": 0.72,
+      "evidence_bindings": [
+        {
+          "evidence_id": "EV-20260710-AIC3",
+          "claim_id": "CL-AIC-NETWORK",
+          "relation": "qualifies",
+          "strength": "medium"
+        }
+      ],
+      "attributes": {
+        "scarcity": 0.52,
+        "substitutability": 0.45,
+        "capacity_expansion_difficulty": 0.55,
+        "certification_cycle": 0.58,
+        "bargaining_power": 0.5,
+        "evidence_quality": 0.62,
+        "missing_evidence": [
+          "需要补充整机交付周期和客户订单能见度。"
+        ]
+      }
+    },
+    {
+      "node_id": "N-AIC-RISK",
+      "node_type": "risk",
+      "label": "扩产缓解与需求波动风险",
+      "source_refs": [
+        "EV-20260710-AIC2",
+        "EV-20260710-AIC3"
+      ],
+      "confidence": 0.66,
+      "evidence_bindings": [
+        {
+          "evidence_id": "EV-20260710-AIC3",
+          "claim_id": "CL-AIC-HBM-ONLY",
+          "relation": "refutes",
+          "strength": "medium"
+        }
+      ],
+      "attributes": {
+        "risk_type": "counter_evidence"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "E-AIC-IND-GPU",
+      "from_node": "N-AIC-INDUSTRY",
+      "to_node": "N-AIC-GPU",
+      "relation_type": "depends_on",
+      "evidence_refs": [
+        "EV-20260710-AIC1"
+      ],
+      "directionality": "directed",
+      "counter_evidence_refs": [
+        "EV-20260710-AIC3"
+      ],
+      "missing_evidence": [
+        "需要补充不同下游客户的 AI 服务器订单能见度。"
+      ],
+      "confidence": 0.78,
+      "attributes": {
+        "logic": "需求传导"
+      }
+    },
+    {
+      "edge_id": "E-AIC-GPU-HBM",
+      "from_node": "N-AIC-GPU",
+      "to_node": "N-AIC-HBM",
+      "relation_type": "depends_on",
+      "evidence_refs": [
+        "EV-20260710-AIC1"
+      ],
+      "directionality": "directed",
+      "counter_evidence_refs": [
+        "EV-20260710-AIC3"
+      ],
+      "missing_evidence": [
+        "需要补充不同规格 HBM 的供需缺口。"
+      ],
+      "confidence": 0.8,
+      "attributes": {
+        "logic": "算力芯片配套"
+      }
+    },
+    {
+      "edge_id": "E-AIC-GPU-PACKAGE",
+      "from_node": "N-AIC-GPU",
+      "to_node": "N-AIC-PACKAGE",
+      "relation_type": "depends_on",
+      "evidence_refs": [
+        "EV-20260710-AIC2"
+      ],
+      "directionality": "directed",
+      "counter_evidence_refs": [
+        "EV-20260710-AIC2"
+      ],
+      "missing_evidence": [
+        "需要补充封装产线良率与排产数据。"
+      ],
+      "confidence": 0.76,
+      "attributes": {
+        "logic": "制造瓶颈"
+      }
+    },
+    {
+      "edge_id": "E-AIC-HBM-SERVER",
+      "from_node": "N-AIC-HBM",
+      "to_node": "N-AIC-SERVER",
+      "relation_type": "supports",
+      "evidence_refs": [
+        "EV-20260710-AIC1"
+      ],
+      "directionality": "directed",
+      "counter_evidence_refs": [
+        "EV-20260710-AIC3"
+      ],
+      "missing_evidence": [
+        "需要补充整机 BOM 中 HBM 配置变化。"
+      ],
+      "confidence": 0.74,
+      "attributes": {
+        "logic": "交付影响"
+      }
+    },
+    {
+      "edge_id": "E-AIC-PACKAGE-SERVER",
+      "from_node": "N-AIC-PACKAGE",
+      "to_node": "N-AIC-SERVER",
+      "relation_type": "supports",
+      "evidence_refs": [
+        "EV-20260710-AIC2"
+      ],
+      "directionality": "directed",
+      "counter_evidence_refs": [
+        "EV-20260710-AIC2"
+      ],
+      "missing_evidence": [
+        "需要补充封装交期对服务器出货的量化影响。"
+      ],
+      "confidence": 0.72,
+      "attributes": {
+        "logic": "交付影响"
+      }
+    },
+    {
+      "edge_id": "E-AIC-RISK-HBM",
+      "from_node": "N-AIC-RISK",
+      "to_node": "N-AIC-HBM",
+      "relation_type": "refutes",
+      "evidence_refs": [
+        "EV-20260710-AIC3"
+      ],
+      "directionality": "directed",
+      "counter_evidence_refs": [],
+      "missing_evidence": [
+        "需要跟踪扩产是否兑现。"
+      ],
+      "confidence": 0.62,
+      "attributes": {
+        "logic": "反方约束"
+      }
+    }
+  ],
+  "path_analysis": [
+    {
+      "path_id": "PATH-N-AIC-INDUSTRY-N-AIC-GPU-N-AIC-HBM-N-AIC-SERVER",
+      "node_path": [
+        "N-AIC-INDUSTRY",
+        "N-AIC-GPU",
+        "N-AIC-HBM",
+        "N-AIC-SERVER"
+      ],
+      "node_labels": [
+        "AI 算力产业",
+        "AI 加速器",
+        "高带宽内存 HBM",
+        "AI 服务器"
+      ],
+      "edge_path": [
+        "E-AIC-IND-GPU",
+        "E-AIC-GPU-HBM",
+        "E-AIC-HBM-SERVER"
+      ],
+      "relation_types": [
+        "depends_on",
+        "depends_on",
+        "supports"
+      ],
+      "evidence_refs": [
+        "EV-20260710-AIC1"
+      ],
+      "path_confidence": 0.7733,
+      "interpretation": "AI 算力产业 -> AI 加速器 -> 高带宽内存 HBM -> AI 服务器"
+    }
+  ],
+  "chokepoint_analysis": [
+    {
+      "node_id": "N-AIC-HBM",
+      "label": "高带宽内存 HBM",
+      "chokepoint_score": 0.9384,
+      "risk_level": "HIGH",
+      "drivers": [
+        "供给稀缺",
+        "替代难度高",
+        "扩产难度高",
+        "认证周期长",
+        "议价能力强",
+        "证据质量较高"
+      ],
+      "evidence_refs": [
+        "EV-20260710-AIC1",
+        "EV-20260710-AIC3"
+      ],
+      "counter_evidence_refs": [
+        "EV-20260710-AIC3"
+      ],
+      "missing_evidence": [
+        "需要持续跟踪 HBM 供应商扩产、良率和客户认证节奏。"
+      ]
+    }
+  ],
+  "metadata": {
+    "created_by": "Code Agent",
+    "created_at": "2026-07-10",
+    "example_type": "production_example"
+  },
+  "disclaimer": "本图谱仅用于 AIRS 投资研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+  "version": "0.1.0"
+}

@@ -1,17 +1,37 @@
-# Knowledge Graph Engine PR Checklist
+# FEATURE-002 PR Checklist - Knowledge Graph Engine
 
-- [ ] 10 个 Builder artifact 均存在。
-- [ ] Schema 为合法 JSON。
-- [ ] Skill 引用 `templates/skill-template.md` 与 M5 Skill Engine。
-- [ ] Prompt 引用 `templates/prompt-template.md` 与 M4 Prompt Engine。
-- [ ] Benchmark 引用 `templates/benchmark-template.md` 与 M7 Benchmark。
-- [ ] 图谱节点、边、反方证据、缺失证据和不确定性字段完整。
-- [ ] 未修改 M1-M8 已验收内容，或已新增 ADR 和 CHANGELOG 说明。
-- [ ] 运行 `python3 scripts/validate_builder.py`。
-- [ ] 运行 M1-M8 回归验证脚本。
-- [ ] 所有投资相关内容包含免责声明。
+## 1. 文件完整性
 
-## 免责声明
+- [ ] `ISSUE.md`
+- [ ] `ADR.md`
+- [ ] `FEATURE_SPEC.md`
+- [ ] `skill/<slug>-skill.md`
+- [ ] `prompt/<slug>-prompt.md`
+- [ ] `schema/<slug>.schema.json`
+- [ ] `tests/test-<slug>.md`
+- [ ] `benchmark/<slug>-benchmark.md`
+- [ ] `PR_CHECKLIST.md`
+- [ ] `RELEASE_NOTES.md`
 
-本 PR Checklist 仅用于 AIRS 工程开发与投资研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。
+## 2. 一致性
+
+- [ ] 引用 M2-M7 既有规范。
+- [ ] 未重复定义 Methodology / Evidence / Prompt / Skill / Score / Evaluation / Benchmark 规则。
+- [ ] 所有 JSON 文件可解析。
+- [ ] 所有 Markdown 有实质内容。
+
+## 3. 验证
+
+- [ ] `python3 scripts/validate_builder.py`
+- [ ] M1-M8 回归验证脚本。
+
+## 4. 合规
+
+- [ ] 包含免责声明。
+- [ ] 不构成投资建议。
+- [ ] 无荐股、自动交易、交易指令、目标价或收益承诺。
+
+## 5. 免责声明
+
+本生成物仅用于 AIRS 工程开发与研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。
 

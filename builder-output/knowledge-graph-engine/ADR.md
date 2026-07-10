@@ -1,35 +1,53 @@
-# ADR - Knowledge Graph Engine Feature Package
+# ADR - FEATURE-002 Knowledge Graph Engine
 
 **状态**：Proposed  
 **日期**：2026-07-10  
-**Feature**：FEATURE-KG-001  
+**Feature**：FEATURE-002  
 
-## 背景
+## 1. 背景
 
-AIRS V1.0 已具备方法论、证据、Prompt、Skill、Score、Evaluation 和 Benchmark 规范，但研究对象之间的结构关系仍主要散落在报告文本和 Evidence Chain 中。Knowledge Graph Engine 作为 Feature Package，先定义可交付的工程边界，再由 Code Agent 后续实现。
+为 AIRS 研究流程提供实体、关系、Evidence 绑定、路径分析和供应链卡脖子分析的最小可运行知识图谱引擎。
 
-## 决策
+## 2. 决策
 
-采用 Builder 生成的独立 Feature Package 承载 Knowledge Graph Engine。图谱层只表达实体关系和证据追溯，不重新定义证据等级、评分公式或方法论流程。
+为该 Feature 生成独立 Feature Package，并将开发入口、架构决策、规格、Skill、Prompt、Schema、测试、Benchmark、PR Checklist 和 Release Notes 放在 `builder-output/knowledge-graph-engine/`。
 
-## 备选方案
+## 3. 依赖引用
 
-- 直接修改 Evidence Engine：会扩大 M3 已验收内容变更范围，不适合作为首选。
-- 在 Report Layer 中嵌入关系表：难以被 Skill 和 Benchmark 复用。
-- 新增独立 Feature Package：能保持 M1-M8 稳定，并提供后续实现入口。
+- docs/methodology/supply-chain-chokepoint.md
+- docs/evidence/evidence-card-specification.md
+- schemas/evidence/evidence-card.schema.json
+- templates/skill-template.md
+- templates/prompt-template.md
+- templates/benchmark-template.md
 
-## 影响
+## 4. 约束
 
-- Code Agent 可基于 `schema/knowledge-graph.schema.json` 实现图谱结构。
-- Review Agent 可检查节点、边、Evidence ID、反方证据是否完整。
-- Verification Agent 可通过 Benchmark 验证输出质量。
+- 不得生成荐股内容、自动交易功能、交易指令、目标价或收益承诺。
+- 必须绑定 M3 Evidence Card，并兼容 M2 Methodology Layer。
+- 节点和关系类型必须受控，分析结果必须记录反方证据、缺失证据和不确定性。
 
-## 风险
+## 5. 影响
 
-- 图谱结构可能被误用为投资因果结论，因此必须保留置信度、不确定性和反方边。
-- 如果后续实现运行时，需要新增 ADR 说明存储、查询和可视化方案。
+- Code Agent 可以从 Package 直接进入开发。
+- Review Agent 可以围绕 ADR、Spec、Tests 和 Benchmark 审查。
+- Verification Agent 可以使用测试与 Benchmark 判断是否满足 Feature 目标。
+- Builder 不改变 M2-M7 的既有规则，只生成引用这些规则的开发材料。
 
-## 免责声明
+## 6. 后果
 
-本 ADR 仅用于 AIRS 工程开发与研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。
+正向后果：
+
+- Feature 开发输入标准化。
+- 回归与发布材料前置。
+- 合规边界在生成阶段显式化。
+
+潜在代价：
+
+- 模板需要随 AIRS 上游规范演进而维护。
+- 生成包仍需人工审查，不应被视为自动通过。
+
+## 7. 免责声明
+
+本生成物仅用于 AIRS 工程开发与研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。
 
