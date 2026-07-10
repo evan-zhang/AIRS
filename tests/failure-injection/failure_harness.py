@@ -7,6 +7,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from common.contract import CONTRACT_VERSION, runtime_task_from_planner_task
 from data_connectors.base import ConnectorConfig, ConnectorRequest, ConnectorResult, HealthStatus
 from data_connectors.connectors.news import NewsConnector
 from data_connectors.retry import run_with_retry
@@ -14,20 +15,6 @@ from knowledge_graph.builder import KnowledgeGraphBuilder
 from knowledge_graph.validator import KnowledgeGraphValidator
 from planner.engine import plan_research
 from runtime.core import RuntimeCore
-
-TASK_AGENT_MAP = {
-    "goal_analysis": "methodology_selector",
-    "scope": "methodology_selector",
-    "methodology_selection": "methodology_selector",
-    "connector_plan": "evidence_collector",
-    "skill_plan": "parallel_researcher",
-    "evidence_plan": "evidence_collector",
-    "knowledge_graph_plan": "parallel_researcher",
-    "score_plan": "report_composer",
-    "report_plan": "report_composer",
-    "review_plan": "human_reviewer",
-    "runtime_plan": "report_composer",
-}
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -45,16 +32,11 @@ def write_json(path: Path, payload: dict[str, Any]) -> None:
 
 def runtime_plan_for_core(plan: dict[str, Any]) -> dict[str, Any]:
     runtime_plan = dict(plan["required_runtime"])
+    runtime_plan["contract_version"] = CONTRACT_VERSION
     runtime_plan["tasks"] = [
-        {
-            **task,
-            "agent_id": TASK_AGENT_MAP.get(task["task_id"], "methodology_selector"),
-            "input": {"planner_task": task, "plan_id": plan["plan_id"]},
-            "refs": ["docs/runtime/runtime-architecture.md"],
-        }
+        runtime_task_from_planner_task(task, plan_id=plan["plan_id"])
         for task in runtime_plan.get("tasks", [])
     ]
-    runtime_plan["adapter"] = "tests.failure-injection.failure_harness.runtime_plan_for_core"
     return runtime_plan
 
 

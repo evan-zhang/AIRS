@@ -125,6 +125,12 @@ def write_report(summary: dict[str, Any]) -> None:
         )
     lines.extend(
         [
+            "## Planner -> Runtime Contract",
+            "",
+            "- Before fix: Planner produced `agent_role` in the task graph while RuntimeCore required `agent_id`; production E2E and failure-injection harnesses carried local `TASK_AGENT_MAP` adapters, so tests could pass while production had no single contract source.",
+            "- After fix: `common/contract.py` is the production contract. Planner runtime generation writes `contract_version`, `agent_id`, `input`, and `refs` for each task through `runtime_task_from_planner_task`; RuntimeCore normalizes incoming tasks through the same contract before dispatch.",
+            "- Regression posture: E2E and failure-injection harnesses no longer define local agent maps. They call `common.contract` only to preserve test metadata such as `case_id`.",
+            "",
             "## Evidence Trace Coverage",
             "",
             "- Execution Log: stored in each production artifact under `execution_log`.",
@@ -139,6 +145,17 @@ def write_report(summary: dict[str, Any]) -> None:
             "## Known Issues",
             "",
             f"See `{KNOWN_ISSUES_PATH.relative_to(ROOT)}`.",
+            "",
+            "## Full Validation Logs",
+            "",
+            "- `scripts/run_production_tests.py`: summarized in `docs/testing/artifacts/production-test-summary.json`.",
+            "- `scripts/validate_e2e.py`: `docs/testing/artifacts/validation-logs/validate_e2e.log`.",
+            "- Existing `scripts/validate_*.py`: `docs/testing/artifacts/validation-logs/`.",
+            "",
+            "## Integration Notes",
+            "",
+            "- Planner and Runtime now share `common.contract.CONTRACT_VERSION` and `resolve_agent_id`; local test-only mappings were removed from production E2E and failure-injection harnesses.",
+            "- `data_connectors/retry.py` remains covered by failure injection and `validate_connectors.py`.",
             "",
         ]
     )

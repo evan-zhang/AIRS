@@ -479,7 +479,7 @@
       ]
     }
   },
-  "completed_at": "2026-07-10T08:53:01.102407+00:00",
+  "completed_at": "2026-07-10T09:16:02.013099+00:00",
   "disclaimer": "仅用于 AIRS 投资研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
   "errors": [],
   "evidence_trace": [
@@ -511,12 +511,12 @@
         "disclaimer": "仅供 AIRS 工程开发和研究质量控制使用，不构成投资建议。",
         "source": "Public News",
         "source_type": "public_news",
-        "timestamp": "2026-07-10T08:53:01.102167+00:00",
-        "trace_id": "TRACE-146EE392B2C7",
+        "timestamp": "2026-07-10T09:16:02.012908+00:00",
+        "trace_id": "TRACE-444D6D2E85E9",
         "traceability": {
           "cache_hit": false,
           "connector": "news",
-          "request_id": "TRACE-146EE392B2C7",
+          "request_id": "TRACE-444D6D2E85E9",
           "transformations": [
             "mock_fetch",
             "normalize"
@@ -554,12 +554,12 @@
         "disclaimer": "仅供 AIRS 工程开发和研究质量控制使用，不构成投资建议。",
         "source": "Yahoo Finance",
         "source_type": "trusted_third_party",
-        "timestamp": "2026-07-10T08:53:01.102176+00:00",
-        "trace_id": "TRACE-6F7E85087ECB",
+        "timestamp": "2026-07-10T09:16:02.012915+00:00",
+        "trace_id": "TRACE-9AE01DFDEF1F",
         "traceability": {
           "cache_hit": false,
           "connector": "yahoo_finance",
-          "request_id": "TRACE-6F7E85087ECB",
+          "request_id": "TRACE-9AE01DFDEF1F",
           "transformations": [
             "mock_fetch",
             "normalize"
@@ -573,7 +573,7 @@
   "execution_log": [
     {
       "agent_id": null,
-      "event_id": "evt-31d964cc080c",
+      "event_id": "evt-e2943ee844a8",
       "event_type": "RUNTIME_STARTED",
       "payload": {
         "runtime_id": "runtime-from-planner-prod-e2e-03-innovative-drug",
@@ -582,47 +582,47 @@
       "session_id": null,
       "severity": "INFO",
       "task_id": null,
-      "timestamp": "2026-07-10T08:53:01.101280+00:00",
+      "timestamp": "2026-07-10T09:16:02.012387+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-98b47a838913",
+      "event_id": "evt-b0fc917cbbc1",
       "event_type": "TASK_DISPATCHED",
       "payload": {
         "agent_type": "sync"
       },
-      "session_id": "ses-65bd9e8f4b04",
+      "session_id": "ses-c260e4db864b",
       "severity": "INFO",
       "task_id": "goal_analysis",
-      "timestamp": "2026-07-10T08:53:01.101294+00:00",
+      "timestamp": "2026-07-10T09:16:02.012397+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-ad63cd3f3e0a",
+      "event_id": "evt-e77a5c365eb5",
       "event_type": "AGENT_INITIALIZED",
       "payload": {},
-      "session_id": "ses-65bd9e8f4b04",
+      "session_id": "ses-c260e4db864b",
       "severity": "INFO",
       "task_id": "goal_analysis",
-      "timestamp": "2026-07-10T08:53:01.101299+00:00",
+      "timestamp": "2026-07-10T09:16:02.012403+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-856996de46ce",
+      "event_id": "evt-0174edd23a46",
       "event_type": "AGENT_RUNNING",
       "payload": {},
-      "session_id": "ses-65bd9e8f4b04",
+      "session_id": "ses-c260e4db864b",
       "severity": "INFO",
       "task_id": "goal_analysis",
-      "timestamp": "2026-07-10T08:53:01.101304+00:00",
+      "timestamp": "2026-07-10T09:16:02.012407+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-0d20a2237b6b",
+      "event_id": "evt-43ef7fe932e5",
       "event_type": "AGENT_COMPLETED",
       "payload": {
         "agent_id": "methodology_selector",
@@ -634,50 +634,50 @@
         "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
         "task_id": "goal_analysis"
       },
-      "session_id": "ses-65bd9e8f4b04",
+      "session_id": "ses-c260e4db864b",
       "severity": "INFO",
       "task_id": "goal_analysis",
-      "timestamp": "2026-07-10T08:53:01.101310+00:00",
+      "timestamp": "2026-07-10T09:16:02.012412+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-75edcb92a916",
+      "event_id": "evt-04f8fd1aafff",
       "event_type": "TASK_DISPATCHED",
       "payload": {
         "agent_type": "sync"
       },
-      "session_id": "ses-d0935b840608",
+      "session_id": "ses-104b57130328",
       "severity": "INFO",
       "task_id": "scope",
-      "timestamp": "2026-07-10T08:53:01.101345+00:00",
+      "timestamp": "2026-07-10T09:16:02.012434+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-354617f3d84b",
+      "event_id": "evt-49ee03a0f086",
       "event_type": "AGENT_INITIALIZED",
       "payload": {},
-      "session_id": "ses-d0935b840608",
+      "session_id": "ses-104b57130328",
       "severity": "INFO",
       "task_id": "scope",
-      "timestamp": "2026-07-10T08:53:01.101350+00:00",
+      "timestamp": "2026-07-10T09:16:02.012437+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-86a7e287e6fa",
+      "event_id": "evt-df395cc47430",
       "event_type": "AGENT_RUNNING",
       "payload": {},
-      "session_id": "ses-d0935b840608",
+      "session_id": "ses-104b57130328",
       "severity": "INFO",
       "task_id": "scope",
-      "timestamp": "2026-07-10T08:53:01.101356+00:00",
+      "timestamp": "2026-07-10T09:16:02.012440+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-0026df7fc45c",
+      "event_id": "evt-de63291e391b",
       "event_type": "AGENT_COMPLETED",
       "payload": {
         "agent_id": "methodology_selector",
@@ -689,50 +689,50 @@
         "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
         "task_id": "scope"
       },
-      "session_id": "ses-d0935b840608",
+      "session_id": "ses-104b57130328",
       "severity": "INFO",
       "task_id": "scope",
-      "timestamp": "2026-07-10T08:53:01.101363+00:00",
+      "timestamp": "2026-07-10T09:16:02.012445+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-8d9bfc1f4826",
+      "event_id": "evt-0929170f616c",
       "event_type": "TASK_DISPATCHED",
       "payload": {
         "agent_type": "sync"
       },
-      "session_id": "ses-63bb82224d74",
+      "session_id": "ses-c8546a12cb38",
       "severity": "INFO",
       "task_id": "methodology_selection",
-      "timestamp": "2026-07-10T08:53:01.101398+00:00",
+      "timestamp": "2026-07-10T09:16:02.012464+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-d6840577d50d",
+      "event_id": "evt-dc43b8fa9daf",
       "event_type": "AGENT_INITIALIZED",
       "payload": {},
-      "session_id": "ses-63bb82224d74",
+      "session_id": "ses-c8546a12cb38",
       "severity": "INFO",
       "task_id": "methodology_selection",
-      "timestamp": "2026-07-10T08:53:01.101403+00:00",
+      "timestamp": "2026-07-10T09:16:02.012467+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-3a500f1b9008",
+      "event_id": "evt-015c32d6a3db",
       "event_type": "AGENT_RUNNING",
       "payload": {},
-      "session_id": "ses-63bb82224d74",
+      "session_id": "ses-c8546a12cb38",
       "severity": "INFO",
       "task_id": "methodology_selection",
-      "timestamp": "2026-07-10T08:53:01.101408+00:00",
+      "timestamp": "2026-07-10T09:16:02.012469+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-430963c267e4",
+      "event_id": "evt-b4da22174e53",
       "event_type": "AGENT_COMPLETED",
       "payload": {
         "agent_id": "methodology_selector",
@@ -744,50 +744,50 @@
         "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
         "task_id": "methodology_selection"
       },
-      "session_id": "ses-63bb82224d74",
+      "session_id": "ses-c8546a12cb38",
       "severity": "INFO",
       "task_id": "methodology_selection",
-      "timestamp": "2026-07-10T08:53:01.101413+00:00",
+      "timestamp": "2026-07-10T09:16:02.012473+00:00",
       "trace_id": null
     },
     {
       "agent_id": "evidence_collector",
-      "event_id": "evt-daa074681f1e",
+      "event_id": "evt-9f1df3dbce5d",
       "event_type": "TASK_DISPATCHED",
       "payload": {
         "agent_type": "async"
       },
-      "session_id": "ses-13b9ef861c7d",
+      "session_id": "ses-f7179048f08e",
       "severity": "INFO",
       "task_id": "connector_plan",
-      "timestamp": "2026-07-10T08:53:01.101445+00:00",
+      "timestamp": "2026-07-10T09:16:02.012490+00:00",
       "trace_id": null
     },
     {
       "agent_id": "evidence_collector",
-      "event_id": "evt-eec499ab194e",
+      "event_id": "evt-c7cde7c334e8",
       "event_type": "AGENT_INITIALIZED",
       "payload": {},
-      "session_id": "ses-13b9ef861c7d",
+      "session_id": "ses-f7179048f08e",
       "severity": "INFO",
       "task_id": "connector_plan",
-      "timestamp": "2026-07-10T08:53:01.101450+00:00",
+      "timestamp": "2026-07-10T09:16:02.012493+00:00",
       "trace_id": null
     },
     {
       "agent_id": "evidence_collector",
-      "event_id": "evt-73cf03ab0d29",
+      "event_id": "evt-2096d679a7a2",
       "event_type": "AGENT_RUNNING",
       "payload": {},
-      "session_id": "ses-13b9ef861c7d",
+      "session_id": "ses-f7179048f08e",
       "severity": "INFO",
       "task_id": "connector_plan",
-      "timestamp": "2026-07-10T08:53:01.101455+00:00",
+      "timestamp": "2026-07-10T09:16:02.012497+00:00",
       "trace_id": null
     },
     {
       "agent_id": "evidence_collector",
-      "event_id": "evt-2216ed83f42e",
+      "event_id": "evt-dbab2e4815be",
       "event_type": "AGENT_COMPLETED",
       "payload": {
         "agent_id": "evidence_collector",
@@ -801,50 +801,50 @@
         "result": "采集并登记证据引用 已由 Runtime 调度完成",
         "task_id": "connector_plan"
       },
-      "session_id": "ses-13b9ef861c7d",
+      "session_id": "ses-f7179048f08e",
       "severity": "INFO",
       "task_id": "connector_plan",
-      "timestamp": "2026-07-10T08:53:01.101460+00:00",
+      "timestamp": "2026-07-10T09:16:02.012501+00:00",
       "trace_id": null
     },
     {
       "agent_id": "parallel_researcher",
-      "event_id": "evt-72983ecdf9f1",
+      "event_id": "evt-0690b83ad3ee",
       "event_type": "TASK_DISPATCHED",
       "payload": {
         "agent_type": "parallel"
       },
-      "session_id": "ses-ad6a38d58d73",
+      "session_id": "ses-0625b885295e",
       "severity": "INFO",
       "task_id": "skill_plan",
-      "timestamp": "2026-07-10T08:53:01.101493+00:00",
+      "timestamp": "2026-07-10T09:16:02.012518+00:00",
       "trace_id": null
     },
     {
       "agent_id": "parallel_researcher",
-      "event_id": "evt-3793b75ef5e8",
+      "event_id": "evt-62a884c177cb",
       "event_type": "AGENT_INITIALIZED",
       "payload": {},
-      "session_id": "ses-ad6a38d58d73",
+      "session_id": "ses-0625b885295e",
       "severity": "INFO",
       "task_id": "skill_plan",
-      "timestamp": "2026-07-10T08:53:01.101499+00:00",
+      "timestamp": "2026-07-10T09:16:02.012521+00:00",
       "trace_id": null
     },
     {
       "agent_id": "parallel_researcher",
-      "event_id": "evt-f33c687a7fdc",
+      "event_id": "evt-fa4bf769402b",
       "event_type": "AGENT_RUNNING",
       "payload": {},
-      "session_id": "ses-ad6a38d58d73",
+      "session_id": "ses-0625b885295e",
       "severity": "INFO",
       "task_id": "skill_plan",
-      "timestamp": "2026-07-10T08:53:01.101504+00:00",
+      "timestamp": "2026-07-10T09:16:02.012524+00:00",
       "trace_id": null
     },
     {
       "agent_id": "parallel_researcher",
-      "event_id": "evt-914e1a097222",
+      "event_id": "evt-05eb1881a095",
       "event_type": "AGENT_COMPLETED",
       "payload": {
         "agent_id": "parallel_researcher",
@@ -860,50 +860,50 @@
         "result": "并行拆分研究子任务 已由 Runtime 调度完成",
         "task_id": "skill_plan"
       },
-      "session_id": "ses-ad6a38d58d73",
+      "session_id": "ses-0625b885295e",
       "severity": "INFO",
       "task_id": "skill_plan",
-      "timestamp": "2026-07-10T08:53:01.101510+00:00",
+      "timestamp": "2026-07-10T09:16:02.012528+00:00",
       "trace_id": null
     },
     {
       "agent_id": "evidence_collector",
-      "event_id": "evt-42493c4f20a1",
+      "event_id": "evt-dc2e12faa68a",
       "event_type": "TASK_DISPATCHED",
       "payload": {
         "agent_type": "async"
       },
-      "session_id": "ses-b27b0600b990",
+      "session_id": "ses-9136e9b0363e",
       "severity": "INFO",
       "task_id": "evidence_plan",
-      "timestamp": "2026-07-10T08:53:01.101545+00:00",
+      "timestamp": "2026-07-10T09:16:02.012548+00:00",
       "trace_id": null
     },
     {
       "agent_id": "evidence_collector",
-      "event_id": "evt-35ecb41c6983",
+      "event_id": "evt-a4688154ab7b",
       "event_type": "AGENT_INITIALIZED",
       "payload": {},
-      "session_id": "ses-b27b0600b990",
+      "session_id": "ses-9136e9b0363e",
       "severity": "INFO",
       "task_id": "evidence_plan",
-      "timestamp": "2026-07-10T08:53:01.101549+00:00",
+      "timestamp": "2026-07-10T09:16:02.012552+00:00",
       "trace_id": null
     },
     {
       "agent_id": "evidence_collector",
-      "event_id": "evt-b9b26580b4e6",
+      "event_id": "evt-defb8a6b500c",
       "event_type": "AGENT_RUNNING",
       "payload": {},
-      "session_id": "ses-b27b0600b990",
+      "session_id": "ses-9136e9b0363e",
       "severity": "INFO",
       "task_id": "evidence_plan",
-      "timestamp": "2026-07-10T08:53:01.101553+00:00",
+      "timestamp": "2026-07-10T09:16:02.012555+00:00",
       "trace_id": null
     },
     {
       "agent_id": "evidence_collector",
-      "event_id": "evt-e0cccbed506f",
+      "event_id": "evt-f8f11ac4f877",
       "event_type": "AGENT_COMPLETED",
       "payload": {
         "agent_id": "evidence_collector",
@@ -917,50 +917,50 @@
         "result": "采集并登记证据引用 已由 Runtime 调度完成",
         "task_id": "evidence_plan"
       },
-      "session_id": "ses-b27b0600b990",
+      "session_id": "ses-9136e9b0363e",
       "severity": "INFO",
       "task_id": "evidence_plan",
-      "timestamp": "2026-07-10T08:53:01.101559+00:00",
+      "timestamp": "2026-07-10T09:16:02.012559+00:00",
       "trace_id": null
     },
     {
       "agent_id": "parallel_researcher",
-      "event_id": "evt-c1ca571f1273",
+      "event_id": "evt-af92cfeb103b",
       "event_type": "TASK_DISPATCHED",
       "payload": {
         "agent_type": "parallel"
       },
-      "session_id": "ses-d94d094fd2e3",
+      "session_id": "ses-ff3a84c1fcfa",
       "severity": "INFO",
       "task_id": "knowledge_graph_plan",
-      "timestamp": "2026-07-10T08:53:01.101592+00:00",
+      "timestamp": "2026-07-10T09:16:02.012576+00:00",
       "trace_id": null
     },
     {
       "agent_id": "parallel_researcher",
-      "event_id": "evt-34b8a4b246e0",
+      "event_id": "evt-109d43d4caff",
       "event_type": "AGENT_INITIALIZED",
       "payload": {},
-      "session_id": "ses-d94d094fd2e3",
+      "session_id": "ses-ff3a84c1fcfa",
       "severity": "INFO",
       "task_id": "knowledge_graph_plan",
-      "timestamp": "2026-07-10T08:53:01.101597+00:00",
+      "timestamp": "2026-07-10T09:16:02.012579+00:00",
       "trace_id": null
     },
     {
       "agent_id": "parallel_researcher",
-      "event_id": "evt-7b83f5ec4863",
+      "event_id": "evt-5350c4b676e9",
       "event_type": "AGENT_RUNNING",
       "payload": {},
-      "session_id": "ses-d94d094fd2e3",
+      "session_id": "ses-ff3a84c1fcfa",
       "severity": "INFO",
       "task_id": "knowledge_graph_plan",
-      "timestamp": "2026-07-10T08:53:01.101601+00:00",
+      "timestamp": "2026-07-10T09:16:02.012582+00:00",
       "trace_id": null
     },
     {
       "agent_id": "parallel_researcher",
-      "event_id": "evt-cf38a7667e2c",
+      "event_id": "evt-487b19234d31",
       "event_type": "AGENT_COMPLETED",
       "payload": {
         "agent_id": "parallel_researcher",
@@ -976,50 +976,50 @@
         "result": "并行拆分研究子任务 已由 Runtime 调度完成",
         "task_id": "knowledge_graph_plan"
       },
-      "session_id": "ses-d94d094fd2e3",
+      "session_id": "ses-ff3a84c1fcfa",
       "severity": "INFO",
       "task_id": "knowledge_graph_plan",
-      "timestamp": "2026-07-10T08:53:01.101607+00:00",
+      "timestamp": "2026-07-10T09:16:02.012585+00:00",
       "trace_id": null
     },
     {
       "agent_id": "report_composer",
-      "event_id": "evt-162e58403871",
+      "event_id": "evt-9da75fa9c6a0",
       "event_type": "TASK_DISPATCHED",
       "payload": {
         "agent_type": "sync"
       },
-      "session_id": "ses-bae3f54d4b43",
+      "session_id": "ses-62f540f72dce",
       "severity": "INFO",
       "task_id": "score_plan",
-      "timestamp": "2026-07-10T08:53:01.101641+00:00",
+      "timestamp": "2026-07-10T09:16:02.012603+00:00",
       "trace_id": null
     },
     {
       "agent_id": "report_composer",
-      "event_id": "evt-f007512353d4",
+      "event_id": "evt-6a203eb4eecf",
       "event_type": "AGENT_INITIALIZED",
       "payload": {},
-      "session_id": "ses-bae3f54d4b43",
+      "session_id": "ses-62f540f72dce",
       "severity": "INFO",
       "task_id": "score_plan",
-      "timestamp": "2026-07-10T08:53:01.101647+00:00",
+      "timestamp": "2026-07-10T09:16:02.012607+00:00",
       "trace_id": null
     },
     {
       "agent_id": "report_composer",
-      "event_id": "evt-a00823e9385b",
+      "event_id": "evt-157419ad80fe",
       "event_type": "AGENT_RUNNING",
       "payload": {},
-      "session_id": "ses-bae3f54d4b43",
+      "session_id": "ses-62f540f72dce",
       "severity": "INFO",
       "task_id": "score_plan",
-      "timestamp": "2026-07-10T08:53:01.101652+00:00",
+      "timestamp": "2026-07-10T09:16:02.012611+00:00",
       "trace_id": null
     },
     {
       "agent_id": "report_composer",
-      "event_id": "evt-690638907ffc",
+      "event_id": "evt-c5cbf1309034",
       "event_type": "AGENT_COMPLETED",
       "payload": {
         "agent_id": "report_composer",
@@ -1032,50 +1032,50 @@
         "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
         "task_id": "score_plan"
       },
-      "session_id": "ses-bae3f54d4b43",
+      "session_id": "ses-62f540f72dce",
       "severity": "INFO",
       "task_id": "score_plan",
-      "timestamp": "2026-07-10T08:53:01.101657+00:00",
+      "timestamp": "2026-07-10T09:16:02.012615+00:00",
       "trace_id": null
     },
     {
       "agent_id": "report_composer",
-      "event_id": "evt-02415a6ba688",
+      "event_id": "evt-d1288060e955",
       "event_type": "TASK_DISPATCHED",
       "payload": {
         "agent_type": "sync"
       },
-      "session_id": "ses-51e259aad9fd",
+      "session_id": "ses-9392cdd14470",
       "severity": "INFO",
       "task_id": "report_plan",
-      "timestamp": "2026-07-10T08:53:01.101689+00:00",
+      "timestamp": "2026-07-10T09:16:02.012631+00:00",
       "trace_id": null
     },
     {
       "agent_id": "report_composer",
-      "event_id": "evt-8c94813e4a16",
+      "event_id": "evt-7da7232180c7",
       "event_type": "AGENT_INITIALIZED",
       "payload": {},
-      "session_id": "ses-51e259aad9fd",
+      "session_id": "ses-9392cdd14470",
       "severity": "INFO",
       "task_id": "report_plan",
-      "timestamp": "2026-07-10T08:53:01.101694+00:00",
+      "timestamp": "2026-07-10T09:16:02.012634+00:00",
       "trace_id": null
     },
     {
       "agent_id": "report_composer",
-      "event_id": "evt-1d67cdfba692",
+      "event_id": "evt-a582c4c38a55",
       "event_type": "AGENT_RUNNING",
       "payload": {},
-      "session_id": "ses-51e259aad9fd",
+      "session_id": "ses-9392cdd14470",
       "severity": "INFO",
       "task_id": "report_plan",
-      "timestamp": "2026-07-10T08:53:01.101698+00:00",
+      "timestamp": "2026-07-10T09:16:02.012637+00:00",
       "trace_id": null
     },
     {
       "agent_id": "report_composer",
-      "event_id": "evt-4221777f82e5",
+      "event_id": "evt-98e482863391",
       "event_type": "AGENT_COMPLETED",
       "payload": {
         "agent_id": "report_composer",
@@ -1088,50 +1088,50 @@
         "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
         "task_id": "report_plan"
       },
-      "session_id": "ses-51e259aad9fd",
+      "session_id": "ses-9392cdd14470",
       "severity": "INFO",
       "task_id": "report_plan",
-      "timestamp": "2026-07-10T08:53:01.101704+00:00",
+      "timestamp": "2026-07-10T09:16:02.012641+00:00",
       "trace_id": null
     },
     {
       "agent_id": "human_reviewer",
-      "event_id": "evt-b91bf413fd24",
+      "event_id": "evt-f071bef9caf6",
       "event_type": "TASK_DISPATCHED",
       "payload": {
         "agent_type": "human_in_the_loop"
       },
-      "session_id": "ses-1b33455a4571",
+      "session_id": "ses-9cc22b45e6e1",
       "severity": "INFO",
       "task_id": "review_plan",
-      "timestamp": "2026-07-10T08:53:01.101736+00:00",
+      "timestamp": "2026-07-10T09:16:02.012661+00:00",
       "trace_id": null
     },
     {
       "agent_id": "human_reviewer",
-      "event_id": "evt-0082d43ae482",
+      "event_id": "evt-da67915c9075",
       "event_type": "AGENT_INITIALIZED",
       "payload": {},
-      "session_id": "ses-1b33455a4571",
+      "session_id": "ses-9cc22b45e6e1",
       "severity": "INFO",
       "task_id": "review_plan",
-      "timestamp": "2026-07-10T08:53:01.101741+00:00",
+      "timestamp": "2026-07-10T09:16:02.012664+00:00",
       "trace_id": null
     },
     {
       "agent_id": "human_reviewer",
-      "event_id": "evt-ae1af8e682d4",
+      "event_id": "evt-8bc370097b32",
       "event_type": "AGENT_RUNNING",
       "payload": {},
-      "session_id": "ses-1b33455a4571",
+      "session_id": "ses-9cc22b45e6e1",
       "severity": "INFO",
       "task_id": "review_plan",
-      "timestamp": "2026-07-10T08:53:01.101746+00:00",
+      "timestamp": "2026-07-10T09:16:02.012667+00:00",
       "trace_id": null
     },
     {
       "agent_id": "human_reviewer",
-      "event_id": "evt-0d4c40946895",
+      "event_id": "evt-37ac0bd11b2d",
       "event_type": "AGENT_WAITING_FOR_HUMAN",
       "payload": {
         "agent_id": "human_reviewer",
@@ -1144,50 +1144,50 @@
         "result": "人工确认或补充输入 已由 Runtime 调度完成",
         "task_id": "review_plan"
       },
-      "session_id": "ses-1b33455a4571",
+      "session_id": "ses-9cc22b45e6e1",
       "severity": "INFO",
       "task_id": "review_plan",
-      "timestamp": "2026-07-10T08:53:01.101753+00:00",
+      "timestamp": "2026-07-10T09:16:02.012670+00:00",
       "trace_id": null
     },
     {
       "agent_id": "report_composer",
-      "event_id": "evt-f17fe9ca7d6e",
+      "event_id": "evt-70dd494a848a",
       "event_type": "TASK_DISPATCHED",
       "payload": {
         "agent_type": "sync"
       },
-      "session_id": "ses-6abedfd4e75f",
+      "session_id": "ses-c12d0dc83667",
       "severity": "INFO",
       "task_id": "runtime_plan",
-      "timestamp": "2026-07-10T08:53:01.101786+00:00",
+      "timestamp": "2026-07-10T09:16:02.012686+00:00",
       "trace_id": null
     },
     {
       "agent_id": "report_composer",
-      "event_id": "evt-cad469a5f530",
+      "event_id": "evt-b5d198a170df",
       "event_type": "AGENT_INITIALIZED",
       "payload": {},
-      "session_id": "ses-6abedfd4e75f",
+      "session_id": "ses-c12d0dc83667",
       "severity": "INFO",
       "task_id": "runtime_plan",
-      "timestamp": "2026-07-10T08:53:01.101791+00:00",
+      "timestamp": "2026-07-10T09:16:02.012689+00:00",
       "trace_id": null
     },
     {
       "agent_id": "report_composer",
-      "event_id": "evt-e7b85b98d0f8",
+      "event_id": "evt-699d6abd481c",
       "event_type": "AGENT_RUNNING",
       "payload": {},
-      "session_id": "ses-6abedfd4e75f",
+      "session_id": "ses-c12d0dc83667",
       "severity": "INFO",
       "task_id": "runtime_plan",
-      "timestamp": "2026-07-10T08:53:01.101796+00:00",
+      "timestamp": "2026-07-10T09:16:02.012692+00:00",
       "trace_id": null
     },
     {
       "agent_id": "report_composer",
-      "event_id": "evt-914ff6dc1bc4",
+      "event_id": "evt-9bda2eace3e8",
       "event_type": "AGENT_COMPLETED",
       "payload": {
         "agent_id": "report_composer",
@@ -1200,15 +1200,15 @@
         "result": "汇总 Runtime 输出为报告输入 已由 Runtime 调度完成",
         "task_id": "runtime_plan"
       },
-      "session_id": "ses-6abedfd4e75f",
+      "session_id": "ses-c12d0dc83667",
       "severity": "INFO",
       "task_id": "runtime_plan",
-      "timestamp": "2026-07-10T08:53:01.101802+00:00",
+      "timestamp": "2026-07-10T09:16:02.012696+00:00",
       "trace_id": null
     },
     {
       "agent_id": null,
-      "event_id": "evt-0d627aa1d0e4",
+      "event_id": "evt-f49e89619028",
       "event_type": "RUNTIME_COMPLETED",
       "payload": {
         "runtime_id": "runtime-from-planner-prod-e2e-03-innovative-drug",
@@ -1217,7 +1217,7 @@
       "session_id": null,
       "severity": "INFO",
       "task_id": null,
-      "timestamp": "2026-07-10T08:53:01.101831+00:00",
+      "timestamp": "2026-07-10T09:16:02.012713+00:00",
       "trace_id": null
     }
   ],
@@ -1347,7 +1347,7 @@
           "node_id": "topic",
           "node_type": "industry",
           "source_refs": [
-            "connector-trace:TRACE-146EE392B2C7"
+            "connector-trace:TRACE-444D6D2E85E9"
           ]
         },
         {
@@ -1698,7 +1698,7 @@
       }
     ]
   },
-  "started_at": "2026-07-10T08:53:01.101234+00:00",
+  "started_at": "2026-07-10T09:16:02.012323+00:00",
   "status": "PASS",
   "title": "创新药管线端到端研究"
 }

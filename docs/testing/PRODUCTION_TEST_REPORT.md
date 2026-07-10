@@ -4,7 +4,7 @@
 
 - Version under test: v1.0.0-rc1
 - Branch: test/production-e2e-validation
-- Generated at: 2026-07-10T08:53:01.439204+00:00
+- Generated at: 2026-07-10T09:16:02.331198+00:00
 - Overall status: PASS
 - Production E2E: 8 PASS / 0 FAIL / 8 total
 - Failure Injection: 3 PASS / 0 FAIL / 3 total
@@ -90,6 +90,12 @@
 - Expected behavior: KG validator should intercept malformed schema data before report generation.
 - Failure reason: None
 
+## Planner -> Runtime Contract
+
+- Before fix: Planner produced `agent_role` in the task graph while RuntimeCore required `agent_id`; production E2E and failure-injection harnesses carried local `TASK_AGENT_MAP` adapters, so tests could pass while production had no single contract source.
+- After fix: `common/contract.py` is the production contract. Planner runtime generation writes `contract_version`, `agent_id`, `input`, and `refs` for each task through `runtime_task_from_planner_task`; RuntimeCore normalizes incoming tasks through the same contract before dispatch.
+- Regression posture: E2E and failure-injection harnesses no longer define local agent maps. They call `common.contract` only to preserve test metadata such as `case_id`.
+
 ## Evidence Trace Coverage
 
 - Execution Log: stored in each production artifact under `execution_log`.
@@ -113,5 +119,5 @@ See `docs/testing/KNOWN_ISSUES.md`.
 
 ## Integration Notes
 
-- Planner output uses `agent_role`, while `RuntimeCore` dispatch requires `agent_id`; production E2E uses an explicit adapter in `tests/production-e2e/e2e_harness.py` and records the adapter reason in runtime artifacts.
-- `data_connectors/retry.py` had an import-order syntax issue exposed by failure injection; the helper now imports cleanly and remains covered by `validate_connectors.py`.
+- Planner and Runtime now share `common.contract.CONTRACT_VERSION` and `resolve_agent_id`; local test-only mappings were removed from production E2E and failure-injection harnesses.
+- `data_connectors/retry.py` remains covered by failure injection and `validate_connectors.py`.

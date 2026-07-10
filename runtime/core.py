@@ -3,6 +3,7 @@ from __future__ import annotations
 from datetime import datetime, timezone
 from typing import Any
 from uuid import uuid4
+from common.contract import CONTRACT_VERSION, runtime_task_from_planner_task
 from .agent_registry import AgentRegistry, default_registry
 from .event_bus import EventBus
 from .message_bus import MessageBus
@@ -13,8 +14,11 @@ from .task_dispatcher import TaskDispatcher
 class RuntimeCore:
     def __init__(self, registry: AgentRegistry | None = None) -> None:
         self.registry = registry or default_registry(); self.event_bus = EventBus(); self.message_bus = MessageBus(self.event_bus); self.state_manager = StateManager(); self.resource_manager = ResourceManager(); self.dispatcher = TaskDispatcher(self.registry, self.event_bus, self.state_manager, self.resource_manager); self.monitor = RuntimeMonitor(self.event_bus, self.message_bus, self.state_manager)
+    def _normalize_tasks(self, workflow: dict[str, Any]) -> list[dict[str, Any]]:
+        plan_id = workflow.get("plan_id") or workflow.get("workflow_id", "runtime-workflow")
+        return [runtime_task_from_planner_task(task, plan_id=plan_id) for task in workflow.get("tasks", [])]
     def run_workflow(self, workflow: dict[str, Any]) -> dict[str, Any]:
-        runtime_id = workflow.get("runtime_id") or f"rt-{uuid4().hex[:12]}"; workflow_id = workflow.get("workflow_id", "workflow-runtime"); tasks = workflow.get("tasks", [])
+        runtime_id = workflow.get("runtime_id") or f"rt-{uuid4().hex[:12]}"; workflow_id = workflow.get("workflow_id", "workflow-runtime"); tasks = self._normalize_tasks(workflow); workflow = {**workflow, "contract_version": workflow.get("contract_version", CONTRACT_VERSION), "tasks": tasks}
         self.state_manager.set_runtime(runtime_id=runtime_id, workflow_id=workflow_id, started_at=datetime.now(timezone.utc).isoformat(), status="RUNNING"); self.event_bus.publish("RUNTIME_STARTED", payload={"runtime_id": runtime_id, "workflow_id": workflow_id})
         outputs = self.dispatcher.dispatch(runtime_id, workflow_id, tasks)
         self.state_manager.set_runtime(status="COMPLETED", completed_at=datetime.now(timezone.utc).isoformat()); self.event_bus.publish("RUNTIME_COMPLETED", payload={"runtime_id": runtime_id, "workflow_id": workflow_id})

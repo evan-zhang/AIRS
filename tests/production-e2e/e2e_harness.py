@@ -14,6 +14,7 @@ from pathlib import Path
 from typing import Any
 
 from committee.coordinator import run_committee
+from common.contract import CONTRACT_VERSION, runtime_task_from_planner_task
 from data_connectors.base import ConnectorRequest
 from data_connectors.registry import default_registry as default_connector_registry
 from investment_engine.pipeline import run_research
@@ -30,19 +31,6 @@ ROOT = Path(__file__).resolve().parents[2]
 ARTIFACT_ROOT = ROOT / "docs" / "testing" / "artifacts"
 DISCLAIMER_FRAGMENT = "不构成投资建议"
 STATEMENT_TYPES = {"Fact", "Inference", "Assumption", "Opinion"}
-TASK_AGENT_MAP = {
-    "goal_analysis": "methodology_selector",
-    "scope": "methodology_selector",
-    "methodology_selection": "methodology_selector",
-    "connector_plan": "evidence_collector",
-    "skill_plan": "parallel_researcher",
-    "evidence_plan": "evidence_collector",
-    "knowledge_graph_plan": "parallel_researcher",
-    "score_plan": "report_composer",
-    "report_plan": "report_composer",
-    "review_plan": "human_reviewer",
-    "runtime_plan": "report_composer",
-}
 
 
 @dataclass(frozen=True)
@@ -79,27 +67,14 @@ def build_investment_request(case: E2ECase) -> dict[str, Any]:
 
 
 def runtime_plan_for_core(plan: dict[str, Any], case_id: str) -> dict[str, Any]:
-    """Adapt planner runtime output to RuntimeCore task schema.
-
-    This keeps the planner-generated task graph intact while adding the concrete
-    runtime `agent_id` required by `runtime/task_dispatcher.py`.
-    """
+    """Attach case metadata while preserving the production contract."""
 
     runtime_plan = dict(plan["required_runtime"])
-    adapted_tasks = []
-    for task in runtime_plan.get("tasks", []):
-        adapted = dict(task)
-        adapted["agent_id"] = TASK_AGENT_MAP.get(task["task_id"], "methodology_selector")
-        adapted["input"] = {
-            "planner_task": task,
-            "plan_id": plan["plan_id"],
-            "case_id": case_id,
-        }
-        adapted["refs"] = [plan["infrastructure_refs"].get("runtime", "docs/runtime/runtime-architecture.md")]
-        adapted_tasks.append(adapted)
-    runtime_plan["tasks"] = adapted_tasks
-    runtime_plan["adapter"] = "tests.production-e2e.e2e_harness.runtime_plan_for_core"
-    runtime_plan["adapter_reason"] = "Planner task graph uses agent_role; RuntimeCore dispatch requires agent_id."
+    runtime_plan["contract_version"] = CONTRACT_VERSION
+    runtime_plan["tasks"] = [
+        runtime_task_from_planner_task(task, plan_id=plan["plan_id"], case_id=case_id)
+        for task in runtime_plan.get("tasks", [])
+    ]
     return runtime_plan
 
 

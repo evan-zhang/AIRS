@@ -1,5 +1,5 @@
 AIRS FEATURE-012 Autonomous Learning Engine Validation
-======================================================
+=====================================================
 PASS: docs/learning/learning-architecture.md exists
 PASS: docs/learning/learning-architecture.md has substantive content
 PASS: docs/learning/learning-architecture.md has disclaimer
@@ -11,7 +11,7 @@ PASS: docs/learning/learning-architecture.md avoids forbidden expression: 目标
 PASS: docs/learning/learning-architecture.md avoids forbidden expression: 应买入
 PASS: docs/learning/learning-architecture.md avoids forbidden expression: 应卖出
 PASS: docs/learning/learning-architecture.md avoids forbidden expression: 自动交易指令
-PASS: docs/learning/learning-architecture.md references learning concepts
+PASS: docs/learning/learning-architecture.md documents learning
 PASS: docs/learning/feedback-loop.md exists
 PASS: docs/learning/feedback-loop.md has substantive content
 PASS: docs/learning/feedback-loop.md has disclaimer
@@ -23,7 +23,7 @@ PASS: docs/learning/feedback-loop.md avoids forbidden expression: 目标价为
 PASS: docs/learning/feedback-loop.md avoids forbidden expression: 应买入
 PASS: docs/learning/feedback-loop.md avoids forbidden expression: 应卖出
 PASS: docs/learning/feedback-loop.md avoids forbidden expression: 自动交易指令
-PASS: docs/learning/feedback-loop.md references learning concepts
+PASS: docs/learning/feedback-loop.md documents learning
 PASS: docs/learning/outcome-tracking.md exists
 PASS: docs/learning/outcome-tracking.md has substantive content
 PASS: docs/learning/outcome-tracking.md has disclaimer
@@ -35,7 +35,7 @@ PASS: docs/learning/outcome-tracking.md avoids forbidden expression: 目标价�
 PASS: docs/learning/outcome-tracking.md avoids forbidden expression: 应买入
 PASS: docs/learning/outcome-tracking.md avoids forbidden expression: 应卖出
 PASS: docs/learning/outcome-tracking.md avoids forbidden expression: 自动交易指令
-PASS: docs/learning/outcome-tracking.md references learning concepts
+PASS: docs/learning/outcome-tracking.md documents learning
 PASS: docs/learning/pattern-mining.md exists
 PASS: docs/learning/pattern-mining.md has substantive content
 PASS: docs/learning/pattern-mining.md has disclaimer
@@ -47,7 +47,7 @@ PASS: docs/learning/pattern-mining.md avoids forbidden expression: 目标价为
 PASS: docs/learning/pattern-mining.md avoids forbidden expression: 应买入
 PASS: docs/learning/pattern-mining.md avoids forbidden expression: 应卖出
 PASS: docs/learning/pattern-mining.md avoids forbidden expression: 自动交易指令
-PASS: docs/learning/pattern-mining.md references learning concepts
+PASS: docs/learning/pattern-mining.md documents learning
 PASS: docs/learning/rule-generation.md exists
 PASS: docs/learning/rule-generation.md has substantive content
 PASS: docs/learning/rule-generation.md has disclaimer
@@ -59,7 +59,7 @@ PASS: docs/learning/rule-generation.md avoids forbidden expression: 目标价为
 PASS: docs/learning/rule-generation.md avoids forbidden expression: 应买入
 PASS: docs/learning/rule-generation.md avoids forbidden expression: 应卖出
 PASS: docs/learning/rule-generation.md avoids forbidden expression: 自动交易指令
-PASS: docs/learning/rule-generation.md references learning concepts
+PASS: docs/learning/rule-generation.md documents learning
 PASS: docs/learning/prompt-evolution.md exists
 PASS: docs/learning/prompt-evolution.md has substantive content
 PASS: docs/learning/prompt-evolution.md has disclaimer
@@ -71,7 +71,7 @@ PASS: docs/learning/prompt-evolution.md avoids forbidden expression: 目标价�
 PASS: docs/learning/prompt-evolution.md avoids forbidden expression: 应买入
 PASS: docs/learning/prompt-evolution.md avoids forbidden expression: 应卖出
 PASS: docs/learning/prompt-evolution.md avoids forbidden expression: 自动交易指令
-PASS: docs/learning/prompt-evolution.md references learning concepts
+PASS: docs/learning/prompt-evolution.md documents learning
 PASS: docs/learning/methodology-evolution.md exists
 PASS: docs/learning/methodology-evolution.md has substantive content
 PASS: docs/learning/methodology-evolution.md has disclaimer
@@ -83,7 +83,7 @@ PASS: docs/learning/methodology-evolution.md avoids forbidden expression: 目标
 PASS: docs/learning/methodology-evolution.md avoids forbidden expression: 应买入
 PASS: docs/learning/methodology-evolution.md avoids forbidden expression: 应卖出
 PASS: docs/learning/methodology-evolution.md avoids forbidden expression: 自动交易指令
-PASS: docs/learning/methodology-evolution.md references learning concepts
+PASS: docs/learning/methodology-evolution.md documents learning
 PASS: docs/learning/skill-evolution.md exists
 PASS: docs/learning/skill-evolution.md has substantive content
 PASS: docs/learning/skill-evolution.md has disclaimer
@@ -95,7 +95,7 @@ PASS: docs/learning/skill-evolution.md avoids forbidden expression: 目标价为
 PASS: docs/learning/skill-evolution.md avoids forbidden expression: 应买入
 PASS: docs/learning/skill-evolution.md avoids forbidden expression: 应卖出
 PASS: docs/learning/skill-evolution.md avoids forbidden expression: 自动交易指令
-PASS: docs/learning/skill-evolution.md references learning concepts
+PASS: docs/learning/skill-evolution.md documents learning
 PASS: docs/learning/score-optimization.md exists
 PASS: docs/learning/score-optimization.md has substantive content
 PASS: docs/learning/score-optimization.md has disclaimer
@@ -107,7 +107,7 @@ PASS: docs/learning/score-optimization.md avoids forbidden expression: 目标价
 PASS: docs/learning/score-optimization.md avoids forbidden expression: 应买入
 PASS: docs/learning/score-optimization.md avoids forbidden expression: 应卖出
 PASS: docs/learning/score-optimization.md avoids forbidden expression: 自动交易指令
-PASS: docs/learning/score-optimization.md references learning concepts
+PASS: docs/learning/score-optimization.md documents learning
 PASS: docs/learning/continuous-improvement.md exists
 PASS: docs/learning/continuous-improvement.md has substantive content
 PASS: docs/learning/continuous-improvement.md has disclaimer
@@ -119,7 +119,7 @@ PASS: docs/learning/continuous-improvement.md avoids forbidden expression: 目�
 PASS: docs/learning/continuous-improvement.md avoids forbidden expression: 应买入
 PASS: docs/learning/continuous-improvement.md avoids forbidden expression: 应卖出
 PASS: docs/learning/continuous-improvement.md avoids forbidden expression: 自动交易指令
-PASS: docs/learning/continuous-improvement.md references learning concepts
+PASS: docs/learning/continuous-improvement.md documents learning
 PASS: docs/learning/learning-governance.md exists
 PASS: docs/learning/learning-governance.md has substantive content
 PASS: docs/learning/learning-governance.md has disclaimer
@@ -131,7 +131,7 @@ PASS: docs/learning/learning-governance.md avoids forbidden expression: 目标�
 PASS: docs/learning/learning-governance.md avoids forbidden expression: 应买入
 PASS: docs/learning/learning-governance.md avoids forbidden expression: 应卖出
 PASS: docs/learning/learning-governance.md avoids forbidden expression: 自动交易指令
-PASS: docs/learning/learning-governance.md references learning concepts
+PASS: docs/learning/learning-governance.md documents learning
 PASS: learning/__init__.py exists
 PASS: learning/__init__.py has substantive content
 PASS: learning/__init__.py avoids forbidden expression: 建议买入
@@ -143,17 +143,6 @@ PASS: learning/__init__.py avoids forbidden expression: 应买入
 PASS: learning/__init__.py avoids forbidden expression: 应卖出
 PASS: learning/__init__.py avoids forbidden expression: 自动交易指令
 PASS: learning/__init__.py contains learning logic
-PASS: learning/manager.py exists
-PASS: learning/manager.py has substantive content
-PASS: learning/manager.py avoids forbidden expression: 建议买入
-PASS: learning/manager.py avoids forbidden expression: 建议卖出
-PASS: learning/manager.py avoids forbidden expression: 保证收益
-PASS: learning/manager.py avoids forbidden expression: 保证盈利
-PASS: learning/manager.py avoids forbidden expression: 目标价为
-PASS: learning/manager.py avoids forbidden expression: 应买入
-PASS: learning/manager.py avoids forbidden expression: 应卖出
-PASS: learning/manager.py avoids forbidden expression: 自动交易指令
-PASS: learning/manager.py contains learning logic
 PASS: learning/feedback.py exists
 PASS: learning/feedback.py has substantive content
 PASS: learning/feedback.py avoids forbidden expression: 建议买入
@@ -253,6 +242,17 @@ PASS: learning/consolidation.py avoids forbidden expression: 应买入
 PASS: learning/consolidation.py avoids forbidden expression: 应卖出
 PASS: learning/consolidation.py avoids forbidden expression: 自动交易指令
 PASS: learning/consolidation.py contains learning logic
+PASS: learning/manager.py exists
+PASS: learning/manager.py has substantive content
+PASS: learning/manager.py avoids forbidden expression: 建议买入
+PASS: learning/manager.py avoids forbidden expression: 建议卖出
+PASS: learning/manager.py avoids forbidden expression: 保证收益
+PASS: learning/manager.py avoids forbidden expression: 保证盈利
+PASS: learning/manager.py avoids forbidden expression: 目标价为
+PASS: learning/manager.py avoids forbidden expression: 应买入
+PASS: learning/manager.py avoids forbidden expression: 应卖出
+PASS: learning/manager.py avoids forbidden expression: 自动交易指令
+PASS: learning/manager.py contains learning logic
 PASS: learning/engine.py exists
 PASS: learning/engine.py has substantive content
 PASS: learning/engine.py avoids forbidden expression: 建议买入
@@ -436,150 +436,6 @@ PASS: docs/review/FEATURE_012_SELF_REVIEW.md avoids forbidden expression: 自动
 PASS: schemas/README documents learning schemas
 PASS: CHANGELOG documents FEATURE-012
 PASS: learning examples package exists
-PASS: learning/examples/company_learning.py exists
-PASS: learning/examples/company_learning.py has substantive content
-PASS: learning/examples/company_learning.py avoids forbidden expression: 建议买入
-PASS: learning/examples/company_learning.py avoids forbidden expression: 建议卖出
-PASS: learning/examples/company_learning.py avoids forbidden expression: 保证收益
-PASS: learning/examples/company_learning.py avoids forbidden expression: 保证盈利
-PASS: learning/examples/company_learning.py avoids forbidden expression: 目标价为
-PASS: learning/examples/company_learning.py avoids forbidden expression: 应买入
-PASS: learning/examples/company_learning.py avoids forbidden expression: 应卖出
-PASS: learning/examples/company_learning.py avoids forbidden expression: 自动交易指令
-PASS: learning/examples/company-learning.md exists
-PASS: learning/examples/company-learning.md has substantive content
-PASS: learning/examples/company-learning.md has disclaimer
-PASS: learning/examples/company-learning.md avoids forbidden expression: 建议买入
-PASS: learning/examples/company-learning.md avoids forbidden expression: 建议卖出
-PASS: learning/examples/company-learning.md avoids forbidden expression: 保证收益
-PASS: learning/examples/company-learning.md avoids forbidden expression: 保证盈利
-PASS: learning/examples/company-learning.md avoids forbidden expression: 目标价为
-PASS: learning/examples/company-learning.md avoids forbidden expression: 应买入
-PASS: learning/examples/company-learning.md avoids forbidden expression: 应卖出
-PASS: learning/examples/company-learning.md avoids forbidden expression: 自动交易指令
-PASS: learning/examples/company-learning.md contains Feedback Input
-PASS: learning/examples/company-learning.md contains Pattern Mining
-PASS: learning/examples/company-learning.md contains Rule Generation
-PASS: learning/examples/company-learning.md contains Optimization Suggestions
-PASS: learning/examples/company_learning.py outputs feedback
-PASS: learning/examples/company_learning.py outputs outcomes
-PASS: learning/examples/company_learning.py outputs patterns
-PASS: learning/examples/company_learning.py outputs rules
-PASS: learning/examples/company_learning.py outputs optimizations
-PASS: learning/examples/company_learning.py outputs governance
-PASS: learning/examples/company_learning.py outputs memory_consolidation
-PASS: learning/examples/company_learning.py does not auto apply
-PASS: learning/examples/company_learning.py generates rules
-PASS: learning/examples/company_learning.py generates optimizations
-PASS: learning/examples/company_learning.py carries disclaimer
-PASS: learning/examples/industry_learning.py exists
-PASS: learning/examples/industry_learning.py has substantive content
-PASS: learning/examples/industry_learning.py avoids forbidden expression: 建议买入
-PASS: learning/examples/industry_learning.py avoids forbidden expression: 建议卖出
-PASS: learning/examples/industry_learning.py avoids forbidden expression: 保证收益
-PASS: learning/examples/industry_learning.py avoids forbidden expression: 保证盈利
-PASS: learning/examples/industry_learning.py avoids forbidden expression: 目标价为
-PASS: learning/examples/industry_learning.py avoids forbidden expression: 应买入
-PASS: learning/examples/industry_learning.py avoids forbidden expression: 应卖出
-PASS: learning/examples/industry_learning.py avoids forbidden expression: 自动交易指令
-PASS: learning/examples/industry-learning.md exists
-PASS: learning/examples/industry-learning.md has substantive content
-PASS: learning/examples/industry-learning.md has disclaimer
-PASS: learning/examples/industry-learning.md avoids forbidden expression: 建议买入
-PASS: learning/examples/industry-learning.md avoids forbidden expression: 建议卖出
-PASS: learning/examples/industry-learning.md avoids forbidden expression: 保证收益
-PASS: learning/examples/industry-learning.md avoids forbidden expression: 保证盈利
-PASS: learning/examples/industry-learning.md avoids forbidden expression: 目标价为
-PASS: learning/examples/industry-learning.md avoids forbidden expression: 应买入
-PASS: learning/examples/industry-learning.md avoids forbidden expression: 应卖出
-PASS: learning/examples/industry-learning.md avoids forbidden expression: 自动交易指令
-PASS: learning/examples/industry-learning.md contains Feedback Input
-PASS: learning/examples/industry-learning.md contains Pattern Mining
-PASS: learning/examples/industry-learning.md contains Rule Generation
-PASS: learning/examples/industry-learning.md contains Optimization Suggestions
-PASS: learning/examples/industry_learning.py outputs feedback
-PASS: learning/examples/industry_learning.py outputs outcomes
-PASS: learning/examples/industry_learning.py outputs patterns
-PASS: learning/examples/industry_learning.py outputs rules
-PASS: learning/examples/industry_learning.py outputs optimizations
-PASS: learning/examples/industry_learning.py outputs governance
-PASS: learning/examples/industry_learning.py outputs memory_consolidation
-PASS: learning/examples/industry_learning.py does not auto apply
-PASS: learning/examples/industry_learning.py generates rules
-PASS: learning/examples/industry_learning.py generates optimizations
-PASS: learning/examples/industry_learning.py carries disclaimer
-PASS: learning/examples/theme_learning.py exists
-PASS: learning/examples/theme_learning.py has substantive content
-PASS: learning/examples/theme_learning.py avoids forbidden expression: 建议买入
-PASS: learning/examples/theme_learning.py avoids forbidden expression: 建议卖出
-PASS: learning/examples/theme_learning.py avoids forbidden expression: 保证收益
-PASS: learning/examples/theme_learning.py avoids forbidden expression: 保证盈利
-PASS: learning/examples/theme_learning.py avoids forbidden expression: 目标价为
-PASS: learning/examples/theme_learning.py avoids forbidden expression: 应买入
-PASS: learning/examples/theme_learning.py avoids forbidden expression: 应卖出
-PASS: learning/examples/theme_learning.py avoids forbidden expression: 自动交易指令
-PASS: learning/examples/theme-learning.md exists
-PASS: learning/examples/theme-learning.md has substantive content
-PASS: learning/examples/theme-learning.md has disclaimer
-PASS: learning/examples/theme-learning.md avoids forbidden expression: 建议买入
-PASS: learning/examples/theme-learning.md avoids forbidden expression: 建议卖出
-PASS: learning/examples/theme-learning.md avoids forbidden expression: 保证收益
-PASS: learning/examples/theme-learning.md avoids forbidden expression: 保证盈利
-PASS: learning/examples/theme-learning.md avoids forbidden expression: 目标价为
-PASS: learning/examples/theme-learning.md avoids forbidden expression: 应买入
-PASS: learning/examples/theme-learning.md avoids forbidden expression: 应卖出
-PASS: learning/examples/theme-learning.md avoids forbidden expression: 自动交易指令
-PASS: learning/examples/theme-learning.md contains Feedback Input
-PASS: learning/examples/theme-learning.md contains Pattern Mining
-PASS: learning/examples/theme-learning.md contains Rule Generation
-PASS: learning/examples/theme-learning.md contains Optimization Suggestions
-PASS: learning/examples/theme_learning.py outputs feedback
-PASS: learning/examples/theme_learning.py outputs outcomes
-PASS: learning/examples/theme_learning.py outputs patterns
-PASS: learning/examples/theme_learning.py outputs rules
-PASS: learning/examples/theme_learning.py outputs optimizations
-PASS: learning/examples/theme_learning.py outputs governance
-PASS: learning/examples/theme_learning.py outputs memory_consolidation
-PASS: learning/examples/theme_learning.py does not auto apply
-PASS: learning/examples/theme_learning.py generates rules
-PASS: learning/examples/theme_learning.py generates optimizations
-PASS: learning/examples/theme_learning.py carries disclaimer
-PASS: learning/examples/supply_chain_learning.py exists
-PASS: learning/examples/supply_chain_learning.py has substantive content
-PASS: learning/examples/supply_chain_learning.py avoids forbidden expression: 建议买入
-PASS: learning/examples/supply_chain_learning.py avoids forbidden expression: 建议卖出
-PASS: learning/examples/supply_chain_learning.py avoids forbidden expression: 保证收益
-PASS: learning/examples/supply_chain_learning.py avoids forbidden expression: 保证盈利
-PASS: learning/examples/supply_chain_learning.py avoids forbidden expression: 目标价为
-PASS: learning/examples/supply_chain_learning.py avoids forbidden expression: 应买入
-PASS: learning/examples/supply_chain_learning.py avoids forbidden expression: 应卖出
-PASS: learning/examples/supply_chain_learning.py avoids forbidden expression: 自动交易指令
-PASS: learning/examples/supply-chain-learning.md exists
-PASS: learning/examples/supply-chain-learning.md has substantive content
-PASS: learning/examples/supply-chain-learning.md has disclaimer
-PASS: learning/examples/supply-chain-learning.md avoids forbidden expression: 建议买入
-PASS: learning/examples/supply-chain-learning.md avoids forbidden expression: 建议卖出
-PASS: learning/examples/supply-chain-learning.md avoids forbidden expression: 保证收益
-PASS: learning/examples/supply-chain-learning.md avoids forbidden expression: 保证盈利
-PASS: learning/examples/supply-chain-learning.md avoids forbidden expression: 目标价为
-PASS: learning/examples/supply-chain-learning.md avoids forbidden expression: 应买入
-PASS: learning/examples/supply-chain-learning.md avoids forbidden expression: 应卖出
-PASS: learning/examples/supply-chain-learning.md avoids forbidden expression: 自动交易指令
-PASS: learning/examples/supply-chain-learning.md contains Feedback Input
-PASS: learning/examples/supply-chain-learning.md contains Pattern Mining
-PASS: learning/examples/supply-chain-learning.md contains Rule Generation
-PASS: learning/examples/supply-chain-learning.md contains Optimization Suggestions
-PASS: learning/examples/supply_chain_learning.py outputs feedback
-PASS: learning/examples/supply_chain_learning.py outputs outcomes
-PASS: learning/examples/supply_chain_learning.py outputs patterns
-PASS: learning/examples/supply_chain_learning.py outputs rules
-PASS: learning/examples/supply_chain_learning.py outputs optimizations
-PASS: learning/examples/supply_chain_learning.py outputs governance
-PASS: learning/examples/supply_chain_learning.py outputs memory_consolidation
-PASS: learning/examples/supply_chain_learning.py does not auto apply
-PASS: learning/examples/supply_chain_learning.py generates rules
-PASS: learning/examples/supply_chain_learning.py generates optimizations
-PASS: learning/examples/supply_chain_learning.py carries disclaimer
 PASS: learning/examples/evidence_learning.py exists
 PASS: learning/examples/evidence_learning.py has substantive content
 PASS: learning/examples/evidence_learning.py avoids forbidden expression: 建议买入
@@ -601,21 +457,190 @@ PASS: learning/examples/evidence-learning.md avoids forbidden expression: 目标
 PASS: learning/examples/evidence-learning.md avoids forbidden expression: 应买入
 PASS: learning/examples/evidence-learning.md avoids forbidden expression: 应卖出
 PASS: learning/examples/evidence-learning.md avoids forbidden expression: 自动交易指令
-PASS: learning/examples/evidence-learning.md contains Feedback Input
-PASS: learning/examples/evidence-learning.md contains Pattern Mining
-PASS: learning/examples/evidence-learning.md contains Rule Generation
-PASS: learning/examples/evidence-learning.md contains Optimization Suggestions
+PASS: learning/examples/evidence_learning.py outputs learning_id
 PASS: learning/examples/evidence_learning.py outputs feedback
 PASS: learning/examples/evidence_learning.py outputs outcomes
 PASS: learning/examples/evidence_learning.py outputs patterns
 PASS: learning/examples/evidence_learning.py outputs rules
 PASS: learning/examples/evidence_learning.py outputs optimizations
-PASS: learning/examples/evidence_learning.py outputs governance
 PASS: learning/examples/evidence_learning.py outputs memory_consolidation
-PASS: learning/examples/evidence_learning.py does not auto apply
-PASS: learning/examples/evidence_learning.py generates rules
-PASS: learning/examples/evidence_learning.py generates optimizations
+PASS: learning/examples/evidence_learning.py outputs disclaimer
+PASS: learning/examples/evidence_learning.py generates candidate learning rules
+PASS: learning/examples/evidence_learning.py generates optimization proposals
+PASS: learning/examples/evidence_learning.py returns memory governance status
 PASS: learning/examples/evidence_learning.py carries disclaimer
+PASS: learning/examples/evidence_learning.py avoids forbidden expression: 建议买入
+PASS: learning/examples/evidence_learning.py avoids forbidden expression: 建议卖出
+PASS: learning/examples/evidence_learning.py avoids forbidden expression: 保证收益
+PASS: learning/examples/evidence_learning.py avoids forbidden expression: 保证盈利
+PASS: learning/examples/evidence_learning.py avoids forbidden expression: 目标价为
+PASS: learning/examples/evidence_learning.py avoids forbidden expression: 应买入
+PASS: learning/examples/evidence_learning.py avoids forbidden expression: 应卖出
+PASS: learning/examples/evidence_learning.py avoids forbidden expression: 自动交易指令
+PASS: learning/examples/theme_learning.py exists
+PASS: learning/examples/theme_learning.py has substantive content
+PASS: learning/examples/theme_learning.py avoids forbidden expression: 建议买入
+PASS: learning/examples/theme_learning.py avoids forbidden expression: 建议卖出
+PASS: learning/examples/theme_learning.py avoids forbidden expression: 保证收益
+PASS: learning/examples/theme_learning.py avoids forbidden expression: 保证盈利
+PASS: learning/examples/theme_learning.py avoids forbidden expression: 目标价为
+PASS: learning/examples/theme_learning.py avoids forbidden expression: 应买入
+PASS: learning/examples/theme_learning.py avoids forbidden expression: 应卖出
+PASS: learning/examples/theme_learning.py avoids forbidden expression: 自动交易指令
+PASS: learning/examples/theme-learning.md exists
+PASS: learning/examples/theme-learning.md has substantive content
+PASS: learning/examples/theme-learning.md has disclaimer
+PASS: learning/examples/theme-learning.md avoids forbidden expression: 建议买入
+PASS: learning/examples/theme-learning.md avoids forbidden expression: 建议卖出
+PASS: learning/examples/theme-learning.md avoids forbidden expression: 保证收益
+PASS: learning/examples/theme-learning.md avoids forbidden expression: 保证盈利
+PASS: learning/examples/theme-learning.md avoids forbidden expression: 目标价为
+PASS: learning/examples/theme-learning.md avoids forbidden expression: 应买入
+PASS: learning/examples/theme-learning.md avoids forbidden expression: 应卖出
+PASS: learning/examples/theme-learning.md avoids forbidden expression: 自动交易指令
+PASS: learning/examples/theme_learning.py outputs learning_id
+PASS: learning/examples/theme_learning.py outputs feedback
+PASS: learning/examples/theme_learning.py outputs outcomes
+PASS: learning/examples/theme_learning.py outputs patterns
+PASS: learning/examples/theme_learning.py outputs rules
+PASS: learning/examples/theme_learning.py outputs optimizations
+PASS: learning/examples/theme_learning.py outputs memory_consolidation
+PASS: learning/examples/theme_learning.py outputs disclaimer
+PASS: learning/examples/theme_learning.py generates candidate learning rules
+PASS: learning/examples/theme_learning.py generates optimization proposals
+PASS: learning/examples/theme_learning.py returns memory governance status
+PASS: learning/examples/theme_learning.py carries disclaimer
+PASS: learning/examples/theme_learning.py avoids forbidden expression: 建议买入
+PASS: learning/examples/theme_learning.py avoids forbidden expression: 建议卖出
+PASS: learning/examples/theme_learning.py avoids forbidden expression: 保证收益
+PASS: learning/examples/theme_learning.py avoids forbidden expression: 保证盈利
+PASS: learning/examples/theme_learning.py avoids forbidden expression: 目标价为
+PASS: learning/examples/theme_learning.py avoids forbidden expression: 应买入
+PASS: learning/examples/theme_learning.py avoids forbidden expression: 应卖出
+PASS: learning/examples/theme_learning.py avoids forbidden expression: 自动交易指令
+PASS: learning/examples/supply_chain_learning.py exists
+PASS: learning/examples/supply_chain_learning.py has substantive content
+PASS: learning/examples/supply_chain_learning.py avoids forbidden expression: 建议买入
+PASS: learning/examples/supply_chain_learning.py avoids forbidden expression: 建议卖出
+PASS: learning/examples/supply_chain_learning.py avoids forbidden expression: 保证收益
+PASS: learning/examples/supply_chain_learning.py avoids forbidden expression: 保证盈利
+PASS: learning/examples/supply_chain_learning.py avoids forbidden expression: 目标价为
+PASS: learning/examples/supply_chain_learning.py avoids forbidden expression: 应买入
+PASS: learning/examples/supply_chain_learning.py avoids forbidden expression: 应卖出
+PASS: learning/examples/supply_chain_learning.py avoids forbidden expression: 自动交易指令
+PASS: learning/examples/supply-chain-learning.md exists
+PASS: learning/examples/supply-chain-learning.md has substantive content
+PASS: learning/examples/supply-chain-learning.md has disclaimer
+PASS: learning/examples/supply-chain-learning.md avoids forbidden expression: 建议买入
+PASS: learning/examples/supply-chain-learning.md avoids forbidden expression: 建议卖出
+PASS: learning/examples/supply-chain-learning.md avoids forbidden expression: 保证收益
+PASS: learning/examples/supply-chain-learning.md avoids forbidden expression: 保证盈利
+PASS: learning/examples/supply-chain-learning.md avoids forbidden expression: 目标价为
+PASS: learning/examples/supply-chain-learning.md avoids forbidden expression: 应买入
+PASS: learning/examples/supply-chain-learning.md avoids forbidden expression: 应卖出
+PASS: learning/examples/supply-chain-learning.md avoids forbidden expression: 自动交易指令
+PASS: learning/examples/supply_chain_learning.py outputs learning_id
+PASS: learning/examples/supply_chain_learning.py outputs feedback
+PASS: learning/examples/supply_chain_learning.py outputs outcomes
+PASS: learning/examples/supply_chain_learning.py outputs patterns
+PASS: learning/examples/supply_chain_learning.py outputs rules
+PASS: learning/examples/supply_chain_learning.py outputs optimizations
+PASS: learning/examples/supply_chain_learning.py outputs memory_consolidation
+PASS: learning/examples/supply_chain_learning.py outputs disclaimer
+PASS: learning/examples/supply_chain_learning.py generates candidate learning rules
+PASS: learning/examples/supply_chain_learning.py generates optimization proposals
+PASS: learning/examples/supply_chain_learning.py returns memory governance status
+PASS: learning/examples/supply_chain_learning.py carries disclaimer
+PASS: learning/examples/supply_chain_learning.py avoids forbidden expression: 建议买入
+PASS: learning/examples/supply_chain_learning.py avoids forbidden expression: 建议卖出
+PASS: learning/examples/supply_chain_learning.py avoids forbidden expression: 保证收益
+PASS: learning/examples/supply_chain_learning.py avoids forbidden expression: 保证盈利
+PASS: learning/examples/supply_chain_learning.py avoids forbidden expression: 目标价为
+PASS: learning/examples/supply_chain_learning.py avoids forbidden expression: 应买入
+PASS: learning/examples/supply_chain_learning.py avoids forbidden expression: 应卖出
+PASS: learning/examples/supply_chain_learning.py avoids forbidden expression: 自动交易指令
+PASS: learning/examples/industry_learning.py exists
+PASS: learning/examples/industry_learning.py has substantive content
+PASS: learning/examples/industry_learning.py avoids forbidden expression: 建议买入
+PASS: learning/examples/industry_learning.py avoids forbidden expression: 建议卖出
+PASS: learning/examples/industry_learning.py avoids forbidden expression: 保证收益
+PASS: learning/examples/industry_learning.py avoids forbidden expression: 保证盈利
+PASS: learning/examples/industry_learning.py avoids forbidden expression: 目标价为
+PASS: learning/examples/industry_learning.py avoids forbidden expression: 应买入
+PASS: learning/examples/industry_learning.py avoids forbidden expression: 应卖出
+PASS: learning/examples/industry_learning.py avoids forbidden expression: 自动交易指令
+PASS: learning/examples/industry-learning.md exists
+PASS: learning/examples/industry-learning.md has substantive content
+PASS: learning/examples/industry-learning.md has disclaimer
+PASS: learning/examples/industry-learning.md avoids forbidden expression: 建议买入
+PASS: learning/examples/industry-learning.md avoids forbidden expression: 建议卖出
+PASS: learning/examples/industry-learning.md avoids forbidden expression: 保证收益
+PASS: learning/examples/industry-learning.md avoids forbidden expression: 保证盈利
+PASS: learning/examples/industry-learning.md avoids forbidden expression: 目标价为
+PASS: learning/examples/industry-learning.md avoids forbidden expression: 应买入
+PASS: learning/examples/industry-learning.md avoids forbidden expression: 应卖出
+PASS: learning/examples/industry-learning.md avoids forbidden expression: 自动交易指令
+PASS: learning/examples/industry_learning.py outputs learning_id
+PASS: learning/examples/industry_learning.py outputs feedback
+PASS: learning/examples/industry_learning.py outputs outcomes
+PASS: learning/examples/industry_learning.py outputs patterns
+PASS: learning/examples/industry_learning.py outputs rules
+PASS: learning/examples/industry_learning.py outputs optimizations
+PASS: learning/examples/industry_learning.py outputs memory_consolidation
+PASS: learning/examples/industry_learning.py outputs disclaimer
+PASS: learning/examples/industry_learning.py generates candidate learning rules
+PASS: learning/examples/industry_learning.py generates optimization proposals
+PASS: learning/examples/industry_learning.py returns memory governance status
+PASS: learning/examples/industry_learning.py carries disclaimer
+PASS: learning/examples/industry_learning.py avoids forbidden expression: 建议买入
+PASS: learning/examples/industry_learning.py avoids forbidden expression: 建议卖出
+PASS: learning/examples/industry_learning.py avoids forbidden expression: 保证收益
+PASS: learning/examples/industry_learning.py avoids forbidden expression: 保证盈利
+PASS: learning/examples/industry_learning.py avoids forbidden expression: 目标价为
+PASS: learning/examples/industry_learning.py avoids forbidden expression: 应买入
+PASS: learning/examples/industry_learning.py avoids forbidden expression: 应卖出
+PASS: learning/examples/industry_learning.py avoids forbidden expression: 自动交易指令
+PASS: learning/examples/company_learning.py exists
+PASS: learning/examples/company_learning.py has substantive content
+PASS: learning/examples/company_learning.py avoids forbidden expression: 建议买入
+PASS: learning/examples/company_learning.py avoids forbidden expression: 建议卖出
+PASS: learning/examples/company_learning.py avoids forbidden expression: 保证收益
+PASS: learning/examples/company_learning.py avoids forbidden expression: 保证盈利
+PASS: learning/examples/company_learning.py avoids forbidden expression: 目标价为
+PASS: learning/examples/company_learning.py avoids forbidden expression: 应买入
+PASS: learning/examples/company_learning.py avoids forbidden expression: 应卖出
+PASS: learning/examples/company_learning.py avoids forbidden expression: 自动交易指令
+PASS: learning/examples/company-learning.md exists
+PASS: learning/examples/company-learning.md has substantive content
+PASS: learning/examples/company-learning.md has disclaimer
+PASS: learning/examples/company-learning.md avoids forbidden expression: 建议买入
+PASS: learning/examples/company-learning.md avoids forbidden expression: 建议卖出
+PASS: learning/examples/company-learning.md avoids forbidden expression: 保证收益
+PASS: learning/examples/company-learning.md avoids forbidden expression: 保证盈利
+PASS: learning/examples/company-learning.md avoids forbidden expression: 目标价为
+PASS: learning/examples/company-learning.md avoids forbidden expression: 应买入
+PASS: learning/examples/company-learning.md avoids forbidden expression: 应卖出
+PASS: learning/examples/company-learning.md avoids forbidden expression: 自动交易指令
+PASS: learning/examples/company_learning.py outputs learning_id
+PASS: learning/examples/company_learning.py outputs feedback
+PASS: learning/examples/company_learning.py outputs outcomes
+PASS: learning/examples/company_learning.py outputs patterns
+PASS: learning/examples/company_learning.py outputs rules
+PASS: learning/examples/company_learning.py outputs optimizations
+PASS: learning/examples/company_learning.py outputs memory_consolidation
+PASS: learning/examples/company_learning.py outputs disclaimer
+PASS: learning/examples/company_learning.py generates candidate learning rules
+PASS: learning/examples/company_learning.py generates optimization proposals
+PASS: learning/examples/company_learning.py returns memory governance status
+PASS: learning/examples/company_learning.py carries disclaimer
+PASS: learning/examples/company_learning.py avoids forbidden expression: 建议买入
+PASS: learning/examples/company_learning.py avoids forbidden expression: 建议卖出
+PASS: learning/examples/company_learning.py avoids forbidden expression: 保证收益
+PASS: learning/examples/company_learning.py avoids forbidden expression: 保证盈利
+PASS: learning/examples/company_learning.py avoids forbidden expression: 目标价为
+PASS: learning/examples/company_learning.py avoids forbidden expression: 应买入
+PASS: learning/examples/company_learning.py avoids forbidden expression: 应卖出
+PASS: learning/examples/company_learning.py avoids forbidden expression: 自动交易指令
 PASS: learning/examples/committee_report_learning.py exists
 PASS: learning/examples/committee_report_learning.py has substantive content
 PASS: learning/examples/committee_report_learning.py avoids forbidden expression: 建议买入
@@ -637,33 +662,40 @@ PASS: learning/examples/committee-report-learning.md avoids forbidden expression
 PASS: learning/examples/committee-report-learning.md avoids forbidden expression: 应买入
 PASS: learning/examples/committee-report-learning.md avoids forbidden expression: 应卖出
 PASS: learning/examples/committee-report-learning.md avoids forbidden expression: 自动交易指令
-PASS: learning/examples/committee-report-learning.md contains Feedback Input
-PASS: learning/examples/committee-report-learning.md contains Pattern Mining
-PASS: learning/examples/committee-report-learning.md contains Rule Generation
-PASS: learning/examples/committee-report-learning.md contains Optimization Suggestions
+PASS: learning/examples/committee_report_learning.py outputs learning_id
 PASS: learning/examples/committee_report_learning.py outputs feedback
 PASS: learning/examples/committee_report_learning.py outputs outcomes
 PASS: learning/examples/committee_report_learning.py outputs patterns
 PASS: learning/examples/committee_report_learning.py outputs rules
 PASS: learning/examples/committee_report_learning.py outputs optimizations
-PASS: learning/examples/committee_report_learning.py outputs governance
 PASS: learning/examples/committee_report_learning.py outputs memory_consolidation
-PASS: learning/examples/committee_report_learning.py does not auto apply
-PASS: learning/examples/committee_report_learning.py generates rules
-PASS: learning/examples/committee_report_learning.py generates optimizations
+PASS: learning/examples/committee_report_learning.py outputs disclaimer
+PASS: learning/examples/committee_report_learning.py generates candidate learning rules
+PASS: learning/examples/committee_report_learning.py generates optimization proposals
+PASS: learning/examples/committee_report_learning.py returns memory governance status
 PASS: learning/examples/committee_report_learning.py carries disclaimer
-PASS: Learning references docs/runtime/memory-manager.md
-PASS: Learning references docs/committee/committee-architecture.md
-PASS: Learning references docs/investment-engine/engine-architecture.md
-PASS: Learning references schemas/report/report.schema.json
-PASS: learning avoids direct data access requests.
-PASS: learning avoids direct data access urllib
-PASS: learning avoids direct data access http.client
-PASS: learning avoids direct data access yfinance
-PASS: learning avoids direct data access longbridge
-PASS: learning proposals are not auto applied
-PASS: found all 23 validate_* scripts including validate_learning.py
-PASS: validate_e2e.py is included in regression validation
+PASS: learning/examples/committee_report_learning.py avoids forbidden expression: 建议买入
+PASS: learning/examples/committee_report_learning.py avoids forbidden expression: 建议卖出
+PASS: learning/examples/committee_report_learning.py avoids forbidden expression: 保证收益
+PASS: learning/examples/committee_report_learning.py avoids forbidden expression: 保证盈利
+PASS: learning/examples/committee_report_learning.py avoids forbidden expression: 目标价为
+PASS: learning/examples/committee_report_learning.py avoids forbidden expression: 应买入
+PASS: learning/examples/committee_report_learning.py avoids forbidden expression: 应卖出
+PASS: learning/examples/committee_report_learning.py avoids forbidden expression: 自动交易指令
+PASS: learning references upstream capability Report
+PASS: learning references upstream capability Review
+PASS: learning references upstream capability Committee
+PASS: learning references upstream capability Memory
+PASS: learning references upstream capability Benchmark
+PASS: learning references upstream capability Evidence Chain
+PASS: learning avoids external/trading side effect requests.
+PASS: learning avoids external/trading side effect urllib
+PASS: learning avoids external/trading side effect http.client
+PASS: learning avoids external/trading side effect yfinance
+PASS: learning avoids external/trading side effect longbridge
+PASS: learning avoids external/trading side effect buy_order
+PASS: learning avoids external/trading side effect sell_order
+PASS: found 22 regression validate scripts
 PASS: validate_benchmark.py PASS
 PASS: validate_builder.py PASS
 PASS: validate_committee.py PASS
@@ -686,5 +718,5 @@ PASS: validate_runtime.py PASS
 PASS: validate_score.py PASS
 PASS: validate_skill.py PASS
 PASS: validate_workspace.py PASS
-======================================================
+=====================================================
 RESULT: PASS
