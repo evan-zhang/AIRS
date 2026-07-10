@@ -1,0 +1,23 @@
+# AIRS Codeowners
+
+# 全局默认负责人
+* @airs-maintainers
+
+# 生产与治理
+/docs/production/ @airs-release-managers
+/docs/governance/ @airs-governance
+/.github/ @airs-maintainers
+
+# 核心投研资产
+/docs/methodology/ @airs-research-governance
+/docs/evidence/ @airs-research-governance
+/prompts/ @airs-prompt-owners
+/skills/ @airs-skill-owners
+/schemas/ @airs-schema-owners
+/scoring/ @airs-quality-owners
+/evaluation/ @airs-quality-owners
+/benchmark/ @airs-verification-owners
+/examples/ @airs-verification-owners
+
+# 验证脚本
+/scripts/ @airs-verification-owners

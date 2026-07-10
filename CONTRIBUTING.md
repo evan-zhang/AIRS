@@ -15,6 +15,35 @@
 
 ---
 
+## V1.0 Production 贡献流程
+
+AIRS V1.0 已进入 Production Release。所有贡献必须遵守生产治理流程：
+
+1. 先创建 Issue，说明问题、影响范围、验收标准和合规边界。
+2. 修改最小必要文件，避免重写 M1-M8 已 PASS 核心内容。
+3. 若修改 README、ROADMAP、ARCHITECTURE、AGENTS、SKILL、CONTRIBUTING、LICENSE、CHANGELOG 或已 PASS 核心规范，必须新增 ADR 并说明原因。
+4. 更新 `CHANGELOG.md`。
+5. 运行相关 validate 脚本。
+6. 生产发布前运行 `python3 scripts/production_check.py`。
+7. PR 必须填写 `.github/pull_request_template.md` 中的验证和合规检查。
+
+版本规范见 `docs/governance/semantic-versioning.md`。发布流程见 `docs/governance/release-workflow.md`。
+
+### V1.0 合规边界
+
+所有贡献不得引入：
+
+- 荐股内容
+- 自动交易能力
+- 具体买入、卖出、持有指令
+- 目标价预测
+- 收益承诺
+- 无证据、无反方观点、无不确定性标注的投资研究输出
+
+所有投资研究相关新增内容必须包含“不构成投资建议”免责声明。
+
+---
+
 ## 新增 Skill
 
 ### Skill 结构

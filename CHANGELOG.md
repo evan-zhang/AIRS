@@ -9,6 +9,54 @@
 
 ## [Unreleased]
 
+### Planned
+- V1.x: Runtime、Benchmark Runner、Scorecard Runner、更多生产示例和回归数据集。
+
+---
+
+## [1.0.0] - 2026-07-10
+
+### Added - M8: Production Release
+- 新增 `docs/production/production-guide.md` 生产指南。
+- 新增 `docs/production/deployment-guide.md` 部署指南。
+- 新增 `docs/production/upgrade-guide.md` 升级指南。
+- 新增 `docs/production/maintenance-guide.md` 维护指南。
+- 新增 `docs/production/governance-guide.md` 治理指南。
+- 新增 `docs/production/release-checklist.md` 发布清单。
+- 新增 `docs/production/release-notes.md` V1.0 发布说明。
+- 新增 `docs/production/production-acceptance-checklist.md` 生产验收清单。
+- 新增 `docs/production/final-quality-gate.md` 最终质量门禁。
+- 新增 `docs/production/regression-test-process.md` 回归测试流程。
+- 新增 `docs/governance/semantic-versioning.md` 语义化版本规范。
+- 新增 `docs/governance/release-workflow.md` 发布流程。
+- 新增 `.github/ISSUE_TEMPLATE/bug_report.md` 和 `.github/ISSUE_TEMPLATE/feature_request.md`。
+- 新增 `.github/pull_request_template.md`、`.github/CODEOWNERS`、`.github/SECURITY.md`、`.github/SUPPORT.md`。
+- 新增 `scripts/validate_release.py` 和 `scripts/production_check.py`。
+- 新增 `docs/production/M8_COMPLETION_REPORT.md`、`docs/production/PROJECT_HEALTH_REPORT.md`、`docs/production/FINAL_REVIEW.md`。
+- 新增 `docs/adr/0002-m8-production-top-level-updates.md`，记录 M8 对顶层文件的受控生产更新。
+
+### Changed - M8
+- 更新 `README.md`，补充 V1.0 Production 状态、完整功能列表和最终免责声明。
+- 更新 `CONTRIBUTING.md`，补充 V1.0 贡献流程、版本规范和发布流程引用。
+- 更新 `ROADMAP.md`，标注 M1-M8 全部完成，并补充 V1.x / V2 路线。
+- 确认 `LICENSE` 保持 MIT License 和投资研究免责声明，无需修改。
+
+### Validation - M8
+- `validate_m1.py` PASS。
+- `validate_m2.py` PASS。
+- `validate_evidence.py` PASS。
+- `validate_prompt.py` PASS。
+- `validate_skill.py` PASS。
+- `validate_score.py` PASS。
+- `validate_evaluation.py` PASS。
+- `validate_benchmark.py` PASS。
+- `validate_examples.py` PASS。
+- `validate_release.py` PASS。
+- `production_check.py` FINAL RESULT PASS。
+
+### Compliance
+- V1.0 Production Release 仍然只用于投资研究流程、质量控制和教育研究，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。
+
 ### Added - M7: Benchmark & Production Examples
 - 新增 `docs/benchmark/` 4 个 Benchmark 架构、生命周期、分类和治理文档。
 - 新增 `docs/examples/` 2 个示例规范和回归数据集说明文档。
@@ -24,8 +72,8 @@
 - 更新 `schemas/README.md`，补充 Benchmark Schema 说明。
 - 增强 `templates/benchmark-case-template.md`，补充免责声明以满足 M7 合规回归要求；不改变 M1 模板结构和语义。
 
-### 计划中
-- M8: Production
+### Completed
+- M8: Production Release 已完成。
 
 ---
 
@@ -126,4 +174,4 @@
 ---
 
 **最后更新**：2026-07-10
-**当前版本**：v0.1.0
+**当前版本**：v1.0.0

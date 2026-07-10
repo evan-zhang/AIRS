@@ -88,27 +88,42 @@ AIRS/
 
 ## 当前版本状态
 
-### v0.1.0 (M1: Architecture Foundation) - 当前进版
+### v1.0.0 Production Release
 
-**已完成**：
-- ✅ 完整项目目录结构
-- ✅ 顶层文档架构
-- ✅ Agent 协作规范
-- ✅ Master Skill 框架
-- ✅ M1-M8 Roadmap
-- ✅ 基础模板与自检脚本
+**状态**：✅ M1-M8 全部完成，已进入 V1.0 Production Release。
 
-**进行中**：
-- 🔄 具体研究方法论 Prompt (M2-M4)
-- 🔄 证据引擎实现 (M5)
-- 🔄 评分引擎实现 (M6)
-- 🔄 报告引擎实现 (M7)
-- 🔄 Benchmark 完善 (M8)
+**生产交付范围**：
+- ✅ M1 Architecture Foundation：项目结构、顶层文档、Agent 协作规范、Master Skill 和基础自检。
+- ✅ M2 Methodology Core：10 个核心研究方法论、Methodology DSL、Schema、模板和评审清单。
+- ✅ M3 Evidence Engine：证据卡、证据链、证据等级、Evidence DSL、Schema、模板和验证流程。
+- ✅ M4 Prompt Engine：Prompt DSL、Prompt Schema、11 个生产 Prompt、Prompt Review Checklist。
+- ✅ M5 Skill Engine：Skill Engine 文档、10 个生产 Skill、Skill Schema、Skill Registry Schema。
+- ✅ M6 Score & Evaluation Engine：评分体系、质量门禁、回归策略、Score / Evaluation Schema。
+- ✅ M7 Benchmark & Examples：Benchmark 文档、6 类基准种子、生产示例、Benchmark Schema。
+- ✅ M8 Production Release：生产指南、部署、升级、维护、治理、发布、回归、安全和支持流程。
 
-**未开始**：
-- ⏳ 真实数据接入
-- ⏳ 完整业务逻辑
-- ⏳ 生产环境部署
+## 完整功能列表
+
+AIRS V1.0 提供以下生产级框架能力：
+
+1. **方法论层**：供应链卡点、主题扩散、证据链、反共识、产业生命周期、财报异常、管理层质量、政策驱动、估值和风险分析方法论。
+2. **证据层**：Evidence Card、Evidence Chain、证据等级、证据审查、缺失证据和反方证据规则。
+3. **Prompt 层**：统一 Prompt DSL、Prompt Schema、生产 Prompt 模板和 11 个核心 Prompt。
+4. **Skill 层**：Master、Hot Topic、Supply Chain、Evidence、Financial、News、Valuation、Risk、Report、Verification 等生产 Skill。
+5. **评分层**：主题、证据、方法论、Prompt、Skill、报告、风险、置信度和综合评分框架。
+6. **评估层**：Production Review Checklist、Quality Gate、Regression Checklist 和评估模板。
+7. **Benchmark 层**：AI、半导体、创新药、机器人、新能源和通用 6 类基准种子。
+8. **生产治理层**：Release Checklist、Production Acceptance Checklist、Final Quality Gate、Regression Test Process、Semantic Versioning 和 Release Workflow。
+9. **协作层**：GitHub Issue 模板、PR 模板、CODEOWNERS、安全策略和支持指南。
+10. **验证层**：M1-M8 独立 validate 脚本和统一 `scripts/production_check.py`。
+
+**仍不包含**：
+- 真实行情或交易数据源接入
+- 自动交易或下单执行
+- 个性化投资建议
+- 运行时 Prompt 渲染器
+- Skill 调度器
+- Scorecard 自动计算运行时
 
 ## 免责声明
 
@@ -125,7 +140,16 @@ AIRS/
 
 ## 长期目标
 
-AIRS V2.0 Production 的长期目标包括：
+AIRS V1.x 的重点是把 V1.0 规范库推进到可执行运行时：
+
+- Prompt 渲染器
+- Skill 调度器
+- Scorecard runner
+- Benchmark runner
+- Markdown 到 JSON Schema 的自动转换
+- 更多生产示例和回归用例
+
+AIRS V2.0 的长期目标包括：
 
 - 250+ Markdown 文件
 - 120+ 专业 Prompt
@@ -133,10 +157,7 @@ AIRS V2.0 Production 的长期目标包括：
 - 300+ Benchmark
 - 100+ Example
 - 20+ Methodology
-- 完整 Evidence Engine
-- 完整 Score Engine
-- 完整 Evaluation Engine
-- 完整 Report Engine
+- 完整数据源接入
 - 完整 Knowledge Graph 规范
 - 完整 Loop/Go 开发体系
 
@@ -147,5 +168,7 @@ AIRS V2.0 Production 的长期目标包括：
 - 验收方式：自检脚本 + 人工复核
 
 ---
+
+**最终免责声明**：AIRS V1.0 Production Release 表示项目文档、规范、示例和验证脚本达到当前定义的生产交付标准，不表示任何投资研究结论正确，不构成投资建议，不提供荐股、自动交易、买入、卖出、持有、目标价或收益承诺。
 
 **AIRS - 让 AI 做研究增强，而不是替人盲目下投资结论**
