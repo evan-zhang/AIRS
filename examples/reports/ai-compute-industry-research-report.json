@@ -1,0 +1,378 @@
+{
+  "report_id": "REPORT-20260710-AI-COMPUTE",
+  "title": "AI 算力产业研究报告",
+  "research_question": "AI 算力产业链中哪些环节存在可验证卡点，哪些反方证据会削弱研究结论？",
+  "methodology_refs": [
+    "supply-chain-chokepoint",
+    "evidence-chain",
+    "counter-consensus"
+  ],
+  "evidence_cards": {
+    "EV-20260710-AIC1": {
+      "evidence_id": "EV-20260710-AIC1",
+      "title": "AI 加速器与高带宽内存需求联动",
+      "category": "supply_chain",
+      "source": "AIRS 示例证据库",
+      "source_type": "industry_report",
+      "url": "internal://airs/examples/ai-compute/evidence-1",
+      "publication_time": "2026-07-10T00:00:00+08:00",
+      "collection_time": "2026-07-10T09:00:00+08:00",
+      "confidence": 0.78,
+      "evidence_level": "B",
+      "supports": [
+        {
+          "claim_id": "CL-AIC-HBM",
+          "statement": "AI 加速器需求会放大 HBM 和先进封装的配套约束。",
+          "strength": "strong"
+        }
+      ],
+      "refutes": [
+        {
+          "claim_id": "CL-AIC-NO-BOTTLENECK",
+          "statement": "若 HBM 与封装扩产同步落地，瓶颈强度会下降。",
+          "strength": "medium"
+        }
+      ],
+      "missing_evidence": [
+        "仍需跟踪各供应商季度产能与客户认证节奏。"
+      ],
+      "weight": 0.36,
+      "traceability": {
+        "collected_by": "Research Agent",
+        "collection_method": "示例化证据卡整理",
+        "source_locator": "examples/knowledge-graph/ai-compute-supply-chain.json",
+        "transformations": [
+          "结构化为 Evidence Card"
+        ]
+      },
+      "version": "0.1.0"
+    },
+    "EV-20260710-AIC2": {
+      "evidence_id": "EV-20260710-AIC2",
+      "title": "先进封装产能与验证周期约束",
+      "category": "supply_chain",
+      "source": "AIRS 示例证据库",
+      "source_type": "industry_report",
+      "url": "internal://airs/examples/ai-compute/evidence-2",
+      "publication_time": "2026-07-10T00:00:00+08:00",
+      "collection_time": "2026-07-10T09:10:00+08:00",
+      "confidence": 0.74,
+      "evidence_level": "B",
+      "supports": [
+        {
+          "claim_id": "CL-AIC-PACKAGE",
+          "statement": "先进封装具有产能、设备和客户验证多重约束。",
+          "strength": "strong"
+        }
+      ],
+      "refutes": [
+        {
+          "claim_id": "CL-AIC-PACKAGE-EXPANSION",
+          "statement": "新增封装产线释放可能缓解中期约束。",
+          "strength": "medium"
+        }
+      ],
+      "missing_evidence": [
+        "仍需补充不同封装技术路线的良率和排产数据。"
+      ],
+      "weight": 0.34,
+      "traceability": {
+        "collected_by": "Research Agent",
+        "collection_method": "示例化证据卡整理",
+        "source_locator": "examples/knowledge-graph/ai-compute-supply-chain.json",
+        "transformations": [
+          "结构化为 Evidence Card"
+        ]
+      },
+      "version": "0.1.0"
+    },
+    "EV-20260710-AIC3": {
+      "evidence_id": "EV-20260710-AIC3",
+      "title": "高速互连与服务器交付不确定性",
+      "category": "counter_evidence",
+      "source": "AIRS 示例证据库",
+      "source_type": "expert_opinion",
+      "url": "internal://airs/examples/ai-compute/evidence-3",
+      "publication_time": "2026-07-10T00:00:00+08:00",
+      "collection_time": "2026-07-10T09:20:00+08:00",
+      "confidence": 0.62,
+      "evidence_level": "C",
+      "supports": [
+        {
+          "claim_id": "CL-AIC-NETWORK",
+          "statement": "高速互连与整机交付也可能成为约束。",
+          "strength": "medium"
+        }
+      ],
+      "refutes": [
+        {
+          "claim_id": "CL-AIC-HBM-ONLY",
+          "statement": "单一 HBM 视角不足以解释全部交付瓶颈。",
+          "strength": "medium"
+        }
+      ],
+      "missing_evidence": [
+        "需要补充交换芯片、光模块和整机厂交付数据。"
+      ],
+      "weight": 0.3,
+      "traceability": {
+        "collected_by": "Research Agent",
+        "collection_method": "示例化证据卡整理",
+        "source_locator": "examples/knowledge-graph/ai-compute-supply-chain.json",
+        "transformations": [
+          "结构化为 Evidence Card"
+        ]
+      },
+      "version": "0.1.0"
+    }
+  },
+  "knowledge_graph_summary": {
+    "graph_id": "KG-20260710-AI-COMPUTE",
+    "title": "AI 算力供应链知识图谱",
+    "node_count": 6,
+    "edge_count": 6,
+    "path_count": 1,
+    "chokepoint_count": 1,
+    "top_chokepoint": {
+      "node_id": "N-AIC-HBM",
+      "label": "高带宽内存 HBM",
+      "chokepoint_score": 0.9384,
+      "risk_level": "HIGH",
+      "drivers": [
+        "供给稀缺",
+        "替代难度高",
+        "扩产难度高",
+        "认证周期长",
+        "议价能力强",
+        "证据质量较高"
+      ],
+      "evidence_refs": [
+        "EV-20260710-AIC1",
+        "EV-20260710-AIC3"
+      ],
+      "counter_evidence_refs": [
+        "EV-20260710-AIC3"
+      ],
+      "missing_evidence": [
+        "需要持续跟踪 HBM 供应商扩产、良率和客户认证节奏。"
+      ]
+    },
+    "methodology_refs": [
+      "supply-chain-chokepoint",
+      "evidence-chain",
+      "counter-consensus"
+    ],
+    "evidence_refs": [
+      "EV-20260710-AIC1",
+      "EV-20260710-AIC2",
+      "EV-20260710-AIC3"
+    ]
+  },
+  "score_summary": {
+    "scorecard_id": "SCORECARD-AI-COMPUTE-REPORT-001",
+    "overall_score": 82,
+    "overall_grade": "B",
+    "confidence_score": 77,
+    "quality_gate": "PASS",
+    "methodology_refs": [
+      "supply-chain-chokepoint",
+      "evidence-chain",
+      "counter-consensus"
+    ],
+    "evidence_chain_refs": [
+      "EV-20260710-AIC1",
+      "EV-20260710-AIC2",
+      "EV-20260710-AIC3"
+    ],
+    "dimensions": {
+      "Evidence Score": 84,
+      "Knowledge Graph Score": 82,
+      "Report Score": 86,
+      "Risk Score": 78,
+      "Counter Evidence Score": 76
+    },
+    "disclaimer": "仅供研究参考，不构成投资建议"
+  },
+  "sections": [
+    {
+      "section_id": "metadata",
+      "title": "报告元数据",
+      "body": "- Report ID：`REPORT-20260710-AI-COMPUTE`\n- 研究主题：AI 算力产业研究报告\n- Prompt 引用：`prompts/report/generation.md`\n- Skill 引用：`skills/report/report-skill.md`\n- Evidence 数量：3\n- KG 引用：`KG-20260710-AI-COMPUTE`\n- Scorecard 引用：`SCORECARD-AI-COMPUTE-REPORT-001`",
+      "evidence_refs": [
+        "EV-20260710-AIC1",
+        "EV-20260710-AIC2",
+        "EV-20260710-AIC3"
+      ],
+      "kg_refs": [
+        "KG-20260710-AI-COMPUTE"
+      ],
+      "score_refs": [
+        "SCORECARD-AI-COMPUTE-REPORT-001"
+      ]
+    },
+    {
+      "section_id": "scope",
+      "title": "研究问题与范围",
+      "body": "AI 算力产业链中哪些环节存在可验证卡点，哪些反方证据会削弱研究结论？",
+      "evidence_refs": [],
+      "kg_refs": [],
+      "score_refs": []
+    },
+    {
+      "section_id": "methodology",
+      "title": "方法论引用",
+      "body": "- `supply-chain-chokepoint`：沿用 M2 方法论，不在报告层重写研究规则。\n- `evidence-chain`：沿用 M2 方法论，不在报告层重写研究规则。\n- `counter-consensus`：沿用 M2 方法论，不在报告层重写研究规则。",
+      "evidence_refs": [],
+      "kg_refs": [],
+      "score_refs": []
+    },
+    {
+      "section_id": "thesis",
+      "title": "核心观点",
+      "body": "AI 算力产业的研究重点应放在 HBM、先进封装、高速互联和数据中心约束之间的证据链，而不是单一需求叙事。 该观点至少引用 [EV-20260710-AIC1] AI 加速器与高带宽内存需求联动（来源：AIRS 示例证据库；等级：B；置信度：0.78），并由 KG 卡点 `N-AIC-HBM` 与 Scorecard `SCORECARD-AI-COMPUTE-REPORT-001` 共同约束。",
+      "evidence_refs": [
+        "EV-20260710-AIC1",
+        "EV-20260710-AIC2",
+        "EV-20260710-AIC3"
+      ],
+      "kg_refs": [
+        "KG-20260710-AI-COMPUTE"
+      ],
+      "score_refs": [
+        "SCORECARD-AI-COMPUTE-REPORT-001"
+      ]
+    },
+    {
+      "section_id": "evidence-citations",
+      "title": "Evidence 引用表",
+      "body": "| Evidence ID | 标题 | 类别 | 来源类型 | 等级 | 权重 | 支持命题 | 反方或限制 |\n|---|---|---|---|---|---:|---|---|\n| EV-20260710-AIC1 | AI 加速器与高带宽内存需求联动 | supply_chain | industry_report | B | 0.36 | AI 加速器需求会放大 HBM 和先进封装的配套约束。 | 若 HBM 与封装扩产同步落地，瓶颈强度会下降。 |\n| EV-20260710-AIC2 | 先进封装产能与验证周期约束 | supply_chain | industry_report | B | 0.34 | 先进封装具有产能、设备和客户验证多重约束。 | 新增封装产线释放可能缓解中期约束。 |\n| EV-20260710-AIC3 | 高速互连与服务器交付不确定性 | counter_evidence | expert_opinion | C | 0.3 | 高速互连与整机交付也可能成为约束。 | 单一 HBM 视角不足以解释全部交付瓶颈。 |",
+      "evidence_refs": [
+        "EV-20260710-AIC1",
+        "EV-20260710-AIC2",
+        "EV-20260710-AIC3"
+      ],
+      "kg_refs": [],
+      "score_refs": []
+    },
+    {
+      "section_id": "evidence-chain",
+      "title": "Evidence Chain 汇总",
+      "body": "- [EV-20260710-AIC1] AI 加速器与高带宽内存需求联动（来源：AIRS 示例证据库；等级：B；置信度：0.78）\n- [EV-20260710-AIC2] 先进封装产能与验证周期约束（来源：AIRS 示例证据库；等级：B；置信度：0.74）\n- [EV-20260710-AIC3] 高速互连与服务器交付不确定性（来源：AIRS 示例证据库；等级：C；置信度：0.62）",
+      "evidence_refs": [
+        "EV-20260710-AIC1",
+        "EV-20260710-AIC2",
+        "EV-20260710-AIC3"
+      ],
+      "kg_refs": [],
+      "score_refs": [
+        "SCORECARD-AI-COMPUTE-REPORT-001"
+      ]
+    },
+    {
+      "section_id": "kg-summary",
+      "title": "Knowledge Graph 汇总",
+      "body": "- KG ID：`KG-20260710-AI-COMPUTE`\n- 图谱标题：AI 算力供应链知识图谱\n- 节点 / 关系 / 路径：6 / 6 / 1\n- Top Chokepoint：高带宽内存 HBM（节点：`N-AIC-HBM`；分数：0.9384；风险：HIGH）\n- 卡点驱动：供给稀缺；替代难度高；扩产难度高；认证周期长；议价能力强；证据质量较高\n- KG Evidence Refs：`EV-20260710-AIC1`, `EV-20260710-AIC2`, `EV-20260710-AIC3`",
+      "evidence_refs": [
+        "EV-20260710-AIC1",
+        "EV-20260710-AIC2",
+        "EV-20260710-AIC3"
+      ],
+      "kg_refs": [
+        "KG-20260710-AI-COMPUTE"
+      ],
+      "score_refs": []
+    },
+    {
+      "section_id": "score-summary",
+      "title": "Score Summary",
+      "body": "- Scorecard ID：`SCORECARD-AI-COMPUTE-REPORT-001`\n- Overall Score / Grade：82 / B\n- Confidence Score：77\n- Quality Gate：`PASS`\n- 维度分：Evidence Score: 84；Knowledge Graph Score: 82；Report Score: 86；Risk Score: 78；Counter Evidence Score: 76\n- Score Evidence Refs：`EV-20260710-AIC1`, `EV-20260710-AIC2`, `EV-20260710-AIC3`\n- Score Disclaimer：仅供研究参考，不构成投资建议",
+      "evidence_refs": [
+        "EV-20260710-AIC1",
+        "EV-20260710-AIC2",
+        "EV-20260710-AIC3"
+      ],
+      "kg_refs": [],
+      "score_refs": [
+        "SCORECARD-AI-COMPUTE-REPORT-001"
+      ]
+    },
+    {
+      "section_id": "counterarguments",
+      "title": "反方观点",
+      "body": "- 云厂商资本开支并不必然全部转化为 AI 服务器订单。\n- HBM 与先进封装扩产可能在未来缓解供给约束。\n- 模型效率提升和推理架构变化可能降低单位算力需求。",
+      "evidence_refs": [
+        "EV-20260710-AIC1",
+        "EV-20260710-AIC2",
+        "EV-20260710-AIC3"
+      ],
+      "kg_refs": [
+        "KG-20260710-AI-COMPUTE"
+      ],
+      "score_refs": []
+    },
+    {
+      "section_id": "uncertainty",
+      "title": "不确定性与缺口",
+      "body": "- EV-20260710-AIC1: 仍需跟踪各供应商季度产能与客户认证节奏。\n- EV-20260710-AIC2: 仍需补充不同封装技术路线的良率和排产数据。\n- EV-20260710-AIC3: 需要补充交换芯片、光模块和整机厂交付数据。",
+      "evidence_refs": [
+        "EV-20260710-AIC1",
+        "EV-20260710-AIC2",
+        "EV-20260710-AIC3"
+      ],
+      "kg_refs": [
+        "KG-20260710-AI-COMPUTE"
+      ],
+      "score_refs": [
+        "SCORECARD-AI-COMPUTE-REPORT-001"
+      ]
+    },
+    {
+      "section_id": "risks",
+      "title": "风险提示",
+      "body": "- 证据口径、披露时点和统计样本可能不一致。\n- Knowledge Graph 的路径与卡点结果依赖当前节点和边定义。\n- Scorecard 是研究质量门禁，不代表投资评级或收益判断。",
+      "evidence_refs": [
+        "EV-20260710-AIC1",
+        "EV-20260710-AIC2",
+        "EV-20260710-AIC3"
+      ],
+      "kg_refs": [
+        "KG-20260710-AI-COMPUTE"
+      ],
+      "score_refs": []
+    },
+    {
+      "section_id": "disclaimer",
+      "title": "免责声明",
+      "body": "本报告仅用于 AIRS 投资研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+      "evidence_refs": [],
+      "kg_refs": [],
+      "score_refs": []
+    }
+  ],
+  "source_refs": {
+    "M2_methodology": [
+      "supply-chain-chokepoint",
+      "evidence-chain",
+      "counter-consensus"
+    ],
+    "M3_evidence": [
+      "EV-20260710-AIC1",
+      "EV-20260710-AIC2",
+      "EV-20260710-AIC3"
+    ],
+    "FEATURE_002_knowledge_graph": [
+      "KG-20260710-AI-COMPUTE"
+    ],
+    "M4_prompt": [
+      "prompts/report/generation.md"
+    ],
+    "M5_skill": [
+      "skills/report/report-skill.md"
+    ],
+    "M6_score_eval": [
+      "SCORECARD-AI-COMPUTE-REPORT-001"
+    ]
+  },
+  "disclaimer": "本报告仅用于 AIRS 投资研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。",
+  "version": "0.1.0"
+}

@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Research Report Generator Feature Schema",
+  "description": "生成统一结构的 AIRS 投资研究报告，自动汇总 Methodology、Evidence、Knowledge Graph、Prompt、Skill、Score 和 Evaluation 输出。。本 Schema 仅用于 AIRS 工程开发与研究质量控制，不构成投资建议。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "feature_id",
+    "feature_name",
+    "inputs",
+    "outputs",
+    "disclaimer"
+  ],
+  "properties": {
+    "feature_id": {
+      "type": "string",
+      "const": "FEATURE-003"
+    },
+    "feature_name": {
+      "type": "string",
+      "const": "Research Report Generator"
+    },
+    "inputs": {
+      "type": "object",
+      "description": "Feature 输入。"
+    },
+    "outputs": {
+      "type": "object",
+      "description": "Feature 输出。"
+    },
+    "risk_level": {
+      "type": "string",
+      "enum": ["LOW", "MEDIUM", "HIGH", "CRITICAL"],
+      "default": "MEDIUM"
+    },
+    "disclaimer": {
+      "type": "string",
+      "description": "本生成物仅用于 AIRS 工程开发与研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。"
+    }
+  }
+}
