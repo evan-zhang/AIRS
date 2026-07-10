@@ -22,6 +22,7 @@ schemas/
 ├── investment/        # Investment Research Engine 相关 Schema
 ├── planner/           # Autonomous Research Planner 相关 Schema
 ├── committee/         # Autonomous Investment Committee 相关 Schema
+├── learning/          # Autonomous Learning Engine 相关 Schema
 ├── report/            # 报告相关 Schema
 └── evaluation/        # 评估相关 Schema
 ```
@@ -60,6 +61,15 @@ schemas/
 - **schemas/committee/committee-vote.schema.json**：Committee Vote Schema，定义 APPROVE、CONDITIONAL_APPROVE、REJECT、Quorum 和 Outcome。
 - **schemas/committee/committee-decision.schema.json**：Committee Decision Schema，记录 Research Engine Gate、Voting Result、Consensus、Minority Report、Follow-up Tasks 和 Final Recommendation。
 - Committee Schema 只用于 Planner 到 Research Engine 之间的审议门禁和研究质量控制，不重复定义 M2-M9 能力，不构成投资建议。
+
+### Learning 相关 Schema
+
+- **schemas/learning/**：Autonomous Learning Engine 相关 Schema，用于 FEATURE-012 反馈闭环、Outcome 跟踪、模式挖掘、候选规则和优化建议。
+- **schemas/learning/learning.schema.json**：Learning Run 顶层 Schema，汇总 feedback、outcomes、patterns、rules、optimizations、governance 和 memory_consolidation。
+- **schemas/learning/feedback.schema.json**：Feedback Record Schema，记录 source_type、source_ref、target_module、issue_type、severity、observation 和 evidence_refs。
+- **schemas/learning/outcome.schema.json**：Outcome Record Schema，用于比较研究预期与后续观察，标注 variance_level、lessons 和 evidence_refs。
+- **schemas/learning/optimization.schema.json**：Optimization Proposal Schema，用于描述 Prompt、Methodology、Skill 或 Score 的待评审改进建议。
+- Learning Schema 只用于 AIRS 研究质量改进和持续学习治理，所有建议默认 pending_review，不自动应用，不构成投资建议。
 
 ### 证据相关 Schema
 

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://airs.local/schemas/learning/feedback.schema.json",
+  "title": "AIRS Learning Feedback Schema",
+  "description": "Feedback Record 用于 AIRS 研究质量学习闭环，仅用于质量控制，不构成投资建议。",
+  "type": "object",
+  "required": ["feedback_id", "source_type", "source_ref", "target_module", "issue_type", "severity", "observation", "disclaimer"],
+  "properties": {
+    "feedback_id": {"type": "string"},
+    "source_type": {"type": "string", "enum": ["review", "committee", "report", "memory", "benchmark", "outcome", "verification"]},
+    "source_ref": {"type": "string"},
+    "target_module": {"type": "string"},
+    "issue_type": {"type": "string"},
+    "severity": {"type": "string", "enum": ["low", "medium", "high", "critical"]},
+    "observation": {"type": "string"},
+    "evidence_refs": {"type": "array", "items": {"type": "string"}},
+    "metadata": {"type": "object"},
+    "disclaimer": {"type": "string", "const": "仅用于 AIRS 研究质量改进，不构成投资建议"}
+  },
+  "additionalProperties": true
+}
+

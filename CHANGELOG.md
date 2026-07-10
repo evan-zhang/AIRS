@@ -1,5 +1,22 @@
 # AIRS 变更日志
 
+## [FEATURE-012] Autonomous Learning Engine - 2026-07-10
+
+### Added
+
+- 新增 `builder/requests/feature-request-autonomous-learning-engine.yaml` 并生成 `builder-output/autonomous-learning-engine/` Feature Package。
+- 新增 `docs/learning/` 11 份学习架构、反馈闭环、Outcome 跟踪、模式挖掘、规则生成、优化演进和治理文档。
+- 新增 `learning/` 最小可运行 Python Learning Engine，覆盖 Feedback Collector、Outcome Tracker、Pattern Miner、Rule Generator、Prompt Optimizer、Methodology Optimizer、Skill Optimizer、Score Optimizer、Memory Consolidator 和 Continuous Improvement Engine。
+- 新增 `learning/examples/` 6 个学习闭环示例：Company、Industry、Theme、Supply Chain、Evidence、Committee/Report。
+- 新增 `schemas/learning/` 和 `scripts/validate_learning.py`。
+- 新增 `docs/adr/ADR-012-autonomous-learning-engine.md`、`docs/production/FEATURE_012_COMPLETION_REPORT.md` 和 `docs/review/FEATURE_012_SELF_REVIEW.md`。
+
+### Compliance
+
+- Learning Engine 只生成 pending_review 改进建议，不自动修改生产 Prompt、Methodology、Skill 或 Score。
+- Learning 输出必须保留来源、证据引用、人工评审状态和回滚策略。
+- 所有 Learning 产物仅用于研究质量控制和持续改进，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。
+
 ## [FEATURE-010] Autonomous Investment Committee - 2026-07-10
 
 ### Added

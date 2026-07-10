@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://airs.local/schemas/learning/optimization.schema.json",
+  "title": "AIRS Learning Optimization Schema",
+  "description": "Optimization Proposal 描述 Prompt、Methodology、Skill 或 Score 的待评审改进建议，不构成投资建议。",
+  "type": "object",
+  "required": ["proposal_id", "target", "change_type", "summary", "source_rule", "review_status", "disclaimer"],
+  "properties": {
+    "proposal_id": {"type": "string"},
+    "target": {"type": "string"},
+    "change_type": {"type": "string", "enum": ["prompt_guardrail", "methodology_review_step", "skill_workflow_gate", "score_calibration"]},
+    "summary": {"type": "string"},
+    "source_rule": {"type": "string"},
+    "review_status": {"type": "string", "enum": ["pending_review", "approved", "rejected", "rolled_back"]},
+    "rollback_plan": {"type": "string"},
+    "disclaimer": {"type": "string", "const": "仅用于 AIRS 研究质量改进，不构成投资建议"}
+  },
+  "additionalProperties": true
+}
+

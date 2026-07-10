@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://airs.local/schemas/learning/outcome.schema.json",
+  "title": "AIRS Learning Outcome Schema",
+  "description": "Outcome Record 用于比较研究预期与后续观察，仅用于研究质量校准，不构成投资建议。",
+  "type": "object",
+  "required": ["outcome_id", "research_ref", "expected_result", "observed_result", "horizon", "variance_level", "disclaimer"],
+  "properties": {
+    "outcome_id": {"type": "string"},
+    "research_ref": {"type": "string"},
+    "expected_result": {"type": "string"},
+    "observed_result": {"type": "string"},
+    "horizon": {"type": "string"},
+    "variance_level": {"type": "string", "enum": ["low", "medium", "high", "critical"]},
+    "evidence_refs": {"type": "array", "items": {"type": "string"}},
+    "lessons": {"type": "array", "items": {"type": "string"}},
+    "disclaimer": {"type": "string", "const": "仅用于 AIRS 研究质量改进，不构成投资建议"}
+  },
+  "additionalProperties": true
+}
+

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://airs.local/schemas/learning/learning.schema.json",
+  "title": "AIRS Autonomous Learning Engine Schema",
+  "description": "Learning Run 汇总 Feedback、Outcome、Pattern、Rule、Optimization 和 Governance，仅用于持续改进，不构成投资建议。",
+  "type": "object",
+  "required": ["learning_id", "feedback", "outcomes", "patterns", "rules", "optimizations", "governance", "disclaimer"],
+  "properties": {
+    "learning_id": {"type": "string"},
+    "source_refs": {"type": "array", "items": {"type": "string"}},
+    "feedback": {"type": "array", "items": {"$ref": "feedback.schema.json"}},
+    "outcomes": {"type": "array", "items": {"$ref": "outcome.schema.json"}},
+    "patterns": {"type": "array", "items": {"type": "object"}},
+    "rules": {"type": "array", "items": {"type": "object"}},
+    "optimizations": {"type": "array", "items": {"$ref": "optimization.schema.json"}},
+    "governance": {
+      "type": "object",
+      "required": ["approval_required", "auto_apply", "review_agent_gate", "rollback_required"],
+      "properties": {
+        "approval_required": {"type": "boolean", "const": true},
+        "auto_apply": {"type": "boolean", "const": false},
+        "review_agent_gate": {"type": "string"},
+        "rollback_required": {"type": "boolean"}
+      }
+    },
+    "memory_consolidation": {"type": "object"},
+    "disclaimer": {"type": "string", "const": "仅用于 AIRS 研究质量改进，不构成投资建议"}
+  },
+  "additionalProperties": true
+}

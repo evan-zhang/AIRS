@@ -190,7 +190,7 @@ def validate_consistency(failures: list[str]) -> None:
 
 
 def validate_regressions(failures: list[str]) -> None:
-    scripts = sorted(p for p in (ROOT / "scripts").glob("validate_*.py") if p.name != "validate_committee.py")
+    scripts = sorted(p for p in (ROOT / "scripts").glob("validate_*.py") if p.name not in {"validate_committee.py", "validate_learning.py"})
     check(len(scripts) >= 18, f"found {len(scripts)} regression validate scripts", f"expected at least 18 regression scripts, found {len(scripts)}", failures)
     for script in scripts:
         result = subprocess.run([sys.executable, str(script)], cwd=ROOT, text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, check=False)
