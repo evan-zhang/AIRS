@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://airs.local/schemas/workspace/snapshot.schema.json",
+  "title": "AIRS Workspace Snapshot",
+  "type": "object",
+  "required": [
+    "snapshot_id",
+    "project_id",
+    "session_id",
+    "state",
+    "reason",
+    "created_at",
+    "disclaimer"
+  ],
+  "properties": {
+    "snapshot_id": {
+      "type": "string"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "session_id": {
+      "type": "string"
+    },
+    "state": {
+      "type": "object"
+    },
+    "reason": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "disclaimer": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true,
+  "description": "Workspace Snapshot Schema，用于 Review、Replay 和 Export，不构成投资建议。"
+}

@@ -18,6 +18,7 @@ schemas/
 ├── score/             # 评分相关 Schema
 ├── benchmark/         # Benchmark 与生产示例 Schema
 ├── connectors/        # Data Connector Framework 相关 Schema
+├── workspace/         # AI Research Workspace 相关 Schema
 ├── report/            # 报告相关 Schema
 └── evaluation/        # 评估相关 Schema
 ```
@@ -90,6 +91,16 @@ schemas/
 - **schemas/runtime/event.schema.json**：Event Schema，定义 Event Bus 的事件审计字段。
 - **schemas/runtime/session.schema.json**：Session Schema，定义 Agent Session 状态和 Context Snapshot。
 - Runtime Schema 只用于执行编排、审计和质量控制；Workflow 必须由 Runtime 调度，不得直接驱动 M2-M7 业务模块，不构成投资建议。
+
+### Workspace 相关 Schema
+
+- **schemas/workspace/**：FEATURE-007 AI Research Workspace 相关 Schema，用于描述 Workspace、Project、Session、Artifact 和 Snapshot。
+- **schemas/workspace/workspace.schema.json**：Workspace 顶层 Schema，记录 workspace_id、projects、sessions、tasks、artifacts、timeline、snapshots、audit_log 和免责声明。
+- **schemas/workspace/project.schema.json**：Project Schema，定义研究问题、范围、负责人、状态和 refs。
+- **schemas/workspace/session.schema.json**：Session Schema，定义 project_id、runtime_id、workflow_id、intent、status 和 refs。
+- **schemas/workspace/artifact.schema.json**：Artifact Schema，统一登记 Evidence、Knowledge Graph、Scorecard、Report、Review 和 Export 产物。
+- **schemas/workspace/snapshot.schema.json**：Snapshot Schema，用于 Review、Replay、Export 和 Verification Agent 复核。
+- Workspace Schema 只用于统一入口、资产治理、审计和质量控制；Agent 执行仍由 Runtime 调度，不构成投资建议。
 
 ### Connector 相关 Schema
 

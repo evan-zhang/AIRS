@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://airs.local/schemas/workspace/workspace.schema.json",
+  "title": "AIRS Workspace",
+  "type": "object",
+  "required": [
+    "workspace_id",
+    "name",
+    "projects",
+    "sessions",
+    "artifacts",
+    "timeline",
+    "audit_log",
+    "disclaimer"
+  ],
+  "properties": {
+    "workspace_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "string"
+    },
+    "projects": {
+      "type": "array"
+    },
+    "sessions": {
+      "type": "array"
+    },
+    "tasks": {
+      "type": "array"
+    },
+    "artifacts": {
+      "type": "array"
+    },
+    "timeline": {
+      "type": "array"
+    },
+    "snapshots": {
+      "type": "array"
+    },
+    "audit_log": {
+      "type": "array"
+    },
+    "disclaimer": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true,
+  "description": "AIRS FEATURE-007 Workspace Schema，仅用于工程开发、研究流程编排与质量控制，不构成投资建议。"
+}

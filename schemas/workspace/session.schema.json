@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://airs.local/schemas/workspace/session.schema.json",
+  "title": "AIRS Workspace Session",
+  "type": "object",
+  "required": [
+    "session_id",
+    "project_id",
+    "runtime_id",
+    "workflow_id",
+    "intent",
+    "status",
+    "refs",
+    "disclaimer"
+  ],
+  "properties": {
+    "session_id": {
+      "type": "string"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "runtime_id": {
+      "type": "string"
+    },
+    "workflow_id": {
+      "type": "string"
+    },
+    "intent": {
+      "type": "object"
+    },
+    "status": {
+      "type": "string"
+    },
+    "refs": {
+      "type": "array"
+    },
+    "disclaimer": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true,
+  "description": "Workspace Session Schema，Session 包装 Runtime 执行引用，不直接驱动业务模块，不构成投资建议。"
+}

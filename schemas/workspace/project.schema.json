@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://airs.local/schemas/workspace/project.schema.json",
+  "title": "AIRS Workspace Project",
+  "type": "object",
+  "required": [
+    "project_id",
+    "name",
+    "research_question",
+    "scope",
+    "status",
+    "refs",
+    "disclaimer"
+  ],
+  "properties": {
+    "project_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "research_question": {
+      "type": "string"
+    },
+    "scope": {
+      "type": "object"
+    },
+    "owner": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "disclaimer": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true,
+  "description": "Workspace Project Schema，研究项目只保存问题、范围、引用和状态，不构成投资建议。"
+}

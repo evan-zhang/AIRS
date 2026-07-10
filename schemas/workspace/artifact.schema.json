@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://airs.local/schemas/workspace/artifact.schema.json",
+  "title": "AIRS Workspace Artifact",
+  "type": "object",
+  "required": [
+    "artifact_id",
+    "project_id",
+    "session_id",
+    "artifact_type",
+    "title",
+    "uri",
+    "refs",
+    "status",
+    "disclaimer"
+  ],
+  "properties": {
+    "artifact_id": {
+      "type": "string"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "session_id": {
+      "type": "string"
+    },
+    "artifact_type": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "uri": {
+      "type": "string"
+    },
+    "refs": {
+      "type": "array"
+    },
+    "metadata": {
+      "type": "object"
+    },
+    "status": {
+      "type": "string"
+    },
+    "disclaimer": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true,
+  "description": "Workspace Artifact Schema，产物必须保留 refs 和 disclaimer，不构成投资建议。"
+}

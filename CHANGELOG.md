@@ -1,5 +1,21 @@
 # AIRS 变更日志
 
+## [FEATURE-007] AI Research Workspace - 2026-07-10
+
+### Added
+
+- 新增 `docs/workspace/` 5 份 Workspace 架构、生命周期、项目管理、会话管理和产物治理文档。
+- 新增 `workspace/` 最小可运行 Python Workspace，覆盖 Project、Session、Timeline、Artifact、Task Board、Memory、Snapshot、Version、Replay、Export、Collaboration 和 Audit。
+- 新增 5 个 Workspace 示例和 Markdown Dashboard，覆盖公司、行业、热点主题、供应链和报告生成。
+- 新增 `schemas/workspace/`、`templates/workspace-dashboard-template.md` 和 `scripts/validate_workspace.py`。
+- 使用 AIRS Builder 生成 `builder-output/ai-research-workspace/` Feature Package。
+- 新增 FEATURE-007 ADR、Completion Report 和 Self Review。
+
+### Compliance
+
+- Workspace 是用户交互和研究资产管理唯一入口，但 Agent 执行仍由 Runtime 调度。
+- Workspace 只保存引用、状态、产物、快照、导出和审计记录，不构成投资建议。
+
 ## [FEATURE-006] Research Agent Runtime - 2026-07-10
 
 ### Added
