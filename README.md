@@ -63,6 +63,39 @@ AIRS/
 
 ## 快速开始
 
+### AIRS Platform 1.0 产品入口
+
+RELEASE-001 将 AIRS 升级为可安装、可部署、可运行、可演示的 Platform 1.0。以下入口均仅用于投资研究流程编排、证据追溯和质量控制，不构成投资建议。
+
+```bash
+# 初始化配置
+python3 cli/airs.py init
+
+# 运行研究任务
+python3 cli/airs.py run "分析 NVIDIA 的财务、估值、供应链和风险" --symbol NVDA --market US
+
+# 运行内置 Demo
+python3 cli/airs.py demo nvidia
+
+# 启动 REST API，默认 http://localhost:8765
+python3 api/server.py
+
+# 启动 Web UI，默认 http://localhost:8080
+python3 -m http.server 8080 --directory web
+
+# Docker 一键启动
+cd docker && docker compose up
+```
+
+产品文档入口：
+
+- [产品概览](./docs/product/overview.md)
+- [API Quick Start](./docs/api/quickstart.md)
+- [部署 Quick Start](./docs/deployment/quickstart.md)
+- [Docker 部署](./docs/deployment/docker.md)
+- [RELEASE-001 Completion Report](./docs/production/RELEASE_001_COMPLETION_REPORT.md)
+- [RELEASE-001 Self Review](./docs/review/RELEASE_001_SELF_REVIEW.md)
+
 ### 了解 AIRS
 
 1. 阅读 [ARCHITECTURE.md](./ARCHITECTURE.md) 了解系统架构

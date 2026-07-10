@@ -1,5 +1,24 @@
 # AIRS 变更日志
 
+## [RELEASE-001] AIRS Platform 1.0 Productization - 2026-07-10
+
+### Added
+
+- 新增 `cli/` 标准库命令行入口，支持 `airs init`、`airs run`、`airs demo`、`airs validate`。
+- 新增 `api/` 标准库 REST API Server，支持 `/health`、`/workspace`、`/memory`、`/research`、`/company`、`/theme` 和 `/report`。
+- 新增 `web/` 纯 HTML/CSS/JS 控制台，覆盖 Dashboard、新建研究、历史、Workspace、Knowledge Graph、Memory 和 Settings。
+- 新增 `docker/` 主镜像与 `docker-compose.yml`，支持 API 8765、Web 8080、workspace/cache 卷。
+- 新增 `config/airs.yaml` 配置中心，并扩展 `.env.example` 产品化配置项。
+- 新增 `demo/` NVIDIA、TSMC、康哲药业 Demo JSON 与 `demo/run_demo.py`。
+- 新增产品、API、部署文档，新增 `scripts/validate_productization.py`。
+- 新增 `docs/adr/ADR-0015-platform-productization.md`、`docs/production/RELEASE_001_COMPLETION_REPORT.md` 和 `docs/review/RELEASE_001_SELF_REVIEW.md`。
+
+### Compliance
+
+- RELEASE-001 复用 APP-001 主研究入口，不大规模重构 AIRS Core。
+- CLI、API、Web 和 Demo 均使用 Python 标准库或静态文件，不引入第三方依赖。
+- 所有投资研究相关入口保留“不构成投资建议”免责声明，不提供荐股、自动交易、交易指令、目标价或收益承诺。
+
 ## [APP-001] Equity Research App - 2026-07-10
 
 ### Added
