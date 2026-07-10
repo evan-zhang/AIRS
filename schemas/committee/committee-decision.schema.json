@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://airs.local/schemas/committee/committee-decision.schema.json",
+  "title": "AIRS Committee Decision",
+  "description": "AIC Decision Record Schema。Decision 决定是否允许 Research Engine 继续研究，不构成投资建议。",
+  "type": "object",
+  "required": ["decision_id", "session_id", "planner_ref", "research_engine_gate", "voting_result", "consensus", "minority_report", "follow_up_tasks", "final_recommendation", "disclaimer"],
+  "properties": {
+    "decision_id": {"type": "string"},
+    "session_id": {"type": "string"},
+    "planner_ref": {"type": "string"},
+    "research_engine_gate": {"type": "string", "enum": ["ALLOW", "ALLOW_WITH_CONDITIONS", "BLOCK"]},
+    "voting_result": {"$ref": "committee-vote.schema.json"},
+    "consensus": {"type": "object"},
+    "minority_report": {"type": "array", "items": {"type": "string"}},
+    "follow_up_tasks": {"type": "array", "items": {"type": "string"}},
+    "final_recommendation": {
+      "type": "string",
+      "description": "只能表达研究流程结论，不得包含交易指令、目标价或收益承诺。"
+    },
+    "disclaimer": {
+      "type": "string",
+      "const": "仅用于 AIRS 投资研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。"
+    }
+  },
+  "additionalProperties": true
+}

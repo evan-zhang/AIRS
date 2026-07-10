@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://airs.local/schemas/committee/committee-session.schema.json",
+  "title": "AIRS Committee Session",
+  "description": "记录一次 AIC 审议流程。Session 只用于 Planner 到 Research Engine 之间的门禁与审计，不构成投资建议。",
+  "type": "object",
+  "required": ["session_id", "planner_ref", "committee_position", "participants", "agenda", "opinions", "evidence_review", "challenges", "disclaimer"],
+  "properties": {
+    "session_id": {"type": "string"},
+    "planner_ref": {"type": "string"},
+    "committee_position": {"type": "string", "const": "after_planner_before_research_engine"},
+    "participants": {"type": "array", "items": {"type": "string"}, "minItems": 6},
+    "agenda": {"type": "array", "items": {"type": "object"}, "minItems": 5},
+    "opinions": {"type": "array", "items": {"type": "object"}, "minItems": 4},
+    "evidence_review": {"type": "object"},
+    "challenges": {"type": "array", "items": {"type": "object"}, "minItems": 2},
+    "unresolved_questions": {"type": "array", "items": {"type": "string"}},
+    "minority_report": {"type": "array", "items": {"type": "string"}},
+    "follow_up_tasks": {"type": "array", "items": {"type": "string"}},
+    "disclaimer": {"type": "string", "description": "必须包含不构成投资建议。"}
+  },
+  "additionalProperties": true
+}

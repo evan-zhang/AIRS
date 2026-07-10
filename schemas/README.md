@@ -21,6 +21,7 @@ schemas/
 ├── workspace/         # AI Research Workspace 相关 Schema
 ├── investment/        # Investment Research Engine 相关 Schema
 ├── planner/           # Autonomous Research Planner 相关 Schema
+├── committee/         # Autonomous Investment Committee 相关 Schema
 ├── report/            # 报告相关 Schema
 └── evaluation/        # 评估相关 Schema
 ```
@@ -50,6 +51,15 @@ schemas/
 - **schemas/planner/planning-task.schema.json**：Planning Task Schema，用于描述 Planner 生成的任务节点、依赖、Agent Role、输出和质量门禁。
 - **schemas/planner/planning-result.schema.json**：Planning Result Schema，用于记录 Planner Gate、Runtime 前置阻断、验证状态和已知缺口。
 - Planner Schema 明确要求 Runtime 只能接收 `planner_generated=true` 的计划，不能直接接收用户请求；所有 Planner 产物仅用于研究质量控制，不构成投资建议。
+
+### Committee 相关 Schema
+
+- **schemas/committee/**：Autonomous Investment Committee 相关 Schema，用于 FEATURE-010 多角色审议、证据挑战、反方质疑、投票和 Decision Record。
+- **schemas/committee/committee.schema.json**：AIC 顶层 Schema，定义 Committee 位于 Planner 之后、Research Engine 之前，要求证据挑战、反方观点和少数报告。
+- **schemas/committee/committee-session.schema.json**：Committee Session Schema，记录 Participants、Agenda、Opinions、Evidence Review、Challenges、Minority Report 和 Follow-up Tasks。
+- **schemas/committee/committee-vote.schema.json**：Committee Vote Schema，定义 APPROVE、CONDITIONAL_APPROVE、REJECT、Quorum 和 Outcome。
+- **schemas/committee/committee-decision.schema.json**：Committee Decision Schema，记录 Research Engine Gate、Voting Result、Consensus、Minority Report、Follow-up Tasks 和 Final Recommendation。
+- Committee Schema 只用于 Planner 到 Research Engine 之间的审议门禁和研究质量控制，不重复定义 M2-M9 能力，不构成投资建议。
 
 ### 证据相关 Schema
 

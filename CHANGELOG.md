@@ -1,5 +1,22 @@
 # AIRS 变更日志
 
+## [FEATURE-010] Autonomous Investment Committee - 2026-07-10
+
+### Added
+
+- 新增 `builder/requests/feature-request-autonomous-investment-committee.yaml` 并生成 `builder-output/autonomous-investment-committee/` Feature Package。
+- 新增 `docs/committee/` 12 份 AIC 架构、生命周期、角色、辩论、证据挑战、反方、共识、投票、少数报告、记录、治理和评审工作流文档。
+- 新增 `committee/` 最小可运行 Python AIC，覆盖 Coordinator、Role Registry、Analysts、Experts、Reviewer、Moderator、Voting Engine、Consensus Engine 和 Recorder。
+- 新增 `committee/examples/` 6 个生产级 Committee 示例：AI 算力、创新药、半导体、机器人、新能源、港股个股。
+- 新增 `schemas/committee/`、`templates/committee/` 和 `scripts/validate_committee.py`。
+- 新增 `docs/adr/ADR-0010-autonomous-investment-committee.md`、`docs/production/M10_COMPLETION_REPORT.md` 和 `docs/review/M10_SELF_REVIEW.md`。
+
+### Compliance
+
+- AIC 明确位于 Planner 之后、Research Engine 之前。
+- AIC 只执行审议、质询、证据复核、投票和记录，不重复定义 M1-M9 能力。
+- 所有 AIC 产物仅用于研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。
+
 ## [FEATURE-009] Autonomous Research Planner - 2026-07-10
 
 ### Added

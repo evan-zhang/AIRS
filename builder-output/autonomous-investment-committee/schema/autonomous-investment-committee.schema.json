@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Autonomous Investment Committee Feature Schema",
+  "description": "建立 AIRS Autonomous Investment Committee，作为 Planner 之后、Research Engine 之前的多角色审议门禁，对研究计划和投资结论进行交叉验证、反方质疑、证据复核、共识构建和最终表决。。本 Schema 仅用于 AIRS 工程开发与研究质量控制，不构成投资建议。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "feature_id",
+    "feature_name",
+    "inputs",
+    "outputs",
+    "disclaimer"
+  ],
+  "properties": {
+    "feature_id": {
+      "type": "string",
+      "const": "FEATURE-010"
+    },
+    "feature_name": {
+      "type": "string",
+      "const": "Autonomous Investment Committee"
+    },
+    "inputs": {
+      "type": "object",
+      "description": "Feature 输入。"
+    },
+    "outputs": {
+      "type": "object",
+      "description": "Feature 输出。"
+    },
+    "risk_level": {
+      "type": "string",
+      "enum": ["LOW", "MEDIUM", "HIGH", "CRITICAL"],
+      "default": "HIGH"
+    },
+    "disclaimer": {
+      "type": "string",
+      "description": "本生成物仅用于 AIRS 工程开发与研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。"
+    }
+  }
+}

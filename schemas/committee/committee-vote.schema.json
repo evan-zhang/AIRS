@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://airs.local/schemas/committee/committee-vote.schema.json",
+  "title": "AIRS Committee Vote",
+  "description": "AIC 表决结果 Schema。Vote 是流程门禁，不是投资评级，不构成投资建议。",
+  "type": "object",
+  "required": ["vote_id", "votes", "summary", "outcome", "quorum_met", "disclaimer"],
+  "properties": {
+    "vote_id": {"type": "string"},
+    "votes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["role_id", "vote", "rationale"],
+        "properties": {
+          "role_id": {"type": "string"},
+          "vote": {"type": "string", "enum": ["APPROVE", "CONDITIONAL_APPROVE", "REJECT"]},
+          "rationale": {"type": "string"}
+        }
+      },
+      "minItems": 6
+    },
+    "summary": {"type": "object"},
+    "outcome": {"type": "string", "enum": ["PASS", "CONDITIONAL_PASS", "FAIL"]},
+    "quorum_met": {"type": "boolean"},
+    "disclaimer": {"type": "string", "description": "必须包含不构成投资建议。"}
+  },
+  "additionalProperties": true
+}

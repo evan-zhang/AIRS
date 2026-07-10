@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://airs.local/schemas/committee/committee.schema.json",
+  "title": "AIRS Autonomous Investment Committee",
+  "description": "AIC 顶层 Schema。AIC 位于 Planner 之后、Research Engine 之前，仅用于研究质量控制，不构成投资建议。",
+  "type": "object",
+  "required": ["committee_id", "position", "roles", "required_refs", "governance", "disclaimer"],
+  "properties": {
+    "committee_id": {"type": "string"},
+    "position": {"type": "string", "const": "after_planner_before_research_engine"},
+    "roles": {"type": "array", "items": {"type": "string"}, "minItems": 6},
+    "required_refs": {
+      "type": "array",
+      "items": {"type": "string"},
+      "contains": {"const": "schemas/planner/research-plan.schema.json"}
+    },
+    "governance": {
+      "type": "object",
+      "required": ["evidence_challenge_required", "counter_argument_required", "minority_report_required"],
+      "properties": {
+        "evidence_challenge_required": {"type": "boolean", "const": true},
+        "counter_argument_required": {"type": "boolean", "const": true},
+        "minority_report_required": {"type": "boolean", "const": true}
+      }
+    },
+    "disclaimer": {
+      "type": "string",
+      "const": "仅用于 AIRS 投资研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。"
+    }
+  },
+  "additionalProperties": true
+}
