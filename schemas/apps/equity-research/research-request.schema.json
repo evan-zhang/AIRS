@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://airs.local/schemas/apps/equity-research/research-request.schema.json",
+  "title": "APP-001 Equity Research Request",
+  "description": "APP-001 股票研究请求 Schema。仅用于研究流程编排和质量控制，不构成投资建议。",
+  "type": "object",
+  "required": [
+    "request_id",
+    "raw_input",
+    "time_range",
+    "research_question",
+    "focus_areas",
+    "peer_companies",
+    "risk_preference",
+    "language",
+    "disclaimer"
+  ],
+  "properties": {
+    "request_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "raw_input": {
+      "type": "string",
+      "minLength": 1
+    },
+    "symbol": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "company_name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "market": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "US",
+        "HK",
+        "TW",
+        "CN",
+        null
+      ]
+    },
+    "time_range": {
+      "type": "string"
+    },
+    "research_question": {
+      "type": "string",
+      "minLength": 1
+    },
+    "focus_areas": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "profile",
+          "industry",
+          "supply_chain",
+          "financial",
+          "valuation",
+          "catalyst",
+          "risk"
+        ]
+      },
+      "minItems": 1
+    },
+    "peer_companies": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "risk_preference": {
+      "type": "string",
+      "enum": [
+        "conservative",
+        "balanced",
+        "aggressive"
+      ]
+    },
+    "language": {
+      "type": "string",
+      "enum": [
+        "zh",
+        "en"
+      ]
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "disclaimer": {
+      "type": "string",
+      "pattern": "不构成投资建议"
+    }
+  },
+  "additionalProperties": true
+}
+

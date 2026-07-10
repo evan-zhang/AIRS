@@ -23,6 +23,7 @@ schemas/
 ├── planner/           # Autonomous Research Planner 相关 Schema
 ├── committee/         # Autonomous Investment Committee 相关 Schema
 ├── learning/          # Autonomous Learning Engine 相关 Schema
+├── apps/              # 应用层 Schema
 ├── report/            # 报告相关 Schema
 └── evaluation/        # 评估相关 Schema
 ```
@@ -43,6 +44,13 @@ schemas/
 ### 研究相关 Schema
 
 - **research/**：研究意图、研究计划、研究发现
+
+### App 相关 Schema
+
+- **schemas/apps/equity-research/**：APP-001 Equity Research App 相关 Schema，用于股票研究应用的请求解析、公司识别、全链路编排和 15 段结果输出。
+- **schemas/apps/equity-research/research-request.schema.json**：Research Request Schema，要求包含 request_id、raw_input、research_question、time_range、focus_areas、peer_companies、risk_preference、language 和免责声明。
+- **schemas/apps/equity-research/research-result.schema.json**：Research Result Schema，要求包含 Planner、Committee、Runtime、Connector、Analysis、Report、Memory 和 Learning 输出，且 report.sections 必须为 15 段，每段区分 facts、inference、assumption、opinion。
+- APP Schema 只用于研究流程编排、证据追溯和质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。
 
 ### Planner 相关 Schema
 

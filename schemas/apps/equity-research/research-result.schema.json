@@ -1,0 +1,158 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://airs.local/schemas/apps/equity-research/research-result.schema.json",
+  "title": "APP-001 Equity Research Result",
+  "description": "APP-001 股票研究结果 Schema。所有输出仅用于研究流程编排、证据追溯和质量控制，不构成投资建议。",
+  "type": "object",
+  "required": [
+    "app_id",
+    "app_version",
+    "request",
+    "company",
+    "planner",
+    "committee_initial",
+    "runtime",
+    "data_collection",
+    "analysis",
+    "committee_final",
+    "report",
+    "memory",
+    "learning",
+    "disclaimer"
+  ],
+  "properties": {
+    "request_id": {
+      "description": "可选冗余字段；正式 request_id 位于 request.request_id。",
+      "type": "string"
+    },
+    "app_id": {
+      "const": "APP-001"
+    },
+    "app_version": {
+      "type": "string"
+    },
+    "request": {
+      "$ref": "research-request.schema.json"
+    },
+    "company": {
+      "type": "object",
+      "required": [
+        "symbol",
+        "company_name",
+        "market",
+        "resolver_status",
+        "traceability",
+        "disclaimer"
+      ]
+    },
+    "planner": {
+      "type": "object"
+    },
+    "committee_initial": {
+      "type": "object"
+    },
+    "runtime": {
+      "type": "object"
+    },
+    "data_collection": {
+      "type": "object",
+      "required": [
+        "plan",
+        "connector_results",
+        "evidence_cards",
+        "degradation_notes",
+        "disclaimer"
+      ]
+    },
+    "analysis": {
+      "type": "object",
+      "required": [
+        "profile",
+        "industry_position",
+        "supply_chain_chokepoint",
+        "financial_analysis",
+        "valuation",
+        "catalysts",
+        "risks",
+        "counter_view",
+        "evidence_chain",
+        "knowledge_graph",
+        "score_card",
+        "statement_registry",
+        "disclaimer"
+      ]
+    },
+    "committee_final": {
+      "type": "object"
+    },
+    "report": {
+      "type": "object",
+      "required": [
+        "report_id",
+        "title",
+        "sections",
+        "markdown",
+        "disclaimer"
+      ],
+      "properties": {
+        "sections": {
+          "type": "array",
+          "minItems": 15,
+          "maxItems": 15,
+          "items": {
+            "type": "object",
+            "required": [
+              "section_id",
+              "title",
+              "facts",
+              "inference",
+              "assumption",
+              "opinion"
+            ],
+            "properties": {
+              "facts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "inference": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "assumption": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "opinion": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "disclaimer": {
+          "type": "string",
+          "pattern": "不构成投资建议"
+        }
+      }
+    },
+    "memory": {
+      "type": "object"
+    },
+    "learning": {
+      "type": "object"
+    },
+    "disclaimer": {
+      "type": "string",
+      "pattern": "不构成投资建议"
+    }
+  },
+  "additionalProperties": true
+}
