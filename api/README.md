@@ -8,7 +8,14 @@
 python3 api/server.py
 ```
 
-默认监听 `0.0.0.0:8765`。
+默认监听 `127.0.0.1:8765`。
+
+公网或容器内绑定 `0.0.0.0` 前必须设置 `AIRS_API_KEY`，否则服务会拒绝启动。可选安全配置：
+
+- `AIRS_API_KEY`：启用 `Authorization: Bearer <key>` 或 `X-AIRS-API-Key` 鉴权。
+- `AIRS_CORS_ALLOW_ORIGINS`：逗号分隔的允许来源，默认仅本地 Web。
+- `AIRS_MAX_BODY_BYTES`：请求体大小上限。
+- `AIRS_EXPOSE_ERRORS=false`：默认隐藏内部错误细节。
 
 ## Endpoints
 
@@ -21,4 +28,3 @@ python3 api/server.py
 - `POST /report`：生成报告型研究结果。
 
 所有接口返回 JSON，并固定包含免责声明。
-

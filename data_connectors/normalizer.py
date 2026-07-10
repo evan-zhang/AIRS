@@ -19,6 +19,7 @@ class DataNormalizer:
                 "connector": config.connector_id,
                 "request_id": request.trace_id,
                 "cache_hit": False,
+                "mode": data.get("mode", "unknown"),
                 "transformations": transformations or ["mock_fetch", "normalize"],
             },
             disclaimer=DISCLAIMER,

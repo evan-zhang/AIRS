@@ -1,5 +1,27 @@
 # AIRS 变更日志
 
+## [QA-SPRINT-2] Architecture Stabilization - 2026-07-10
+
+### Fixed
+
+- AUDIT-001 / TD-001：新增薄 Orchestrator Facade，明确 Planner -> Orchestrator -> Runtime 边界，APP-001 不再直接实例化 `RuntimeCore`。
+- AUDIT-002 / TD-004：新增 Core contract validation，APP-001 输出必须校验 Evidence、Knowledge Graph、Score 和 Report 引用闭合。
+- AUDIT-003 / TD-003：Connector 结果新增 `traceability.mode`，APP-001 输出 `data_lineage`，Mock/SKIP 证据不得标记为 Fact。
+- AUDIT-004 / TD-002：新增 `scripts/validate_architecture_stabilization.py`，覆盖 Orchestrator 边界、APP-Core 契约、数据 lineage 和 API 安全行为。
+- AUDIT-008 / TD-006：API 默认绑定 `127.0.0.1`，非本地绑定必须配置 `AIRS_API_KEY`，新增请求体限制、CORS allowlist 和错误脱敏。
+
+### Added
+
+- 新增 `docs/adr/ADR-0016-architecture-stabilization.md`。
+- 新增 `docs/qa/ARCHITECTURE_STABILIZATION_REPORT.md`。
+- 新增 `docs/review/QA_ARCHITECTURE_SELF_REVIEW.md`。
+
+### Compliance
+
+- QA Sprint 2 不新增投资研究业务功能，仅稳定架构边界、契约、验证和 API 安全。
+- Mock 数据仍可用于本地测试，但必须显式标识为降级，不得作为真实研究事实进入结果。
+- 本 Sprint 仅用于 AIRS 工程质量检查，不构成投资建议。
+
 ## [RELEASE-001] AIRS Platform 1.0 Productization - 2026-07-10
 
 ### Added

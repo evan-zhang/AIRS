@@ -2,6 +2,17 @@
 
 免责声明：AIRS API 仅用于投资研究流程编排、证据追溯和质量控制，不构成投资建议。
 
+## Security Boundary
+
+API 默认只绑定 `127.0.0.1`。如果绑定 `0.0.0.0` 或其他非本地地址，必须设置 `AIRS_API_KEY`，否则服务拒绝启动。
+
+启用 `AIRS_API_KEY` 后，请求需要包含以下任一 Header：
+
+- `Authorization: Bearer <AIRS_API_KEY>`
+- `X-AIRS-API-Key: <AIRS_API_KEY>`
+
+默认隐藏内部错误详情，并限制请求体大小，避免把本地演示服务误暴露到公网。
+
 ## GET /health
 
 返回服务状态、版本、Python 版本和 endpoint 列表。
@@ -41,4 +52,3 @@
 运行报告生成型研究任务，返回 APP-001 完整结果。
 
 所有响应均为 JSON，并包含 `disclaimer` 字段。
-

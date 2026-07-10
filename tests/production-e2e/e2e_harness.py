@@ -15,6 +15,7 @@ from typing import Any
 
 from committee.coordinator import run_committee
 from common.contract import CONTRACT_VERSION, runtime_task_from_planner_task
+from common.contract_validation import summarize_data_lineage
 from data_connectors.base import ConnectorRequest
 from data_connectors.registry import default_registry as default_connector_registry
 from investment_engine.pipeline import run_research
@@ -23,7 +24,7 @@ from knowledge_graph.model import EvidenceBinding
 from knowledge_graph.validator import KnowledgeGraphValidator
 from learning.engine import ContinuousImprovementEngine
 from planner.engine import plan_research
-from runtime.core import RuntimeCore
+from orchestrator import run_planned_workflow
 from workspace.memory import WorkspaceMemory
 
 
@@ -231,7 +232,8 @@ def run_production_case(case_data: dict[str, Any]) -> dict[str, Any]:
         }
     )
     runtime_plan = runtime_plan_for_core(plan, case.case_id)
-    runtime = RuntimeCore().run_workflow(runtime_plan)
+    orchestration = run_planned_workflow({**plan, "required_runtime": runtime_plan}, case_id=case.case_id)
+    runtime = orchestration["runtime"]
     connector_trace = fetch_connector_trace(case)
     engine_result = run_research(request)
     kg_state = build_validated_kg(case, engine_result, connector_trace)
@@ -282,6 +284,7 @@ def run_production_case(case_data: dict[str, Any]) -> dict[str, Any]:
     checks = []
     errors = []
     connector_errors = assert_connector_trace(connector_trace)
+    connector_lineage = summarize_data_lineage([item["result"] for item in connector_trace])
     report_errors = assert_report_taxonomy(engine_result)
     kg_errors = [] if kg_state["validation"]["passed"] else kg_state["validation"]["errors"]
     runtime_errors = [] if runtime["final_state"]["runtime_state"].get("status") == "COMPLETED" else ["runtime did not complete"]
@@ -292,6 +295,7 @@ def run_production_case(case_data: dict[str, Any]) -> dict[str, Any]:
         "planner": bool(plan.get("execution_order") and plan.get("required_runtime")),
         "runtime": not runtime_errors,
         "connectors": not connector_errors,
+        "connector_lineage": bool(connector_lineage["real_sources"] or connector_lineage["mock_sources"] or connector_lineage["skipped_sources"]),
         "evidence_trace": len(engine_result["evidence_chain"]["evidence_cards"]) >= case.expectations.get("min_evidence_cards", 4),
         "knowledge_graph": not kg_errors,
         "scorecard": engine_result["score_card"]["quality_gate"] in {"PASS", "CONDITIONAL_PASS"},
@@ -316,7 +320,9 @@ def run_production_case(case_data: dict[str, Any]) -> dict[str, Any]:
         "checks": checks,
         "errors": errors,
         "execution_log": runtime["event_log"],
+        "orchestrator": orchestration,
         "evidence_trace": connector_trace,
+        "connector_lineage": connector_lineage,
         "airs_evidence_chain": engine_result["evidence_chain"],
         "kg_state": kg_state,
         "scorecard": engine_result["score_card"],

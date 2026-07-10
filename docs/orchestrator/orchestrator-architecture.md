@@ -4,14 +4,30 @@
 
 ## Role
 
-Orchestrator 是 Runtime 上层的研究流程描述层。它定义阶段、依赖、输入输出和质量门禁，但不直接调用外部数据源、不直接生成 Evidence Card、不绕过 Runtime 执行 Agent。
+Orchestrator 是 Planner 和 Runtime 之间的正式边界。Planner 负责生成 Research Plan 和 Runtime Workflow，Orchestrator 负责校验 Planner 输出、确认任务依赖闭合，并把合规 Workflow 交给 Runtime。Runtime 负责 Agent 调度、状态、事件和资源。
+
+QA Sprint 2 决策：当前 Stable 主干采用薄 Orchestrator Facade，不新增业务编排逻辑，不替代 Planner 或 Runtime。
 
 ## Boundary
 
-- Orchestrator 描述 Workflow。
+- Planner 描述研究目标、任务图、资源、预算、风险和 Runtime Workflow。
+- Orchestrator 校验 Workflow 形状、任务唯一性、依赖存在性和 contract version。
 - Runtime 执行 Workflow。
 - Workspace 保存项目、会话、任务、产物、快照和审计。
 - Skill、Prompt、Evidence、Knowledge Graph、Score 和 Report 按引用进入流程。
+
+禁止事项：
+
+- App 层不得直接实例化 `RuntimeCore`。
+- Orchestrator 不直接调用 Connector、Evidence、KG、Score、Report 或业务 App。
+- Runtime 不直接接收用户原始研究请求。
+
+## Implementation
+
+- Runtime boundary: `orchestrator/core.py`
+- Shared contract: `common/contract.py`
+- Contract validation: `common/contract_validation.py`
+- APP-001 handoff: `apps/equity_research/app.py`
 
 ## FEATURE-008 Usage
 

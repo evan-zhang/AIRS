@@ -20,6 +20,8 @@ python3 cli/airs.py demo nvidia
 python3 api/server.py
 ```
 
+API 默认只监听 `127.0.0.1:8765`。如需绑定公网地址，必须先设置 `AIRS_API_KEY`。
+
 ## 4. 打开 Web
 
 ```bash
@@ -32,4 +34,3 @@ python3 -m http.server 8080
 ```bash
 python3 cli/airs.py validate
 ```
-

@@ -17,9 +17,11 @@ cache:
   ttl_seconds: 86400
 
 api:
-  host: 0.0.0.0
+  host: 127.0.0.1
   port: 8765
   cors: true
+  require_api_key_for_public_bind: true
+  max_body_bytes: 1048576
 
 web:
   host: 0.0.0.0
@@ -54,4 +56,3 @@ compliance:
     - 自动交易
     - 交易指令
     - 目标价承诺
-

@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -23,6 +24,26 @@ from api.routes.workspace import handle_workspace
 
 
 DISCLAIMER = "AIRS API 仅用于投资研究流程编排、证据追溯和质量控制，不构成投资建议。"
+DEFAULT_MAX_BODY_BYTES = 1_048_576
+LOCAL_HOSTS = {"127.0.0.1", "localhost", "::1"}
+
+
+def _env_bool(name: str, default: bool = False) -> bool:
+    value = os.environ.get(name)
+    if value is None:
+        return default
+    return value.strip().lower() in {"1", "true", "yes", "on"}
+
+
+def _security_config() -> dict[str, Any]:
+    api_key = os.environ.get("AIRS_API_KEY", "").strip()
+    origins = [item.strip() for item in os.environ.get("AIRS_CORS_ALLOW_ORIGINS", "http://localhost:8080,http://127.0.0.1:8080").split(",") if item.strip()]
+    return {
+        "api_key": api_key,
+        "cors_origins": origins,
+        "max_body_bytes": int(os.environ.get("AIRS_MAX_BODY_BYTES", str(DEFAULT_MAX_BODY_BYTES))),
+        "expose_errors": _env_bool("AIRS_EXPOSE_ERRORS", False),
+    }
 
 
 class AIRSRequestHandler(BaseHTTPRequestHandler):
@@ -30,6 +51,9 @@ class AIRSRequestHandler(BaseHTTPRequestHandler):
 
     def _read_json(self) -> dict[str, Any]:
         length = int(self.headers.get("Content-Length", "0") or "0")
+        max_body = self.server.security_config["max_body_bytes"]  # type: ignore[attr-defined]
+        if length > max_body:
+            raise ValueError(f"request body too large: {length} > {max_body}")
         if length == 0:
             return {}
         raw = self.rfile.read(length).decode("utf-8")
@@ -38,19 +62,40 @@ class AIRSRequestHandler(BaseHTTPRequestHandler):
     def _send(self, status: int, payload: dict[str, Any]) -> None:
         payload.setdefault("disclaimer", DISCLAIMER)
         body = json.dumps(payload, ensure_ascii=False, indent=2).encode("utf-8")
+        origin = self.headers.get("Origin", "")
+        allowed_origins = self.server.security_config["cors_origins"]  # type: ignore[attr-defined]
         self.send_response(status)
         self.send_header("Content-Type", "application/json; charset=utf-8")
-        self.send_header("Access-Control-Allow-Origin", "*")
+        if origin and origin in allowed_origins:
+            self.send_header("Access-Control-Allow-Origin", origin)
         self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
-        self.send_header("Access-Control-Allow-Headers", "Content-Type")
+        self.send_header("Access-Control-Allow-Headers", "Content-Type, Authorization, X-AIRS-API-Key")
         self.send_header("Content-Length", str(len(body)))
         self.end_headers()
         self.wfile.write(body)
+
+    def _authorized(self) -> bool:
+        api_key = self.server.security_config["api_key"]  # type: ignore[attr-defined]
+        if not api_key:
+            return True
+        bearer = self.headers.get("Authorization", "")
+        header_key = self.headers.get("X-AIRS-API-Key", "")
+        return header_key == api_key or bearer == f"Bearer {api_key}"
+
+    def _send_error(self, status: int, code: str, exc: Exception | None = None) -> None:
+        expose = self.server.security_config["expose_errors"]  # type: ignore[attr-defined]
+        payload = {"error": code}
+        if expose and exc:
+            payload["message"] = str(exc)
+        self._send(status, payload)
 
     def do_OPTIONS(self) -> None:  # noqa: N802
         self._send(200, {"status": "ok"})
 
     def do_GET(self) -> None:  # noqa: N802
+        if not self._authorized():
+            self._send(401, {"error": "unauthorized"})
+            return
         path = urlparse(self.path).path
         try:
             if path == "/health":
@@ -62,9 +107,12 @@ class AIRSRequestHandler(BaseHTTPRequestHandler):
             else:
                 self._send(404, {"error": "not_found", "path": path})
         except Exception as exc:  # noqa: BLE001
-            self._send(500, {"error": "internal_error", "message": str(exc)})
+            self._send_error(500, "internal_error", exc)
 
     def do_POST(self) -> None:  # noqa: N802
+        if not self._authorized():
+            self._send(401, {"error": "unauthorized"})
+            return
         path = urlparse(self.path).path
         try:
             if path in {"/research", "/company", "/theme", "/report"}:
@@ -73,15 +121,28 @@ class AIRSRequestHandler(BaseHTTPRequestHandler):
                 self._send(404, {"error": "not_found", "path": path})
         except json.JSONDecodeError as exc:
             self._send(400, {"error": "invalid_json", "message": str(exc)})
+        except ValueError as exc:
+            self._send_error(413 if "too large" in str(exc) else 400, "invalid_request", exc)
         except Exception as exc:  # noqa: BLE001
-            self._send(500, {"error": "internal_error", "message": str(exc)})
+            self._send_error(500, "internal_error", exc)
 
     def log_message(self, fmt: str, *args: object) -> None:
         sys.stderr.write("AIRS API - " + fmt % args + "\n")
 
 
-def run_server(host: str = "0.0.0.0", port: int = 8765) -> None:
+def validate_bind_security(host: str) -> None:
+    if host in LOCAL_HOSTS:
+        return
+    if os.environ.get("AIRS_API_KEY", "").strip():
+        return
+    raise RuntimeError("Refusing non-local bind without AIRS_API_KEY; set an API key or bind to 127.0.0.1")
+
+
+def run_server(host: str = "127.0.0.1", port: int = 8765) -> None:
+    validate_bind_security(host)
     httpd = ThreadingHTTPServer((host, port), AIRSRequestHandler)
+    httpd.timeout = float(os.environ.get("AIRS_REQUEST_TIMEOUT_SECONDS", "30"))
+    httpd.security_config = _security_config()  # type: ignore[attr-defined]
     print(f"AIRS API listening on http://{host}:{port}")
     print(f"免责声明：{DISCLAIMER}")
     httpd.serve_forever()
@@ -89,7 +150,7 @@ def run_server(host: str = "0.0.0.0", port: int = 8765) -> None:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Run AIRS REST API server.")
-    parser.add_argument("--host", default="0.0.0.0")
+    parser.add_argument("--host", default=os.environ.get("AIRS_API_HOST", "127.0.0.1"))
     parser.add_argument("--port", type=int, default=8765)
     args = parser.parse_args(argv)
     run_server(args.host, args.port)
@@ -98,4 +159,3 @@ def main(argv: list[str] | None = None) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
