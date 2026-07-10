@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://airs.local/schemas/runtime/task.schema.json",
+  "title": "Task",
+  "type": "object",
+  "required": [
+    "task_id",
+    "agent_id",
+    "dependencies",
+    "input",
+    "expected_output",
+    "disclaimer"
+  ],
+  "properties": {
+    "task_id": {
+      "type": "string"
+    },
+    "agent_id": {
+      "type": "string"
+    },
+    "dependencies": {
+      "type": "array"
+    },
+    "input": {
+      "type": "object"
+    },
+    "expected_output": {
+      "type": "object"
+    },
+    "disclaimer": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true,
+  "description": "AIRS FEATURE-006 Runtime Schema，仅用于工程开发和研究质量控制，不构成投资建议。"
+}

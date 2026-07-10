@@ -1,5 +1,20 @@
 # AIRS 变更日志
 
+## [FEATURE-006] Research Agent Runtime - 2026-07-10
+
+### Added
+
+- 新增 `docs/runtime/` 10 份 Runtime 架构、生命周期、注册表、调度、消息、事件、状态、内存、资源和监控文档。
+- 新增 `runtime/` 最小可运行 Python Runtime，覆盖 Core、Agent Registry、Lifecycle、Context、Session、Dispatcher、Message Bus、Event Bus、State、Memory、Resource、Retry、Timeout、Cancellation 和 Monitor。
+- 新增 5 个 Runtime 示例，覆盖公司研究、行业研究、热点主题、供应链和报告生成。
+- 新增 `schemas/runtime/`、`templates/runtime/` 和 `scripts/validate_runtime.py`。
+- 新增 FEATURE-006 ADR、Completion Report 和 Self Review。
+
+### Compliance
+
+- 所有 Workflow 必须由 Runtime 调度执行，不允许 Workflow 直接驱动业务模块。
+- Runtime 仅用于 AIRS 工程开发、研究流程编排和质量控制，不构成投资建议。
+
 ## [FEATURE-004] Data Connector Framework - 2026-07-10
 
 ### Added

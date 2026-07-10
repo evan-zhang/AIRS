@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://airs.local/schemas/runtime/agent.schema.json",
+  "title": "Agent",
+  "type": "object",
+  "required": [
+    "agent_id",
+    "agent_type",
+    "capabilities",
+    "required_refs",
+    "disclaimer"
+  ],
+  "properties": {
+    "agent_id": {
+      "type": "string"
+    },
+    "agent_type": {
+      "type": "string",
+      "enum": [
+        "sync",
+        "async",
+        "parallel",
+        "long_running",
+        "human_in_the_loop"
+      ]
+    },
+    "capabilities": {
+      "type": "array"
+    },
+    "required_refs": {
+      "type": "array"
+    },
+    "disclaimer": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true,
+  "description": "AIRS FEATURE-006 Runtime Schema，仅用于工程开发和研究质量控制，不构成投资建议。"
+}

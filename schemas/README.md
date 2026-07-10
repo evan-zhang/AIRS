@@ -81,6 +81,16 @@ schemas/
 - **schemas/benchmark/example.schema.json**：Production Example 结构 Schema，用于描述示例 ID、方法论引用、Prompt 引用、Evidence ID、Scorecard、Quality Gate 和报告章节。
 - Benchmark Schema 只用于 AIRS 回归测试与研究质量控制，必须复用 M3 Evidence Card、M4 Prompt 和 M6 Scorecard，不构成投资建议。
 
+### Runtime 相关 Schema
+
+- **schemas/runtime/**：FEATURE-006 Research Agent Runtime 相关 Schema，用于描述 Runtime、Agent、Task、Event 和 Session。
+- **schemas/runtime/runtime.schema.json**：Runtime 顶层 Schema，记录 runtime_id、workflow_id、tasks、final_state 和免责声明。
+- **schemas/runtime/agent.schema.json**：Agent Definition Schema，支持 sync、async、parallel、long_running 和 human_in_the_loop 五类 Agent。
+- **schemas/runtime/task.schema.json**：Task Schema，定义 task_id、agent_id、dependencies、input 和 expected_output。
+- **schemas/runtime/event.schema.json**：Event Schema，定义 Event Bus 的事件审计字段。
+- **schemas/runtime/session.schema.json**：Session Schema，定义 Agent Session 状态和 Context Snapshot。
+- Runtime Schema 只用于执行编排、审计和质量控制；Workflow 必须由 Runtime 调度，不得直接驱动 M2-M7 业务模块，不构成投资建议。
+
 ### Connector 相关 Schema
 
 - **schemas/connectors/**：FEATURE-004 Data Connector Framework 相关 Schema，用于统一描述 Connector、Data Source 和 Connector Result。

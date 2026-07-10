@@ -1,0 +1,10 @@
+"""行业研究 Runtime example."""
+from __future__ import annotations
+from runtime import RuntimeCore
+def build_workflow() -> dict:
+    return {"workflow_id": "industry-research-workflow", "runtime_name": "行业研究 Runtime", "tasks": [{"task_id":"t1","agent_id":"methodology_selector","dependencies":[],"input":{"research_question":"行业研究 Runtime 示例问题","branches":["证据","反证"]},"refs":["docs/methodology/DSL.md","docs/evidence/evidence-architecture.md"]},{"task_id":"t2","agent_id":"parallel_researcher","dependencies":['t1'],"input":{"research_question":"行业研究 Runtime 示例问题","branches":["证据","反证"]},"refs":["docs/methodology/DSL.md","docs/evidence/evidence-architecture.md"]},{"task_id":"t3","agent_id":"evidence_collector","dependencies":['t2'],"input":{"research_question":"行业研究 Runtime 示例问题","branches":["证据","反证"]},"refs":["docs/methodology/DSL.md","docs/evidence/evidence-architecture.md"]},{"task_id":"t4","agent_id":"report_composer","dependencies":['t3'],"input":{"research_question":"行业研究 Runtime 示例问题","branches":["证据","反证"]},"refs":["docs/methodology/DSL.md","docs/evidence/evidence-architecture.md"]}], "disclaimer": "仅供研究参考，不构成投资建议"}
+def run() -> dict:
+    return RuntimeCore().run_workflow(build_workflow())
+if __name__ == "__main__":
+    import json
+    print(json.dumps(run(), ensure_ascii=False, indent=2))
