@@ -1,33 +1,35 @@
-# Knowledge Graph Engine Release Notes
+# FEATURE-002 Release Notes - Knowledge Graph Engine
 
-## Summary
+## 1. Summary
 
-新增 Knowledge Graph Engine Feature Package，用于后续实现 AIRS 研究图谱结构。该 Package 支持实体、关系、证据、命题、反方证据、缺失证据和不确定性的结构化表达。
+为 AIRS 研究流程提供实体、关系、Evidence 绑定、路径分析和供应链卡脖子分析的最小可运行知识图谱引擎。
 
-## Added
+## 2. Added
 
-- `ISSUE.md`
-- `ADR.md`
-- `FEATURE_SPEC.md`
-- `skill/knowledge-graph-skill.md`
-- `prompt/knowledge-graph-prompt.md`
-- `schema/knowledge-graph.schema.json`
-- `tests/test-knowledge-graph.md`
-- `benchmark/knowledge-graph-benchmark.md`
-- `PR_CHECKLIST.md`
-- `RELEASE_NOTES.md`
+- builder-output/knowledge-graph-engine/ 标准 Feature Package
+- docs/knowledge-graph/ 知识图谱设计与工作流文档
+- knowledge_graph/ 最小可运行 Python 实现
+- schemas/knowledge-graph/knowledge-graph.schema.json
+- templates/knowledge-graph/ 图谱与分析模板
+- examples/knowledge-graph/ 两个生产示例
+- scripts/validate_knowledge_graph.py
 
-## Changed
+## 3. Changed
 
-- 未修改 AIRS M1-M8 已验收内容。
+- 默认不修改 AIRS M1-M8 已验收内容。
+- 如后续实现需要修改历史内容，必须新增 ADR 并更新仓库 CHANGELOG。
 
-## Known Limits
+## 4. Validation
 
-- 当前为 Feature Package，不是图数据库运行时。
-- 不接入真实数据源。
-- 不生成投资结论。
+- `scripts/validate_builder.py`
+- M1-M8 回归验证脚本。
 
-## 免责声明
+## 5. Known Limits
 
-本 Release Notes 仅用于 AIRS 工程开发与投资研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。
+- Builder 生成物仍需 Code Agent 和 Review Agent 审查。
+- Builder 不接入真实行情，不执行投资研究，不生成投资结论。
+
+## 6. 免责声明
+
+本生成物仅用于 AIRS 工程开发与研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。
 

@@ -13,6 +13,7 @@ schemas/
 ├── methodology/       # 方法论 Schema
 ├── research/          # 研究相关 Schema
 ├── evidence/          # 证据相关 Schema
+├── knowledge-graph/   # 知识图谱相关 Schema
 ├── skills/            # Skill Engine 相关 Schema
 ├── score/             # 评分相关 Schema
 ├── benchmark/         # Benchmark 与生产示例 Schema
@@ -43,6 +44,12 @@ schemas/
 - **evidence/evidence.schema.json**：Evidence Engine 顶层 Schema，用于封装证据卡集合、证据链集合和治理要求。
 - **evidence/evidence-card.schema.json**：证据卡 Schema，定义 Evidence ID、Title、Category、Source、Source Type、URL、Publication Time、Collection Time、Confidence、Evidence Level、Supports、Refutes、Missing Evidence、Weight、Traceability、Version 等 16 个必需字段。
 - **evidence/evidence-chain.schema.json**：证据链 Schema，用于描述研究命题、证据卡集合、证据关系、反方证据、缺失证据、整体置信度和免责声明要求。
+
+### 知识图谱相关 Schema
+
+- **schemas/knowledge-graph/**：Knowledge Graph Engine 相关 Schema，用于 FEATURE-002 图谱建模、路径分析和供应链卡脖子分析。
+- **schemas/knowledge-graph/knowledge-graph.schema.json**：知识图谱 Schema，要求包含 graph_id、research_question、methodology_refs、evidence_cards、nodes、edges、path_analysis、chokepoint_analysis、disclaimer 和 version。
+- Knowledge Graph Schema 必须引用 M2 Methodology 与 M3 Evidence Card，节点类型和关系类型采用受控枚举；图谱分数仅用于研究质量控制，不构成投资建议。
 
 ### Prompt 相关 Schema
 

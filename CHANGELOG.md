@@ -9,6 +9,23 @@
 
 ## [Unreleased]
 
+### Added - FEATURE-002: Knowledge Graph Engine
+- 新增 `docs/knowledge-graph/` 知识图谱架构与工作流文档。
+- 新增 `knowledge_graph/` 最小可运行内存图谱实现，覆盖 Graph Model、Builder、Validator、Path Analyzer 和 Chokepoint Analyzer。
+- 新增 `schemas/knowledge-graph/knowledge-graph.schema.json`，定义节点、关系、Evidence 绑定、路径分析和卡脖子分析输出。
+- 新增 `templates/knowledge-graph/` 图谱输出模板和卡脖子分析模板。
+- 新增两个生产示例：`examples/knowledge-graph/ai-compute-supply-chain.json` 与 `examples/knowledge-graph/innovative-drug-industry-chain.json`。
+- 新增 `scripts/validate_knowledge_graph.py` 自检脚本。
+- 新增 `docs/production/FEATURE_002_COMPLETION_REPORT.md` 与 `docs/review/FEATURE_002_SELF_REVIEW.md`。
+
+### Validation - FEATURE-002
+- `validate_knowledge_graph.py` PASS。
+- M1-M8 与 FEATURE-001 Builder 回归脚本保持 PASS。
+
+### Compliance - FEATURE-002
+- Knowledge Graph Engine 只用于工程开发、研究结构化表达和质量控制，不构成投资建议。
+- 图谱示例绑定 M3 Evidence Card、保留反方证据和缺失证据，并避免荐股、自动交易、交易指令、目标价或收益承诺。
+
 ### Added - FEATURE-001: AIRS Builder
 - 新增 `docs/builder/` Builder 架构、生命周期、治理和生成流程文档。
 - 新增 `builder/` 本地 Feature Package 生成器入口、模板 registry 和 generators 目录说明。
