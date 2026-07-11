@@ -6,6 +6,49 @@
 
 免责声明：本报告仅用于 AIRS 工程质量检查和发布治理，不构成投资建议。
 
+## QA Sprint 5 Re-run Update
+
+Re-run 时间：2026-07-11
+
+Re-run 基准：
+
+- 分支：`qa/architecture-stabilization`
+- PR：#10
+- 提交：`5a7528d`
+- 目标：Docker Release Gate Re-run
+
+完整日志目录：
+
+- `docs/testing/logs/docker-release-gate-rerun/`
+
+Sprint 5 结论：FAIL。
+
+Docker daemon 仍可用，但 `docker pull python:3.11-slim` 超过 150 秒无进度输出后被终止。本地仍不存在 `python:3.11-slim`，因此没有可记录的基础镜像 digest。由于 Base image pull 是 Stable 放行硬门槛，后续 `docker compose build --no-cache`、`docker compose up -d`、容器 health check、Docker API security、容器内 CLI/APP/Core 和 restart/down-up 验证均未执行，且不得使用旧缓存或未经确认的第三方镜像绕过。
+
+Sprint 5 结果矩阵：
+
+- Base image pull：FAIL
+- Base image source：official `docker.io/library/python:3.11-slim`
+- Base image digest：Unavailable，镜像未成功拉取且本地未预载
+- Docker build：NOT RUN，base image pull failed
+- Compose startup：NOT RUN
+- Health check：NOT RUN
+- API security in Docker：NOT RUN
+- CLI / APP / Core in Docker：NOT RUN
+- Real Connector in Docker：NOT RUN
+- Restart / down-up：NOT RUN
+- Host regression：PASS
+
+Sprint 5 对照回归：
+
+- `10-pytest.log`：PASS
+- `11-validate-stable-release.log`：PASS
+- `12-production-check.log`：PASS
+- `13-cli-validate-all.log`：PASS
+- `14-production-e2e-failure-injection.log`：PASS
+
+发布影响：QA Sprint 5 未解除 Docker 阻塞项。AIRS 仍不允许发布 `v1.0.0 Stable`。
+
 ## Executive Summary
 
 本轮验证确认 Docker daemon 已可用，Compose 配置可解析，主机侧回归、API 安全、CLI、APP-001/Core gate、Real Connector probe、Production E2E 和 Failure Injection 均通过。

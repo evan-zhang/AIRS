@@ -6,6 +6,20 @@
 
 免责声明：本自审仅用于 AIRS 工程质量检查和发布治理，不构成投资建议。
 
+## QA Sprint 5 Self Review Update
+
+Sprint 5 re-run decision: Reject.
+
+Base image pull remains failed:
+
+- Requested image: official `docker.io/library/python:3.11-slim`
+- Digest: unavailable
+- Third-party replacement: not used
+- Mirror/private registry: not configured
+- Evidence: `docs/testing/logs/docker-release-gate-rerun/02-base-image-pull.log`
+
+Because base image pull failed, Docker build and all container-level gates remain unverified. No product code defect was identified, and no Core changes were made.
+
 ## Review Position
 
 本轮不能批准 AIRS 发布 `v1.0.0 Stable`。

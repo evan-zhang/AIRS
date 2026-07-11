@@ -1,5 +1,23 @@
 # AIRS 变更日志
 
+## [QA-SPRINT-5] Docker Release Gate Re-run - 2026-07-11
+
+### Verification
+
+- Docker daemon 状态检查：PASS。
+- Registry 配置记录：official `docker.io`，未配置第三方镜像替换，未使用私有 Registry。
+- `docker pull python:3.11-slim`：FAIL，超过 150 秒无进度输出后终止。
+- Base image digest：Unavailable，镜像未成功拉取且本地未预载。
+- Docker build、Compose startup、Health check、Docker API、容器内 CLI/APP/Core、Real Connector、Restart/down-up：未执行，原因是 Base image pull 失败。
+- 主机侧 pytest、production_check、validate_stable_release、全部 validate_*、Production E2E、Failure Injection：PASS，但不计入 Docker production PASS。
+
+### Release Decision
+
+- 新增 `docs/release/RELEASE_READINESS_REVIEW_V4.md`。
+- 更新 `docs/qa/DOCKER_PRODUCTION_VERIFICATION_REPORT.md`。
+- 更新 `docs/review/DOCKER_VERIFICATION_SELF_REVIEW.md`。
+- V4 决策：Reject。Base image pull、Docker build 和容器级验证全部通过前，不允许发布 `v1.0.0 Stable`。
+
 ## [QA-SPRINT-4] Docker Production Verification - 2026-07-11
 
 ### Verification
