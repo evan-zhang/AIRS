@@ -13,7 +13,7 @@
 - Workflow 将验证官方 `python:3.11-slim` 拉取、digest 记录、无缓存 Docker build、Compose startup、health check、API security、容器内 CLI/APP/Core、Real Connector、restart/down-up 和 runner 全量回归。
 - Workflow 失败时上传 Compose 配置、容器日志和测试日志 artifact。
 - 纯 docs/CHANGELOG 更新不会重复触发 workflow，避免写回 CI 结果时产生循环运行。
-- GitHub Actions run `29134097553`：PASS。
+- GitHub Actions run `29134227516`：PASS。
 - Base image digest：`python@sha256:e031123e3d85762b141ad1cbc56452ba69c6e722ebf2f042cc0dc86c47c0d8b3`。
 - V5 决策：Approve，等待人工 PR 审核和手动发布确认。
 

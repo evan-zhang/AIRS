@@ -19,9 +19,9 @@ Release decision: Approve, pending normal human PR review and manual merge disci
 ## Workflow
 
 - Workflow file: `.github/workflows/docker-release-gate.yml`
-- Workflow URL: `https://github.com/evan-zhang/AIRS/actions/runs/29134097553`
-- Run ID: `29134097553`
-- Commit SHA: `9baf6ffdf41162616294ba011cc1c1a69b8c8650`
+- Workflow URL: `https://github.com/evan-zhang/AIRS/actions/runs/29134227516`
+- Run ID: `29134227516`
+- Commit SHA: `9dbe5477165817fbea16cdb9494bf8b81bc5f477`
 - Runner: GitHub Hosted `ubuntu-latest`
 - Base image: official `docker.io/library/python:3.11-slim`
 - Base image digest: `python@sha256:e031123e3d85762b141ad1cbc56452ba69c6e722ebf2f042cc0dc86c47c0d8b3`
