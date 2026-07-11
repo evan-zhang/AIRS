@@ -53,7 +53,7 @@ class InvestmentResearchPipeline:
         report = self._build_report(request, thesis, knowledge_graph, evidence_chain, supply_chain, chokepoints, scorecard, risk, catalyst, recommendation)
         self._validate_safe_output(report, recommendation)
         return {
-            "engine_version": "0.1.0",
+            "engine_version": "1.0.0",
             "request": request,
             "runtime_plan": self._runtime_plan(request),
             "infrastructure_refs": self.infrastructure_refs,
@@ -123,7 +123,7 @@ class InvestmentResearchPipeline:
             "path_analysis": [{"path": ["upstream", "midstream", "downstream"], "confidence": 0.68}],
             "chokepoint_analysis": chokepoints["chokepoints"],
             "disclaimer": DISCLAIMER,
-            "version": "0.1.0",
+            "version": "1.0.0",
         }
 
     def _build_scorecard(self, evidence_chain: dict[str, Any], chokepoints: dict[str, Any], risk: dict[str, Any]) -> dict[str, Any]:

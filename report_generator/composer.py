@@ -126,5 +126,5 @@ class ReportComposer:
                 "M5_skill": [str(payload.get("skill_ref", "skills/report/report-skill.md"))],
                 "M6_score_eval": [str(section_composer.score_summary.get("scorecard_id"))],
             },
-            version=str(payload.get("version", "0.1.0")),
+            version=str(payload.get("version", "1.0.0")),
         )

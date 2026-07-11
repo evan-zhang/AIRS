@@ -1,4 +1,4 @@
-"""Production E2E harness for AIRS v1.0.0-rc1 validation.
+"""Production E2E harness for AIRS v1.0.0 Stable validation.
 
 The harness intentionally calls the real AIRS module entrypoints instead of
 reading static examples: planner -> runtime -> connectors -> KG -> investment

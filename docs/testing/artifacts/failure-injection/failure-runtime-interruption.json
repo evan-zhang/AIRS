@@ -4,7 +4,7 @@
   "event_log": [
     {
       "agent_id": null,
-      "event_id": "evt-11f082a801b5",
+      "event_id": "evt-8ce7d30c0011",
       "event_type": "RUNTIME_STARTED",
       "payload": {
         "runtime_id": "runtime-from-planner-failure-runtime-interruption",
@@ -13,47 +13,47 @@
       "session_id": null,
       "severity": "INFO",
       "task_id": null,
-      "timestamp": "2026-07-11T00:17:15.495350+00:00",
+      "timestamp": "2026-07-11T02:03:17.700862+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-4f395f0d8af7",
+      "event_id": "evt-e56eb2a8b9ce",
       "event_type": "TASK_DISPATCHED",
       "payload": {
         "agent_type": "sync"
       },
-      "session_id": "ses-92c64fb511bb",
+      "session_id": "ses-c79ab94f1161",
       "severity": "INFO",
       "task_id": "goal_analysis",
-      "timestamp": "2026-07-11T00:17:15.495363+00:00",
+      "timestamp": "2026-07-11T02:03:17.700877+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-66edce7d5dde",
+      "event_id": "evt-a5e49e1ee56d",
       "event_type": "AGENT_INITIALIZED",
       "payload": {},
-      "session_id": "ses-92c64fb511bb",
+      "session_id": "ses-c79ab94f1161",
       "severity": "INFO",
       "task_id": "goal_analysis",
-      "timestamp": "2026-07-11T00:17:15.495367+00:00",
+      "timestamp": "2026-07-11T02:03:17.700881+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-c76f761d7b6c",
+      "event_id": "evt-2b2293eec4b6",
       "event_type": "AGENT_RUNNING",
       "payload": {},
-      "session_id": "ses-92c64fb511bb",
+      "session_id": "ses-c79ab94f1161",
       "severity": "INFO",
       "task_id": "goal_analysis",
-      "timestamp": "2026-07-11T00:17:15.495371+00:00",
+      "timestamp": "2026-07-11T02:03:17.700885+00:00",
       "trace_id": null
     },
     {
       "agent_id": "methodology_selector",
-      "event_id": "evt-a49ebd37b0b5",
+      "event_id": "evt-25013b905bf7",
       "event_type": "AGENT_COMPLETED",
       "payload": {
         "agent_id": "methodology_selector",
@@ -65,26 +65,26 @@
         "result": "选择 M2 方法论引用 已由 Runtime 调度完成",
         "task_id": "goal_analysis"
       },
-      "session_id": "ses-92c64fb511bb",
+      "session_id": "ses-c79ab94f1161",
       "severity": "INFO",
       "task_id": "goal_analysis",
-      "timestamp": "2026-07-11T00:17:15.495377+00:00",
+      "timestamp": "2026-07-11T02:03:17.700891+00:00",
       "trace_id": null
     },
     {
       "agent_id": null,
-      "event_id": "evt-4a8087e9381f",
+      "event_id": "evt-ea57c7de679d",
       "event_type": "TASK_CANCELLED",
       "payload": {},
       "session_id": null,
       "severity": "INFO",
       "task_id": "scope",
-      "timestamp": "2026-07-11T00:17:15.495404+00:00",
+      "timestamp": "2026-07-11T02:03:17.700917+00:00",
       "trace_id": null
     },
     {
       "agent_id": null,
-      "event_id": "evt-d00a4787dc0b",
+      "event_id": "evt-1e0a31ea5434",
       "event_type": "TASK_BLOCKED",
       "payload": {
         "dependencies": [
@@ -94,12 +94,12 @@
       "session_id": null,
       "severity": "INFO",
       "task_id": "methodology_selection",
-      "timestamp": "2026-07-11T00:17:15.495409+00:00",
+      "timestamp": "2026-07-11T02:03:17.700922+00:00",
       "trace_id": null
     },
     {
       "agent_id": null,
-      "event_id": "evt-589b72497c66",
+      "event_id": "evt-799106d48b5a",
       "event_type": "TASK_BLOCKED",
       "payload": {
         "dependencies": [
@@ -109,12 +109,12 @@
       "session_id": null,
       "severity": "INFO",
       "task_id": "connector_plan",
-      "timestamp": "2026-07-11T00:17:15.495414+00:00",
+      "timestamp": "2026-07-11T02:03:17.700927+00:00",
       "trace_id": null
     },
     {
       "agent_id": null,
-      "event_id": "evt-8c39cafb5817",
+      "event_id": "evt-24b435381049",
       "event_type": "TASK_BLOCKED",
       "payload": {
         "dependencies": [
@@ -124,12 +124,12 @@
       "session_id": null,
       "severity": "INFO",
       "task_id": "skill_plan",
-      "timestamp": "2026-07-11T00:17:15.495418+00:00",
+      "timestamp": "2026-07-11T02:03:17.700930+00:00",
       "trace_id": null
     },
     {
       "agent_id": null,
-      "event_id": "evt-97434f6e4141",
+      "event_id": "evt-049cd5e955ac",
       "event_type": "TASK_BLOCKED",
       "payload": {
         "dependencies": [
@@ -139,12 +139,12 @@
       "session_id": null,
       "severity": "INFO",
       "task_id": "evidence_plan",
-      "timestamp": "2026-07-11T00:17:15.495423+00:00",
+      "timestamp": "2026-07-11T02:03:17.700933+00:00",
       "trace_id": null
     },
     {
       "agent_id": null,
-      "event_id": "evt-6b70b74919bd",
+      "event_id": "evt-cf10fb289bca",
       "event_type": "TASK_BLOCKED",
       "payload": {
         "dependencies": [
@@ -154,12 +154,12 @@
       "session_id": null,
       "severity": "INFO",
       "task_id": "knowledge_graph_plan",
-      "timestamp": "2026-07-11T00:17:15.495426+00:00",
+      "timestamp": "2026-07-11T02:03:17.700937+00:00",
       "trace_id": null
     },
     {
       "agent_id": null,
-      "event_id": "evt-7faf42bdf6c2",
+      "event_id": "evt-52841d1e167b",
       "event_type": "TASK_BLOCKED",
       "payload": {
         "dependencies": [
@@ -169,12 +169,12 @@
       "session_id": null,
       "severity": "INFO",
       "task_id": "score_plan",
-      "timestamp": "2026-07-11T00:17:15.495430+00:00",
+      "timestamp": "2026-07-11T02:03:17.700940+00:00",
       "trace_id": null
     },
     {
       "agent_id": null,
-      "event_id": "evt-cff0fa20f8cc",
+      "event_id": "evt-9ea760f32b89",
       "event_type": "TASK_BLOCKED",
       "payload": {
         "dependencies": [
@@ -184,12 +184,12 @@
       "session_id": null,
       "severity": "INFO",
       "task_id": "report_plan",
-      "timestamp": "2026-07-11T00:17:15.495433+00:00",
+      "timestamp": "2026-07-11T02:03:17.700945+00:00",
       "trace_id": null
     },
     {
       "agent_id": null,
-      "event_id": "evt-c3caefb50e54",
+      "event_id": "evt-eefd95734b00",
       "event_type": "TASK_BLOCKED",
       "payload": {
         "dependencies": [
@@ -199,12 +199,12 @@
       "session_id": null,
       "severity": "INFO",
       "task_id": "review_plan",
-      "timestamp": "2026-07-11T00:17:15.495436+00:00",
+      "timestamp": "2026-07-11T02:03:17.700949+00:00",
       "trace_id": null
     },
     {
       "agent_id": null,
-      "event_id": "evt-8809e4bae443",
+      "event_id": "evt-7b7e3323b0ea",
       "event_type": "TASK_BLOCKED",
       "payload": {
         "dependencies": [
@@ -214,12 +214,12 @@
       "session_id": null,
       "severity": "INFO",
       "task_id": "runtime_plan",
-      "timestamp": "2026-07-11T00:17:15.495439+00:00",
+      "timestamp": "2026-07-11T02:03:17.700952+00:00",
       "trace_id": null
     },
     {
       "agent_id": null,
-      "event_id": "evt-0b17cbe5aadc",
+      "event_id": "evt-a06381e64c9f",
       "event_type": "RUNTIME_COMPLETED",
       "payload": {
         "runtime_id": "runtime-from-planner-failure-runtime-interruption",
@@ -228,12 +228,12 @@
       "session_id": null,
       "severity": "INFO",
       "task_id": null,
-      "timestamp": "2026-07-11T00:17:15.495443+00:00",
+      "timestamp": "2026-07-11T02:03:17.700956+00:00",
       "trace_id": null
     }
   ],
   "expected": "Runtime should mark cancelled task, block dependents, and preserve resumable partial state.",
-  "started_at": "2026-07-11T00:17:15.495479+00:00",
+  "started_at": "2026-07-11T02:03:17.700995+00:00",
   "status": "PASS",
   "task_states": {
     "connector_plan": "BLOCKED",

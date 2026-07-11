@@ -42,7 +42,7 @@ class ReportPipeline:
         normalized.setdefault("prompt_ref", "prompts/report/generation.md")
         normalized.setdefault("skill_ref", "skills/report/report-skill.md")
         normalized.setdefault("disclaimer", DISCLAIMER)
-        normalized.setdefault("version", "0.1.0")
+        normalized.setdefault("version", "1.0.0")
         return normalized
 
     def _validate(self, payload: dict[str, Any]) -> None:

@@ -33,7 +33,7 @@ class ConnectorConfig:
     source: str
     source_type: str
     base_url: str
-    version: str = "0.1.0"
+    version: str = "1.0.0"
     priority: str = "trusted_third_party"
     auth_type: str = "none"
     retry_policy: RetryPolicy = field(default_factory=RetryPolicy)

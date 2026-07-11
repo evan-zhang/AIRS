@@ -63,7 +63,7 @@ class ResearchReport:
     sections: list[ReportSection]
     source_refs: dict[str, list[str]]
     disclaimer: str = DISCLAIMER
-    version: str = "0.1.0"
+    version: str = "1.0.0"
 
     def to_markdown(self) -> str:
         header = [

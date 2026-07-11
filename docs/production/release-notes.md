@@ -1,50 +1,55 @@
-# AIRS V1.0 Release Notes（发布说明）
+# AIRS V1.0.0 Release Notes（发布说明）
 
-**版本**：v1.0.0  
-**发布日期**：2026-07-10  
-**里程碑**：M8 Production Release
+**版本**：v1.0.0
+**发布日期**：2026-07-11
+**状态**：Stable
+
+免责声明：本 Release Notes 仅记录 AIRS 工程产品化交付内容，不构成投资建议，不提供荐股、交易指令、目标价或收益承诺。
 
 ## 1. 发布摘要
 
-AIRS V1.0 完成 M1-M8 全部生产交付。从架构基础、方法论、证据、Prompt、Skill、Score、Evaluation、Benchmark 到 Production 治理，项目已经形成可阅读、可审查、可验证的 AI 投资研究 Agent 方法论框架。
+AIRS v1.0.0 完成 Stable 发布。项目形成可阅读、可审查、可验证、可本地运行、可 Docker 部署的 AI 投资研究流程编排与质量控制平台。
 
-## 2. 本次新增
+最终放行依据：
 
-本次 M8 新增：
+- Release Readiness V5：Approve
+- GitHub Actions Docker Release Gate：PASS
+- Workflow Run ID：`29134227516`
+- Base image digest：`python@sha256:e031123e3d85762b141ad1cbc56452ba69c6e722ebf2f042cc0dc86c47c0d8b3`
 
-- 生产指南、部署指南、升级指南、维护指南、治理指南、发布清单、发布说明。
-- 生产验收清单、最终质量门禁、回归测试流程。
-- 语义化版本规范和 Release Workflow。
-- GitHub Issue 模板、PR 模板、CODEOWNERS、SECURITY、SUPPORT。
-- Release 验收脚本和生产聚合检查脚本。
-- M8 Completion Report、Project Health Report、Final Review。
+## 2. 本次发布内容
 
-## 3. 本次完善
+- CLI：初始化、运行研究、内置 Demo、全量验证。
+- REST API：健康检查、Workspace、Memory、Research、Company、Theme、Report。
+- Web UI：本地静态控制台。
+- Docker：API + Web compose 部署，带 API key healthcheck。
+- APP-001：股票研究工作流，串联 Planner、Orchestrator、Runtime、Committee、Investment Engine、Evidence、KG、Score、Report、Memory 和 Learning。
+- Stable Release Gate：Mock、SKIP、Fallback、Unknown 数据不会计入真实生产 PASS。
+- API 安全：API key、非本地绑定保护、CORS allowlist、body limit、rate limit 和错误脱敏。
+- Real Connector：RSS real probe 纳入 Stable validator；fallback 明确标记。
 
-本次 M8 完善：
+## 3. 质量状态
 
-- README：补充 V1.0 Production 状态、功能清单和最终免责声明。
-- CONTRIBUTING：补充 V1.0 贡献流程、版本规范和发布流程引用。
-- CHANGELOG：新增 v1.0.0 发布记录。
-- ROADMAP：标注 M1-M8 全部完成，补充 V1.x / V2 路线。
-- LICENSE：确认 MIT License 和免责声明无需修改。
+以下验证均已通过：
 
-## 4. 质量状态
+- `python3 -m pytest -q`
+- `python3 scripts/production_check.py`
+- `AIRS_RUN_REAL_CONNECTOR_PROBE=1 python3 scripts/validate_stable_release.py`
+- `python3 cli/airs.py validate --all`
+- `python3 scripts/run_production_tests.py`
+- CI Docker Release Gate run `29134227516`
 
-V1.0 发布要求所有 validate 脚本和生产聚合检查 PASS。最终执行结果记录在 `docs/production/M8_COMPLETION_REPORT.md`。
+## 4. 已知限制
 
-## 5. 已知限制
+- AIRS 不是投资顾问系统，不提供荐股、自动交易、目标价或收益承诺。
+- 部分真实数据源需要网络和凭证；不可用时必须标记为未验证或降级。
+- 本地 Demo 可使用 Mock/Fallback 数据，但 Stable gate 不允许其冒充真实生产 PASS。
+- Runtime 是本地治理型工作流 runtime，不是多租户分布式服务。
 
-- AIRS V1.0 是生产级规范库，不是完整运行时系统。
-- 尚未实现真实数据源接入。
-- 尚未实现 Prompt 渲染器、Skill 调度器和 Scorecard runner。
-- Benchmark 当前是分类种子和生产示例，尚未扩展到 300+ 可执行 case。
-- Markdown 到 JSON Schema 的自动转换和深度校验尚未完成。
+## 5. 升级建议
 
-## 6. 升级建议
+后续 v1.x 可继续加强真实数据源覆盖、Score Engine 收敛、运行时可观测性、更多生产基准和更完整的部署 profile。
 
-V1.x 建议优先补齐运行时、结构化转换器、Benchmark runner 和更多生产示例。V2.0 可进一步建设数据接入、知识图谱、Agent 调度和持续评估平台。
+## 6. 免责声明
 
-## 7. 免责声明
-
-AIRS V1.0 仅用于投资研究流程增强、质量控制和教育研究，不构成投资建议，不提供荐股、交易指令、目标价或收益承诺。所有投资决策应由使用者独立判断并自行承担风险。
+AIRS v1.0.0 仅用于投资研究流程编排、证据追溯、质量控制和教育研究，不构成投资建议，不提供荐股、交易指令、目标价或收益承诺。所有投资决策应由使用者独立判断并自行承担风险。

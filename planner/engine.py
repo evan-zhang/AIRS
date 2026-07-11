@@ -46,7 +46,7 @@ class AutonomousResearchPlanner:
         confidence = plan_confidence(intent, budget)
         runtime = plan_runtime(parsed_goal, workflow, budget)
         plan = {
-            "planner_version": "0.1.0",
+            "planner_version": "1.0.0",
             "contract_version": CONTRACT_VERSION,
             "plan_id": f"plan-{parsed_goal['goal_id']}",
             "goal_analysis": parsed_goal,

@@ -9,7 +9,7 @@ CONFIG = {'connector_id': 'alpha_vantage',
  'source': 'Alpha Vantage',
  'source_type': 'trusted_third_party',
  'base_url': 'https://www.alphavantage.co',
- 'version': '0.1.0',
+ 'version': '1.0.0',
  'priority': 'trusted_third_party',
  'auth_type': 'api_key'}
 INPUT_SCHEMA = {'type': 'object',

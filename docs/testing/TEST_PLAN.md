@@ -4,7 +4,7 @@
 
 ## Scope
 
-Validate AIRS v1.0.0-rc1 production E2E behavior across real module calls, not static examples.
+Validate AIRS v1.0.0 Stable production E2E behavior across real module calls, not static examples.
 
 ## Required Chain
 
@@ -44,4 +44,3 @@ Each production case must call:
 - Report artifacts include execution log, evidence trace, KG state, scorecard, committee debate, final report, memory write/read, and learning feedback.
 - Final report language separates facts, inferences, assumptions, and opinions.
 - No output contains direct recommendation, automatic trading instruction, target price, or return guarantee.
-

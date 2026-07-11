@@ -86,7 +86,7 @@ class EquityResearchApp:
         )
         return {
             "app_id": "APP-001",
-            "app_version": "0.1.0",
+            "app_version": "1.0.0",
             "status": status,
             "quality_gate": "PASS" if status == "completed" else "CONDITIONAL_PASS" if status == "completed_with_degradation" else "FAIL",
             "request": request.to_dict(),

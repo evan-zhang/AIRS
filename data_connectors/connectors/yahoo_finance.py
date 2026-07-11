@@ -13,7 +13,7 @@ CONFIG = {'connector_id': 'yahoo_finance',
  'source': 'Yahoo Finance',
  'source_type': 'trusted_third_party',
  'base_url': 'https://finance.yahoo.com',
- 'version': '0.1.0',
+ 'version': '1.0.0',
  'priority': 'trusted_third_party',
  'auth_type': 'none'}
 INPUT_SCHEMA = {'type': 'object', 'required': ['symbol'], 'properties': {'symbol': {'type': 'string'}, 'range': {'type': 'string'}}}

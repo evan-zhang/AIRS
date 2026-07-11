@@ -129,7 +129,7 @@ class EquityResearchAnalyzer:
             "path_analysis": [{"path": ["company", "industry", "report"], "confidence": 0.6}],
             "chokepoint_analysis": engine.get("knowledge_graph", {}).get("chokepoint_analysis", []),
             "disclaimer": DISCLAIMER,
-            "version": "0.1.0",
+            "version": "1.0.0",
         }
 
     def _build_score_card(self, data: DataCollectionBundle, engine: dict[str, Any]) -> dict[str, Any]:
@@ -173,4 +173,3 @@ class EquityResearchAnalyzer:
                 "不输出买入、卖出、持有、目标价或收益承诺。",
             ],
         }
-

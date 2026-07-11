@@ -1,5 +1,31 @@
 # AIRS 变更日志
 
+## [v1.0.0] Stable - 2026-07-11
+
+### Release
+
+- PR #10 已合并到 `main`，merge commit：`5ffcad8671309fbf0edbf59a1995f1c2535063cc`。
+- Release Readiness V5：Approve。
+- Docker Release Gate：PASS，GitHub Actions run `29134227516`。
+- Base image：official `docker.io/library/python:3.11-slim`。
+- Base image digest：`python@sha256:e031123e3d85762b141ad1cbc56452ba69c6e722ebf2f042cc0dc86c47c0d8b3`。
+- 新增仓库级 `VERSION` 文件，当前版本为 `1.0.0`。
+
+### Verification
+
+- `python3 -m pytest -q`：PASS。
+- `python3 scripts/production_check.py`：PASS。
+- `AIRS_RUN_REAL_CONNECTOR_PROBE=1 python3 scripts/validate_stable_release.py`：PASS。
+- `python3 cli/airs.py validate --all`：PASS。
+- `python3 scripts/run_production_tests.py`：PASS。
+- CI Docker build / compose startup / health check / API security / CLI / APP / Real Connector / restart / down-up：PASS。
+
+### Notes
+
+- AIRS v1.0.0 是研究流程编排、证据追溯和质量控制平台，不构成投资建议。
+- Local demo 中的 Mock、SKIP、Fallback 数据会被显式标记，不计入真实生产 PASS。
+- 保留历史 RC / audit 记录作为发布治理证据；当前发布状态以 V5 和本条目为准。
+
 ## [QA-SPRINT-6] CI Docker Production Verification - 2026-07-11
 
 ### Added

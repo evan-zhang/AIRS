@@ -507,4 +507,4 @@ python scripts/validate_m1.py
 ---
 
 **最后更新**：2026-07-10
-**当前版本**：v0.1.0 (M1)
+**当前版本**：v1.0.0 Stable

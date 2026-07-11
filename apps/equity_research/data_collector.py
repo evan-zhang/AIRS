@@ -142,7 +142,7 @@ class EquityDataCollector:
             "missing_evidence": ["真实数据源凭证", "人工复核"],
             "weight": 0.65,
             "traceability": {"module": "apps/equity_research/data_collector.py"},
-            "version": "0.1.0",
+            "version": "1.0.0",
             "statement_type": "Fact",
             "disclaimer": "仅供研究参考，不构成投资建议",
         }

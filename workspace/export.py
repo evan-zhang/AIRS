@@ -16,7 +16,7 @@ class WorkspaceExport:
     def export_bundle(self, workspace_state: dict[str, Any], actor: str = "workspace-user") -> dict[str, Any]:
         bundle = {
             "bundle_type": "AIRS_WORKSPACE_EXPORT",
-            "version": "0.1.0",
+            "version": "1.0.0",
             "workspace": deepcopy(workspace_state),
             "integrity_checks": ["projects", "sessions", "artifacts", "snapshots", "audit_log"],
             "disclaimer": DISCLAIMER,

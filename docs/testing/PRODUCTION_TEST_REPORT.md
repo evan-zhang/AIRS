@@ -2,9 +2,9 @@
 
 免责声明：本报告仅用于 AIRS 工程验证和研究质量控制，不构成投资建议，不提供荐股、自动交易、交易指令、目标价或收益承诺。
 
-- Version under test: v1.0.0-rc1
-- Branch: test/production-e2e-validation
-- Generated at: 2026-07-11T00:17:15.496927+00:00
+- Version under test: v1.0.0
+- Branch: main
+- Generated at: 2026-07-11T02:03:17.723641+00:00
 - Overall status: PASS
 - Production E2E: 8 PASS / 0 FAIL / 8 total
 - Failure Injection: 3 PASS / 0 FAIL / 3 total

@@ -150,7 +150,7 @@ class KnowledgeGraph:
     chokepoint_analysis: list[dict[str, Any]] = field(default_factory=list)
     metadata: dict[str, Any] = field(default_factory=dict)
     disclaimer: str = DISCLAIMER
-    version: str = "0.1.0"
+    version: str = "1.0.0"
 
     def add_node(self, node: GraphNode) -> None:
         self.nodes[node.node_id] = node
@@ -192,7 +192,7 @@ class KnowledgeGraph:
             chokepoint_analysis=list(data.get("chokepoint_analysis", [])),
             metadata=dict(data.get("metadata", {})),
             disclaimer=str(data.get("disclaimer", DISCLAIMER)),
-            version=str(data.get("version", "0.1.0")),
+            version=str(data.get("version", "1.0.0")),
         )
         for node_data in data.get("nodes", []):
             graph.add_node(GraphNode.from_dict(node_data))

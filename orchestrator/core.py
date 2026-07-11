@@ -31,7 +31,7 @@ class Orchestrator:
         workflow = self.workflow_from_plan(plan, case_id=case_id)
         result = (self.runtime or RuntimeCore()).run_workflow(workflow)
         return {
-            "orchestrator_version": "0.1.0",
+            "orchestrator_version": "1.0.0",
             "contract_version": CONTRACT_VERSION,
             "planner_ref": plan["plan_id"],
             "runtime": result,
