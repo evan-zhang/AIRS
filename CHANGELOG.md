@@ -1,5 +1,19 @@
 # AIRS 变更日志
 
+## [QA-SPRINT-6] CI Docker Production Verification - 2026-07-11
+
+### Added
+
+- 新增 `.github/workflows/docker-release-gate.yml`，在 GitHub Hosted Ubuntu Runner 执行 Docker Release Gate。
+- 新增 `docs/qa/CI_DOCKER_PRODUCTION_VERIFICATION_REPORT.md`。
+- 新增 `docs/release/RELEASE_READINESS_REVIEW_V5.md`。
+
+### Verification
+
+- Workflow 将验证官方 `python:3.11-slim` 拉取、digest 记录、无缓存 Docker build、Compose startup、health check、API security、容器内 CLI/APP/Core、Real Connector、restart/down-up 和 runner 全量回归。
+- Workflow 失败时上传 Compose 配置、容器日志和测试日志 artifact。
+- 纯 docs/CHANGELOG 更新不会重复触发 workflow，避免写回 CI 结果时产生循环运行。
+
 ## [QA-SPRINT-5] Docker Release Gate Re-run - 2026-07-11
 
 ### Verification
