@@ -1,0 +1,15 @@
+Fri Jul 10 22:59:03 UTC 2026
+{
+  "result": {
+    "exit_code": 1,
+    "request_id": "APP-001-6A0B28876B",
+    "company": "NVIDIA Corporation",
+    "status": "failed_quality_gate",
+    "quality_gate": "FAIL",
+    "output": null,
+    "markdown": null,
+    "message": "研究任务完成：NVIDIA Corporation\nRequest ID: APP-001-6A0B28876B\nStatus: failed_quality_gate\nQuality Gate: FAIL\nJSON: 未写入文件\nMarkdown: 未写入文件\n免责声明：AIRS 研究任务仅用于研究流程编排和质量控制，不构成投资建议。"
+  },
+  "disclaimer": "AIRS 仅用于投资研究流程编排、证据追溯和质量控制，不构成投资建议。"
+}
+exit_code=1

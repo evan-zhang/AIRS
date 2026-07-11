@@ -2,7 +2,7 @@
   "case_id": "failure-schema-error",
   "errors": [],
   "expected": "KG validator should intercept malformed schema data before report generation.",
-  "started_at": "2026-07-10T11:15:04.637882+00:00",
+  "started_at": "2026-07-11T00:17:15.496799+00:00",
   "status": "PASS",
   "validation": {
     "errors": [

@@ -2,7 +2,11 @@ from __future__ import annotations
 from datetime import datetime, timezone
 from typing import Any
 from data_connectors.base import BaseConnector, CacheStrategy, ConnectorConfig, ConnectorRequest, ConnectorResult, HealthStatus, RetryPolicy
+from data_connectors.env_config import EnvConfig
+from data_connectors.http_client import HTTPClient
 from data_connectors.normalizer import DataNormalizer
+from data_connectors.persistent_cache import PersistentCache
+from data_connectors.real_payload import envelope, fallback_envelope
 
 CONFIG = {'connector_id': 'yahoo_finance',
  'name': 'Yahoo Finance',
@@ -32,7 +36,7 @@ TEST_CASE = {'input': {'symbol': 'AAPL', 'range': '1d'}, 'expect_fields': ['sour
 
 
 class YahooFinanceConnector(BaseConnector):
-    """Mock Yahoo Finance Connector with Config/Input/Output/Error/Retry/Cache/Health/Test."""
+    """Yahoo Finance Connector with real chart endpoint and mock fallback."""
 
     def __init__(self) -> None:
         self.config = ConnectorConfig(
@@ -48,6 +52,9 @@ class YahooFinanceConnector(BaseConnector):
             cache_strategy=CacheStrategy(**CACHE_STRATEGY),
         )
         self.normalizer = DataNormalizer()
+        self.env = EnvConfig()
+        self.cache = PersistentCache()
+        self.http = HTTPClient.from_env(self.connector_id, self.config.retry_policy)
 
     def input_schema(self) -> dict[str, Any]:
         return INPUT_SCHEMA
@@ -60,11 +67,54 @@ class YahooFinanceConnector(BaseConnector):
         missing = [field for field in required if field not in request.query]
         if missing:
             return self.error_result(request, "INPUT_VALIDATION_ERROR", f"missing required fields: {missing}", retryable=False)
-        raw = self._mock_raw(request)
+        if self.env.real_enabled(self.connector_id, request.query):
+            try:
+                raw = self.fetch_real(request)
+            except Exception as exc:  # noqa: BLE001
+                raw = fallback_envelope(self.config, request, error=exc, url=f"https://finance.yahoo.com/quote/{request.query.get('symbol', 'UNKNOWN')}", payload={"symbol": request.query.get("symbol"), "currency": None, "last_price": None})
+        else:
+            raw = self._mock_raw(request)
         return self.normalize(raw, request)
 
     def _mock_raw(self, request: ConnectorRequest) -> dict[str, Any]:
-        return {'symbol': 'AAPL', 'currency': 'USD', 'last_price': 100.0, 'url': 'https://finance.yahoo.com/quote/AAPL'}
+        symbol = str(request.query.get("symbol", "AAPL")).upper()
+        return {"symbol": symbol, "currency": "USD", "last_price": 100.0, "url": f"https://finance.yahoo.com/quote/{symbol}", "mode": "mock"}
+
+    def fetch_real(self, request: ConnectorRequest) -> dict[str, Any]:
+        symbol = str(request.query["symbol"]).strip().upper()
+        range_value = str(request.query.get("range", "1d"))
+        interval = str(request.query.get("interval", "1d"))
+        endpoint = f"https://query1.finance.yahoo.com/v8/finance/chart/{symbol}"
+        params = {"range": range_value, "interval": interval}
+        cache_key = self.cache.key(self.connector_id, self.config.version, {"endpoint": endpoint, "params": params})
+        cached = self.cache.get(cache_key, self.config.cache_strategy.ttl_seconds)
+        if cached:
+            cached["cache_hit"] = True
+            return cached
+        response = self.http.get(endpoint, params=params)
+        payload = response.json()
+        result = (payload.get("chart", {}).get("result") or [{}])[0]
+        meta = result.get("meta", {})
+        if not meta:
+            raise RuntimeError("Yahoo Finance chart response missing meta")
+        raw = envelope(
+            self.config,
+            request,
+            url=response.url,
+            publication_time=request.timestamp,
+            confidence=0.75,
+            mode="real",
+            payload={
+                "symbol": symbol,
+                "currency": meta.get("currency"),
+                "last_price": meta.get("regularMarketPrice"),
+                "exchange_name": meta.get("exchangeName"),
+                "instrument_type": meta.get("instrumentType"),
+                "status_code": response.status_code,
+            },
+        )
+        self.cache.set(cache_key, raw)
+        return raw
 
     def normalize(self, raw: dict[str, Any], request: ConnectorRequest) -> ConnectorResult:
         return self.normalizer.result(self.config, request, raw, raw.get("url", self.config.base_url))

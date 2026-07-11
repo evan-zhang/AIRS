@@ -1,5 +1,113 @@
 # AIRS 变更日志
 
+## [QA-SPRINT-6] CI Docker Production Verification - 2026-07-11
+
+### Added
+
+- 新增 `.github/workflows/docker-release-gate.yml`，在 GitHub Hosted Ubuntu Runner 执行 Docker Release Gate。
+- 新增 `docs/qa/CI_DOCKER_PRODUCTION_VERIFICATION_REPORT.md`。
+- 新增 `docs/release/RELEASE_READINESS_REVIEW_V5.md`。
+
+### Verification
+
+- Workflow 将验证官方 `python:3.11-slim` 拉取、digest 记录、无缓存 Docker build、Compose startup、health check、API security、容器内 CLI/APP/Core、Real Connector、restart/down-up 和 runner 全量回归。
+- Workflow 失败时上传 Compose 配置、容器日志和测试日志 artifact。
+- 纯 docs/CHANGELOG 更新不会重复触发 workflow，避免写回 CI 结果时产生循环运行。
+- GitHub Actions run `29134227516`：PASS。
+- Base image digest：`python@sha256:e031123e3d85762b141ad1cbc56452ba69c6e722ebf2f042cc0dc86c47c0d8b3`。
+- V5 决策：Approve，等待人工 PR 审核和手动发布确认。
+
+## [QA-SPRINT-5] Docker Release Gate Re-run - 2026-07-11
+
+### Verification
+
+- Docker daemon 状态检查：PASS。
+- Registry 配置记录：official `docker.io`，未配置第三方镜像替换，未使用私有 Registry。
+- `docker pull python:3.11-slim`：FAIL，超过 150 秒无进度输出后终止。
+- Base image digest：Unavailable，镜像未成功拉取且本地未预载。
+- Docker build、Compose startup、Health check、Docker API、容器内 CLI/APP/Core、Real Connector、Restart/down-up：未执行，原因是 Base image pull 失败。
+- 主机侧 pytest、production_check、validate_stable_release、全部 validate_*、Production E2E、Failure Injection：PASS，但不计入 Docker production PASS。
+
+### Release Decision
+
+- 新增 `docs/release/RELEASE_READINESS_REVIEW_V4.md`。
+- 更新 `docs/qa/DOCKER_PRODUCTION_VERIFICATION_REPORT.md`。
+- 更新 `docs/review/DOCKER_VERIFICATION_SELF_REVIEW.md`。
+- V4 决策：Reject。Base image pull、Docker build 和容器级验证全部通过前，不允许发布 `v1.0.0 Stable`。
+
+## [QA-SPRINT-4] Docker Production Verification - 2026-07-11
+
+### Verification
+
+- Docker daemon 状态检查：PASS。
+- Docker compose config 解析：PASS。
+- `docker compose build --no-cache`：FAIL，阻塞于 `python:3.11-slim` 基础镜像 metadata / pull 阶段。
+- `docker pull python:3.11-slim`：TIMEOUT。
+- `DOCKER_BUILDKIT=0 docker compose build --no-cache`：TIMEOUT。
+- 主机侧 pytest、production_check、validate_stable_release、全部 validate_*、Production E2E、Failure Injection：PASS。
+- 主机侧 API security、CLI init/demo/validate、APP-001/Core real-data gate、Real Connector probe：PASS。
+
+### Release Decision
+
+- 新增 `docs/qa/DOCKER_PRODUCTION_VERIFICATION_REPORT.md`。
+- 新增 `docs/review/DOCKER_VERIFICATION_SELF_REVIEW.md`。
+- 新增 `docs/release/RELEASE_READINESS_REVIEW_V3.md`。
+- V3 决策：Reject。Docker production verification 未完成前，不允许发布 `v1.0.0 Stable`。
+
+## [QA-SPRINT-3] Stable Release Remediation - 2026-07-10
+
+### Fixed
+
+- B1 / TD-003：新增 Stable release gate，Mock、SKIP、Fallback、Unknown 数据源不得计入真实生产 PASS。
+- B2：新增 `config/airs.stable.yaml` Stable profile，区分本地 demo/mock profile 与 Stable real-data gate profile。
+- B4：新增 `docs/release/RELEASE_READINESS_REVIEW_V2.md`，统一记录 Stable 发布决策、剩余风险和未验证项。
+- H4：Connector real-mode fallback 统一标记为 `fallback_mock`，并进入 `data_lineage.fallback_sources`。
+- H5 / TD-002：新增 `scripts/validate_stable_release.py`，并将 Stable remediation validator、E2E artifact validator 纳入 `production_check.py`。
+- H6 / TD-006：API 新增 rate limit；invalid JSON 默认走错误脱敏；Docker Compose 新增 API key healthcheck。
+
+### Added
+
+- 新增 `common/release_gate.py`。
+- 新增 `docs/adr/ADR-0017-stable-release-gates.md`。
+- 新增 `docs/qa/STABLE_RELEASE_REMEDIATION_REPORT.md`。
+- 新增 `docs/review/STABLE_RELEASE_SELF_REVIEW.md`。
+
+### Validation
+
+- `python3 scripts/run_production_tests.py`：PASS。
+- `python3 scripts/validate_e2e.py`：PASS。
+- `python3 cli/airs.py init` / `demo` / `validate --all`：PASS。
+- `python3 scripts/validate_stable_release.py`：PASS，未设置真实外部探测时记录 UNVERIFIED。
+- `python3 -m pytest -q`：PASS，含真实连接器集成测试的 1 个 SKIP。
+- Docker compose config 解析通过；Docker daemon 当前不可用，image build / compose up / container health 未验证。
+
+### Compliance
+
+- QA Sprint 3 不新增投资研究业务功能，不提供投资建议、交易指令、目标价或收益承诺。
+- 无法在当前环境验证的 Docker build / compose health 被记录为未验证，不伪造通过。
+
+## [QA-SPRINT-2] Architecture Stabilization - 2026-07-10
+
+### Fixed
+
+- AUDIT-001 / TD-001：新增薄 Orchestrator Facade，明确 Planner -> Orchestrator -> Runtime 边界，APP-001 不再直接实例化 `RuntimeCore`。
+- AUDIT-002 / TD-004：新增 Core contract validation，APP-001 输出必须校验 Evidence、Knowledge Graph、Score 和 Report 引用闭合。
+- AUDIT-003 / TD-003：Connector 结果新增 `traceability.mode`，APP-001 输出 `data_lineage`，Mock/SKIP 证据不得标记为 Fact。
+- AUDIT-004 / TD-002：新增 `scripts/validate_architecture_stabilization.py`，覆盖 Orchestrator 边界、APP-Core 契约、数据 lineage 和 API 安全行为。
+- AUDIT-008 / TD-006：API 默认绑定 `127.0.0.1`，非本地绑定必须配置 `AIRS_API_KEY`，新增请求体限制、CORS allowlist 和错误脱敏。
+
+### Added
+
+- 新增 `docs/adr/ADR-0016-architecture-stabilization.md`。
+- 新增 `docs/qa/ARCHITECTURE_STABILIZATION_REPORT.md`。
+- 新增 `docs/review/QA_ARCHITECTURE_SELF_REVIEW.md`。
+
+### Compliance
+
+- QA Sprint 2 不新增投资研究业务功能，仅稳定架构边界、契约、验证和 API 安全。
+- Mock 数据仍可用于本地测试，但必须显式标识为降级，不得作为真实研究事实进入结果。
+- 本 Sprint 仅用于 AIRS 工程质量检查，不构成投资建议。
+
 ## [RELEASE-001] AIRS Platform 1.0 Productization - 2026-07-10
 
 ### Added

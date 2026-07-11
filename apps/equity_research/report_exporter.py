@@ -36,7 +36,7 @@ class EquityResearchReportExporter:
     """生成 APP-001 15 段股票研究报告。"""
 
     def export(self, request: ResearchRequest, company: CompanyInfo, analysis: dict[str, Any], committee: dict[str, Any]) -> dict[str, Any]:
-        final_report = self._render_final_report(request, company, analysis)
+        final_report, report_error = self._render_final_report(request, company, analysis)
         sections = self._sections(request, company, analysis, committee, final_report)
         markdown = self._to_markdown(request, company, sections)
         return {
@@ -45,6 +45,8 @@ class EquityResearchReportExporter:
             "sections": sections,
             "markdown": markdown,
             "report_generator_output": final_report,
+            "report_quality_gate": "FAILED" if report_error else "PASS",
+            "report_generator_error": report_error,
             "disclaimer": DISCLAIMER,
         }
 
@@ -54,7 +56,7 @@ class EquityResearchReportExporter:
         target.write_text(result["markdown"], encoding="utf-8")
         return target
 
-    def _render_final_report(self, request: ResearchRequest, company: CompanyInfo, analysis: dict[str, Any]) -> str:
+    def _render_final_report(self, request: ResearchRequest, company: CompanyInfo, analysis: dict[str, Any]) -> tuple[str, str | None]:
         payload = {
             "report_id": f"reportgen-{request.request_id}",
             "title": f"{company.company_name} AIRS Report Generator 输出",
@@ -68,9 +70,9 @@ class EquityResearchReportExporter:
             "disclaimer": DISCLAIMER,
         }
         try:
-            return ReportPipeline().render_markdown(payload)
+            return ReportPipeline().render_markdown(payload), None
         except Exception as exc:  # noqa: BLE001
-            return f"SKIP：Report Generator 调用失败：{exc}\n\n免责声明：{DISCLAIMER}"
+            return f"SKIP：Report Generator 调用失败：{exc}\n\n免责声明：{DISCLAIMER}", str(exc)
 
     def _sections(self, request: ResearchRequest, company: CompanyInfo, analysis: dict[str, Any], committee: dict[str, Any], final_report: str) -> list[dict[str, Any]]:
         registry = analysis["statement_registry"]
@@ -187,4 +189,3 @@ def _as_list(value: Any) -> list[str]:
     if isinstance(value, list):
         return [str(item) for item in value]
     return [str(value)]
-

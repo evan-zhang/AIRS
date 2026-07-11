@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import pytest
+
 from data_connectors.base import ConnectorRequest
 from data_connectors.connectors.rss import RSSConnector
 from data_connectors.real_payload import REQUIRED_REAL_FIELDS
@@ -11,7 +13,13 @@ from knowledge_graph.validator import KnowledgeGraphValidator
 
 def test_connector_to_evidence_to_kg_to_report_chain() -> None:
     connector = RSSConnector()
-    result = connector.fetch(ConnectorRequest({"feed_url": "https://example.com/feed.xml", "limit": 1})).to_dict()
+    request = ConnectorRequest({"feed_url": "https://hnrss.org/frontpage", "limit": 1})
+    try:
+        raw = connector.fetch_real(request)
+    except Exception as exc:  # noqa: BLE001
+        pytest.skip(f"RSS real source unavailable: {exc}")
+    result = connector.normalize(raw, request).to_dict()
+    assert result["data"]["mode"] == "real"
     for field in REQUIRED_REAL_FIELDS:
         assert result["data"].get(field) is not None
 

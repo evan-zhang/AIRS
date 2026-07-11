@@ -1,0 +1,253 @@
+name: Docker Release Gate
+
+on:
+  push:
+    branches:
+      - qa/architecture-stabilization
+    paths-ignore:
+      - "docs/**"
+      - "CHANGELOG.md"
+  pull_request:
+    branches:
+      - main
+    paths-ignore:
+      - "docs/**"
+      - "CHANGELOG.md"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  AIRS_API_KEY: ci-docker-release-gate
+  COMPOSE_FILE: docker/docker-compose.yml
+  LOG_DIR: docs/testing/logs/ci-docker-release-gate
+
+jobs:
+  docker-release-gate:
+    name: Docker production verification
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout PR code
+        uses: actions/checkout@v4
+
+      - name: Prepare log directory
+        run: mkdir -p "$LOG_DIR"
+
+      - name: Record Docker, Compose, OS, and registry config
+        run: |
+          {
+            date -u
+            echo "Git SHA=${GITHUB_SHA}"
+            echo "Runner OS=${RUNNER_OS}"
+            uname -a
+            cat /etc/os-release
+            echo
+            docker version
+            echo
+            docker compose version
+            echo
+            docker context ls
+            echo
+            docker info --format '{{json .RegistryConfig}}'
+          } 2>&1 | tee "$LOG_DIR/01-environment.log"
+
+      - name: Pull official Python base image and record digest
+        id: base_image
+        run: |
+          {
+            date -u
+            docker pull python:3.11-slim
+            echo
+            docker image inspect python:3.11-slim --format 'Id={{.Id}} RepoDigests={{json .RepoDigests}} Architecture={{.Architecture}} Os={{.Os}} Created={{.Created}}'
+          } 2>&1 | tee "$LOG_DIR/02-base-image.log"
+          digest="$(docker image inspect python:3.11-slim --format '{{index .RepoDigests 0}}')"
+          echo "digest=${digest}" | tee -a "$LOG_DIR/02-base-image.log"
+          echo "digest=${digest}" >> "$GITHUB_OUTPUT"
+
+      - name: Render Compose config
+        run: |
+          AIRS_API_KEY="$AIRS_API_KEY" docker compose -f "$COMPOSE_FILE" config 2>&1 | tee "$LOG_DIR/03-compose-config.log"
+
+      - name: Docker compose build without cache
+        run: |
+          AIRS_API_KEY="$AIRS_API_KEY" docker compose -f "$COMPOSE_FILE" build --no-cache 2>&1 | tee "$LOG_DIR/04-compose-build.log"
+
+      - name: Start Compose services
+        run: |
+          AIRS_API_KEY="$AIRS_API_KEY" docker compose -f "$COMPOSE_FILE" up -d 2>&1 | tee "$LOG_DIR/05-compose-up.log"
+
+      - name: Wait for container health
+        run: |
+          set -euo pipefail
+          {
+            date -u
+            for i in $(seq 1 60); do
+              AIRS_API_KEY="$AIRS_API_KEY" docker compose -f "$COMPOSE_FILE" ps
+              if curl -fsS -H "X-AIRS-API-Key: $AIRS_API_KEY" http://127.0.0.1:8765/health >/tmp/airs-health.json; then
+                cat /tmp/airs-health.json
+                echo
+                echo "health_check=PASS"
+                exit 0
+              fi
+              sleep 2
+            done
+            echo "health_check=FAIL"
+            exit 1
+          } 2>&1 | tee "$LOG_DIR/06-health-check.log"
+
+      - name: Verify API security controls
+        run: |
+          python3 - <<'PY' 2>&1 | tee "$LOG_DIR/07-api-security.log"
+          import json
+          import urllib.error
+          import urllib.request
+
+          base = "http://127.0.0.1:8765"
+          key = "ci-docker-release-gate"
+
+          def request(path, method="GET", body=None, use_key=True):
+              headers = {}
+              if use_key:
+                  headers["X-AIRS-API-Key"] = key
+              data = body.encode("utf-8") if isinstance(body, str) else body
+              if data is not None:
+                  headers["Content-Type"] = "application/json"
+              req = urllib.request.Request(base + path, data=data, headers=headers, method=method)
+              try:
+                  with urllib.request.urlopen(req, timeout=10) as res:
+                      return res.status, res.read().decode("utf-8")
+              except urllib.error.HTTPError as exc:
+                  return exc.code, exc.read().decode("utf-8")
+
+          checks = []
+          checks.append(("unauthorized_health", request("/health", use_key=False)[0]))
+          checks.append(("authorized_health", request("/health")[0]))
+          invalid_status, invalid_body = request("/research", method="POST", body="{bad json")
+          checks.append(("invalid_json_redacted", invalid_status, invalid_body))
+          large_status, _ = request("/research", method="POST", body='{"payload":"' + ("x" * 1100000) + '"}')
+          checks.append(("body_limit", large_status))
+
+          limited = False
+          for _ in range(130):
+              status, _ = request("/health")
+              if status == 429:
+                  limited = True
+                  break
+          checks.append(("rate_limit", 429 if limited else 200))
+
+          print(json.dumps(checks, indent=2, ensure_ascii=False))
+          assert checks[0][1] == 401
+          assert checks[1][1] == 200
+          assert checks[2][1] == 400
+          assert "Expecting property name" not in checks[2][2]
+          assert checks[3][1] == 413
+          assert checks[4][1] == 429
+          print("RESULT: PASS")
+          PY
+
+      - name: Verify container CLI, APP-001/Core gate, and real connector probe
+        run: |
+          set -euo pipefail
+          {
+            date -u
+            AIRS_API_KEY="$AIRS_API_KEY" docker compose -f "$COMPOSE_FILE" exec -T api python3 cli/airs.py init --output .airs/ci-docker.yaml --force
+            AIRS_API_KEY="$AIRS_API_KEY" docker compose -f "$COMPOSE_FILE" exec -T api python3 cli/airs.py validate --all
+            AIRS_API_KEY="$AIRS_API_KEY" docker compose -f "$COMPOSE_FILE" exec -T api python3 cli/airs.py demo nvidia --output-dir demo/output/ci-docker
+            set +e
+            AIRS_API_KEY="$AIRS_API_KEY" docker compose -f "$COMPOSE_FILE" exec -T api python3 cli/airs.py --json run "使用真实数据 real_data 验证 NVIDIA" --symbol NVDA --market US --real-data > /tmp/app-core.json
+            app_status=$?
+            set -e
+            cat /tmp/app-core.json
+            test "$app_status" -eq 1
+            grep -q '"quality_gate": "FAIL"' /tmp/app-core.json
+            grep -q '"status": "failed_quality_gate"' /tmp/app-core.json
+            AIRS_API_KEY="$AIRS_API_KEY" docker compose -f "$COMPOSE_FILE" exec -T api env AIRS_RUN_REAL_CONNECTOR_PROBE=1 python3 scripts/validate_stable_release.py
+            echo "RESULT: PASS"
+          } 2>&1 | tee "$LOG_DIR/08-container-cli-app-core.log"
+
+      - name: Verify restart recovery
+        run: |
+          set -euo pipefail
+          {
+            date -u
+            AIRS_API_KEY="$AIRS_API_KEY" docker compose -f "$COMPOSE_FILE" restart api web
+            for i in $(seq 1 60); do
+              if curl -fsS -H "X-AIRS-API-Key: $AIRS_API_KEY" http://127.0.0.1:8765/health; then
+                echo
+                echo "restart_recovery=PASS"
+                exit 0
+              fi
+              sleep 2
+            done
+            echo "restart_recovery=FAIL"
+            exit 1
+          } 2>&1 | tee "$LOG_DIR/09-restart-recovery.log"
+
+      - name: Verify compose down/up repeatability
+        run: |
+          set -euo pipefail
+          {
+            date -u
+            AIRS_API_KEY="$AIRS_API_KEY" docker compose -f "$COMPOSE_FILE" down
+            AIRS_API_KEY="$AIRS_API_KEY" docker compose -f "$COMPOSE_FILE" up -d
+            for i in $(seq 1 60); do
+              if curl -fsS -H "X-AIRS-API-Key: $AIRS_API_KEY" http://127.0.0.1:8765/health; then
+                echo
+                echo "down_up=PASS"
+                exit 0
+              fi
+              sleep 2
+            done
+            echo "down_up=FAIL"
+            exit 1
+          } 2>&1 | tee "$LOG_DIR/10-down-up-repeatability.log"
+
+      - name: Run full regression on runner
+        run: |
+          set -euo pipefail
+          {
+            date -u
+            python3 -m pip install --user pytest
+            python3 -m pytest -q
+            python3 scripts/production_check.py
+            AIRS_RUN_REAL_CONNECTOR_PROBE=1 python3 scripts/validate_stable_release.py
+            python3 cli/airs.py validate --all
+            python3 scripts/run_production_tests.py
+            echo "RESULT: PASS"
+          } 2>&1 | tee "$LOG_DIR/11-runner-regression.log"
+
+      - name: Write release gate summary
+        if: always()
+        run: |
+          {
+            echo "# Docker Release Gate"
+            echo
+            echo "- Commit SHA: ${GITHUB_SHA}"
+            echo "- Base image digest: ${{ steps.base_image.outputs.digest }}"
+            echo "- Logs: ${LOG_DIR}"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Collect Docker diagnostics on failure
+        if: failure()
+        run: |
+          mkdir -p "$LOG_DIR/failure"
+          AIRS_API_KEY="$AIRS_API_KEY" docker compose -f "$COMPOSE_FILE" ps -a > "$LOG_DIR/failure/compose-ps.log" 2>&1 || true
+          AIRS_API_KEY="$AIRS_API_KEY" docker compose -f "$COMPOSE_FILE" logs --no-color > "$LOG_DIR/failure/compose-logs.log" 2>&1 || true
+          AIRS_API_KEY="$AIRS_API_KEY" docker compose -f "$COMPOSE_FILE" config > "$LOG_DIR/failure/compose-config.log" 2>&1 || true
+          docker image ls > "$LOG_DIR/failure/docker-images.log" 2>&1 || true
+          docker ps -a > "$LOG_DIR/failure/docker-ps.log" 2>&1 || true
+
+      - name: Upload failure diagnostics
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: docker-release-gate-logs-${{ github.run_id }}
+          path: docs/testing/logs/ci-docker-release-gate
+          if-no-files-found: error
+
+      - name: Cleanup Compose resources
+        if: always()
+        run: AIRS_API_KEY="$AIRS_API_KEY" docker compose -f "$COMPOSE_FILE" down -v

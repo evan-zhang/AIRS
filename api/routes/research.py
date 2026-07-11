@@ -27,11 +27,13 @@ def handle_research(path: str, payload: dict[str, Any]) -> dict[str, Any]:
     request = _default_payload(path, payload)
     result = run_equity_research(request)
     return {
-        "status": "ok",
+        "status": result.get("status", "ok"),
+        "quality_gate": result.get("quality_gate"),
         "endpoint": path,
         "request_id": result["request"]["request_id"],
         "company": result["company"],
+        "data_lineage": result.get("data_lineage"),
+        "stable_release_gate": result.get("stable_release_gate"),
         "result": result,
         "disclaimer": DISCLAIMER,
     }
-

@@ -1,0 +1,62 @@
+# AIRS Stable release profile.
+# 免责声明：本配置仅用于 AIRS Stable 发布门禁验证，不构成投资建议。
+
+platform:
+  name: AIRS
+  version: 1.0.0
+  demo_mode: false
+
+workspace:
+  root: ./workspace-data
+  artifacts: ./workspace-data/artifacts
+  history: ./workspace-data/history
+
+cache:
+  enabled: true
+  path: ./.cache/airs
+  ttl_seconds: 300
+
+api:
+  host: 127.0.0.1
+  port: 8765
+  cors: true
+  require_api_key_for_public_bind: true
+  max_body_bytes: 1048576
+  rate_limit_per_minute: 120
+
+web:
+  host: 127.0.0.1
+  port: 8080
+  api_base_url: http://localhost:8765
+
+connectors:
+  mode: real
+  sec_edgar:
+    mode: real
+  rss:
+    mode: real
+  github:
+    mode: real
+  news:
+    mode: real
+  yahoo_finance:
+    mode: real
+
+models:
+  default_provider: local
+  default_model: rule-based
+  timeout_seconds: 60
+
+secrets:
+  github_token_env: GITHUB_TOKEN
+  news_api_key_env: NEWS_API_KEY
+
+compliance:
+  require_disclaimer: true
+  require_real_data_gate: true
+  disclaimer: AIRS 仅用于投资研究流程编排、证据追溯和质量控制，不构成投资建议。
+  forbidden_outputs:
+    - 荐股
+    - 自动交易
+    - 交易指令
+    - 目标价承诺

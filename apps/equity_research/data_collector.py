@@ -71,29 +71,30 @@ class EquityDataCollector:
 
     def build_plan(self, request: ResearchRequest, company: CompanyInfo) -> list[dict[str, Any]]:
         query_name = company.company_name if company.resolver_status != "NEED_REVIEW" else request.raw_input
+        mode = "real" if _requires_real_data(request) else "mock"
         return [
             {
                 "connector_id": "yahoo_finance",
                 "purpose": "价格与基础行情占位；若为 Mock 必须降级。",
-                "query": {"symbol": company.symbol, "range": request.time_range},
+                "query": {"symbol": company.symbol, "range": request.time_range, "mode": mode},
                 "evidence_category": "financial_market_data",
             },
             {
                 "connector_id": "news",
                 "purpose": "公司新闻与催化事件；真实新闻 API 不可用时降级。",
-                "query": {"query": query_name, "language": request.language, "limit": 5},
+                "query": {"query": query_name, "language": request.language, "limit": 5, "mode": mode},
                 "evidence_category": "news",
             },
             {
                 "connector_id": "sec_edgar" if company.market == "US" else "rss",
                 "purpose": "监管披露或公开 RSS 来源；不可用时标注 SKIP/Mock。",
-                "query": {"symbol": company.symbol, "query": query_name, "limit": 5},
+                "query": {"symbol": company.symbol, "query": query_name, "limit": 5, "mode": mode},
                 "evidence_category": "filing_or_public_feed",
             },
             {
                 "connector_id": "rss",
                 "purpose": "行业与供应链公开资料补充。",
-                "query": {"feed_url": "https://news.google.com/rss/search?q=" + query_name.replace(" ", "+"), "limit": 5},
+                "query": {"feed_url": "https://news.google.com/rss/search?q=" + query_name.replace(" ", "+"), "limit": 5, "mode": mode},
                 "evidence_category": "industry",
             },
         ]
@@ -120,6 +121,7 @@ class EquityDataCollector:
                 "missing_evidence": ["真实财务明细", "公司公告原文", "可复核行业数据"],
                 "weight": confidence,
                 "traceability": result.get("traceability", {}),
+                "data_mode": mode,
                 "version": result.get("version", "unknown"),
                 "statement_type": "Fact" if mode not in {"mock", "skip"} else "Assumption",
                 "disclaimer": "仅供研究参考，不构成投资建议",
@@ -146,3 +148,9 @@ class EquityDataCollector:
         }
         return cards
 
+
+def _requires_real_data(request: ResearchRequest) -> bool:
+    if request.require_real_data:
+        return True
+    raw = request.raw_input.lower()
+    return "production" in raw or "real_data" in raw or "真实数据" in raw

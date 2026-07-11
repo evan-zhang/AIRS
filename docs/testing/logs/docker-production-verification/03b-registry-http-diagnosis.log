@@ -1,0 +1,15 @@
+Fri Jul 10 22:51:19 UTC 2026
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0    87    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/1.1 200 Connection established
+
+HTTP/2 401
+date: Fri, 10 Jul 2026 22:51:20 GMT
+content-type: application/json
+content-length: 87
+docker-distribution-api-version: registry/2.0
+www-authenticate: Bearer realm="https://auth.docker.io/token",service="registry.docker.io"
+strict-transport-security: max-age=31536000
+
+exit_code=0

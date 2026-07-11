@@ -1,0 +1,83 @@
+Fri Jul 10 22:56:29 UTC 2026
+name: docker
+services:
+  api:
+    build:
+      context: /Users/evan/.openclaw/gateways/life/state/workspace-life/projects/AIRS
+      dockerfile: docker/Dockerfile
+    command:
+      - python3
+      - api/server.py
+      - --host
+      - 0.0.0.0
+      - --port
+      - "8765"
+    environment:
+      AIRS_API_KEY: qa-docker-secret
+      AIRS_CONNECTOR_MODE: mock
+      AIRS_CORS_ALLOW_ORIGINS: http://localhost:8080,http://127.0.0.1:8080
+      AIRS_DEMO_MODE: "true"
+      AIRS_RATE_LIMIT_PER_MINUTE: "120"
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - 'python3 -c "import os, urllib.request; req=urllib.request.Request(''http://127.0.0.1:8765/health'', headers={''X-AIRS-API-Key'': os.environ[''AIRS_API_KEY'']}); urllib.request.urlopen(req, timeout=5).read()"'
+      timeout: 5s
+      interval: 10s
+      retries: 6
+      start_period: 10s
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 8765
+        published: "8765"
+        protocol: tcp
+    volumes:
+      - type: volume
+        source: airs-workspace
+        target: /app/workspace-data
+        volume: {}
+      - type: volume
+        source: airs-cache
+        target: /app/.cache/airs
+        volume: {}
+  web:
+    build:
+      context: /Users/evan/.openclaw/gateways/life/state/workspace-life/projects/AIRS
+      dockerfile: docker/Dockerfile
+    command:
+      - python3
+      - -m
+      - http.server
+      - "8080"
+      - --directory
+      - web
+    depends_on:
+      api:
+        condition: service_healthy
+        required: true
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 8080
+        published: "8080"
+        protocol: tcp
+    volumes:
+      - type: volume
+        source: airs-workspace
+        target: /app/workspace-data
+        volume: {}
+      - type: volume
+        source: airs-cache
+        target: /app/.cache/airs
+        volume: {}
+networks:
+  default:
+    name: docker_default
+volumes:
+  airs-cache:
+    name: docker_airs-cache
+  airs-workspace:
+    name: docker_airs-workspace

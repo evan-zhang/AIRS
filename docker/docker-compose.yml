@@ -12,6 +12,15 @@ services:
     environment:
       AIRS_CONNECTOR_MODE: mock
       AIRS_DEMO_MODE: "true"
+      AIRS_API_KEY: ${AIRS_API_KEY:?Set AIRS_API_KEY before exposing the API}
+      AIRS_CORS_ALLOW_ORIGINS: http://localhost:8080,http://127.0.0.1:8080
+      AIRS_RATE_LIMIT_PER_MINUTE: 120
+    healthcheck:
+      test: ["CMD-SHELL", "python3 -c \"import os, urllib.request; req=urllib.request.Request('http://127.0.0.1:8765/health', headers={'X-AIRS-API-Key': os.environ['AIRS_API_KEY']}); urllib.request.urlopen(req, timeout=5).read()\""]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+      start_period: 10s
 
   web:
     build:
@@ -21,7 +30,8 @@ services:
     ports:
       - "8080:8080"
     depends_on:
-      - api
+      api:
+        condition: service_healthy
     volumes:
       - airs-workspace:/app/workspace-data
       - airs-cache:/app/.cache/airs
@@ -29,4 +39,3 @@ services:
 volumes:
   airs-workspace:
   airs-cache:
-

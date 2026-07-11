@@ -23,6 +23,7 @@ REQUIRED_PRODUCTION_FIELDS = [
     "final_report",
     "memory_write_read",
     "learning_feedback",
+    "stable_release_gate",
 ]
 REQUIRED_CHECKS = {
     "planner",
@@ -33,6 +34,7 @@ REQUIRED_CHECKS = {
     "scorecard",
     "committee",
     "report_taxonomy",
+    "stable_release_gate",
     "memory",
     "learning",
 }
