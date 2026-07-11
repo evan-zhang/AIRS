@@ -45,10 +45,54 @@
 
 ## Current Status
 
-Status: Pending CI run.
+Status: PASS.
 
-This report will be updated after GitHub Actions completes.
+Workflow run:
+
+- Workflow URL: `https://github.com/evan-zhang/AIRS/actions/runs/29134097553`
+- Run ID: `29134097553`
+- Event: `pull_request`
+- Commit SHA: `9baf6ffdf41162616294ba011cc1c1a69b8c8650`
+- Job: `Docker production verification`
+- Job result: `success`
+- Started: `2026-07-11T01:09:11Z`
+- Completed: `2026-07-11T01:11:35Z`
+
+Base image:
+
+- Source: official `docker.io/library/python:3.11-slim`
+- Image ID: `sha256:f29b0d4ca7e6b86c482429892631ffb0d50be331ddadcfba29bb07082f3d0a67`
+- Repo digest: `python@sha256:e031123e3d85762b141ad1cbc56452ba69c6e722ebf2f042cc0dc86c47c0d8b3`
+- OS/Architecture: `linux/amd64`
+- Third-party image replacement: not used
+- Mirror/private registry: not used
+
+Gate results:
+
+- Base image pull: PASS
+- Base image digest recording: PASS
+- Docker compose build without cache: PASS
+- Docker compose startup: PASS
+- Container health check: PASS
+- API `/health`: PASS
+- API authentication: PASS
+- API body size limit: PASS
+- API rate limit: PASS
+- API error redaction: PASS
+- Container CLI init / validate / demo nvidia: PASS
+- APP-001 to Core real-data gate: PASS
+- Real Connector probe: PASS
+- Container restart recovery: PASS
+- Compose down/up repeatability: PASS
+- Runner pytest: PASS
+- Runner `production_check.py`: PASS
+- Runner `validate_stable_release.py`: PASS
+- Runner all `validate_*`: PASS
+- Runner Production E2E: PASS
+- Runner Failure Injection: PASS
+
+Failure diagnostics artifact: not uploaded because the run succeeded.
 
 ## Release Impact
 
-Until the CI Docker Release Gate run completes successfully, AIRS remains not approved for `v1.0.0 Stable`.
+The CI Docker Release Gate passed. AIRS may proceed to human review for `v1.0.0 Stable` approval.
